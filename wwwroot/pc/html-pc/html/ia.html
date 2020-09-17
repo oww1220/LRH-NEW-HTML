@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>LOTTE rental 신차장 HTML 목록</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css">
+		/* CSS 리셋 설정 */
+		body,html,
+		header,footer,aside,nav,section,article,details,figure,figcaption,menu,command,
+		div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td, /* 블럭 요소 */
+		h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,
+		img,embed,object,canvas,audio,video,meter,progress,keygen, /* 인라인 블럭 요소 */
+		a,label,output,dialog, /* 인라인 요소 */
+		address,blockquote, /* 텍스트 블럭 요소 */
+		p,pre,/* 텍스트 인라인 블럭 요소 */
+		span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,ruby,rp,rt,code,kbd,samp, /* 텍스트 인라인 요소 */
+		acronym,big,frame,frameset,noframes,tt, /* HTML5에서 사용하지 않는 요소 */
+		map,option,hr,*{border:0;padding:0;margin:0;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
+		header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block} /* HTML5 블럭 요소 */
+		applet,basefont,center,dir,font,strike{display:none} /* XHTML4, HTML5 이후 사용하지 않는 요소 제거 */
+		q,blockquote{quotes:none;content:none}
+		li,menu{list-style:none}
+		table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed} /* 테이블 보더 변경 (겹칩지 않음 separate) */
+		caption{text-align:left}
+		th,td{text-align:left;vertical-align:middle;}
+		address{font-style:normal}
+		label{display:inline-block;*zoom:1}
+		a{text-decoration:none;display:inline-block;*zoom:1} /* 접근성 포커싱을 위해 a요소 속성 변경 */
+		a:hover{text-decoration:underline;color:#1979CA}
+		/* 공통 설정 */
+		html{}
+		html,body{} /* 가로스크롤 시 배경이 잘리는 버그를 없애기 위해 최소사이즈 지정 */
+		body{color:#333;font:normal 12px/1 "Nanum Gothic",Sans-Serif} /* 기본 폰트 지정 */
+		.blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
+		.hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden} /* .blind를 적용할 수 없는 곳에 사용 (예, caption) */
+		/* 내용 */
+		#wrap{padding:0 10px;margin:0 auto}
+		#header h1{padding:20px 0;text-align:center;font-size:30px;letter-spacing: -1px;}
+		#header h1 strong {color:#0058EF;}
+		#header .nav{border-width:3px 0;border-style:solid;border-color:#222;overflow:hidden}
+		#header .nav li{float:left;width:50%;}
+		#header .nav li.dev{float:left;width:100%;background:#222;color:#fff;height:50px;text-align:center;line-height:50px;display:block;font-size:16px;font-weight:bold;}
+		#header .nav li a{height:50px;color:#333;font-size:16px;font-weight:bold;text-align:center;line-height:50px;display:block}
+		#header .nav li.on a{color:#fff;background:#222}
+		.list_table{margin:40px 0;line-height:1.3}
+		.list_table tr.line td {border-top:2px solid #000}
+		.list_table th{padding:10px 0;border:1px solid #e5e5e5;text-align:center;vertical-align:top}
+		.list_table th[scope="col"]{background:#f7f7f7;}
+		.list_table th[scope="row"]{color:#4c4c4c;font-weight:normal;}
+		.list_table td{height:15px; padding:5px 5px;border:1px solid #e5e5e5;color:#4c4c4c;word-break:break-word;vertical-align:top}
+		.list_table td.t_left{padding-left:10px;text-align:left}
+		.list_table td img{vertical-align:middle}
+		.list_table td a{font-size:11px;}
+		.list_table td a span{height:24px;padding:0 8px;color:#fff;line-height:24px;display:block}
+		.list_table td span.date{background-color:#4f4f4f}
+		.list_table td span.jpg{background-color:#ff8a23}
+		.list_table td span.kwah{background-color:#6f9fd1}
+		.list_table td.line{background:#dddddd;height:1px;padding:0;}
+		.today {background:#fcead7;font-weight:bold}
+		.today .on {}
+		.t_center {text-align:center;}
+		.remark {float:right;}
+		.remark span {margin-left:10px;}
+		.remark span:before {content:"-"}
+		.txt_fin {color:#0058EF !important;}
+		.txt_ing {color:#EF3100 !important;}
+		.txt_add {color:#00BE19 !important;}
+	</style>
+	<script type="text/javascript" src="../../resources-pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			function toDayCaculate(){
+				var date = new Date();
+				var yy = date.getFullYear();
+				var mm = '' + ((date.getMonth()+1)<10)?'0'+(date.getMonth()+1):(date.getMonth()+1);
+				var dd = (date.getDate()<10)?'0'+date.getDate():date.getDate();
+
+				return (yy + '-' + mm + '-' + dd);
+			}
+		
+			$('.list_table tbody th').each(function(i){
+				$(this).text(i+1);
+			});
+
+			//alert( '.' +today)
+			$('td').each(function(){
+				var vars=$(this).text();
+				if(vars==toDayCaculate()){
+					$(this).parent('tr').addClass('today');
+					$(this).addClass('on')
+				}
+			});
+
+			$('.toDay').html(toDayCaculate());
+
+
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1><b style="color:#E60112">LOTTE rental</b> 신차장 <strong>PC</strong> HTML LIST [<span class="toDay"></span>]</h1>
+		</div>
+		<div style="border: 1px solid #aaa; background:#f0f0f0; padding: 10px 20px; line-height: 1.5;">
+			<h2> Mark-up 수정 이력 </h2>
+			<!--
+			<b>* v1.0</b> : 2019.09.19 (Design XD 기준)<br />
+			<b>* v2.0</b> : 2019.09.30 (Design XD 기준)<br />
+			<b>* v3.0</b> : 2019.10.01 (수정 날짜 기준)<br /><br />
+			-->
+			<h2> 수정 시, 아래 내용으로 주석 필 기입 </h2>
+			<p style="padding: 0 20px; font-family: Consolas, 'Noto Sans KR'; color:red;">
+				&lt;!-- 수정 20201018 : 설명 --&gt; <br />
+				<!-- 수정 v2.0 : (클래스 / 마크업) 수정 -->
+				(Mark-up Code)<br />
+				<!-- //수정 v2.0 : (클래스 / 마크업) 수정 -->
+				&lt;!-- //수정 20201018 : 설명 --&gt;
+			</p>
+		</div>
+
+		<!--
+		<div class="remark">
+			<span class="txt_fin">완료일 : 2020.12.15</span>
+			<span class="txt_ing">수정일 : 2020.12.15</span>
+		</div>
+		-->
+
+		<!--
+		<ul class="tab_menu">
+			<li><a href="#menu1">메인</a></li>
+			<li><a href="#menu2">예매</a></li>
+			<li><a href="#menu3">영화</a></li>
+			<li><a href="#menu4">영화관</a></li>
+			<li><a href="#menu5">스위트샵</a></li>
+		</ul>
+		-->
+
+
+		<table class="list_table" summary="롯데시네마 모바일 HTML LIST 입니다.">
+			<caption class="hidden">롯데시네마 모바일 HTML LIST</caption>
+			<colgroup>
+				<col style="width:8%"/>
+				<col style="width:12%"/>
+				<col style="width:12%"/>
+				<col style="width:12%"/>
+				<col style="width:18%"/>
+				<col style="width:70px"/>
+				<col style="width:90px"/>
+				<col style="width:110px"/>
+				<col style="width:auto"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">파일명</th>
+					<th scope="col">작업완료</th>
+					<th scope="col">작업완료일</th>
+					<th scope="col">수정일</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 가이드 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">가이드</td>
+					<td>버튼</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_button.html" target="_blank">guide_button.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>폼</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_form.html" target="_blank">guide_form.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>테이블</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_table.html" target="_blank">guide_table.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>텝</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_tab.html" target="_blank">guide_tab.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+
+				<!-- 공통 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="3">공통</td>
+					<td>메인</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/main.html" target="_blank">main.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>레이아웃</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/layout.html" target="_blank">layout.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>해더, 푸터</td>
+				</tr>
+				<tr> 
+					<td>레이아웃-서브</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/layout_sub.html" target="_blank">layout_sub.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>서브해더, 푸터</td>
+				</tr>
+
+				<!-- 신차장 다이렉트란? ================================================================================ -->
+				<tr class="line">
+					<td rowspan="8">신차장 다이렉트란?</td>
+					<td rowspan="3">신차장 다이렉트 소개</td>
+					<td>(Tab) STEP.1 견적 </td>
+					<td></td>
+					<td><a href="direct/direct_introduce_tap1.html" target="_blank">direct_introduce_tap1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(Tab) STEP.2 심사 </td>
+					<td></td>
+					<td><a href="direct/direct_introduce_tap2.html" target="_blank">direct_introduce_tap2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(Tab) STEP.3 계약 </td>
+					<td></td>
+					<td><a href="direct/direct_introduce_tap3.html" target="_blank">direct_introduce_tap3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">ALL NEW 신차장기렌터카</td>
+					<td>(Tab) 하이라이트 </td>
+					<td></td>
+					<td><a href="direct/direct_allNew_tap1.html" target="_blank">direct_allNew_tap1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(Tab) 신차장IoT </td>
+					<td></td>
+					<td><a href="direct/direct_allNew_tap2.html" target="_blank">direct_allNew_tap2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(Tab) 신차장 혜택  </td>
+					<td></td>
+					<td><a href="direct/direct_allNew_tap3.html" target="_blank">direct_allNew_tap3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(Tab) 신차장 멤버십 </td>
+					<td></td>
+					<td><a href="direct/direct_allNew_tap4.html" target="_blank">direct_allNew_tap4.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>개인사업자 서비스 안내</td>
+					<td>TBD </td>
+					<td></td>
+					<td><a href="direct/direct_service.html" target="_blank">direct_service.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- CAR타르시스 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="6">CAR타르시스</td>
+					<td>리스트</td>
+					<td> </td>
+					<td></td>
+					<td><a href="catharsis/catharsis_list.html" target="_blank">catharsis_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">VS 게시판</td>
+					<td>리스트</td>
+					<td></td>
+					<td><a href="catharsis/catharsis_vs_list.html" target="_blank">catharsis_vs_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td><a href="catharsis/catharsis_vs_detail.html" target="_blank">catharsis_vs_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>신차장 TV</td>
+					<td></td>
+					<td></td>
+					<td><a href="catharsis/catharsis_tv.html" target="_blank">catharsis_tv.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>블로그/YOUTUBE</td>
+					<td></td>
+					<td></td>
+					<td><a href="catharsis/catharsis_blog.html" target="_blank">catharsis_blog.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>고객후기</td>
+					<td></td>
+					<td></td>
+					<td><a href="catharsis/catharsis_review.html" target="_blank">catharsis_review.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+
+				<!-- 견적 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="20">견적</td>
+					<td>STEP1. 차량선택 </td>
+					<td></td>
+					<td></td>
+					<td><a href="estimate/estimate_step1.html" target="_blank">estimate_step1.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="9">STEP2. 모델/옵션선택 </td>
+					<td>일반차량</td>
+					<td></td>
+					<td><a href="estimate/estimate_step2.html" target="_blank">estimate_step2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>선구매차량</td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_2.html" target="_blank">estimate_step2_2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>최저가 모델정보<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_popup1.html" target="_blank">estimate_step2_popup1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>선납금이란?<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_popup2.html" target="_blank">estimate_step2_popup2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>보증금이란?<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_popup3.html" target="_blank">estimate_step2_popup3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>보증증권이란?<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_popup4.html" target="_blank">estimate_step2_popup4.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>보험연령은요?<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_popup5.html" target="_blank">estimate_step2_popup5.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>약정 주행거리는요?<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_popup6.html" target="_blank">estimate_step2_popup6.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상담요청 팝업-이탈 시 출력<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step2_popup7.html" target="_blank">estimate_step2_popup7.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="10">STEP3. 견적결과 확인 </td>
+					<td>견적결과 확인</td>
+					<td></td>
+					<td><a href="estimate/estimate_step3.html" target="_blank">estimate_step3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">무서류 계약</td>
+					<td>Safe-Key 인증<span class="txt_fin">(레이어 팝업)</span> - 본인인증_인증방법선택</td>
+					<td><a href="estimate/estimate_paperless_tap1.html" target="_blank">estimate_paperless_tap1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Safe-Key 인증<span class="txt_fin">(레이어 팝업)</span> - 본인인증_동의</td>
+					<td><a href="estimate/estimate_paperless_tap1_2.html" target="_blank">estimate_paperless_tap1_2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>소득확인<span class="txt_fin">(레이어 팝업)</span></td>
+					<td><a href="estimate/estimate_paperless_tap2.html" target="_blank">estimate_paperless_tap2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>결과확인</td>
+					<td><a href="estimate/estimate_paperless_tap3.html" target="_blank">estimate_paperless_tap3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>계약기간 변경<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step3_popup1.html" target="_blank">estimate_step3_popup1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>선납금 변경<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step3_popup1.html" target="_blank">estimate_step3_popup1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>보증금 변경<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step3_popup2.html" target="_blank">estimate_step3_popup2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>보증증권 변경<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step3_popup3.html" target="_blank">estimate_step3_popup3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>인수가란?<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="estimate/estimate_step3_popup4.html" target="_blank">estimate_step3_popup4.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 계약 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="8">계약</td>
+					<td rowspan="5">STEP1. 계약정보 입력</td>
+					<td>일반</td>
+					<td></td>
+					<td><a href="contract/contract_step1.html" target="_blank">contract_step1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>에러</td>
+					<td></td>
+					<td><a href="contract/contract_step1_error.html" target="_blank">contract_step1_error.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>주소찾기 팝업<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="contract/contract_step1_popup1.html" target="_blank">contract_step1_popup1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>운전면허 정보 안내<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="contract/contract_step1_popup2.html" target="_blank">contract_step1_popup2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>제휴카드 혜택 안내<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td><a href="contract/contract_step1_popup3.html" target="_blank">contract_step1_popup3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>STEP2. 약관동의</td>
+					<td></td>
+					<td></td>
+					<td><a href="contract/contract_step2.html" target="_blank">contract_step2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>STEP3. 계약정보 확인</td>
+					<td></td>
+					<td></td>
+					<td><a href="contract/contract_step3.html" target="_blank">contract_step3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>STEP4. 계약완료</td>
+					<td></td>
+					<td></td>
+					<td><a href="contract/contract_step4.html" target="_blank">contract_step4.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 기획전 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="2">기획전</td>
+					<td>리스트</td>
+					<td> </td>
+					<td></td>
+					<td><a href="exhibition/exhibition_list.html" target="_blank">exhibition_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td></td>
+					<td><a href="exhibition/exhibition_detail.html" target="_blank">exhibition_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 특가상품 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="3">특가상품</td>
+					<td>(Tab) 추천상품</td>
+					<td></td>
+					<td></td>
+					<td><a href="specials/specials_tap1.html" target="_blank">specials_tap1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(Tab) 계약 BEST</td>
+					<td></td>
+					<td></td>
+					<td><a href="specials/specials_tap2.html" target="_blank">specials_tap2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(Tab) 인기상품</td>
+					<td></td>
+					<td></td>
+					<td><a href="specials/specials_tap3.html" target="_blank">specials_tap3.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 혜택 및 이벤트 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="10">혜택 및 이벤트</td>
+					<td rowspan="3">진행중인 이벤트</td>
+					<td>리스트 </td>
+					<td></td>
+					<td><a href="event/event_progress_list.html" target="_blank">event_progress_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">상세</td>
+					<td></td>
+					<td><a href="event/event_progress_detail.html" target="_blank">event_progress_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>공유하기(팝업)</td>
+					<td><a href="event/event_progress_popup1.html" target="_blank">event_progress_popup1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">지난 이벤트</td>
+					<td>리스트 </td>
+					<td></td>
+					<td><a href="event/event_last_list.html" target="_blank">event_last_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td><a href="event/event_last_detail.html" target="_blank">event_last_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">제휴카드</td>
+					<td>리스트 </td>
+					<td></td>
+					<td><a href="event/event_card_list.html" target="_blank">event_card_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">상세</td>
+					<td></td>
+					<td><a href="event/event_card_detail.html" target="_blank">event_card_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>공유하기(팝업)</td>
+					<td><a href="event/event_card_popup1.html" target="_blank">event_card_popup1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">당첨자 발표</td>
+					<td>리스트 </td>
+					<td></td>
+					<td><a href="event/event_winner_list.html" target="_blank">event_winner_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td><a href="event/event_winner_detail.html" target="_blank">event_winner_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 고객센터 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="5">고객센터</td>
+					<td>FAQ</td>
+					<td></td>
+					<td></td>
+					<td><a href="customer/customer_faq.html" target="_blank">customer_faq.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">공지사항</td>
+					<td>리스트</td>
+					<td></td>
+					<td><a href="customer/customer_notice_list.html" target="_blank">customer_notice_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td><a href="customer/customer_notice_detail.html" target="_blank">customer_notice_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>일반문의</td>
+					<td></td>
+					<td></td>
+					<td><a href="customer/customer_question.html" target="_blank">customer_question.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>전문상담신청</td>
+					<td></td>
+					<td></td>
+					<td><a href="customer/customer_consulting.html" target="_blank">customer_consulting.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 로그인 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="3">로그인</td>
+					<td>일반로그인(팝업)</td>
+					<td></td>
+					<td></td>
+					<td><a href="login/login_normal_popup.html" target="_blank">login_normal_popup.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">비회원 견적 진행 시 로그인</td>
+					<td>통합 회원 로그인(팝업)</td>
+					<td></td>
+					<td><a href="login/login_integrated_popup.html" target="_blank">login_integrated_popup.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>비회원 견적 로그인(팝업)</td>
+					<td></td>
+					<td></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 마이페이지 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="11">마이페이지</td>
+					<td rowspan="2">견적 보관함</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="mypage/mypage_estimate_list.html" target="_blank">mypage_estimate_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>견적 상세보기(팝업)</td>
+					<td></td>
+					<td><a href="mypage/mypage_estimate_popup.html" target="_blank">mypage_estimate_popup.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">쿠폰 보관함</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="mypage/mypage_coupon_list.html" target="_blank">mypage_coupon_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>쿠폰 안내 팝업(팝업)</td>
+					<td></td>
+					<td><a href="mypage/mypage_coupon_popup.html" target="_blank">mypage_coupon_popup.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">내가 작성한 게시물</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="mypage/mypage_posting_list.html" target="_blank">mypage_posting_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td><a href="mypage/mypage_posting_detail.html" target="_blank">mypage_posting_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>FAQ</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="mypage/mypage_faq_list.html" target="_blank">mypage_faq_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>일반문의</td>
+					<td>상담 문의 화면</td>
+					<td></td>
+					<td><a href="mypage/mypage_general_inquiry.html" target="_blank">mypage_general_inquiry.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>전문 상담신청</td>
+					<td>상담 문의 화면</td>
+					<td></td>
+					<td><a href="mypage/mypage_professional_consultation.html" target="_blank">mypage_professional_consultation.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상담내역</td>
+					<td></td>
+					<td></td>
+					<td><a href="mypage/mypage_professional_history.html" target="_blank">mypage_professional_history.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설정</td>
+					<td></td>
+					<td></td>
+					<td><a href="mypage/mypage_settings.html" target="_blank">mypage_settings.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 푸터 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">푸터</td>
+					<td>이메일 주소 무단 수집거부(팝업)</td>
+					<td></td>
+					<td></td>
+					<td><a href="footerMenu/footerMenu_popup1.html" target="_blank">footerMenu_popup1.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>사업자 정보 확인(팝업)</td>
+					<td></td>
+					<td></td>
+					<td><a href="footerMenu/footerMenu_popup2.html" target="_blank">footerMenu_popup2.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">인증마크</td>
+					<td>롯데렌터카 수상 내역</td>
+					<td></td>
+					<td><a href="footerMenu/footerMenu_certification_awards.html" target="_blank">footerMenu_certification_awards.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>정보보호 관리체계 ISMS</td>
+					<td></td>
+					<td><a href="footerMenu/footerMenu_certification_ISMS.html" target="_blank">footerMenu_certification_ISMS.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 상담 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">상담</td>
+					<td>웹 채팅 상담(팝업)</td>
+					<td></td>
+					<td></td>
+					<td><a href="consulting/consulting_chatting_popup.html" target="_blank">consulting_chatting_popup.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+
+				<!-- 구분선 ================================================================================ 
+				<tr class="line">
+					<td rowspan="8">신차장 다이렉트란?</td>
+					<td rowspan="3">신차장 다이렉트 소개</td>
+					<td>(Tab) STEP.1 견적 </td>
+					<td></td>
+					<td><a href="common/main.html" target="_blank">main.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>전체메뉴</td>
+					<td></td>
+					<td><a href="common/main.html" target="_blank">main.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.08</td>
+					<td class="t_center txt_ing">10.16 (v3.0)</td>
+					<td>10.16 : 접근성 관련 태그 추가, 버튼 onclick 추가</td>
+				</tr>
+			-->
+
+
+
+
+
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

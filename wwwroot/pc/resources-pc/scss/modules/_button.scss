@@ -1,0 +1,175 @@
+.btn{
+	@include Vertical-inline;
+	height: 40px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	line-height: 1;
+	color:#2B2B2B;
+	&-family{
+		background-color: #fff;
+		border: 1px solid #EBEBEB;
+		border-radius: 5px;
+		font-size: 13px;
+		padding-right: 35px;
+		@include Background($sprite:'ico-select3', $size:6px, $position: center right 15px); 
+	}
+	&-blackC{
+		background-color: #2B2B2B;
+		border: 1px solid #2B2B2B;
+		border-radius: 100%;
+		width: 54px;
+		height: 54px;
+		padding:0;
+	}
+	&-default{
+		width: 100%;
+		color: #fff;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #B4B8BF;
+		background-color: #B4B8BF;
+		pointer-events: none;
+		@include Bold;
+		&.noRadius {
+			border-radius: 0;
+		}
+		&.active {
+			border: 1px solid #F04040;
+			background-color: #F04040;
+			pointer-events: auto;
+		}
+		&.eventsAuto {
+			pointer-events: auto;
+		}
+		&.black {
+			border: 1px solid #2B2B2B;
+			background-color: #2B2B2B;
+			pointer-events: auto;
+		}
+	}
+	&-white {
+		width: 100%;
+		border-radius: 15px;
+		font-size: 16px;
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		@include Bold;
+		@include Align-middle;
+	}
+	&-blue {
+		width: 100%;
+		color: #fff;
+		border-radius: 15px;
+		font-size: 16px;
+		border: 1px solid #20BBC4;
+		background-color: #20BBC4;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-red {
+		width: 100%;
+		color: #fff;
+		border-radius: 15px;
+		font-size: 16px;
+		border: 1px solid #F04040;
+		background-color: #F04040;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-sns-naver {
+		@include Background($sprite:'ico-naver_login', $position: center center); 
+		@include Hide_txt;
+		width: 55px;
+		height: 55px;
+	}
+	&-sns-kakao {
+		@include Background($sprite:'ico-kakao_login', $position: center center); 
+		@include Hide_txt;
+		width: 55px;
+		height: 55px;
+	}
+	&-sns-fb {
+		@include Background($sprite:'ico-fb_login', $position: center center); 
+		@include Hide_txt;
+		width: 55px;
+		height: 55px;
+	}
+	&-toggle {
+		width: 30px;
+		height: 30px;
+		position: relative;
+		cursor: pointer;
+		&:after {
+			display: block;
+			content: '';
+			@include Position($top: 50%, $right: 50%);
+			@include Background($sprite:'ico-arrow-down', $size:14px, $position:center center);
+			width: 14px;
+			height: 14px;
+			margin: -7px -7px 0 0;
+			transition: transform .5s;
+			transform: rotate(0deg);
+		}
+		&.gray:after {
+			@include Background($sprite:'ico-arrow-down2', $size:14px, $position:center center);
+		}
+		&.active:after {
+			transform: rotate(180deg);
+		}
+	}
+	&-simple{
+		border: 1px solid #EBEBEB;
+		height: 48px;
+		border-radius: 15px;
+		padding:0 20px;
+		background-color: #fff;
+		@include Align-middle;
+		&.active{
+			color: #0074b2;
+			border-color: #0074b2;
+		}
+		&.black {
+			color: #fff;
+			border-color: #2B2B2B;
+			background-color: #2B2B2B;
+		}
+		&.mid {
+			height: 40px;
+			padding: 0 15px;
+			border-radius: 20px;
+		}
+	}
+	&-link{
+		@include Vertical-inline;
+		box-sizing: border-box;
+		line-height: 1;
+		color:#2B2B2B;
+		border-bottom: 1px solid #2B2B2B;
+		font-size: 14px;
+		padding-bottom: 1px;
+	}
+	&-paging-prev {
+		@include Hide_txt;
+		@include Align-middle;
+		@include Background($sprite:'ico-paging-prev', $position:center center);
+		width: 47px;
+		height: 40px;
+		box-sizing: border-box;
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		border-radius: 10px;
+	}
+	&-paging-next {
+		@include Hide_txt;
+		@include Align-middle;
+		@include Background($sprite:'ico-paging-next', $position:center center);
+		width: 47px;
+		height: 40px;
+		box-sizing: border-box;
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		border-radius: 10px;
+	}
+}

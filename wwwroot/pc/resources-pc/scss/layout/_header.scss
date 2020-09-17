@@ -1,0 +1,62 @@
+.header{
+
+	.header-top {
+		border-bottom: 1px solid #EBEBEB; 
+		.inner{
+			@include Align-between-top;
+			height: 92px;
+			h1 {
+				margin-top: 25px;
+			}
+			.extra-menu {
+				@include Align-middle-left;
+				margin-top: 10px;
+				> li{
+					@include Align-middle-left;
+					> a{
+						font-size: 13px;
+						color: #999;
+					}
+					& + li{
+						&:before {
+							display: block;
+							content: '|';
+							color: #E5E5E5;
+							margin: 0 15px;
+							font-size: 17px;
+						}
+					}
+					&.customer {
+						> a{
+							padding-right: 15px;
+							@include Background($sprite:'ico-select2', $size:6px, $position: center right); 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header-nav {
+		border-bottom: 1px solid #EBEBEB; 
+		.inner{
+			height: 60px;
+			@include Align-middle-right;
+			> ul {
+				@include Align-middle-left;
+				> li {
+					margin-left:50px;
+					> a{
+						@include Bold;
+						font-size: 16px;
+						b {
+							font-weight: bold;
+							font-family: 'Microsoft YaHei';
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

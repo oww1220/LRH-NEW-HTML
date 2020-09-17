@@ -1,0 +1,84 @@
+/*
+	fixedBottom : z-index: 41, 
+	풀팝업: z-index: 45, 
+	딤, bottomAlert(토스트메시지): z-index: 50, 
+	일반팝업, 슬라이드 팝업: z-index: 60, 
+	패널(drawer): z-index: 70, 
+*/
+body.fixed {
+	overflow: hidden;
+	position: fixed;
+	#wrap {
+		//pointer-events: none;
+	}
+}
+.bg-dimmed {
+	@include Hide_txt;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: {
+		color: #000;
+	}
+	opacity: 0.2;
+	z-index: 50;
+}
+
+.layer {
+	&-wrap {
+		line-height: 1;
+		z-index: 60;
+	}
+
+	//팝업 형태
+	&-popup {
+		position: fixed;
+		width:100%;
+		display: none;
+		&.active {
+			display: block !important;
+			opacity: 1 !important;
+		}
+		.pop-inner {
+			border-radius:20px;
+			background-color:#fff;
+			margin:30px;
+			position: relative;
+			box-shadow: 0 1px 15px rgba(96, 97, 112, 0.5);
+		}
+		.popup-top {
+			position: relative;
+			z-index: 1;
+			> h4 {
+				@include Align-bottom-middle;
+				font-size: 26px;
+				@include Bold;
+				height: 75px;
+			}
+		}
+		.popup-cont {
+			position: relative;
+			box-sizing:border-box;
+			overflow: hidden;
+			.iscroll-in {
+				padding-bottom: 40px;
+			}
+		}
+
+		//로그인 팝업
+		&.layer-login {
+			width: 580px;
+			.layer-login-close {
+				@include Position($top: -27px, $right: 40px);
+			}
+			.tab-nav {
+				margin: 40px 20px 0;
+			}
+		}
+
+	}
+
+}

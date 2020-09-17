@@ -1,0 +1,150 @@
+.layer-login-normal {
+    padding: 45px 20px 0px;
+    > h2 {
+        font-size: 26px;
+        @include Bold;
+        text-align: center;
+    }
+    > h3 {
+        text-align: center;
+        line-height: 1.5;
+        margin-top:20px;
+    }
+    .login-normal-input {
+        margin-top:40px;
+        .inputT  {
+            & + .inputT {
+                margin-top: 15px;
+            }
+        }
+    }
+    .login-normal-chk {
+        margin-top: 20px;
+        @include Align-between;
+        .login-normal-search {
+            @include Align-middle-left;
+            > li{
+                @include Align-middle-left;
+                & + li{
+                    &:before {
+                        display: block;
+                        content: '|';
+                        color: #E5E5E5;
+                        margin: 0 10px;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+    .login-normal-submit {
+        margin-top: 30px;
+    }
+    .login-normal-bottom {
+        margin: 40px 0 0;
+        > strong {
+            position: relative;
+            width: 205px;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            span {
+                position: relative;
+                display: inline-block;
+                background-color: #fff;
+                padding:0 12px;
+                color:#999;
+                z-index: 1;
+            }
+            &:after {
+                display: block;
+                content:'';
+                width: 100%;
+                height: 1px;
+                background-color:#EBEBEB;
+                @include Position($top: 6px, $left: 0);
+            }
+        }
+        .login-normal-sns {
+            @include Align-middle;
+            margin-top:20px;
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+.layer-login-integrated {
+    padding: 20px 20px 0px;
+    .guide {
+        color: #999;
+        line-height: 1.3;
+    }
+    .form-list {
+        margin-top:35px;
+    }
+    .detail-layer-inputT-tel{
+        display:flex;
+        li{
+            position: relative;
+            &:first-child{
+                width:75%;
+            }
+            &:last-child{
+                width:25%;
+            }
+            & > input{
+                border:1px solid #EBEBEB;
+                border-right:0 none;
+                border-radius: 15px 0 0 15px;
+                background-color: #fff;
+                height: 60px;
+                width:100%;
+                padding:0 20px;
+            }
+            & > button{
+                width:100%;
+                height: 60px;
+                font-size: 16px;
+                border-radius: 0 15px 15px 0;
+            }
+            .detail-layer-tel-info{
+                color:#F04040;
+                position: absolute;
+                top:50%;
+                right:10%;
+                transform: translateY(-50%);
+                &-stop{
+                    color:#F04040;
+                    position: absolute;
+                    top:50%;
+                    left:20px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    div.detail-layer-inputT-tel {
+        position: relative;
+        > input{
+            border:1px solid #EBEBEB;
+            border-radius: 15px;
+            background-color: #fff;
+            height: 60px;
+            width:100%;
+            padding:0 20px;
+        }
+        .detail-layer-tel-info-confirm{
+            @include Position($top: 50%, $right: 20px);
+            color:#20BBC4;
+            transform: translateY(-50%); 
+        }
+    }
+    .detail-layer-list-btn {
+        margin-top: 40px;
+        button {
+            height: 60px;
+            border-radius: 15px;
+        }
+    }
+}

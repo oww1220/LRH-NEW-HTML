@@ -1,0 +1,113 @@
+.inner {
+    width: 1080px;
+    margin: 0 auto;
+    position: relative;
+}
+.skip_nav {
+    @include Position($top: 0, $left: 0);
+    display: inline-block;
+    width: 0;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 0;
+    color: #fff;
+    background-color: #f40404;
+}
+
+.path-wrap {
+    margin: 50px 0 25px;
+    .inner {
+        @include Align-between;
+        > strong {
+            @include Bold;
+            font-size: 15px;
+            color:#F04040;
+        }
+        > ul {
+            @include Align-middle-left;
+            > li {
+                @include Align-middle-left;
+                > a{
+                    font-size: 13px;
+                }
+                > b{
+                    font-size: 13px;
+                    color:#999;
+                }
+                & + li{
+                    &:before {
+                        display: block;
+                        content: '>';
+                        color: #999;
+                        margin: 0 6px;
+                    }
+                    > a {
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.title-box-wrap {
+    margin-bottom: 50px;
+    > .inner {
+        @include Align-middle-left;
+    }
+    h2 {
+        font-size: 32px;
+        @include Bold;
+        line-height: 1;
+    }
+    .steps-indicator {
+        margin-left: 40px;
+        > ul {
+            @include Align-middle-left;
+            > li {
+                position: relative;
+                > b {
+                    border: 1px solid #ccc;
+                    color: #ccc;
+                    font-size: 14px;
+                    width: 29px;
+                    height: 29px;
+                    @include Align-middle;
+                    @include Bold;
+                    border-radius: 100%;
+                }
+                & + li {
+                    padding-left: 25px;
+                    &:after {
+                        display: block;
+                        content: '';
+                        @include Position($top: 50%, $left: 0);
+                        width: 25px;
+                        height: 1px;
+                        background-color: #ccc;
+                        margin-top: -.5px;
+                    }
+                }
+                &.active {
+                    b{
+                        background-color: #333;
+                        border-color: #333;
+                        color: #fff;
+                    }
+                }
+                &.complete {
+                    b{
+                        border-color: #333;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+#wrap {
+    
+}

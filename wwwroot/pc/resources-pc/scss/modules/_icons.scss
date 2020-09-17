@@ -1,0 +1,282 @@
+.icon {
+    @include Vertical-inline;
+    @include Hide_txt;
+    flex: none;
+    &.loginClose {
+        @include Background($sprite:'ico-close', $position:center center);
+        width: 15px;
+        height: 15px;
+    }
+    &.stepsChk {
+        @include Background($sprite:'ico-stepsChk', $position:center center);
+        width: 12px;
+        height: 12px;
+    }
+    &.fast {
+        @include Background($sprite:'ico-estimate-btn1', $position:center center);
+        width: 15px;
+        height: 15px;
+    }
+    &.fast2 {
+        @include Background($sprite:'ico-estimate-btn01', $position:center center);
+        width: 30px;
+        height: 30px;
+    }
+    &.pro {
+        @include Background($sprite:'ico-estimate-btn2', $position:center center);
+        width: 15px;
+        height: 15px;
+        &.circle {
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            background-color: #02B174;
+        }
+    }
+    &.pro2 {
+        @include Background($sprite:'ico-estimate-btn02', $position:center center);
+        width: 30px;
+        height: 30px;
+    }
+    &.filter {
+        @include Background($sprite:'ico-select-off', $position:center center);
+        width: 13px;
+        height: 13px; 
+    }
+    &.reset {
+        @include Background($sprite:'ico-reset', $position:center center);
+        width: 16px;
+        height: 16px;
+    }
+    &.info {
+        @include Background($sprite:'ico-info', $position:center center);
+        width: 20px;
+        height: 20px;
+    }
+    &.info2 {
+        @include Background($sprite:'ico-info2', $position:center center);
+        width: 20px;
+        height: 20px;
+    }
+    &.fuelG {
+        @include Background($sprite:'ico-fuel-g', $position:center center);
+        width: 35px;
+        height: 35px;
+    }
+    &.fuelD {
+        @include Background($sprite:'ico-fuel-d', $position:center center);
+        width: 35px;
+        height: 35px;
+    }
+    &.fuelL {
+        @include Background($sprite:'ico-fuel-l', $position:center center);
+        width: 35px;
+        height: 35px;
+    }
+    &.fuelH {
+        @include Background($sprite:'ico-fuel-h', $position:center center);
+        width: 35px;
+        height: 35px;
+    }
+    &.fuelE {
+        @include Background($sprite:'ico-fuel-e', $position:center center);
+        width: 35px;
+        height: 35px;
+    }
+    &.star {
+        @include Background($sprite:'ico-star_off', $position:center center);
+        width: 14px;
+        height: 14px;
+        &.active {
+            @include Background($sprite:'ico-star_on', $position:center center);
+        }
+    }
+    &.video {
+        @include Background($sprite:'ico-play', $position:center center);
+        width: 40px;
+        height: 40px;
+    }
+    &.heart {
+        @include Background($sprite:'ico-heart', $position:center center);
+        width: 16px;
+        height: 16px;
+    }
+    &.speak {
+        @include Background($sprite:'ico-speak', $size:14px, $position:center center);
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border:1px solid #EBEBEB;
+    }
+
+}
+
+
+//캐스케이드
+button.active .filter{
+    @include Background($sprite:'ico-select-on', $position:center center);
+}
+
+
+.flag {
+    height: 20px;
+    border-radius: 15px;
+    padding: 0 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+    line-height: 1;
+    @include Inline-align-middle;
+    @include Nomal;
+    &.best {
+        border: 1px solid #25C1D6;
+        color: #25C1D6;
+        margin-left: 5px;
+        @include Bold;
+    }
+    &.low {
+        border: 1px solid #9198FF;
+        color: #9198FF;
+        margin-left: 5px;
+        @include Bold;
+    }
+    &.hot {
+        border: 1px solid #20BBC4;
+        color: #20BBC4;
+        @include Bold;
+    }
+    &.think {
+        border: 1px solid #5793E5;
+        color: #5793E5;
+        @include Bold;
+    }
+    &.battle {
+        border: 1px solid #9198FF;
+        color: #9198FF;
+        @include Bold;
+    }
+    &.fast {
+        @include Position($top: 10px, $left: 10px);
+        @include Bold;
+        font-size: 13px;
+        color: #fff;
+        height: 30px;
+        border-radius: 15px;
+        padding: 0 10px;
+        background-color:#406FF0;
+        i {margin-right: 5px;}
+    }
+    &.fast2 {
+        @include Align-middle-column;
+        @include Bold;
+        font-size: 13px;
+        color: #fff;
+        height: 80px;
+        width: 80px;
+        padding:0;
+        border-radius: 100%;
+        background-color:#406FF0;
+        i {margin-bottom: 5px;}
+    }
+    &.pro {
+        @include Position($top: 10px, $left: 10px);
+        @include Bold;
+        font-size: 13px;
+        color: #fff;
+        height: 30px;
+        border-radius: 15px;
+        padding: 0 10px;
+        background-color:#02B174;
+        i {margin-right: 5px;}
+    }
+    &.pro2 {
+        @include Align-middle-column;
+        @include Bold;
+        font-size: 13px;
+        color: #fff;
+        height: 80px;
+        width: 80px;
+        padding:0;
+        border-radius: 100%;
+        background-color:#02B174;
+        i {margin-bottom: 5px;}
+    }
+    &.time {
+        @include Position($top:0, $left: 1.3rem);
+        font-size:0;
+        background-color: #F04040;
+        height: 2.6rem;
+        border-radius: 0 0 1rem 1rem;
+        padding: 0 1rem;
+        z-index: 2;
+        i {margin-right: .5rem;}
+        p{
+            @include Vertical-inline;
+            @include Bold;
+            font-size:1rem;
+            color:#fff;
+        }
+    }
+    &.circle {
+        @include Position($bottom: -1.9rem, $right: 1.3rem);
+        @include Bold;
+        @include Align-middle;
+        border-radius: 100%;
+        line-height: 1.3;
+        font-size:1rem;
+        height: 4.1rem;
+        width: 4.1rem;
+        color:#fff;
+        background-color: #F04040;
+        z-index: 2;
+        &.off {
+            background-color: #B4B8BF;
+        }
+    }
+    &.num {
+        @include Position($top: 0, $left: 0);
+        background-color: #1E1E1E;
+        color: #fff;
+        height: 1.7rem;
+        width: 1.7rem;
+        border-radius: 0 0 .8rem 0;
+        @include Bold;
+    }
+}
+
+.flag-wrap {
+    @include Position($top: 10px, $left: 10px);
+    z-index: 2;
+    .flag{
+        @include Position($position:static);
+        @include Align-middle;
+        margin-bottom:10px;
+    }
+}
+.flag-bottom-wrap {
+    @include Position($bottom: -.85rem, $left: 1.3rem);
+    font-size: 0;
+    z-index: 2;
+    .flag{
+        @include Position($position:static);
+        margin-right:.6rem;
+    }
+}
+
+.flag-inline-wrap {
+    font-size: 0;
+    .flag {
+        margin-right: 10px;
+    }
+}
+
+.flag-big-wrap {
+    @include Position($top: 30px, $left: 0);
+    @include Align-middle-left;
+    z-index: 2;
+    .flag {
+        position: relative;
+        & + .flag {
+            left: -10px;
+        }
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="../../../resources-mo/images/favicon.ico">
+<link rel="stylesheet" href="../../../resources-mo/styles/reset.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/layout.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/modules.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/contents.css">
+
+<script src="../../../resources-mo/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/swiper.min.js"></script>
+
+<script src="../include_sub_header_type1.js"></script><!--인크루드용..-->
+<script src="../include_noBottombar_footer.js"></script><!--인크루드용..-->
+<script src="../../../resources-mo/scripts/MUI.js"></script>
+<script src="../../../resources-mo/scripts/common.js"></script>
+
+<style>
+.fixedBottom {display: none !important;}
+</style>
+</head>
+
+<body>
+
+	<header class="header">
+	</header>
+
+
+	<main id="wrap" >
+
+
+	</main>
+
+
+	<div class="estimateBottom">
+		<div class="bottom-in ty2">
+            <button type="button" class="btn btn-white">다른견적</button>
+            <button type="button" class="btn btn-orange">구매상담</button>
+			<button type="button" class="btn btn-red layer-certification-open" data-layer="layer-certification"><span>단 5분이면 끝!</span>무서류심사</button>
+		</div>
+	</div>
+
+
+	<footer class="footer">
+    </footer>
+
+
+    <!--layer-slide 소득유형 선택 컴포넌트-->
+	<div class="layer-wrap layer-slide layer-certification" data-type="slide">
+		<!--상단-->
+		<div class="slide-top">
+			<button type="button" class="layer-slide-close" data-layer="layer-certification">닫기 버튼</button>
+			<h4>
+                소득유형 선택
+            </h4>
+		</div>
+		<!--//상단-->
+		<!--컨텐츠-->
+		<div class="slide-inner">
+			<div class="slide-cont">
+                
+                <div class="certification-col-top">
+                    <div class="guide">
+                        고객님의 소득정보를 통해 최종적으로 심사 결과를 확인 하
+                        실 수 있으며, 심사결과에 따라 계약이 불가능 할 수 있습니다.
+                    </div>
+                </div>
+
+                <div class="certification-col-form">
+                    <form action="">
+
+                        <div class="radio-box2">
+                            <ul class="list-type-col1">
+                                <li>
+                                    <div class="radioIconBox inner">
+                                        <input type="radio" name="radio1" id="radio1-1" >
+                                        <label for="radio1-1">
+                                            <i class="icon people01"></i>
+                                            <div>
+                                                <strong>급여소득자, 직장인 등</strong>
+                                                <span>
+                                                    국민건강보험공단 건강보험내역 및 
+                                                    국세청 홈택스에서 소득을 조회합니다.
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radioIconBox inner">
+                                        <input type="radio" name="radio1" id="radio1-2" >
+                                        <label for="radio1-2">
+                                            <i class="icon people02"></i>
+                                            <div>
+                                                <strong>개인사업자(면세사업자 포함), 사업소득자</strong>
+                                                <span>
+                                                    국세청홈텍스에서 사업자등록증명과 
+                                                    수입금액 등으로 소득을 조회합니다.
+                                                </span>
+                                            </div>
+                                        </label>
+                                        <div class="radio-depth">
+                                            <div class="radio-depth-top">
+                                                <strong>사업자등록번호</strong>
+                                                <div class="inputC">
+                                                    <input type="checkbox" name="checkbox2" id="checkbox2-1">
+                                                    <label for="checkbox2-1">
+                                                        <span>세금계산서 발행 동의</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-depth-cont">
+                                                <div class="inputT">
+                                                    <input type="text" id="" name="" title="" placeholder="하이픈(-) 없이 입력"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radioIconBox inner">
+                                        <input type="radio" name="radio1" id="radio1-3" >
+                                        <label for="radio1-3">
+                                            <i class="icon people03"></i>
+                                            <div>
+                                                <strong>기타 (학생,주부 등)</strong>
+                                                <span>
+                                                    학생, 주부 등 기타 소득자인 경우 선택해주세요.
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </form>
+                </div>
+
+			</div>
+			<div class="slide-btn">
+				<button type="button" class="btn btn-default noRadius active">다음</button>
+			</div>
+		</div>
+		<!--//컨텐츠-->	
+	</div>
+	<!--//layer-slide 프로모션 컴포넌트-->
+    
+
+
+
+    <!--상단 타이틀(추후삭제)-->
+    <script>
+    $(function(){
+        $('.header-top.sub h1').text('견적결과 확인');
+
+        $('.layer-certification-open').trigger('click');
+        $('.layer-certification-open').trigger('touchstart');
+    })
+    </script>
+    <!--//상단 타이틀(추후삭제)-->
+
+</body>
+</html>
+

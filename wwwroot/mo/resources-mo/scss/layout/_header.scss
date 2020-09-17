@@ -1,0 +1,85 @@
+
+.header{
+	position: sticky;
+    top: -6.5rem;
+    left: 0;
+    z-index: 31;
+    box-sizing: border-box;
+    width: 100%;
+	background-color: #fff;
+	&-top{
+		box-sizing: border-box;
+		width: 100%;
+		height: 6.5rem;
+		background-color: #fff;
+		transition: all .5s ease .01ms;
+		font-size:1.7rem;
+		h1{
+			text-align: center;
+			a {
+				display: inline-block;
+			}
+			img {
+				height: 37px;
+				transition: height .5s ease 0.01ms;
+			}
+		}
+		
+		.btn-drawer {
+			width: 3.4rem;
+			height: 3.4rem;
+			border-radius: .7rem;
+			background-color: #DCDFE4;
+			@include Align-middle;
+			@include Position( $top: 1.5rem, $right: 1.7rem);
+		}
+
+	}
+
+	&-top.sub {
+		@include Align-middle;
+		background-color: #EFF2F7;
+		h1 {@include Bold;padding: 0 6rem;word-break: break-all;flex-shrink: 1;font-size: 1.4rem;}
+		.btn-prev {
+			width: 3.4rem;
+			height: 3.4rem;
+			border-radius: .7rem;
+			background-color: #fff;
+			@include Align-middle;
+			@include Position( $top: 1.5rem, $left: 1.7rem);
+		}
+		
+
+	}
+
+	&-nav {
+		@include NoscrollBar;
+		@include Inline-scrolling;
+		padding-left: 1.7rem;
+		font-size:2.4rem;
+		color: #000;
+		letter-spacing: 0;
+		a {
+			position: relative;
+			display: inline-block;
+			padding: 1rem 0.5rem 0.8rem 0;
+			color:#CBCED2;
+			line-height: 1;
+			&.active {
+				color:#2B2B2B;
+				&:after {
+					display: block;
+					content: '';
+					@include Position( $bottom: 0, $left: 50%);
+					z-index: 1;
+					width: .5rem;
+					height: .5rem;
+					margin-left: -.2rem;
+					border-radius: 50%;
+					background-color: #F04040;
+				}
+			}
+		}
+	}
+
+}

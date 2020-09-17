@@ -1,0 +1,118 @@
+.fixedBottom {
+    @include Position( $position:fixed, $bottom: 0, $left: 0);
+    @include Hide_txt;
+    z-index: 41;
+    width: 100%;
+    height: 7rem;
+    box-sizing: border-box;
+    transform: translate3d(0, 0, 0);
+    transition: transform .2s;
+    .fixedBottom_in {
+        @include Align-between;
+        height: 5.1rem;
+        margin-top:1.9rem;
+        box-sizing: border-box;
+        border-top:1px solid #EBEBEB;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        &:after {
+            display: block;
+            content: '';
+            @include Background($sprite:'bg-fixedRight', $size:100% auto, $position:center center, $path:'bgs');
+            width: 13rem;
+            height: 2.8rem;
+            @include Position($top: -.8rem, $left: 50%);
+            margin-left: -6.5rem;
+        }
+        button {
+            @include Align-middle-column;
+            margin:0;
+            span {
+                display: block;
+                font-size:1rem;
+                margin-top:.4rem;
+            }
+        }
+        .left {
+            @include Align-box;
+            flex-basis:calc(50% - 3rem);
+            height: 100%;
+            box-sizing: border-box;
+            padding-top: .5rem;
+            button {
+                flex-basis:50%;
+            }
+        }
+        .center {
+            position: relative;
+            z-index: 1;
+            @include Align-middle;
+            flex-basis:6rem;
+            margin-bottom: 2rem;
+            span {font-size:1rem;}
+        }
+        .right {
+            @include Align-box;
+            flex-basis:calc(50% - 3rem);
+            height: 100%;
+            box-sizing: border-box;
+            padding-top: .5rem;
+            button {
+                flex-basis:50%;
+            }
+        }
+    }
+    &.close {
+        transform: translate3d(0, 115%, 0);
+    }
+}
+
+.fixedRight {
+    @include Position( $position:fixed, $bottom: 0, $right: 0);
+    z-index: 41;
+    transition: transform .2s; 
+    padding: 1.7rem;
+    button {
+        display: block;
+        margin-top: .9rem;
+    }
+    &.close-topBt {
+        transform:translate3d(0, 5.5rem, 0) scale(1);
+        .btn-goTop {
+            transform:scale(0);
+            opacity: 0;
+            transition: opacity .2s, transform .2s;
+        }
+    }
+}
+
+.toast-message {
+    @include Position( $position:fixed, $bottom: 0, $left:0);
+    @include Bold;
+    @include Align-middle;
+    width: calc(100% - 2rem);
+    height: 4.1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 115%, 0);
+    transition: opacity .5s, visibility .5s, transform .5s;
+    margin:1rem;
+    border-radius: 1rem;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fixedBottom.close ~ .fixedRight {
+    transform: translate3d(0, 5.5rem, 0);
+}
+
+.fixedBottom ~ .fixedRight,
+.estimateBottom ~ .fixedRight,
+.unit-text-write-wrap ~ .fixedRight{
+    bottom: 5rem;
+}

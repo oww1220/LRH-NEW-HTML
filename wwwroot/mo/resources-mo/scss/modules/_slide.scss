@@ -1,0 +1,133 @@
+
+.slide-list,
+.slick-slider .slick-track,
+.slick-slider .slick-list{
+	height: 100%;
+}
+.slick-slide{
+	outline: none;
+}
+.slick-arrow{
+	position: absolute;
+	top: 50%;
+	width: 24px;
+	height: 24px;
+	font: 0/0 a;
+	border-top: 3px solid rgba(255, 255, 255, .4);
+	border-left: 3px solid rgba(255, 255, 255, .4);
+	border-radius: 2px;
+	z-index: 1;
+	&.slick-prev{
+		left: 20px;
+		transform: rotate(-45deg);
+	}
+	&.slick-next{
+		right: 20px;
+		transform: rotate(135deg);
+	}
+}
+
+.slide-controls{
+	position: absolute;
+	bottom: 56px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	.btn-pause,
+	.btn-play{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		margin: 0 2px;
+		padding-top: 4px;
+		text-align: center;
+		font:0/0 a;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,.3);
+		box-sizing: border-box;
+	}
+	.btn-pause:before,
+	.btn-pause:after{
+		content: '';
+		display: inline-block;
+		width: 2px;
+		height: 12px;
+		margin: -4px 2px 0;
+		background-color: #fff;
+	}
+	.btn-play{
+		.icon{
+			margin-top: -4px;
+			margin-left: 2px;
+		}
+		/*
+		&:after{
+			content: '';
+			display: inline-block;
+			margin-top: -4px;
+			margin-left: -3px;
+			border-top: 5px solid #fff;
+			border-right: 5px solid #fff;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid transparent;
+			transform: rotate(45deg);
+		}
+		*/
+	}
+	.slick-dots{
+		padding-left:28px;
+		li{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin: 0 2px;
+			padding-top: 4px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,.3);
+			box-sizing: border-box;
+			button{
+				width: 16px;
+				height: 16px;
+				border: 1px solid #fff;
+				font: 0/0 a;
+				border-radius: 50%;
+				box-sizing: border-box;
+				vertical-align: top;
+			}
+			&.slick-active button{
+				background: #fff;
+			}
+		}
+	}
+}
+
+.slide{
+	position: relative;
+	height: 791px;
+	background-size: cover;
+	background-position: 50% 50%;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		height: 100%;
+		background-size: cover;
+	}
+	h2,
+	.content{
+		strong{
+			font-weight: 700;
+		}
+	}
+	.content{
+		position: relative;
+	}
+}
