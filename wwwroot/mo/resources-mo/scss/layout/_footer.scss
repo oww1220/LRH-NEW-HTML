@@ -2,7 +2,6 @@
 .footer{
 	margin-top: auto;
 	padding-top:65px;
-	background-color: #f2f2f2;
 	.inner{
 		max-width: 1300px;
 		margin: 0 auto;
@@ -154,6 +153,131 @@
 			font-size: 12px;
 			line-height: 1.5;
 			color: #666;
+		}
+	}
+	.footer-center{
+		padding:0 1.7rem;
+		color:#54585a;
+		font-size:1.1rem;
+		.list-type-col2{
+			align-items: flex-end;
+		}
+		em{
+			display:block;
+			font-size:1.2rem;
+			color:#2f2f2f;
+			@include Bold;
+		}
+		b{
+			display:block;
+			padding-top:1rem;
+			& > a{
+				font-size:2.2rem;
+				color:#ed1c24;
+				@include Bold;
+			}
+		}
+	}
+	.footer-topMenu{
+		padding:0 1.7rem;
+		margin-top: 1.4rem;
+		& > ul{
+			padding:1.3rem 0;
+			margin:0 1.7rem;
+			margin-left:0;
+			width:100%;
+			border-top:1px solid #e7e7e7;
+			border-bottom:1px solid #e7e7e7;
+			text-align: center;
+			& > li:after{
+				display:inline-block;
+				content:"";
+				width:1px;
+				height:1.3rem;
+				background-color:#e7e7e7;
+				position: relative;
+				top: .2rem;
+				left: -75%;
+				transform: translateX(-50%);
+			}
+			& > li:first-child:after{
+				display:none;
+			}
+		}
+	}
+	.footer-companyInfo{
+		padding:0 1.7rem;
+		.chk-agree-top{
+			@include Align-between;
+			justify-content: flex-start;
+			h2{
+				font-size:1.5rem;
+				@include Bold;
+				padding-right:.9rem;
+			}
+		}
+		.agree-toggle-cont{
+			display: none;
+			font-size:1rem;
+			color:#8f9191;
+			padding-top: 1.4rem;
+			a{
+				font-size:1rem;
+				color:#8f9191;
+			}
+			span{
+				opacity: .7;
+				font-size:.6rem;
+				display:inline-block;
+				padding:0 .6rem;
+			}
+		}
+	}
+	.footer-bottomMenu{
+		padding:0 1.7rem;
+		margin-top: 1.4rem;
+		& > ul{
+			margin-left:0;
+			width:100%;
+			& > li{
+				width:auto;
+				padding-right:1.8rem;
+			}
+			& > li:after{
+				display:inline-block;
+				content:"";
+				width:1px;
+				height:1rem;
+				background-color:#e7e7e7;
+				position: relative;
+				top: .2rem;
+				right: -10%;
+				transform: translateX(-50%);
+			}
+			& > li:last-child:after{
+				display:none;
+			}
+			& > li > a{
+				font-size:1.1rem;
+				b{
+					color:#ed1c24;
+					@include Bold;
+					font-size:1.1rem;
+				}
+			}
+		}
+	}
+	.footer-app{
+		padding:0 1.7rem 5.2rem;
+		margin-top: 1.4rem;
+		p{
+			@include Bold;
+		}
+		& > ul{
+			padding-top:1.3rem;
+			& > li{
+				width:22%;
+			}
 		}
 	}
 }
