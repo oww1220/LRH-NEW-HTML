@@ -121,7 +121,6 @@
 	margin-top:2rem;
 	background-color: #fff;
 	overflow: hidden;
-	border-radius: 1.5rem;
 	box-sizing: border-box;
 	a {display: block;}
 	.img {
@@ -793,14 +792,30 @@
 	&-wrap {
 		@include Align-middle;
 		.btn-paging-prev {
-			margin-right: .38rem;
+			margin-right: 1.7rem;
+			width:2.6rem;
+			height:2.6rem;
+			border-radius: 50%;
 		}
 		.btn-paging-next {
-			margin-left: .38rem;
+			margin-left: 1.7rem;
+			width:2.6rem;
+			height:2.6rem;
+			border-radius: 50%;
 		}
 	}
 	&-list {
 		@include Align-box;
+		align-items: baseline;
+		strong{
+			@include Align-middle;
+			@include Bold;
+			font-size:1.1rem;
+		}
+		em{
+			@include Align-middle;
+			font-size:1.1rem;
+		}
 		li {
 			margin: 0 .38rem;
 			a {
