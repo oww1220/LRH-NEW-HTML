@@ -104,73 +104,38 @@
                 padding:1.7rem;
             }
         }
-        .catharsis-tv-view{
-            position: relative;
-            .video02{
-                @include Position($top: 50%, $left: 50%);
-                transform: translate(-50%,-100%);
-            }
-        }
-        .catharsis-tv-bn{
-            margin-top:1.2rem;
-        }
 
     }
     .section-detail{
-        .text-detail-cont-tv{
-            .detail-img{
-                margin:0 -1.7rem;
+        .detail-cont-info{
+            @include Align-middle-column;
+            align-items: flex-start;
+            strong{
+                @include Bold;
+                display: block;
+                font-size: 1.9rem;
+                line-height: 1.3;
             }
-            .detail-cont-txt{
-                border-top:0 none;
+            b{
+                font-size: 1rem;	
+                display: block;
+                color: #999;
+                margin-top:1rem;
+                line-height: 1.3;
             }
-            .unit-pro{
-                margin-bottom:.9rem;
-                ul {
-                    @include NoscrollBar;
-                    @include Inline-scrolling;
-                    margin-top: 1.7rem;
-                    li {
-                        display: block;
-                        width: 100%;
-                        margin-top:1.2rem;
-                        vertical-align: middle;
-                        a {
-                            display: block;
-                        }
-                        .img {
-                            position: relative; 
-                            border-radius: 1rem;
-                            overflow: hidden;
-                            background-color: #EEF1F6;
-                            display: inline-block;
-                            width: 10.2rem;
-                            img{
-                                mix-blend-mode: multiply;
-                            }
-                        }
-                        .text {
-                            white-space: normal;
-                            margin-left: 1.3rem;
-                            display: inline-block;
-                            vertical-align: top;
-                            margin-top:.9rem;
-                            strong {
-                                display: block;
-                                line-height: 1.3;
-                                word-break: keep-all;
-                            }
-                            span {
-                                display: block;
-                                @include Bold;
-                                margin-top: .4rem;
-                            }
-                        }
-                    }
-                    & > li:first-child{
-                        margin-top:0;
-                    }
-                }
+        }
+        .cover{
+            margin:0 -1.7rem;
+        }
+        .chk-agree-info{
+            @include Align-between;
+            border-top:1px solid #e7e7e7;
+            border-bottom:1px solid #e7e7e7;
+            padding:1.7rem;
+            margin:2.3rem 1.7rem 0;
+            a{
+                width:100%;
+                @include Align-between;
             }
         }
     }
