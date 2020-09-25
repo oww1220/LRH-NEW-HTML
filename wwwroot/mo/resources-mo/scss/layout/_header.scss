@@ -1,7 +1,7 @@
 
 .header{
 	position: sticky;
-    top: -6.5rem;
+    top: -6rem;
     left: 0;
     z-index: 31;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 	&-top{
 		box-sizing: border-box;
 		width: 100%;
-		height: 6.5rem;
+		height: 6rem;
 		background-color: #fff;
 		transition: all .5s ease .01ms;
 		font-size:1.7rem;
@@ -45,13 +45,20 @@
 
 	&-top.sub {
 		@include Align-middle;
-		background-color: #EFF2F7;
-		h1 {@include Bold;padding: 0 6rem;word-break: break-all;flex-shrink: 1;font-size: 1.4rem;}
+		border-bottom:.2rem solid #d2d2d2;
+		h1 {
+			@include Bold;
+			padding: 0 6rem;
+			word-break: break-all;
+			flex-shrink: 1;
+			font-size: 1.4rem;
+			position: static;
+			top:auto;
+			left:auto;
+		}
 		.btn-prev {
 			width: 3.4rem;
 			height: 3.4rem;
-			border-radius: .7rem;
-			background-color: #fff;
 			@include Align-middle;
 			@include Position( $top: 1.5rem, $left: 1.7rem);
 		}
