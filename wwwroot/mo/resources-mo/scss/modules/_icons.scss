@@ -426,7 +426,11 @@
         width: .9rem;
         height: .9rem;
     }
-    
+    &.data-new {
+        @include Background($sprite:'ico-data-new', $size:100% auto, $position:center center);
+        width: 1rem;
+        height: 1rem;
+    }
 }
 
 //캐스케이드
@@ -535,6 +539,20 @@ button.active .unlike{
         height: 1.7rem;
         width: 1.7rem;
         border-radius: 0 0 .8rem 0;
+        @include Bold;
+    }
+    &.notice {
+        background-color:#54585a;
+        color: #fff;
+        height:1.7rem;
+        padding:.4rem .9rem;
+        @include Bold;
+    }
+    &.news {
+        background-color:#877669;
+        color: #fff;
+        height:1.7rem;
+        padding:.4rem .9rem;
         @include Bold;
     }
 }
