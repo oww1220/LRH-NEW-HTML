@@ -109,7 +109,7 @@
 						}
 						input:checked + label {
 							background: rgb(255,51,102);
-                            background: linear-gradient(90deg, rgba(255,51,102,1) 0%, rgba(255,77,52,1) 100%);
+                            background: linear-gradient(90deg, rgba(254,42,123,1) 0%, rgba(255,77,52,1) 100%);
                             color:#fff;
 						}
 					}
@@ -129,7 +129,10 @@
 			> strong {
 				font-size: 1.1rem;
 				@include Bold;
-				b {color:#F04040;font-size: 1.1rem;}
+				b {
+                    color:#F04040;
+                    font-size: 1.1rem;
+                }
 			}
         }
         ul {
@@ -276,7 +279,15 @@
                             @include Nomal;
                             color:#54585a;
                         }
-                        
+                        & > em{
+                            display:inline-block;
+                        }
+                        & > em:after{
+                            display:block;
+                            content:"";
+                            width:100%;
+                            border-bottom:1px solid #2B2B2B;
+                        }
                     }
                 }
                 .detail-layer-cont-pchase{
