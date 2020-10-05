@@ -436,28 +436,38 @@ body.fixed {
 				margin-top: 2.2rem;
 				.address-result-top {
 					strong {
-						font-size: 1.1rem;
 						@include Bold;
 						b {
-							font-size: 1.1rem;
 							color: #F04040;
 						}
 					}
 				}
 				.address-result-list {
-					border: 1px solid #EBEBEB;
-					border-radius: 1rem;
+					// border: 1px solid #EBEBEB;
+					// border-radius: 1rem;
+					border-bottom: 1px solid #EBEBEB;
 					margin-top: 1rem;
 					> ul {
 						> li {
+							border-top: 1px solid #EBEBEB;
 							a {
 								display: block;
 								font-size: 1.1rem;
 								line-height: 1.4;
-								padding: 1.2rem;
-							}
-							& + li {
-								border-top: 1px solid #EBEBEB;
+								padding:1.2rem 1.2rem 1.2rem 4.7rem;
+								position: relative;
+								.flag-wrap{
+									top: 1.3rem;
+									left:0;
+								}
+								.address-result-txt{
+									padding-top:.2rem;
+									b{
+										display:block;
+										padding-top:.9rem;
+										font-size:1rem;
+									}
+								}
 							}
 							.none {
 								@include Align-middle;
@@ -465,6 +475,16 @@ body.fixed {
 							}
 						}
 					}
+				}
+			}
+			.layer-address-foot{
+				padding: 2.6rem 0;
+				.btn-white{
+					border-color: #d2d2d2;
+					color: #54585a;
+					width:50%;
+					margin:0 auto;
+					border-radius: 1rem;
 				}
 			}
 			.pagination-wrap {
@@ -874,8 +894,8 @@ body.fixed {
 						margin-bottom: 1.5rem;
 						& > ul{
 							& > li{
-								text-indent: -.8rem;
-								padding-left: .8rem;
+								// text-indent: -.8rem;
+								padding-left: 1.4rem;
 								margin-top:.6rem;
 								line-height: 1.3;
 								i{
