@@ -9,7 +9,7 @@ $extra-small-devices: 320px;
 		clear: both;
 	}
 }
-@mixin Nomal {
+@mixin Normal {
 	font-family:"ManropeL", "NotoL", serif;
 	font-weight: normal;
 }
@@ -47,6 +47,17 @@ $extra-small-devices: 320px;
 	justify-content: center;
 	flex-flow: column;
 }
+@mixin Align-top-column {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: column;
+}
+@mixin Align-top-left-column {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+}
 @mixin Align-middle-left {
 	display: flex;
 	align-items: center;
@@ -55,6 +66,11 @@ $extra-small-devices: 320px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+}
+@mixin Align-top {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
 }
 @mixin Align-top-left {
 	display: flex;
@@ -160,6 +176,33 @@ $extra-small-devices: 320px;
 		-webkit-box-orient: vertical;
 		word-break: break-all;
 	}
+}
+
+//커스텀 스크롤바
+@mixin CustumScroll {
+	&::-webkit-scrollbar {
+		width: 17px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #E1E1E1;
+		border: 5px solid transparent;
+		background-clip: content-box;
+		border-radius: 15px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: #FAFAFA;
+		border: 5px solid transparent;
+		background-clip: content-box;
+		border-radius: 15px;
+	}
+	scrollbar-base-color: #E1E1E1;
+	scrollbar-face-color: #E1E1E1;
+	scrollbar-3dlight-color: #E1E1E1;
+	scrollbar-highlight-color: #E1E1E1;
+	scrollbar-track-color: #FAFAFA;
+	scrollbar-arrow-color: #FAFAFA;
+	scrollbar-shadow-color: #FAFAFA;
+	scrollbar-dark-shadow-color: #FAFAFA;
 }
 
 /*미디어쿼리 믹스인*/

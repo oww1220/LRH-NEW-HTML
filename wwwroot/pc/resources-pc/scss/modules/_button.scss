@@ -6,12 +6,35 @@
 	line-height: 1;
 	color:#2B2B2B;
 	&-family{
+		position: relative;
+		background-color: #333;
+		font-size: 16px;
+		padding-right: 64px;
+		color:#fff;
+		@include Bold;
+		&:after {
+			display: block;
+			content: '';
+			@include Position($top: 50%, $right: 0);
+			@include Background($sprite:'ico-arrow-down3', $size:15px, $position: center center);
+			width: 15px;
+			height: 15px;
+			margin: -7px 0 0 0;
+			transition: transform .5s;
+			transform: rotate(0deg);
+		}
+		&.active:after {
+			transform: rotate(180deg);
+		}
+	}
+	&-foot-sns{
+		width:30px;
+		height:30px;
 		background-color: #fff;
-		border: 1px solid #EBEBEB;
-		border-radius: 5px;
-		font-size: 13px;
-		padding-right: 35px;
-		@include Background($sprite:'ico-select3', $size:6px, $position: center right 15px); 
+		border-radius: 50%;
+		border: 1px solid #d3d3d3;
+		@include Align-middle;
+		padding:0 13px;
 	}
 	&-blackC{
 		background-color: #2B2B2B;

@@ -108,6 +108,61 @@
         border-radius: 100%;
         border:1px solid #EBEBEB;
     }
+    &.app01 {
+        @include Background($sprite:'ico-app01', $position:center center);
+        width: 140px;
+        height: 25px;
+    }
+    &.app02 {
+        @include Background($sprite:'ico-app02', $position:center center);
+        width: 129px;
+        height: 29px;
+    }
+    &.snsB {
+        @include Background($sprite:'ico-sns-blog', $position:center center);
+        width: 10px;
+        height: 14px;
+    }
+    &.snsF {
+        @include Background($sprite:'ico-sns-fb', $position:center center);
+        width: 10px;
+        height: 18px;
+    }
+    &.snsI {
+        @include Background($sprite:'ico-sns-insta', $position:center center);
+        width: 16px;
+        height: 16px;
+    }
+    &.snsK {
+        @include Background($sprite:'ico-sns-kakao', $position:center center);
+        width: 20px;
+        height: 18px;
+    }
+    &.snsY {
+        @include Background($sprite:'ico-sns-yt', $position:center center);
+        width: 16px;
+        height: 11px;
+    }
+    &.mypage {
+        @include Background($sprite:'ico-mypage', $position:center center);
+        width: 28px;
+        height: 26px;
+    }
+    &.draw {
+        @include Background($sprite:'ico-draw', $position:center center);
+        width: 22px;
+        height: 20px;
+    }
+    &.global {
+        @include Background($sprite:'ico-global', $position:center center);
+        width: 22px;
+        height: 22px;
+    }
+    &.next02 {
+        @include Background($sprite:'ico-next02', $position:center center);
+        width: 5px;
+        height: 10px;
+    }
 
 }
 
@@ -126,7 +181,7 @@ button.active .filter{
     box-sizing: border-box;
     line-height: 1;
     @include Inline-align-middle;
-    @include Nomal;
+    @include Normal;
     &.best {
         border: 1px solid #25C1D6;
         color: #25C1D6;
@@ -240,6 +295,26 @@ button.active .filter{
         width: 1.7rem;
         border-radius: 0 0 .8rem 0;
         @include Bold;
+    }
+    &.point{
+        color:#fff;
+        @include Bold;
+        font-size:15px;
+        border-radius: 100%;
+        width: 26px;
+        height: 26px;
+        background: rgb(251,68,87);
+        background: linear-gradient(90deg, rgba(251,68,87,1) 0%, rgba(241,93,55,1) 100%);
+    }
+    &.coupon{
+        color:#fff;
+        @include Bold;
+        font-size:15px;
+        border-radius: 100%;
+        width: 26px;
+        height: 26px;
+        background: rgb(129,112,221);
+        background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
     }
 }
 

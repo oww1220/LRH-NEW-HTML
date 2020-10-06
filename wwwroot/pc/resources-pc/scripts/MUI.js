@@ -95,6 +95,7 @@ var MUI = MUI || {
 		}
 	},
 	slide: {
+		LayerSwiper: null,
 		init: function(target, sort, option){
 			if(sort === 'slick') {
 				return target.slick(option);
@@ -118,16 +119,17 @@ var MUI = MUI || {
 				layerW = layer.width(),
 				marginH = parseInt(layerIn.css('marginTop')) + parseInt(layerIn.css('marginBottom')) + parseInt(layerIn.find('.popup-top').height());
 			//console.log(layer, winH, winW, layerH, layerW, marginH);
-			//console.log(winH, layerH, marginH, layerIn.find('.popup-top').height());
+			//console.log(layer);
+			console.log(winH, layerH, marginH, layerIn.find('.popup-top').height(), layerIn.height());
 			
 			if(winH < layerH){
 				layerIn.find('.popup-cont').css({
 					height: winH - marginH,
-					//'overflow-y': 'auto',
+					'overflow-y': 'auto',
 				});
-				layerIn.find('.iscroll-in').css({
-					'padding-bottom': '80px'
-				});
+				//layerIn.find('.iscroll-in').css({
+					//'padding-bottom': '80px'
+				//});
 				layer.css({
 					top: 0,
 					left: (winW - layerW) / 2,
@@ -135,9 +137,9 @@ var MUI = MUI || {
 			}
 			else{
 				layerIn.find('.popup-cont').removeAttr('style');
-				layerIn.find('.iscroll-in').css({
-					'padding-bottom': '40px'
-				});
+				//layerIn.find('.iscroll-in').css({
+					//'padding-bottom': '40px'
+				//});
 				layer.css({
 					top: (winH - layerH) / 2,
 					left: (winW - layerW) / 2,
@@ -168,7 +170,7 @@ var MUI = MUI || {
 			var that = this;
             that.scrollTop = $(window).scrollTop();
             $('body').addClass('fixed');
-            $('body').css({top:-that.scrollTop});
+			$('body').css({top:-that.scrollTop});
 			if(callback) callback(layer);
 			if($(layer).data('type') === 'full') {
 				$(dimmed).addClass('type-full');
@@ -506,51 +508,100 @@ var MUI = MUI || {
 				width = $activeTarget.outerWidth(true);
 			$target.scrollLeft(left - ($(document).width() - width) / 2);
 		},
-		goTarget: function(target){
+		goTarget: function(target, fixNav){
 			$(document).on('click', target, function(e){
 				var hrefString = $(this).data('target'),
 					offsetTop = $('.' + hrefString).offset(),
-					fixHeight = - 20, //추후변동
-					navHeight = $('.detail-layer-nav').height();
+					fixHeight = -20, //추후변동
+					navHeight = fixNav;
 				//console.log(hrefString, offsetTop, navHeight);
 				if(offsetTop){
 					offsetTop = offsetTop.top - navHeight - fixHeight;
 					$('html, body').stop().animate({'scrollTop': offsetTop}, 500,function(){
 						//console.log('callback');
 					});
-					$(this).siblings().removeClass('active');
+					//$(this).siblings().removeClass('active');
 				}
 			});
 		},
 		scrollTaps: function(scrollTop, $target, $nav){
-			var navHeight = $('.detail-layer-nav').height(),
+			var navHeight = $nav.height(),
+				$link = $nav.find('.menu-link');
 				fixHeight = 0; //추후변동
+				//console.log($target);
 			$target.each(function(){
 				var top_of_element = $(this).offset().top;
 				var idx = $(this).attr('data-link');
 				if((scrollTop >= top_of_element - navHeight - fixHeight) ){
-					$nav.siblings().removeClass('active');
-					//$nav.eq(idx).addClass('active');
-					$nav.siblings('.link'+idx).addClass('active');
+					$link.siblings().removeClass('active');
+					//console.log(idx);
+					//$link.eq(idx).addClass('active');
+					$link.siblings('.link'+idx).addClass('active');
 				}
 			});
 		},
 		removeToast: 0,
-		toastMessage: function(message){
+		toastMessage: function(message, id, time){
 			var that = this,
-				toast = document.getElementById('toast');
-
+				idValue = id ? id : 'toast',
+				toast = document.getElementById(idValue),
+				timeValue = time ? time : 1000;
+				
 			toast.classList.contains('active') ?
 				(clearTimeout(that.removeToast), that.removeToast = setTimeout(function () {
-					document.getElementById('toast').classList.remove('active')
-				}, 1000)) :
+					document.getElementById(idValue).classList.remove('active')
+				}, timeValue)) :
 				that.removeToast = setTimeout(function () {
-					document.getElementById('toast').classList.remove('active')
-				}, 1000)
-			toast.classList.add('active'),
-				toast.innerText = message
+					document.getElementById(idValue).classList.remove('active')
+				}, timeValue)
+			toast.classList.add('active');
+				if(message) toast.innerText = message;
 		},
 
+	},
+	IScrollSingle: {
+		/*아이스크롤 하나만 생성(레이어팝업용)*/
+		IScrollObj: null,
+		iscrollConstructor: function(target){
+			if(!this.IScrollObj ){
+				this.IScrollObj = new IScroll(target, { 
+					scrollbars: true,
+					mouseWheel: true,
+					interactiveScrollbars: true,
+					shrinkScrollbars: 'scale',
+					fadeScrollbars: true,
+				});
+			}
+		},
+		iscrollRefresh: function(delay, callback){
+			if(!this.IScrollObj) return;
+			var that = this;
+			if(delay){
+				setTimeout(function(){
+					that.IScrollObj.refresh();
+					if(callback) callback();
+				}, delay);
+			}
+			else{
+				this.IScrollObj.refresh();
+				if(callback) callback();
+			}
+		},
+		iscrollDisable: function(){
+			if(!this.IScrollObj) return;
+			this.IScrollObj.disable();
+		},
+		iscrollEnable: function(){
+			if(!this.IScrollObj) return;
+			this.IScrollObj.enable();
+		},
+		iscrollDestroy: function(callback){
+			//console.log(this.IScrollObj);
+			if(!this.IScrollObj) return;
+			this.IScrollObj.destroy();
+			this.IScrollObj = null;
+			if(callback) callback();
+		},
 	},
 	iscrolls: {
         cash: null,

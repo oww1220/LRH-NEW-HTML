@@ -110,16 +110,18 @@
 			display: block;
 			content: '';
 			@include Position($top: .7rem, $right: .7rem);
-			@include Background($sprite:'ico-radio-off02', $type:'png', $size:92% auto, $position:center center);
-			width: 1.5rem;
-			height: 1.5rem;
+			// @include Background($sprite:'ico-radio-off02', $type:'png', $size:92% auto, $position:center center);
+			width: .9rem;
+			height: .8rem;
 		}
 	}
 	> input:checked + label {
-		border-color: #2B2B2B;
+		border-color: #ff404b;
 		@include Bold;
+		color:#ed1c24;
+		background-color:#fff9f9;
 		&:after {
-			@include Background($sprite:'ico-radio-on02', $type:'png', $size:92% auto, $position:center center);
+			@include Background($sprite:'ico-radio-on03', $type:'png', $size:92% auto, $position:center center);
 		}
 	}
 	> input {
