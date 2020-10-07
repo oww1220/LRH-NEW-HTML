@@ -9,7 +9,7 @@ $extra-small-devices: 320px;
 		clear: both;
 	}
 }
-@mixin Nomal {
+@mixin Normal {
 	/*font-family:"ManropeL", "NotoL", serif;*/font-family:"SpoqaL", serif;
 	font-weight: normal;
 }
@@ -36,6 +36,13 @@ $extra-small-devices: 320px;
 	flex-wrap: wrap;
 }
 
+@mixin Align-box-left {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: left;
+	justify-content: left;
+}
+
 @mixin Align-middle {
 	display: flex;
 	align-items: center;
@@ -45,6 +52,10 @@ $extra-small-devices: 320px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-flow: column;
+}
+@mixin Align-left-column {
+	display: flex;
 	flex-flow: column;
 }
 @mixin Align-middle-left {
