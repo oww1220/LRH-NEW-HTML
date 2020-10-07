@@ -694,21 +694,22 @@ if($('.customer-list').length){
         });
     }
 
-    if($('.header .specials-view-list').length) {
-        MUI.slide.init($('.header .specials-view-list'), 'slick', {
-            infinite: true,
-            swipeToSlide: true,
-            speed: 300,
-            autoplay: true,
-            dots: true,
-            arrows: false,
-            customPagin:1,
-            adaptiveHeight: true,
-        });
-        $('.header .draw-btn').click(function(e){
-            $('.slick-slide').width('880px');
-        });
-    }
+    $('.header .draw-btn').click(function(e){
+        if($('.header .specials-view-list').length) {
+            MUI.slide.init($('.header .specials-view-list'), 'slick', {
+                infinite: true,
+                swipeToSlide: true,
+                speed: 300,
+                autoplay: true,
+                dots: true,
+                arrows: false,
+                customPagin:0,
+                adaptiveHeight: true,
+            });
+        }
+        $('.slick-track').width('4000px');
+        $('.slick-slide').width('1760px');
+    });
 
 
 /*브라우저 리사이즈*/
