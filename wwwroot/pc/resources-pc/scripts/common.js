@@ -694,29 +694,19 @@ if($('.customer-list').length){
         });
     }
 
-    //헤더 gnb 배너 슬라이더
-    // if($('.header .detail-view-list').length) {
-    //     MUI.slide.init('.header .detail-view-list','swiper', {
-    //         loop: true,
-    //         autoHeight:true,
-    //         pagination: {
-    //             el: '.swiper-pagination',
-    //             clickable: true,
-    //         },
-    //         autoplay: {
-    //             delay: 3000,
-    //         },
-    //     });
-    // }
-
     if($('.header .specials-view-list').length) {
         MUI.slide.init($('.header .specials-view-list'), 'slick', {
             infinite: true,
+            swipeToSlide: true,
             speed: 300,
-            slidesToShow: 1,
             autoplay: true,
             dots: true,
             arrows: false,
+            customPagin:1,
+            adaptiveHeight: true,
+        });
+        $('.header .draw-btn').click(function(e){
+            $('.slick-slide').width('880px');
         });
     }
 
