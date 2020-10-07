@@ -112,6 +112,103 @@
 	display: none;
 }
 
+.slick-dots {
+	margin-top: 3rem;
+	position: static;
+	background-color: rgba(255, 255, 255, 0.7);
+	height: 2rem;
+	padding: 0;
+	-webkit-border-radius: 1rem;
+	   -moz-border-radius: 1rem;
+	        border-radius: 1rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	font-size: 0;
+}
+
+.slick-dots li {
+	margin: 0 .4rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.slick-dots button {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	font: 0/0 a;
+	width: auto;
+	height: auto;
+	-webkit-border-radius: none;
+	   -moz-border-radius: none;
+	        border-radius: none;
+	background-color: transparent;
+	border: 0;
+	opacity: 1;
+}
+
+.slick-dots button:before {
+	display: inline-block;
+	content: '';
+	width: 7px;
+	height: 7px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	background-color: #fff;
+	border: 1px solid #d3d3d3;
+}
+
+.slick-dots button:after {
+	display: inline-block;
+	content: '';
+	width: 0;
+	-webkit-transition: width .6s;
+	-o-transition: width .6s;
+	-moz-transition: width .6s;
+	transition: width .6s;
+}
+
+.slick-dots .slick-active button:before {
+	background-color: #ff404b;
+	border: 1px solid #ff404b;
+}
+
+.slick-dots .slick-active button:after {
+	display: inline-block;
+	content: '';
+	width: 0;
+	-webkit-transition: width .6s;
+	-o-transition: width .6s;
+	-moz-transition: width .6s;
+	transition: width .6s;
+}
+
 /**
  * Swiper 4.3.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions

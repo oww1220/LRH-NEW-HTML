@@ -68,6 +68,7 @@
 			display: none;
 			@include Position($top:148px, $left:0);
 			width:100%;
+			padding-bottom:90px;
 			background-color: #fff;
 			box-shadow: 0 20px 40px -40px #54585a;
 			.detail-layer-in {
@@ -77,7 +78,7 @@
 				width: 1420px;
 				margin: 0 auto;
 				position: relative;
-				padding-top:50px;
+				padding:50px 0 80px 0;
 				.layer-gnb-info{
 					@include Align-top-left-column;
 					.layer-gnb-info-top{
@@ -164,70 +165,43 @@
 					}
 				}
 			}
+			.detail-layer-in:after{
+				display:block;
+				content:"";
+				height:500px;
+				width:1px;
+				background-color:#e7e7e7;
+				@include Position($top:50px, $left:20%);
+			}
 			.layer-gnb-bn{
 				min-width: 1280px;
 				max-width:1420px;
 				width: 1420px;
 				margin: 0 auto;
 				position: relative;
-				@include Align-bottom-middle;
-				.gnb-bn-list {
-					margin-left:300px;
-					.swiper-slide {
-						@include Align-middle;
-					}
-				}
-				.swiper-pagination-wrap{
-					margin-top: 15px;
-					@include Align-middle;
-					width: 100%;
-					.swiper-pagination {
-						position: static;
-						background-color: rgba(255, 255, 255, .7);
-						height: 24px;
-						padding: 0 15px;
-						border-radius: 20px;
-						@include Align-middle;
-						.swiper-pagination-bullet {
-							@include Inline-align-middle;
-							margin: 0 5px;
-							width: auto;
-							height: auto;
-							border-radius: none;
-							background-color: transparent;
-							border:0;
-							opacity: 1;
-							transition: all .4s;
-							&:before {
-								display: inline-block;
-								content: '';
-								width: 4px;
-								height: 4px;
-								border-radius: 100%;
-								background-color: #ccc;
-							}
-							&:after {
-								display: inline-block;
-								content: '';
-								width: 0;
-								transition: width .6s;
-							}
-							&.swiper-pagination-bullet-active {
-								&:before {
-									background-color: transparent;
-									border: 3px solid #2B2B2B;
-									width: 4px;
-									height: 4px;
-								}
-								
-								&:after {
-									width: 14px;
-									height: 2px;
-									background-color: #2B2B2B;
-									border-radius: 0 10px 10px 0;
-									margin-left: -2px;
+				@include Align-middle-right;
+				.view-slide {
+					margin-right:195px;
+					.specials-view-list {
+						width:880px;
+						.slick-slide {
+							display: inline-block;
+							width:880px;
+							vertical-align: top;
+							text-align: left;
+							a{
+								display: block;
+								position: relative;
+								.img {
+									width:100%;
 								}
 							}
+						}
+						.slick-dots {
+							background-color: rgba(255, 255, 255, 0);
+							width:auto;
+							height:auto;
+							@include Position($bottom:20px, $right:20px);
 						}
 					}
 				}
