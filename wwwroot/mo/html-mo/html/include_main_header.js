@@ -18,7 +18,6 @@ $(function(){
                 <a href="#">단기예약</a>
                 <a href="#">신차장</a>
                 <a href="#">중고차</a>
-                <a href="#">고객지원</a>
             </nav>
         </header>
         <!--//header 컴포넌트-->

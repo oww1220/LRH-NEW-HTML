@@ -516,8 +516,26 @@ if($('.specials-list .tab-normal').length){
         });
     }
 /* -------------------------------------------------로그인end*/
-    
 
+
+/* 메인start-------------------------------------------------*/
+    if($('.carLife-wrap .life-event-lists').length) {
+        MUI.slide.init('.carLife-wrap .life-event-lists','swiper', {
+            loop: true,
+            //autoHeight: true,
+            autoplay: {
+                delay: 3000,
+            },
+        });
+        
+        // $(".swiper-button-pause").click(function(){
+        //     Swiper.autoplay.stop();
+        // });
+        // $(".swiper-button-play").click(function(){
+        //     Swiper.autoplay.start();
+        // });
+    }
+/* -------------------------------------------------메인end*/
 
 
 
