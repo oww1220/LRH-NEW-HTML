@@ -520,7 +520,7 @@ if($('.specials-list .tab-normal').length){
 
 /* 메인start-------------------------------------------------*/
     if($('.carLife-wrap .life-event-lists').length) {
-        MUI.slide.init('.carLife-wrap .life-event-lists','swiper', {
+        var mainTopSlide = MUI.slide.init('.carLife-wrap .life-event-lists','swiper', {
             loop: true,
             //autoHeight: true,
             autoplay: {
@@ -528,12 +528,12 @@ if($('.specials-list .tab-normal').length){
             },
         });
         
-        // $(".swiper-button-pause").click(function(){
-        //     Swiper.autoplay.stop();
-        // });
-        // $(".swiper-button-play").click(function(){
-        //     Swiper.autoplay.start();
-        // });
+        $(".swiper-button-pause").on('click', function(){
+            mainTopSlide.autoplay.stop();
+        });
+        $(".swiper-button-play").on('click',function(){
+            mainTopSlide.autoplay.start();
+        });
     }
 /* -------------------------------------------------메인end*/
 
