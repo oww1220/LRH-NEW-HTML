@@ -155,6 +155,199 @@
         }
     }
 
+    
+    .section-detail{
+        background-color:#f5f5f5;
+        .detail-main-list{
+            margin-top:1.1rem;
+            background-color:#fff;
+            padding:0 1.7rem;
+            // padding:3.4rem 0;
+            .list-tit{
+                padding:3.4rem 0 2.2rem;
+                @include Align-between;
+                align-items: flex-end;
+                p{
+                    em{
+                        display: block;
+                        @include Regular;
+                        color:#8f9191;
+                        font-size:1.4rem;
+                    }
+                    b{
+                        display: block;
+                        @include Bold;
+                        font-size:2rem;
+                    }
+                }
+                .btn-group{
+                    .btn{
+                        height:1.2rem;
+                        margin-right:0;
+                        @include Bold;
+                        .next4{
+                            padding-right:.4rem;
+                            margin-top:-.2rem;
+                        }
+                    }
+                }
+            }
+            .event-list{
+                padding:0 0 3.4rem;
+                .list-type-col2 > li:nth-child(odd) .inner{
+                    margin:2.6rem .8rem 0 0;
+                }
+                .list-type-col2 > li:nth-child(even) .inner{
+                    margin:2.6rem 0 0 .8rem;
+                }
+                .list-type-col2 > li{
+                    .text{
+                        strong{
+                            font-size:1.1rem;
+                            @include Bold;
+                            display: block;
+                            margin-top:.9rem;
+                        }
+                        em{
+                            font-size:1rem;
+                            @include Regular;
+                            display: block;
+                            color:#8f9191;
+                            margin-top:.6rem;
+                        }
+                    }
+                }
+                .list-type-col2 > li:nth-child(1) .inner,
+                .list-type-col2 > li:nth-child(2) .inner{
+                    margin-top:0;
+                }
+            }
+            .life-event-view{
+                padding-bottom:1.7rem;
+                position: relative;
+                .text{
+                    margin-top:1.7rem;
+                    padding:0 1.7rem;
+                    b{
+                        display: block;
+                        @include Bold;
+                    }
+                    em{
+                        display: block;
+                        color:#8f9191;
+                        margin-top:.6rem;
+                    }
+                }
+                .swiper-pagination-wrap{
+                    @include Align-middle;
+                    width: 100%;
+                    z-index: 1;
+                    .swiper-pagination {
+                        position: static;
+                        height: 2rem;
+                        padding: 0 1.4rem;
+                        border-radius: 1rem;
+                        @include Align-middle;
+                        .swiper-pagination-bullet {
+                            @include Inline-align-middle;
+                            margin: 0 .4rem;
+                            width: .7rem;
+                            height: .7rem;
+                            border-radius: .5rem;
+                            background-color: #ddd;
+                            border:0;
+                            opacity: 1;
+                            //transition: all .4s;
+                            &.swiper-pagination-bullet-active {
+                                background-color:#ff404b;
+                            }
+                        }
+                    }
+                }
+                .swiper-play-list-wrap{
+                    height: 2.6rem;
+                    background-color: #000;
+                    opacity: .6;
+                    @include Position($bottom:0, $right:0);
+                    z-index: 1;
+                    @include Align-middle;
+                    border-radius: .5rem 0 0 0;
+                    .swiper-button-pause{
+                        @include Background($sprite:'ico-stop', $size:100% auto, $position:center center);
+                        width: .6rem;
+                        height: 1rem;
+                        @include Vertical-inline;
+                        @include Hide_txt;
+                        flex: none;
+                        margin:0 1.3rem;
+                    }
+                    .swiper-button-play{
+                        @include Background($sprite:'ico-next02', $size:100% auto, $position:center center);
+                        width: .6rem;
+                        height: 1rem;
+                        @include Vertical-inline;
+                        @include Hide_txt;
+                        flex: none;
+                        display:none;
+                        margin:0 1.3rem;
+                    }
+                    .swiper-button-thumbs{
+                        @include Background($sprite:'ico-gallery', $size:100% auto, $position:center center);
+                        width: 1.5rem;
+                        height: 1rem;
+                        @include Vertical-inline;
+                        @include Hide_txt;
+                        flex: none;
+                        margin:0 .9rem 0 .2rem;
+                        .btn{
+                            height:1rem;
+                        }
+                    }
+                }
+            }
+            &.detail-main-list1{
+                margin:0;
+                padding:0;
+                .life-event-view{
+                    padding-bottom:0;
+                }
+            }
+            &.detail-main-list2{
+                padding-bottom:3.4rem;
+                .list-type-col3{
+                    margin-bottom:3.4rem;
+                    i{
+                        display:block;
+                        margin: 0 auto;
+                    }
+                    b{
+                        display:block;
+                        text-align: center;
+                        margin-top:1.1rem;
+                        line-height:1.3;
+                        @include Regular;
+                    }
+                }
+                .btn-group{
+                    .blueOverlay{
+                        .calendar02{
+                            margin-right:.9rem;
+                            margin-top:-.2rem;
+                        }
+                    }
+                }
+            }
+            &.detail-main-list3{
+                .life-event-view{
+                    margin:0 -1.7rem;
+                }
+            }
+            &.detail-main-list4{
+                
+            }
+        }
+    }
+
 }
 
 

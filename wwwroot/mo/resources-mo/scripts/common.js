@@ -519,6 +519,7 @@ if($('.specials-list .tab-normal').length){
 
 
 /* 메인start-------------------------------------------------*/
+    //카라이프 메인 롤링 01
     if($('.carLife-wrap .life-event-lists').length) {
         var mainTopSlide = MUI.slide.init('.carLife-wrap .life-event-lists','swiper', {
             loop: true,
@@ -530,10 +531,65 @@ if($('.specials-list .tab-normal').length){
         
         $(".swiper-button-pause").on('click', function(){
             mainTopSlide.autoplay.stop();
+            $(".swiper-button-play").show();
+            $(".swiper-button-pause").hide();
         });
         $(".swiper-button-play").on('click',function(){
             mainTopSlide.autoplay.start();
+            $(".swiper-button-pause").show();
+            $(".swiper-button-play").hide();
         });
+    }
+
+    //카라이프 메인 롤링 02
+    if($('.carLife-wrap .life-event-lists02').length) {
+        MUI.slide.init('.carLife-wrap .life-event-lists02','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
+    //카라이프 메인 롤링 03
+    if($('.carLife-wrap .life-event-lists03').length) {
+        MUI.slide.init('.carLife-wrap .life-event-lists03','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
+    //카라이프 메인 롤링 04
+    if($('.carLife-wrap .life-event-lists04').length) {
+        MUI.slide.init('.carLife-wrap .life-event-lists04','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
+    //카라이프 메인 슬라이드 팝업
+    if($('.layer-galleryThumbs').length) {
+        MUI.layer.openClick('.layer-galleryThumbs-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+            //console.log('open');
+            show();
+        });
+        
     }
 /* -------------------------------------------------메인end*/
 
