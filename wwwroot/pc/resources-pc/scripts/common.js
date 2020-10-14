@@ -232,6 +232,26 @@ if($('.login-wrap .tab-normal').length){
     });
 }
 
+//로그인 견적화면 메뉴 라디오버튼 선택
+if($('.login-wrap .detail-radio').length) {
+    $('.login-wrap .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'P'){
+            $('.login-wrap .detail-tab-wrap-P').addClass('active');
+        }
+        else{
+            $('.login-wrap .detail-tab-wrap-P').removeClass('active');
+        }
+    });
+    $('.login-wrap .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'L'){
+            $('.login-wrap .detail-tab-wrap-L').addClass('active');
+        }
+        else{
+            $('.login-wrap .detail-tab-wrap-L').removeClass('active');
+        }
+    });
+}
+
 /* -------------------------------------------------탭 전환end*/
 
 /* 레이어팝업start-------------------------------------------------*/

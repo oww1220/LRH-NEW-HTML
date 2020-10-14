@@ -53,50 +53,68 @@
 									<div class="detail-item">
 										<div class="detail-top align-c">
 											<div class="detail-radio iconBox">
-												<ul class="list-type-col2">
+												<ul class="list-type-col3 detail-radio-box">
 													<li>
-														<input type="radio" id="login1" name="login1" checked><label for="login1">L.POINT 통합회원</label>
+														<input type="radio" id="login1" name="login1" checked value="P"><label for="login1">L.POINT 통합회원</label>
 													</li>
 													<li>
-														<input type="radio" id="login2" name="login1"><label for="login2">롯데렌터카 회원</label>	
+														<input type="radio" id="login2" name="login1" value="L"><label for="login2">롯데렌터카 회원</label>	
 													</li>
 												</ul>
 											</div>
 										</div>
-										<div class="detail-cont">
-											<div class="detail-inputT inputT"><input type="text" id="ID" name="ID" title="ID" placeholder="아이디 또는 이메일을 입력해주세요"></div>
-											<div class="detail-inputT inputT"><input type="text" id="PW" name="PW" title="PW" placeholder="비밀번호를 입력해주세요"></div>
-											<div class="detail-descri">
-												<ul>
-													<li><sub>*</sub> 롯데렌터카 회원 아이디는 영문 대문자와 숫자 혼합체계이며, 영문을 소문자로 입력 시 대문자로 자동 전환됩니다</li>
+										<div class="detail-tab-wrap-P active">
+											<div class="detail-cont">
+												<div class="detail-inputT inputT"><input type="text" id="ID" name="ID" title="ID" placeholder="아이디"></div>
+												<div class="detail-inputT inputT"><input type="text" id="PW" name="PW" title="PW" placeholder="비밀번호"></div>
+												<div class="detail-search-wrap">
+													<div class="detail-iconBox iconBox"><input type="checkbox" id="auto_login" name="auto_login"><label for="auto_login">자동로그인</label></div>
+													<div class="detail-search">
+														<ul class="">
+															<li><a href="#none">회원가입</a></li>
+															<li><a href="#none">아이디찾기</a></li>
+															<li><a href="#none">비밀번호찾기</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="detail-submit"><button type="submit" class="btn btn-default active">로그인</button></div>
+												<ul class="detail-sns align-c">
+													<li>
+														<button type="button" class="btn btn-white"><i class="icon login-naver">네이버</i><span>네이버 로그인</span></button>
+													</li>
+													<li>
+														<button type="button" class="btn btn-white"><i class="icon login-kakao">카카오</i><span>카카오 로그인</span></button>
+													</li>
+													<li>
+														<button type="button" class="btn btn-white"><i class="icon login-fb">페이스북</i><span>페이스북 로그인</span></button>
+													</li>
 												</ul>
 											</div>
-											<div class="detail-iconBox iconBox"><input type="checkbox" id="auto_login" name="auto_login"><label for="auto_login">자동로그인</label></div>
-											<div class="detail-submit"><button type="submit" class="btn btn-default active">로그인</button></div>
-											<div class="detail-search">
-												<ul class="btn-group">
-													<li><div class="inner"><a href="#none" class="btn">회원가입</a></div></li>
-													<li><div class="inner"><a href="#none" class="btn">아이디찾기</a></div></li>
-													<li><div class="inner"><a href="#none" class="btn">비밀번호찾기</a></div></li>
-												</ul>
+										</div>
+										<div class="detail-tab-wrap-L">
+											<div class="detail-cont">
+												<div class="detail-inputT inputT"><input type="text" id="ID" name="ID" title="ID" placeholder="아이디 또는 이메일을 입력해주세요"></div>
+												<div class="detail-inputT inputT"><input type="text" id="PW" name="PW" title="PW" placeholder="비밀번호를 입력해주세요"></div>
+												<div class="detail-descri">
+													<ul>
+														<li><sub>*</sub> 롯데렌터카 회원 아이디는 영문 대문자와 숫자 혼합체계이며, 영문을 소문자로 입력 시 대문자로 자동 전환됩니다</li>
+													</ul>
+												</div>
+												<div class="detail-search-wrap">
+													<div class="detail-iconBox iconBox"><input type="checkbox" id="auto_login" name="auto_login"><label for="auto_login">자동로그인</label></div>
+													<div class="detail-search">
+														<ul class="">
+															<li><a href="#none">회원가입</a></li>
+															<li><a href="#none">아이디찾기</a></li>
+															<li><a href="#none">비밀번호찾기</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="detail-submit"><button type="submit" class="btn btn-default active">로그인</button></div>
 											</div>
-											<ul class="detail-sns align-c list-type-col4">
-												<li>
-													<button type="button" class="btn"><i class="icon login-naver">네이버</i><span>네이버 로그인</span></button>
-												</li>
-												<li>
-													<button type="button" class="btn"><i class="icon login-kakao">카카오</i><span>카카오 로그인</span></button>
-												</li>
-												<li>
-													<button type="button" class="btn"><i class="icon login-fb">페이스북</i><span>페이스북 로그인</span></button>
-												</li>
-												<li>
-													<button type="button" class="btn"><i class="icon login-apple">애플</i><span>애플 로그인</span></button>
-												</li>
-											</ul>
 										</div>
 									</div>
-									<div class="detail-layer-bn">
+									<div class="detail-bn">
 										<a href="#">
 											<img src="../../../resources-pc/images/@temp-login-bn01.png" alt="bn">
 										</a>
@@ -105,23 +123,23 @@
 							</div>
 							<div class="detail-integrated">
 								<div class="detail-wrap">
-									<div class="detail-layer-top align-c">
-										<h3 class="detail-layer-descri">
-											예약정보
-										</h3>
-									</div>
 									<div class="detail-item">
+										<div class="detail-top">
+											<h3 class="detail-tit">
+												예약정보
+											</h3>
+										</div>
 										<div class="detail-cont">
 											<div class="detail-inputT inputT">
-												<div class="detail-layer-inputT-tit">예약번호</div>
+												<div class="detail-inputT-tit">예약번호</div>
 												<input type="text" id="" name="" title="number" placeholder="예약번호">
 											</div>
 											<div class="detail-inputT inputT">
-												<div class="detail-layer-inputT-tit">예약자명</div>
+												<div class="detail-inputT-tit">예약자명</div>
 												<input type="text" id="" name="" title="name" placeholder="예약자명">
 											</div>
 											<div class="detail-inputT inputT">
-												<div class="detail-layer-inputT-tit">휴대전화번호</div>
+												<div class="detail-inputT-tit">휴대전화번호</div>
 												<input type="text" id="" name="" title="tel" placeholder="휴대전화번호">
 											</div>
 											<div class="detail-descri">
@@ -132,7 +150,7 @@
 											<div class="detail-submit"><button type="submit" class="btn btn-default active">예약확인</button></div>
 										</div>
 									</div>
-									<div class="detail-layer-bn">
+									<div class="detail-bn">
 										<a href="#">
 											<img src="../../../resources-pc/images/@temp-login-bn01.png" alt="bn">
 										</a>
