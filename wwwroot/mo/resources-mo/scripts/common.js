@@ -491,18 +491,18 @@ if($('.specials-list .tab-normal').length){
     if($('.login-wrap .menu-radio-box').length) {
         $('.login-wrap .menu-radio-box').on('change', '.radio-box input', function(e){
             if(e.target.value === 'N'){
-                $('.login-wrap .detail-layer-normal').addClass('active');
+                $('.login-wrap .detail-normal').addClass('active');
             }
             else{
-                $('.login-wrap .detail-layer-normal').removeClass('active');
+                $('.login-wrap .detail-normal').removeClass('active');
             }
         });
         $('.login-wrap .menu-radio-box').on('change', '.radio-box input', function(e){
             if(e.target.value === 'I'){
-                $('.login-wrap .detail-layer-integrated').addClass('active');
+                $('.login-wrap .detail-integrated').addClass('active');
             }
             else{
-                $('.login-wrap .detail-layer-integrated').removeClass('active');
+                $('.login-wrap .detail-integrated').removeClass('active');
             }
         });
     }
@@ -513,6 +513,14 @@ if($('.specials-list .tab-normal').length){
             //console.log('toggle');
             $('.login-wrap .detail-layer-integrated input').prop('checked', false);
             logic();
+        });
+    }
+
+    //로그인 탭전환
+    if($('.login-wrap .tab-normal').length){
+
+        MUI.event.taps('.login-wrap .tab-normal', false, function(swap){
+            swap();
         });
     }
 /* -------------------------------------------------로그인end*/

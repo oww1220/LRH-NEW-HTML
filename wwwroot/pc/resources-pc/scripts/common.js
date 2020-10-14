@@ -202,6 +202,7 @@ if($('.layer-login .tab-normal').length){
     });
 }
 
+
 if($('.layer-carSelect .tab-carSelect').length){
     MUI.event.taps('.layer-carSelect .tab-carSelect', false, function(swap){
         setTimeout(function(){
@@ -219,6 +220,14 @@ if($('.layer-carSelect .tab-carSelect').length){
 if($('.specials-list .tab-normal').length){
 
     MUI.event.taps('.specials-list .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
+//로그인 화면 탭
+if($('.login-wrap .tab-normal').length){
+
+    MUI.event.taps('.login-wrap .tab-normal', false, function(swap){
         swap();
     });
 }
