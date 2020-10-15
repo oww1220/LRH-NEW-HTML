@@ -67,6 +67,17 @@
 		@include Align-middle;
 		border-radius: 0;
 	}
+	&-gray {
+		width: 100%;
+		color: #fff;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #54585a;
+		background-color: #54585a;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
 	&-white {
 		width: 100%;
 		color: #F04040;
@@ -139,6 +150,11 @@
 		}
 		&.gray:after {
 			@include Background($sprite:'ico-arrow-down2', $size:100% auto, $position:center center);
+		}
+		&.shor:after {
+			@include Background($sprite:'ico-arrow-down3', $size:100% auto, $position:center center);
+			width:1.1rem;
+			height:.8rem;
 		}
 		&.active:after {
 			transform: rotate(180deg);
@@ -313,7 +329,29 @@
 	}
 }
 .btn-map-opt{
-	
+	@include Align-middle;
+	background-color: #fff;
+	width: 50%;
+	box-sizing: border-box;
+	border-radius: 3.4rem;
+	.btn{
+		@include Vertical-inline;
+		height: 3.4rem;
+		padding: 0 1.5rem;
+		box-sizing: border-box;
+		line-height: 1;
+		color: #666;
+		width: 100%;
+		border-radius: 3.4rem;
+		font-size: 1.4rem;
+		background-color: #fff;
+		@include Regular;
+		&.active {
+			background-color: #54585a;
+			color:#fff;
+			@include Bold;
+		}
+	}
 }
 
 a.btn {

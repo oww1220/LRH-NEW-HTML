@@ -609,6 +609,14 @@ if($('.specials-list .tab-normal').length){
         });
         
     }
+
+    //단기예약 열고 닫기
+    if($('.detail-main-accor').length){
+        MUI.event.toggle('.detail-main-accor .shor-main-toggle-btn', '.detail-main-accor .shor-main-toggle-cont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+    }
 /* -------------------------------------------------메인end*/
 
 
