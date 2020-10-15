@@ -525,6 +525,16 @@ if($('.specials-list .tab-normal').length){
     }
 /* -------------------------------------------------로그인end*/
 
+/* 고객센터start-------------------------------------------------*/
+    //고객센터 열고 닫기
+    if($('.customer-list').length){
+        MUI.event.toggle('.customer-list .customer-toggle-btn', '.customer-list .customer-toggle-cont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+    }
+/* -------------------------------------------------고객센터end*/
+
 
 /* 메인start-------------------------------------------------*/
     //카라이프 메인 롤링 01

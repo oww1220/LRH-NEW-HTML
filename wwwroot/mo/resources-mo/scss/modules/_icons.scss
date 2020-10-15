@@ -515,6 +515,16 @@
         width: 3.4rem;
 		height: 3.4rem;
     }
+    &.location {
+        @include Background($sprite:'ico-location', $size:100% auto, $position:center center);
+        width: 2.2rem;
+		height: 2.2rem;
+    }
+    &.marker {
+        @include Background($sprite:'ico-marker', $size:100% auto, $position:center center);
+        width: 1.2rem;
+		height: 1.2rem;
+    }
     &.small {
         width: 1.5rem;
         height: 1.5rem;
@@ -667,15 +677,15 @@ button.active .unlike{
         @include Bold;
     }
     &.notice {
-        background-color:#54585a;
-        color: #fff;
+        border:1px solid #54585a;
+        color: #54585a;
         height:1.7rem;
         padding:.4rem .9rem;
         @include Bold;
     }
     &.news {
-        background-color:#877669;
-        color: #fff;
+        border:1px solid #877669;
+        color: #877669;
         height:1.7rem;
         padding:.4rem .9rem;
         @include Bold;

@@ -94,6 +94,94 @@
                     border-bottom:1px solid #e7e7e7;
                 }
             }
+            .customer-list {
+                background-color: #fff;
+                padding: 1.7rem 1.7rem 2.6rem;
+                border-radius: 1.5rem;
+                .customer-list-top + ul > li:first-child {
+                    border-top: 1px solid #EBEBEB;
+                }
+                .customer-list-top {
+                    @include Align-between;
+                    margin-bottom: 1.4rem;
+                    > strong {
+                        @include Bold;
+                        b {
+                            color:#F04040;
+                        }
+                    }
+                }
+                .customer-toggle-btn {
+                    cursor: pointer;
+                    .customer-toggle-tit {
+                        @include Align-between-top;
+                        padding: 1.3rem 0;
+                        line-height: 1.4;
+                        padding:1.7rem 1.3rem 1.7rem .4rem;
+                        border-top:1px solid #e7e7e7;
+                        @include Regular;
+                        .text{
+                            @include Align-between;
+                            flex-flow: wrap;
+                            white-space: normal;
+                            padding-left:.9rem;
+                            strong{
+                                @include Ellipsis($lines:2);
+                                word-break: keep-all;
+                            }
+                            span{
+                                font-size: 1rem;
+                                display: block;
+                                color: #999;
+                                margin-top: .2rem;
+                                i{
+                                    margin:-.2rem 0 0 .4rem;
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        .btn-toggle:after {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+    
+                .customer-toggle-cont {
+                    display: none;
+                    background-color: #fafafa;
+                    margin:.4rem;;
+                    padding: 1.3rem;
+                    border-radius: 1.7rem;
+                    .customer-toggle-txt {
+                        line-height: 1.4;
+                        font-size:1.1rem;
+                    }
+                }
+    
+                > ul {
+                    > li {
+                        border-bottom: 1px solid #EBEBEB;
+                        & + li {
+                            .notice-top {
+                                margin-top: 1.3rem;
+                            }
+                        }
+                    }
+                }
+    
+                .none {
+                    border:0 !important;
+                    height: 10rem;
+                    @include Align-middle-column;
+                    span {
+                        display: block;
+                        margin-top: 1rem;
+                    }
+                }
+                
+                
+            }
             .pagination-wrap{
                 padding:1.7rem;
             }
