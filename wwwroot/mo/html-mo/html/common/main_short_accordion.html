@@ -231,13 +231,13 @@
 												<table>
 													<caption></caption>
 													<colgroup>
-														<col style="*">
-														<col style="*">
-														<col style="*">
-														<col style="*">
-														<col style="*">
-														<col style="*">
-														<col style="*">
+														<col style="width:14.2%;">
+														<col style="width:14.2%;">
+														<col style="width:14.2%;">
+														<col style="width:14.2%;">
+														<col style="width:14.2%;">
+														<col style="width:14.2%;">
+														<col style="width:14.2%;">
 													</colgroup>
 													<thead>
 														<tr>
@@ -329,17 +329,34 @@
 										<div class="shor-main-schedule">
 											<ul class="list-type-col2">
 												<li>
-													<strong>대여일시</strong>
-													<b>09/08 (수)</b>
+													<strong>대여시간</strong>
+													<a href="#none" class="layer-firstTime-open layer-time-open-link" data-layer="layer-firstTime">
+														<b>10:00</b>
+														<i class="icon complete03"></i>
+													</a>
 												</li>
 												<li>
-													<strong>대여일시</strong>
-													<b>09/08 (수)</b>
+													<strong>반납시간</strong>
+													<a href="#none" class="layer-lastTime-open layer-time-open-link" data-layer="layer-lastTime">
+														<b>20:00</b>
+														<i class="icon complete04"></i>
+													</a>
 												</li>
 											</ul>
 										</div>
-										<div class="shor-main-txt">
-											
+										<div class="shor-main-schedule-txt">
+											<p>
+												총 <b>1일 0시간</b> 사용
+											</p>
+											<div class="shor-main-schedule-guide">
+												<ul>
+													<li><i class="icon listCircle"></i>지점 영업시간 내에만 대여/반납이 가능합니다.</li>
+													<li><i class="icon listCircle"></i>지점/회원할인은 24시간 이용 시 적용 가능합니다.</li>
+													<li><i class="icon listCircle"></i>주중/주말에 따라 지점 영업시간이 다를 수 있습니다.</li>
+													<li><i class="icon listCircle"></i>24시간 지점 안내 : 강남지점 / 서울역지점</li>
+													<li><i class="icon listCircle"></i>예약에 어려움이 있으신가요? (콜센터) 1588-1230</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -355,7 +372,77 @@
 								</div>
 								<div class="shor-main-toggle-cont shor-main-cont-04">
 									<div class="shor-main-toggle-txt">
-										<div>내륙</div>
+										<div class="section-filter">
+											<div class="result">
+												<div class="text"><i class="icon listCircle"></i>로그인 시 최대 50%할인된 금액으로 예약하실 수 있습니다.</div>
+												<div class="filter-col">
+													<div class="chk-list">
+														<ul class="list-type-col5">
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk1">
+																	<label for="chk1">경차</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk2">
+																	<label for="chk2">소형</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk3">
+																	<label for="chk3">중형</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk4">
+																	<label for="chk4">준대형</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk5">
+																	<label for="chk5">대형</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk6">
+																	<label for="chk6">승합</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk7">
+																	<label for="chk7">SUV&amp;RV</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk8">
+																	<label for="chk8">전기차</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk9">
+																	<label for="chk9">수입차</label>
+																</div>
+															</li>
+															<li>
+																<div class="inner">
+																	<input type="checkbox" name="" id="chk10">
+																	<label for="chk10">전체</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</li>
@@ -380,52 +467,109 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
-	<!--layer-slide 본인인증 컴포넌트-->
-	<div class="layer-wrap layer-slide layer-galleryThumbs" data-type="slide">
+	<!--layer-slide 대여시간 컴포넌트-->
+	<div class="layer-wrap layer-slide layer-firstTime layer-allTime" data-type="slide">
 		<!--상단-->
 		<div class="slide-top">
-			<button type="button" class="layer-slide-close" data-layer="layer-galleryThumbs">닫기 버튼</button>
+			<button type="button" class="layer-slide-close" data-layer="layer-firstTime">닫기 버튼</button>
 			<h4>
-                이벤트 전체보기
+                대여시간
             </h4>
 		</div>
 		<!--//상단-->
 		<!--컨텐츠-->
 		<div class="slide-inner">
 			<div class="slide-cont">
-                
-                <div class="galleryThumbs-col-cont">
-					<div class="galleryThumbs-list">
-						<ul>
+                <div class="layer-time-col-cont">
+					<div class="selection">
+						<ul class="list-type-col2">
 							<li>
-								<div class="img">
-									<img src="../../../resources-mo/images/@temp-main-carLife-slide01.png" alt="더미이미지"/>
-								</div>
+								<select class="selectbox" name="" id="">
+									<option value="">00시</option>
+									<option value="">01시</option>
+									<option value="">02시</option>
+									<option value="">03시</option>
+									<option value="">04시</option>
+									<option value="">05시</option>
+									<option value="">06시</option>
+									<option value="">07시</option>
+									<option value="">08시</option>
+									<option value="">09시</option>
+									<option value="">10시</option>
+									<option value="">11시</option>
+									<option value="">12시</option>
+								</select>
 							</li>
 							<li>
-								<div class="img">
-									<img src="../../../resources-mo/images/@temp-main-carLife-slide02.png" alt="더미이미지"/>
-								</div>
-							</li>
-							<li>
-								<div class="img">
-									<img src="../../../resources-mo/images/@temp-main-carLife-slide01.png" alt="더미이미지"/>
-								</div>
-							</li>
-							<li>
-								<div class="img">
-									<img src="../../../resources-mo/images/@temp-main-carLife-slide02.png" alt="더미이미지"/>
-								</div>
+								<select class="selectbox" name="" id="">
+									<option value="">00분</option>
+									<option value="">10분</option>
+									<option value="">20분</option>
+									<option value="">30분</option>
+									<option value="">40분</option>
+									<option value="">50분</option>
+								</select>
 							</li>
 						</ul>
 					</div>
                 </div>
-
 			</div>
 		</div>
 		<!--//컨텐츠-->	
 	</div>
-	<!--//layer-slide 프로모션 컴포넌트-->
+	<!--//layer-slide 대여시간 컴포넌트-->
+
+	<!--layer-slide 반납시간 컴포넌트-->
+	<div class="layer-wrap layer-slide layer-lastTime layer-allTime" data-type="slide">
+		<!--상단-->
+		<div class="slide-top">
+			<button type="button" class="layer-slide-close" data-layer="layer-lastTime">닫기 버튼</button>
+			<h4>
+                반납시간
+            </h4>
+		</div>
+		<!--//상단-->
+		<!--컨텐츠-->
+		<div class="slide-inner">
+			<div class="slide-cont">
+                <div class="layer-time-col-cont">
+					<div class="selection">
+						<ul class="list-type-col2">
+							<li>
+								<select class="selectbox" name="" id="">
+									<option value="">00시</option>
+									<option value="">01시</option>
+									<option value="">02시</option>
+									<option value="">03시</option>
+									<option value="">04시</option>
+									<option value="">05시</option>
+									<option value="">06시</option>
+									<option value="">07시</option>
+									<option value="">08시</option>
+									<option value="">09시</option>
+									<option value="">10시</option>
+									<option value="">11시</option>
+									<option value="">12시</option>
+								</select>
+							</li>
+							<li>
+								<select class="selectbox" name="" id="">
+									<option value="">00분</option>
+									<option value="">10분</option>
+									<option value="">20분</option>
+									<option value="">30분</option>
+									<option value="">40분</option>
+									<option value="">50분</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+                </div>
+			</div>
+		</div>
+		<!--//컨텐츠-->	
+	</div>
+	<!--//layer-slide 반납시간 컴포넌트-->
 
 	<!--fixedRight 컴포넌트-->
 	<div class="fixedRight">

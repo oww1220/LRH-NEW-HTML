@@ -617,6 +617,24 @@ if($('.specials-list .tab-normal').length){
             logic();
         });
     }
+
+    //단기예약 메인 슬라이드 팝업 - 대여시간
+    if($('.layer-firstTime').length) {
+        MUI.layer.openClick('.layer-firstTime-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+            //console.log('open');
+            show();
+        });
+        
+    }
+
+    //단기예약 메인 슬라이드 팝업 - 반납시간
+    if($('.layer-lastTime').length) {
+        MUI.layer.openClick('.layer-lastTime-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+            //console.log('open');
+            show();
+        });
+        
+    }
 /* -------------------------------------------------메인end*/
 
 
