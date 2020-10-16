@@ -565,7 +565,7 @@ if($('.specials-list .tab-normal').length){
             loop: true,
             autoHeight: true,
             pagination: {
-                el: '.swiper-pagination',
+                el: '.life-event-pagination02',
             },
             autoplay: {
                 delay: 3000,
@@ -579,7 +579,7 @@ if($('.specials-list .tab-normal').length){
             loop: true,
             autoHeight: true,
             pagination: {
-                el: '.swiper-pagination',
+                el: '.life-event-pagination03',
             },
             autoplay: {
                 delay: 3000,
@@ -593,7 +593,7 @@ if($('.specials-list .tab-normal').length){
             loop: true,
             autoHeight: true,
             pagination: {
-                el: '.swiper-pagination',
+                el: '.life-event-pagination04',
             },
             autoplay: {
                 delay: 3000,

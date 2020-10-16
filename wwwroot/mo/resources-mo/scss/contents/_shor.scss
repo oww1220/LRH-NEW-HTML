@@ -781,16 +781,22 @@
                         }
                         .shor-main-list-wrap{
                             @include Align-box;
-                            padding:1.7rem;
+                            // padding:1.7rem;
                             .shor-main-list-lt{
                                 overflow-y: auto;
                                 height:27.3rem;
-                                width:40%;
+                                // width:40%;
+                                background-color: #fafafa;
+                                padding:1.7rem 1.3rem 1.7rem 1.7rem;
+                                @include Align-box;
                             }
                             .shor-main-list-rt{
                                 overflow-y: auto;
                                 height:27.3rem;
-                                width:60%;
+                                width:44.5%;
+                                border-left:1px solid #e7e7e7;
+                                padding:1.7rem 1.7rem 1.7rem 1.3rem;
+                                @include Align-box;
                             }
                             .btn-link{
                                 border:0 none;
@@ -815,6 +821,7 @@
                             overflow-y: auto;
                             height:34.2rem;
                             padding:1.6rem 1.7rem;
+                            border-bottom:1px solid #f1f1f1;
                             .shor-main-calendar-tit{
                                 font-size:1.4rem;
                                 @include Bold;
@@ -869,6 +876,35 @@
                                         }
                                     }
                                 }
+                            }
+                        }
+                        .shor-main-schedule{
+                            @include Align-between;
+                            ul > li{
+                                @include Align-middle-column;
+                                padding:1.7rem 0 3.4rem 0;
+                                position: relative;
+                            }
+                            ul > li:after{
+                                display:block;
+                                content:"";
+                                @include Background($sprite:'ico-next05', $type:'png', $size:100% auto, $position:center center);
+                                width: .8rem;
+                                height: 1.4rem;
+                                @include Position($top: 50%, $right: -.9rem);
+                                transform: translateY(-100%);
+                            }
+                            ul > li:last-child:after{
+                                display:none;
+                            }
+                            strong{
+                                font-size:1.1rem;
+                                @include Regular;
+                            }
+                            b{
+                                font-size:1.6rem;
+                                @include Bold;
+                                margin-top:.9rem;
                             }
                         }
                     }
