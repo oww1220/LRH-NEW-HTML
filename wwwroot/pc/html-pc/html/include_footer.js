@@ -218,19 +218,19 @@ $(function(){
 						<div class="footer-infos-sns">
 							<ul>
 								<li>
-									<button type="button" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></button>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></a>
 								</li>
 								<li>
-									<button type="button" class="btn btn-foot-sns"><i class="icon snsF">페이스북</i></button>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsF">페이스북</i></a>
 								</li>
 								<li>
-									<button type="button" class="btn btn-foot-sns"><i class="icon snsI">인스타그램</i></button>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsI">인스타그램</i></a>
 								</li>
 								<li>
-									<button type="button" class="btn btn-foot-sns"><i class="icon snsY">유튜브</i></button>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsY">유튜브</i></a>
 								</li>
 								<li>
-									<button type="button" class="btn btn-foot-sns"><i class="icon snsK">카카오톡</i></button>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsK">카카오톡</i></a>
 								</li>
 							</ul>
 						</div>

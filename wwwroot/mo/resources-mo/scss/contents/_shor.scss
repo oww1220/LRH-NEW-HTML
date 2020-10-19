@@ -73,6 +73,21 @@
                 margin-top:1.3rem;
             }
         }
+        &.detail-view-descri{
+            padding-top:3.4rem;
+            .detail-view-info{
+                & > strong{
+                    font-size:1.6rem;
+                }
+                & > em{
+                    display:block;
+                    padding-top:1.3rem;
+                    font-size:1.1rem;
+                    line-height:1.3;
+                    @include Regular;
+                }
+            }
+        }
     }
 
     .detail-view-rest{
@@ -406,8 +421,10 @@
                     & > li{
                         margin-top:.4rem;
                         color:#8f9191;
+                        @include Regular;
                         & > i{
                             margin-right: .6rem;
+                            margin-top: -.4rem;
                         }
                     }
                     & > li:first-child{
@@ -426,6 +443,35 @@
                             text-align: left;
                             @include Align-between-top;
                             width:100%;
+                        }
+                    }
+                }
+                &.detail-layer-cont-terms02{
+                    .table{
+                        tbody{
+                            td{
+                                text-align: left;
+                                b{
+                                    margin-left:1rem;
+                                }
+                                .cont-terms02-info{
+                                    b{
+                                        margin-left:.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .cont-terms02-info{
+                        @include Align-left-column;
+                        @include Regular;
+                        color:#ed1c24;
+                        b{
+                            color:#ed1c24;
+                        }
+                        em{
+                            font-size:1rem;
+                            margin-left:1rem;
                         }
                     }
                 }
