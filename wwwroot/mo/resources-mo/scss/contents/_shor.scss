@@ -601,6 +601,21 @@
                                     }
                                 }
                             }
+                            .detail-layer-inputT-number02{
+                                display:flex;
+                                width:100%;
+                                margin-left:0;
+                                li{
+                                    position: relative;
+                                    &:first-child{
+                                        width:20%;
+                                        margin-right:.4rem;
+                                    }
+                                    &:last-child{
+                                        width:78%;
+                                    }
+                                }
+                            }
                         }
                         .detail-layer-inputT-email{
                             display:flex;
@@ -763,6 +778,40 @@
                         .detail-layer-inputT{
                             margin-top:.9rem;
                         }
+                        .detail-iconBox{
+                            margin-left: -.6rem;
+                            label {
+                                border:0 none;
+                                border-radius: 0;
+                                @include Regular;
+                                &:after {
+                                    width: 1.7rem;
+                                    height: 1.7rem;
+                                    margin-top: -.85rem;
+                                    left:.5rem;
+                                }
+                            }
+                            input:checked + label {
+                                @include Regular;
+                            }
+                            input[type='checkbox'] + label:after{
+                                @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                            }
+                            input[type='checkbox']:checked + label:after{
+                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:95% auto, $position:center center);
+                            }
+                        }
+                        .detail-layer-inputT-number{
+                            margin-left:0;
+                            width:100%;
+                            .inputT{
+                                width:47%;
+                                margin-left:1.4rem;
+                            }
+                            .inputT:first-child{
+                                margin-left:0;
+                            }
+                        }
                     }
                 }
                 &.item-step4 {
@@ -785,6 +834,29 @@
                                     .inputC{
                                         label{
                                             padding-top:0;
+                                        }
+                                    }
+                                }
+                                .inputC02{
+                                    label {
+                                        line-height: 1;
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                                            width: 1.2rem;
+                                            height: .9rem;
+                                        }
+                                        span{
+                                            font-size:1.1rem;
+                                            color:#999;
+                                            @include Regular;
+                                        }
+                                    }
+                                    input:checked + label {
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                                        }
+                                        span{
+                                            color:#2f2f2f;
                                         }
                                     }
                                 }
@@ -818,6 +890,70 @@
                         }
                     }
                 }
+                &.item-step6 {
+                    padding:2.3rem 0 0;
+                    h3 {
+                        margin-bottom:.4rem;
+                    }
+                    .item-cont {
+                        padding: 0 1.7rem;
+                        .detail-layer-inputR{
+                            width:100%;
+                            padding:.6rem 0;
+                            label{
+                                @include Regular;
+                            }
+                        }
+                    }
+                }
+                &.item-step7 {
+                    padding:2.3rem 0 0;
+                    h3 {
+                        margin-bottom:.4rem;
+                    }
+                    .item-cont {
+                        padding: 0 1.7rem;
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            margin-top:1.7rem;
+                            @include Align-middle;
+                            justify-content: left;
+                            & > button{
+                                margin-left: .4rem;
+                            }
+                        }
+                        .detail-layer-inputT{
+                            margin-top:.9rem;
+                            &.list-type-col2{
+                                width:100%;
+                                margin-left:0;
+                            }
+                        }
+                        .detail-iconBox{
+                            margin-left: -.6rem;
+                            label {
+                                border:0 none;
+                                border-radius: 0;
+                                @include Regular;
+                                &:after {
+                                    width: 1.7rem;
+                                    height: 1.7rem;
+                                    margin-top: -.85rem;
+                                    left:.5rem;
+                                }
+                            }
+                            input:checked + label {
+                                @include Regular;
+                            }
+                            input[type='checkbox'] + label:after{
+                                @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                            }
+                            input[type='checkbox']:checked + label:after{
+                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:95% auto, $position:center center);
+                            }
+                        }
+                    }
+                }
                 .guide {
                     font-size: 1.1rem;
                     line-height: 1.3;
@@ -827,8 +963,12 @@
                     & > li{
                         margin-top:.4rem;
                         color:#8f9191;
+                        @include Regular;
                         & > i{
                             margin-right: .6rem;
+                        }
+                        &.red_txt{
+                            color:#ed1c24;
                         }
                     }
                     & > li:first-child{
