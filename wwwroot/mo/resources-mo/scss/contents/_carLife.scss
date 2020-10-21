@@ -363,9 +363,94 @@
             &.detail-main-list4{
                 
             }
+            
         }
     }
 
+    //tabwang
+    .section-filter {
+        padding:3.4rem 1.7rem 0.85rem;
+       
+        .chk-list {
+            li {
+                input {
+                    display: none;
+                }
+                label {
+                    position: relative;
+                    display: block;
+                    height:2.6rem;
+                    box-sizing: border-box;
+                    border-radius: 2.2rem;                    
+                    font-size: 1.1rem;                    
+                    @include Align-middle;
+                    @include Regular;
+                    color: #54585a;
+                    transition: all .4s; 
+                    border:1px solid #d2d2d2;
+                    background-color: #fff;
+                }
+                input:checked + label {
+                    border:1px solid #ff404b;
+                    color:#ff404b;
+                    @include Bold;
+                }
+            }
+        }
+    }
+    .content-area{
+        min-height:13.7rem;
+        padding:1.7rem;
+        margin: 0 -1.7rem;
+        background-color:#ccc;
+    }
+    .tag-area{
+        //@include Align-box;
+        display:flex;
+        margin: 0 1.7rem;
+        padding-bottom:1.4rem;
+        border-bottom:1px solid #e7e7e7;
+
+        .tag-tit{
+            width:6rem;
+            height:2.6rem;                
+            @include Align-middle;
+            @include Bold;
+            text-decoration: uppercase;            
+            box-sizing: border-box;            
+            font-size: 1.1rem;    
+            color: #54585a;
+            border:1px solid #54585a;
+            border-radius: 2.2rem;
+        }
+        .tag-list{
+            @include Align-box;
+            margin-left:1.7rem;
+           
+            li{
+                // display: block;
+                // width: 33.333%;
+                @include Vertical-inline;
+                height:2.6rem;
+                box-sizing: border-box;
+                margin-right:1.3rem;
+                font-size: 1.1rem;    
+                @include Regular;                
+                
+                color: #54585a;   
+                
+                a{
+                    height:2.6rem;
+                    @include Align-middle;
+                    justify-content: left;
+                }
+            }
+        }
+    }
+    .tit-type2{
+        @include Bold;
+        font-size:1.3rem;
+    }
 }
 
 
