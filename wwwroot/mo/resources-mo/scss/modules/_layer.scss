@@ -975,6 +975,178 @@ body.fixed {
 						margin-top:0;
 					}
 				}
+				.short-payment{
+					.detail-layer-inputT:first-child{
+						margin-top: 0;
+					}
+					.detail-layer-inputT{
+						margin-top:.9rem;
+						.detail-layer-inputT-number{
+							display:flex;
+							width:100%;
+							margin-left:0;
+							li{
+								position: relative;
+								&:first-child{
+									width:68%;
+									margin-right:.4rem;
+								}
+								&:last-child{
+									width:30%;
+								}
+								& > input{
+									border:1px solid #EBEBEB;
+									border-radius: 1rem;
+									background-color: #fff;
+									height: 4.1rem;
+									width:100%;
+									padding:0 1.2rem;
+								}
+								& > button{
+									width:100%;
+									height: 4.1rem;
+									border-radius: 1rem; 
+									background-color:#54585a;
+									border-color:#54585a;
+									color:#fff;
+									font-size:1.2rem;
+								}
+							}
+						}
+					}
+					.detail-layer-inputT-number02{
+						margin-left:0;
+						width:100%;
+						.inputT{
+							width:21.3%;
+							margin-left:1.4rem;
+						}
+						.inputT:first-child{
+							margin-left:0;
+						}
+						.inputT:after{
+							display: block;
+							content: "";
+							border-left: .6rem solid #2B2B2B;
+							position: absolute;
+							top: 50%;
+							left: -1rem;
+							height: 0.15rem;
+						}
+						.inputT:first-child:after{
+							display:none;
+						}
+					}
+					.detail-layer-inputT-number03{
+						margin-left:0;
+						width:100%;
+						.inputT{
+							width:47%;
+							margin-left:1.4rem;
+						}
+						.inputT:first-child{
+							margin-left:0;
+						}
+					}
+					.detail-layer-inputT-tit{
+						@include Bold;
+						margin-bottom:.9rem;
+						@include Align-between;
+						& > span{
+							font-size:1rem;
+							@include Regular;
+							b{
+								font-size:1rem;
+								color:#ff404b;
+							}
+						}
+					}
+					.detail-layer-chk-box{
+						.chk-agree-tit{
+							margin: 1.7rem 0;
+							background-color: #EFF2F7;
+							padding: 1.5rem 1.3rem;
+							border-radius: 1rem;
+							strong {
+								font-size: 1.4rem;
+								@include Bold;
+							}
+						}
+						.chk-agree-list{
+							margin-top:0;
+							padding: 0 1.3rem;
+							.chk-agree-cols{
+								& > li{
+									border-bottom:0;
+								}
+								& > li + li{
+									.chk-agree-top{
+										align-items: flex-start;
+									}
+									.inputC{
+										label{
+											padding-top:0;
+										}
+									}
+								}
+								.inputC02{
+									label {
+										line-height: 1;
+										&:before{
+											@include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+											width: 1.2rem;
+											height: .9rem;
+										}
+										span{
+											font-size:1.1rem;
+											color:#999;
+											@include Regular;
+										}
+									}
+									input:checked + label {
+										&:before{
+											@include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+										}
+										span{
+											color:#2f2f2f;
+										}
+									}
+								}
+							}
+						}
+					}
+					.payment-guide{
+						font-size: 1.1rem;
+						line-height: 1.3;
+						margin-top: 1.2rem;
+						text-indent: -.8rem;
+						padding-left:1rem;
+						& > li{
+							margin-top:.4rem;
+							color:#8f9191;
+							@include Regular;
+							& > i{
+								margin-right: .6rem;
+								margin-top: -.2rem;
+							}
+							&.red_txt{
+								color:#ed1c24;
+							}
+							& > button{
+								@include Inline-align-middle;
+								margin-left:.6rem;
+								font-size:1rem;
+								border-radius: .4rem;
+								height:1.7rem;
+								padding:0 .6rem;
+								border-color: #d2d2d2;
+							}
+						}
+						& > li:first-child{
+							margin-top:0;
+						}
+					}
+				}
 			}
 			&.type-fuel{
 				.list-type-col2{
@@ -1000,6 +1172,11 @@ body.fixed {
 					& > li:first-child{
 						width:25%;
 					}
+				}
+			}
+			.btn-group{
+				.btn{
+					margin:0;
 				}
 			}
 		}

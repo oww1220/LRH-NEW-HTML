@@ -528,6 +528,15 @@
                             margin-left: .4rem;
                         }
                     }
+                    b{
+                        font-size:1rem;
+                        color:#ed1c24;
+                        @include Regular;
+                        sub{
+                            position: relative;
+                            top:.3rem;
+                        }
+                    }
                 }
                 .table{
                     border-radius: 1.5rem;
@@ -542,7 +551,8 @@
                 }
                 &.item-step1 {
                     h3 {
-
+                        margin-bottom:1.7rem;
+                        @include Align-between;
                     }
                     .item-cont {
                         padding: 0 1.7rem;
@@ -554,8 +564,11 @@
                                 padding-left:1.3rem;
                             }
                         }
+                        .detail-layer-inputT:first-child{
+                            margin-top: 0;
+                        }
                         .detail-layer-inputT{
-                            padding-top:1.7rem;
+                            margin-top:.9rem;
                             .detail-layer-inputT-number{
                                 display:flex;
                                 width:100%;
@@ -604,7 +617,7 @@
                             .detail-layer-inputT-number02{
                                 display:flex;
                                 width:100%;
-                                margin-left:0;  
+                                margin-left:0;
                                 li{
                                     position: relative;
                                     &:first-child{
@@ -677,6 +690,17 @@
                             }
                             .inputT:first-child:after{
                                 display:none;
+                            }
+                        }
+                        .detail-layer-inputR:first-child{
+                            margin-top: 0;
+                        }
+                        .detail-layer-inputR{
+                            width:100%;
+                            padding:.6rem 0;
+                            margin-top:.9rem;
+                            label{
+                                @include Regular;
                             }
                         }
                     }
@@ -767,6 +791,73 @@
                                 }
                             }
                         }
+                        .detail-layer-inputT-number02{
+                            display:flex;
+                            width:100%;
+                            margin-left:0;
+                            li{
+                                position: relative;
+                                &:first-child{
+                                    width:68%;
+                                    margin-right:.4rem;
+                                }
+                                &:last-child{
+                                    width:30%;
+                                }
+                                .detail-iconBox{
+                                    margin-left: -.6rem;
+                                    label {
+                                        border:0 none;
+                                        border-radius: 0;
+                                        @include Regular;
+                                        &:after {
+                                            width: 1.7rem;
+                                            height: 1.7rem;
+                                            margin-top: -.85rem;
+                                            left:.5rem;
+                                            top:50%;
+                                            right:auto;
+                                            transform: inherit;
+                                        }
+                                    }
+                                    input:checked + label {
+                                        @include Regular;
+                                    }
+                                    input[type='checkbox'] + label:after{
+                                        @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                                    }
+                                    input[type='checkbox']:checked + label:after{
+                                        @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                                    }
+                                }
+                                & > button{
+                                    width:100%;
+                                    height: 4.1rem;
+                                    border-radius: 1rem; 
+                                    background-color:#54585a;
+                                    border-color:#54585a;
+                                    color:#fff;
+                                    font-size:1.2rem;
+                                }
+                            }
+                        }
+                        .detail-layer-inputR{
+                            width:100%;
+                            padding:.6rem 0;
+                            margin-top:.9rem;
+                            label{
+                                @include Regular;
+                                button{
+                                    @include Inline-align-middle;
+                                    margin-left:.6rem;
+                                    font-size:1rem;
+                                    border-radius: .4rem;
+                                    height:1.7rem;
+                                    padding:0 .6rem;
+                                    border-color: #d2d2d2;
+                                }
+                            }
+                        }
                     }
                 }
                 &.item-step3 {
@@ -798,7 +889,7 @@
                                 @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
                             }
                             input[type='checkbox']:checked + label:after{
-                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:95% auto, $position:center center);
+                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
                             }
                         }
                         .detail-layer-inputT-number{
@@ -812,11 +903,57 @@
                                 margin-left:0;
                             }
                         }
+                        .detail-layer-inputT-number02{
+                            display:flex;
+                            width:100%;
+                            margin:.9rem 0 0 0;
+                            li{
+                                position: relative;
+                                &:first-child{
+                                    width:68%;
+                                    margin-right:.4rem;
+                                }
+                                &:last-child{
+                                    width:30%;
+                                }
+                                & > input{
+                                    border:1px solid #EBEBEB;
+                                    border-radius: 1rem;
+                                    background-color: #fff;
+                                    height: 4.1rem;
+                                    width:100%;
+                                    padding:0 1.2rem;
+                                    text-align: right;
+                                }
+                                & > button{
+                                    width:100%;
+                                    height: 4.1rem;
+                                    border-radius: 1rem; 
+                                    background-color:#54585a;
+                                    border-color:#54585a;
+                                    color:#fff;
+                                    font-size:1.2rem;
+                                }
+                            }
+                        }
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            margin-top:1.7rem;
+                            @include Align-between;
+                            & > span{
+                                font-size:1rem;
+                                @include Regular;
+                                b{
+                                    font-size:1rem;
+                                    color:#ff404b;
+                                }
+                            }
+                        }
                     }
                 }
                 &.item-step4 {
                     h3 {
-                        margin-bottom:.4rem;
+                        margin-bottom:1.7rem;
                     }
                     .item-cont {
                         padding: 0 1.7rem;
@@ -866,6 +1003,29 @@
                             padding-bottom:1.7rem;
                             margin-top:0;
                         }
+                        .table{
+                            margin-top:.9rem;
+                            border-radius:0;
+                            border-width: 1px 0 1px 0;
+                            & > table tr th{
+                                background-color: #fafafa;
+                                @include Regular;
+                                font-size:1.1rem;
+                            }
+                            & > table tr td{
+                                text-align: right;
+                                b{
+                                    @include Regular;
+                                    font-size:1.1rem;
+                                }
+                                em{
+                                    @include Regular;
+                                    display:block;
+                                    font-size:1rem;
+                                    color:#ed1c24;
+                                }
+                            }
+                        }
                     }
                 }
                 &.item-step5 {
@@ -893,7 +1053,7 @@
                 &.item-step6 {
                     padding:2.3rem 0 0;
                     h3 {
-                        margin-bottom:.4rem;
+                        margin-bottom:1.7rem;
                     }
                     .item-cont {
                         padding: 0 1.7rem;
@@ -909,10 +1069,13 @@
                 &.item-step7 {
                     padding:2.3rem 0 0;
                     h3 {
-                        margin-bottom:.4rem;
+                        margin-bottom:1.7rem;
                     }
                     .item-cont {
                         padding: 0 1.7rem;
+                        .detail-layer-inputT:first-child{
+                            margin-top: 0;
+                        }
                         .detail-layer-inputT-tit{
                             @include Bold;
                             margin-top:1.7rem;
@@ -949,7 +1112,199 @@
                                 @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
                             }
                             input[type='checkbox']:checked + label:after{
-                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:95% auto, $position:center center);
+                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                            }
+                        }
+                    }
+                }
+                &.item-step8 {
+                    padding:2.3rem 0 2.3rem;
+                    h3 {
+                        margin-bottom:1.7rem;
+                    }
+                    .item-cont {
+                        padding: 0 1.7rem;
+                        .info-box{
+                            @include Align-between;
+                            background-color:#877669;
+                            border-radius: 1rem;
+                            height:4.3rem;
+                            @include Bold;
+                            padding:0 1.3rem;
+                            margin-top:1.7rem;
+                            b{
+                                color:#fff;
+                                font-size:1.4rem;
+                            }
+                            em{
+                                color:#fff;
+                                font-size:1.8rem;
+                                span{
+                                    font-size:1.2rem;
+                                    margin-left:.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.item-step9 {
+                    padding:2.3rem 0 0;
+                    h3 {
+                        margin-bottom:1.7rem;
+                    }
+                    .item-cont {
+                        padding: 0 1.7rem;
+                        .detail-layer-box-line:first-child{
+                            // margin-top: 0;
+                            border-top:0;
+                        }
+                        .detail-layer-inputT:first-child{
+                            margin-top: 0;
+                        }
+                        .detail-layer-inputT{
+                            margin-top:.9rem;
+                            &.list-type-col2{
+                                width:100%;
+                                margin-left:0;
+                            }
+                            .btn-group{
+                                @include Align-between;
+                                .btn{
+                                    height: 12.6rem;
+                                    width: 7.5rem;
+                                    background-color: #f5f5f5;
+                                    border-radius: 1rem;
+                                    font-size:2.6rem;
+                                    @include Regular;
+                                }
+                            }
+                        }
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            margin-top:1.7rem;
+                            @include Align-middle;
+                            justify-content: left;
+                            & > button{
+                                margin-left: .4rem;
+                            }
+                            & > i{
+                                margin-right: .5rem;
+                            }
+                        }
+                        .detail-layer-short-payment{
+                            margin-top:2.2rem;
+                            border-top:1px solid #e7e7e7;
+                            & > .detail-iconBox{
+                                border-bottom:1px solid #e7e7e7;
+                            }
+                        }
+                        .short-payment-toggle-cont{
+                            display:none;
+                            .detail-layer-inputR{
+                                padding:1.5rem 0;
+                                border-bottom:1px solid #e7e7e7;
+                            }
+                        }
+                        .short-registration-toggle-cont{
+                            display:none;
+                            border-bottom:1px solid #e7e7e7;
+                            padding:1.5rem 0;
+                            .list-type-col2{
+                                @include Align-middle-left;
+                                li:first-child{
+                                    width:30%;
+                                    .detail-layer-inputT-tit{
+                                        margin-top:0;
+                                    }
+                                }
+                                li:last-child{
+                                    width:70%;
+                                }
+                            }
+                        }
+                        .short-card-toggle-cont{
+                            display:none;
+                            border-bottom:1px solid #e7e7e7;
+                            padding:1.5rem 0;
+                            .list-type-col2{
+                                @include Align-middle-left;
+                                .inputT{
+                                    .inputR{
+                                        width:49%;
+                                        border-bottom:0 none;
+                                    }
+                                }
+                                li:first-child{
+                                    width:30%;
+                                    .detail-layer-inputT-tit{
+                                        margin-top:0;
+                                    }
+                                }
+                                li:last-child{
+                                    width:70%;
+                                }
+                            }
+                        }
+                        .detail-iconBox{
+                            margin-left: -.6rem;
+                            label {
+                                border:0 none;
+                                border-radius: 0;
+                                @include Regular;
+                                &:after {
+                                    width: 1.7rem;
+                                    height: 1.7rem;
+                                    margin-top: -.85rem;
+                                    left:.5rem;
+                                }
+                                .flag{
+                                    background-color: #009bfa;
+                                    color:#fff;
+                                    @include Bold;
+                                    height:1.9rem;
+                                    padding:0 .6rem;
+                                    border-radius: .4rem;
+                                    margin-right:0;
+                                    i{
+                                        margin-right:.2rem;
+                                    }
+                                }
+                            }
+                            input:checked + label {
+                                @include Regular;
+                            }
+                            input[type='checkbox'] + label:after{
+                                @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                            }
+                            input[type='checkbox']:checked + label:after{
+                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                            }
+                        }
+                        .detail-layer-inputR{
+                            .btn-small{
+                                &.black{
+                                    height:1.9rem;
+                                    font-size:1rem;
+                                    background-color: #54585a;
+                                    color:#fff;
+                                    border-radius: .4rem;
+                                    @include Bold;
+                                    border-color: #54585a;
+                                    padding:0 .6rem;
+                                    position: relative;
+                                    top: -.2rem;
+                                    left:.6rem;
+                                    i{
+                                        margin-right:.4rem;
+                                    }
+                                }
+                            }
+                        }
+                        .detail-layer-inputR{
+                            width:100%;
+                            padding:.6rem 0;
+                            label{
+                                @include Regular;
                             }
                         }
                     }

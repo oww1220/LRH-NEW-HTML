@@ -668,6 +668,30 @@ if($('.carLife-wrap .carLife-tabwang-swiper').length) {
 }
 /* -------------------------------------------------카라이프 end*/
 
+/* 단기 실시간예약 start-------------------------------------------------*/
+//단기 실시간예약 다른결제수단 열고 닫기
+if($('.detail-layer-short-payment').length){
+    MUI.event.toggle('.detail-layer-short-payment .short-payment-toggle-btn', '.detail-layer-short-payment .short-payment-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+//단기 실시간예약 등록카드 열고 닫기
+if($('.detail-layer-short-payment').length){
+    MUI.event.toggle('.detail-layer-short-payment .short-registration-toggle-btn', '.detail-layer-short-payment .short-registration-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+//단기 실시간예약 등록카드 열고 닫기
+if($('.detail-layer-short-payment').length){
+    MUI.event.toggle('.detail-layer-short-payment .short-card-toggle-btn', '.detail-layer-short-payment .short-card-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+/* -------------------------------------------------단기 실시간예약 end*/
+
 
     
     //일반 레이어팝업 테스트 ---추후삭제
