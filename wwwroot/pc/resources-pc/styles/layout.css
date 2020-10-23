@@ -6,6 +6,82 @@
 /*백그라운드 믹스인*/
 /* 말줄임표 */
 /*미디어쿼리 믹스인*/
+/* 2020-10-23 공통 스타일 추가(임시) */
+html, body {
+	font-size: 16px;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+}
+
+.txt-red {
+	color: #ed1c24;
+}
+
+.txt-bold {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+}
+
+.page-title {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	font-size: 40px;
+	text-align: center;
+	padding: 0 0 60px;
+}
+
+.tbl-type01 {
+	width: 100%;
+	border: 0;
+}
+
+.tbl-type01 th, .tbl-type01 td {
+	height: 50px;
+	padding: 10px 40px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+}
+
+.tbl-type01 th {
+	font-size: 17px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	background-color: #f5f5f5;
+}
+
+.tbl-type01 th:first-of-type {
+	-webkit-border-top-left-radius: 10px;
+	   -moz-border-radius-topleft: 10px;
+	        border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	   -moz-border-radius-bottomleft: 10px;
+	        border-bottom-left-radius: 10px;
+}
+
+.tbl-type01 th:last-of-type {
+	-webkit-border-top-right-radius: 10px;
+	   -moz-border-radius-topright: 10px;
+	        border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	   -moz-border-radius-bottomright: 10px;
+	        border-bottom-right-radius: 10px;
+}
+
+.tbl-type01 td {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.tbl-type01 td:first-of-type {
+	text-align: left;
+}
+
 .header .header-top .inner {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1017,6 +1093,14 @@
 	position: relative;
 }
 
+.inner-type2 {
+	position: relative;
+	width: 1200px;
+	min-width: 1200px;
+	max-width: 1420px;
+	margin: 0 auto;
+}
+
 .skip_nav {
 	position: absolute;
 	top: 0;
@@ -1031,11 +1115,7 @@
 	background-color: #f40404;
 }
 
-.path-wrap {
-	margin: 50px 0 25px;
-}
-
-.path-wrap .inner {
+.path-wrap .inner-type2 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1051,9 +1131,10 @@
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	margin: 60px auto 50px;
 }
 
-.path-wrap .inner > strong {
+.path-wrap .inner-type2 > strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -1061,7 +1142,7 @@
 	color: #F04040;
 }
 
-.path-wrap .inner > ul {
+.path-wrap .inner-type2 > ul {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1074,7 +1155,7 @@
 	        align-items: center;
 }
 
-.path-wrap .inner > ul > li {
+.path-wrap .inner-type2 > ul > li {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1087,24 +1168,45 @@
 	        align-items: center;
 }
 
-.path-wrap .inner > ul > li > a {
+.path-wrap .inner-type2 > ul > li > a {
 	font-size: 13px;
 }
 
-.path-wrap .inner > ul > li > b {
+.path-wrap .inner-type2 > ul > li > b {
 	font-size: 13px;
 	color: #999;
 }
 
-.path-wrap .inner > ul > li + li:before {
+.path-wrap .inner-type2 > ul > li + li {
+	padding-left: 20px;
+}
+
+.path-wrap .inner-type2 > ul > li + li:after {
 	display: block;
 	content: '>';
 	color: #999;
-	margin: 0 6px;
+	margin-left: 10px;
+	-webkit-transform: rotate(90deg);
+	   -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	     -o-transform: rotate(90deg);
+	        transform: rotate(90deg);
 }
 
-.path-wrap .inner > ul > li + li > a {
-	color: #999;
+.path-wrap .inner-type2 > ul > li + li > a {
+	color: #54585a;
+}
+
+.path-wrap.absolute-path {
+	position: relative;
+	z-index: 5;
+}
+
+.path-wrap.absolute-path .inner-type2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
 .title-box-wrap {

@@ -641,19 +641,6 @@ if($('.specials-list .tab-normal').length){
 /* 카라이프 start-------------------------------------------------*/
 
 //카라이프 타봥 롤링
-// if($('.carLife-wrap .carLife-tabwang-swiper').length) {
-//     MUI.slide.init('.carLife-wrap .carLife-tabwang-swiper','swiper', {
-//         loop: true,
-//         autoHeight: true,
-//         pagination: {
-//             el: '.carLife-tabwang-pagination',
-//         },
-//         autoplay: {
-//             delay: 3000,
-//         },
-//     });
-// }
-
 if($('.carLife-wrap .carLife-tabwang-swiper').length) {
     MUI.slide.init('.carLife-wrap .carLife-tabwang-swiper','swiper', {
         loop: true,

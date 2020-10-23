@@ -252,6 +252,13 @@ if($('.login-wrap .detail-radio').length) {
     });
 }
 
+//카라이프 탭 메뉴
+if($('.carLife-container .tab-normal').length){
+    MUI.event.taps('.carLife-container .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
 /* -------------------------------------------------탭 전환end*/
 
 /* 레이어팝업start-------------------------------------------------*/

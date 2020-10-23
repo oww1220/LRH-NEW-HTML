@@ -96,6 +96,11 @@ $extra-small-devices: 320px;
 	align-items: flex-start;
 	justify-content: space-between;
 }
+@mixin Align-between-base {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
 
 @mixin Inline-align-middle {
 	display: inline-flex;
@@ -220,7 +225,51 @@ $extra-small-devices: 320px;
 }
 
 
+/* 2020-10-23 공통 스타일 추가(임시) */
+html, body{
+	font-size:16px;
+	@include Regular;
+}
+//
+.txt-red{color:#ed1c24;}
+.txt-bold{@include Bold;}
+//
+.page-title{
+    @include Bold;
+    font-size:40px;
+    text-align:center;
+    padding:0 0 60px;
+}
+//
+.tbl-type01{
+    width:100%;
+    border:0;
 
+    th, td{
+        height:50px;
+        padding:10px 40px;
+        text-align:center;
+        vertical-align: middle;
+        @include Regular;
+    }
+    th{
+        font-size:17px;
+        @include Bold;
+        background-color:#f5f5f5;
+        &:first-of-type{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        &:last-of-type{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    td{
+        border-bottom:1px solid #e7e7e7;
 
-
-
+        &:first-of-type{
+            text-align:left;
+        }
+    }
+}

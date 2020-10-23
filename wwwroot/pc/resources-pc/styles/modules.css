@@ -6,6 +6,82 @@
 /*백그라운드 믹스인*/
 /* 말줄임표 */
 /*미디어쿼리 믹스인*/
+/* 2020-10-23 공통 스타일 추가(임시) */
+html, body {
+	font-size: 16px;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+}
+
+.txt-red {
+	color: #ed1c24;
+}
+
+.txt-bold {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+}
+
+.page-title {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	font-size: 40px;
+	text-align: center;
+	padding: 0 0 60px;
+}
+
+.tbl-type01 {
+	width: 100%;
+	border: 0;
+}
+
+.tbl-type01 th, .tbl-type01 td {
+	height: 50px;
+	padding: 10px 40px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+}
+
+.tbl-type01 th {
+	font-size: 17px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	background-color: #f5f5f5;
+}
+
+.tbl-type01 th:first-of-type {
+	-webkit-border-top-left-radius: 10px;
+	   -moz-border-radius-topleft: 10px;
+	        border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	   -moz-border-radius-bottomleft: 10px;
+	        border-bottom-left-radius: 10px;
+}
+
+.tbl-type01 th:last-of-type {
+	-webkit-border-top-right-radius: 10px;
+	   -moz-border-radius-topright: 10px;
+	        border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	   -moz-border-radius-bottomright: 10px;
+	        border-bottom-right-radius: 10px;
+}
+
+.tbl-type01 td {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.tbl-type01 td:first-of-type {
+	text-align: left;
+}
+
 /* Slider */
 .slick-slider {
 	position: relative;
@@ -1257,21 +1333,18 @@ button.swiper-pagination-bullet {
 	   -moz-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	background-color: #EFF2F7;
-	height: 60px;
+	height: 85px;
 	width: 100%;
-	-webkit-border-radius: 15px 15px 0 0;
-	   -moz-border-radius: 15px 15px 0 0;
-	        border-radius: 15px 15px 0 0;
-	border-bottom: 1px solid #2B2B2B;
+	border-bottom: 1px solid #e7e7e7;
+	font-size: 24px;
 }
 
 .tab-nav > ul > li.active button {
-	background-color: #2B2B2B;
-	color: #fff;
+	color: #ff3f4c;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
+	border-bottom: .3rem solid #ff3f4c;
 }
 
 .tab-nav > ul.tab-col2 > li {
@@ -2124,6 +2197,40 @@ button.swiper-pagination-bullet {
 	        background-size: auto;
 	width: 13px;
 	height: 24px;
+}
+
+.icon.data-new {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-data-new.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 15px;
+	height: 15px;
+}
+
+.icon.home {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-home.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 18px;
+	height: 18px;
+}
+
+.icon.share {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-share.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 22px;
+	height: 24px;
+	font: 0/0 a;
 }
 
 button.active .filter {

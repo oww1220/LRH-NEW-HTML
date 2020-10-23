@@ -5,7 +5,17 @@
     // width: 1080px;
     margin: 0 auto;
     position: relative;
-}
+
+    &-type2{
+        position:relative;
+        width:1200px;
+        min-width:1200px;
+        max-width:1420px;
+        margin:0 auto;
+    }
+}    
+
+
 .skip_nav {
     @include Position($top: 0, $left: 0);
     display: inline-block;
@@ -18,10 +28,11 @@
     background-color: #f40404;
 }
 
-.path-wrap {
-    margin: 50px 0 25px;
-    .inner {
+.path-wrap {    
+    .inner-type2 {
         @include Align-between;
+        margin: 60px auto 50px;
+
         > strong {
             @include Bold;
             font-size: 15px;
@@ -39,17 +50,30 @@
                     color:#999;
                 }
                 & + li{
-                    &:before {
+                    padding-left:20px;
+
+                    &:after {
                         display: block;
                         content: '>';
                         color: #999;
-                        margin: 0 6px;
+                        margin-left:10px;
+                        transform: rotate(90deg);
                     }
                     > a {
-                        color: #999;
+                        color: #54585a;
                     }
                 }
             }
+        }
+    }
+
+    //영역 고정 시 
+    &.absolute-path{
+        position: relative;
+        z-index: 5;
+
+        .inner-type2{
+            @include Position($top: 0, $left: 0, $right: 0);
         }
     }
 }

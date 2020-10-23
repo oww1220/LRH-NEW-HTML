@@ -1,10 +1,63 @@
-//공지사항
-.customer-container{
-    padding-bottom:100px; 
-    
+//상단 비쥬얼
+.top-visual-box{
+    margin-bottom:50px;
+    background-color:#f8f5f0;
+}
+
+//카라이프
+.carLife-container{
+    padding-bottom:100px;     
+
+    .tab-cont{padding:20px 0;}
+
+    //진행중 이벤트
+    .sorting-box{
+        @include Align-between;
+        padding:20px 0 30px;
+    }
+    .grid-col3{
+        @include Align-box;
+
+        > li{
+            @include Align-top-left-column;
+            flex:none;
+            flex-basis: 33.33%;
+            margin-bottom:40px;
+
+            > a{
+                @include Align-box;
+                width:380px;
+            }
+            &:nth-of-type(3n+2){
+                a{margin:auto;}
+            }
+            &:nth-of-type(3n){
+                a{
+                    margin-left:auto;
+                    margin-right:0;                    
+                }
+            }
+
+            .thumb{
+                border-radius:20px;
+                overflow:hidden;
+            }
+            .desc{
+                padding:20px 10px;
+
+                .tit{
+                    @include Bold;
+                    font-size:17px;
+                    margin-bottom:10px;
+                }
+                .date{color:#848484;}
+            }
+        }
+    }
+    //당첨자 발표
     .search-wrap{
         width:680px;
-        margin:0 auto 40px;
+        margin:40px auto;
         @include Align-between-top;
 
         .selectbox{width:150px;}        
@@ -49,7 +102,7 @@
         strong{@include Bold;}
     }
 
-    //공지사항 상세
+    //이벤트 상세
     .ntc-view-header{
         @include Align-between-base;
         @include Regular;
