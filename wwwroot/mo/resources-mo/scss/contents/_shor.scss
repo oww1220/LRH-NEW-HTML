@@ -487,6 +487,13 @@
                                 b{
                                     font-size:1.1rem;
                                     @include Regular;
+                                    em{
+                                        .btn-link{
+                                            @include Regular;
+                                            margin-top:-.2rem;
+                                            color:#54585a;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -658,6 +665,11 @@
                                     @include Position($top: 50%, $right: 0);
                                     transform: translateY(-50%);
                                 }
+                                &:last-child > input{
+                                    border-radius: 0 1rem 1rem 0;
+                                    border:1px solid #EBEBEB;
+                                    border-left:0;
+                                }
                                 & > .selectbox{
                                     width:100%;
                                     height: 4.1rem;
@@ -747,6 +759,11 @@
                                     content:"@";
                                     @include Position($top: 50%, $right: 0);
                                     transform: translateY(-50%);
+                                }
+                                &:last-child > input{
+                                    border-radius: 0 1rem 1rem 0;
+                                    border:1px solid #EBEBEB;
+                                    border-left:0;
                                 }
                                 & > .selectbox{
                                     width:100%;

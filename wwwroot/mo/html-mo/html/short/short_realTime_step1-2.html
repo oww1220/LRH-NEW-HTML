@@ -73,11 +73,11 @@
 									<tbody>
 										<tr>
 											<th>대여일시/지점</th>
-											<td><b>08.10 (월) 10 : 00 서울/<em>강남지점</em></b></td>
+											<td><b>08.10 (월) 10 : 00 서울/<em><button type="button" class="btn-link layer-infos-open" data-layer="type-map">강남지점</button></em></b></td>
 										</tr>
 										<tr>
 											<th>대여일시/지점</th>
-											<td><b>08.11 (화) 10 : 00 서울/<em>강남지점</em></b></td>
+											<td><b>08.11 (화) 10 : 00 서울/<em><button type="button" class="btn-link layer-infos-open" data-layer="type-map">강남지점</button></em></b></td>
 										</tr>
 										<tr>
 											<th>차량상세정보</th>
@@ -104,17 +104,20 @@
 									<div class="detail-layer-inputT inputT">
 										<ul class="detail-layer-inputT-email list-type-col2">
 											<li>
-												<input type="text" id="" name="email" title="이메일 정보 입력하세요." placeholder="이메일 정보 입력하세요.">
+												<input type="text" id="chrgemail_fs" value="" name="email" title="이메일 정보 입력하세요." placeholder="이메일 정보 입력하세요.">
 												<em>@</em>
 											</li>
 											<li>
-												<select class="selectbox" name="" id="">
-													<option value="">직접입력</option>
-													<option value="">lotte.net</option>
-													<option value="">naver.com</option>
-												</select>
+												<input type="text" id="chrgemail_ls" value="" title="이메일 종류 선택" >
 											</li>
 										</ul>
+									</div>
+									<div class="detail-layer-inputT inputT">
+										<select class="selectbox" name="" id="email_list" onchange="$('#chrgemail_ls').val($('#email_list').val());">
+											<option value="">직접입력</option>
+											<option value="lotte.net">lotte.net</option>
+											<option value="naver.com">naver.com</option>
+										</select>
 									</div>
 									<div class="detail-layer-inputT inputT">
 										<ul class="detail-layer-inputT-number02 list-type-col2">
@@ -328,6 +331,73 @@
 
 	<footer class="footer">
 	</footer>
+
+	<!--layer-full 위치설정 지도 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-address type-map" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="type-map"><i class="icon layerclose">닫기 버튼</i></button>
+            <h4>
+                위치 설정
+            </h4>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="layer-infos">
+					<div class="layer-address-top">
+						<div class="inputT">
+							<input type="text" id="" name="" title="name" placeholder="예) 테헤란로 422" value="">
+						</div>
+						<button type="button" class="btn btn-default black">검색</button>
+					</div>
+					
+					<div class="layer-address-result">
+						<div class="address-result-top">
+							<strong><b>강동역</b> 검색 결과 입니다.</strong>
+						</div>
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<div class="map-wrap">
+										<div class="cover">
+											<img src="../../../resources-mo/images/@temp-address-map01.png" alt="더미">
+										</div>
+									</div>
+									<a href="#">
+										<div class="flag-wrap">
+											<div class="flag address">도로명</div>
+										</div>
+										<div class="address-result-txt">
+											경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라
+											<b>우- 63236 (690-121)</b>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+	
+						<!--검색결과 없을시-->
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<div class="none">검색결과가 없습니다.</div>
+								</li>
+							</ul>
+						</div>
+						<!--//검색결과 없을시-->
+					</div>
+
+					<div class="layer-address-foot">
+						<button type="button" class="btn btn-white">선택한 위치로 설정</button>
+					</div>
+				</div>
+            </div>
+        </div>
+        <!--//컨텐츠-->
+    </div>
+	<!--//layer-full 위치설정 지도 컴포넌트-->
 
 
 	<!--상단 타이틀(추후삭제)-->
