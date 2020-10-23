@@ -147,17 +147,20 @@
 									<div class="detail-layer-inputT inputT">
 										<ul class="detail-layer-inputT-email list-type-col2">
 											<li>
-												<input type="text" id="" name="email" title="이메일 정보 입력하세요." placeholder="이메일 정보 입력하세요.">
+												<input type="text" id="chrgemail_fs" value="" name="email" title="이메일 정보 입력하세요." placeholder="이메일 정보 입력하세요.">
 												<em>@</em>
 											</li>
 											<li>
-												<select class="selectbox" name="" id="">
-													<option value="">직접입력</option>
-													<option value="">lotte.net</option>
-													<option value="">naver.com</option>
-												</select>
+												<input type="text" id="chrgemail_ls" value="" title="이메일 종류 선택" >
 											</li>
 										</ul>
+									</div>
+									<div class="detail-layer-inputT inputT">
+										<select class="selectbox" name="" id="email_list" onchange="$('#chrgemail_ls').val($('#email_list').val());">
+											<option value="">직접입력</option>
+											<option value="lotte.net">lotte.net</option>
+											<option value="naver.com">naver.com</option>
+										</select>
 									</div>
 									<div class="detail-layer-textarea textarea">
 										<textarea name="" id="" placeholder="차량 사용 목적을 입력 하세요."></textarea>
