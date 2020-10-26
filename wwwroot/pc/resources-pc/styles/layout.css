@@ -362,7 +362,6 @@ html, body {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
-	display: inline-block;
 	position: relative;
 }
 
@@ -371,28 +370,24 @@ html, body {
 	z-index: 10;
 }
 
+.header .header-nav .draw-toggle-cont .detail-layer-in .layer-gnb-info .layer-gnb-info-top p span:after {
+	display: block;
+	content: "";
+	width: 96%;
+	height: 2px;
+	background-color: #2f2f2f;
+	position: absolute;
+	bottom: 7px;
+	left: 2px;
+	z-index: 1;
+}
+
 .header .header-nav .draw-toggle-cont .detail-layer-in .layer-gnb-info .layer-gnb-info-top p b {
 	font-size: 36px;
 	color: #8f9191;
 	font-family: "ManropeL", "NotoL", serif;
 	/*font-family:"SpoqaL", serif;*/
 	font-weight: normal;
-}
-
-.header .header-nav .draw-toggle-cont .detail-layer-in .layer-gnb-info .layer-gnb-info-top p:after {
-	display: block;
-	content: "";
-	width: 100%;
-	height: 11px;
-	background-color: #e5e5e5;
-	position: absolute;
-	bottom: 3px;
-	left: 0;
-	z-index: 1;
-}
-
-.header .header-nav .draw-toggle-cont .detail-layer-in .layer-gnb-info .layer-gnb-info-top p + p:after {
-	display: none;
 }
 
 .header .header-nav .draw-toggle-cont .detail-layer-in .layer-gnb-info .layer-gnb-link {
@@ -523,6 +518,41 @@ html, body {
 
 .header .header-nav .draw-toggle-cont .detail-layer-in .layer-gnb > li .layer-gnb-list ul > li:first-child {
 	margin-top: 26px;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in .layer-gnb-all {
+	padding: 0;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in .layer-gnb-all > li {
+	width: 16.6%;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in .layer-gnb-all > li p {
+	margin-top: 40px;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in .layer-gnb-all > li p a b {
+	font-size: 26px;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in .layer-gnb-all > li .layer-gnb-list ul > li {
+	margin-top: 16px;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in .layer-gnb-all > li .layer-gnb-list ul > li p {
+	margin-top: 0;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in .layer-gnb-all > li > li:first-child {
+	margin-top: 30px;
+}
+
+.header .header-nav .draw-toggle-cont .detail-layer-in.detail-layer-all-in:after {
+	position: absolute;
+	top: 50px;
+	right: 20%;
+	left: auto;
 }
 
 .header .header-nav .draw-toggle-cont .detail-layer-in:after {

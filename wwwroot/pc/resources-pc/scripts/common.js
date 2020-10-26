@@ -728,6 +728,14 @@ if($('.customer-list').length){
         MUI.event.toggle('.header .draw-btn', '.header .draw-toggle-cont', true, function(logic, layer) {
             logic();
         });
+        // $('.header .draw-btn').on('focusin mouseenter', function(){
+        //     $('.draw-toggle-cont').show();
+        //     $('.header .draw-btn').addClass('hover');
+        // });
+        // $('.header .draw-btn').on('focusout mouseleave', function(){
+        //     $('.draw-toggle-cont').hide(); 
+        //     $('.header .draw-btn').removeClass('hover');
+        // });
     }
 
     $('.header .draw-btn').click(function(e){
