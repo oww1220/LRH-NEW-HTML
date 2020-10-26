@@ -1,9 +1,3 @@
-//상단 비쥬얼
-.top-visual-box{
-    margin-bottom:50px;
-    background-color:#f8f5f0;
-}
-
 //카라이프
 .carLife-container{
     padding-bottom:100px;     
@@ -104,15 +98,64 @@
 
     //이벤트 상세
     .ntc-view-header{
-        @include Align-between-base;
-        @include Regular;
-        font-size:22px;
-        padding:20px 0 40px;
-        border-bottom:1px solid #e7e7e7;
+        .top-row, .bot-row{
+            @include Align-between-base;
+            @include Regular;
+            font-size:22px;
+        }    
+        .bot-row{
+            border-bottom:1px solid #e7e7e7; 
+            padding:20px 0 40px;
+        }
+        .flag{
+            @include Align-middle;
+            height:30px;
+            font-size:14px;
+            color:#54585b;
+            padding:0 15px;
+            border:1px solid #54585b;
+            border-radius: 15px; 
+            box-sizing:border-box;
 
+            &-red{
+                @include Align-middle;
+                height:30px;
+                font-size:14px;
+                color:#ed1c24; 
+                padding:0 15px;
+                border:1px solid #ed1c24;
+                border-radius: 15px; 
+                box-sizing:border-box;
+            }
+            &-blue{
+                @include Align-middle;
+                height:30px;
+                font-size:14px;
+                color:#5179f5; 
+                padding:0 15px;
+                border:1px solid #5179f5;
+                border-radius: 15px; 
+                box-sizing:border-box;
+            }
+            &-purple{
+                @include Align-middle;
+                height:30px;
+                font-size:14px;
+                color:#7a5bfe;
+                padding:0 15px;
+                border:1px solid #7a5bfe;
+                border-radius: 15px; 
+                box-sizing:border-box;
+            }
+        }
+        .btn-share{
+            height:30px;
+            margin-left:auto; 
+            margin-right:0;
+        }
         .ntc-date{
             font-size:14px;
-            color:#8f9191;
+            color:#57585a;
         }
     }
     .ntc-view-body{
