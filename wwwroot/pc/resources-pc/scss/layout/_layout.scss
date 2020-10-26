@@ -28,10 +28,14 @@
     background-color: #f40404;
 }
 
-.path-wrap {    
-    .inner-type2 {
-        @include Align-between;
-        margin: 60px auto 50px;
+.path-wrap {        
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(238,238,238,1) 50%, rgba(238,238,238,1) 100%);
+    margin-bottom:60px;
+
+    .inner {
+        @include Align-middle-right;        
+        background: #fff;
 
         > strong {
             @include Bold;
@@ -39,14 +43,20 @@
             color:#F04040;
         }
         > ul {
-            @include Align-middle-left;
+            position:relative;
+            @include Align-middle-right;
+            min-width:420px;
+            height:70px;
+            padding-left: 179px;            
+            background-color: #eee;
+
             > li {
                 @include Align-middle-left;
                 > a{
-                    font-size: 13px;
+                    font-size: 14px;
                 }
                 > b{
-                    font-size: 13px;
+                    font-size: 14px;
                     color:#999;
                 }
                 & + li{
@@ -57,25 +67,26 @@
                         content: '>';
                         color: #999;
                         margin-left:10px;
-                        transform: rotate(90deg);
                     }
                     > a {
                         color: #54585a;
                     }
                 }
+                &:last-of-type{
+                    &:after {display:none;}
+                }
+            }
+
+            &:before{
+                content:"";
+                @include Position($top: 0, $left: -86px);
+                display:block;
+                width:86px;
+                height:70px;
+                @include Background($sprite:'sp-gnb-bg', $position:0 0, $size:86px 70px, $path:'common');
             }
         }
-    }
-
-    //영역 고정 시 
-    &.absolute-path{
-        position: relative;
-        z-index: 5;
-
-        .inner-type2{
-            @include Position($top: 0, $left: 0, $right: 0);
-        }
-    }
+    }   
 }
 
 .title-box-wrap {

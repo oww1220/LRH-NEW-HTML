@@ -14,6 +14,10 @@ html, body {
 	font-weight: normal;
 }
 
+.txt-brown {
+	color: #ba9a81;
+}
+
 .txt-red {
 	color: #ed1c24;
 }
@@ -30,7 +34,16 @@ html, body {
 	font-weight: normal;
 	font-size: 40px;
 	text-align: center;
-	padding: 0 0 60px;
+	padding: 0 0 50px;
+}
+
+.page-title .sub-tit {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+	font-size: 16px;
+	color: #8f9191;
+	margin-top: 15px;
 }
 
 .tbl-type01 {
@@ -1115,7 +1128,17 @@ html, body {
 	background-color: #f40404;
 }
 
-.path-wrap .inner-type2 {
+.path-wrap {
+	background: white;
+	background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, white), color-stop(50%, #eeeeee), to(#eeeeee));
+	background: -webkit-linear-gradient(left, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
+	background: -moz-linear-gradient(left, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
+	background: -o-linear-gradient(left, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
+	background: linear-gradient(90deg, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
+	margin-bottom: 60px;
+}
+
+.path-wrap .inner {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1126,15 +1149,15 @@ html, body {
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	   -moz-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	margin: 60px auto 50px;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	   -moz-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	background: #fff;
 }
 
-.path-wrap .inner-type2 > strong {
+.path-wrap .inner > strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -1142,7 +1165,30 @@ html, body {
 	color: #F04040;
 }
 
-.path-wrap .inner-type2 > ul {
+.path-wrap .inner > ul {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	   -moz-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	min-width: 420px;
+	height: 70px;
+	padding-left: 179px;
+	background-color: #eee;
+}
+
+.path-wrap .inner > ul > li {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1155,58 +1201,48 @@ html, body {
 	        align-items: center;
 }
 
-.path-wrap .inner-type2 > ul > li {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+.path-wrap .inner > ul > li > a {
+	font-size: 14px;
 }
 
-.path-wrap .inner-type2 > ul > li > a {
-	font-size: 13px;
-}
-
-.path-wrap .inner-type2 > ul > li > b {
-	font-size: 13px;
+.path-wrap .inner > ul > li > b {
+	font-size: 14px;
 	color: #999;
 }
 
-.path-wrap .inner-type2 > ul > li + li {
+.path-wrap .inner > ul > li + li {
 	padding-left: 20px;
 }
 
-.path-wrap .inner-type2 > ul > li + li:after {
+.path-wrap .inner > ul > li + li:after {
 	display: block;
 	content: '>';
 	color: #999;
 	margin-left: 10px;
-	-webkit-transform: rotate(90deg);
-	   -moz-transform: rotate(90deg);
-	    -ms-transform: rotate(90deg);
-	     -o-transform: rotate(90deg);
-	        transform: rotate(90deg);
 }
 
-.path-wrap .inner-type2 > ul > li + li > a {
+.path-wrap .inner > ul > li + li > a {
 	color: #54585a;
 }
 
-.path-wrap.absolute-path {
-	position: relative;
-	z-index: 5;
+.path-wrap .inner > ul > li:last-of-type:after {
+	display: none;
 }
 
-.path-wrap.absolute-path .inner-type2 {
+.path-wrap .inner > ul:before {
+	content: "";
 	position: absolute;
 	top: 0;
-	right: 0;
-	left: 0;
+	left: -86px;
+	display: block;
+	width: 86px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/common/sp-gnb-bg.png");
+	background-position: 0 0;
+	-webkit-background-size: 86px 70px;
+	   -moz-background-size: 86px 70px;
+	        background-size: 86px 70px;
 }
 
 .title-box-wrap {
