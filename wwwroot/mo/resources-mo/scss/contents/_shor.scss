@@ -544,6 +544,19 @@
                             top:.3rem;
                         }
                     }
+                    em{
+                        font-size:1rem;
+                        @include Regular;
+                        sub{
+                            position: relative;
+                            top:.3rem;
+                        }
+                        b{
+                            font-size:1rem;
+                            color:#ed1c24;
+                            @include Regular;
+                        }
+                    }
                 }
                 .table{
                     border-radius: 1.5rem;
@@ -720,6 +733,7 @@
                 &.item-step2 {
                     h3 {
                         margin-bottom:1.7rem;
+                        @include Align-between;
                     }
                     .item-cont {
                         padding: 0 1.7rem;
@@ -811,7 +825,7 @@
                         .detail-layer-inputT-number02{
                             display:flex;
                             width:100%;
-                            margin-left:0;
+                            margin: .9rem 0 0 0;
                             li{
                                 position: relative;
                                 &:first-child{
@@ -858,6 +872,51 @@
                                 }
                             }
                         }
+                        .detail-layer-inputT-list{
+                            .detail-iconBox{
+                                margin-left: -.6rem;
+                                label {
+                                    border:0 none;
+                                    border-radius: 0;
+                                    @include Regular;
+                                    height:auto;
+                                    color:#999;
+                                    span {
+                                        @include Vertical-inline;
+                                        font-size: 1rem;
+                                        margin-left: .4rem;
+                                    }
+                                    button{
+                                        @include Inline-align-middle;
+                                        margin-left:.6rem;
+                                        font-size:1rem;
+                                        border-radius: .4rem;
+                                        height:1.7rem;
+                                        padding:0 .6rem;
+                                        border-color: #d2d2d2;
+                                    }
+                                    &:after {
+                                        width: 1.7rem;
+                                        height: 1.7rem;
+                                        margin-top: -.85rem;
+                                        left:.5rem;
+                                        top:.9rem;
+                                        right:auto;
+                                        transform: inherit;
+                                    }
+                                }
+                                input:checked + label {
+                                    @include Regular;
+                                    color:#2f2f2f;
+                                }
+                                input[type='checkbox'] + label:after{
+                                    @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                                }
+                                input[type='checkbox']:checked + label:after{
+                                    @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                                }
+                            }
+                        }
                         .detail-layer-inputR{
                             width:100%;
                             padding:.6rem 0;
@@ -872,6 +931,18 @@
                                     height:1.7rem;
                                     padding:0 .6rem;
                                     border-color: #d2d2d2;
+                                }
+                            }
+                        }
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            @include Align-between;
+                            & > span{
+                                font-size:1rem;
+                                @include Regular;
+                                b{
+                                    font-size:1rem;
+                                    color:#ff404b;
                                 }
                             }
                         }
@@ -1322,6 +1393,34 @@
                             padding:.6rem 0;
                             label{
                                 @include Regular;
+                            }
+                        }
+                    }
+                }
+                &.item-step10 {
+                    padding:2.3rem 0 0;
+                    h3 {
+                        margin-bottom:1.7rem;
+                    }
+                    .item-cont {
+                        padding: 0 1.7rem;
+                        .detail-layer-inputT:first-child{
+                            margin-top: 0;
+                        }
+                        .detail-layer-inputT{
+                            margin-top:.9rem;
+                        }
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            margin-top:1.7rem;
+                            @include Align-between;
+                            & > span{
+                                font-size:1rem;
+                                @include Regular;
+                                b{
+                                    font-size:1rem;
+                                    color:#ff404b;
+                                }
                             }
                         }
                     }
