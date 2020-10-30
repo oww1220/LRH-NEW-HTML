@@ -694,6 +694,47 @@ if($('.customer-list').length){
 
 /* -------------------------------------------------고객센터end*/
 
+/* 중고차장기렌터카start-------------------------------------------------*/
+//상담 희망 일시 달력 버튼
+if($('.schedule-accor').length){
+    MUI.event.toggle('.btn-schedule-toggle', '.schedule-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+//약관 동의
+if($('.chk-agree-accor').length){
+    MUI.event.toggle('.btn-agree-toggle', '.agree-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+/* -------------------------------------------------중고차장기렌터카end*/
+
+
+/* 카라이프start-------------------------------------------------*/
+
+//타방 슬라이드
+if($('.tabwang-swiper-section .carLife-tabwang-swiper').length) {
+    MUI.slide.init('.tabwang-swiper-section .carLife-tabwang-swiper','swiper', {
+        loop: true,
+        slidesPerView: 2,
+        centeredSlides: true,
+        //spaceBetween: 30,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.tabwang-swiper-button-next',
+            prevEl: '.tabwang-swiper-button-prev',
+         },
+        // autoplay: {
+        //     delay: 3000,
+        // },
+    });
+}
+
+/* -------------------------------------------------카라이프end*/
+
     //푸터 슬라이더
     if($('.footer .detail-view-list').length) {
         MUI.slide.init('.footer .detail-view-list','swiper', {

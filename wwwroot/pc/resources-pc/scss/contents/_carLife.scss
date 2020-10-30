@@ -9,6 +9,14 @@
         @include Align-between;
         padding:20px 0 30px;
     }
+    .grid-col2{
+        @include Align-box;
+
+        > .col, > li{    
+            @include Align-top-left-column;
+            width:50%;
+        }
+    }
     .grid-col3{
         @include Align-box;
 
@@ -18,15 +26,16 @@
             flex-basis: 33.33%;
             margin-bottom:40px;
 
-            > a{
+            > a, > .item{
+                position:relative;
                 @include Align-box;
                 width:380px;
             }
             &:nth-of-type(3n+2){
-                a{margin:auto;}
+                > a, > .item{margin:auto;}
             }
             &:nth-of-type(3n){
-                a{
+                > a, > .item{
                     margin-left:auto;
                     margin-right:0;                    
                 }
@@ -46,6 +55,60 @@
                 }
                 .date{color:#848484;}
             }
+        }
+
+        .detail{
+            position:relative;
+            @include Align-top-left-column;
+            width:100%;
+            padding:20px 10px;
+            box-sizing: border-box;
+
+            .desc{
+                width:100%;
+                @include Inline-align-middle;
+                justify-content:flex-start;                
+                padding:0; 
+                margin-bottom:10px;    
+
+                .txt{@include Ellipsis($w:100%, $lines:1); }                
+            }
+            .tag{
+                width:100%;
+                @include Align-middle-left;
+                .item{@include Ellipsis($w:auto); max-width:33.333%; margin-right:10px; color:#848484; font-size:13px;}                    
+            }
+
+            .sns-flag{
+                @include Position($top:10px, $right:14px);
+                @include Align-middle;
+                margin-left:5px;
+
+                &.v2{
+                    @include Vertical-inline;
+                    position:static;
+                }
+
+                &.post{
+                    @include Bold;
+                    @include Align-middle;
+                    height:30px;
+                    font-size:12px;                    
+                    color:#fff;
+                    padding:0 6px;
+                    background:#000;
+                    border-radius: 15px;
+
+                }
+            }            
+        }
+    }
+    .grid-col4{
+        @include Align-box;
+
+        > .col, > li{    
+            @include Align-top-left-column;
+            width:25%;
         }
     }
     //당첨자 발표
@@ -161,8 +224,32 @@
     .ntc-view-body{
         padding:80px 100px;
 
-        .img-box{text-align:center;}
+        .img-box{text-align:center; margin-bottom:40px;}
         img{max-width:100%; height:auto;}
+        .tag-area{            
+            @include Align-box;
+            margin-bottom:40px;
+
+            .tit{
+                @include Align-middle;                
+                @include Bold;
+                height:34px;
+                padding:0 25px;
+                border:1px solid #2f2f2f;
+                color:#2f2f2f;
+                border-radius:34px;
+            }
+            .tag-list{                
+                @include Inline-align-middle;
+
+                a{
+                    font-size:14px; 
+                    color:#54585a; 
+                    margin-left:20px; 
+                    text-decoration: underline;
+                }
+            }
+        }
     }
     .ntc-view-footer{
         .ntc-list{
@@ -195,6 +282,7 @@
         }
         .btn-box{
             padding:50px;
+            margin-bottom: 30px;
             text-align:center;
             
             .btn{
@@ -206,4 +294,293 @@
             }
         }
     }
+
+
+    //타방
+    .tabwang-swiper-section{
+        margin-bottom:50px;
+        .carLife-tabwang-swiper{
+            position:relative; 
+            padding-bottom:30px;
+
+            .tabwang-swiper-button-prev, .tabwang-swiper-button-next{ 
+                cursor: pointer;
+                @include Position($top:170px, $left:215px);
+                width: 105px; 
+                height:130px;
+                @include Align-middle;
+                z-index:5;
+            }
+            .tabwang-swiper-button-next{@include Position($top:170px, $left:auto, $right:215px);}
+
+            .swiper-slide {
+                transition: all .25s ease-out;
+                opacity: 1;
+                .img, .detail{
+                    max-width:860px;
+                }
+                img {
+                    max-width: 100%;
+                    transition: all .25s ease-out;
+                    transform: scale(.92);
+                    transform-origin: center;
+                }
+                .detail{
+                    display:none;
+                }
+            }
+            .swiper-slide-active{
+                img {
+                    transform: scale(1);
+                } 
+                .detail{
+                    @include Position($bottom:0, $left:0, $right:0);
+                    display:block;
+                    @include Align-middle-column;
+                    height:174px;      
+                    color:#fff;
+                    @include Bold;
+                    background: rgba(0,0,0,.4);
+
+                    .desc{
+                        color:inherit;
+                        font-size:30px;
+                        margin-bottom:20px;
+                    }
+                    .tag{
+                        @include Inline-align-middle;
+                        
+                        li{padding:0 5px;}
+                    }
+                }
+            }
+
+            .swiper-slide-active{
+                -webkit-box-shadow: 0px 20px 20px -5px rgba(0,0,0,0.15); 
+                box-shadow: 0px 20px 20px -5px rgba(0,0,0,0.15);
+            }
+            
+            // .swiper-slide-active + .swiper-slide ~ .swiper-slide {
+            //     opacity: .35;
+            //     border:2px solid red;
+            // }              
+        }
+    }
+    .tabwang-tag-section{
+        .filter-area{
+            @include Align-middle;
+            margin-bottom:40px;
+
+            .item{
+                button, label {
+                    position: relative;
+                    @include Align-middle;
+                    height:40px;
+                    padding:0 26px;
+                    border:1px solid #d2d2d2;
+                    border-radius:40px;
+                    box-sizing: border-box;
+                    margin:0 5px;
+                    transition: all .4s;
+                }                
+            }
+            input{display:none;}
+            input:checked + label{
+                @include Bold;
+                border:1px solid #ed1c24;
+                color:#ed1c24;
+            }            
+        }
+
+        .choice-tag-area{
+            @include Align-middle;
+            @include Bold;
+            font-size:17px;
+            padding:30px;
+            background-color:#f5f5f5;
+            border-radius:6px;
+            margin-bottom:40px;
+        }
+    }
+    .post-section{
+        .tit-header{
+            @include Bold;
+            font-size:22px;
+            margin-bottom:25px;
+        }
+        .grid-col3{
+            .detail{
+                position:static;
+                .sns-flag{@include Position($top:20px, $right:24px);}
+            }
+        }
+    }
+
+
+    //제주오투하우스
+    .top-section{ background-color:#f5f5f5; margin:-130px 0 60px; padding:130px 0 80px;}
+    .section-descri{
+        margin-bottom:80px;
+
+        .btn-view {
+            width:98px;
+            font-size:14px;
+            padding:0;
+        }
+        strong{@include Bold;}
+        .box-header{            
+            @include Align-middle-left;
+            width: 100%;
+            padding-bottom:32px;
+            margin-bottom:60px;
+            border-bottom:1px solid #e7e7e7;
+
+            .tit{
+                @include Bold;
+                @include Ellipsis($w:100%, $lines:1); 
+                font-size:32px;
+            }
+        }
+
+        &.rsvd-section{            
+            .box-header{
+                padding-bottom:25px;
+                margin-bottom:0;
+                border:none;
+                
+                .tit{font-size:22px;}
+            }
+            .box-content{
+                @include Align-middle-left;
+                padding:30px 40px;
+                border-radius:6px;
+                border:1px solid #e7e7e7;
+                background-color:#fff;
+                box-sizing:border-box;
+                
+                .icon{margin-right:10px;}
+                .descri{max-width:80%;}
+                .btn-link{   
+                    position:relative; 
+                    @include Align-middle;
+                    @include Bold;
+                    height:auto;
+                    padding:0;
+                    margin-left:auto;
+
+                    .icon{
+                        @include Position($left:-31px);
+                    }
+                }
+            }
+        }
+
+        &.why-jejuauto-section{
+            .descri{
+                width:100%;
+                padding:40px;
+                text-align:center;
+                box-sizing: border-box;
+            }
+        }
+
+        &.jejuauto-reson-section{
+            .descri-box{
+                padding:40px 0;
+
+                .tit{@include Bold; font-size:24px; margin-bottom:30px;}
+                .descri{
+                    margin-bottom:30px;
+                    dt{
+                        @include Bold; 
+                        margin-bottom:20px;
+
+                        & ~ dt{margin-top:30px;}
+                    }
+                }
+            }
+        }
+
+        &.jejuauto-step-section{
+            .grid-col2{
+                .video-box{
+                    width:765px;                 
+                }
+                .descri-box{
+                    flex: 1;
+                    padding-left:60px;
+                    
+                    li{margin-bottom:40px;}                    
+                    strong{
+                        display:block; 
+                        @include Bold; 
+                        margin-bottom:20px;
+                    }
+                }
+            }
+        }
+
+        &.jejuair-location-section{
+            .grid-col2{
+                .img-box{width:440px;}
+                
+                .descri-box{
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    padding-left:60px;
+                    
+                    .descri-lst{
+                        @include Align-top-left-column;
+
+                        > div{                    
+                            @include Align-middle-left;
+                            margin-bottom:16px;
+                        }
+                        dt{width:198px; @include Bold;}
+                    }
+
+                    .num-lst{
+                        padding:40px;
+                        margin-top:60px;
+                        border-radius: 6px;;
+                        background-color:#fafafa;
+
+                        li{
+                            margin-bottom:16px;
+                            &:last-of-type{margin-bottom:0;}
+                            .lst-one{margin-top:16px;}
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        &.jejuauto-service-section{
+            .cont-tit{
+                @include Bold;
+                font-size:22px;
+                margin-bottom:30px;
+            }
+            li{
+                margin-bottom:40px;
+                > p{margin-bottom:20px;}
+            }
+        }
+
+        &.jejuauto-location-section{
+            .descri-lst{
+                @include Align-top-left-column;
+                margin-bottom:10px;
+
+                > div{                    
+                    @include Align-middle-left;
+                    margin-bottom:30px;
+                }
+                dt{width:88px; @include Bold;}
+            }
+        }
+    }
+
+    
 }

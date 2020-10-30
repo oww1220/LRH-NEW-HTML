@@ -1,0 +1,339 @@
+//중고차 장기 렌터카
+.secondhand-container{
+    padding-bottom:100px;     
+
+    //내 차 팔기 서비스 1단계
+    .step-view{
+        text-align:center;
+        margin-bottom:60px;
+
+        .step-list{
+            @include Inline-align-top;
+
+            li{
+                padding:0 67px;
+
+                &.active{
+                    .txt{
+                        @include Bold;
+                        color:#ed1c24;
+                    }
+                }
+                .icon{position:relative; z-index: 5;}
+                .txt{
+                    color:#8f9191;
+                    margin-top:15px;
+                }
+                & + li{
+                    position:relative;
+                    
+                    &:after{
+                        content:"";
+                        @include Position($top: 16px, $left: -50%);
+                        display:block;
+                        width:100%;
+                        height:1px; 
+                        background-color:#e7e7e7;
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    .group-tit{      
+        @include Align-middle-left;
+        @include Bold;
+        width:100%;
+        padding:0 40px;
+        height:80px;
+        background-color:#f5f5f5;
+        box-sizing:border-box;
+        border-radius: 6px;
+        font-size:22px;
+    }
+    .group-cont{
+        padding:80px 0 100px;
+
+        .row{
+            padding:0 80px;
+            margin-bottom:20px;            
+        }
+        .txt-exam{padding:0 5px; color:#8f9191;}
+        .input-row{
+            @include Align-middle-left;
+
+            .tit{flex:none; width:170px;}
+            .inputT, .selectbox{width:300px; margin-right:5px;}
+            .txt{height:60px; @include Align-middle-left;}
+        }        
+        .input-date-box{
+            position:relative;
+            
+            input{
+                padding-right:60px;
+            }
+            .btn-schedule-toggle{
+                @include Position($top: 0, $right: 0);
+                @include Align-middle;
+                width:60px;
+                height:60px;
+            }
+           
+        }
+        .arror-header{
+            @include Align-box;
+
+            .iconBox, .toggle-btn{
+                @include Align-top-left;    
+                height:50px;            
+            }
+            .iconBox{flex-grow: 1;}
+            .btn-toggle{
+                width:66px;      
+            }
+        }  
+        .email-row{
+            .inputT{
+                //width:546px;
+                //width:290px;
+            }
+            em{margin-right:5px;}
+            .selectbox{width:160px;}
+        }      
+    }
+    .schedule-wrap{
+        overflow:hidden;
+        border:1px solid #d2d2d2;
+        border-radius: 6px;;
+
+        .calendar-wrap{
+            position:relative;
+            padding:60px;
+
+            .calendar{
+                @include Align-between-top;
+                
+                .col{
+                    flex-basis: 33.333%;
+                    &:last-of-type{
+                        .tbl-box{border-right:none;}
+                    }  
+                }
+                .tbl-box{
+                    border-right:1px solid #e7e7e7;
+                    padding:0 15px;
+                    table{
+                        width:100%;
+                        th, td{text-align:center;padding:15px 0;}
+                        th{padding-top:0;}
+                        .btn {width:38px; height:38px; padding:0;}                                                
+                        .disabled, button[disabled]{
+                            color:#ddd;
+                        }
+                        .today{
+                            .btn{
+                                position: relative;
+                                @include Bold; 
+                                color:#a02a3d; 
+                                &:after{
+                                    content:"";
+                                    display:block;
+                                    width: 20px;
+                                    height:1px;
+                                    margin: 0 auto;
+                                    background-color:#a02a3d;
+                                }                                
+                            }                            
+                        }
+                        .today{
+                            &.on, &.start, &.end, &.during{
+                                .btn{
+                                    &:after{background-color:#fff;}
+                                }
+                            }
+                        }
+                        .start, .end, .during{
+                            .btn{
+                                width: 100%;
+                                color:#fff;
+                                background-color: #ff404b;
+                            }
+                        }
+                        .start{
+                            .btn{                                
+                                border-top-left-radius: 38px;
+                                border-bottom-left-radius: 38px;
+                            }
+                        }
+                        .end{
+                            .btn{                               
+                                border-top-right-radius: 38px;
+                                border-bottom-right-radius: 38px;
+                            }
+                        }
+                        .on{    
+                            .btn{
+                                color:#fff;
+                                background-color:#ff404b;
+                                border-radius:100%;
+                            }         
+                        }                       
+                        
+                    }
+                }                
+                .calendar-tit{@include Bold; text-align:center; margin-bottom:30px;}                
+            }
+            .btn-paging-prev, .btn-paging-next{
+                @include Position($top:50px, $left:50px);
+                border:none;            
+            }
+            .btn-paging-next{
+                @include Position($top:50px, $left:auto, $right:50px);
+            }
+        }
+        .schedule-bot{
+            @include Align-box;
+            border-top:1px solid #e7e7e7;
+            
+            .date-info, .btn{
+                @include Align-middle;
+                height:80px;
+            }
+            .date-info{
+                flex-grow:1;
+
+                > span{margin-right:20px;}
+                .date{@include Bold; font-size:20px;}
+            }
+            .btn{
+                width:175px; 
+                margin-left:auto; 
+                color:#fff; 
+                background-color:#54585a; 
+                @include Bold; 
+            }
+        }
+    }
+    .agree-toggle-cont{    
+        font-size:14px;
+        padding:30px;
+        margin:0 40px;
+        background-color:#fafafa;
+        border-radius: 6px;
+
+        > p {margin-bottom:35px;}
+        > ul{margin-bottom:30px;}
+        h4{margin:10px 0;}
+        
+    }
+
+    //
+    .complete-box{
+        padding:60px 80px;
+        margin-bottom:60px;
+        text-align:center;
+        background-color:#f5f5f5;
+
+        .txt-bold{font-size:26px; display:block; margin-bottom:18px;}
+    }
+    .user-info-wrap{
+        padding-bottom:60px;
+        margin-bottom:60px;
+        border-bottom:1px solid #e7e7e7;
+        .group-cont{
+            .input-row{
+                .tit, .txt{width:50%}
+                .tit{
+                    @include Align-middle-right;
+                    span{flex:none; width:170px;}
+                }
+            }  
+        }
+    }
+    //안내
+    .guide-banner{
+        overflow:hidden;
+        @include Align-middle-left;
+        padding:40px;
+        margin-bottom:20px;
+        height:160px;
+        box-sizing:border-box;
+        border-radius:6px;
+        color:#fff;
+        @include Background($sprite:'@temp-secondhand_bn01', $type:'png', $position:center center, $size:cover, $path:'');
+
+        .consulting-btn{
+            @include Align-middle;
+            width:124px;
+            height:50px;
+            margin-left:auto;
+            border-radius:6px;
+        }
+    }
+    .section{
+        padding:60px 0;
+        .tit{
+            @include Bold;
+            font-size:32px;
+            padding-bottom:30px;
+            margin-bottom:60px;
+            border-bottom:1px solid #e7e7e7;
+        }
+        .grid-type2{
+            li{
+                @include Align-middle-left;
+                margin-bottom:60px;
+                
+                .icon{
+                    width:130px;
+                    height:130px;
+                    border-radius:130px;
+                    border:1px solid #f1f1f1;
+                    background-color:#fafafa;
+                }
+                .desc{
+                    padding-left:58px;
+                    dt{
+                        @include Bold;
+                        font-size:20px;
+                        margin-bottom:25px;
+                    }
+                }
+            }
+        }
+        .step-list{
+            @include Align-box;
+
+            li{
+                @include Align-top-column;
+                position:relative;
+                width:25%;
+                margin-bottom:80px;
+
+                .icon{
+                    display:block;
+                    width:92px;
+                    height:98px;
+                    background-color:green;
+                }
+                .txt{
+                    @include Bold;
+                    margin-top:50px;
+                }
+
+                
+                &:after{
+                    content:">";
+                    @include Position($top:35px, $right:0);
+                    color:#d2d2d2;
+                }
+                
+                &:nth-of-type(4n){
+                    &:after{display:none;}
+                }
+            
+            }
+        }
+    }
+}

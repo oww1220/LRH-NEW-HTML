@@ -179,6 +179,18 @@
 		display: none;
 	}
 	& + .iconBox {margin-top:10px;}
+
+	&.simple{
+		label{
+			border: none;
+			height:23px;
+			padding-left:40px;
+
+			&:after{
+				@include Position($top: 50%, $left: 0);
+			}
+		}
+	}
 }
 
 .iconList {

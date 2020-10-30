@@ -825,3 +825,18 @@
 		}
 	}
 }
+
+//
+.hypen-list{
+	li{
+		position:relative;
+		padding-left:15px;
+
+		&:before{
+			content:"-";
+			@include Position($top:0, $left:0);
+			display:block;
+			width:15px;
+		}
+	}
+}

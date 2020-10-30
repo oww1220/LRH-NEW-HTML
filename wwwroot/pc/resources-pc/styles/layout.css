@@ -22,6 +22,10 @@ html, body {
 	color: #ed1c24;
 }
 
+.txt-color-red {
+	color: #ed1c24;
+}
+
 .txt-bold {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
@@ -93,6 +97,92 @@ html, body {
 
 .tbl-type01 td:first-of-type {
 	text-align: left;
+}
+
+.num-lst li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+
+.num-lst li .bul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+	width: 16px;
+	margin-right: 10px;
+}
+
+.one-lst {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+
+.one-lst .bul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+	width: 16px;
+	margin-right: 10px;
+}
+
+.one-lst .bul.dot {
+	width: 5px;
+	margin-right: 5px;
+}
+
+.one-lst .bul.hypen {
+	width: 5px;
+	margin-right: 5px;
 }
 
 .header .header-top .inner {
@@ -1114,6 +1204,14 @@ html, body {
 	margin: 0 auto;
 }
 
+.inner-type3 {
+	position: relative;
+	width: 1600px;
+	min-width: 1600px;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
 .skip_nav {
 	position: absolute;
 	top: 0;
@@ -1129,13 +1227,22 @@ html, body {
 }
 
 .path-wrap {
-	background: white;
-	background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, white), color-stop(50%, #eeeeee), to(#eeeeee));
-	background: -webkit-linear-gradient(left, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
-	background: -moz-linear-gradient(left, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
-	background: -o-linear-gradient(left, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
-	background: linear-gradient(90deg, white 0%, white 50%, #eeeeee 50%, #eeeeee 100%);
+	position: relative;
+	min-height: 70px;
 	margin-bottom: 60px;
+}
+
+.path-wrap .cover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(70%, transparent), color-stop(70%, #eeeeee), to(#eeeeee));
+	background: -webkit-linear-gradient(left, transparent 0%, transparent 70%, #eeeeee 70%, #eeeeee 100%);
+	background: -moz-linear-gradient(left, transparent 0%, transparent 70%, #eeeeee 70%, #eeeeee 100%);
+	background: -o-linear-gradient(left, transparent 0%, transparent 70%, #eeeeee 70%, #eeeeee 100%);
+	background: linear-gradient(90deg, transparent 0%, transparent 70%, #eeeeee 70%, #eeeeee 100%);
 }
 
 .path-wrap .inner {
@@ -1154,7 +1261,6 @@ html, body {
 	   -moz-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
-	background: #fff;
 }
 
 .path-wrap .inner > strong {

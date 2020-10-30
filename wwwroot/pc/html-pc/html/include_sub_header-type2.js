@@ -2,7 +2,7 @@ $(function(){
 
 
     var header = `
-	<!--header 컴포넌트-->
+	<!--header 컴포넌트 2-->
 	<header class="header">
 
 		<!--해더상단-->

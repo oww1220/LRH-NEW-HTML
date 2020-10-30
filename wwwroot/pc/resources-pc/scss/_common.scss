@@ -233,6 +233,7 @@ html, body{
 //
 .txt-brown{color:#ba9a81;}
 .txt-red{color:#ed1c24;}
+.txt-color-red{color:#ed1c24;}
 .txt-bold{@include Bold;}
 //
 .page-title{
@@ -280,4 +281,34 @@ html, body{
             text-align:left;
         }
     }
+}
+//
+.num-lst{
+	li{
+		@include Align-top-left;
+
+		.bul{
+			@include Align-top-left;
+			width:16px;
+			margin-right:10px;
+		}
+	}
+}
+.one-lst{
+	@include Align-top-left;
+
+	.bul{
+		@include Align-top-left;
+		width:16px;
+		margin-right:10px;
+
+		&.dot{
+			width:5px;
+			margin-right:5px;
+		}
+		&.hypen{
+			width:5px;
+			margin-right:5px;
+		}
+	}
 }
