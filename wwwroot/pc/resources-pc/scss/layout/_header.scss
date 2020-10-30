@@ -89,11 +89,19 @@
 						p{
 							font-size:36px;
 							@include Bold;
-							display:inline-block;
 							position: relative;
 							span{
 								position: relative;
 								z-index: 10;
+							}
+							span:after{
+								display:block;
+								content:"";
+								width:96%;
+								height:2px;
+								background-color:#2f2f2f;
+								@include Position($bottom:7px, $left:2px);
+								z-index: 1;
 							}
 							b{
 								font-size:36px;
@@ -101,18 +109,18 @@
 								@include Normal;
 							}
 						}
-						p:after{
-							display:block;
-							content:"";
-							width:100%;
-							height:11px;
-							background-color:#e5e5e5;
-							@include Position($bottom:3px, $left:0);
-							z-index: 1;
-						}
-						p + p:after{
-							display:none;
-						}
+						// p:after{
+						// 	display:block;
+						// 	content:"";
+						// 	width:96%;
+						// 	height:2px;
+						// 	background-color:#2f2f2f;
+						// 	@include Position($bottom:7px, $left:2px);
+						// 	z-index: 1;
+						// }
+						// p + p:after{
+						// 	display:none;
+						// }
 					}
 					.layer-gnb-link{
 						width:300px;
@@ -166,6 +174,36 @@
 							}
 						}
 					}
+				}
+				&.detail-layer-all-in{
+					.layer-gnb-all{
+						padding:0;
+						> li{
+							width:16.6%;
+							p{
+								margin-top:40px;
+								a{
+									b{
+										font-size:26px;
+									}
+								}
+							}
+							.layer-gnb-list{
+								ul > li{
+									margin-top:16px;
+									p{
+										margin-top:0;
+									}
+								}
+							}
+							& > li:first-child{
+								margin-top:30px;
+							}
+						}
+					}
+				}
+				&.detail-layer-all-in:after{
+					@include Position($top:50px, $right:20%, $left:auto);
 				}
 			}
 			.detail-layer-in:after{

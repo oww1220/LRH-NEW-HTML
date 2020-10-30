@@ -53,6 +53,21 @@ $(function(){
         $('.drawer').scrollTop(0);
     });
 
+    //햄버거 메뉴 토글
+    if($('.drawer .drawer-toggle-btn').length) {
+        MUI.event.toggle('.drawer .drawer-toggle-btn', '.drawer .drawer-toggle-cont', true, function(logic, layer) {
+            logic();
+        });
+    }
+
+    //햄버거 메뉴 상세메뉴 탭전환
+    if($('.drawer .tab-normal').length){
+
+        MUI.event.taps('.drawer .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
     //gotop
     if($('.fixedRight .btn-goTop').length){
         MUI.event.goTop($('.fixedRight .btn-goTop'));
@@ -670,7 +685,7 @@ if($('.detail-layer-short-payment').length){
         logic();
     });
 }
-//단기 실시간예약 등록카드 열고 닫기
+//단기 실시간예약 카드번호직접입력 열고 닫기
 if($('.detail-layer-short-payment').length){
     MUI.event.toggle('.detail-layer-short-payment .short-card-toggle-btn', '.detail-layer-short-payment .short-card-toggle-cont', false, function(logic, layer) {
         //console.log('toggle');
