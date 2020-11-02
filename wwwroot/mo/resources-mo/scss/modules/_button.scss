@@ -45,6 +45,11 @@
 			background-color: #54585a;
 			pointer-events: auto;
 		}
+		&.brown {
+			border: 1px solid #877669;
+			background-color: #877669;
+			pointer-events: auto;
+		}
 		&.blueOverlay {
 			background: rgb(97,137,185);
 			background: linear-gradient(90deg, rgba(97,137,185,1) 0%, rgba(92,65,180,1) 100%);
@@ -68,6 +73,17 @@
 		font-size: 1.4rem;
 		border: 1px solid #F04040;
 		background-color: #F04040;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-brown {
+		width: 100%;
+		color: #fff;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #877669;
+		background-color: #877669;
 		@include Bold;
 		@include Align-middle;
 		border-radius: 0;

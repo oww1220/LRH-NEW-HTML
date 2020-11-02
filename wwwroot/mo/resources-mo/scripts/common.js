@@ -772,6 +772,22 @@ if($('.detail-layer-short-payment').length){
 }
 /* -------------------------------------------------단기 실시간예약 end*/
 
+/* 중고차 내차팔기 start-------------------------------------------------*/
+//중고차 - 내차팔기 열고 닫기
+if($('.secondhand-wrap').length){
+    MUI.event.toggle('.secondhand-wrap .secondhand-toggle-btn', '.secondhand-wrap .secondhand-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+//중고차 - 내차팔기 캘린더 열고 닫기
+if($('.secondhand-wrap').length){
+    MUI.event.toggle('.secondhand-wrap .btn-schedule-toggle', '.secondhand-wrap .schedule-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+/* -------------------------------------------------중고차 내차팔기 end*/
 
     
     //일반 레이어팝업 테스트 ---추후삭제
