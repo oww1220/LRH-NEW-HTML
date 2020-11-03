@@ -33,12 +33,13 @@ html, body {
 }
 
 .page-title {
+	position: relative;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
 	font-size: 40px;
 	text-align: center;
-	padding: 0 0 50px;
+	padding: 0 50px 50px;
 }
 
 .page-title .sub-tit {
@@ -48,6 +49,12 @@ html, body {
 	font-size: 16px;
 	color: #8f9191;
 	margin-top: 15px;
+}
+
+.page-title .btn-share {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .tbl-type01 {
@@ -183,6 +190,14 @@ html, body {
 .one-lst .bul.hypen {
 	width: 5px;
 	margin-right: 5px;
+}
+
+.underline {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #54585a;
 }
 
 /* Slider */
@@ -1951,6 +1966,12 @@ button.swiper-pagination-bullet {
 	margin: 0 5px;
 }
 
+.btn-box button[disabled] {
+	color: #bbb;
+	background-color: #f5f5f5;
+	border: none;
+}
+
 .icon {
 	display: inline-block;
 	vertical-align: middle;
@@ -2533,6 +2554,138 @@ button.swiper-pagination-bullet {
 	        background-size: auto;
 	width: 20px;
 	height: 20px;
+}
+
+.icon.counsel {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-counsel.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 24px;
+	height: 23px;
+}
+
+.icon.note {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-note.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 19px;
+	height: 22px;
+}
+
+.icon.reset2 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-reset2.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 14px;
+	height: 13px;
+}
+
+.icon.arrow-up {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-arrow-up.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 16px;
+	height: 7px;
+}
+
+.icon.chk2 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk2.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 13px;
+	height: 10px;
+}
+
+.icon.chk-on2 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 13px;
+	height: 10px;
+}
+
+.icon.car-spec01 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-car-spec01.png");
+	background-position: center left;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 21px;
+	height: 17px;
+}
+
+.icon.car-spec02 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-car-spec02.png");
+	background-position: left center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 20px;
+	height: 20px;
+}
+
+.icon.car-spec03 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-car-spec03.png");
+	background-position: left center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 18px;
+	height: 21px;
+}
+
+.icon.car-spec04 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-car-spec04.png");
+	background-position: left center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 21px;
+	height: 20px;
+}
+
+.icon.car-spec05 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-car-spec05.png");
+	background-position: left center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 17px;
+	height: 18px;
+}
+
+.icon.talk {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-talk.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 48px;
+	height: 44px;
 }
 
 button.active .filter {
@@ -4514,6 +4667,20 @@ button.active .filter {
 
 .hypen-list li:before {
 	content: "-";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 15px;
+}
+
+.dot-list li {
+	position: relative;
+	padding-left: 15px;
+}
+
+.dot-list li:before {
+	content: "·";
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -7148,6 +7315,42 @@ body.fixed {
 	position: absolute;
 	top: 50%;
 	left: 0;
+}
+
+.iconBox.type-chk label {
+	border: none;
+	height: 20px;
+	padding-left: 22px;
+}
+
+.iconBox.type-chk label:after {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk2.png");
+	background-position: left center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 20px;
+	height: 20px;
+}
+
+.iconBox.type-chk input:checked + label {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	color: #ed1c24;
+}
+
+.iconBox.type-chk input:checked + label:after {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+	background-position: left center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
 }
 
 .iconList {

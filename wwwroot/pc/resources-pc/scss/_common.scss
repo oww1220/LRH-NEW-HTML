@@ -237,16 +237,21 @@ html, body{
 .txt-bold{@include Bold;}
 //
 .page-title{
+	position:relative;
     @include Bold;
     font-size:40px;
     text-align:center;
-	padding:0 0 50px;
+	padding:0 50px 50px;
 	
 	.sub-tit{		
 		@include Regular;
 		font-size:16px;
 		color:#8f9191;
 		margin-top:15px;
+	}
+
+	.btn-share{
+		@include Position($top:0, $right:0);
 	}
 }
 //
@@ -311,4 +316,10 @@ html, body{
 			margin-right:5px;
 		}
 	}
+}
+//
+.underline{
+	@include Bold;
+	padding-bottom:2px;
+	border-bottom:1px solid #54585a;
 }
