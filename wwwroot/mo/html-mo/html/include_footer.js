@@ -69,17 +69,7 @@ $(function(){
             <div class="drawer-in">
 
                 <!--로그인 전 :logout-state,  로그인 후:login-state-->
-                <div class="drawer-top logout-state">
-                    <!-- <div class="drawer-btns">
-                        <div class="left">
-                            <button type="button" class="btn btn-pannel"><i class="icon home">홈</i></button>
-                            <button type="button" class="btn btn-pannel"><i class="icon alarm">알람</i></button>
-                        </div>
-                        <div class="right">
-                            <button type="button" class="btn btn-pannel"><i class="icon setting">세팅</i></button>
-                            <button type="button" class="btn btn-pannel btn-drawer-close" data-target="drawer" data-on="true" data-sort="none"><i class="icon pannelclose">패널 닫기</i></button>
-                        </div>
-                    </div> -->
+                <div class="drawer-top login-state">
                     <!--로그인 전-->
                     <div class="logout-state-box">
                         <p>
@@ -101,23 +91,25 @@ $(function(){
 
                     <!--로그인 후-->
                     <div class="login-state-box">
-                        <div class="login-top">
-                            <strong>홍길동님</strong>
-                            <button type="button" class="btn-link">마이페이지</button>
-                        </div>
+                        <p>
+                            <b>김롯데님</b>
+                            <span>환영합니다!<em>145,000<span>P</span></em></span>
+                        </p>
                         <div class="login-btns">
-                            <ul class="list-type-col2">
+                            <ul class="list-type-col3">
                                 <li>
-                                    <div class="inner">
-                                        <button type="button" class="btn btn-simple mid"><span>견적보관함</span><b>2</b></button>
-                                    </div>
+                                    <a href="#"><em><i class="icon pannel16"></i></em><span>예약내역</span></a>
                                 </li>
                                 <li>
-                                    <div class="inner">
-                                        <button type="button" class="btn btn-simple mid"><span>쿠폰함</span><b>4</b></button>
-                                    </div>
+                                    <a href="#"><em><i class="icon pannel17"></i></em><span>카드관리</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><em><i class="icon pannel18"></i></em><span>쿠폰</span></a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="close-btn">
+                            <button type="button" class="btn btn-pannel btn-drawer-close" data-target="drawer" data-on="true" data-sort="none"><i class="icon pannelclose02">패널 닫기</i></button>
                         </div>
                     </div>
                     <!--로그인 후-->
