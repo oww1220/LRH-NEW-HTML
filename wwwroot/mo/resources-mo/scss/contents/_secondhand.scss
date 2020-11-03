@@ -564,6 +564,25 @@
         }
         .detail-layout {
             position: relative;
+            .detail-layer-summary{
+                background-color:#fff;
+                .guide{
+                    padding: 0 1.7rem 0;
+                    text-indent: 0;
+                    @include Align-left-column;
+                    strong{
+                        @include Bold;
+                        font-size:1.4rem;
+                    }
+                    b{
+                        @include Regular;
+                        font-size:1.1rem;
+                        color:#54585a;
+                        line-height:1.4;
+                        padding:1.4rem 0 0 0;
+                    }
+                }
+            }
             .layer-item {
                 background-color:#fff;
                 padding: 3.4rem 0 0;
@@ -637,7 +656,7 @@
                                 width:100%;
                                 margin-left:0;
                                 li{
-                                    width:47%;
+                                    width:49%;
                                     margin-right:.4rem;
                                     &:last-child{
                                         margin-right:0;
@@ -803,7 +822,7 @@
                 padding-left:1rem;
                 & > li{
                     margin-top:.4rem;
-                    color:#8f9191;
+                    color:#54585a;
                     @include Regular;
                     & > i{
                         margin-right: .6rem;

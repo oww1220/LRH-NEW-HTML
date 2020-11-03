@@ -633,6 +633,14 @@ if($('.specials-list .tab-normal').length){
         });
     }
 
+    //단기예약 - 다른지점반납 열고 닫기
+    if($('.detail-main-accor').length){
+        MUI.event.toggle('.detail-main-accor .shor-branch-toggle-btn', '.detail-main-accor .shor-main-list-branch', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+    }
+
     //단기예약 메인 슬라이드 팝업 - 대여시간
     if($('.layer-firstTime').length) {
         MUI.layer.openClick('.layer-firstTime-open', LAYER_DIM, LAYER_PARENT, false, function(show){

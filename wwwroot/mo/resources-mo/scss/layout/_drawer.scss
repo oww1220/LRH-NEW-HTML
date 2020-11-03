@@ -43,9 +43,6 @@
                 // @include Align-between;
                 // height: 4.1rem;
                 padding: 5.1rem 1.7rem 2.6rem;
-                button {
-                    padding: 0 1.3rem;
-                }
                 p{
                     @include Align-left-column;
                     b{
@@ -80,35 +77,79 @@
                 }
                 .close-btn{
                     @include Position($top:3.4rem, $right:1.7rem);
+                    button {
+                        padding: 0 1.3rem;
+                    }
                 }
             }
             .login-state-box {display: none;}
         }
 
         &.login-state {
-            background: rgb(251,68,87);
-			background: linear-gradient(90deg, rgba(251,68,87,1) 0%, rgba(241,93,55,1) 100%);
+            background-color: #ab8f7a;
             .login-state-box {
-                .login-top {
-                    // background-color: #EFF2F7;
-                    @include Align-between;
-                    height: 4.1rem;
-                    padding: 0 1.7rem;
-                    strong {
+                padding: 5.1rem 1.7rem 3rem;
+                p{
+                    @include Align-left-column;
+                    b{
+                        font-size:2.2rem;
+                        color:#fff;
                         @include Bold;
-                        font-size: 1.8rem;
+                        @include Align-box-left;
+                        margin-bottom:1.4rem;
+                    }
+                    span{
+                        color:#fff;
+                        @include Regular;
+                        @include Align-between;
+                        font-size:1.6rem;
+                        em{
+                            @include Bold;
+                            font-size:1.8rem;
+                            @include Align-box-left;
+                            border-bottom:1px solid #fff;
+                            line-height: 1;
+                            span{
+                                @include Bold;
+                                font-size:1.6rem;
+                            }
+                        }
                     }
                 }
                 .login-btns {
-                    padding: .8rem 1.7rem 1.7rem;
-                    button {
-                        @include Align-between;
-                        width: 100%;
-                        b {
-                            @include Bold;
-                            font-size: 1.4rem;
-                            color:#F04040;
+                    padding: 3.9rem 0 0;
+                    ul > li{
+                        position: relative;
+                        a{
+                            @include Align-middle-column;
+                            em{
+                                height:2.3rem;
+                                @include Align-middle;
+                            }
+                            span{
+                                padding:1.1rem 0 0 0;
+                                @include Regular;
+                                color:#fff;
+                                font-size:1.1rem;
+                            }
                         }
+                    }
+                    ul > li:after{
+                        display:inline-block;
+                        content:"";
+                        border-left:1px solid #fff;
+                        height:100%;
+                        @include Position($top:0, $left:0);
+                        opacity: .3;
+                    }
+                    ul > li:first-child:after{
+                        display:none;
+                    }
+                }
+                .close-btn{
+                    @include Position($top:3.4rem, $right:1.7rem);
+                    button {
+                        padding: 0 1.3rem;
                     }
                 }
             }
@@ -200,7 +241,6 @@
                         margin:.4rem 0 0 0;
                         &.active{
                             button{
-                                border-radius: .9rem;
                                 color:#fff;
                                 background-color: #ff404b;
                                 box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.1);
@@ -208,6 +248,8 @@
                         }
                         button{
                             border-bottom:0;
+                            justify-content: flex-start;
+                            @include Regular;
                         }
                         &.drawer-menu-tit:first-child{
                             margin:0;
