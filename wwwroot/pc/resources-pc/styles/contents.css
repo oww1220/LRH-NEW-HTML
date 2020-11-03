@@ -5690,7 +5690,7 @@ html, body {
 }
 
 .carLife-container .tabwang-swiper-section {
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 
 .carLife-container .tabwang-swiper-section .carLife-tabwang-swiper {
@@ -5843,6 +5843,10 @@ html, body {
 }
 
 .carLife-container .tabwang-tag-section .filter-area {
+	position: -webkit-sticky;
+	/* Safari */
+	position: sticky;
+	top: 0;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -5858,7 +5862,9 @@ html, body {
 	   -moz-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	margin-bottom: 40px;
+	padding: 40px 0;
+	z-index: 10;
+	background-color: #fff;
 }
 
 .carLife-container .tabwang-tag-section .filter-area .item button, .carLife-container .tabwang-tag-section .filter-area .item label {
