@@ -1502,11 +1502,18 @@
                             @include Align-between-top;
                             padding:1.7rem;
                             .main-toggle-tit-txt{
+                                @include Align-middle-left;
                                 span{
                                     color:#fff;
                                     @include Bold;
                                     font-size:1.4rem;
                                     padding-left:.9rem;
+                                }
+                                em{
+                                    @include Regular;
+                                    color:#fff;
+                                    font-size:1rem;
+                                    padding-left:1.4rem;
                                 }
                             }
                         }
@@ -1632,7 +1639,8 @@
                                 }
                                 tbody{
                                     td{
-                                        padding:.9rem .7rem;
+                                        //padding:.9rem .7rem;
+                                        padding:.9rem 0;
                                         text-align: center;
                                         border:0 none;
                                         .btn{
@@ -1641,28 +1649,65 @@
                                             color:#54585a;
                                             @include Regular;
                                             font-size:1rem;
-                                            &-today{
+                                            // &-today{
+                                            //     width:40%;
+                                            //     border-bottom: 1px solid #a02a3d;
+                                            //     padding-bottom:.2rem;
+                                            //     @include Bold;
+                                            //     color:#a02a3d;
+                                            // }
+                                            // &-opt-lt{
+                                            //     width:100%;
+                                            //     background: rgb(254,43,123);
+			                                //     background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                            //     border-radius: 1.7rem 0 0 1.7rem;
+                                            //     @include Bold;
+                                            //     color:#fff;
+                                            // }
+                                            // &-opt-rt{
+                                            //     width:100%;
+                                            //     background: rgb(254,43,123);
+			                                //     background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                            //     border-radius: 0 1.7rem 1.7rem 0;
+                                            //     @include Bold;
+                                            //     color:#fff;
+                                            // }
+                                        }
+                                        &.today{
+                                            .btn{
                                                 width:40%;
                                                 border-bottom: 1px solid #a02a3d;
                                                 padding-bottom:.2rem;
                                                 @include Bold;
                                                 color:#a02a3d;
                                             }
-                                            &-opt-lt{
+                                        }
+                                        &.start{
+                                            .btn{
                                                 width:100%;
                                                 background: rgb(254,43,123);
-			                                    background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                                background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
                                                 border-radius: 1.7rem 0 0 1.7rem;
                                                 @include Bold;
-                                                color:#fff;
+                                                color:#fff;   
                                             }
-                                            &-opt-rt{
+                                        }
+                                        &.during{
+                                            .btn{
                                                 width:100%;
                                                 background: rgb(254,43,123);
-			                                    background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                                @include Bold;
+                                                color:#fff;   
+                                            }
+                                        }
+                                        &.end{
+                                            .btn{
+                                                width:100%;
+                                                background: rgb(254,43,123);
+                                                background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
                                                 border-radius: 0 1.7rem 1.7rem 0;
                                                 @include Bold;
-                                                color:#fff;
+                                                color:#fff;   
                                             }
                                         }
                                     }

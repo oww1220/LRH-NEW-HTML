@@ -650,6 +650,84 @@ if($('.specials-list .tab-normal').length){
         });
         
     }
+
+    //중고차 메인 롤링 01
+    if($('.secondhand-wrap .life-event-lists').length) {
+        var mainTopSlide = MUI.slide.init('.secondhand-wrap .life-event-lists','swiper', {
+            loop: true,
+            //autoHeight: true,
+            autoplay: {
+                delay: 3000,
+            },
+        });
+        
+        $(".swiper-button-pause").on('click', function(){
+            mainTopSlide.autoplay.stop();
+            $(".swiper-button-play").show();
+            $(".swiper-button-pause").hide();
+        });
+        $(".swiper-button-play").on('click',function(){
+            mainTopSlide.autoplay.start();
+            $(".swiper-button-pause").show();
+            $(".swiper-button-play").hide();
+        });
+    }
+
+    //중고차 메인 롤링 02
+    if($('.secondhand-wrap .life-event-lists02').length) {
+        MUI.slide.init('.secondhand-wrap .life-event-lists02','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.life-event-pagination02',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
+    //중고차 메인 롤링 03
+    if($('.secondhand-wrap .life-event-lists03').length) {
+        MUI.slide.init('.secondhand-wrap .life-event-lists03','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.life-event-pagination03',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
+    //중고차 메인 롤링 04
+    if($('.secondhand-wrap .life-event-lists04').length) {
+        MUI.slide.init('.secondhand-wrap .life-event-lists04','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.life-event-pagination04',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
+    //중고차 메인 롤링 05
+    if($('.secondhand-wrap .life-event-lists05').length) {
+        MUI.slide.init('.secondhand-wrap .life-event-lists05','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.life-event-pagination05',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
 /* -------------------------------------------------메인end*/
 
 
@@ -694,6 +772,22 @@ if($('.detail-layer-short-payment').length){
 }
 /* -------------------------------------------------단기 실시간예약 end*/
 
+/* 중고차 내차팔기 start-------------------------------------------------*/
+//중고차 - 내차팔기 열고 닫기
+if($('.secondhand-wrap').length){
+    MUI.event.toggle('.secondhand-wrap .secondhand-toggle-btn', '.secondhand-wrap .secondhand-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+//중고차 - 내차팔기 캘린더 열고 닫기
+if($('.secondhand-wrap').length){
+    MUI.event.toggle('.secondhand-wrap .btn-schedule-toggle', '.secondhand-wrap .schedule-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+/* -------------------------------------------------중고차 내차팔기 end*/
 
     
     //일반 레이어팝업 테스트 ---추후삭제
