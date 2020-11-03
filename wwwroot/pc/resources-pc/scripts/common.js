@@ -735,6 +735,49 @@ if($('.tabwang-swiper-section .carLife-tabwang-swiper').length) {
 
 /* -------------------------------------------------카라이프end*/
 
+
+/* 단기렌터카 start-------------------------------------------------*/
+
+//차량검색
+if($('.short-filter-accor').length){
+    
+    MUI.event.toggle('.btn-short-filter-toggle', '.short-filter-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+if($('.short-filter-accor2').length){
+    
+    MUI.event.toggle('.btn-short-filter-toggle2', '.short-filter-toggle-cont2', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+//단기렌터카 상담하기 탭 메뉴
+if($('.short-container .tab-normal').length){
+    MUI.event.taps('.short-container .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
+//
+if($('.short-agree-accor').length){
+    MUI.event.toggle('.btn-short-agree-toggle', '.short-agree-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+if($('.short-agree-accor').length){
+    MUI.event.toggle('.btn-short-agree-toggle2', '.short-agree-toggle-cont2', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+/* -------------------------------------------------단기렌터카 end*/
+
+
     //푸터 슬라이더
     if($('.footer .detail-view-list').length) {
         MUI.slide.init('.footer .detail-view-list','swiper', {

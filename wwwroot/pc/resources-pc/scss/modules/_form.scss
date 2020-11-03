@@ -191,6 +191,24 @@
 			}
 		}
 	}
+	&.type-chk{
+		label{
+			border:none;
+			height:20px;
+			padding-left:22px;
+			
+			&:after {				
+				@include Position($top: 50%, $left: 0);
+				@include Background($sprite:'ico-chk2', $position:left center);
+				width: 20px;
+				height: 20px;
+			}
+		}
+		input:checked + label{@include Bold; color:#ed1c24;}
+		input:checked + label:after{
+			@include Background($sprite:'ico-chk-on2', $position:left center);
+		}
+	}
 }
 
 .iconList {

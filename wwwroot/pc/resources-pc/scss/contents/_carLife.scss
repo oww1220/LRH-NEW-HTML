@@ -298,7 +298,7 @@
 
     //타방
     .tabwang-swiper-section{
-        margin-bottom:50px;
+        margin-bottom:10px;
         .carLife-tabwang-swiper{
             position:relative; 
             padding-bottom:30px;
@@ -368,8 +368,14 @@
     }
     .tabwang-tag-section{
         .filter-area{
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
             @include Align-middle;
-            margin-bottom:40px;
+            padding: 40px 0;
+            z-index:10;
+            background-color: #fff;
+            
 
             .item{
                 button, label {
