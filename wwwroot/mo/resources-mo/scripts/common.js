@@ -196,6 +196,150 @@ if($('.specials-list .tab-normal').length){
             //console.log('open');
             show();
         });
+
+        //필터 슬라이드 내 슬라이드
+        $('.layer-infos .search-item-step5 #slider-price').slider({
+            range: true,
+            min: 30,							// 최저
+            max: 60,						// 최고
+            orientation: 'horizontal',		// 바타입 수평
+            step: 10,						// 스텝
+            values: [30, 60],				// 디폴트 값
+            start: function(event, ui) {	// start
+            },
+            slide: function(event, ui) {	// mouse movement
+            },
+            stop: function(event, ui) {		// stop
+            },
+            change: function(event, ui) {
+                var min = ui.values[0],
+                    max = ui.values[1];
+
+                    console.log(ui, min, max);
+                // update form fields
+                $('.layer-infos .search-item-step5 #min_slider_price').val(min);
+                $('.layer-infos .search-item-step5 #max_slider_price').val(max);
+
+                $('.layer-infos .search-item-step5 .price-txt span').each(function(idx, item){
+                    var text = $(item).text(),
+                        minTxt = min === 0 ? min + '원' : min + '만원',
+                        maxTxt = max + '만원',
+                        minRegex = RegExp(minTxt),
+                        maxRegex = RegExp(maxTxt);
+                    if(minRegex.test(text) || maxRegex.test(text)) {
+                        $(item).addClass('active');
+                    }
+                    else{
+                        $(item).removeClass('active');
+                    }
+                });
+
+            }
+        });
+
+        $('.layer-infos .search-item-step5 .price-all').on('click', function(e) {
+			$('.layer-infos .search-item-step5 #slider-price').slider('values', [30, 60]);
+        });
+        $('.layer-infos .search-item-step5 .filter-reset-btn').on('click', function(e) {
+            $('.layer-infos .search-item-step5 #slider-price').slider('values', [30, 60]);
+            $('.layer-infos .search-item-step5 input').prop('checked', false);
+        });
+
+        //필터 슬라이드 내 슬라이드
+        $('.layer-infos .search-item-step6 #slider-price').slider({
+            range: true,
+            min: 1000,							// 최저
+            max: 4000,						// 최고
+            orientation: 'horizontal',		// 바타입 수평
+            step: 1000,						// 스텝
+            values: [1000, 4000],				// 디폴트 값
+            start: function(event, ui) {	// start
+            },
+            slide: function(event, ui) {	// mouse movement
+            },
+            stop: function(event, ui) {		// stop
+            },
+            change: function(event, ui) {
+                var min = ui.values[0],
+                    max = ui.values[1];
+
+                    console.log(ui, min, max);
+                // update form fields
+                $('.layer-infos .search-item-step6 #min_slider_price').val(min);
+                $('.layer-infos .search-item-step6 #max_slider_price').val(max);
+
+                $('.layer-infos .search-item-step6 .price-txt span').each(function(idx, item){
+                    var text = $(item).text(),
+                        minTxt = min === 0 ? min + '원' : min + '만원',
+                        maxTxt = max + '만원',
+                        minRegex = RegExp(minTxt),
+                        maxRegex = RegExp(maxTxt);
+                    if(minRegex.test(text) || maxRegex.test(text)) {
+                        $(item).addClass('active');
+                    }
+                    else{
+                        $(item).removeClass('active');
+                    }
+                });
+
+            }
+        });
+        
+        $('.layer-infos .search-item-step6 .price-all').on('click', function(e) {
+			$('.layer-infos .search-item-step6 #slider-price').slider('values', [1000, 4000]);
+        });
+        $('.layer-infos .search-item-step6 .filter-reset-btn').on('click', function(e) {
+            $('.layer-infos .search-item-step6 #slider-price').slider('values', [1000, 4000]);
+            $('.layer-infos .search-item-step6 input').prop('checked', false);
+        });
+
+        //필터 슬라이드 내 슬라이드
+        $('.layer-infos .search-item-step7 #slider-price').slider({
+            range: true,
+            min: 10000,							// 최저
+            max: 200000,						// 최고
+            orientation: 'horizontal',		// 바타입 수평
+            step: 10000,						// 스텝
+            values: [10000, 200000],				// 디폴트 값
+            start: function(event, ui) {	// start
+            },
+            slide: function(event, ui) {	// mouse movement
+            },
+            stop: function(event, ui) {		// stop
+            },
+            change: function(event, ui) {
+                var min = ui.values[0],
+                    max = ui.values[1];
+
+                    console.log(ui, min, max);
+                // update form fields
+                $('.layer-infos .search-item-step7 #min_slider_price').val(min);
+                $('.layer-infos .search-item-step7 #max_slider_price').val(max);
+
+                $('.layer-infos .search-item-step7 .price-txt span').each(function(idx, item){
+                    var text = $(item).text(),
+                        minTxt = min === 0 ? min + '원' : min + '만원',
+                        maxTxt = max + '만원',
+                        minRegex = RegExp(minTxt),
+                        maxRegex = RegExp(maxTxt);
+                    if(minRegex.test(text) || maxRegex.test(text)) {
+                        $(item).addClass('active');
+                    }
+                    else{
+                        $(item).removeClass('active');
+                    }
+                });
+
+            }
+        });
+        
+        $('.layer-infos .search-item-step7 .price-all').on('click', function(e) {
+			$('.layer-infos .search-item-step7 #slider-price').slider('values', [10000, 200000]);
+        });
+        $('.layer-infos .search-item-step7 .filter-reset-btn').on('click', function(e) {
+            $('.layer-infos .search-item-step7 #slider-price').slider('values', [10000, 200000]);
+            $('.layer-infos .search-item-step7 input').prop('checked', false);
+		});
     }
 
     //고객후기 풀팝업
@@ -779,6 +923,24 @@ if($('.detail-layer-short-payment').length){
     });
 }
 /* -------------------------------------------------단기 실시간예약 end*/
+
+/* 중고차 start-------------------------------------------------*/
+if($('.secondhand-wrap').length){
+    $(".list-detail-top .btn-small").on('click', function(){
+        if($(this).parents('.section-list').find('.list-detail-cont').hasClass('list-type-col2')){
+            $(this).parents('.section-list').find('.list-detail-cont').removeClass('list-type-col2');
+        }else{
+            $(this).parents('.section-list').find('.list-detail-cont').addClass('list-type-col2');
+        }
+
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+        }else{
+            $(this).addClass('active');
+        }
+    });
+}
+/* -------------------------------------------------중고차 end*/
 
 /* 중고차 내차팔기 start-------------------------------------------------*/
 //중고차 - 내차팔기 열고 닫기
