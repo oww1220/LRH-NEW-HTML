@@ -237,13 +237,13 @@ if($('.specials-list .tab-normal').length){
             }
         });
 
-        $('.layer-infos .search-item-step5 .price-all').on('click', function(e) {
-			$('.layer-infos .search-item-step5 #slider-price').slider('values', [30, 60]);
-        });
-        $('.layer-infos .search-item-step5 .filter-reset-btn').on('click', function(e) {
-            $('.layer-infos .search-item-step5 #slider-price').slider('values', [30, 60]);
-            $('.layer-infos .search-item-step5 input').prop('checked', false);
-        });
+        // $('.layer-infos .search-item-step5 .price-all').on('click', function(e) {
+		// 	$('.layer-infos .search-item-step5 #slider-price').slider('values', [30, 60]);
+        // });
+        // $('.layer-infos .search-item-step5 .filter-reset-btn').on('click', function(e) {
+        //     $('.layer-infos .search-item-step5 #slider-price').slider('values', [30, 60]);
+        //     $('.layer-infos .search-item-step5 input').prop('checked', false);
+        // });
 
         //필터 슬라이드 내 슬라이드
         $('.layer-infos .search-item-step6 #slider-price').slider({
@@ -285,13 +285,13 @@ if($('.specials-list .tab-normal').length){
             }
         });
         
-        $('.layer-infos .search-item-step6 .price-all').on('click', function(e) {
-			$('.layer-infos .search-item-step6 #slider-price').slider('values', [1000, 4000]);
-        });
-        $('.layer-infos .search-item-step6 .filter-reset-btn').on('click', function(e) {
-            $('.layer-infos .search-item-step6 #slider-price').slider('values', [1000, 4000]);
-            $('.layer-infos .search-item-step6 input').prop('checked', false);
-        });
+        // $('.layer-infos .search-item-step6 .price-all').on('click', function(e) {
+		// 	$('.layer-infos .search-item-step6 #slider-price').slider('values', [1000, 4000]);
+        // });
+        // $('.layer-infos .search-item-step6 .filter-reset-btn').on('click', function(e) {
+        //     $('.layer-infos .search-item-step6 #slider-price').slider('values', [1000, 4000]);
+        //     $('.layer-infos .search-item-step6 input').prop('checked', false);
+        // });
 
         //필터 슬라이드 내 슬라이드
         $('.layer-infos .search-item-step7 #slider-price').slider({
@@ -333,13 +333,13 @@ if($('.specials-list .tab-normal').length){
             }
         });
         
-        $('.layer-infos .search-item-step7 .price-all').on('click', function(e) {
-			$('.layer-infos .search-item-step7 #slider-price').slider('values', [10000, 200000]);
-        });
-        $('.layer-infos .search-item-step7 .filter-reset-btn').on('click', function(e) {
-            $('.layer-infos .search-item-step7 #slider-price').slider('values', [10000, 200000]);
-            $('.layer-infos .search-item-step7 input').prop('checked', false);
-		});
+        // $('.layer-infos .search-item-step7 .price-all').on('click', function(e) {
+		// 	$('.layer-infos .search-item-step7 #slider-price').slider('values', [10000, 200000]);
+        // });
+        // $('.layer-infos .search-item-step7 .filter-reset-btn').on('click', function(e) {
+        //     $('.layer-infos .search-item-step7 #slider-price').slider('values', [10000, 200000]);
+        //     $('.layer-infos .search-item-step7 input').prop('checked', false);
+		// });
     }
 
     //고객후기 풀팝업
@@ -938,6 +938,43 @@ if($('.secondhand-wrap').length){
         }else{
             $(this).addClass('active');
         }
+    });
+}
+
+//중고차 상세 롤링 01
+if($('.secondhand-wrap .detail-sub-slide-list1 .life-event-lists').length) {
+    var subTopSlide = MUI.slide.init('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-top','swiper', {
+        loop: true,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 3000,
+        },
+        thumbs: {
+            swiper: subTopSlideThumbs
+        }
+    });
+
+    var subTopSlideThumbs = MUI.slide.init('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-thumbs','swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+    });
+    
+    $(".swiper-button-pause").on('click', function(){
+        subTopSlide.autoplay.stop();
+        $(".swiper-button-play").show();
+        $(".swiper-button-pause").hide();
+    });
+    $(".swiper-button-play").on('click',function(){
+        subTopSlide.autoplay.start();
+        $(".swiper-button-pause").show();
+        $(".swiper-button-play").hide();
     });
 }
 /* -------------------------------------------------중고차 end*/
