@@ -234,7 +234,12 @@ html, body{
 .txt-brown{color:#ba9a81;}
 .txt-red{color:#ed1c24;}
 .txt-color-red{color:#ed1c24;}
+.txt-color-lightgrey{color:#8f9191}
 .txt-bold{@include Bold;}
+.tit-size-big{@include Bold; font-size:30px;}
+.tit-size-mid{@include Bold; font-size:24px;}
+
+
 //
 .page-title{
 	position:relative;
@@ -288,19 +293,21 @@ html, body{
     }
 }
 //
-.num-lst{
-	li{
+.num-lst, .bul-lst{
+	> li{
 		@include Align-top-left;
+		align-items: baseline;
 
 		.bul{
 			@include Align-top-left;
-			width:16px;
+			width:10px;
 			margin-right:10px;
 		}
 	}
 }
 .one-lst{
 	@include Align-top-left;
+	align-items: baseline;
 
 	.bul{
 		@include Align-top-left;
@@ -322,4 +329,235 @@ html, body{
 	@include Bold;
 	padding-bottom:2px;
 	border-bottom:1px solid #54585a;
+}
+
+
+
+//공통 사항 정리- 201105
+@mixin roundBox {
+	border-radius: 6px;
+}
+@mixin arrow{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8.5px 0 8.5px 8px;
+	border-color: transparent transparent transparent #d2d2d2;
+}
+@mixin arrowInner{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6.5px 0 6.5px 5px;
+	border-color: transparent transparent transparent #ffffff;
+}
+@mixin topSectMg { //상단 로케여션 영역까지 백그라운드 채우기 위한 마진 값
+	margin-top:-130px;
+}
+
+
+#wrap{padding-bottom:120px;}
+
+.tit-size-big{@include Bold; font-size:32px;}
+.tit-size-mid{@include Bold; font-size:24px;}
+
+.txt-color-brown{color:#ba9a81;}
+
+.section{
+	&-headline{ //페이지 타이틀
+		text-align:center;
+		padding-bottom:60px;
+
+		.tit{@include Bold; font-size:40px;}
+		.txt{margin-top:20px;}
+
+		.btn-share{
+			@include Position($top:0, $right:0);
+		}
+	}
+	&-explain{
+		padding-bottom:60px;
+
+		.explain-header{ //제목
+			padding-bottom:30px;
+            margin-bottom:60px;
+            border-bottom:1px solid #e7e7e7;
+		}
+		.explain-cont{ //내용
+			
+		}
+	}
+	&-form{
+		.form-header{
+			@include Align-middle-left;
+			@include roundBox;
+			width:100%;
+			height:80px;
+			padding:0 40px;
+			background-color:#f5f5f5;
+			box-sizing:border-box;
+		}
+		.form-cont{
+			padding:80px 0 120px;
+
+			> .row{
+				padding:0 80px;
+				margin-bottom:20px; 
+			
+				&.type2{
+					@include Align-middle-left;
+
+					.input-tit{width:170px;}
+					.inputT, .selectbox{width:300px; margin-right:5px;}
+					.selectbox{width:210px;}
+					.txt{height:50px; line-height:50px;}
+					.txt-exam{padding:0 5px; color:#8f9191;}
+					.at{margin-right:5px;}
+					.textarea{width:700px;}
+				}
+			}
+		}
+	}
+
+	&-format{
+		@include Align-middle;        
+		padding-bottom:40px;
+		margin-bottom:50px;
+		border-bottom:1px solid #e7e7e7;
+
+		.format-area{			
+            > .row{
+                @include Align-top-left;
+                margin-bottom:40px;
+
+                dt{@include Bold; width:170px;}
+                
+			}
+        }
+	}	
+
+	&.round{
+		@include roundBox;
+	}
+}
+
+.box{
+	&-type2{
+		width: 100%;
+		@include Align-top-left;
+
+		.right{
+			margin-left:auto;
+		}
+	}
+}
+
+.grid-row {
+	@include Align-top-left-column;
+
+	> li{margin-bottom:60px;}
+
+	&.type2{
+		> li{
+			@include Align-middle-left;
+
+			.img-item{
+				width:186px;
+				
+				.circle{
+					width:130px;
+					height:130px;
+					border-radius:130px;
+					border:1px solid #f2f2f2;
+					background-color:#fafafa;
+				}
+			}
+			.descri-box{
+				.tit{@include Bold; font-size:1.125rem; margin-bottom:24px;}
+			}
+		}	
+	}
+}
+
+.grid-col{
+	@include Align-box;
+
+	li{
+		position:relative;
+		margin-bottom:80px;
+	}
+
+	&.col2{
+		li{
+			width:50%;
+		}
+	}
+	&.col3{
+		li{
+			width:33.3333%;
+		}
+	}
+	&.col4{
+		li{
+			width:25%;
+		}
+	}
+	&.col5{
+		li{
+			width:20%;
+		}
+	}	
+	&.col6{
+		li{
+			width:16.6666%;
+		}
+	}
+}
+
+.lst {
+	@include Align-top-column;
+	align-items: baseline;
+
+	li{
+		@include Align-top-left;
+		align-items: baseline;
+	}
+	// .bul{
+		
+	// }
+
+	&.dot{
+		li{
+			&::before{
+				content:"·";
+				width:15px;
+			}
+		}
+	}
+	&.hypen{
+		li{
+			&::before{
+				content:"-";
+				width:15px;
+			}
+		}
+	}
+
+	// &.depth02{
+	// 	.bul{
+
+	// 	}
+	// }
+}
+
+.btn-area{
+	@include Align-middle;
+
+	.btn{
+		width:auto;
+		min-width:160px;
+		height:60px;
+		margin:0 5px;
+		@include roundBox;
+	}
 }

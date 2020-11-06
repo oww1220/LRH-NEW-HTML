@@ -1,9 +1,56 @@
 //중고차 장기 렌터카
 .secondhand-container{
-    padding-bottom:100px;     
 
-    //내 차 팔기 서비스 1단계
-    .step-view{
+    //내 차 팔기 서비스 안내
+    .section-counsel{
+        @include Align-middle-left;
+        height:160px;
+        color:#fff;
+        padding:40px;
+        margin-bottom:80px;
+        box-sizing:border-box;
+        @include Background($sprite:'@temp-secondhand_bn01', $type:'png', $position:center center, $size:cover, $path:'');
+
+        .right{
+            @include Align-middle;
+            width:124px;
+            height:50px;
+            margin-left:auto;
+            @include roundBox;
+        }
+    }
+    
+    .purchase-step{
+        li{
+            text-align:center;
+
+            &:after, &:before{
+                content:"";
+                display:block;
+            }
+            
+            &:before{			
+                @include Position($top:36px, $right:0);
+                @include arrow;
+            }
+            &:after{
+                @include Position($top:38px, $right:3px);
+                @include arrowInner;
+                z-index:5;
+            }
+            &:nth-of-type(4n){
+                &:after, &:before{display:none;}
+            }
+            
+            .img-item{
+                height:150px;
+            }
+            .txt{@include Bold;}
+        }
+    }
+
+    //내 차 팔기 서비스 상담 신청
+    .section-top{
         text-align:center;
         margin-bottom:60px;
 
@@ -40,34 +87,8 @@
         }
     }
 
-    //
-    .group-tit{      
-        @include Align-middle-left;
-        @include Bold;
-        width:100%;
-        padding:0 40px;
-        height:80px;
-        background-color:#f5f5f5;
-        box-sizing:border-box;
-        border-radius: 6px;
-        font-size:22px;
-    }
-    .group-cont{
-        padding:80px 0 100px;
-
-        .row{
-            padding:0 80px;
-            margin-bottom:20px;            
-        }
-        .txt-exam{padding:0 5px; color:#8f9191;}
-        .input-row{
-            @include Align-middle-left;
-
-            .tit{flex:none; width:170px;}
-            .inputT, .selectbox{width:300px; margin-right:5px;}
-            .txt{height:60px; @include Align-middle-left;}
-        }        
-        .input-date-box{
+    .form-cont{
+        .inputT.date{
             position:relative;
             
             input{
@@ -77,31 +98,11 @@
                 @include Position($top: 0, $right: 0);
                 @include Align-middle;
                 width:60px;
-                height:60px;
+                height:50px;
             }
-           
         }
-        .arror-header{
-            @include Align-box;
-
-            .iconBox, .toggle-btn{
-                @include Align-top-left;    
-                height:50px;            
-            }
-            .iconBox{flex-grow: 1;}
-            .btn-toggle{
-                width:66px;      
-            }
-        }  
-        .email-row{
-            .inputT{
-                //width:546px;
-                //width:290px;
-            }
-            em{margin-right:5px;}
-            .selectbox{width:160px;}
-        }      
-    }
+    }   
+    
     .schedule-wrap{
         overflow:hidden;
         border:1px solid #d2d2d2;
@@ -215,129 +216,30 @@
             }
         }
     }
-    .agree-toggle-cont{    
+    .accor-header{margin-bottom:30px;}
+    .terms-area{    
         font-size:14px;
         padding:30px;
         margin:0 40px;
         background-color:#fafafa;
-        border-radius: 6px;
+        @include roundBox;
 
         > p {margin-bottom:35px;}
         > ul{margin-bottom:30px;}
         h4{margin:10px 0;}
         
     }
-
-    //
-    .complete-box{
-        padding:60px 80px;
-        margin-bottom:60px;
+    .gray-noti-section{
         text-align:center;
-        background-color:#f5f5f5;
-
-        .txt-bold{font-size:26px; display:block; margin-bottom:18px;}
-    }
-    .user-info-wrap{
-        padding-bottom:60px;
+        padding:60px;
         margin-bottom:60px;
-        border-bottom:1px solid #e7e7e7;
-        .group-cont{
-            .input-row{
-                .tit, .txt{width:50%}
-                .tit{
-                    @include Align-middle-right;
-                    span{flex:none; width:170px;}
-                }
-            }  
-        }
-    }
-    //안내
-    .guide-banner{
-        overflow:hidden;
-        @include Align-middle-left;
-        padding:40px;
-        margin-bottom:20px;
-        height:160px;
-        box-sizing:border-box;
-        border-radius:6px;
-        color:#fff;
-        @include Background($sprite:'@temp-secondhand_bn01', $type:'png', $position:center center, $size:cover, $path:'');
+        background-color:#f5f5f5;
+        @include roundBox;
 
-        .consulting-btn{
-            @include Align-middle;
-            width:124px;
-            height:50px;
-            margin-left:auto;
-            border-radius:6px;
-        }
-    }
-    .section{
-        padding:60px 0;
         .tit{
-            @include Bold;
-            font-size:32px;
-            padding-bottom:30px;
-            margin-bottom:60px;
-            border-bottom:1px solid #e7e7e7;
+            display:block; 
+            font-size:26px;
+            margin-bottom:20px;
         }
-        .grid-type2{
-            li{
-                @include Align-middle-left;
-                margin-bottom:60px;
-                
-                .icon{
-                    width:130px;
-                    height:130px;
-                    border-radius:130px;
-                    border:1px solid #f1f1f1;
-                    background-color:#fafafa;
-                }
-                .desc{
-                    padding-left:58px;
-                    dt{
-                        @include Bold;
-                        font-size:20px;
-                        margin-bottom:25px;
-                    }
-                }
-            }
-        }
-        .step-list{
-            @include Align-box;
-
-            li{
-                @include Align-top-column;
-                position:relative;
-                width:25%;
-                margin-bottom:80px;
-
-                .icon{
-                    display:block;
-                    width:92px;
-                    height:98px;
-                    background-color:green;
-                }
-                .txt{
-                    @include Bold;
-                    margin-top:50px;
-                }
-
-                
-                &:after{
-                    content:">";
-                    @include Position($top:35px, $right:0);
-                    color:#d2d2d2;
-                }
-                
-                &:nth-of-type(4n){
-                    &:after{display:none;}
-                }
-            
-            }
-        }
-    }
-
-    .btn-box{
-        .btn{min-width:160px;}
-    }
+    }    
 }

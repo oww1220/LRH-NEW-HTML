@@ -18,6 +18,7 @@
 <script src="../../../resources-pc/scripts/jquery/plugins/swiper.min.js"></script>
 <script src="../../../resources-pc/scripts/jquery/plugins/iscroll.min.js"></script>
 <script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
 <script src="../../../resources-pc/scripts/MUI.js"></script>
 <script src="../../../resources-pc/scripts/common.js"></script>
 
@@ -32,17 +33,18 @@
 	<!--container 컴포넌트-->
 	<main id="wrap">
 
-		<!-- 중고차장기렌터카 - 내 차 팔기 서비스 -->
-		<div class="secondhand-container">		
-			<div class="inner-type2">		
-				<!-- 페이지 타이틀 -->			
-				<div class="page-title">					
-					<h2>상담 <span class="txt-brown">신청</span></h2>					
-				</div>	
+		<!-- 중고차장기렌터카 -->
+		<div class="secondhand-container">	
+			<div class="inner-type2">
+
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">상담 <span class="txt-color-brown">신청</span></h2>					
+				</section>
 				<!-- //페이지 타이틀 -->
 
 				<!-- 진행 단계 -->
-				<div class="step-view">
+				<div class="section-top">
 					<ol class="step-list">
 						<li class="active">
 							<span class="icon complete"></span>
@@ -56,697 +58,450 @@
 				</div>
 				<!-- //진행 단계 -->
 
-				<!-- 상담 신청 폼 -->
-				<form action="" method="">
-					<!-- 상담신청자 정보입력(로그아웃 상태) -->
+				 
+				 <form action="" method="">
 					<fieldset>
-						<h3 class="group-tit">상담 신청자 정보입력</h3>
-						<div class="group-cont">
-							<div class="row input-row">
-								<label for="" class="tit">이름 <span class="txt-red">*</span></label>
-								<div class="inputT">						
-									<input type="text" id="" placeholder="이름을 입력하세요">
-								</div>
-							</div>
-							<div class="row input-row">
-								<label for="" class="tit">연락처 <span class="txt-red">*</span></label>
-								<div class="inputT">						
-									<input type="text" id="" placeholder="연락처를 입력하세요">
-								</div>
-							</div>
-							<div class="row input-row">
-								<label for="" class="tit">지역 <span class="txt-red">*</span></label>
-								<div class="select-box">
-									<select class="selectbox" name="" id="">
-										<option value="">지역(시/도) 선택</option>
-										<option value="">선택1</option>
-										<option value="">선택2</option>
-									</select>
-									<select class="selectbox" name="" id="" title="지역에 관한 상세 주소">
-										<option value="">지역(구/시) 선택</option>
-										<option value="">선택1</option>
-										<option value="">선택2</option>
-									</select>
-								</div>
-							</div>
-						</div>	
-					</fieldset>
-					<!-- //상담신청자 정보입력(로그아웃 상태) -->
+						<!-- 상담신청자 정보입력(로그아웃 상태) -->
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">중고차 매입 서비스 강점</h3>
+							</div>					
+							<div class="form-cont">
 
-					<!-- 상담신청자 정보입력(로그인 상태) -->
-					<fieldset>
-						<h3 class="group-tit">예약자 정보입력</h3>
-						<div class="group-cont">
-							<div class="row input-row">
-								<span class="tit">이름</span>
-								<div class="txt">						
-									김롯데
+								<div class="row type2">
+									<label for="" class="input-tit">이름 <span class="txt-color-red">*</span></label>
+									<div class="inputT">						
+										<input type="text" id="" placeholder="이름을 입력하세요">
+									</div>
 								</div>
-							</div>
-							<div class="row input-row">
-								<span class="tit">연락처</span>
-								<div class="txt">						
-									010-1234-5678
+								<div class="row type2">
+									<label for="" class="input-tit">연락처 <span class="txt-red">*</span></label>
+									<div class="inputT">						
+										<input type="text" id="" placeholder="연락처를 입력하세요">
+									</div>
 								</div>
-							</div>
-							<div class="row input-row email-row">
-								<label for="" class="tit">이메일 <span class="txt-red">*</span></label>
-								<div class="inputT">						
-									<input type="text" id="" placeholder="이메일 정보 입력하세요">
+								<div class="row type2">
+									<label for="" class="input-tit">지역 <span class="txt-red">*</span></label>
+									<div class="select-area">
+										<select class="selectbox" name="" id="">
+											<option value="">지역(시/도) 선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+										<select class="selectbox" name="" id="" title="지역에 관한 상세 주소">
+											<option value="">지역(구/시) 선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</div>
 								</div>
-								<em>@</em>
-								<div class="inputT">						
-									<input type="text" id="chrgemail_ls" value="" title="이메일 종류 선택" >
-								</div>
-								<div class="select-box">
-									<select class="selectbox" name="" id="email_list" onchange="$('#chrgemail_ls').val($('#email_list').val());">
-										<option value="">직접입력</option>
-										<option value="lotte.net">lotte.net</option>
-										<option value="naver.com">naver.com</option>
-									</select>								
-								</div>
-							</div>
-						</div>	
-					</fieldset>
-					<!-- //상담신청자 정보입력(로그인 상태) -->
 
-					<fieldset>
-						<h3 class="group-tit">차량 정보</h3>
-						<div class="group-cont">
-							<div class="row input-row">
-								<label for="" class="tit">차량정보 <span class="txt-red">*</span></label>
-								<div class="inputT">						
-									<input type="text" id="" placeholder="차량번호를 입력해주세요.">									
-								</div>
-								<p class="txt-exam">예시) 01가1234</p>
 							</div>
-						</div>
-					</fieldset>
-					<fieldset>
-						<h3 class="group-tit">차량 정보</h3>
-						<div class="group-cont schedule-accor">
-							<div class="row input-row">
-								<label for="" class="tit">상담 희망 일시 <span class="txt-red">*</span></label>
-								<div class="inputT input-date-box">						
-									<input type="text" id="" placeholder="상담 희망 일시를 선택하세요">									
-									<button type="button" class="btn-schedule-toggle" data-target="schedule-toggle-cont" data-on="true" data-siblings="true"><span class="icon date"></span></button>
+						</section>
+						<!-- //상담신청자 정보입력(로그아웃 상태) -->
+
+						<!-- 상담신청자 정보입력(로그인 상태) -->
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">예약자 정보입력</h3>
+							</div>					
+							<div class="form-cont">
+
+								<div class="row type2">
+									<span class="input-tit">이름</span>
+									<div class="txt">						
+										김롯데
+									</div>
+								</div>
+								<div class="row type2">
+									<span class="input-tit">연락처</span>
+									<div class="txt">						
+										010-1234-5678
+									</div>
+								</div>
+								<div class="row type2">
+									<label for="" class="input-tit">이메일 <span class="txt-red">*</span></label>
+									<div class="inputT">						
+										<input type="text" id="" placeholder="이메일 정보 입력하세요">
+									</div>
+									<em class="at">@</em>
+									<div class="inputT">						
+										<input type="text" id="chrgemail_ls" value="" title="이메일 종류 선택" >
+									</div>
+									<div class="select-box">
+										<select class="selectbox" name="" id="email_list" onchange="$('#chrgemail_ls').val($('#email_list').val());">
+											<option value="">직접입력</option>
+											<option value="lotte.net">lotte.net</option>
+											<option value="naver.com">naver.com</option>
+										</select>								
+									</div>
 								</div>
 							</div>
-							<div class="schedule-wrap schedule-toggle-cont" style="display:none;">
-								<div class="calendar-wrap">
-									<!-- 
-										달력 
+						</section>
+						<!-- //상담신청자 정보입력(로그인 상태) -->
+
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">차량 정보</h3>
+							</div>					
+							<div class="form-cont">
+								<div class="row type2">
+									<label for="" class="input-tit">차량정보 <span class="txt-color-red">*</span></label>
+									<div class="inputT">						
+										<input type="text" id="" placeholder="차량번호를 입력해주세요.">
+									</div>
+									<p class="txt-exam">예시) 01가1234</p>
+								</div>
+							</div>
+						</section>
+
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">차량 정보</h3>
+							</div>					
+							<div class="form-cont schedule-accor">
+								<div class="row type2">
+									<label for="" class="input-tit">상담 희망 일시 <span class="txt-color-red">*</span></label>
+									<div class="inputT date">						
+										<input type="text" id="" placeholder="상담 희망 일시를 선택하세요">									
+										<button type="button" class="btn-schedule-toggle" data-target="schedule-toggle-cont" data-on="true" data-siblings="true"><span class="icon date"></span></button>
+									</div>
+								</div>
+								<div class="schedule-wrap schedule-toggle-cont" style="display:none;">
+									<div class="calendar-wrap">
+										<!-- 
+											달력 
+											
+											*참고 :  상태에 따른 스타일 적용은 td에 클래스 부여										  
+			
+											클래스 disabled
+											=> 선택이되어서는 안되는 날짜
+			
+											클래스 start
+											=> 선택된 시작날짜
+			
+											클래스 end
+											=> 선택된 종료날짜
+			
+											클래스 during
+											=> 시작날짜와 종료날짜 사이의 날짜들
+			
+											클래스 on
+											=> 선택된 날짜
+			
+											클래스 today
+											=> 오늘 날짜
+										-->
+										<ul class="calendar">
+											<li class="col">									
+												<div class="calendar-tit">2020.09</div>
+												<div class="tbl-box">
+													<table>
+														<caption></caption>
+														<colgroup>
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th>일</th>
+																<th>월</th>
+																<th>화</th>
+																<th>수</th>
+																<th>목</th>
+																<th>금</th>
+																<th>토</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>															
+																<td></td>
+																<td></td>
+																<td class="disabled">1</td>
+																<td class="disabled">2</td>
+																<td class="disabled">3</td>
+																<td class="disabled">4</td>
+																<td class="disabled">5</td>
+															</tr>
+															<tr>
+																<td class="disabled">6</td>
+																<td class="disabled">7</td>
+																<td class="disabled">8</td>
+																<td class="disabled">9</td>
+																<td class="disabled">10</td>
+																<td class="disabled">11</td>
+																<td class="disabled">12</td>
+															</tr>
+															<tr>															
+																<td class="disabled">13</td>
+																<td class="disabled">14</td>
+																<td class="disabled">15</td>
+																<td class="disabled">16</td>
+																<td class="disabled">17</td>
+																<td class="today"><button type="button" class="btn">18</button></td>
+																<td><button type="button" class="btn">19</button></td>
+															</tr>
+															<tr>
+																
+																<td><button type="button" class="btn">20</button></td>
+																<td class="on"><button type="button" class="btn">21</button></td>
+																<td><button type="button" class="btn">22</button></td>
+																<td><button type="button" class="btn">23</button></td>
+																<td><button type="button" class="btn">24</button></td>
+																<td><button type="button" class="btn">25</button></td>
+																<td><button type="button" class="btn">26</button></td>
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">27</button></td>
+																<td><button type="button" class="btn">28</button></td>
+																<td><button type="button" class="btn">29</button></td>
+																<td><button type="button" class="btn">30</button></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														</tbody>
+													</table>		
+												</div>							
+											</li>
+											<li class="col">								
+												<div class="calendar-tit">2020.10</div>
+												<div class="tbl-box">
+													<table>
+														<caption></caption>
+														<colgroup>
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th>일</th>
+																<th>월</th>
+																<th>화</th>
+																<th>수</th>
+																<th>목</th>
+																<th>금</th>
+																<th>토</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td><button type="button" class="btn">1</button></td>
+																<td><button type="button" class="btn">2</button></td>
+																<td><button type="button" class="btn">3</button></td>
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">4</button></td>
+																<td><button type="button" class="btn">5</button></td>
+																<td><button type="button" class="btn">6</button></td>
+																<td><button type="button" class="btn">7</button></td>
+																<td><button type="button" class="btn">8</button></td>
+																<td><button type="button" class="btn">9</button></td>
+																<td><button type="button" class="btn">10</button></td>
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">11</button></td>
+																<td><button type="button" class="btn">12</button></td>
+																<td><button type="button" class="btn">13</button></td>
+																<td><button type="button" class="btn">14</button></td>
+																<td><button type="button" class="btn">15</button></td>
+																<td><button type="button" class="btn">16</button></td>
+																<td><button type="button" class="btn">17</button></td>
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">18</button></td>
+																<td><button type="button" class="btn">19</button></td>
+																<td><button type="button" class="btn">20</button></td>
+																<td><button type="button" class="btn">21</button></td>
+																<td><button type="button" class="btn">22</button></td>
+																<td><button type="button" class="btn">23</button></td>
+																<td><button type="button" class="btn">24</button></td>
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">25</button></td>
+																<td><button type="button" class="btn">26</button></td>
+																<td><button type="button" class="btn">27</button></td>
+																<td><button type="button" class="btn">28</button></td>
+																<td><button type="button" class="btn">29</button></td>
+																<td><button type="button" class="btn">30</button></td>
+																<td><button type="button" class="btn">31</button></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</li>
+											<li class="col">									
+												<div class="calendar-tit">2020.11</div>
+												<div class="tbl-box">
+													<table>
+														<caption></caption>
+														<colgroup>
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+															<col style="width:14.2%;">
+														</colgroup>
+														<thead>
+															<tr>
+																<th>일</th>
+																<th>월</th>
+																<th>화</th>
+																<th>수</th>
+																<th>목</th>
+																<th>금</th>
+																<th>토</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><button type="button" class="btn">1</button></td>
+																<td><button type="button" class="btn">2</button></td>
+																<td><button type="button" class="btn">3</button></td>
+																<td><button type="button" class="btn">4</button></td>
+																<td><button type="button" class="btn">5</button></td>
+																<td><button type="button" class="btn">6</button></td>
+																<td><button type="button" class="btn">7</button></td>													
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">8</button></td>
+																<td><button type="button" class="btn">9</button></td>
+																<td><button type="button" class="btn">10</button></td>
+																<td><button type="button" class="btn">11</button></td>
+																<td><button type="button" class="btn">12</button></td>
+																<td><button type="button" class="btn">13</button></td>
+																<td><button type="button" class="btn">14</button></td>													
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">15</button></td>
+																<td><button type="button" class="btn">16</button></td>
+																<td><button type="button" class="btn">17</button></td>
+																<td><button type="button" class="btn">18</button></td>
+																<td><button type="button" class="btn">19</button></td>
+																<td><button type="button" class="btn">20</button></td>
+																<td><button type="button" class="btn">21</button></td>													
+															</tr>
+															<tr>
+																<td><button type="button" class="btn">22</button></td>
+																<td><button type="button" class="btn">23</button></td>
+																<td><button type="button" class="btn">24</button></td>
+																<td><button type="button" class="btn">25</button></td>
+																<td><button type="button" class="btn">26</button></td>
+																<td><button type="button" class="btn">27</button></td>
+																<td><button type="button" class="btn">28</button></td>
+															</tr>
+															<tr>
+																
+																<td><button type="button" class="btn">29</button></td>
+																<td><button type="button" class="btn">30</button></td>
+																<td><button type="button" class="btn">31</button></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</li>
+										</ul>
+										<!-- //달력 -->
+			
+										<!-- 페이지네이션 -->
+										<div class="pagination-wrap">
+											<button type="button" class="btn btn-paging-prev">이전 달</button>
+											<button type="button" class="btn btn-paging-next">다음 달</button>
+										</div>
+										<!-- //페이지네이션 -->
+									</div>
+									<div class="schedule-bot">
+										<div class="date-info">
+											<span class="tit">상담희망일</span>
+											<span class="date">2020/09/21</span>
+										</div>
+										<button type="button" class="btn">확인</button>
+									</div>								
+								</div>
+							</div>
+						</section>
+
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">약관동의</h3>
+							</div>					
+							<div class="form-cont">
+								<div class="row agreeAccor">									
+									<div class="accor-header box-type2">
+										<div class="iconBox simple">
+											<input type="checkbox" id="test">	
+											<label for="test">											
+												개인정보 수집 및 이용 동의(필수)
+											</label>										
+										</div>
+										<button type="button" class="btn-toggle agreeBtn right" data-target="agreeToggleCont" data-on="true" data-siblings="true"></button>
+									</div>
+									<div class="terms-area agreeToggleCont" style="display:none;">
+										<p>본인은 롯데렌터카가 아래의 내용과 같이 본인의 개인정보를 수집 ·이용하는데 동의합니다.</p>								
 										
-										*참고 :  상태에 따른 스타일 적용은 td에 클래스 부여										  
+										<h4>개인정보의 수집 및 이용 목적</h4>
+										<ul class="lst hypen">
+											<li>
+												롯데렌터카는 다음과 같은 목적을 위하여 고객님의 개인정보를 수집하고 있습니다.
+											</li>
+											<li>
+												롯데렌터카 기사포함대여 대여신청 서비스 제공을 위함
+											</li>
+											<li>
+												롯데렌터카는 관계법령에 의한 경우나 이용자인 정보주체의 사전동의를 얻은 경우를 제외하고는 수집한 개인정보를 상기 목적 이외의 용도로 활용하지 않겠습니다.
+											</li>
+										</ul>	
 
-										클래스 disabled
-										=> 선택이되어서는 안되는 날짜
-
-										클래스 start
-										=> 선택된 시작날짜
-
-										클래스 end
-										=> 선택된 종료날짜
-
-										클래스 during
-										=> 시작날짜와 종료날짜 사이의 날짜들
-
-										클래스 on
-										=> 선택된 날짜
-
-										클래스 today
-										=> 오늘 날짜
-									-->
-									<ul class="calendar">
-										<li class="col">									
-											<div class="calendar-tit">2020.09</div>
-											<div class="tbl-box">
-												<table>
-													<caption></caption>
-													<colgroup>
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-													</colgroup>
-													<thead>
-														<tr>
-															<th>일</th>
-															<th>월</th>
-															<th>화</th>
-															<th>수</th>
-															<th>목</th>
-															<th>금</th>
-															<th>토</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>															
-															<td></td>
-															<td></td>
-															<td class="disabled">1</td>
-															<td class="disabled">2</td>
-															<td class="disabled">3</td>
-															<td class="disabled">4</td>
-															<td class="disabled">5</td>
-														</tr>
-														<tr>
-															<td class="disabled">6</td>
-															<td class="disabled">7</td>
-															<td class="disabled">8</td>
-															<td class="disabled">9</td>
-															<td class="disabled">10</td>
-															<td class="disabled">11</td>
-															<td class="disabled">12</td>
-														</tr>
-														<tr>															
-															<td class="disabled">13</td>
-															<td class="disabled">14</td>
-															<td class="disabled">15</td>
-															<td class="disabled">16</td>
-															<td class="disabled">17</td>
-															<td class="today"><button type="button" class="btn">18</button></td>
-															<td><button type="button" class="btn">19</button></td>
-														</tr>
-														<tr>
-															
-															<td><button type="button" class="btn">20</button></td>
-															<td class="on"><button type="button" class="btn">21</button></td>
-															<td><button type="button" class="btn">22</button></td>
-															<td><button type="button" class="btn">23</button></td>
-															<td><button type="button" class="btn">24</button></td>
-															<td><button type="button" class="btn">25</button></td>
-															<td><button type="button" class="btn">26</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">27</button></td>
-															<td><button type="button" class="btn">28</button></td>
-															<td><button type="button" class="btn">29</button></td>
-															<td><button type="button" class="btn">30</button></td>
-															<td></td>
-															<td></td>
-															<td></td>
-														</tr>
-													</tbody>
-												</table>		
-											</div>							
-										</li>
-										<li class="col">								
-											<div class="calendar-tit">2020.10</div>
-											<div class="tbl-box">
-												<table>
-													<caption></caption>
-													<colgroup>
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-													</colgroup>
-													<thead>
-														<tr>
-															<th>일</th>
-															<th>월</th>
-															<th>화</th>
-															<th>수</th>
-															<th>목</th>
-															<th>금</th>
-															<th>토</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td></td>
-															<td></td>
-															<td></td>
-															<td></td>
-															<td><button type="button" class="btn">1</button></td>
-															<td><button type="button" class="btn">2</button></td>
-															<td><button type="button" class="btn">3</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">4</button></td>
-															<td><button type="button" class="btn">5</button></td>
-															<td><button type="button" class="btn">6</button></td>
-															<td><button type="button" class="btn">7</button></td>
-															<td><button type="button" class="btn">8</button></td>
-															<td><button type="button" class="btn">9</button></td>
-															<td><button type="button" class="btn">10</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">11</button></td>
-															<td><button type="button" class="btn">12</button></td>
-															<td><button type="button" class="btn">13</button></td>
-															<td><button type="button" class="btn">14</button></td>
-															<td><button type="button" class="btn">15</button></td>
-															<td><button type="button" class="btn">16</button></td>
-															<td><button type="button" class="btn">17</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">18</button></td>
-															<td><button type="button" class="btn">19</button></td>
-															<td><button type="button" class="btn">20</button></td>
-															<td><button type="button" class="btn">21</button></td>
-															<td><button type="button" class="btn">22</button></td>
-															<td><button type="button" class="btn">23</button></td>
-															<td><button type="button" class="btn">24</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">25</button></td>
-															<td><button type="button" class="btn">26</button></td>
-															<td><button type="button" class="btn">27</button></td>
-															<td><button type="button" class="btn">28</button></td>
-															<td><button type="button" class="btn">29</button></td>
-															<td><button type="button" class="btn">30</button></td>
-															<td><button type="button" class="btn">31</button></td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</li>
-										<li class="col">									
-											<div class="calendar-tit">2020.11</div>
-											<div class="tbl-box">
-												<table>
-													<caption></caption>
-													<colgroup>
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-													</colgroup>
-													<thead>
-														<tr>
-															<th>일</th>
-															<th>월</th>
-															<th>화</th>
-															<th>수</th>
-															<th>목</th>
-															<th>금</th>
-															<th>토</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td><button type="button" class="btn">1</button></td>
-															<td><button type="button" class="btn">2</button></td>
-															<td><button type="button" class="btn">3</button></td>
-															<td><button type="button" class="btn">4</button></td>
-															<td><button type="button" class="btn">5</button></td>
-															<td><button type="button" class="btn">6</button></td>
-															<td><button type="button" class="btn">7</button></td>													
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">8</button></td>
-															<td><button type="button" class="btn">9</button></td>
-															<td><button type="button" class="btn">10</button></td>
-															<td><button type="button" class="btn">11</button></td>
-															<td><button type="button" class="btn">12</button></td>
-															<td><button type="button" class="btn">13</button></td>
-															<td><button type="button" class="btn">14</button></td>													
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">15</button></td>
-															<td><button type="button" class="btn">16</button></td>
-															<td><button type="button" class="btn">17</button></td>
-															<td><button type="button" class="btn">18</button></td>
-															<td><button type="button" class="btn">19</button></td>
-															<td><button type="button" class="btn">20</button></td>
-															<td><button type="button" class="btn">21</button></td>													
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">22</button></td>
-															<td><button type="button" class="btn">23</button></td>
-															<td><button type="button" class="btn">24</button></td>
-															<td><button type="button" class="btn">25</button></td>
-															<td><button type="button" class="btn">26</button></td>
-															<td><button type="button" class="btn">27</button></td>
-															<td><button type="button" class="btn">28</button></td>
-														</tr>
-														<tr>
-															
-															<td><button type="button" class="btn">29</button></td>
-															<td><button type="button" class="btn">30</button></td>
-															<td><button type="button" class="btn">31</button></td>
-															<td></td>
-															<td></td>
-															<td></td>
-															<td></td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</li>
-									</ul>
-									<!-- //달력 -->
-
-									<!-- 페이지네이션 -->
-									<div class="pagination-wrap">
-										<button type="button" class="btn btn-paging-prev">이전 달</button>
-										<button type="button" class="btn btn-paging-next">다음 달</button>
+										<h4>수집하는 개인정보 항목</h4>
+										<ul class="lst hypen">
+											<li>
+												성명, 담당자명 : 본인 확인 및 기사포함 대여신청 서비스 이용을 위함
+											</li>
+											<li>
+												휴대전화, 이메일 : 고객 견적신청 사항에 대한 회신을 위함
+											</li>
+										</ul>
 									</div>
-									<!-- //페이지네이션 -->
-								</div>
-								<div class="schedule-bot">
-									<div class="date-info">
-										<span class="tit">상담희망일</span>
-										<span class="date">2020/09/21</span>
-									</div>
-									<button type="button" class="btn">확인</button>
-								</div>								
-							</div>
-						</div>
-					</fieldset>
-					<fieldset>
-						<h3 class="group-tit">약관동의</h3>
-						<div class="group-cont">
-							<div class="row chk-agree-accor">
-								<div class="arror-header">
-									<div class="iconBox simple">
-										<input type="checkbox" id="test">	
-										<label for="test">											
-											개인정보 수집 및 이용 동의(필수)
-										</label>										
-									</div>
-									<button type="button" class="btn-toggle btn-agree-toggle" data-target="agree-toggle-cont" data-on="true" data-siblings="true"><span class="icon">약관 상세내역 열림/닫힘</span></button>
-								</div>
-								<div class="toggle-cont agree-toggle-cont" style="display:none;">
-									<p>본인은 롯데렌터카가 아래의 내용과 같이 본인의 개인정보를 수집 ·이용하는데 동의합니다.</p>								
-									
-									<h4>개인정보의 수집 및 이용 목적</h4>
-									<ul class="hypen-list">
-										<li>
-											롯데렌터카는 다음과 같은 목적을 위하여 고객님의 개인정보를 수집하고 있습니다.
-										</li>
-										<li>
-											롯데렌터카 기사포함대여 대여신청 서비스 제공을 위함
-										</li>
-										<li>
-											롯데렌터카는 관계법령에 의한 경우나 이용자인 정보주체의 사전동의를 얻은 경우를 제외하고는 수집한 개인정보를 상기 목적 이외의 용도로 활용하지 않겠습니다.
-										</li>
-									</ul>	
-
-									<h4>수집하는 개인정보 항목</h4>
-									<ul class="hypen-list">
-										<li>
-											성명, 담당자명 : 본인 확인 및 기사포함 대여신청 서비스 이용을 위함
-										</li>
-										<li>
-											휴대전화, 이메일 : 고객 견적신청 사항에 대한 회신을 위함
-										</li>
-									</ul>
 								</div>
 							</div>
+						</section>
+
+
+						<div class="btn-area">
+							<a href="" class="btn btn-white">취소</a>
+							<button type="submit" class="btn btn-red">다음</button>
 						</div>
 					</fieldset>
-					<div class="btn-box">
-						<!-- 
-						<input type="reset" value="취소"  class="btn btn-white">
-						<input type="submit" value="다음" class="btn btn-red"> 
-						-->
-						<a href="" class="btn btn-white">취소</a>
-						<button type="submit" class="btn btn-red">다음</button>
-					</div>
 				</form>
-				<!-- //상담 신청 폼 -->
-				
-			</div>		
+
+			</div>
 		</div>
-		<!-- //중고차장기렌터카 - 내 차 팔기 서비스 -->
-
-
 
 	</main>
 	<!--//container 컴포넌트-->
 
 	<!--footer 컴포넌트-->
 	<footer class="footer">
-		
-		<div class="footer-link">
-			<div class="inner">
-				<ul>
-					<li>
-						<a href="#n" onclick="members.goWithNoAuth('https://direct.lotterentacar.net/main/main.do?utm_source=lotterentacar&utm_medium=footer&utm_campaign=FamilySite&utm_content=신차장다이렉트', 'Y');ga('send', 'event', '풋터', 'goToDirect', '신차장다이렉트');">신차장다이렉트</a>
-					</li>
-					<li>
-						<a href="#n" onclick="members.goWithNoAuth('https://manager.lotterentacar.net/main.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '신차장_멤버십랜딩');">신차장멤버십</a>
-					</li>
-					<li>
-						<a href="#n" onclick="members.goWithNoAuth('https://www.lotteautoauction.net/hp/pub/cmm/viewMain.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '오토옥션랜딩');">롯데오토옥션</a>				
-					</li>
-					<li>
-						<a href="https://www.lotte-autolease.net" onclick="ga('send', 'event', '풋터', '패밀리사이트', '오토리스랜딩');" target="_blank">롯데오토리스</a>
-					</li>
-					<li>
-						<a href="http://www.greencar.co.kr" onclick="ga('send', 'event', '풋터', '패밀리사이트', '그린카랜딩');" target="_blank">그린카</a>
-					</li>
-					<li>
-						<a href="https://lotterental.com/" onclick="ga('send', 'event', '풋터', '패밀리사이트', '일반랜탈랜딩');" target="_blank">일반렌탈</a>
-					</li>
-				</ul>
-				<div class="family">
-					<button type="button" class="btn btn-family family-btn" data-target="family-cont-01" data-on="true" data-siblings="true">FAMILY SITE</button>
-					<div class="family-toggle-cont family-cont-01">
-						<div class="detail-layer-in">
-							<ul class="detail-layer-list-wrap">
-								<li>
-									<p><a href="#">식품부문</a></p>
-									<div class="detail-layer-list">
-										<ul>
-											<li><a href="#">롯데제과</a></li>
-											<li><a href="#">롯데유통사업본부</a></li>
-											<li><a href="#">롯데칠성음료</a></li>
-											<li><a href="#">롯데칠성음료 주류부문</a></li>
-											<li><a href="#">롯데아시히주류</a></li>
-											<li><a href="#">롯데푸드</a></li>
-											<li><a href="#">롯데리아</a></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<p><a href="#">관광부문</a></p>
-									<div class="detail-layer-list">
-										<ul>
-											<li><a href="#">롯데호텔</a></li>
-											<li><a href="#">부산롯데호텔</a></li>
-											<li><a href="#">롯데면세점</a></li>
-											<li><a href="#">롯데월드</a></li>
-											<li><a href="#">롯데물산</a></li>
-											<li><a href="#">롯데리조트</a></li>
-											<li><a href="#">롯데제이티비</a></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<p><a href="#">금융부문</a></p>
-									<div class="detail-layer-list">
-										<ul>
-											<li><a href="#">롯데카드</a></li>
-											<li><a href="#">롯데손해보험</a></li>
-											<li><a href="#">롯데캐피탈</a></li>
-											<li><a href="#">롯데자이언츠</a></li>
-											<li><a href="#">롯데멤버스</a></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<p><a href="#">석유화학/건설/제조 부문</a></p>
-									<div class="detail-layer-list">
-										<ul>
-											<li><a href="#">롯데케미칼</a></li>
-											<li><a href="#">케이피켐텍</a></li>
-											<li><a href="#">롯데엠알시</a></li>
-											<li><a href="#">롯데건설</a></li>
-											<li><a href="#">롯데건설 CM사업본부</a></li>
-											<li><a href="#">캐논 코리아비즈니스솔루션(주)</a></li>
-											<li><a href="#">한국후지필름</a></li>
-											<li><a href="#">롯데알미늄</a></li>
-											<li><a href="#">롯데기공</a></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<p><a href="#">유통부문</a></p>
-									<div class="detail-layer-list">
-										<ul>
-											<li><a href="#">롯데백화점</a></li>
-											<li><a href="#">롯데마트</a></li>
-											<li><a href="#">롯데슈퍼</a></li>
-											<li><a href="#">롯데시네마</a></li>
-											<li><a href="#">롯데홈쇼핑</a></li>
-											<li><a href="#">코리아세븐</a></li>
-											<li><a href="#">FRL코리아</a></li>
-											<li><a href="#">롯데상사</a></li>
-											<li><a href="#">롯데닷컴</a></li>
-											<li><a href="#">롯데하이마트</a></li>
-											<li><a href="#">롭스</a></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<p><a href="#"></a>서비스/연구/지원 부문</p>
-									<div class="detail-layer-list">
-										<ul>
-											<li><a href="#">롯데정보통신</a></li>
-											<li><a href="#">현대정보기술</a></li>
-											<li><a href="#">롯데스카이힐C.C</a></li>
-											<li><a href="#">대홍기획</a></li>
-											<li><a href="#">롯데자산개발</a></li>
-											<li><a href="#">롯데로지스틱스</a></li>
-											<li><a href="#">롯데피에스넷</a></li>
-											<li><a href="#">마이비</a></li>
-											<li><a href="#">이비카드</a></li>
-											<li><a href="#">롯데중앙연구소</a></li>
-											<li><a href="#">롯데인재개발원</a></li>
-											<li><a href="#">롯데장학재단</a></li>
-											<li><a href="#">롯데복지재단</a></li>
-											<li><a href="#">롯데삼동복지재단</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div class="inner">
-			<div class="footer-logo">
-				<img src="../../../resources-pc/images/common/logo-footer.png" alt="LOTTE rental"/>
-			</div>
-			<div class="footer-bottom-menu">
-				<div class="footer-infos-wrap">
-					<div class="sitemap">
-						<ul>
-							<li><a href="/kor/content/183/main.do?mnCd=FN0801" target="_blank">회사소개</a></li>
-							<li><a href="/kor/footer/footerPolicyNew.do?mnCd=FN0901" class="txt_point">개인정보처리방침</a></li>
-							<li><a href="/kor/content/190/main.do?mnCd=FN0902" class="txt_point">영상정보처리기기 운영관리방침</a></li>
-							<li><a href="/kor/footer/footerTermsNew.do?mnCd=FN0903">이용약관</a></li>
-							<li><a href="#refuse_email" class="refuse_email btn_layer">이메일주소무단수집거부</a></li>
-							<li><a href="/kor/content/192/main.do?mnCd=FN0908">찾아오시는길</a></li>
-						</ul>
-					</div>
-		
-					<div class="site-infos">
-		
-						<div class="information">
-							<ul class="entrepreneur-info">
-								<li>롯데렌탈㈜ 대표이사 김현수</li>
-								<li>
-									<ul class="address">
-										<li>경기도 안양시 동안구 전파로 88 신원비젼타워 8층 / 서울본사: 서울시 강남구 테헤란로 422 KT타워 6~9층</li>
-										<li>사업자등록번호 : <a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2148779183" target="_blank" onclick="window.open(this.href, '', 'toolbar=no,scrollbars=yes,resizable=no,top=50,left=500,width=750,height=700'); return false;" class="btn_entrepreneur_info">214-87-79183</a> / 통신판매업신고번호 : 제2010-경기안양-420호</li>
-										<li>해외 82-2-797-8000 / 보험대차 1588-4920 / 일반상품렌탈 1577-5100+1</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						
-					</div>
-					<div class="footer-infos-bn">
-						<div class="footer-infos-list">
-							<div class="detail-view-list-wrap">
-								
-								<div class="swiper-container detail-view-list">
-									<p class="detail-view-list-tit">롯데렌터카 수상 내역</p>
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded01.png" alt="한국서비스대상 명예의 전당 2015년 명예의 전당 헌정">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded02.png" alt="2019 국가고객만족도  렌터카부문1위 (5년 연속)">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded03.png" alt="2020 한국산업의 브랜드 파워 1위 (18년 연속)">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded04.png" alt="대한민국 브랜드 스타 (14년 연속)">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded05.png" alt="2019 국가브랜드 경쟁력  지수 1위 (8년 연속)">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded06.png" alt="2019 한국서비스 품질지수 1위 (8년 연속) ">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded07.png" alt="한국산업의 고객만족도 (4년 연속)">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded08.png" alt="2020 대한민국 퍼스트  브랜드 (16년 연속)">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded09.png" alt="2019 프리미엄 브랜드 지수 1위 (11년 연속) ">
-										</div>
-										<div class="swiper-slide">
-											<img src="../../../resources-pc/images/icons/ico-awarded10.png" alt="2019 한국품질만족지수 1위 2013년~2015년, 2019년 수상">
-										</div>
-									</div>
-									<div class="swiper-pagination-wrap">
-										<div class="swiper-button-next"></div>
-										<div class="swiper-button-prev"></div>
-										<!-- <div class="swiper-button-play">play</div>
-    									<div class="swiper-button-pause">stop</div> -->
-									</div>
-								</div>
-							</div>
-							
-						</div>
-						<div class="footer-infos-sns">
-							<ul>
-								<li>
-									<a href="#" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></a>
-								</li>
-								<li>
-									<a href="#" class="btn btn-foot-sns"><i class="icon snsF">페이스북</i></a>
-								</li>
-								<li>
-									<a href="#" class="btn btn-foot-sns"><i class="icon snsI">인스타그램</i></a>
-								</li>
-								<li>
-									<a href="#" class="btn btn-foot-sns"><i class="icon snsY">유튜브</i></a>
-								</li>
-								<li>
-									<a href="#" class="btn btn-foot-sns"><i class="icon snsK">카카오톡</i></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="footer-center-wrap">
-					<div class="footer-center-top">
-						<p>고객센터</p>
-						<b>
-							<a href="tel:1588-1230">1588-1230</a>
-						</b>
-					</div>
-					<div class="footer-center-info">
-						평일 08:30 ~ 20:00<br>
-						단, 사고처리 문의는 24시간 가능
-					</div>
-					<div class="footer-center-btn">
-						<button type="button" class="btn btn-simple">1:1 고객센터</button>
-					</div>
-				</div>
-				<div class="footer-app-wrap">
-					<p>앱 다운로드</p>
-					<ul>
-						<li><a href="#" target="_blank"><i class="icon app01">Google Play</i></a></li>
-						<li><a href="#" target="_blank"><i class="icon app02">App Store</i></a></li>
-					</ul>
-				</div>
-			</div>
-
-
-		</div>
 	</footer>
 	<!--//footer 컴포넌트-->
 

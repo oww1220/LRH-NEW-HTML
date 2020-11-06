@@ -1,0 +1,138 @@
+.longTerm-container{
+    padding-bottom:100px;     
+
+    .longTerm-benefit-section{
+        .tab-cont-inner, .tab-cont-inner2{
+            padding:30px 0;            
+        }
+        .tab-cont-inner{
+            .tit-size-big{
+                padding:30px 0;
+            }
+            .dot-list{margin-bottom:60px;}
+            > .img-box{
+                text-align:center;
+                padding-bottom:60px;
+                margin-bottom: 60px;
+                border-bottom:1px solid #e7e7e7;
+            }
+
+
+            .benefit-list{
+                @include Inline-align-top-left-flex-wrap;
+                padding:60px 0;
+
+                > li{
+                    padding-right:70px;
+
+                    .img-box{
+                        margin-bottom:60px;                        
+                    }
+                    .txt{margin-bottom:30px;}
+                    .link-box, .link-box2{
+                        a{                            
+                            @include Bold;                          
+                            margin-bottom:10px;
+                        }
+                    }
+                    .link-box{
+                        a{
+                            @include Align-middle-left;
+                            font-size:24px;
+
+                            .icon{margin-left:10px;}
+                        }
+                    }
+                    .link-box2{
+                        a{
+                            @include Align-middle;
+                            width:200px;
+                            height:60px;
+                            font-size:18px;
+                            border-radius:30px;
+                            border:1px solid #2d2d2d;
+
+                            .icon{margin-right:10px;}
+                        }
+                    }
+                }
+            }
+        }
+
+        .benefitTab2{
+            .tab-menu-list{
+                @include Align-between-top;
+                margin-bottom:80px;
+
+                li{
+                    button{
+                        display:block;
+                        height:auto;
+                        font-size:18px;
+                        border:none;
+                        color:#2f2f2f;
+
+                        img{display:block; margin-bottom:30px;}
+                    }
+
+                    &.active{
+                        @include Bold;
+                        span{border-bottom:1px solid #2f2f2f;}     
+                    }
+                }
+            }
+
+            .dot-list, .num-lst, .hypen-list, .bul-lst{
+                > li{
+                    margin:25px 0;
+
+                    p{margin-top:25px;}
+                }
+            }
+            .one-lst{margin:25px 0;}
+            .num-lst{
+                > li{@include Bold;}
+                .dot-list, .one-lst{@include Regular;}                
+            }
+            .img-box{margin-bottom:40px; text-align:center;}
+            .tit-size-mid{margin-bottom:40px; text-align:center;}
+
+            .benefitTab2-cont01{
+                .descri-box{
+                    @include Align-box;
+                    
+                    > li{
+                        width:50%;
+                        margin-bottom:35px;
+
+                        .tit-size-mid{margin-bottom:30px; text-align:left;}                        
+                    }
+                }
+            }
+            .benefitTab2-cont02, .benefitTab2-cont03, .benefitTab2-cont06{                                
+                .center-box{
+                    width:640px;
+                    margin:0 auto;
+                }
+            }
+            .benefitTab2-cont04, .benefitTab2-cont05{
+                .descri-box{
+                    @include Align-box;
+                    padding:0 20px;
+                    
+                    .col{
+                        width:50%;
+                        padding:0 20px;
+                        box-sizing: border-box;
+
+
+                    }
+
+                }
+            }
+            .benefitTab2-cont06{
+
+            }
+        }
+    }
+}

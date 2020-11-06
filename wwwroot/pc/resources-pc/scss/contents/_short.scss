@@ -1,68 +1,32 @@
-//카라이프
+//월간 렌트카
+
 .short-container{
-    padding-bottom:100px;     
 
-    .grid-col2{
+    //렌터카 목록
+    .section-counsel{
         @include Align-box;
-
-        > .col, > li{    
-            @include Align-top-left-column;
-            width:50%;
-            box-sizing: border-box;
-        }
-    }
-    .grid-col3{
-        @include Align-box;
-
-        > li{
-            //@include Align-top-left-column;
-            width: 33.3333%;
-            flex-basis: 33.33%;
-            margin-bottom:40px;
-
-           
-            &:nth-of-type(3n+2){
-                > a, > .item{margin:auto;}
-            }
-            &:nth-of-type(3n){
-                > a, > .item{
-                    margin-left:auto;
-                    margin-right:0;                    
-                }
-            }
-        }       
-    }
-    .grid-col4{
-        @include Align-box;
-
-        > .col, > li{    
-            @include Align-top-left-column;
-            width:25%;
-        }
-    }
-    
-
-    .counsel-section{
         border:1px solid #e7e7e7;
-        border-radius:6px;
         margin-bottom:55px;
+        @include roundBox; 
         
         .col{
+            width:50%;
             padding:40px;
+            box-sizing: border-box;
         }
-        
+
         .btn-link{   
             position:relative; 
-            @include Align-middle;
+            @include Inline-align-middle;
             @include Bold;
-            font-size:16px;
-            height:auto;
+            font-size:1rem;
+            height:auto;           
             padding:0;
-            margin-left:31px;
+            margin-left:30px;
             margin-bottom:15px;
 
             .icon{
-                @include Position($left:-31px);
+                @include Position($left:-30px);
             }
         }
     }
@@ -72,7 +36,10 @@
         //flex-wrap: nowrap;
 
         .selection-area, .result-area{
-            
+            .top-header{
+                @include Align-middle-left;       
+                height:70px;
+            }
         }
         .selection-area{            
             flex:none;
@@ -81,10 +48,7 @@
             padding-right:40px;
             box-sizing: border-box;
 
-            .box-header{
-                @include Align-middle;       
-                height:70px;
-                
+            .top-header{             
                 .tit{@include Bold; font-size:22px;}
                 .btn{
                     @include Align-middle; 
@@ -95,7 +59,7 @@
                     .icon{margin-left:10px;}
                 }
             }
-            .box-selection{
+            .selection-cont{
                 padding:20px;                
                 border:1px solid #e7e7e7;
                 border-radius: 6px;
@@ -190,19 +154,17 @@
         }
         .result-area{
             width:100%;
-            .box-header{
-                @include Align-box;
-                height:70px;
+            .top-header{               
                 margin-bottom:20px;
                 border-bottom:1px solid #e7e7e7;
 
-                .total-area{
+                .total-box{
                     @include Align-middle;
                     strong{@include Bold; font-size:16px;}
                 }
                 .selelct-box{@include Align-middle; margin-left:auto;}
             }
-            .box-content{
+            .result-cont{
                 .item{
                     display:block;
                     width:100%;
@@ -216,7 +178,7 @@
                             margin-bottom:10px;
                         }
                         strong{@include Bold; font-size:1.08rem; color:#2f2f2f;}
-                        .multi-col{
+                        .bar-type{
                             > span{ 
                                 position:relative; 
     
@@ -263,27 +225,27 @@
         }
     }
 
-    //
-    .detail-section{     
-        margin-top:-130px;           
+    //차량 상세 : 201116 디자인 변경으로 수정될 예정
+    .car-detail-section{     
+        @include topSectMg;        
         background: rgb(245,245,245);
         background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
 
-        .detail-inner{
+        .car-detail-inner{
             padding-top:130px;
             background: rgb(245,245,245);
             background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 42%, rgba(255,255,255,1) 42%, rgba(255,255,255,1) 100%);
             
-            .info-list{margin-top:160px;}
+            .info-box{margin-top:160px;}
         }
     }
-
-    .detail-inner{
+    .car-detail-inner{
         @include Align-box;
+
         .col{
             width:680px;
             padding-top:80px;
-            .info-list{padding-right:120px; color:#54585a; font-size:14px;}
+            .info-box{padding-right:120px; color:#54585a; font-size:14px;}
         }
         .col2{
             width:520px;
@@ -340,9 +302,8 @@
         
     }
 
-
-    //
-    .step-view{
+    //상담 신청
+    .section-top{
         text-align:center;
         margin-bottom:60px;
 
@@ -378,191 +339,156 @@
             }
         }
     }
-
-    .group-tit{      
-        @include Align-middle-left;
-        @include Bold;
-        width:100%;
-        padding:0 40px;
-        height:80px;
-        background-color:#f5f5f5;
-        box-sizing:border-box;
-        border-radius: 6px;
-        font-size:22px;
-    }
-    .group-cont{
-        padding:80px 0 100px;
-
-        > .row{
-            padding:0 80px;
-            margin-bottom:20px;            
-        }
-        .txt-exam{padding:0 5px; color:#8f9191;}
-        .input-row{
-            @include Align-middle-left;
-
-            .tit{flex:none; width:170px;}
-            .inputT, .selectbox{width:300px; margin-right:5px;}
-            .txt{height:60px; @include Align-middle-left;}
-        }        
-        .input-date-box{
-            position:relative;
-            
-            input{
-                padding-right:60px;
-            }
-            .btn-schedule-toggle{
-                @include Position($top: 0, $right: 0);
-                @include Align-middle;
-                width:60px;
-                height:60px;
-            }
-           
-        }
-        .arror-header{
+    .car-detail-area{
+        .row-type2{
             @include Align-box;
 
-            .iconBox, .toggle-btn{
-                @include Align-top-left;    
-                //height:50px;            
+            > .col{
+                width:680px;
+                padding:40px;
+                box-sizing:border-box;
             }
-            .iconBox{flex-grow: 1;}
-            .btn-toggle{
-                width:66px;      
+            > .col2{
+                width:520px;
+                padding-right:20px;
+                box-sizing:border-box;
             }
-        }  
-        .email-row{
-            .inputT{
-                //width:546px;
-                //width:290px;
+
+            &.v2{border-top:1px solid #e7e7e7;}
+        }
+        
+        .img-box{
+            @include Align-middle
+        }
+        
+        .descri-box{
+
+            .top-tit{
+                @include Bold;
+                font-size:32px;
+                margin-bottom:50px;
             }
-            em{margin-right:5px;}
-            .selectbox{width:160px;}
-        }   
-        .terms-box{    
+
+            .spec-box{
+                min-height:230px;
+                padding-bottom:30px;
+
+                .row{
+                    @include Align-middle-left;
+                    margin-bottom:30px;
+                }
+                dt{ 
+                    @include Align-middle;
+                    justify-content: flex-start;
+                    @include Bold;
+                    width:210px;
+                    box-sizing: border-box;
+
+                    .icon{
+                        width:32px;                            
+                    }
+                }
+            }
+            
+        }
+
+        .price-box{
+            padding:40px 0;
+
+            > .row{
+                @include Align-box;
+                @include Bold;
+                font-size:20px;
+                margin-bottom:20px;
+                align-items: baseline;
+
+                .price{
+                    color:#da291c;
+                    margin-left:auto;
+                    font-size:26px;
+                }
+
+                &:last-child{margin-bottom:0;}
+            }
+        }
+
+        .info-box{
+            font-size:14px;
+        }
+    }
+    .delivery-cont{
+        > .row{width:700px; margin:0 auto;}
+        .delivery-box{
+            padding-top:50px;
+            margin-bottom:30px;
+            .right{width:80px; margin-left:5px;}
+        }
+        .info-box{
+            font-size:14px;
+        }
+    }
+    .delivery-license-cont{
+        @include Background($sprite:'img-short-driver-license', $type:'png', $position:740px 38px, $path:'');
+    }
+    .agree-area{
+        .agree-header{
+            margin-bottom:30px;
+            label{color:#8f9191;}
+        }
+        .terms-area{    
             font-size:14px;
             padding:30px;
-            margin:30px 40px 0;
+            margin:35px 40px 0;
             background-color:#fafafa;
-            border-radius: 6px;
-    
+            @include roundBox;
+
             > p {margin-bottom:35px;}
             > ul{margin-bottom:30px;}
             h4{margin:10px 0;}
             
         }
-        .detail-inner{
-            .img-box{
-                height:262px;
-                border-bottom:1px solid #e7e7e7;
-                margin-bottom:40px;
-
-                img{
-                    transform: scale(.8);
-                }
-            }
-            .spec-box{margin-bottom:30px;}
-            .price-box{
-                padding:0;
-            }
-        }
-
-        .textarea{
-            width:750px; 
-
-            textarea, .selectbox{height:120px;}
-        }
-    }
-    
-    .deliver-section{
-        .row{
-            width:700px;
-            margin:0 auto;
-        }
-
-        .tab-nav{margin-bottom:50px;}
-        .location-box{
-            @include Inline-align-top;
-            width:100%;
-            color:#54585a;
-            margin-bottom:30px;
-            
-            .inputT{
-                margin-right:5px;
-            }
-            .btn{
-                width:80px;
-                height:60px;
-                margin-left:auto;
-            }
-        }
-    }
-    .driver-license-section{
-        input{width:400px;}
-        .group-cont{
-            @include Background($sprite:'img-driver-license', $type:'png', $position:740px 38px, $path:'');
-        }
-    }
-    .terms-section{
-        .group-cont{color:#8f9191;}
-        .info-list{
-            padding:20px 0 30px;
+        .info-box{
+            font-size:14px;
+            margin-top:20px;
         }
         .agree-list{
             border-top:1px solid #e7e7e7;
 
             > li{
-                padding:30px 0;
+                padding:30px 30px 30px 0;
+                margin:5px 0;
                 border-bottom:1px solid #e7e7e7;
             }
         }
-
-        input:checked + label{color:#2f2f2f;}
     }
-    .btn-box{
-        .btn{min-width:160px;}
-    }
-
-    //
-    .complete-box{
-        padding:60px 80px;
-        margin-bottom:60px;
+    .gray-noti-section{
         text-align:center;
+        padding:60px;
+        margin-bottom:60px;
         background-color:#f5f5f5;
+        @include roundBox;
 
-        .txt-bold{font-size:26px; display:block; margin-bottom:18px;}
+        .tit{
+            display:block; 
+            font-size:26px;
+            margin-bottom:20px;
+        }
     }
-    .counsel-format-section{
-        @include Align-middle-left;        
-        padding-bottom:40px;
-        margin-bottom:50px;
-        border-bottom:1px solid #e7e7e7;
-
-        .info-box{
-            padding-left:80px;
-
-            .row{
-                @include Align-top-left;
-                width:600px;
-                margin-bottom:40px;
-
-                dt{@include Bold; width:170px;}
-                dd{width:100%;}
-
-                .btn{display:inline-block; width:auto; margin-left:10px;}
+    .section-format{
+        .format-area{
+            .btn{
+                display: inline-block;
+                width: auto;
+                margin-left: 10px;
             }
         }
         .img-box{
-            margin-left:auto;
-        }
-
-        &.v2{
-            justify-content: center;
-
-            .row{width:auto;}
+            width:520px;
+            margin-left:50px;
+            box-sizing: border-box;
         }
     }
-    .talk-box{
+    .talk-section{
         @include Bold;
         @include Align-middle;
         color:#54585a;
@@ -571,4 +497,5 @@
 
         .icon{margin-right:20px;}
     }
+
 }

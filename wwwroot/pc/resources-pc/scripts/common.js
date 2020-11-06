@@ -704,8 +704,8 @@ if($('.schedule-accor').length){
 }
 
 //약관 동의
-if($('.chk-agree-accor').length){
-    MUI.event.toggle('.btn-agree-toggle', '.agree-toggle-cont', false, function(logic, layer) {
+if($('.agreeAccor').length){
+    MUI.event.toggle('.agreeBtn', '.agreeToggleCont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
     });
@@ -777,6 +777,34 @@ if($('.short-agree-accor').length){
 
 /* -------------------------------------------------단기렌터카 end*/
 
+/* 신차장장기렌터카 start-------------------------------------------------*/
+
+//신차장 멤버십 탭 메뉴
+if($('.longTerm-benefit-section .benefitTab').length){
+    MUI.event.taps('.longTerm-benefit-section .benefitTab', false, function(swap){
+        swap();
+    });
+}
+if($('.longTerm-benefit-section .benefitTab2').length){
+    MUI.event.taps('.longTerm-benefit-section .benefitTab2', false, function(swap){
+        swap();
+    });
+}
+//대여 및 요금안내
+if($('.fare-section .fareTab').length){
+    MUI.event.taps('.fare-section .fareTab', false, function(swap){
+        swap();
+    });
+}
+if($('.fare-section .inlandFareTab').length){
+    MUI.event.taps('.fare-section .inlandFareTab', false, function(swap){
+        swap();
+    });
+}
+
+
+
+/* -------------------------------------------------신차장장기렌터카 end*/
 
     //푸터 슬라이더
     if($('.footer .detail-view-list').length) {
