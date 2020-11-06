@@ -1469,6 +1469,45 @@
                             }
                         }
                     }
+                    .detail-map-tit-wrap{
+                        @include Position($top: 4.7rem, $left: 0);
+                        transform: translateX(15%);
+                        p{
+                            @include Align-left-column;
+                            @include Regular;
+                            font-size:2.7rem;
+                            margin:0 0 4.7rem 0;
+                            b{
+                                font-size:2.7rem;
+                                @include Bold;
+                            }
+                        }
+                        ul{
+                            li{
+                                padding:1.1rem 0 0 0;
+                                a{
+                                    @include Align-middle-left;
+                                    font-size:2.1rem;
+                                    @include Bold;
+                                    color:#fff;
+                                    em{
+                                        @include Align-middle;
+                                        width:2.2rem;
+                                        margin:0 .5rem 0 0;
+                                        i{
+                                            
+                                        }
+                                    }
+                                    .next6{
+                                        margin:0 0 0 .9rem;
+                                    }
+                                }
+                            }
+                            li:first-child{
+                                padding:0;
+                            }
+                        }
+                    }
                     .btn-map-opt{
                         @include Position($bottom: 14.1rem, $left: 50%);
                         transform: translateX(-50%);
@@ -1482,6 +1521,7 @@
                         width:100%;
                         .btn{
                             margin:0 1.7rem;
+                            font-size:1.6rem;
                         }
                     }
                 }
@@ -1509,11 +1549,26 @@
                                     font-size:1.4rem;
                                     padding-left:.9rem;
                                 }
-                                em{
+                                .main-toggle-tit-opt{
                                     @include Regular;
                                     color:#fff;
                                     font-size:1rem;
-                                    padding-left:1.4rem;
+                                    a:nth-child(1){
+                                        padding:0 .4rem 0 1.4rem;
+                                    }
+                                    a:nth-child(2){
+                                        padding:0 0 0 .4rem;
+                                    }
+                                    a.active{
+                                        em{
+                                            @include Bold;
+                                        }
+                                    }
+                                    em{
+                                        @include Regular;
+                                        color:#fff;
+                                        font-size:1rem;
+                                    }
                                 }
                             }
                         }
@@ -1527,6 +1582,7 @@
                     }
                     .shor-main-toggle-cont {
                         display: none;
+                        position: relative;
                         .shor-main-toggle-txt {
                             line-height: 1.4;
                             font-size:1.1rem;
@@ -1553,6 +1609,8 @@
                                 }
                             }
                             .inputC{
+                                position: relative;
+                                z-index: 11;
                                 label {
                                     line-height: 1;
                                     &:before{
@@ -1576,6 +1634,51 @@
                                 }
                             }
                         }
+                        .shor-main-list-branch{
+                            display:none;
+                            @include Position($top: 0, $left: 0);
+                            width:100%;
+                            height:100%;
+                            z-index: 10;
+                            background-color: #fff;
+                            .shor-main-list-rt{
+                                .iconList{
+                                    border:0 none;
+                                    border-radius: 0;
+                                    padding: 0 0 0 1.3rem;
+                                    li{
+                                        width:auto;
+                                        margin:0 .9rem 0 .9rem;
+                                        position: relative;
+                                        label {
+                                            border:0 none;
+                                            background-color:#fff;
+                                            font-size:1.2rem;
+                                            @include Regular;
+                                            color:#8f9191;
+                                            height:auto;
+                                            margin:0.9rem 0 .9rem 0;
+                                        }
+                                        input:checked + label {
+                                            border-bottom:2px solid #ed1c24;
+                                            @include Bold;
+                                            color:#ed1c24;
+                                        }
+                                    }
+                                    li:first-child{
+                                        margin:0 .9rem 0 0;
+                                    }
+                                    li:first-child:after{
+                                        display:inline-block;
+                                        content:"";
+                                        border-right:1px solid #e7e7e7;
+                                        height:40%;
+                                        @include Position($top: 50%, $right: -20%);
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
                         .shor-main-list-wrap{
                             @include Align-box;
                             // padding:1.7rem;
@@ -1583,9 +1686,13 @@
                                 overflow-y: auto;
                                 height:27.3rem;
                                 // width:40%;
+                                width:36.1%;
                                 background-color: #fafafa;
                                 padding:1.7rem 1.3rem 1.7rem 1.7rem;
                                 @include Align-box;
+                                ul{
+                                    width:100%;
+                                }
                             }
                             .shor-main-list-rt{
                                 overflow-y: auto;
@@ -1594,6 +1701,9 @@
                                 border-left:1px solid #e7e7e7;
                                 padding:1.7rem 1.7rem 1.7rem 1.3rem;
                                 @include Align-box;
+                                ul{
+                                    width:100%;
+                                }
                             }
                             .btn-link{
                                 border:0 none;

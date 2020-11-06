@@ -37,10 +37,10 @@
         justify-content: center;
         background-color: #fff;
         padding:0 1.7rem;
-        margin:0 1.7rem;
-        overflow: hidden;
-        border-radius: .9rem;
-        height: 10.4rem;
+        // margin:0 1.7rem;
+        // overflow: hidden;
+        // border-radius: .9rem;
+        // height: 10.4rem;
         p {
             color:#54585a;
             @include Regular;
@@ -54,7 +54,7 @@
             padding:0;
             @include Align-between;
             height:2rem;
-            margin-top:1.6rem;
+            // margin-top:1.6rem;
             b{
                 font-size:1.4rem;
                 @include Bold;
@@ -152,6 +152,132 @@
                 & > i{
                     position: relative;
                     z-index: 2;
+                }
+            }
+        }
+    }
+
+    .section-filter {
+        .result {
+            padding:0 0 2.2rem 0;
+            .filter-col {
+                position: relative;
+                .chk-list {
+                    margin-top: .4rem;
+                    li {
+                        input {
+                            display: none;
+                        }
+                        label {
+                            position: relative;
+                            border:0 none;
+                            height:2.6rem;
+                            @include Align-middle;
+                            box-sizing: border-box;
+                            font-size: 1.1rem;
+                            border-radius: 2rem;
+                            padding: 0 1.2rem;
+                            transition: all .4s;
+                            @include Regular;
+                            color: #8f9191;
+                            background-color: #f5f5f5;
+                        }
+                        input:checked + label {
+                            background: rgb(129,112,221);
+                            background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
+                            color:#fff;
+                            @include Bold;
+                        }
+                    }
+                }
+            }
+            
+        }
+        &.section-filter-list{
+            padding:0 1.7rem;
+            .result {
+                .filter-col {
+                    .chk-list {
+                        li {
+                            label {
+                                height:8.6rem;
+                                border-radius: .4rem;
+                                color:#54585a;
+                                @include Align-middle-column;
+                                background-color: #fff;
+                                font-size:1rem;
+                                @include Regular;
+                                span{
+                                    margin:1.7rem 0 0 0;
+                                }
+                            }
+                            input:checked + label {
+                                background-color:rgb(255,249,249);
+                                background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+                                color:#ff404b;
+                                border:1px solid #ff404b;
+                                .brand01{
+                                    @include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+                                }
+                                .brand02{
+                                    @include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+                                }
+                                .brand03{
+                                    @include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+                                }
+                                .brand04{
+                                    @include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+                                }
+                                .brand05{
+                                    @include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+                                }
+                                .brand06{
+                                    @include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .detail-iconBox{
+                margin-left: -.6rem;
+                label {
+                    border:0 none;
+                    border-radius: 0;
+                    @include Regular;
+                    &:after {
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        margin-top: -.85rem;
+                        left:.5rem;
+                    }
+                }
+                input:checked + label {
+                    @include Regular;
+                }
+                input[type='checkbox'] + label:after{
+                    @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                }
+                input[type='checkbox']:checked + label:after{
+                    @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                }
+            }
+            .detail-layer-submit{
+                .detail-layer-list-btn{
+                    @include Align-between;
+                    & > li{
+                        width:48%;
+                        margin-left:1rem;
+                    }
+                    & > li:first-child{
+                        margin-left:0;
+                    }
+                    .btn-default{
+                        background-color: #8f9191;;
+                    }
+                    .btn{
+                        border-radius: 1rem;
+                    }
                 }
             }
         }
@@ -459,43 +585,6 @@
                     }
                 }
             }
-            .section-filter {
-                .result {
-                    padding:0 0 2.2rem 0;
-                    .filter-col {
-                        position: relative;
-                        .chk-list {
-                            margin-top: .4rem;
-                            li {
-                                input {
-                                    display: none;
-                                }
-                                label {
-                                    position: relative;
-                                    border:0 none;
-                                    height:2.6rem;
-                                    @include Align-middle;
-                                    box-sizing: border-box;
-                                    font-size: 1.1rem;
-                                    border-radius: 2rem;
-                                    padding: 0 1.2rem;
-                                    transition: all .4s;
-                                    @include Regular;
-                                    color: #8f9191;
-                                    background-color: #f5f5f5;
-                                }
-                                input:checked + label {
-                                    background: rgb(129,112,221);
-                                    background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
-                                    color:#fff;
-                                    @include Bold;
-                                }
-                            }
-                        }
-                    }
-                    
-                }
-            }
         }
         .detail-view-img{
             @include Align-between;
@@ -564,6 +653,25 @@
         }
         .detail-layout {
             position: relative;
+            .detail-layer-summary{
+                background-color:#fff;
+                .guide{
+                    padding: 0 1.7rem 0;
+                    text-indent: 0;
+                    @include Align-left-column;
+                    strong{
+                        @include Bold;
+                        font-size:1.4rem;
+                    }
+                    b{
+                        @include Regular;
+                        font-size:1.1rem;
+                        color:#54585a;
+                        line-height:1.4;
+                        padding:1.4rem 0 0 0;
+                    }
+                }
+            }
             .layer-item {
                 background-color:#fff;
                 padding: 3.4rem 0 0;
@@ -611,6 +719,12 @@
                         }
                     }
                 }
+                &.item-info3{
+                    padding:0;
+                    h3{
+                        padding:2.3rem 0;
+                    }
+                }
                 &.item-step1 {
                     h3 {
                         @include Align-between;
@@ -637,7 +751,7 @@
                                 width:100%;
                                 margin-left:0;
                                 li{
-                                    width:47%;
+                                    width:49%;
                                     margin-right:.4rem;
                                     &:last-child{
                                         margin-right:0;
@@ -803,7 +917,7 @@
                 padding-left:1rem;
                 & > li{
                     margin-top:.4rem;
-                    color:#8f9191;
+                    color:#54585a;
                     @include Regular;
                     & > i{
                         margin-right: .6rem;
@@ -916,6 +1030,170 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    .section-list {
+        padding: 1.7rem 1.7rem 3.4rem;
+        background-color: #fff;
+        .list-detail-top{
+            @include Align-between;
+            height:4.1rem;
+            border-bottom: 1px solid #EBEBEB;
+            > strong {
+                font-size: 1.1rem;
+                @include Bold;
+                b {
+                    color:#F04040;
+                    font-size: 1.1rem;
+                }
+            }
+            .select-normal{
+                @include Background($sprite:'ico-arrow-down2', $size:.9rem, $position: center right);
+                padding-right:1.7rem;
+            }
+            .btn-small{
+                border:0 none;
+                border-radius: 0;
+                padding:0 0 0 1.7rem;
+                i{
+                    margin:0;
+                }
+                &.active{
+                    background-color:transparent;
+                    i{
+                        @include Background($sprite:'ico-list02', $size:100% auto, $position:center center);
+                    }
+                }
+            }
+        }
+        ul {
+            @include Align-box;
+            &.list-type-col2{
+                li{
+                    width:50%;
+                    .text {
+                        strong {
+                            margin-top: 1rem;
+                            display: block;
+                            color: #2f2f2f;
+                            @include Bold;
+                        }
+                        em{
+                            display: block;
+                        }
+                        .price{
+                            span {
+                                width:100%;
+                                @include Align-between-top;
+                                margin: .4rem 0 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+            li {
+                width:100%;
+                .inner{
+                    margin-top:2.1rem;
+                }
+                margin-bottom:2rem;
+                a {
+                    display: block;
+                    //margin: 0 1.3rem 0 0;
+                }
+
+                .img {
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                    .flag{
+                        @include Position($bottom: 0, $left: 0);
+                        width:100%;
+                        background-color: #2f2f2f;
+                        opacity: .8;
+                        border-radius: 0;
+                        padding:0 .5rem;
+                        justify-content: space-between;
+                        // justify-content: flex-start;
+                        p{
+                            color:#fff;
+                            font-size:.8rem;
+                            @include Bold;
+                        }
+                        .btn-small{
+                            border-radius: 0;
+                            border: 0 none;
+                            background-color: transparent;
+                            height:auto;
+                            padding:0 0 0 0;
+                            color:#fff;
+                            font-size:1rem;
+                            margin:0 .4rem 0 0;
+                        }
+                    }
+                }
+
+                .text {
+                    strong {
+                        margin-top: 1rem;
+                        display: block;
+                        color: #2f2f2f;
+                        @include Bold;
+                    }
+                    em{
+                        color:#8f9191;
+                        display: inline-block;
+                        margin-top: .6rem;
+                        font-size:1rem;
+                        b{
+                            color:#8f9191;
+                            margin-left:1.1rem;
+                        }
+                        b:before{
+                            display:inline-block;
+                            content:"";
+                            width:1px;
+                            height:1rem;
+                            background-color:#d2d2d2;
+                            position: relative;
+                            left:-.6rem;
+                            top:0;
+                        }
+                    }
+                    .price{
+                        margin-top:1.7rem;
+                        @include Align-box-left;
+                        span {
+                            width:44%;
+                            @include Align-between-top;
+                            margin: .4rem 0 0 0;
+                            padding:0 1.7rem 0 0;
+                            b{
+                                font-size:1rem;
+                                margin-right:.4rem;
+                                @include Regular;
+                            }
+                            strong{
+                                display:inline-block;
+                                @include Bold;
+                                color:#da291c;
+                                font-size:1.1rem;
+                                margin:0;
+                                em{
+                                    display:inline-block;
+                                    font-size:1rem;
+                                    color:#da291c;
+                                    @include Bold;
+                                    margin:0;
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
