@@ -15,6 +15,16 @@
                     top:.2rem;
                 }
             }
+            &.detail-descri-gray{
+                color:#8f9191;
+                padding:1.7rem 1.7rem 3.9rem 1.7rem;
+                ul > li{
+                    text-indent: -.8rem;
+                    & > i{
+                        margin-right: .6rem;
+                    }
+                }
+            }
         }
         .detail-cont{
             padding: 0 1.7rem;
@@ -81,6 +91,30 @@
                     border-bottom:0 none;
                 }
             }
+            &.detail-cont-join{
+                margin:0;
+                .detail-opt-wrap{
+                    padding:4.3rem 0 2.6rem 0;
+                    border-bottom:1px solid #f1f1f1;
+                    ul > li{
+                        @include Align-middle-column;
+                        .detail-opt-icon-box{
+                            width:9.8rem;
+                            height:9.8rem;
+                            background-color: #fafafa;
+                            border:1px solid #f1f1f1;
+                            border-radius: 50%;
+                            @include Align-middle;
+                        }
+                        p{
+                            @include Bold;
+                            @include Align-middle;
+                            font-size:1.6rem;
+                            margin:1.7rem 0 0 0;
+                        }
+                    }
+                }
+            }
         }
         .descri-tit{
             position: absolute;
@@ -145,6 +179,14 @@
         }
         .detail-submit{
             margin-top:1.3rem;
+            .btn-group{
+                margin:0 1.7rem;
+            }
+            .btn-white{
+                border:1px solid #d2d2d2;
+                color:#54585a;
+                border-radius: 1rem;
+            }
         }
         .detail-iconBox{
             label {
@@ -205,6 +247,198 @@
             span{
                 color:#6e5d50;
             }
+        }
+        p{
+            padding:1.3rem 0 0 0;
+            color:#8f9191;
+            @include Regular;
+            @include Align-middle-left;
+            i{
+                margin:0 .6rem 0 0;
+            }
+        }
+    }
+    .detail-view-rest{
+        position: relative;
+        @include Align-middle;
+        padding: 3.4rem 1.7rem 0;
+        background-color:#fff;
+        & > ul{
+            justify-content: center;
+            & > li{
+                @include Vertical-inline;
+                box-sizing: border-box;
+                position: relative;
+                // margin-right: 4.5rem;
+                // width: 4.5rem;
+                text-align: center;
+                & > span{
+                    display:block;
+                    font-size:1.2rem;
+                    color:#8f9191;
+                    margin-top:.7rem;
+                }
+                &:after{
+                    display:block;
+                    content: "";
+                    position: absolute;
+                    top:25%;
+                    right:-50%;
+                    transform: translateY(-50%);
+                    width: 100%;
+                    height: .2rem;
+                    background-color: #e7e7e7;
+                    z-index: 1;
+                }
+                &:last-child{
+                    margin-right:0;
+                }
+                &:last-child:after{
+                    right:auto;
+                    left:-50%;
+                }
+                &.active{
+                    & > span{
+                        color:#ed1c24;
+                        @include Bold;
+                    }
+                }
+                & > i{
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+    .detail-layout {
+        position: relative;
+        .layer-item {
+            background-color:#fff;
+            padding: 3.4rem 0 0;
+            h3 {
+                margin: 0 1.7rem 0;
+                padding:0 0 1.4rem 0;
+                border-bottom:1px solid #f1f1f1;
+                strong {
+                    font-size: 1.4rem;
+                    @include Bold;
+                }
+            }
+            &.item-step1 {
+                h3 {
+                    @include Align-between;
+                    margin: 0 1.7rem 1.7rem;
+                    background-color:#EFF2F7;
+                    padding:1.5rem 1.3rem;
+                    border-radius: 1rem;
+                }
+                h4 {
+                    @include Bold;
+                }
+                .item-cont {
+                    padding: 0 1.7rem;
+                    .chk-agree-list{
+                        margin-top:0;
+                        padding: 0 1.3rem;
+                        .chk-agree-cols-wrap{
+                            padding:2.6rem 0 1.7rem;
+                            border-bottom: 1px solid #EBEBEB;
+                        }
+                        .chk-agree-cols{
+                            & > li{
+                                border-bottom:0;
+                            }
+                            & > li + li{
+                                .chk-agree-top{
+                                    align-items: flex-start;
+                                }
+                                .inputC{
+                                    label{
+                                        padding-top:0;
+                                    }
+                                }
+                            }
+                            .inputC02{
+                                label {
+                                    line-height: 1;
+                                    &:before{
+                                        @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                                        width: 1.2rem;
+                                        height: .9rem;
+                                    }
+                                    span{
+                                        font-size:1.1rem;
+                                        color:#999;
+                                        @include Regular;
+                                    }
+                                }
+                                input:checked + label {
+                                    &:before{
+                                        @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                                    }
+                                    span{
+                                        color:#2f2f2f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .detail-descri{
+                font-size:1.1rem;
+                line-height:1.3;
+                color:#ed1c24;
+                @include Regular;
+                padding-top:1.3rem;
+                ul > li{
+                    padding-left:1.2rem;
+                    text-indent: -.7rem;
+                    & > sub{
+                        position: relative;
+                        top:.2rem;
+                    }
+                    & > i{
+                        margin-right: .6rem;
+                    }
+                }
+                &.detail-descri-gray{
+                    color:#8f9191;
+                    ul > li{
+                        text-indent: -.8rem;
+                        line-height: 1.4;
+                        & > i{
+                            margin-right: .6rem;
+                        }
+                        ul > li{
+                            padding-left: 1.1rem;
+                            text-indent: -1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detail-layer-submit{
+        padding: 2.6rem 1.7rem;
+        background-color: #fff;
+
+        .detail-layer-list-btn{
+            @include Align-between;
+            & > li{
+                width:48%;
+                margin-left:1rem;
+            }
+            & > li:first-child{
+                margin-left:0;
+            }
+        }
+        .btn-white{
+            border-color:#d2d2d2;
+            color:#54585a;
+        }
+        .btn{
+            border-radius: 1rem;
         }
     }
 }
