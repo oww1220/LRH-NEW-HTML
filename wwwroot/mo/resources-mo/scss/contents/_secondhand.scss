@@ -68,6 +68,55 @@
                 margin-top:.2rem;
             }
         }
+        .normal{
+            padding:2.2rem 0;
+            .logo{
+                width:1.9rem;
+            }
+            .tit-box{
+                @include Align-between-top;
+                padding: .9rem 0;
+                h2{
+                    font-size:1.8rem;
+                    @include Bold;
+                }
+                .btn-small{
+                    height:auto;
+                    border-radius: 0;
+                    border:0 none;
+                    background-color: transparent;
+                    padding:0;
+                    font-size: 1.1rem;
+                    color:#54585a;
+                    @include Bold;
+                }
+            }
+            .txt-box{
+                @include Align-middle-left;
+                li{
+                    font-size:1rem;
+                    @include Regular;
+                    color:#8f9191;
+                    margin-left:1.1rem;
+                }
+                li:before{
+                    display:inline-block;
+                    content:"";
+                    width:1px;
+                    height:1rem;
+                    background-color:#d2d2d2;
+                    position: relative;
+                    left:-.6rem;
+                    top:1px;
+                }
+                li:first-child{
+                    margin-left:0;
+                }
+                li:first-child:before{
+                    display:none;
+                }
+            }
+        }
     }
 
     .detail-view{
@@ -585,6 +634,13 @@
                     }
                 }
             }
+            &.detail-sub-slide-list1{
+                margin:0;
+                padding:0;
+                .life-event-view{
+                    padding-bottom:0;
+                }
+            }
         }
         .detail-view-img{
             @include Align-between;
@@ -856,6 +912,92 @@
                         }
                     }
                 }
+                &.item-step5{
+                    padding:2.6rem 0;
+                    .summary-table-wrap{
+                        margin:0 1.7rem;
+                        border:1px solid #ff404b;
+                        .summary-toggle-btn{
+                            background-color: #fff;
+                        }
+                        .table{
+                            table{
+                                th{
+                                    border-top:0 none;
+                                    @include Regular;
+                                    color:#54585a;
+                                    text-align:center;
+                                }
+                                td{
+                                    border-top:0 none;
+                                    @include Regular;
+                                    color:#54585a;
+                                    text-align:center;
+                                }
+                            }
+                        }
+                    }
+                    .item-cont{
+                        .detail-layer-cont-terms{
+                            padding:0 0 2.3rem 0;
+                            .summary-table-wrap{
+                                margin:0;
+                                border:0 none;
+                                .detail-item-tit{
+                                    @include Align-between;
+                                    padding:0;
+                                    strong{
+                                        @include Bold;
+                                    }
+                                    b{
+                                        @include Bold;
+                                        color:#ed1c24;
+                                        font-size:1.4rem;
+                                        em{
+                                            font-size:1.6rem;
+                                        }
+                                    }
+                                }
+                                .summary-toggle-btn{
+                                    b{
+                                        padding-right:1.3rem;
+                                    }
+                                }
+                                .summary-toggle-btn:after{
+                                    right:0;
+                                }
+                                .table{
+                                    table{
+                                        th{
+                                            text-align: left;
+                                        }
+                                        td{
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.item-step6{
+                    
+                }
+                &.item-step7{
+                    
+                }
+                &.item-step8{
+                    
+                }
+                &.item-step9{
+                    
+                }
+                &.item-step10{
+                    
+                }
+                &.item-step11{
+                    
+                }
             }
             .item-cont {
                 padding: 0 1.7rem;
@@ -1081,6 +1223,9 @@
                         }
                         em{
                             display: block;
+                            b{
+                                font-size:1rem;
+                            }
                         }
                         .price{
                             span {
