@@ -682,6 +682,14 @@ if($('.specials-list .tab-normal').length){
             swap();
         });
     }
+
+    //로그인 - 회원가입 열고 닫기
+    if($('.login-wrap').length){
+        MUI.event.toggle('.login-wrap .join-toggle-btn', '.login-wrap .join-toggle-cont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+    }
 /* -------------------------------------------------로그인end*/
 
 /* 고객센터start-------------------------------------------------*/
