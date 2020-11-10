@@ -241,24 +241,24 @@ html, body{
 
 
 //
-.page-title{
-	position:relative;
-    @include Bold;
-    font-size:40px;
-    text-align:center;
-	padding:0 50px 50px;
+// .page-title{
+// 	position:relative;
+//     @include Bold;
+//     font-size:40px;
+//     text-align:center;
+// 	padding:0 50px 50px;
 	
-	.sub-tit{		
-		@include Regular;
-		font-size:16px;
-		color:#8f9191;
-		margin-top:15px;
-	}
+// 	.sub-tit{		
+// 		@include Regular;
+// 		font-size:16px;
+// 		color:#8f9191;
+// 		margin-top:15px;
+// 	}
 
-	.btn-share{
-		@include Position($top:0, $right:0);
-	}
-}
+// 	.btn-share{
+// 		@include Position($top:0, $right:0);
+// 	}
+// }
 //
 .tbl-type01{
     width:100%;
@@ -293,37 +293,37 @@ html, body{
     }
 }
 //
-.num-lst, .bul-lst{
-	> li{
-		@include Align-top-left;
-		align-items: baseline;
+// .num-lst, .bul-lst{
+// 	> li{
+// 		@include Align-top-left;
+// 		align-items: baseline;
 
-		.bul{
-			@include Align-top-left;
-			width:10px;
-			margin-right:10px;
-		}
-	}
-}
-.one-lst{
-	@include Align-top-left;
-	align-items: baseline;
+// 		.bul{
+// 			@include Align-top-left;
+// 			width:10px;
+// 			margin-right:10px;
+// 		}
+// 	}
+// }
+// .one-lst{
+// 	@include Align-top-left;
+// 	align-items: baseline;
 
-	.bul{
-		@include Align-top-left;
-		width:16px;
-		margin-right:10px;
+// 	.bul{
+// 		@include Align-top-left;
+// 		width:16px;
+// 		margin-right:10px;
 
-		&.dot{
-			width:5px;
-			margin-right:5px;
-		}
-		&.hypen{
-			width:5px;
-			margin-right:5px;
-		}
-	}
-}
+// 		&.dot{
+// 			width:5px;
+// 			margin-right:5px;
+// 		}
+// 		&.hypen{
+// 			width:5px;
+// 			margin-right:5px;
+// 		}
+// 	}
+// }
 //
 .underline{
 	@include Bold;
@@ -450,6 +450,17 @@ html, body{
 			margin-left:auto;
 		}
 	}
+	&-type3{
+		width: 100%;
+		@include Align-middle-left;
+
+		.right{
+			margin-left:auto;
+		}
+	}
+	&-right{
+		@include Align-middle-right;
+	}
 }
 
 .grid-row {
@@ -515,39 +526,46 @@ html, body{
 }
 
 .lst {
-	@include Align-top-column;
-	align-items: baseline;
-
-	li{
-		@include Align-top-left;
-		align-items: baseline;
+	
+	> li{
+		position:relative;
+		padding-left:12px;
 	}
-	// .bul{
-		
-	// }
-
+	
 	&.dot{
-		li{
+		> li{
 			&::before{
+				@include Position($left:0, $top:0);
 				content:"·";
-				width:15px;
+				width:12px;
+				font-size:18px;
 			}
 		}
 	}
 	&.hypen{
-		li{
+		> li{
 			&::before{
+				@include Position($left:0, $top:0);
 				content:"-";
-				width:15px;
+				width:12px;
 			}
 		}
 	}
 
-	// &.depth02{
-	// 	.bul{
+	.spacing{
+		position:relative;
+		padding-left:50px;	
 
-	// 	}
-	// }
+		> .tit{
+			@include Position($left:0, $top:0);
+			display:block;
+			width:50px;
+		}
+	}
+
+	&.depth{
+		
+	}
 }
 
 .btn-area{
@@ -560,4 +578,10 @@ html, body{
 		margin:0 5px;
 		@include roundBox;
 	}
+}
+
+@mixin Inline-align-top-left {
+	display: inline-flex;
+	align-items: flex-start;
+	justify-content: left;
 }

@@ -691,6 +691,28 @@ if($('.customer-list').length){
     });
 }
 
+//전국지점안내
+if($('.branch-office-section').length){
+    MUI.event.toggle('.accorSpotBtn', '.accorSpotCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+//기사포함지점안내 리스트
+if($('.branchDriverTab').length){
+    MUI.event.taps('.branchDriverTab', false, function(swap){
+        swap();
+    });
+}
+
+//기사포함지점안내 해외 리스트
+if($('.branchAbroadTab').length){
+    MUI.event.taps('.branchAbroadTab', false, function(swap){
+        swap();
+    });
+}
+
 
 /* -------------------------------------------------고객센터end*/
 
