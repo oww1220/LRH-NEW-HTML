@@ -75,8 +75,10 @@
             }
             .tag{
                 width:100%;
-                @include Align-middle-left;
-                .item{@include Ellipsis($w:auto); max-width:33.333%; margin-right:10px; color:#848484; font-size:13px;}                    
+                @include Ellipsis($w:100%, $lines:1);
+
+                //@include Align-middle-left;
+                //.item{@include Ellipsis($w:auto); max-width:33.333%; margin-right:10px; color:#848484; font-size:13px;}                    
             }
 
             .sns-flag{
@@ -229,7 +231,7 @@
         img{max-width:100%; height:auto;}
         .tag-area{            
             @include Align-box;
-            margin-bottom:40px;
+            //margin-bottom:40px;
 
             .tit{
                 @include Align-middle;                
@@ -410,6 +412,9 @@
         }
     }
     .post-section{
+        padding-top:80px;
+        border-top:1px solid #e7e7e7;
+        
         .tit-header{
             @include Bold;
             font-size:22px;
