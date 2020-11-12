@@ -1,0 +1,164 @@
+.longTerm-wrap {
+    padding-bottom: 4rem;
+
+    .section-top{
+        padding:0 0 3.4rem 0;
+    }
+
+    .section-tit{
+        padding: 2.2rem 1.7rem 2.6rem;
+        em{
+            display:block;
+            color:#8f9191;
+            font-size:1.9rem;
+        }
+        strong{
+            display:block;
+            color:#2f2f2f;
+            @include Bold;
+            font-size:2.3rem;
+            span{
+                color:#ba9a81;
+            }
+        }
+    }
+
+    .section-detail{
+        .detail-layout {
+            position: relative;
+            .longTerm-membership-list{
+                .section-list{
+                    padding: 0 1.7rem;
+                }
+                .longTerm-membership-tab{
+                    padding:1.5rem 0 4.2rem 0;
+                    .membership-txt-box:last-child{
+                        border-bottom:0;
+                    }
+                    &.longTerm-benefit-tab{
+                        padding:0 0 4.3rem 0;
+                        .longTerm-membership-cont-06 + .guide{
+                            margin-top:3.4rem;
+                        }
+                    }        
+                }
+                .longTerm-membership-toggle-cont{
+                    border-bottom: 1px solid #f1f1f1;
+                }
+                .membership-txt-box{
+                    padding:2.6rem 0;
+                    @include Align-left-column;
+                    border-bottom: 1px solid #f1f1f1;
+                    h4{
+                        @include Bold;
+                    }
+                    p{
+                        @include Regular;
+                        font-size: 1.1rem;
+                        padding:1.3rem 0 0 0;
+                    }
+                    .img{
+                        padding:1.3rem 0;
+                        mix-blend-mode: multiply;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .txt-cont{
+                        padding:0 3.4rem;
+                        p{
+                            padding-bottom:.7rem;
+                        }
+                    }
+                    .btn{
+                        height:auto;
+                        padding:.5rem 0;
+                        @include Bold;
+                        @include Align-box-left;
+                        font-size:1.4rem;
+                        i{
+                            margin:0 0 0 .9rem;
+                        }
+                    }
+                }
+                .benefit-txt-box{
+                    margin:2.6rem 0;
+                    h4{
+                        @include Bold;
+                    }
+                    p{
+                        @include Regular;
+                        font-size: 1.1rem;
+                        padding:1.3rem 0 0 0;
+                    }
+                }
+            }
+            .number{
+                @include Regular;
+                font-size: 1.1rem;
+                padding:1.3rem 0 0 0;
+                & > li{
+                    padding:0 0 0 1.3rem;
+                    text-indent: -1.2rem;
+                }
+            }
+            .guide {
+                font-size: 1.1rem;
+                line-height: 1.3;
+                text-indent: -.8rem;
+                margin:1.1rem 0;
+                padding-left:1rem;
+                & > li{
+                    margin-top:.4rem;
+                    color:#54585a;
+                    @include Regular;
+                    line-height: 1.4;
+                    & > i{
+                        margin-right: .6rem;
+                        margin-top: -.4rem;
+                    }
+                    &.red_txt{
+                        color:#ed1c24;
+                    }
+                    &.gray_txt{
+                        color:#8f9191;
+                    }
+                }
+                & > li:first-child{
+                    margin-top:0;
+                }
+            }
+            .longTerm-membership-toggle-btn {
+                cursor: pointer;
+                @include Align-middle-left;
+                position: relative;
+                padding:2.3rem 0;
+                border-bottom: 1px solid #f1f1f1;
+                strong {
+                    font-size: 1.4rem;
+                    @include Bold;
+                }
+                .btn-toggle{
+                    @include Position($top: 50%, $right: 0);
+                    transform: translateY(-50%);
+                }
+                &.active {
+                    .btn-toggle:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .longTerm-membership-toggle-cont{
+                display:none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
