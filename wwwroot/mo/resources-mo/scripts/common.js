@@ -1019,6 +1019,13 @@ if($('.longTerm-wrap').length){
         logic();
     });
 }
+//신차장 - 신차장 qna 열고 닫기
+if($('.longTerm-wrap').length){
+    MUI.event.toggle('.longTerm-wrap .longTerm-qna-toggle-btn', '.longTerm-wrap .longTerm-qna-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
 /* -------------------------------------------------신차장 end*/
 
     
