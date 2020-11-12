@@ -349,3 +349,79 @@
     color: #F04040;
 	padding-top: 7px;
 }
+
+//
+.chk-icon-box, .radio-icon-box{	
+	input {
+		display: none;
+	}
+
+	label{
+		@include Align-between;
+		position: relative;
+		padding-left:40px;
+		box-sizing: border-box;
+		transition: all .4s;
+
+		&:after {
+			display: block;
+			content: '';
+			@include Position($top: 50%, $left: 0);
+			@include Background($sprite:'ico-check2-off', $position:center center);
+			width: 13px;
+			height: 12px;
+			margin-top: -6px;
+		}
+	}
+	input[type='checkbox']:checked + label:after{
+		@include Background($sprite:'ico-check2-on', $position:center center);
+	}
+	input:checked + label{@include Bold; color:#2f2f2f;}
+
+	&.type-circle{
+		label{
+			&:after {
+				@include Position($top: 50%, $left: 6px);
+				@include Background($sprite:'ico-check-off', $position:center center);
+				width: 26px;
+				height: 26px;
+				margin-top: -13px;
+			}
+
+		}
+		input[type='checkbox']:checked + label:after{
+			@include Background($sprite:'ico-check-on', $position:center center);
+		}
+	}
+
+	&.type-inline{
+		display:inline-block;
+	}
+}
+
+.radio-icon-box{
+	label{
+		padding-left:30px;
+		&:after {			
+			@include Background($sprite:'ico-radio2-off', $position:center center);
+			width: 20px;
+			height: 20px;
+			margin-top: -10px;
+		}
+	}
+	input[type='radio']:checked + label:after{
+		@include Background($sprite:'ico-radio2-on', $position:center center);
+	}
+}
+
+.select-area{
+	@include Align-between-top;
+}
+.radio-area, .chk-area{
+	@include Align-box;
+
+	li{
+		flex-basis: auto;
+		margin-right:40px;
+	}
+}

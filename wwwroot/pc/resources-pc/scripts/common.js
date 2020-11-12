@@ -670,6 +670,20 @@ if($('.carLife-container .tab-normal').length){
 
 
 
+/* 회원가입 start-------------------------------------------------*/
+
+//통합회원가입 정보입력 토글
+if($('.driver-license-accor').length){
+    MUI.event.toggle('.driver-license-accor .btn-driver-license', '.driver-license-accor .driver-license-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+/* -------------------------------------------------회원가입 end*/
+
+
+
 /* 고객센터start-------------------------------------------------*/
 //고객센터 키업이벤트
 if($('.sticky-search-wrap').length) {

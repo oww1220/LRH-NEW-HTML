@@ -30,7 +30,6 @@
             }
         }
     }
-
     .sort-section{
         @include Align-top-left;
         //flex-wrap: nowrap;
@@ -496,6 +495,89 @@
         margin-bottom:60px;
 
         .icon{margin-right:20px;}
+    }
+
+    //대여 및 요금안내
+    .section-indicator {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index:10;
+        
+        background-color:#fff;
+
+        .menu-list{
+            position:relative;
+            @include Align-between-top;
+            margin-bottom:80px;
+            border-top:1px solid #eee;
+            border-bottom: 1px solid #eee;
+            box-sizing: border-box;
+
+            li{
+               
+
+               a{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                   padding: 40px;
+                   height:95px;
+               }
+
+               .icon{width:50px; height:50px; background-color:red;}
+            }            
+        }
+    }
+    .purchase-step{
+        li{
+            text-align:center;
+
+            &:after, &:before{
+                content:"";
+                display:block;
+            }
+            
+            &:before{			
+                @include Position($top:36px, $right:0);
+                @include arrow;
+            }
+            &:after{
+                @include Position($top:38px, $right:3px);
+                @include arrowInner;
+                z-index:5;
+            }
+            &:nth-of-type(4n){
+                &:after, &:before{display:none;}
+            }
+            
+            .img-item{
+                height:150px;
+            }
+            .tit{@include Bold;}
+            .txt{text-align:center; margin-top:24px;}
+        }
+    }
+    .fee-info-section{
+        .box-align{
+            .img-box{
+                flex:none;
+                @include Align-middle-left;
+                width:600px;
+                
+                img{max-width:auto;}
+            }
+            .descri-box{
+                .tit-size-big{margin-bottom:30px;}
+                .lst{
+                    padding-bottom:40px - 25px;
+                    li{
+                        margin-bottom:25px;
+                    }
+                }
+                .btn-box{display:block;}
+            }
+        }
     }
 
 }

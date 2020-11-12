@@ -149,27 +149,6 @@ $(function(){
 		</div>
 	</nav>
 	<!--//해더네비-->
-
-	
-	<div class="path-wrap">
-		<div class="cover">
-			<div class="inner">            
-				<ul>
-					<li>
-						<a href=""> 
-							<span class="icon home">HOME</span>
-						</a>
-					</li>
-					<li>
-						<a href="">#카라이프</a>
-					</li>
-					<li>
-						<a href="">즐거움을 #타방</a>
-					</li>
-				</ul>			
-			</div>
-		</div>
-	</div>
 	
     `;
 
