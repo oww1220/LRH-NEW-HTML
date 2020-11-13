@@ -89,6 +89,9 @@
                     margin:2.6rem 0;
                     h4{
                         @include Bold;
+                        .flag{
+                            margin:0 1.3rem 0 0;
+                        }
                     }
                     p{
                         @include Regular;
@@ -121,6 +124,12 @@
                                 }
                             }
                         }
+                    }
+                    .guide-corporation-wrap{
+                        @include Align-top-left;
+                        .flag{
+                            margin: 1.1rem 1.3rem 0 0;
+                        } 
                     }
                 }
                 .info-box{
@@ -178,6 +187,34 @@
                 .info-box:last-child{
                     .img:after{
                         display:none;
+                    }
+                }
+            }
+            .longTerm-card-list{
+                .section-list{
+                    padding: 0 1.7rem;
+                    .section-tit{
+                        padding: 2.2rem 0 2.6rem;
+                    }
+                    .membership-txt-box{
+                        padding:2.2rem 0 2.2rem 0;
+                        border-bottom:1px solid #f1f1f1;
+                        h4{
+                            @include Bold;
+                        }
+                        p{
+                            @include Regular;
+                            font-size: 1.1rem;
+                            padding:1.3rem 0 0 0;
+                        }
+                        .table{
+                            margin:1.3rem 0 0 0;
+                        }
+                    }
+                    .detail-layer-submit{
+                        &.submit-normal{
+                            padding:2.6rem 0;
+                        }
                     }
                 }
             }
@@ -307,6 +344,21 @@
                         @include Regular;
                         color:#54585a;
                         margin:1.2rem 0 0 0;
+                    }
+                }
+            }
+            .longTerm-card-list{
+                .tab-nav{
+                    @include Inline-scrolling;
+                    ul{
+                        display:-webkit-box;
+                        flex-wrap:nowrap;
+                        li{
+                            width:auto;
+                            button{
+                                padding:0 1.3rem;
+                            }
+                        }
                     }
                 }
             }
@@ -491,6 +543,9 @@
         .detail-layer-submit{
             padding: 2.6rem 1.7rem;
             background-color: #fff;
+            .btn-brown{
+                border-radius: .5rem;
+            }
             .btn-red{
                 border-radius: .5rem;
             }
