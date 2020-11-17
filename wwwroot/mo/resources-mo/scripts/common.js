@@ -1012,6 +1012,15 @@ if($('.longTerm-membership-list .tab-normal').length){
         swap();
     });
 }
+
+//신차장 멤버십 탭전환
+if($('.longTerm-card-list .tab-normal').length){
+
+    MUI.event.taps('.longTerm-card-list .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
 //신차장 - 신차장 멤버십 열고 닫기
 if($('.longTerm-wrap').length){
     MUI.event.toggle('.longTerm-wrap .longTerm-membership-toggle-btn', '.longTerm-wrap .longTerm-membership-toggle-cont', false, function(logic, layer) {
@@ -1019,8 +1028,32 @@ if($('.longTerm-wrap').length){
         logic();
     });
 }
+//신차장 - 신차장 qna 열고 닫기
+if($('.longTerm-wrap').length){
+    MUI.event.toggle('.longTerm-wrap .longTerm-qna-toggle-btn', '.longTerm-wrap .longTerm-qna-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
 /* -------------------------------------------------신차장 end*/
 
+/* 단기렌터카 start-------------------------------------------------*/
+//단기렌터카 안내 열고 닫기
+if($('.shor-wrap').length){
+    MUI.event.toggle('.shor-wrap .shor-notice-toggle-btn', '.shor-wrap .shor-notice-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+//단기렌터카 안내 탭전환
+if($('.shor-notice-list .tab-normal').length){
+
+    MUI.event.taps('.shor-notice-list .tab-normal', false, function(swap){
+        swap();
+    });
+}
+/* -------------------------------------------------단기렌터카 end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){
