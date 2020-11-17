@@ -222,7 +222,10 @@
                 border-bottom: 1px solid #e7e7e7;
                 
                 > .col1{
-                    width:142px;
+                    width:132px;
+                }
+                > .col3{
+                    width:160px;                
                 }
                 > .col3{
                     width:470px;                
@@ -237,7 +240,7 @@
                     text-align:center;           
 
                     .item{
-                        padding:25px;
+                        padding:25px 15px;
                         box-sizing: border-box;    
                     }
 
@@ -249,10 +252,11 @@
                 }
                 .th-col{@include Bold;}
                 .td-col{
-                    &.col3, &.col4{
+                    &.col3{
                         text-align:left;
                     }
                 }
+                button{line-height:1.5;}
             }        
             .thead-row{
                 @include roundBox;
