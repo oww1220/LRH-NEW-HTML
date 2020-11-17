@@ -1699,6 +1699,53 @@
                         padding:1.3rem 0 0 0;
                     }
                 }
+                .info03-box{
+                    @include Align-top-left;
+                    border-bottom:0 none;
+                    margin:2.6rem 0;
+                    .img{
+                        border:1px solid #f1f1f1;
+                        background-color: #fff;
+                        @include Align-middle;
+                        border-radius: 100%;
+                        line-height: 1.3;
+                        width:7.1rem;
+                        height:7.1rem;
+                        position: relative;
+                    }
+                    .img:after{
+                        content: "";
+                        @include Vertical-inline;
+                        @include Hide_txt;
+                        flex: none;
+                        @include Background($sprite:'ico-arrow-down4', $size:100% auto, $position:center center);
+                        width: .7rem;
+                        height: 1.3rem;
+                        @include Position($bottom: -1.4rem, $left: 50%);
+                        transform: translateX(-10%);
+                    }
+                    .text{
+                        padding:0 0 0 2.2rem;
+                        @include Align-left-column;
+                        width:60%;
+                        p{
+                            @include Align-left-column;
+                        }
+                        b{
+                            @include Bold;
+                        }
+                        .guide{
+                            .gray_txt{
+                                font-size:1rem;
+                            }
+                            li{
+                                .guide{
+                                    margin-top:0;
+                                }
+                            }
+                        }
+                    }
+                }
                 .info-box:first-child{
                     .img{
                         padding-top:0;
@@ -1718,6 +1765,12 @@
                 }
                 .info02-box:last-child{
                     border-bottom:0 none;
+                }
+                .info03-box:last-child{
+                    border-bottom:0 none;
+                    .img:after{
+                        display:none;
+                    }
                 }
                 .guide {
                     font-size: 1.1rem;
