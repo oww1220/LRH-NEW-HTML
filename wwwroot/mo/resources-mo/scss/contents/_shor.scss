@@ -1504,6 +1504,10 @@
                     strong {
                         font-size: 1.4rem;
                         @include Bold;
+                        @include Align-middle;
+                        i{
+                            margin-right:1.3rem;
+                        }
                     }
                     .btn-toggle{
                         @include Position($top: 50%, $right: 0);
@@ -1568,7 +1572,7 @@
                         } 
                     }
                     .tab-nav{
-                        ul{
+                        .list-type-col3{
                             li{
                                 width:33.3%;
                                 button{
@@ -1576,6 +1580,196 @@
                                 }
                             }
                         }
+                        .list-type-carkind{
+                            @include Inline-scrolling;
+                            @include NoscrollBar;
+                            padding-bottom:1rem;
+                            display: -webkit-box;
+                            li{
+                                width:auto;
+                                @include Inline-align-middle;
+                                margin-bottom:0;
+                                button{
+                                    padding:0 1.3rem;
+                                    border-bottom:0;
+                                }
+                                &.active{
+                                    button{
+                                        color: #2f2f2f;
+                                        border-bottom:1px solid #2e2e2e;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .shor-notice-carkind-tab{
+                        .table{
+                            table{
+                                th{
+                                    background-color: #fafafa;
+                                    vertical-align: middle;
+                                }
+                                td{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .shor-notice-carkind-toggle-btn {
+                        cursor: pointer;
+                        @include Align-left-column;
+                        position: relative;
+                        .btn-toggle{
+                            @include Position($bottom: 0, $right: 50%);
+                            transform: translate(50%,80%);
+                        }
+                        &.active {
+                            .btn-toggle:after {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    .shor-notice-carkind-toggle-cont{
+                        display:none;
+                    }
+                }
+                .info-box{
+                    @include Align-top-left;
+                    border-bottom:0 none;
+                    margin:2.6rem 0;
+                    .img{
+                        border:1px solid #f1f1f1;
+                        background-color: #fff;
+                        @include Align-middle;
+                        border-radius: 100%;
+                        line-height: 1.3;
+                        width:7.1rem;
+                        height:7.1rem;
+                        position: relative;
+                    }
+                    .img:after{
+                        content: "";
+                        @include Vertical-inline;
+                        @include Hide_txt;
+                        flex: none;
+                        @include Background($sprite:'ico-arrow-down4', $size:100% auto, $position:center center);
+                        width: .7rem;
+                        height: 1.3rem;
+                        @include Position($bottom: -1.4rem, $left: 50%);
+                        transform: translateX(-10%);
+                    }
+                    .text{
+                        padding:0 0 0 2.2rem;
+                        @include Align-left-column;
+                        width:60%;
+                        p{
+                            @include Align-left-column;
+                        }
+                        b{
+                            @include Bold;
+                        }
+                        .guide{
+                            text-indent: 0;
+                            padding-left:0;
+                            .gray_txt{
+                                font-size:1rem;
+                            }
+                            li{
+                                .guide{
+                                    margin-top:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .info02-box{
+                    padding:2.6rem 0;
+                    border-bottom:1px solid #f1f1f1;
+                    .img{
+                        padding-bottom:1.7rem;
+                    }
+                    h4{
+                        @include Bold;
+                    }
+                    em{
+                        display:block;
+                        @include Regular;
+                        font-size: 1.1rem;
+                        color:#54585a;
+                        padding:1.3rem 0 0 0;
+                    }
+                }
+                .info03-box{
+                    @include Align-top-left;
+                    border-bottom:0 none;
+                    margin:2.6rem 0;
+                    .img{
+                        border:1px solid #f1f1f1;
+                        background-color: #fff;
+                        @include Align-middle;
+                        border-radius: 100%;
+                        line-height: 1.3;
+                        width:7.1rem;
+                        height:7.1rem;
+                        position: relative;
+                    }
+                    .img:after{
+                        content: "";
+                        @include Vertical-inline;
+                        @include Hide_txt;
+                        flex: none;
+                        @include Background($sprite:'ico-arrow-down4', $size:100% auto, $position:center center);
+                        width: .7rem;
+                        height: 1.3rem;
+                        @include Position($bottom: -1.4rem, $left: 50%);
+                        transform: translateX(-10%);
+                    }
+                    .text{
+                        padding:0 0 0 2.2rem;
+                        @include Align-left-column;
+                        width:60%;
+                        p{
+                            @include Align-left-column;
+                        }
+                        b{
+                            @include Bold;
+                        }
+                        .guide{
+                            .gray_txt{
+                                font-size:1rem;
+                            }
+                            li{
+                                .guide{
+                                    margin-top:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .info-box:first-child{
+                    .img{
+                        padding-top:0;
+                    }
+                }
+                .info-box:last-child{
+                    border-bottom:0 none;
+                    .img:after{
+                        display:none;
+                    }
+                }
+                .info-box + .info-box + .info-box + .info-box{
+                    border-bottom:0 none;
+                    .img:after{
+                        display:none;
+                    }
+                }
+                .info02-box:last-child{
+                    border-bottom:0 none;
+                }
+                .info03-box:last-child{
+                    border-bottom:0 none;
+                    .img:after{
+                        display:none;
                     }
                 }
                 .guide {
@@ -1589,6 +1783,8 @@
                         color:#54585a;
                         @include Regular;
                         line-height: 1.4;
+                        width:100%;
+                        margin-bottom:0;
                         & > i{
                             margin-right: .6rem;
                             margin-top: -.4rem;
@@ -1602,6 +1798,44 @@
                     }
                     & > li:first-child{
                         margin-top:0;
+                    }
+                }
+                .shor-notice-cont-06{
+                    .table{
+                        table{
+                            td{
+                                .guide{
+                                    text-indent: 0;
+                                    padding-left:0;
+                                    .gray_txt{
+                                        font-size:1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .shor-notice-cont-07{
+                    .table{
+                        table{
+                            th{
+                                background-color: #fafafa;
+                                b{
+                                    color:#54585a;
+                                }
+                            }
+                            td{
+                                text-align: center;
+                                vertical-align: middle;
+                                .guide{
+                                    text-indent: 0;
+                                    padding-left:0;
+                                    .gray_txt{
+                                        font-size:1rem;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
