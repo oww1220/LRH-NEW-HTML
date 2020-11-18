@@ -594,6 +594,28 @@ $border-grey:#e7e7e7;
 			width:16.6666%;
 		}
 	}
+
+	&.type2{
+		> li{
+			@include Align-middle-left;
+
+			.img-item{
+				width:186px;
+				flex:none;
+				
+				.circle{
+					width:130px;
+					height:130px;
+					border-radius:130px;
+					border:1px solid #f2f2f2;
+					background-color:#fafafa;
+				}
+			}
+			.descri-box{
+				.tit{@include Bold; font-size:1.125rem; margin-bottom:24px;}
+			}
+		}	
+	}
 }
 .grid-col-inline{
 	@include Inline-align-top-left;
