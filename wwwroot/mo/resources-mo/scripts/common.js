@@ -1043,6 +1043,15 @@ if($('.shor-wrap').length){
     MUI.event.toggle('.shor-wrap .shor-notice-toggle-btn', '.shor-wrap .shor-notice-toggle-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
+
+        //단기렌터카 부가서비스 롤링
+        MUI.slide.init('.shor-wrap .shor-notice-toggle-cont .shor-notice-slide','swiper', {
+            loop: true,
+            autoHeight: true,
+            autoplay: {
+                delay: 3000,
+            },
+        });
     });
 }
 
@@ -1078,6 +1087,7 @@ if($('.shor-wrap').length){
     });
 }
 
+<<<<<<< Updated upstream
 //단기렌터카 기사포함단기렌터카 대여기간
 if($('.shor-wrap').length){
     MUI.event.toggle('.shor-wrap .btn-schedule-toggle', '.shor-wrap .schedule-toggle-cont', false, function(logic, layer) {
@@ -1086,6 +1096,8 @@ if($('.shor-wrap').length){
     });
 }
 
+=======
+>>>>>>> Stashed changes
 /* -------------------------------------------------단기렌터카 end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
