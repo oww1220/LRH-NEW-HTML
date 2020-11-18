@@ -811,18 +811,70 @@ if($('.short-agree-accor').length){
     });
 }
 
+//단기렌터카 안내 - 스티키
+if($('.short-container .detail-layer-nav').length) {
+    MUI.event.goTarget('.menu-link', $('.short-container .detail-layer-nav').height());
+
+    $(window).on('scroll', function(){
+        var scrollTop = $(this).scrollTop();
+        MUI.event.scrollTaps(scrollTop, $('.short-container .layer-item'), $('.short-container .detail-layer-nav'));
+
+        var scrollPos = window.scrollY || window.pageYOffset,
+            $target = $('.detail-layer-nav-wrap'),
+            $parent = $('.detail-layer-items-wrap'),
+            stickyPos = $parent.height() - $target.find('.detail-layer-nav').height();
+            parentBottomPos = $parent.offset().top + stickyPos;
+            targetPos = $target.offset().top;
+
+            //console.log(targetPos);
+        if(scrollPos >= targetPos) {            
+            if(scrollPos >= parentBottomPos){ 
+                $target.removeClass('fixed');
+                $target.find('.detail-layer-nav').css({top: $parent.height()});
+            }
+            else{
+                $target.addClass('fixed');
+                $target.find('.detail-layer-nav').css({top: -20});
+            }
+        }
+        else{            
+            $target.removeClass('fixed');
+        }
+    });
+}
+//대여및 요금 안내 - 요금안내의 차 종류
+if($('.short-container .rentalFeeTab').length){
+    MUI.event.taps('.short-container .rentalFeeTab', false, function(swap){
+        swap();
+    });
+}
+if($('.short-container .rentalFeeTab2').length){
+    MUI.event.taps('.short-container .rentalFeeTab2', false, function(swap){
+        swap();
+    });
+}
+
+//펫카 상품 안내 - QNA 아코디언
+if($('.short-container .qnaAccor').length){
+    MUI.event.toggle('.qnaAccor .btn-toggle', '.qnaAccor .qnaAccorCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+
 /* -------------------------------------------------단기렌터카 end*/
 
 /* 신차장장기렌터카 start-------------------------------------------------*/
 
 //신차장 멤버십 탭 메뉴
-if($('.longTerm-benefit-section .benefitTab').length){
-    MUI.event.taps('.longTerm-benefit-section .benefitTab', false, function(swap){
+if($('.longTerm-container .longTermBenefitTab').length){
+    MUI.event.taps('.longTerm-container .longTermBenefitTab', false, function(swap){
         swap();
     });
 }
-if($('.longTerm-benefit-section .benefitTab2').length){
-    MUI.event.taps('.longTerm-benefit-section .benefitTab2', false, function(swap){
+if($('.longTerm-container .longTermBenefitTab2').length){
+    MUI.event.taps('.longTerm-container .longTermBenefitTab2', false, function(swap){
         swap();
     });
 }
@@ -837,6 +889,71 @@ if($('.fare-section .inlandFareTab').length){
         swap();
     });
 }
+
+
+//신차장기렌터카 안내 - 스티키
+if($('.longTerm-container .detail-layer-nav').length) {
+    MUI.event.goTarget('.menu-link', $('.longTerm-container .detail-layer-nav').height());
+
+    $(window).on('scroll', function(){
+        var scrollTop = $(this).scrollTop();
+        MUI.event.scrollTaps(scrollTop, $('.longTerm-container .layer-item'), $('.longTerm-container .detail-layer-nav'));
+
+        var scrollPos = window.scrollY || window.pageYOffset,
+            $target = $('.detail-layer-nav-wrap'),
+            $parent = $('.detail-layer-items-wrap'),
+            stickyPos = $parent.height() - $target.find('.detail-layer-nav').height();
+            parentBottomPos = $parent.offset().top + stickyPos;
+            targetPos = $target.offset().top;
+
+            //console.log(targetPos);
+        if(scrollPos >= targetPos) {            
+            if(scrollPos >= parentBottomPos){ 
+                $target.removeClass('fixed');
+                $target.find('.detail-layer-nav').css({top: $parent.height()});
+            }
+            else{
+                $target.addClass('fixed');
+                $target.find('.detail-layer-nav').css({top: -20});
+            }
+        }
+        else{            
+            $target.removeClass('fixed');
+        }
+    });
+}
+//개인 장기 렌터카 QNA 아코디언
+if($('.longTerm-container .qnaAccor').length){
+    MUI.event.toggle('.qnaAccor .btn-toggle', '.qnaAccor .qnaAccorCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+if($('.longTerm-container .qnaAccor2').length){
+    MUI.event.toggle('.qnaAccor2 .btn-toggle', '.qnaAccor2 .qnaAccorCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+if($('.longTerm-container .qnaAccor3').length){
+    MUI.event.toggle('.qnaAccor3 .btn-toggle', '.qnaAccor3 .qnaAccorCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+if($('.longTerm-container .qnaAccor4').length){
+    MUI.event.toggle('.qnaAccor4 .btn-toggle', '.qnaAccor4 .qnaAccorCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+if($('.longTerm-container .qnaAccor5').length){
+    MUI.event.toggle('.qnaAccor5 .btn-toggle', '.qnaAccor5 .qnaAccorCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
 
 
 

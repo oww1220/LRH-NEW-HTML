@@ -503,34 +503,53 @@ html, body {
 	        flex-wrap: wrap;
 }
 
-.grid-col li {
+.grid-col > li {
 	position: relative;
 	margin-bottom: 80px;
 }
 
-.grid-col.col2 li {
+.grid-col.col2 > .col, .grid-col.col2 > li {
 	width: 50%;
 }
 
-.grid-col.col3 li {
+.grid-col.col3 > .col, .grid-col.col3 > li {
 	width: 33.3333%;
 }
 
-.grid-col.col4 li {
+.grid-col.col4 > .col, .grid-col.col4 > li {
 	width: 25%;
 }
 
-.grid-col.col5 li {
+.grid-col.col5 > .col, .grid-col.col5 > li {
 	width: 20%;
 }
 
-.grid-col.col6 li {
+.grid-col.col6 > .col, .grid-col.col6 > li {
 	width: 16.6666%;
+}
+
+.grid-col-inline {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 }
 
 .lst > li {
 	position: relative;
 	padding-left: 12px;
+	font-size: 14px;
 }
 
 .lst.dot > li::before {

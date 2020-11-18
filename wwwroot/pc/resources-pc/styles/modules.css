@@ -503,34 +503,53 @@ html, body {
 	        flex-wrap: wrap;
 }
 
-.grid-col li {
+.grid-col > li {
 	position: relative;
 	margin-bottom: 80px;
 }
 
-.grid-col.col2 li {
+.grid-col.col2 > .col, .grid-col.col2 > li {
 	width: 50%;
 }
 
-.grid-col.col3 li {
+.grid-col.col3 > .col, .grid-col.col3 > li {
 	width: 33.3333%;
 }
 
-.grid-col.col4 li {
+.grid-col.col4 > .col, .grid-col.col4 > li {
 	width: 25%;
 }
 
-.grid-col.col5 li {
+.grid-col.col5 > .col, .grid-col.col5 > li {
 	width: 20%;
 }
 
-.grid-col.col6 li {
+.grid-col.col6 > .col, .grid-col.col6 > li {
 	width: 16.6666%;
+}
+
+.grid-col-inline {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 }
 
 .lst > li {
 	position: relative;
 	padding-left: 12px;
+	font-size: 14px;
 }
 
 .lst.dot > li::before {
@@ -3198,46 +3217,24 @@ button.swiper-pagination-bullet {
 
 .icon.purchase-step05 {
 	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-purchase-step01.png");
+	background-image: url("../../resources-pc/images/icons/ico-purchase-step05.png");
 	background-position: center;
 	-webkit-background-size: auto auto;
 	   -moz-background-size: auto;
 	        background-size: auto;
 	width: 93px;
-	height: 98px;
+	height: 95px;
 }
 
 .icon.purchase-step06 {
 	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-purchase-step02.png");
+	background-image: url("../../resources-pc/images/icons/ico-purchase-step06.png");
 	background-position: center;
 	-webkit-background-size: auto auto;
 	   -moz-background-size: auto;
 	        background-size: auto;
-	width: 109px;
-	height: 79px;
-}
-
-.icon.purchase-step07 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-purchase-step03.png");
-	background-position: center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-	width: 106px;
-	height: 70px;
-}
-
-.icon.purchase-step08 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-purchase-step04.png");
-	background-position: center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-	width: 81px;
-	height: 100px;
+	width: 115px;
+	height: 96px;
 }
 
 .icon.heart-off {
@@ -3315,6 +3312,171 @@ button.swiper-pagination-bullet {
 	        background-size: auto;
 	width: 67px;
 	height: 91px;
+}
+
+.icon.pannel01 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel01.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 57px;
+	height: 41px;
+}
+
+.icon.pannel02 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel02.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 43px;
+	height: 43px;
+}
+
+.icon.pannel03 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel03.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 65px;
+	height: 48px;
+}
+
+.icon.pannel04 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel04.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 68px;
+	height: 45px;
+}
+
+.icon.pannel05 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel05.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 69px;
+	height: 45px;
+}
+
+.icon.pannel06 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel06.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 43px;
+	height: 45px;
+}
+
+.icon.pannel07 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel07.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 38px;
+	height: 44px;
+}
+
+.icon.pannel08 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel08.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 41px;
+	height: 11px;
+}
+
+.icon.fee01 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-fee01.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 66px;
+	height: 56px;
+}
+
+.icon.fee02 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-fee02.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 54px;
+	height: 55px;
+}
+
+.icon.fee03 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-fee03.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 60px;
+	height: 47px;
+}
+
+.icon.fee04 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-fee04.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 43px;
+	height: 59px;
+}
+
+.icon.etc-info01 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-etc-info01.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 71px;
+	height: 58px;
+}
+
+.icon.etc-info02 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-etc-info02.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 76px;
+	height: 58px;
+}
+
+.icon.etc-info03 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-etc-info03.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 50px;
+	height: 61px;
 }
 
 button.active .filter {

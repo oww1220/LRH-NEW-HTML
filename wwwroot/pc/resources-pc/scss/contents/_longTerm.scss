@@ -1,138 +1,253 @@
 .longTerm-container{
     padding-bottom:100px;     
 
-    .longTerm-benefit-section{
-        .tab-cont-inner, .tab-cont-inner2{
-            padding:30px 0;            
+    .detail-layer-nav-wrap{
+        height:176px;
+        margin-bottom:80px;
+    
+        &.fixed{             
+            .detail-layer-nav{
+                position: fixed;
+                top: 0;
+                z-index:10;
+                background-color:#fff;
+    
+            }
+        }  
+    }
+    .section-indicator {  
+        .detail-layer-nav{
+            position:relative;
+            @include innerType2Width;
+            @include Align-between-top;
+            border-top:1px solid #eee;
+            border-bottom: 1px solid #eee;
+            box-sizing: border-box;            
+    
+            button{
+                height:176px;
+                padding: 40px;
+                font-size:14px;
+    
+                .icon{height:48px; margin-bottom:30px;}
+        
+                &.active{
+                    position:relative;
+                    @include Bold;
+                    
+                    &:after{
+                        content:"";
+                        @include Position($left:0, $bottom:-1px);
+                        display:block;
+                        width:100%;
+                        height:4px;
+                        background-color:#ff404b;
+                        z-index: 5;
+                    }
+                }
+            }
+               
         }
+    }   
+
+    .section-content{
+
         .tab-cont-inner{
-            .tit-size-big{
-                padding:30px 0;
+            padding:30px 0;
+
+            .big-tit{
+                @include Bold;
+                font-size:32px;
+                margin:30px 0;
             }
-            .dot-list{margin-bottom:60px;}
-            > .img-box{
+            .img-box{
+                padding:40px 0;
                 text-align:center;
+            }
+            .view-box{
                 padding-bottom:60px;
-                margin-bottom: 60px;
-                border-bottom:1px solid #e7e7e7;
+                border-bottom:1px solid $border-grey;
+            }
+            .grid-col-inline{
+                padding:120px 0;
+                
+                .col{ margin-right:60px;}
+                .img-box{text-align:left; padding:0 0 60px;}
+                .txt{
+                   font-size:14px;        
+                   margin-bottom:30px;  
+                }
+                .btn-box{
+                   @include Align-top-left-column;
+                   .btn{
+                       @include Bold;
+                       font-size:24px;
+                       padding:0;
+                       margin:0 0 20px;
+                       height:auto;
+
+                       .icon{margin:0 8px;}
+                    }
+                    .btn-round{
+                        overflow:hidden;
+                        width:200px;
+                        height:60px;
+                        font-size:18px;
+                        border:1px solid #2d2d2d;
+                        border-radius:30px;
+                        box-sizing:border-box;
+                    }
+                }
             }
 
+            .indicator-area{
+                padding-bottom:80px;
+                
+                .menu-list{
+                    @include Align-between;
 
-            .benefit-list{
-                @include Inline-align-top-left-flex-wrap;
-                padding:60px 0;
+                    li{               
+                        button{
+                            @include Align-top-column;
+                            border:none;
+                            height:auto;
+                            font-size:1rem;
+                            color:#54585b;
 
-                > li{
-                    padding-right:70px;
-
-                    .img-box{
-                        margin-bottom:60px;                        
-                    }
-                    .txt{margin-bottom:30px;}
-                    .link-box, .link-box2{
-                        a{                            
-                            @include Bold;                          
-                            margin-bottom:10px;
+                            .tit{border-bottom:1px solid transparent;}
                         }
-                    }
-                    .link-box{
-                        a{
-                            @include Align-middle-left;
-                            font-size:24px;
-
-                            .icon{margin-left:10px;}
+                        .icon{
+                            display:block;
+                            width: 175px;
+                            height: 120px;
+                            background:green;
+                            margin-bottom:34px;
                         }
-                    }
-                    .link-box2{
-                        a{
-                            @include Align-middle;
-                            width:200px;
-                            height:60px;
-                            font-size:18px;
-                            border-radius:30px;
-                            border:1px solid #2d2d2d;
 
-                            .icon{margin-right:10px;}
+                        &.active{
+                            button{
+                                @include Bold;
+                                color:#2f2f2f;
+                                .tit{border-color:#2f2f2f;}
+                            }
                         }
                     }
                 }
             }
+            .tit-size-mid{
+                @include Bold;
+                font-size:22px;
+                margin-bottom:30px;
+            }
+            .txt{
+                 margin-bottom:30px;
+
+                strong{@include Bold;}
+            }
+            .grid-col{
+                .col{margin-bottom:60px;}
+            }
+            .grid-col-inline2{
+                @include Inline-align-top-left;
+
+                .col{ margin:0 20px; text-align:left;}
+                .img-box{padding:0 0 40px; text-align:left;}
+
+            }
+            .cont-area{
+                text-align:center;
+
+                .img-box{padding-top:0;}
+                .lst{
+                    display:inline-block;
+                    text-align:left;
+                }
+                .inline-block{
+                    .lst{display:block;}
+                }
+            }
+            .tab-cont2{
+                .tab-cont-inner{padding:0 40px;}
+            }
+            
         }
 
-        .benefitTab2{
-            .tab-menu-list{
-                @include Align-between-top;
-                margin-bottom:80px;
+    }
+    .benefit-section{
+        .lst{            
+            > li{
+                margin-bottom:24px;
+
+                > ul{margin-top:20px;}
 
                 li{
-                    button{
-                        display:block;
-                        height:auto;
-                        font-size:18px;
-                        border:none;
-                        color:#2f2f2f;
-
-                        img{display:block; margin-bottom:30px;}
-                    }
-
-                    &.active{
-                        @include Bold;
-                        span{border-bottom:1px solid #2f2f2f;}     
-                    }
+                    margin-bottom:10px;
                 }
             }
-
-            .dot-list, .num-lst, .hypen-list, .bul-lst{
-                > li{
-                    margin:25px 0;
-
-                    p{margin-top:25px;}
-                }
+            
+            li{
+                &:last-of-type{margin-bottom:0;}
             }
-            .one-lst{margin:25px 0;}
-            .num-lst{
-                > li{@include Bold;}
-                .dot-list, .one-lst{@include Regular;}                
+
+            + ul{margin-top:30px;}
+        }
+    }
+
+    .explain-cont{
+        .row{
+            padding:30px 0;
+
+        }
+        .tit-size-mid{
+            @include Bold;
+            font-size:22px;
+            margin-bottom:30px;
+        }
+        .txt{
+             margin-bottom:30px;
+
+            strong{@include Bold;}
+        }
+        .descri-box{
+            margin:60px 0 0;
+            > dt{
+                @include Bold;
+                font-size:18px;
+                margin-bottom:25px;
             }
-            .img-box{margin-bottom:40px; text-align:center;}
-            .tit-size-mid{margin-bottom:40px; text-align:center;}
-
-            .benefitTab2-cont01{
-                .descri-box{
-                    @include Align-box;
-                    
-                    > li{
-                        width:50%;
-                        margin-bottom:35px;
-
-                        .tit-size-mid{margin-bottom:30px; text-align:left;}                        
-                    }
-                }
-            }
-            .benefitTab2-cont02, .benefitTab2-cont03, .benefitTab2-cont06{                                
-                .center-box{
-                    width:640px;
-                    margin:0 auto;
-                }
-            }
-            .benefitTab2-cont04, .benefitTab2-cont05{
-                .descri-box{
-                    @include Align-box;
-                    padding:0 20px;
-                    
-                    .col{
-                        width:50%;
-                        padding:0 20px;
-                        box-sizing: border-box;
-
-
-                    }
-
-                }
-            }
-            .benefitTab2-cont06{
-
+            > dd{
+                margin-bottom:60px;
             }
         }
+    }
+    .tbl-box{
+        margin-bottom:20px;
+    
+        .tit{
+            @include Bold; 
+            font-size:18px; 
+            margin-bottom:30px;
+        }
+        table{
+            width:100%;
+            border-top:1px solid #e7e7e7;
+            
+            th, td{
+                padding:30px; 
+                text-align:center; 
+                border-bottom:1px solid #e7e7e7; 
+                border-right:1px solid #e7e7e7;
+                color:#54585a; 
+                vertical-align: middle;
+            }
+            thead th, td{
+                &:last-of-type{border-right:none;}
+            }
+            th{background-color:#fafafa;}
+            .align-l{text-align:left;}
+    
+        }
+    
+        ~ .tbl-box{margin-top:60px;}
     }
 }
