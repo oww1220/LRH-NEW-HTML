@@ -1077,6 +1077,15 @@ if($('.shor-wrap').length){
         logic();
     });
 }
+
+//단기렌터카 기사포함단기렌터카 대여기간
+if($('.shor-wrap').length){
+    MUI.event.toggle('.shor-wrap .btn-schedule-toggle', '.shor-wrap .schedule-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
 /* -------------------------------------------------단기렌터카 end*/
     
     //일반 레이어팝업 테스트 ---추후삭제

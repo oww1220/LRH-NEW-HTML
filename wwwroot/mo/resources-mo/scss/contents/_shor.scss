@@ -1078,6 +1078,110 @@
                                 }
                             }
                         }
+                        .input-date-box{
+                            @include Align-between;
+                            .btn-schedule-toggle{
+                                @include Position($top: 50%, $right: 1.3rem);
+                                transform: translateY(-50%);
+                            }
+                        }
+                        .schedule-toggle-cont{
+                            border: 1px solid #f1f1f1;
+                            border-radius: .4rem;
+                            display:none;
+                            margin-top:.9rem;
+                            .calendar-wrap{
+                                overflow-y: auto;
+                                height:34.2rem;
+                                padding:1.6rem 0;
+                                margin:0 1.7rem;
+                                .calendar-tit{
+                                    font-size:1.4rem;
+                                    @include Bold;
+                                    padding:.6rem 0;
+                                    text-align:center;
+                                }
+                                .table{
+                                    border:none;
+                                    thead{
+                                        th{
+                                            margin:.9rem 0;
+                                            padding:.7rem;
+                                            text-align: center;
+                                            @include Bold;
+                                            font-size:1.1rem;
+                                            border:0 none;
+                                        }
+                                    }
+                                    tbody{
+                                        td{
+                                            padding:.9rem 0;
+                                            text-align: center;
+                                            border:0 none;
+                                            .btn{
+                                                padding:0;
+                                                height:2rem;
+                                                color:#54585a;
+                                                @include Regular;
+                                                font-size:1rem;
+                                            }
+                                            &.today{
+                                                .btn{
+                                                    width:40%;
+                                                    border-bottom: 1px solid #a02a3d;
+                                                    padding-bottom:.2rem;
+                                                    @include Bold;
+                                                    color:#a02a3d;
+                                                }
+                                            }
+                                            &.start{
+                                                .btn{
+                                                    width:100%;
+                                                    background: rgb(254,43,123);
+                                                    background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                                    border-radius: 1.7rem 0 0 1.7rem;
+                                                    @include Bold;
+                                                    color:#fff;   
+                                                }
+                                            }
+                                            &.during{
+                                                .btn{
+                                                    width:100%;
+                                                    background: rgb(254,43,123);
+                                                    @include Bold;
+                                                    color:#fff;   
+                                                }
+                                            }
+                                            &.end{
+                                                .btn{
+                                                    width:100%;
+                                                    background: rgb(254,43,123);
+                                                    background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                                    border-radius: 0 1.7rem 1.7rem 0;
+                                                    @include Bold;
+                                                    color:#fff;   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .detail-layer-cont-pchase{
+                            padding:1.7rem 0 2.2rem 0;
+                            @include Align-between;
+                            & > span{
+                                @include Bold;
+                            }
+                            & > em{
+                                color:#da291c;
+                                font-size:1.8rem;
+                                @include Bold;
+                                & > span{
+                                    font-size:1.2rem;
+                                }
+                            }
+                        }
                     }
                 }
                 &.item-step4 {
@@ -1128,10 +1232,6 @@
                                 }
                             }
                         }
-                        .guide {
-                            padding-bottom:1.7rem;
-                            margin-top:0;
-                        }
                         .table{
                             margin-top:.9rem;
                             border-radius:0;
@@ -1152,6 +1252,36 @@
                                     display:block;
                                     font-size:1rem;
                                     color:#ed1c24;
+                                }
+                            }
+                        }
+                        ul {
+                            label {
+                                height: 3.7rem;
+                                &::after {
+                                    @include Position($top: 50%, $right: 1.2rem);
+			                        transform: translateY(-50%);
+                                }
+                            }
+                        }
+                        .info-box{
+                            @include Align-between;
+                            background-color:#877669;
+                            border-radius: 1rem;
+                            height:4.3rem;
+                            @include Bold;
+                            padding:0 1.3rem;
+                            margin-top:1.7rem;
+                            b{
+                                color:#fff;
+                                font-size:1.4rem;
+                            }
+                            em{
+                                color:#fff;
+                                font-size:1.8rem;
+                                span{
+                                    font-size:1.2rem;
+                                    margin-left:.4rem;
                                 }
                             }
                         }
@@ -1466,6 +1596,185 @@
                         }
                     }
                 }
+                &.item-step11 {
+                    h3 {
+                        margin-bottom:1.7rem;
+                        @include Align-between;
+                    }
+                    .item-cont {
+                        padding: 0 1.7rem;
+                    }
+                    .detail-layer-inputT-email{
+                        display:flex;
+                        width:100%;
+                        margin-left:0;
+                        li{
+                            position: relative;
+                            &:first-child{
+                                width:60%;
+                            }
+                            &:last-child{
+                                width:40%;
+                            }
+                            & > input{
+                                border:1px solid #EBEBEB;
+                                border-radius: 1rem 0 0 1rem;
+                                background-color: #fff;
+                                height: 4.1rem;
+                                width:100%;
+                                padding:0 1.2rem;
+                                border-right:0;
+                                position: relative;
+                            }
+                            & > em{
+                                display:block;
+                                content:"@";
+                                @include Position($top: 50%, $right: 0);
+                                transform: translateY(-50%);
+                            }
+                            &:last-child > input{
+                                border-radius: 0 1rem 1rem 0;
+                                border:1px solid #EBEBEB;
+                                border-left:0;
+                            }
+                            & > .selectbox{
+                                width:100%;
+                                height: 4.1rem;
+                                border-radius: 0 1rem 1rem 0; 
+                                background-color: #fff;
+                                border-color:#EBEBEB;
+                                font-size:1.2rem;
+                                border-left:0;
+                            }
+                        }
+                    }
+                    
+                }
+                &.item-step12 {
+                    h3 {
+                        margin-bottom:1.7rem;
+                        @include Align-between;
+                    }
+                    .item-cont {
+                        padding: 0 1.7rem;
+                        .detail-layer-inputT{
+                            margin-top:.9rem;
+                            .detail-layer-inputT-number{
+                                display:flex;
+                                width:100%;
+                                margin-left:0;
+                                li{
+                                    position: relative;
+                                    &:first-child{
+                                        width:68%;
+                                        margin-right:.4rem;
+                                    }
+                                    &:last-child{
+                                        width:30%;
+                                    }
+                                    & > input{
+                                        border:1px solid #EBEBEB;
+                                        border-radius: 1rem;
+                                        background-color: #fff;
+                                        height: 4.1rem;
+                                        width:100%;
+                                        padding:0 1.2rem;
+                                    }
+                                    & > button{
+                                        width:100%;
+                                        height: 4.1rem;
+                                        border-radius: 1rem; 
+                                        background-color:#54585a;
+                                        border-color:#54585a;
+                                        color:#fff;
+                                        font-size:1.2rem;
+                                    }
+                                }
+                                &.list-type-col3{
+                                    li{
+                                        width:47%;
+                                        margin-right:.4rem;
+                                        &:first-child{
+                                            width:20%;
+                                        }
+                                        &:last-child{
+                                            width:30%;
+                                            margin-right:0;
+                                        }
+                                    }
+                                }
+                            }
+                            div.inputT {
+                                & > input { 
+                                    width:50%;
+                                    margin-right:1rem;
+                                }
+                            }
+                        }
+                        .detail-iconBox{
+                            margin-left: -.6rem;
+                            label {
+                                border:0 none;
+                                border-radius: 0;
+                                @include Regular;
+                                height:auto;
+                                &:after {
+                                    width: 1.7rem;
+                                    height: 1.7rem;
+                                    margin-top: -.85rem;
+                                    left:.5rem;
+                                }
+                            }
+                            input:checked + label {
+                                @include Regular;
+                            }
+                            input[type='checkbox'] + label:after{
+                                @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                            }
+                            input[type='checkbox']:checked + label:after{
+                                @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                            }
+                        }
+                        .detail-layer-textarea {
+                            margin-top:.9rem;
+                        }
+                    }
+                }
+                &.item-step13 {
+                    .chk-agree-list{
+                        margin-top:0;
+                        padding: 0 1.3rem;
+                        .chk-agree-cols{
+                            & > li{
+                                border-bottom:0;
+                                .inputC02{
+                                    label {
+                                        line-height: 1;
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                                            width: 1.2rem;
+                                            height: .9rem;
+                                        }
+                                        span{
+                                            font-size:1.1rem;
+                                            color:#999;
+                                            @include Regular;
+                                        }
+                                    }
+                                    input:checked + label {
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                                        }
+                                        span{
+                                            color:#2f2f2f;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
                 .guide {
                     font-size: 1.1rem;
                     line-height: 1.3;
