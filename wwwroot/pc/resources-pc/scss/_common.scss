@@ -331,9 +331,14 @@ html, body{
 	border-bottom:1px solid #54585a;
 }
 
+$border-grey:#e7e7e7;
+
 
 
 //공통 사항 정리- 201105
+@mixin innerType2Width {
+    width:1200px;
+}
 @mixin roundBox {
 	border-radius: 6px;
 }
@@ -559,36 +564,39 @@ html, body{
 .grid-col{
 	@include Align-box;
 
-	li{
+	> li{
 		position:relative;
 		margin-bottom:80px;
 	}
 
 	&.col2{
-		li{
+		>.col, > li{
 			width:50%;
 		}
 	}
 	&.col3{
-		li{
+		>.col, > li{
 			width:33.3333%;
 		}
 	}
 	&.col4{
-		li{
+		>.col, > li{
 			width:25%;
 		}
 	}
 	&.col5{
-		li{
+		>.col, > li{
 			width:20%;
 		}
 	}	
 	&.col6{
-		li{
+		>.col, > li{
 			width:16.6666%;
 		}
 	}
+}
+.grid-col-inline{
+	@include Inline-align-top-left;
 }
 
 .lst {
@@ -596,6 +604,7 @@ html, body{
 	> li{
 		position:relative;
 		padding-left:12px;
+		font-size:14px;
 	}
 	
 	&.dot{
