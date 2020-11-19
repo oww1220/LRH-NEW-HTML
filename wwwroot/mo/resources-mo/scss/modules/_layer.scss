@@ -1463,7 +1463,6 @@ body.fixed {
 				}
 			}
 		}
-
 	}
 
 	//팝업 형태
@@ -1476,6 +1475,22 @@ body.fixed {
 			display: block !important;
 			opacity: 1 !important;
 		}
+		.pop-top {
+			background-color: #fff;
+			@include Align-between;
+			height: 5.5rem;
+			padding:0 2.1rem;
+			border-radius:1rem 1rem 0 0;
+			h4 {
+				font-size: 1.4rem;
+				color:#000;
+				@include Bold;
+			}
+			.layer-pop-close {
+				margin-top: -1.3rem;
+			}
+		
+		}
 		.pop-inner {
 			overflow: hidden;
 			border-radius:0.625rem;
@@ -1485,6 +1500,96 @@ body.fixed {
 		}
 		.pop-cont {
 			padding:4.0625rem 1.25rem 2.5rem;position: relative;-webkit-box-sizing:border-box;box-sizing:border-box;
+		}
+
+		//대여 차량 상세 팝업
+		&.type-detail-info {
+			.pop-top {
+				@include Background($sprite:'pop-top-bg-rectangle', $size:100%, $position:center center, $path:'bgs');
+				@include Align-between;
+				height: 5.5rem;
+				padding:0 2.1rem;
+				border-radius:1rem 1rem 0 0;
+				h4 {
+					font-size: 1.6rem;
+					color:#fff;
+					@include Bold;
+				}
+				.layer-pop-close {
+					margin-top: 0;
+				}
+			}
+			.pop-inner {
+				overflow: hidden;
+				background-color:#fff;
+				position: relative;
+				margin:0;
+				border-radius:0 0 1rem 1rem;
+			}
+			.pop-cont {
+				padding:3.4rem 2.1rem 2.6rem;
+				.detail-layout {
+					position: relative;
+					.detail-view-img{
+						margin:0 auto;
+						width: 21.2rem;
+						img{
+							width: 21.2rem;
+						}
+					}
+					.detail-view-top {
+						background-color: #fff;
+						padding:2.6rem 0 1.7rem;
+						.normal{
+							color:#2B2B2B;
+							& > strong{
+								font-size:1.8rem;
+								@include Bold;
+							}
+						}
+					}
+					.detail-layer-cont-terms{
+						background-color: #fff;
+						padding-bottom:2.1rem;
+						& > .table{
+							border-top:1px solid #EBEBEB;
+							border-bottom:1px solid #EBEBEB;
+							padding-bottom:1.7rem;
+							& > table tr th{
+								border-top:0;
+								@include Bold;
+								@include Align-middle-left;
+								color:#2f2f2f;
+								padding:1.7rem 0 0;
+								& > i {
+									margin-right:.7rem;
+								}
+							}
+							& > table tr td{
+								border-top:0;
+								text-align: right;
+								padding-right:0;
+								padding:1.7rem 0 0;
+								& > b{
+									@include Normal;
+									color:#54585a;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+					.detail-layer-submit {
+						button {
+							margin:0 auto;
+							width:8rem;
+							height:3.9rem;
+							color:#54585a;
+							border-color: #d2d2d2;
+							border-radius: 1rem;
+						}
+					}
+				}
+			}
 		}
 	}
 	
