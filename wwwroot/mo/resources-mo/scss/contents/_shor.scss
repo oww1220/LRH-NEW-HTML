@@ -373,8 +373,7 @@
             .detail-view-img{
                 @include Align-between;
                 padding:0 1.7rem 1.7rem;
-                margin:0 auto;
-                //mix-blend-mode: multiply;
+                margin:0 auto;  
                 img{
                     //mix-blend-mode: multiply;
                 }
@@ -1627,6 +1626,12 @@
                             position: relative;
                             &:first-child{
                                 width:60%;
+                                &:after {
+                                    display:block;
+                                    content:"@";
+                                    @include Position($top: 45%, $right: 0);
+                                    transform: translateY(-45%);
+                                }
                             }
                             &:last-child{
                                 width:40%;
@@ -1644,12 +1649,7 @@
                                     @include Background($sprite:'ico-arrow-down', $size:0.9rem, $type:'png', $position:center right 0.9rem);
                                 }
                             }
-                            & > em{
-                                display:block;
-                                content:"@";
-                                @include Position($top: 50%, $right: 0);
-                                transform: translateY(-50%);
-                            }
+                            
                             &:last-child > input{
                                 border-radius: 0 1rem 1rem 0;
                                 border:1px solid #EBEBEB;
@@ -1657,7 +1657,6 @@
                                 text-align:right;
                                 padding-right:2.4rem;
                             }
-                            
                         }
                     }
                     
