@@ -415,6 +415,7 @@
                         & > b{
                             @include Normal;
                             color:#54585a;
+                            vertical-align: top;
                         }
                         & > em{
                             display:inline-block;
@@ -1168,7 +1169,7 @@
                             }
                         }
                         .detail-layer-cont-pchase{
-                            padding:1.7rem 0 2.2rem 0;
+                            padding:1.7rem 0 1.1rem;
                             @include Align-between;
                             & > span{
                                 @include Bold;
@@ -1603,6 +1604,20 @@
                     }
                     .item-cont {
                         padding: 0 1.7rem;
+                        .detail-layer-cont {
+                            padding:0 1.2rem;
+                            margin-bottom:2.6rem;
+                            > div {
+                                @include Align-top-left;
+                                strong {
+                                    @include Bold;
+                                    width:25%;
+                                }
+                            }
+                            > div + div {
+                                padding-top:2.6rem;
+                            }
+                        }
                     }
                     .detail-layer-inputT-email{
                         display:flex;
@@ -1657,20 +1672,42 @@
                     }
                     .item-cont {
                         padding: 0 1.7rem;
+                        .detail-layer-cont {
+                            padding:0 1.2rem;
+                            margin-bottom:2.6rem;
+                            > div {
+                                @include Align-top-left;
+                                strong {
+                                    @include Bold;
+                                    width:25%;
+                                }
+                                b {
+                                    @include Bold;
+                                }
+                            }
+                            > div + div {
+                                padding-top:2.6rem;
+                                b {
+                                    margin-top:-.2rem;
+                                    line-height:1.2;
+                                }
+                                
+                            }
+                        }
                         .detail-layer-inputT{
                             margin-top:.9rem;
                             .detail-layer-inputT-number{
                                 display:flex;
+                                justify-content: space-between;
                                 width:100%;
                                 margin-left:0;
                                 li{
                                     position: relative;
                                     &:first-child{
-                                        width:68%;
-                                        margin-right:.4rem;
+                                        width:77%;
                                     }
                                     &:last-child{
-                                        width:30%;
+                                        width:21%;
                                     }
                                     & > input{
                                         border:1px solid #EBEBEB;
@@ -1712,7 +1749,8 @@
                             }
                         }
                         .detail-iconBox{
-                            margin-left: -.6rem;
+                            margin:.9rem 0 1.7rem -.6rem;
+
                             label {
                                 border:0 none;
                                 border-radius: 0;
@@ -1747,6 +1785,9 @@
                         .chk-agree-cols{
                             & > li{
                                 border-bottom:0;
+                                .chk-agree-top {
+                                    padding-left:1.2rem;
+                                }
                                 .inputC02{
                                     label {
                                         line-height: 1;
