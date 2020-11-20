@@ -1,55 +1,6 @@
 .longTerm-container{
     padding-bottom:100px;     
-
-    .detail-layer-nav-wrap{
-        height:176px;
-        margin-bottom:80px;
-    
-        &.fixed{             
-            .detail-layer-nav{
-                position: fixed;
-                top: 0;
-                z-index:10;
-                background-color:#fff;
-    
-            }
-        }  
-    }
-    .section-indicator {  
-        .detail-layer-nav{
-            position:relative;
-            @include innerType2Width;
-            @include Align-between-top;
-            border-top:1px solid #eee;
-            border-bottom: 1px solid #eee;
-            box-sizing: border-box;            
-    
-            button{
-                height:176px;
-                padding: 40px;
-                font-size:14px;
-    
-                .icon{height:48px; margin-bottom:30px;}
-        
-                &.active{
-                    position:relative;
-                    @include Bold;
-                    
-                    &:after{
-                        content:"";
-                        @include Position($left:0, $bottom:-1px);
-                        display:block;
-                        width:100%;
-                        height:4px;
-                        background-color:#ff404b;
-                        z-index: 5;
-                    }
-                }
-            }
-               
-        }
-    }   
-
+ 
     .section-content{
 
         .tab-cont-inner{
@@ -193,36 +144,14 @@
         }
     }
 
-    .explain-cont{
-        .row{
-            padding:30px 0;
-
-        }
-    }
     .explain-cont, .form-cont{
         .tit-size-mid{
             @include Bold;
             font-size:22px;
             margin-bottom:30px;
         }
-        .txt{
-             margin-bottom:30px;
-
-            strong{@include Bold;}
-        }
     }
-    .tit{@include Bold;}
-    .define-area{
-        margin:60px 0 0;
-        > dt{
-            @include Bold;
-            font-size:18px;
-            margin-bottom:25px;
-        }
-        > dd{
-            margin-bottom:60px;
-        }
-    }
+   
     .box-between{
         align-items: flex-start;
         > .col {
@@ -250,101 +179,7 @@
             width:50%;
         }
     }
-    .tbl-box{
-        margin-bottom:20px;
     
-        .tit{
-            @include Bold; 
-            font-size:18px; 
-            margin-bottom:30px;
-        }
-        table{
-            width:100%;
-            border-top:1px solid #e7e7e7;
-            
-            th, td{
-                padding:30px; 
-                text-align:center; 
-                border-bottom:1px solid #e7e7e7; 
-                border-right:1px solid #e7e7e7;
-                color:#54585a; 
-                vertical-align: middle;
-            }
-            thead th, td{
-                &:last-of-type{border-right:none;}
-            }
-            th{background-color:#fafafa;}
-            .align-l{text-align:left;}
-
-            + .lst{margin-top:20px;}
-    
-        }
-    
-        ~ .tbl-box{margin-top:60px;}
-    }
-    .purchase-step{
-        > li{
-            text-align:center;
-            padding:0 10px;
-            box-sizing: border-box;
-    
-            &:after, &:before{
-                content:"";
-                display:block;
-            }
-            
-            &:before{			
-                @include Position($top:58px, $right:0);
-                @include arrow;
-            }
-            &:after{
-                @include Position($top:60px, $right:3px);
-                @include arrowInner;
-                z-index:5;
-            }
-            .img-item{
-                @include Align-middle;
-                height:150px;
-
-                .circle{
-					width:130px;
-					height:130px;
-					border-radius:130px;
-					border:1px solid #f2f2f2;
-					background-color:#fafafa;
-				}
-            }
-            .tit{@include Bold;}
-            .txt{text-align:center; margin-top:24px;}
-            .lst{margin-top:24px;}
-    
-            &:last-of-type{
-                &:after, &:before{display:none;}
-            }
-        }
-        &.grid-col.col3 {
-            li{
-                &:nth-of-type(3n){
-                    &:after, &:before{display:none;}
-                }
-            }
-        }
-        &.grid-col.col4 {
-            li  {
-                &:nth-of-type(4n){
-                    &:after, &:before{display:none;}
-                }
-            }                
-        }       
-        
-        &.simple{
-            li {
-                &:after, &:before{
-                    display:none;
-                }
-            }
-        }
-    }
     .qna-section{
         .qna-big-tit{
             @include Bold;

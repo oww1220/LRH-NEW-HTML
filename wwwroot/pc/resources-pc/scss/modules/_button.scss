@@ -141,6 +141,27 @@
 		&.active:after {
 			transform: rotate(180deg);
 		}
+		&-wide{
+			position:relative;
+			width:100%;
+			font-size: inherit;
+			
+			&:after {
+				display: block;
+				content: '';
+				@include Position($top: 50%, $right: 0%);
+				@include Background($sprite:'ico-arrow-down', $size:14px, $position:center center);
+				width: 14px;
+				height: 14px;
+				margin: -7px 0 0 0;
+				transition: transform .5s;
+				transform: rotate(0deg);
+			}
+
+			&.active:after {
+				transform: rotate(180deg);
+			}
+		}
 	}
 	&-simple{
 		border: 1px solid #EBEBEB;
