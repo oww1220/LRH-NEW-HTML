@@ -632,8 +632,25 @@
                     .detail-layer-inputT:first-child{
                         margin-top: 0;
                     }
+                    //201109 : 운전면허등록(선택) > 발급일, 만료일 영역 변경으로 추가
                     .detail-layer-inputT{
                         margin-top:.9rem;
+                    }
+                    .detail-layer-inputT-tit{
+                        @include Bold;
+                        @include Align-between;
+                        justify-content: flex-start;
+                        & > span{
+                            font-size:1rem;
+                            @include Regular;
+                            b{
+                                font-size:1rem;
+                                color:#ff404b;
+                            }
+                        }
+                        button{
+                            padding:0 0 0 .4rem;
+                        }
                     }
                     .detail-layer-inputT-number{
                         margin-left:0;
@@ -656,6 +673,31 @@
                         }
                         .inputT:first-child:after{
                             display:none;
+                        }
+                    }
+
+                    //201109 : 운전면허등록(선택) > 발급일, 만료일 영역 변경으로 추가
+                    .detail-layer-inputT-number03{
+                        display:flex;
+                        width:100%;
+                        margin:.9rem 0 0 0;
+                        li{
+                            position: relative;
+                            width:32.333%;
+                            &:first-child{
+                                margin-right:.4rem;
+                            }
+                            &:last-child{
+                                margin-left:.4rem;
+                            }
+                            & > input{
+                                border:1px solid #EBEBEB;
+                                border-radius: .5rem;
+                                background-color: #fff;
+                                height: 4.1rem;
+                                width:100%;
+                                padding:0 1.2rem;
+                            }
                         }
                     }
                     ul {
