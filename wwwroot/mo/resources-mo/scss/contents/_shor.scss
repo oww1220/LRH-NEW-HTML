@@ -88,6 +88,7 @@
                 @include Bold;
                 display:block;
                 font-size:1.4rem;
+                word-break: break-all;
             }
             & > span{
                 display:block;
@@ -396,12 +397,16 @@
                     border-top:1px solid #EBEBEB;
                     border-bottom:1px solid #EBEBEB;
                     margin-bottom:.9rem;
+                    & > table {
+                        table-layout: fixed;
+                    }
                     & > table tr th{
                         border-top:0 none;
-                        @include Bold;
                         color:#2f2f2f;
                         padding:1rem 0;
+                        @include Bold;
                         @include Align-middle-left;
+                        word-break: break-all;
                         & > i{
                             margin-right:.7rem;
                         }
@@ -415,6 +420,7 @@
                             @include Normal;
                             color:#54585a;
                             vertical-align: top;
+                            word-break:break-all;
                         }
                         & > em{
                             display:inline-block;
@@ -1676,9 +1682,12 @@
                                 strong {
                                     @include Bold;
                                     width:25%;
+                                    word-break: break-all;
                                 }
                                 b {
                                     @include Bold;
+                                    word-break: break-all;
+                                    width:75%;
                                 }
                             }
                             > div + div {
