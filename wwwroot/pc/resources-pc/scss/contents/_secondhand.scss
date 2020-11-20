@@ -20,35 +20,6 @@
         }
     }
     
-    .purchase-step{
-        li{
-            text-align:center;
-
-            &:after, &:before{
-                content:"";
-                display:block;
-            }
-            
-            &:before{			
-                @include Position($top:36px, $right:0);
-                @include arrow;
-            }
-            &:after{
-                @include Position($top:38px, $right:3px);
-                @include arrowInner;
-                z-index:5;
-            }
-            &:nth-of-type(4n){
-                &:after, &:before{display:none;}
-            }
-            
-            .img-item{
-                height:150px;
-            }
-            .tit{@include Bold;}
-        }
-    }
-
     //내 차 팔기 서비스 상담 신청
     .section-top{
         text-align:center;

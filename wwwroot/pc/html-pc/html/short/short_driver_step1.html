@@ -43,10 +43,10 @@
 							</a>
 						</li>
 						<li>
-							<a href="">#카라이프</a>
+							<a href="">단기렌터카</a>
 						</li>
 						<li>
-							<a href="">즐거움을 #타방</a>
+							<a href="">기사포함렌터카</a>
 						</li>
 					</ul>			
 				</div>
@@ -57,13 +57,13 @@
 		<div class="short-container">
 			<div class="inner-type2">		
 				<!-- 페이지 타이틀 -->			
-				<div class="page-title">					
-					<h2>상담 신청</h2>					
-				</div>	
+				<section class="section-headline">
+					<h2 class="tit">상담 신청</h2>					
+				</section>
 				<!-- //페이지 타이틀 -->
 
 				<!-- 진행 단계 -->
-				<div class="step-view">
+				<div class="section-top">
 					<ol class="step-list">
 						<li class="active">
 							<span class="icon complete"></span>
@@ -83,427 +83,163 @@
 
 				<!-- 상담 신청 폼 -->
 				<form action="" method="">
-					
-					<section>
-						<h3 class="group-tit">이용고객</h3>
-						<div class="group-cont">
-							<ul class="row grid-col3 check-box">
-								<li>
-									<input type="radio" id="customers01" name="customers">
-									<label for="customers01">외국인 탑승</label>
-								</li>
-								<li>
-									<input type="radio" id="customers02" name="customers">
-									<label for="customers02">장애인 탑승</label>
-								</li>
-								<li>
-									<input type="radio" id="customers03" name="customers">
-									<label for="customers03">만65세 이상 탑승</label>
-								</li>
-								<li>
-									<input type="radio" id="customers04" name="customers">
-									<label for="customers04">기사포함 6개월이상 임차법인</label>
-								</li>
-								<li>
-									<input type="radio" id="customers05" name="customers">
-									<label for="customers05">본인의 결혼식 및 웨딩카</label>
-								</li>
-								<li>
-									<input type="radio" id="customers06" name="customers">
-									<label for="customers06">그 외의 일반고객</label>
-								</li>
-							</ul>
-						</div>	
-					</section>
-					<section>
-						<h3 class="group-tit">대여차량</h3>
-						<div class="group-cont">
-							
-							<div class="srch-box">
-								<select name="" id="" class="selectbox">
-									<option value="">차량을 선택하세요</option>
-									<option value="">선택1</option>
-									<option value="">선택2</option>
-								</select>
-								<button type="button" class="btn btn-black">상세정보</button>
-							</div>
+					<fieldset>
 
-						</div>	
-					</section>
-					<section>
-						<h3 class="group-tit">상품유형</h3>
-						<div class="group-cont">
-							<ul class="row grid-col3 check-box">
-								<li>
-									<input type="radio" id="productTypes01" name="productType">
-									<label for="productTypes01">공항 픽업/센딩</label>
-								</li>
-								<li>
-									<input type="radio" id="productTypes02" name="productType">
-									<label for="productTypes02">
-										공항(픽업/센딩) 후 올데이<br>
-										(1일 10시간)
-									</label>
-								</li>
-								<li>
-									<input type="radio" id="productTypes03" name="productType">
-									<label for="productTypes03">올데이(1일 10시간)</label>
-								</li>
-								<li>
-									<input type="radio" id="productTypes04" name="productType">
-									<label for="productTypes04">웨딩 및 장례</label>
-								</li>
-								<li>
-									<input type="radio" id="productTypes05" name="productType">
-									<label for="productTypes05">골프라운딩</label>
-								</li>
-							</ul>
-						</div>	
-					</section>
-					<section>
-						<h3 class="group-tit">대여 기간</h3>
-						<div class="group-cont schedule-accor">
-							<ul class="row">
-								<li>
-									<label for="" class="tit">대여</label>
-									<div class="inputT">
-										<input type="text" id="" placeholder="선택해 주세요.">
-									</div>
-									<button type="button" class="btn-schedule-toggle" data-target="schedule-toggle-cont" data-on="true" data-siblings="true">
-										<span class="icon date"></span>
-									</button>
-								</li>
-								<li>
-									총 <span>0 시간</span>이용
-								</li>
-								<li>
-									<label for="" class="tit">반납</label>
-									<div class="inputT">
-										<input type="text" id="" placeholder="선택해 주세요.">
-									</div>
-									<button type="button" class="btn-schedule-toggle" data-target="schedule-toggle-cont" data-on="true" data-siblings="true">
-										<span class="icon date"></span>
-									</button>
-								</li>
-							</ul>
-							<div class="schedule-wrap schedule-toggle-cont" style="display:none;">
-								<div class="calendar-wrap">
-									<!-- 
-										달력 
-										
-										*참고 :  상태에 따른 스타일 적용은 td에 클래스 부여										  
-
-										클래스 disabled
-										=> 선택이되어서는 안되는 날짜
-
-										클래스 start
-										=> 선택된 시작날짜
-
-										클래스 end
-										=> 선택된 종료날짜
-
-										클래스 during
-										=> 시작날짜와 종료날짜 사이의 날짜들
-
-										클래스 on
-										=> 선택된 날짜
-
-										클래스 today
-										=> 오늘 날짜
-									-->
-									<ul class="calendar">
-										<li class="col">									
-											<div class="calendar-tit">2020.09</div>
-											<div class="tbl-box">
-												<table>
-													<caption></caption>
-													<colgroup>
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-													</colgroup>
-													<thead>
-														<tr>
-															<th>일</th>
-															<th>월</th>
-															<th>화</th>
-															<th>수</th>
-															<th>목</th>
-															<th>금</th>
-															<th>토</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>															
-															<td></td>
-															<td></td>
-															<td class="disabled">1</td>
-															<td class="disabled">2</td>
-															<td class="disabled">3</td>
-															<td class="disabled">4</td>
-															<td class="disabled">5</td>
-														</tr>
-														<tr>
-															<td class="disabled">6</td>
-															<td class="disabled">7</td>
-															<td class="disabled">8</td>
-															<td class="disabled">9</td>
-															<td class="disabled">10</td>
-															<td class="disabled">11</td>
-															<td class="disabled">12</td>
-														</tr>
-														<tr>															
-															<td class="disabled">13</td>
-															<td class="disabled">14</td>
-															<td class="disabled">15</td>
-															<td class="disabled">16</td>
-															<td class="disabled">17</td>
-															<td class="today"><button type="button" class="btn">18</button></td>
-															<td><button type="button" class="btn">19</button></td>
-														</tr>
-														<tr>
-															
-															<td><button type="button" class="btn">20</button></td>
-															<td class="start"><button type="button" class="btn">21</button></td>
-															<td class="during"><button type="button" class="btn">22</button></td>
-															<td class="end"><button type="button" class="btn">23</button></td>
-															<td><button type="button" class="btn">24</button></td>
-															<td><button type="button" class="btn">25</button></td>
-															<td><button type="button" class="btn">26</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">27</button></td>
-															<td><button type="button" class="btn">28</button></td>
-															<td><button type="button" class="btn">29</button></td>
-															<td><button type="button" class="btn">30</button></td>
-															<td></td>
-															<td></td>
-															<td></td>
-														</tr>
-													</tbody>
-												</table>		
-											</div>							
-										</li>
-										<li class="col">								
-											<div class="calendar-tit">2020.10</div>
-											<div class="tbl-box">
-												<table>
-													<caption></caption>
-													<colgroup>
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-													</colgroup>
-													<thead>
-														<tr>
-															<th>일</th>
-															<th>월</th>
-															<th>화</th>
-															<th>수</th>
-															<th>목</th>
-															<th>금</th>
-															<th>토</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td></td>
-															<td></td>
-															<td></td>
-															<td></td>
-															<td><button type="button" class="btn">1</button></td>
-															<td><button type="button" class="btn">2</button></td>
-															<td><button type="button" class="btn">3</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">4</button></td>
-															<td><button type="button" class="btn">5</button></td>
-															<td><button type="button" class="btn">6</button></td>
-															<td><button type="button" class="btn">7</button></td>
-															<td><button type="button" class="btn">8</button></td>
-															<td><button type="button" class="btn">9</button></td>
-															<td><button type="button" class="btn">10</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">11</button></td>
-															<td><button type="button" class="btn">12</button></td>
-															<td><button type="button" class="btn">13</button></td>
-															<td><button type="button" class="btn">14</button></td>
-															<td><button type="button" class="btn">15</button></td>
-															<td><button type="button" class="btn">16</button></td>
-															<td><button type="button" class="btn">17</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">18</button></td>
-															<td><button type="button" class="btn">19</button></td>
-															<td><button type="button" class="btn">20</button></td>
-															<td><button type="button" class="btn">21</button></td>
-															<td><button type="button" class="btn">22</button></td>
-															<td><button type="button" class="btn">23</button></td>
-															<td><button type="button" class="btn">24</button></td>
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">25</button></td>
-															<td><button type="button" class="btn">26</button></td>
-															<td><button type="button" class="btn">27</button></td>
-															<td><button type="button" class="btn">28</button></td>
-															<td><button type="button" class="btn">29</button></td>
-															<td><button type="button" class="btn">30</button></td>
-															<td><button type="button" class="btn">31</button></td>
-														</tr>
-													</tbody>
-												</table>
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">중고차 매입 서비스 강점</h3>
+							</div>					
+							<div class="form-cont">
+								<div class="row">
+									<ul class="choice-list type-col3">
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio01" name="radio">
+												<label for="radio01">외국인 탑승</label>
 											</div>
 										</li>
-										<li class="col">									
-											<div class="calendar-tit">2020.11</div>
-											<div class="tbl-box">
-												<table>
-													<caption></caption>
-													<colgroup>
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-														<col style="width:14.2%;">
-													</colgroup>
-													<thead>
-														<tr>
-															<th>일</th>
-															<th>월</th>
-															<th>화</th>
-															<th>수</th>
-															<th>목</th>
-															<th>금</th>
-															<th>토</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td><button type="button" class="btn">1</button></td>
-															<td><button type="button" class="btn">2</button></td>
-															<td><button type="button" class="btn">3</button></td>
-															<td><button type="button" class="btn">4</button></td>
-															<td><button type="button" class="btn">5</button></td>
-															<td><button type="button" class="btn">6</button></td>
-															<td><button type="button" class="btn">7</button></td>													
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">8</button></td>
-															<td><button type="button" class="btn">9</button></td>
-															<td><button type="button" class="btn">10</button></td>
-															<td><button type="button" class="btn">11</button></td>
-															<td><button type="button" class="btn">12</button></td>
-															<td><button type="button" class="btn">13</button></td>
-															<td><button type="button" class="btn">14</button></td>													
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">15</button></td>
-															<td><button type="button" class="btn">16</button></td>
-															<td><button type="button" class="btn">17</button></td>
-															<td><button type="button" class="btn">18</button></td>
-															<td><button type="button" class="btn">19</button></td>
-															<td><button type="button" class="btn">20</button></td>
-															<td><button type="button" class="btn">21</button></td>													
-														</tr>
-														<tr>
-															<td><button type="button" class="btn">22</button></td>
-															<td><button type="button" class="btn">23</button></td>
-															<td><button type="button" class="btn">24</button></td>
-															<td><button type="button" class="btn">25</button></td>
-															<td><button type="button" class="btn">26</button></td>
-															<td><button type="button" class="btn">27</button></td>
-															<td><button type="button" class="btn">28</button></td>
-														</tr>
-														<tr>
-															
-															<td><button type="button" class="btn">29</button></td>
-															<td><button type="button" class="btn">30</button></td>
-															<td><button type="button" class="btn">31</button></td>
-															<td></td>
-															<td></td>
-															<td></td>
-															<td></td>
-														</tr>
-													</tbody>
-												</table>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio02" name="radio">
+												<label for="radio02">장애인 탑승</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio03" name="radio">
+												<label for="radio03">만65세 이상 탑승</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio04" name="radio">
+												<label for="radio04">기사포함 6개월이상 임차법인</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio05" name="radio">
+												<label for="radio05">본인의 결혼식 및 웨딩카</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio06" name="radio">
+												<label for="radio06">그 외의 일반고객</label>
 											</div>
 										</li>
 									</ul>
-									<!-- //달력 -->
-
-									<!-- 페이지네이션 -->
-									<div class="pagination-wrap">
-										<button type="button" class="btn btn-paging-prev">이전 달</button>
-										<button type="button" class="btn btn-paging-next">다음 달</button>
-									</div>
-									<!-- //페이지네이션 -->
 								</div>
-								<div class="schedule-bot">
-									<ul class="date-info">
+							</div>
+						</section>
+
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">대여차량</h3>
+							</div>					
+							<div class="form-cont">
+								<div class="row type2">	
+
+									
+									<div class="box-between">	
+										<select name="" id="" class="selectbox">
+											<option value="">차량을 선택하세요.</option>
+											<option value="">선택 1</option>
+											<option value="">선택 2</option>
+										</select>										
+										<button type="button" class="btn btn-black right">상세정보</button>
+									</div>
+								
+								
+
+								</div>
+							</div>
+						</section>
+
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">상품 유형</h3>
+							</div>					
+							<div class="form-cont">
+								<div class="row">
+									<ul class="choice-list type-col3">
 										<li>
-											<div>
-												<span class="tit">대여일시</span>
-												<strong class="date">2020/09/21</strong>
-											</div>
-											<div>
-												<select name="" id="" class="selectbox">
-													<option value="">9시</option>
-													<option value="">10시</option>
-													<option value="">10시</option>
-												</select>
-											</div>
-											<div>
-												
+											<div class="chk-view-box">
+												<input type="radio" id="radio07" name="radio2">
+												<label for="radio07">공항 픽업/센딩</label>
 											</div>
 										</li>
 										<li>
-											
+											<div class="chk-view-box">
+												<input type="radio" id="radio08" name="radio2">
+												<label for="radio08">
+													공항(픽업/센딩) 후 올데이<br>
+													(1일 10시간)
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio09" name="radio2">
+												<label for="radio09">올데이(1일 10시간)</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio10" name="radio2">
+												<label for="radio10">웨딩 및 장례</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio11" name="radio2">
+												<label for="radio11">골프라운딩</label>
+											</div>
 										</li>
 									</ul>
-									<button type="button" class="btn">확인</button>
-								</div>								
+								</div>
 							</div>
-						</div>	
-					</section>
-					<section>
-						<h3 class="group-tit">운행 지역</h3>
-						<div class="group-cont">
-							<ul class="row grid-col4 check-box">
-								<li>
-									<input type="radio" id="area01" name="area">
-									<label for="area01">인천공항 &gt; 서울</label>
-								</li>
-								<li>
-									<input type="radio" id="area02" name="area">
-									<label for="area02">서울시내</label>
-								</li>
-								<li>
-									<input type="radio" id="area03" name="area">
-									<label for="area03">서울/경기</label>
-								</li>
-								<li>
-									<input type="radio" id="area04" name="area">
-									<label for="area04">전국</label>
-								</li>
-							</ul>
-						</div>	
-					</section>
+						</section>
 
-					<div class="btn-box">
-						<a href="" class="btn btn-white">취소</a>
-						<button type="submit" class="btn btn-red">다음</button>
-					</div>
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">운행 지역</h3>
+							</div>					
+							<div class="form-cont">
+								<div class="row">
+									<ul class="choice-list type-col4">
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="area01" name="area">
+												<label for="area01">인천공항 &gt; 서울</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="area02" name="area">
+												<label for="area02">서울시내</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="area03" name="area">
+												<label for="area03">서울/경기</label>
+											</div>
+										</li>
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="area04" name="area">
+												<label for="area04">전국</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						
+
+					</fieldset>
 				</form>
 				<!-- //상담 신청 폼 -->
 				
