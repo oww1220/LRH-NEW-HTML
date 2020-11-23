@@ -958,27 +958,26 @@ if($('.secondhand-wrap').length){
 }
 
 //중고차 상세 롤링 01
-if($('.secondhand-wrap .detail-sub-slide-list1 .life-event-lists').length) {
-    var subTopSlide = MUI.slide.init('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-top','swiper', {
-        loop: true,
+if($('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-top').length) {
+    var subTopSlide = MUI.slide.init('.secondhand-wrap .detail-slide-gallery-top','swiper', {
         spaceBetween: 10,
         autoplay: {
             delay: 3000,
         },
         thumbs: {
-            swiper: subTopSlideThumbs
-        }
+            slide: subTopSlideThumbs
+        },
     });
 
-    var subTopSlideThumbs = MUI.slide.init('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-thumbs','swiper', {
+    var subTopSlideThumbs = MUI.slide.init('.secondhand-wrap .detail-slide-gallery-thumbs','swiper', {
         spaceBetween: 10,
         slidesPerView: 3,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: true,
         },
     });
     
