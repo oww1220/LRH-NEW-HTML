@@ -958,18 +958,9 @@ if($('.secondhand-wrap').length){
 }
 
 //중고차 상세 롤링 01
-if($('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-top').length) {
-    var subTopSlide = MUI.slide.init('.secondhand-wrap .detail-slide-gallery-top','swiper', {
-        spaceBetween: 10,
-        autoplay: {
-            delay: 3000,
-        },
-        thumbs: {
-            slide: subTopSlideThumbs
-        },
-    });
+if($('.secondhand-wrap .detail-sub-slide-list1').length) {
 
-    var subTopSlideThumbs = MUI.slide.init('.secondhand-wrap .detail-slide-gallery-thumbs','swiper', {
+    var subTopSlideThumbs = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-thumbs','swiper', {
         spaceBetween: 10,
         slidesPerView: 3,
         freeMode: true,
@@ -978,6 +969,16 @@ if($('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-top').lengt
         scrollbar: {
             el: '.swiper-scrollbar',
             hide: true,
+        },
+    });
+
+    var subTopSlide = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-top','swiper', {
+        spaceBetween: 10,
+        // autoplay: {
+        //     delay: 3000,
+        // },
+        thumbs: {
+            swiper: subTopSlideThumbs
         },
     });
     

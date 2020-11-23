@@ -1086,7 +1086,7 @@
                         }
                         .input-date-box{
                             @include Align-between;
-                            .btn-schedule-toggle{
+                            .btn-schedule{
                                 @include Position($top: 50%, $right: 1.3rem);
                                 transform: translateY(-50%);
                             }
@@ -1096,6 +1096,46 @@
                             border-radius: .4rem;
                             display:none;
                             margin-top:.9rem;
+                            .schedule-opt{
+                                @include Align-between-top;
+                                padding: 0 1.7rem;
+                                margin:0;
+                                background-color: #fafafa;
+                                ul{
+                                    justify-content: space-between;
+                                }
+                                ul > li{
+                                    @include Align-middle-column;
+                                    align-items: flex-start;
+                                    padding:1.7rem 0 3.4rem 0;
+                                    position: relative;
+                                    width:auto;
+                                }
+                                ul > li:after{
+                                    display:block;
+                                    content:"";
+                                    @include Background($sprite:'ico-next08', $type:'png', $size:100% auto, $position:center center);
+                                    width: 1.6rem;
+                                    height: .7rem;
+                                    @include Position($top: 50%, $right: -35%);
+                                    transform: translateY(-100%);
+                                }
+                                ul > li:last-child:after{
+                                    display:none;
+                                }
+                                strong{
+                                    font-size:1.4rem;
+                                    @include Bold;
+                                }
+                                b{
+                                    font-size:1.4rem;
+                                    @include Regular;
+                                    margin-top:.9rem;
+                                }
+                                .selectbox{
+                                    padding-right:3.4rem;
+                                }
+                            }
                             .calendar-wrap{
                                 overflow-y: auto;
                                 height:34.2rem;
