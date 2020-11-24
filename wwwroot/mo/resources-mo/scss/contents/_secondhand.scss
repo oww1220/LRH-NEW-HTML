@@ -28,7 +28,7 @@
             background-color: #fff;
         }
         &.bg-block {
-            @include Background($sprite:'muc-suc-0001-topbg', $size:100% 100%, $position:center center, $path:'bgs');
+            @include Background($sprite:'muc-suc-0001-topbg', $size:cover, $position:top center, $path:'bgs');
             //min-height:19.7rem;
             em{
                 color:#fff;
@@ -56,6 +56,23 @@
                     color: #fff;
                     font-size:1.1rem;
                 }
+            }
+            .btn-list {
+                margin-top:3.8rem;
+                button {
+                    height:auto;
+                    padding:0;
+                    b {
+                        color:#fff;
+                        vertical-align: middle;
+                        padding-left:.4rem;
+                        text-decoration: underline;
+                    }
+                    & + button {
+                        padding-left:1.7rem;
+                    }
+                }
+                
             }
         }
     }
@@ -174,6 +191,9 @@
             .detail-view-info{
                 & > strong{
                     font-size:1.6rem;
+                    .red {
+                        color:#F04040;
+                    }
                 }
                 & > em{
                     display:block;
@@ -241,83 +261,158 @@
 
     .section-filter {
         .result {
-            padding:0 0 2.2rem 0;
+            padding:3rem 0 1.3rem 0;
             .filter-col {
                 position: relative;
                 .chk-list {
                     margin-top: .4rem;
-                    li {
-                        input {
-                            display: none;
-                        }
-                        label {
-                            position: relative;
-                            border:0 none;
-                            height:2.6rem;
-                            @include Align-middle;
-                            box-sizing: border-box;
-                            font-size: 1.1rem;
-                            border-radius: 2rem;
-                            padding: 0 1.2rem;
-                            transition: all .4s;
-                            @include Regular;
-                            color: #8f9191;
-                            background-color: #f5f5f5;
-                        }
-                        input:checked + label {
-                            background: rgb(129,112,221);
-                            background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
-                            color:#fff;
-                            @include Bold;
+                    ul {
+                        li {
+                            input {
+                                display: none;
+                            }
+                            label {
+                                position: relative;
+                                border:0 none;
+                                height:2.6rem;
+                                @include Align-middle;
+                                box-sizing: border-box;
+                                font-size: 1.1rem;
+                                border-radius: 2rem;
+                                padding: 0 1.2rem;
+                                transition: all .4s;
+                                @include Regular;
+                                color: #8f9191;
+                                background-color: #f5f5f5;
+                            }
+                            input:checked + label {
+                                background: rgb(129,112,221);
+                                background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
+                                color:#fff;
+                                @include Bold;
+                            }
                         }
                     }
+                   
                 }
             }
             
         }
         &.section-filter-list{
-            padding:0 1.7rem;
+            padding:0 1.7rem 1.7rem;
+            border-bottom:.6rem solid #f5f5f5;
             .result {
                 .filter-col {
                     .chk-list {
-                        li {
-                            label {
-                                height:8.6rem;
-                                border-radius: .4rem;
-                                color:#54585a;
-                                @include Align-middle-column;
-                                background-color: #fff;
-                                font-size:1rem;
-                                @include Regular;
-                                span{
-                                    margin:1.7rem 0 0 0;
+                        margin-top:0;
+                        ul {
+                            @include Inline-scrolling;
+                            padding-bottom:.5rem;
+                            li {
+                                display: inline-flex;
+                                width:6rem;
+                                margin-left:1rem;
+                                > div { 
+                                    width:100%;
                                 }
-                            }
-                            input:checked + label {
-                                background-color:rgb(255,249,249);
-                                background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
-                                color:#ff404b;
-                                border:1px solid #ff404b;
-                                .brand01{
-                                    @include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+                                &:first-child {
+                                    margin-left:0;
                                 }
-                                .brand02{
-                                    @include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+                                label {
+                                    @include Align-middle-column;
+                                    padding:0;
+                                    height:8.6rem;
+                                    border-radius: .4rem;
+                                    color:#54585a;
+                                    background-color: #fff;
+                                    font-size:1rem;
+                                    @include Regular;
+                                    border:1px solid #d2d2d2;
+                                    span{
+                                        margin:1.7rem 0 0 0;
+                                    }
+                                    i {
+                                        min-height:2.6rem;
+                                    }
                                 }
-                                .brand03{
-                                    @include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
-                                }
-                                .brand04{
-                                    @include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
-                                }
-                                .brand05{
-                                    @include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
-                                }
-                                .brand06{
-                                    @include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+                                input:checked + label {
+                                    background-color:rgb(255,249,249);
+                                    background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+                                    color:#ff404b;
+                                    border:1px solid #ff404b;
+                                    .brand01{
+                                        @include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+                                    }
+                                    .brand02{
+                                        @include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+                                    }
+                                    .brand03{
+                                        @include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+                                    }
+                                    .brand04{
+                                        @include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+                                    }
+                                    .brand05{
+                                        @include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+                                    }
+                                    .brand06{
+                                        @include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+                                    }
                                 }
                             }
                         }
+                    }
+                }
+            }
+            .selection {
+                @include Align-between;
+                padding:1.3rem 0 1.7rem;
+                .selectbox {
+                    width:60%;
+                    border-right:0;
+                    border-radius: .5rem 0 0 .5rem;
+                }
+                .detail-iconBox{
+                    width:40%;
+                    height:4.1rem;
+                    border:1px solid #d2d2d2;
+                    box-sizing: border-box;
+                    border-left:0;
+                    border-radius:0 .5rem .5rem 0;
+                    position: relative;
+                    @include Align-middle;
+                    label {
+                        border:0 none;
+                        border-radius: 0;
+                        font-size:1.1rem;
+                        color:#8f9191;
+                        @include Regular;
+                        &::before {
+                            content:'';
+                            display: inline-block;
+                            width: 1.2rem;
+                            height: .9rem;
+                            vertical-align: middle;
+                            margin-right:.4rem;
+                        }
+                    }
+                    input {
+                        &::before {
+                            content:'';
+                            height:2rem;
+                            display: inline-block;
+                            border-left:1px solid #d2d2d2;
+                            @include Position($top: 25%, $left: 0);
+                        }
+                    }
+                    input:checked + label {
+                        @include Regular;
+                    }
+                    input[type='checkbox'] + label:before{
+                        @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                    }
+                    input[type='checkbox']:checked + label:before{
+                        @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
                     }
                 }
             }
@@ -345,6 +440,7 @@
                 }
             }
             .detail-layer-submit{
+                padding:1.7rem 0;
                 .detail-layer-list-btn{
                     @include Align-between;
                     & > li{
@@ -1941,13 +2037,152 @@
                 }
             }
         }
+        .section-top-cont {
+            background-color: #fff;
+            padding-bottom:1.7rem;
+            .tab-cont {
+                .corporation-tab {
+                    display:none;
+                }
+                li {
+                    border-bottom:1px solid #e7e7e7;
+                    &.active {
+                        background-color: #fff9f9;
+                        strong {
+                            &:after {
+                                content:'';
+                                display: inline-block;
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                margin-left:1rem;
+                                @include Background($sprite:'ico-chk-on06', $type:'png', $size:92% auto, $position:center center);
+                            }
+                        }
+                        button {
+                            background-color: #F04040;
+                            color:#fff;
+                            border:0 !important;
+                            @include Bold;
+                        }
+                    }
+                    .wrap {
+                        padding:1.7rem;
+                        > div {
+                            @include Align-between;
+                            .text-cont {
+                                width:75%;
+                                strong {
+                                    @include Bold;
+                                    font-size:1.4rem;
+                                }
+                                .info {
+                                    @include Align-left-column;
+                                    margin-top:1rem;
+                                    > div {
+                                        @include Align-middle-left;
+                                    
+                                        em {
+                                            min-width:3.6rem;
+                                            margin-right:1rem;
+                                        }
+                                        span {
+                                            &:before {
+                                                content:'|';
+                                                display:inline-block;
+                                                padding-right:1rem;
+                                                color:#e7e7e7;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .cover {
+                                width:8.8rem;
+                                min-height:4.4rem;
+                                @include Align-middle;
+                                img {
+                                    width:100%;
+                                    height:100%;
+                                }
+                            }
+                        }
+                        > button {
+                            margin-top:1.3rem;
+                            height:2.6rem;
+                            border:.1rem solid #d2d2d2;
+                            border-radius:.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .section-bott-cont {
+            background-color: #fff;
+            > div {
+                padding:1.7rem;
+            }
+            h3 {
+                background-color: #EFF2F7;
+                padding: 1.5rem 1.3rem;
+                border-radius: 1rem;
+                @include Bold;
+                font-size:1.4rem;
+            }
+            .chk-agree-list {
+                .chk-agree-cols {
+                    .chk-agree-top {
+                        .inputC {
+                            label {
+                               span { 
+                                    font-size:1.1rem;
+                               }
+                            }
+                            label:before {
+                                @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                            }
+                            input:checked + label {
+                                &:before{
+                                    @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                                }
+                            }
+                        } 
+                    }
+                    .chk-agree-cont {
+                        background-color:#f5f5f5;
+                        border-radius:.6rem;
+                        padding:1.7rem;
+                        li {
+                            border-bottom:0;
+                            color:#F04040;
+                            text-indent:-.8rem;
+                            padding-left:1rem;
+                            font-size:1.1rem;
+                            &::before {
+                                content: '';
+                                display: inline-block;
+                                margin-right:.4rem;
+                                width:.2rem;
+                                height:.2rem;
+                                background-color: #F04040;
+                                border-radius: 100%;
+                                vertical-align: middle;
+                            }
+                            & + li {
+                                padding-top:1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
     }
     .section-list {
-        padding: 1.7rem 1.7rem 3.4rem;
+        padding: 3.4rem 1.7rem 3.4rem;
         background-color: #fff;
         .list-detail-top{
             @include Align-between;
-            height:4.1rem;
+            padding-bottom:1.3rem;
             border-bottom: 1px solid #EBEBEB;
             > strong {
                 font-size: 1.1rem;
@@ -1981,11 +2216,22 @@
             &.list-type-col2{
                 li{
                     width:50%;
+                    .img {
+                        position: relative;
+                        overflow: hidden;
+                        height:9rem;
+                        img {
+                            width: 100%;
+                            height:100%;
+                        }
+                    }
                     .text {
-                        strong {
+                        > strong {
                             margin-top: 1rem;
                             display: block;
                             color: #2f2f2f;
+                            min-height: 3.4rem;
+                            line-height: 1.3;
                             @include Bold;
                         }
                         em{
@@ -1995,10 +2241,17 @@
                             }
                         }
                         .price{
+                            background-color: #f5f5f5;
+                            border-radius:.5rem;
+                            padding:1.3rem .8rem;
                             span {
                                 width:100%;
                                 @include Align-between-top;
-                                margin: .4rem 0 0 0;
+                                padding:0;
+                                margin:0;
+                                & + span {
+                                    margin-top:1rem;
+                                }
                             }
                         }
                     }
@@ -2006,10 +2259,10 @@
             }
             li {
                 width:100%;
+                margin-bottom:1.3rem;
                 .inner{
-                    margin-top:2.1rem;
+                    margin-top:1.7rem;
                 }
-                margin-bottom:2rem;
                 a {
                     display: block;
                     //margin: 0 1.3rem 0 0;
@@ -2018,8 +2271,10 @@
                 .img {
                     position: relative;
                     overflow: hidden;
+                    height:14rem;
                     img {
                         width: 100%;
+                        height:100%;
                     }
                     .flag{
                         @include Position($bottom: 0, $left: 0);
@@ -2077,12 +2332,14 @@
                     }
                     .price{
                         margin-top:1.7rem;
-                        @include Align-box-left;
+                        background-color: #f5f5f5;
+                        border-radius:.5rem;
+                        padding:1.3rem 0;
+                        @include Align-box;
                         span {
                             width:44%;
                             @include Align-between-top;
-                            margin: .4rem 0 0 0;
-                            padding:0 1.7rem 0 0;
+                            padding:.4rem .8rem;
                             b{
                                 font-size:1rem;
                                 margin-right:.4rem;
