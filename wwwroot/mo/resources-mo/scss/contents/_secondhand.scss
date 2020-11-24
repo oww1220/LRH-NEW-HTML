@@ -952,7 +952,6 @@
                                         }
                                     }
                                 }
-                                
                             }
                         }
                     }
@@ -972,6 +971,13 @@
                             @include Bold;
                         }
                     }
+                    & > .item-cont {
+                        border-bottom:1px solid #f1f1f1;
+                    }
+                    &:last-child div.item-cont{
+                        border:0 none;
+                    }
+                    
                     &.item-info2{
                         padding:0;
                         h3{
@@ -1011,7 +1017,11 @@
                             }
                         }
                         .item-cont {
-                           > ul {
+                            strong {
+                                @include Bold;
+                                font-size:1.2rem;
+                            }
+                            > ul {
                                 padding:2.6rem 0;
                                 > li {
                                     & + li {
@@ -1025,19 +1035,42 @@
                                         background-color: #f1f1f1;
                                         border-radius: .5rem;
                                         padding:2.6rem 0;
+                                        margin-top:1.3rem;
                                         > li {
                                             @include Align-middle-column;
                                             text-align:center;
+                                            span {
+                                                padding-top:1.7rem;
+                                                font-size:1.1rem;
+                                            }
                                         }
                                     }
                                     ul.step {
                                         margin-top:1.3rem;
+                                        li {
+                                            text-indent: -.7rem;
+                                            padding-left:1rem;
+                                            font-size:1.1rem;
+                                            & + li {
+                                                padding-top:1.3rem;
+                                            }
+                                            &::before {
+                                                content:'';
+                                                display: inline-block;
+                                                width:.2rem;
+                                                height:.2rem;
+                                                background-color: #000;
+                                                vertical-align: middle;
+                                                margin-right:.4rem;
+                                                border-radius:100%;
+                                            }
+                                            .red {
+                                                color:#ff404b;
+                                            }
+                                        }
                                     }
                                 }
-                                strong {
-                                    @include Bold;
-                                    font-size:1.2rem;
-                                }
+                                
                                 .guide {
                                     text-indent:0;
                                     margin-top:1.3rem;
@@ -1045,6 +1078,8 @@
                                     li {
                                         padding-left:1rem;
                                         text-indent:-.6rem;
+                                        color:#8f9191;
+                                        font-size:1rem;
                                         &::before {
                                             width:.2rem;
                                             height:.2rem;
