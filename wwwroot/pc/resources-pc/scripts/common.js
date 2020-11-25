@@ -782,22 +782,24 @@ if($('.secondhand-container').length){
 }
 
 //차량 상세 - 상단 슬라이드
-$('.carDetailSlide .slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.carDetailSlide .slider-nav'
-});
-$('.carDetailSlide .slider-nav').slick({
-    slidesToShow: 9,
-    slidesToScroll: 1,
-    asNavFor: '.carDetailSlide .slider-for',
-    dots: true,
-    centerMode: true,
-    centerPadding: '40px',
-    focusOnSelect: true
-});
+if($('.secondhand-container .carDetailSlide').length) {
+    $('.carDetailSlide .slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.carDetailSlide .slider-nav'
+    });
+    $('.carDetailSlide .slider-nav').slick({
+        slidesToShow: 9,
+        slidesToScroll: 1,
+        asNavFor: '.carDetailSlide .slider-for',
+        dots: true,
+        centerMode: true,
+        centerPadding: '40px',
+        focusOnSelect: true
+    });
+}
 
 //차량 상세 - 아코디언
 if($('.secondhand-container .carInfoAccor').length) {
