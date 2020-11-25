@@ -101,7 +101,7 @@
 								<div class="swiper-button-play">play</div>
 								<div class="swiper-button-pause">stop</div>
 								<div class="swiper-button-thumbs">
-									<button type="button" class="btn layer-galleryThumbs-open" data-layer="layer-slide"></button>
+									<button type="button" class="btn layer-infos-open" data-layer="type-car-images"></button>
 								</div>
 							</div>
 						</div>
@@ -506,7 +506,7 @@
 										<strong>차량 성능검사</strong>
 									</h3>
 									<div class="item-cont summary-toggle-cont summary-cont-08">
-										<a href="#" class="btn layer-infos-open" data-layer="type-car-">전체보기<i class="icon next4"></i></a>
+										<a href="#" class="btn layer-infos-open" data-layer="type-car-check">전체보기<i class="icon next4"></i></a>
 										<div class="img">
 											<img src="../../../resources-mo/images/@temp-estimate-list06.png" alt="더미1">
 										</div>
@@ -602,18 +602,76 @@
 	<footer class="footer">
 	</footer>
 
-	<!--layer-slide 이벤트 전체보기 컴포넌트-->
-	<div class="layer-wrap layer-slide layer-galleryThumbs" data-type="slide">
+
+	<!--layer-full 차량 사진 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-car-images type-car-images" data-type="full">
 		<!--상단-->
-		<div class="slide-top">
+        <div class="full-top">
+			<h4>
+				차량 사진
+            </h4>
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="type-car-images">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="detail-layer-items">
+					<div class="layer-item item-info">
+						<div class="item-cont">
+							<div class="detail-cont">
+								<div class="galleryThumbs-list">
+									<ul>
+										<li>
+											<div class="img">
+												<img src="../../../resources-mo/images/@temp-secondhand-car-list01.png" alt="더미이미지"/>
+											</div>
+										</li>
+										<li>
+											<div class="img">
+												<img src="../../../resources-mo/images/@temp-secondhand-car-list02.png" alt="더미이미지"/>
+											</div>
+										</li>
+										<li>
+											<div class="img">
+												<img src="../../../resources-mo/images/@temp-secondhand-car-list03.png" alt="더미이미지"/>
+											</div>
+										</li>
+										<li>
+											<div class="img">
+												<img src="../../../resources-mo/images/@temp-secondhand-car-list04.png" alt="더미이미지"/>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="detail-layer-submit submit-normal">
+				<button type="button" class="btn btn-default black noRadius layer-full-close" data-layer="type-car-images">확인</button>
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 차량 사진 컴포넌트-->
+
+	<!--layer-slide 차량사진 컴포넌트-->
+	<!--<div class="layer-wrap layer-slide layer-galleryThumbs" data-type="slide">-->
+		<!--상단-->
+		<!-- <div class="slide-top">
 			<button type="button" class="layer-slide-close" data-layer="layer-galleryThumbs">닫기 버튼</button>
 			<h4>
-                이벤트 전체보기
+                차량사진
             </h4>
-		</div>
+		</div> -->
 		<!--//상단-->
 		<!--컨텐츠-->
-		<div class="slide-inner">
+		<!-- <div class="slide-inner">
 			<div class="slide-cont">
                 
                 <div class="galleryThumbs-col-cont">
@@ -644,9 +702,9 @@
                 </div>
 
 			</div>
-		</div>
+		</div> -->
 		<!--//컨텐츠-->	
-	</div>
+	<!--</div>-->
 	<!--//layer-slide 이벤트 전체보기 컴포넌트-->
 
 	<!--layer-full 정비이력 컴포넌트-->
@@ -762,6 +820,48 @@
 		<!--//컨텐츠-->
 	</div>
 	<!--//layer-full 정비이력 컴포넌트-->
+
+	<!--layer-full 차량 성능검사 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-car-check type-car-check" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+			<h4>
+				차량 성능검사
+            </h4>
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="type-car-check">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="detail-layer-items">
+					<div class="layer-item item-info">
+						<div class="item-cont">
+							<div class="detail-cont">
+								<div class="galleryThumbs-list">
+									<ul>
+										<li>
+											<div class="img">
+												<img src="../../../resources-mo/images/@temp-main-carLife-slide05.png" alt="더미이미지"/>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="detail-layer-submit submit-normal">
+				<button type="button" class="btn btn-default black noRadius layer-full-close" data-layer="type-car-check">확인</button>
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 차량 성능검사 컴포넌트-->
 
 	<!--상단 타이틀(추후삭제)-->
     <script>
