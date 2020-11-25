@@ -57,7 +57,6 @@
             }
         }
     }
-
     .form-cont{
         .inputT.date{
             position:relative;
@@ -72,8 +71,7 @@
                 height:50px;
             }
         }
-    }   
-    
+    }       
     .schedule-wrap{
         overflow:hidden;
         border:1px solid #d2d2d2;
@@ -186,6 +184,7 @@
                 @include Bold; 
             }
         }
+        
     }
     .accor-header{margin-bottom:30px;}
     .terms-area{    
@@ -213,4 +212,272 @@
             margin-bottom:20px;
         }
     }    
+
+    //중고차 목록    
+    .section-counsel2{
+        @include Align-box;
+        border:1px solid #e7e7e7;
+        margin-bottom:55px;
+        @include roundBox; 
+        
+        .col{
+            padding:40px;
+            box-sizing: border-box;
+        }
+
+        .btn-link{   
+            position:relative; 
+            @include Inline-align-middle;
+            @include Bold;
+            font-size:1rem;
+            height:auto;           
+            padding:0;
+            margin-left:30px;
+            margin-bottom:15px;
+
+            .icon{
+                @include Position($left:-30px);
+            }
+        }
+    }
+    .sort-section{
+        @include Align-top-left;
+        //flex-wrap: nowrap;
+
+        .selection-area, .result-area{
+            .top-header{
+                @include Align-middle-left;       
+                height:70px;
+            }
+        }
+        .selection-area{            
+            flex:none;
+            width:330px;
+            flex-basis: 330px;
+            padding-right:40px;
+            box-sizing: border-box;
+
+            .top-header{             
+                .tit{@include Bold; font-size:22px;}
+                .btn{
+                    @include Align-middle; 
+                    padding:0;
+                    margin-left:auto; 
+                    font-size:14px;
+                    
+                    .icon{margin-left:10px;}
+                }
+            }
+            .selection-cont{
+                padding:20px;                
+                border:1px solid $border-darkgrey;
+                border-radius: 6px;
+                margin-bottom:15px;
+                box-sizing: border-box;
+
+                .selection-cont-header{
+                    .btn-toggle-grey{
+                        @include Bold;
+                        font-size:18px;
+                    }
+                }   
+                .selection-cont-body{
+                    display:none;
+                    margin-top:20px;
+                    padding-top:20px;
+                    border-top:1px solid $border-grey;
+
+                    .select-grid{
+                        display:flex;
+                        flex-wrap: wrap;
+                        align-items:stretch;
+                        justify-content:space-between;
+
+                        border: 0 solid $border-darkgrey;
+                        border-width: 0 0 1px 1px;
+                        box-sizing: border-box;
+
+                        li{
+                            width:33.333%;
+                            border: 0 solid $border-darkgrey;
+                            border-width: 1px 1px 0 0;
+                            box-sizing: border-box;
+
+                            .chk-box{
+                                input {
+                                    display: none;
+                                }
+                                label{
+                                    position: relative;
+                                    height:40px;
+                                    @include Align-middle;
+                                    box-sizing: border-box;
+                                    transition: all .4s;
+                                }
+                                input:checked + label {
+                                    @include Bold;
+                                    color:$txt-red;
+                                    background-color:#fff9f9;
+
+                                    &:after{
+                                        content:"";
+                                        display:block;
+                                        @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
+                                        border:1px solid $border-red;
+                                        z-index: 5;
+                                    }
+                                }
+                            }
+                            
+
+                        }
+                    }
+                    .select-list{
+                        li{
+                            + li{margin-top:20px;}
+
+                            .carType-list{
+                                display:none;
+                                margin-top:16px;
+                                @include roundBox;
+                                background-color: #fafafa;
+                                padding:20px;
+                                font-size:14px;
+                                color:#54585a;
+                            }
+                            
+	                        input:checked ~ .carType-list {
+                                display:block;
+                            }
+                        }
+                    }
+                    .other-box{
+                        border-top:1px solid $border-grey;
+                        margin-top:20px;
+                        padding-top:30px;
+                    }
+                }
+            }
+        }
+        .result-area{
+            width:100%;
+            .top-header{               
+                margin-bottom:20px;
+                border-bottom:1px solid #e7e7e7;
+
+                .total-box{
+                    @include Align-middle;
+                    strong{@include Bold; font-size:16px;}
+                }
+                .selelct-box{@include Align-middle; margin-left:auto;}
+                .sorting-btn-box{
+                    padding-left:12px;
+                    
+                    button{
+                        @include Align-middle;
+                        width:60px;
+                    }
+                }
+            }
+
+            &.listViewActive{
+                .sorting-btn-box{
+                    .list{
+                        @include Background($sprite:'ico-list2', $position:center);
+                    }
+                }
+            }
+            .result-cont{
+                .carInfo-list{
+                    width: calc(100% + 30px);
+                    box-sizing: border-box;
+
+                    li{margin-bottom:40px;}
+                }
+                .item{
+                    display:block;
+                    padding-right:30px;
+
+                    .img-box{                        
+                        position:relative;
+
+                        .cover{
+                            @include Position($bottom:0, $left:0, $right:0);
+                            @include Align-between;
+                            padding:10px 20px;
+                            color:#fff;
+                            background: rgba(29,29,29,.6);
+                            z-index:5;
+                        }
+                        .heart-chk-box{
+                            @include Align-middle;
+
+                            input {
+                                display: none;
+                            }
+                            .icon {
+                                position: relative;
+                                width: 18px;
+                                height: 16px;
+                                @include Background($sprite:'ico-heart2-off', $position:center center);
+                                transition: all .4s;
+                            }
+                            input:checked + .icon {
+                                @include Background($sprite:'ico-heart2-on', $position:center center);
+                            }        
+                            span{
+                                @include Bold;
+                                margin-left:10px;
+                            }                    
+                        }
+                    }
+                    .descri-area{
+                        padding:20px 0;
+
+                        .tit{
+                            @include Ellipsis($w:100%, $lines:2);
+                            font-size:1rem;
+                            height:30px;
+                            margin-bottom:15px;
+                        }
+                        .bar-type{
+                            color:#54585a;
+                            font-size:14px;
+                            margin-bottom:25px;
+
+                            > span{ 
+                                position:relative; 
+    
+                                + span{                                    
+                                    padding-left:10px;
+                                    margin-left:10px;                            
+    
+                                    &:before{
+                                        content:"";
+                                        @include Position($top:50%, $left:0);
+                                        display:block;
+                                        width:1px;
+                                        height:14px;
+                                        margin-top:-7px;
+                                        background-color:#e7e7e7;
+                                    }
+                                }
+                            }
+                        }
+                        .price-box{                            
+                            .price-row{
+                                @include Align-between;
+
+                                +.price-row{ margin-top:15px;}
+                                .price{
+                                    @include Bold;
+                                    color:$txt-red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

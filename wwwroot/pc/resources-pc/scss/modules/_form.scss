@@ -17,7 +17,7 @@
 }
 .textarea {
 	border:1px solid #EBEBEB;
-	border-radius: 1rem;
+	border-radius: 6px;
 	background-color: #fff;
 	padding:0 1.2rem;
 	position: relative;
@@ -393,6 +393,16 @@
 			@include Background($sprite:'ico-check-on', $position:center center);
 		}
 	}
+	
+	&.type-chkOn-red{
+		label{padding-left:24px;}
+		input[type='checkbox']:checked + label{
+			color:$txt-red;
+		}
+		input[type='checkbox']:checked + label:after{
+			@include Background($sprite:'ico-chk2-on', $position:center center);
+		}
+	}
 
 	&.type-inline{
 		display:inline-block;
@@ -415,7 +425,10 @@
 }
 
 .select-area{
-	@include Align-between-top;
+	//@include Align-between-top;
+	@include Align-between;
+	
+	.dash{margin:0 5px;}
 }
 .radio-area, .chk-area{
 	@include Align-box;
