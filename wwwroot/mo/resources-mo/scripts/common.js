@@ -1119,7 +1119,6 @@ if($('.shor-wrap').length){
 /*중고차 승계렌터카 start-------------------------------------------------*/
 //중고차 승계렌터카 등록 탭전환
 if($('.secondhand-wrap .tab-normal').length){
-
     MUI.event.taps('.secondhand-wrap .tab-normal', false, function(swap){
         swap();
     });
@@ -1134,7 +1133,13 @@ if($('.layer-car-detail').length){
 }
 
 //중고차 승계렌터카 등록 - 사진정보 팝업
-  
+if($('.layer-photo-info').length){
+    MUI.event.toggle('.layer-photo-info .add-photo', '.layer-photo-info .hidden-filebox-toggle', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
 
 /* -------------------------------------------------중고차 승계렌터카 end*/
     

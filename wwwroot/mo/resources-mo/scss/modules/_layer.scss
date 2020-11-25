@@ -1778,20 +1778,19 @@ body.fixed {
                         text-indent: -.6rem;
                         padding-left: 1rem;
                         font-size: 1.1rem;
-                        color:#8f9191;
-                        &::before {
-                            content:'';
-                            display: inline-block;
-                            width:.2rem;
-                            height:.2rem;
-                            background-color: #000;
-                            vertical-align: middle;
-                            margin-right:.4rem;
-                            border-radius:100%;
-                        }
+						color:#8f9191;
+						.icon.pannel09 { 
+							width:2.1rem;
+							height:1.9rem;
+							margin-right:1rem;
+						}
 					}
 					.file-box {
 						margin-top:1rem;
+						&.hidden-filebox-toggle {
+							display: none;
+							margin-top:0;
+						}
 						li {
 							.inner {
 								@include Align-middle-column;
@@ -1800,6 +1799,7 @@ body.fixed {
 									border:0;
 									border-radius: 0;
 									&.active {
+										
 										&.active01 {
 											@include Background($sprite:'car-front', $size:100% 100%, $position:center center, $path:'bgs');
 										}
@@ -1812,18 +1812,31 @@ body.fixed {
 										&.active04 {
 											@include Background($sprite:'car-right', $size:100% 100%, $position:center center, $path:'bgs');
 										}
-										i {
-											display: none;
+										.btn-close {
+											@include Position($top: .4rem, $right: .4rem);
+											padding:0;
+											height: auto;
+											z-index: 2;
+											i {
+												display: block;
+											}
 										}
-										span {
-											display: block;
-											margin-top:0;
-											padding:.4rem 0;
-											width:100%;
-											color:#fff;
-											background-color: rgba(0,0,0,.6);
-											text-align:center;
-											@include Position($bottom: 0, $left: 0);
+										label {
+											i {
+												display: none;
+											}
+											span {
+												display: block;
+												margin-top:0;
+												padding:.4rem 0;
+												width:100%;
+												color:#fff;
+												background-color: rgba(0,0,0,.6);
+												text-align:center;
+												font-size:.8rem;
+												@include Bold;
+												@include Position($bottom: 0, $left: 0);
+											}
 										}
 									}
 								}
@@ -1854,13 +1867,13 @@ body.fixed {
                     }
                     .btn-addphoto {
                         padding:2.3rem 0;
-                        button {
+                        .add-photo {
                             width: 100%;
                             background-color: #54585a;
                             color:#fff;
                             border-radius: .5rem;
                             font-size:1.6rem;
-                            @include Bold;
+							@include Bold;
                         }
                     }
                 }
