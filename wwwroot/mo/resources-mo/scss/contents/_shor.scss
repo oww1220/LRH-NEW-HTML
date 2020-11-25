@@ -764,6 +764,19 @@
                                 @include Regular;
                             }
                         }
+                        .info-box{
+                            @include Align-middle;
+                            background-color:#54585a;
+                            border-radius: .5rem;
+                            height:4.3rem;
+                            @include Regular;
+                            padding:0 1.3rem;
+                            margin-top:1.7rem;
+                            b{
+                                color:#fff;
+                                font-size:1.1rem;
+                            }
+                        }
                     }
                 }
                 &.item-step2 {
@@ -1319,7 +1332,7 @@
                         .info-box{
                             @include Align-between;
                             background-color:#877669;
-                            border-radius: 1rem;
+                            border-radius: .5rem;
                             height:4.3rem;
                             @include Bold;
                             padding:0 1.3rem;
@@ -1334,6 +1347,19 @@
                                 span{
                                     font-size:1.2rem;
                                     margin-left:.4rem;
+                                }
+                            }
+                            &.info-box-default{
+                                @include Align-middle;
+                                background-color:#54585a;
+                                border-radius: .5rem;
+                                height:4.3rem;
+                                @include Regular;
+                                padding:0 1.3rem;
+                                margin-top:1.7rem;
+                                b{
+                                    color:#fff;
+                                    font-size:1.1rem;
                                 }
                             }
                         }
@@ -1877,6 +1903,46 @@
                                             color:#2f2f2f;
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.item-step14 {
+                    .item-cont {
+                        padding: 0 1.7rem;
+                        .info-box{
+                            @include Align-between;
+                            background-color:#877669;
+                            border-radius: .5rem;
+                            height:4.3rem;
+                            @include Bold;
+                            padding:0 1.3rem;
+                            margin-top:1.7rem;
+                            b{
+                                color:#fff;
+                                font-size:1.4rem;
+                            }
+                            em{
+                                color:#fff;
+                                font-size:1.8rem;
+                                span{
+                                    font-size:1.2rem;
+                                    margin-left:.4rem;
+                                }
+                            }
+                            &.info-box-default{
+                                @include Align-middle;
+                                background-color:#54585a;
+                                border-radius: .5rem;
+                                height:4.3rem;
+                                @include Regular;
+                                padding:0 1.3rem;
+                                margin-top:1.7rem;
+                                b{
+                                    color:#fff;
+                                    font-size:1.1rem;
                                 }
                             }
                         }
@@ -2725,9 +2791,10 @@
                                         &.start{
                                             .btn{
                                                 width:100%;
-                                                background: rgb(254,43,123);
-                                                background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                                // background: rgb(254,43,123);
+                                                // background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
                                                 border-radius: 1.7rem 0 0 1.7rem;
+                                                background-color: #ff404b;
                                                 @include Bold;
                                                 color:#fff;   
                                             }
@@ -2735,7 +2802,8 @@
                                         &.during{
                                             .btn{
                                                 width:100%;
-                                                background: rgb(254,43,123);
+                                                // background: rgb(254,43,123);
+                                                background-color: #ff404b;
                                                 @include Bold;
                                                 color:#fff;   
                                             }
@@ -2743,8 +2811,9 @@
                                         &.end{
                                             .btn{
                                                 width:100%;
-                                                background: rgb(254,43,123);
-                                                background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                                // background: rgb(254,43,123);
+                                                // background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                                                background-color: #ff404b;
                                                 border-radius: 0 1.7rem 1.7rem 0;
                                                 @include Bold;
                                                 color:#fff;   
@@ -2955,7 +3024,7 @@
                         .filter-col {
                             .chk-list {
                                 li {
-                                    label {
+                                    label{
                                         height:4.2rem;
                                         font-size: 1.1rem;
                                         border-radius: .5rem;

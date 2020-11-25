@@ -793,6 +793,14 @@ if($('.specials-list .tab-normal').length){
         });
     }
 
+    //단기예약 탭전환
+    if($('.detail-main-accor .tab-normal').length){
+
+        MUI.event.taps('.detail-main-accor .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
     //단기예약 - 다른지점반납 열고 닫기
     if($('.detail-main-accor').length){
         MUI.event.toggle('.detail-main-accor .shor-branch-toggle-btn', '.detail-main-accor .shor-main-list-branch', false, function(logic, layer) {
