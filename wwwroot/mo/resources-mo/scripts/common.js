@@ -958,27 +958,27 @@ if($('.secondhand-wrap').length){
 }
 
 //중고차 상세 롤링 01
-if($('.secondhand-wrap .detail-sub-slide-list1 .life-event-lists').length) {
-    var subTopSlide = MUI.slide.init('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-top','swiper', {
-        loop: true,
-        spaceBetween: 10,
-        autoplay: {
-            delay: 3000,
-        },
-        thumbs: {
-            swiper: subTopSlideThumbs
-        }
-    });
+if($('.secondhand-wrap .detail-sub-slide-list1').length) {
 
-    var subTopSlideThumbs = MUI.slide.init('.secondhand-wrap .detail-sub-slide-list1 .detail-slide-gallery-thumbs','swiper', {
+    var subTopSlideThumbs = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-thumbs','swiper', {
         spaceBetween: 10,
         slidesPerView: 3,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: true,
+        },
+    });
+
+    var subTopSlide = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-top','swiper', {
+        spaceBetween: 10,
+        // autoplay: {
+        //     delay: 3000,
+        // },
+        thumbs: {
+            swiper: subTopSlideThumbs
         },
     });
     
@@ -1104,6 +1104,16 @@ if($('.shor-wrap').length){
 }
 
 /* -------------------------------------------------단기렌터카 end*/
+
+/*중고차 승계렌터카 start-------------------------------------------------*/
+//중고차 승계렌터카 등록 탭전환
+if($('.secondhand-wrap .tab-normal').length){
+
+    MUI.event.taps('.secondhand-wrap .tab-normal', false, function(swap){
+        swap();
+    });
+}
+/* -------------------------------------------------중고차 승계렌터카 end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){

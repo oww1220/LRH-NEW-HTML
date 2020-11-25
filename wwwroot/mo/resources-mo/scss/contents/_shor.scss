@@ -849,12 +849,18 @@
                                 display:none;
                             }
                         }
-                        ul {
-                            label {
-                                height: 3.7rem;
-                                &::after {
-                                    @include Position($top: 50%, $right: 1.2rem);
-			                        transform: translateY(-50%);
+                        .radio-box{
+                            ul {
+                                label {
+                                    height: 3.7rem;
+                                    @include Regular;
+                                    align-items: flex-start;
+                                    padding:0 1.3rem;
+                                    font-size:1.1rem;
+                                    &::after {
+                                        @include Position($top: 50%, $right: 1.2rem);
+                                        transform: translateY(-50%);
+                                    }
                                 }
                             }
                         }
@@ -1086,7 +1092,7 @@
                         }
                         .input-date-box{
                             @include Align-between;
-                            .btn-schedule-toggle{
+                            .btn-schedule{
                                 @include Position($top: 50%, $right: 1.3rem);
                                 transform: translateY(-50%);
                             }
@@ -1096,6 +1102,46 @@
                             border-radius: .4rem;
                             display:none;
                             margin-top:.9rem;
+                            .schedule-opt{
+                                @include Align-between-top;
+                                padding: 0 1.7rem;
+                                margin:0;
+                                background-color: #fafafa;
+                                ul{
+                                    justify-content: space-between;
+                                }
+                                ul > li{
+                                    @include Align-middle-column;
+                                    align-items: flex-start;
+                                    padding:1.7rem 0 3.4rem 0;
+                                    position: relative;
+                                    width:auto;
+                                }
+                                ul > li:after{
+                                    display:block;
+                                    content:"";
+                                    @include Background($sprite:'ico-next08', $type:'png', $size:100% auto, $position:center center);
+                                    width: 1.6rem;
+                                    height: .7rem;
+                                    @include Position($top: 50%, $right: -35%);
+                                    transform: translateY(-100%);
+                                }
+                                ul > li:last-child:after{
+                                    display:none;
+                                }
+                                strong{
+                                    font-size:1.4rem;
+                                    @include Bold;
+                                }
+                                b{
+                                    font-size:1.4rem;
+                                    @include Regular;
+                                    margin-top:.9rem;
+                                }
+                                .selectbox{
+                                    padding-right:3.4rem;
+                                }
+                            }
                             .calendar-wrap{
                                 overflow-y: auto;
                                 height:34.2rem;
@@ -1628,6 +1674,7 @@
                         display:flex;
                         width:100%;
                         margin-left:0;
+                        margin-bottom:.9rem;
                         li{
                             position: relative;
                             &:first-child{
@@ -1643,8 +1690,8 @@
                                 width:40%;
                             }
                             & > input{
-                                border:1px solid #EBEBEB;
-                                border-radius: 1rem 0 0 1rem;
+                                border:1px solid #d2d2d2;
+                                border-radius: .5rem 0 0 .5rem;
                                 background-color: #fff;
                                 height: 4.1rem;
                                 width:100%;
@@ -1657,8 +1704,8 @@
                             }
                             
                             &:last-child > input{
-                                border-radius: 0 1rem 1rem 0;
-                                border:1px solid #EBEBEB;
+                                border-radius: 0 .5rem .5rem 0;
+                                border:1px solid #d2d2d2;
                                 border-left:0;
                                 text-align:right;
                                 padding-right:2.4rem;
@@ -1699,6 +1746,19 @@
                                 
                             }
                             
+                        }
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            @include Align-between;
+                            margin-bottom:.9rem;
+                            & > span{
+                                font-size:1rem;
+                                @include Regular;
+                                b{
+                                    font-size:1rem;
+                                    color:#ff404b;
+                                }
+                            }
                         }
                         .detail-layer-inputT{
                             & ~ .detail-layer-inputT {
@@ -2411,39 +2471,40 @@
                             @include Align-between-top;
                             padding:1.7rem;
                             .main-toggle-tit-txt{
-                                @include Align-middle-left;
+                                @include Align-between;
                                 span{
                                     color:#fff;
                                     @include Bold;
                                     font-size:1.4rem;
                                     padding-left:.9rem;
                                 }
-                                .main-toggle-tit-opt{
+                            }
+                            .main-toggle-tit-opt{
+                                @include Regular;
+                                color:#fff;
+                                font-size:1rem;
+                                a:nth-child(1){
+                                    padding:0 .4rem 0 1.4rem;
+                                }
+                                a:nth-child(2){
+                                    padding:0 0 0 .4rem;
+                                }
+                                a.active{
+                                    em{
+                                        @include Bold;
+                                    }
+                                }
+                                em{
                                     @include Regular;
                                     color:#fff;
                                     font-size:1rem;
-                                    a:nth-child(1){
-                                        padding:0 .4rem 0 1.4rem;
-                                    }
-                                    a:nth-child(2){
-                                        padding:0 0 0 .4rem;
-                                    }
-                                    a.active{
-                                        em{
-                                            @include Bold;
-                                        }
-                                    }
-                                    em{
-                                        @include Regular;
-                                        color:#fff;
-                                        font-size:1rem;
-                                    }
                                 }
                             }
                         }
                         &.active {
-                            background: rgb(254,43,123);
-			                background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                            // background: rgb(254,43,123);
+                            // background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+                            background-color: #ed1c24;
                             .btn-toggle:after {
                                 transform: rotate(180deg);
                             }
@@ -2772,9 +2833,17 @@
                                         label {
                                             height:2.6rem;
                                             font-size: 1.1rem;
-                                            border-radius: 2.2rem;
+                                            border-radius: .5rem;
                                             padding: 0 1.1rem;
                                             background-color: #f5f5f5;
+                                            @include Regular;
+                                        }
+                                        input:checked + label{
+                                            color:#ed1c24;
+                                            @include Bold;
+                                            background-color:#fff9f9;
+                                            border:1px solid #ff404b;
+                                            background: linear-gradient(90deg, #fff9f9 0%, #fff9f9 100%);
                                         }
                                     }
                                 }
@@ -2782,7 +2851,7 @@
                             
                         }
                         .section-list{
-                            padding-bottom:1.7rem;
+                            padding: 1.7rem 0 1.7rem;
                             ul{
                                 @include Align-middle-column;
                                 & > li{
@@ -2796,13 +2865,19 @@
                                             border-left:0;
                                             border-bottom:0;
                                             border-radius: 0;
-                                            padding:1.7rem 0;
+                                            padding:1.7rem;
                                             .text{
                                                 width:60%;
                                                 text-align: left;
                                                 strong{
-                                                    font-size:1.4rem;
                                                     margin:0;
+                                                    justify-content: flex-start;
+                                                    height:auto;
+                                                    b{
+                                                        font-size:1.4rem;
+                                                        @include Ellipsis($w:auto, $lines:2);
+                                                        margin-right:.9rem;
+                                                    }
                                                 }
                                                 em{
                                                     font-size:1.1rem;
@@ -2842,14 +2917,66 @@
                                                 width:40%;
                                             }
                                         }
+                                        // > input:checked + label:after{
+                                        //     top:2rem;
+                                        //     left:7rem;
+                                        //     right:auto;
+                                        //     background-size: 100% auto;
+                                        // }
                                         > input:checked + label:after{
-                                            top:2rem;
-                                            left:7rem;
-                                            right:auto;
-                                            background-size: 100% auto;
+                                            display:none;
                                         }
                                         > input:checked + label {
                                             border-bottom:1px solid #ff404b;
+                                        }
+                                        > input + label{
+                                            .text{
+                                                .radio-check{
+                                                    display:none;
+                                                }
+                                            }
+                                        }
+                                        > input:checked + label{
+                                            .text{
+                                                .radio-check{
+                                                    display:inline-flex;
+                                                    position: relative;
+                                                    top:.4rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .section-filter-accor{
+                        background-color: #fafafa;
+                        .filter-col {
+                            .chk-list {
+                                li {
+                                    label {
+                                        height:4.2rem;
+                                        font-size: 1.1rem;
+                                        border-radius: .5rem;
+                                        padding: 0 1.1rem;
+                                        @include Regular;
+                                        color:#8f9191;
+                                        @include Align-middle-column;
+                                        border:1px solid #d2d2d2;
+                                        background-color: #fff;
+                                        b{
+                                            @include Bold;
+                                            color:#8f9191;
+                                        }
+                                    }
+                                    input:checked + label{
+                                        color:#ed1c24;
+                                        background-color:#fff9f9;
+                                        border:1px solid #ff404b;
+                                        background: linear-gradient(90deg, #fff9f9 0%, #fff9f9 100%);
+                                        b{
+                                            color:#ed1c24;
                                         }
                                     }
                                 }

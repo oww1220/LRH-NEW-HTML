@@ -77,6 +77,13 @@
 											</li>
 										</ul>
 									</div>
+									<div class="detail-layer-inputT inputT">
+										<select class="selectbox" name="" id="email_list" onchange="$('#chrgemail_ls').val($('#email_list').val());">
+											<option value="">직접입력</option>
+											<option value="lotte.net">lotte.net</option>
+											<option value="naver.com">naver.com</option>
+										</select>
+									</div>
 									
 								</div>
 							</div>
@@ -96,27 +103,30 @@
 											<b>08월 13일 (목) 10:00~<br/>08월 13일 (목) 19:00</b>
 										</div>
 									</div>
-									<div class="detail-layer-inputT inputT">
-										<ul class="detail-layer-inputT-number list-type-col2">
-											<li class="inputT"><input type="text" id="" name="" title="출발지 선택" placeholder="'출발지'를 지도에서 선택해주세요." value=""></li>
-											<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
-										</ul>
-									</div>
-									<div class="detail-layer-inputT inputT">
-										<ul class="detail-layer-inputT-number list-type-col2">
-											<li class="inputT"><input type="text" id="" name="" title="경유지 선택" placeholder="'경유지'를 지도에서 선택해주세요." value=""></li>
-											<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
-										</ul>
-									</div>
-									<div class="detail-layer-inputT inputT">
-										<ul class="detail-layer-inputT-number list-type-col2">
-											<li class="inputT"><input type="text" id="" name="" title="도착지 선택" placeholder="'도착지'를 지도에서 선택해주세요." value=""></li>
-											<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
-										</ul>
-									</div>
-									<div class="detail-iconBox iconBox">
-										<input type="checkbox" id="checkbox2-1" name="checkbox2-1">
-										<label for="checkbox2-1">출발지/도착지 동일</label>
+									<div class="detail-layer-inputT-wrap">
+										<div class="detail-layer-inputT-tit">2020년 08월 13일 (목)</div>
+										<div class="detail-layer-inputT inputT">
+											<ul class="detail-layer-inputT-number list-type-col2">
+												<li class="inputT"><input type="text" id="" name="" title="출발지 선택" placeholder="'출발지'를 지도에서 선택해주세요." value=""></li>
+												<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
+											</ul>
+										</div>
+										<div class="detail-layer-inputT inputT">
+											<ul class="detail-layer-inputT-number list-type-col2">
+												<li class="inputT"><input type="text" id="" name="" title="경유지 선택" placeholder="'경유지'를 지도에서 선택해주세요." value=""></li>
+												<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
+											</ul>
+										</div>
+										<div class="detail-layer-inputT inputT">
+											<ul class="detail-layer-inputT-number list-type-col2">
+												<li class="inputT"><input type="text" id="" name="" title="도착지 선택" placeholder="'도착지'를 지도에서 선택해주세요." value=""></li>
+												<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
+											</ul>
+										</div>
+										<div class="detail-iconBox iconBox">
+											<input type="checkbox" id="checkbox2-1" name="checkbox2-1">
+											<label for="checkbox2-1">출발지/도착지 동일</label>
+										</div>
 									</div>
 									<div class="detail-layer-inputT">
 										<div class="inputT"><input type="text" id="" name="" title="탑승인원 입력" placeholder="탑승 인원을 적어주세요." value="">명</div>
@@ -200,9 +210,7 @@
 					</div>
 					
 					<div class="layer-address-result">
-						<div class="address-result-top">
-							<strong><b>강동역</b> 검색 결과 입니다.</strong>
-						</div>
+						<!-- 위치설정 - 지도 -->
 						<div class="address-result-list">
 							<ul>
 								<li>
@@ -223,6 +231,83 @@
 								</li>
 							</ul>
 						</div>
+						<!-- //위치설정 - 지도 -->
+
+						<!--검색결과 없을시-->
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<div class="none">검색결과가 없습니다.</div>
+								</li>
+							</ul>
+						</div>
+						<!--//검색결과 없을시-->
+						
+						<div class="layer-address-foot">
+							<button type="button" class="btn btn-white">선택한 위치로 설정</button>
+						</div>
+					</div>
+
+					<!-- 위치설정 - 주소 -->
+					<div class="layer-address-top">
+						<div class="inputT">
+							<input type="text" id="" name="" title="name" placeholder="강동역" value="">
+						</div>
+						<button type="button" class="btn btn-default black">검색</button>
+					</div>
+
+					<div class="layer-address-result">
+						<div class="address-result-top">
+							<strong><b>강동역</b> 검색 결과 입니다.</strong>
+						</div>
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<a href="#">
+										<div class="flag-wrap">
+											<div class="flag address">도로명</div>
+										</div>
+										<div class="address-result-txt">
+											경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라
+											<b>우- 63236 (690-121)</b>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="flag-wrap">
+											<div class="flag address">도로명</div>
+										</div>
+										<div class="address-result-txt">
+											서울 중구 세종대로 110 서울특별시청
+											<b>우- 63236 (690-121)</b>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="flag-wrap">
+											<div class="flag address">도로명</div>
+										</div>
+										<div class="address-result-txt">
+											서울 중구 세종대로 110 서울특별시청
+											<b>우- 63236 (690-121)</b>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="flag-wrap">
+											<div class="flag address">도로명</div>
+										</div>
+										<div class="address-result-txt">
+											서울 중구 세종대로 110 서울특별시청
+											<b>우- 63236 (690-121)</b>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
 	
 						<!--검색결과 없을시-->
 						<div class="address-result-list">
@@ -234,10 +319,8 @@
 						</div>
 						<!--//검색결과 없을시-->
 					</div>
+					<!-- //위치설정 - 주소 -->
 
-					<div class="layer-address-foot">
-						<button type="button" class="btn btn-white">선택한 위치로 설정</button>
-					</div>
 				</div>
             </div>
         </div>

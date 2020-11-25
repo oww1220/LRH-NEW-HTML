@@ -1149,288 +1149,7 @@ body.fixed {
 					}
 				}
 
-				.layer-search-item{
-					padding:3.4rem 0;
-					h5 {
-						font-size: 1.4rem;
-						@include Bold;
-					}
-					.section-filter-list{
-						.result {
-							.filter-col {
-								padding:0 0 2rem 0;
-								.chk-list {
-									li {
-										label {
-											height:8.6rem;
-											border-radius: .4rem;
-											color:#54585a;
-											@include Align-middle-column;
-											background-color: #fff;
-											font-size:1rem;
-											@include Regular;
-											span{
-												margin:1.7rem 0 0 0;
-											}
-										}
-										input:checked + label {
-											background-color:rgb(255,249,249);
-											background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
-											color:#ff404b;
-											border:1px solid #ff404b;
-											.brand01{
-												@include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
-											}
-											.brand02{
-												@include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
-											}
-											.brand03{
-												@include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
-											}
-											.brand04{
-												@include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
-											}
-											.brand05{
-												@include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
-											}
-											.brand06{
-												@include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
-											}
-										}
-										input:checked + label:after{
-											display:none;
-										}
-									}
-								}
-							}
-						}
-						.result-type {
-							.filter-col {
-								padding:0;
-								.chk-list {
-									li {
-										label {
-											height:3.9rem;
-											font-size:1.1rem;
-										}
-									}
-								}
-							}
-						}
-						.detail-iconBox{
-							margin-left: -.6rem;
-							label {
-								border:0 none;
-								border-radius: 0;
-								@include Regular;
-								&:after {
-									width: 1.7rem;
-									height: 1.7rem;
-									margin-top: -.85rem;
-									left:.5rem;
-								}
-							}
-							input:checked + label {
-								@include Regular;
-							}
-							input[type='checkbox'] + label:after{
-								@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
-							}
-							input[type='checkbox']:checked + label:after{
-								@include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
-							}
-						}
-					}
-					&.search-item-step1{
-						padding:0 0 3.4rem 0;
-						.selection{
-							padding:3.4rem 0 0 0;
-						}
-					}
-					&.search-item-step2{
-						.result-type {
-							.filter-col {
-								.chk-list {
-									li:last-child {
-										label {
-											padding:0;
-										}
-									}
-								}
-							}
-						}
-					}
-					&.search-item-step3{
-						.list-type-col2{
-							margin-top:.4rem;
-						}
-					}
-					&.search-item-step4{
-						
-					}
-					&.search-item-step5{
-						
-					}
-					&.search-item-step6{
-						.filter-col {
-							.slider_price_box{
-								li{
-									input{
-										width:2.8rem;
-									}
-								}
-							}
-						}
-					}
-					&.search-item-step7{
-						.filter-col {
-							.slider_price_box{
-								li{
-									input{
-										width:4rem;
-									}
-								}
-							}
-						}
-					}
-					&.search-item-step8{
-						.detail-layer-inputT{
-							margin-top:1.2rem;
-						}
-					}
-					.filter-col {
-						position: relative;
-						padding-top: 2rem;
-						.slider_price_box{
-							@include Position($top: 2rem, $right: 0);
-							@include Align-middle-left;
-							li{
-								@include Align-middle-left;
-								input{
-									font-size:1.1rem;
-									color:#ed1c24;
-									@include Regular;
-									width:1.3rem;
-								}
-								span {
-									font-size:1.1rem;
-									color:#ed1c24;
-									@include Regular;
-									vertical-align: middle;
-								}
-								em{
-									padding:0 .5rem;
-								}
-							}
-						}
-						.price-all {
-							border-bottom:1px solid #2B2B2B;
-							@include Position($top: 2rem, $right: 0);
-						}
-						.chk-list {
-							margin-top: .4rem;
-							li {
-								input {
-									display: none;
-								}
-								label {
-									position: relative;
-									height: 4.1rem;
-									display: block;
-									@include Align-middle;
-									box-sizing: border-box;
-									font-size: 1.2rem;
-									border-radius: 1rem;
-									border: .15rem solid #EBEBEB;
-									padding: 0 1.2rem;
-									transition: all .4s;
-								}
-								input:checked + label {
-									border-color: #2B2B2B;
-									@include Bold;
-									&:after {
-										display: block;
-										content: '';
-										@include Position( $top: .7rem, $right: .7rem);
-										z-index: 1;
-										width: .5rem;
-										height: .5rem;
-										margin-left: -.2rem;
-										border-radius: 100%;
-										background-color: #F04040;
-									}
-								}
-							}
-						}
-						.price_box_case {
-							position: relative;
-							top:1.2rem;
-							&:before {
-								display: block;
-								content: '';
-								width: 100%;
-								width: calc(100% - 1.3rem);;
-								height: .2rem;
-								background-color: #EBEBEB;
-								border-radius: .5rem;
-								margin: 1.7rem 0;
-							}
-							.price-box {
-								@include Position($top: 0, $right: 0);
-								width: 100%;
-								.ui-widget.ui-widget-content {
-									background-color: #EBEBEB;
-									border:0;
-									height: .2rem;
-									margin: 0 2.5rem 0 .8rem;
-								}
-								.ui-slider .ui-slider-range {
-									background-color: #f04040;
-									height: .2rem;
-								}
-								.ui-slider-horizontal .ui-slider-handle {
-									width: 2.2rem;
-									height: 2.2rem;
-									background-color: #fff;
-									border-radius: 100%;
-									border:1px solid #353535;
-									top: -1.1rem;
-									box-shadow: 0 1px 5px rgba(96,97,112,0.3);
-								}
-							}
-							.price-txt {
-								@include Align-between;
-								span {
-									position: relative;
-									&:first-child {
-										margin-right: 1rem;
-									}
-									&:after {
-										display: block;
-										content: '';
-										@include Position($top:-2.05rem, $left:50%);
-										background-color: #fff;
-										width: .2rem;
-										height: .2rem;
-										border-radius: 100%;
-										margin-left: -.1rem;
-									}
-									&.active {
-										@include Bold;
-									}
-								}
-							}
-						}
-		
-					}
-					.slide-btn {
-						padding: 2.6rem 1.7rem;
-					}
-				}
 			}
-			// &.type-list-search{
-			// 	background-color: #f5f5f5;
-			// }
 			&.type-fuel{
 				.list-type-col2{
 					margin-left:0;
@@ -1457,9 +1176,547 @@ body.fixed {
 					}
 				}
 			}
+			//달력 풀팝업
+			&.layer-schedule {
+				.full-cont{
+					padding:0;
+					.layer-infos{
+						padding:0;
+					}
+				}
+				.schedule-wrap{
+					.schedule-opt{
+						@include Align-between-top;
+						padding: 3.4rem 1.7rem 2.2rem;
+						margin:0;
+						background-color: #fafafa;
+						ul{
+							justify-content: space-between;
+						}
+						ul > li{
+							@include Align-middle-column;
+							align-items: flex-start;
+							position: relative;
+							width:auto;
+						}
+						ul > li:after{
+							display:block;
+							content:"";
+							@include Background($sprite:'ico-next08', $type:'png', $size:100% auto, $position:center center);
+							width: 1.6rem;
+							height: .7rem;
+							@include Position($top: 50%, $right: -50%);
+							transform: translateY(-100%);
+						}
+						ul > li:last-child:after{
+							display:none;
+						}
+						strong{
+							font-size:1.4rem;
+							@include Bold;
+						}
+						b{
+							font-size:1.4rem;
+							@include Regular;
+							margin-top:.9rem;
+						}
+						.detail-layer-selectbox{
+							margin-top:1.3rem;
+						}
+						.selectbox{
+							padding-right:3.4rem;
+							height:3rem;
+						}
+					}
+					.calendar-wrap{
+						overflow-y: auto;
+						height:34.2rem;
+						padding:1.6rem 0;
+						margin:0 1.7rem;
+						.calendar-tit{
+							font-size:1.4rem;
+							@include Bold;
+							padding:.6rem 0;
+							text-align:center;
+						}
+						.table{
+							border:none;
+							thead{
+								th{
+									margin:.9rem 0;
+									padding:.7rem;
+									text-align: center;
+									@include Bold;
+									font-size:1.1rem;
+									border:0 none;
+								}
+							}
+							tbody{
+								td{
+									padding:.9rem 0;
+									text-align: center;
+									border:0 none;
+									.btn{
+										padding:0;
+										height:2rem;
+										color:#54585a;
+										@include Regular;
+										font-size:1rem;
+									}
+									&.today{
+										.btn{
+											width:40%;
+											border-bottom: 1px solid #a02a3d;
+											padding-bottom:.2rem;
+											@include Bold;
+											color:#a02a3d;
+										}
+									}
+									&.start{
+										.btn{
+											width:100%;
+											background: rgb(254,43,123);
+											background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											border-radius: 1.7rem 0 0 1.7rem;
+											@include Bold;
+											color:#fff;   
+										}
+									}
+									&.during{
+										.btn{
+											width:100%;
+											background: rgb(254,43,123);
+											@include Bold;
+											color:#fff;   
+										}
+									}
+									&.end{
+										.btn{
+											width:100%;
+											background: rgb(254,43,123);
+											background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											border-radius: 0 1.7rem 1.7rem 0;
+											@include Bold;
+											color:#fff;   
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 			.btn-group{
 				.btn{
 					margin:0;
+				}
+			}
+		}
+
+		//상세검색 팝업
+		&.layer-list-search {
+			.full-cont {
+				padding:0;
+				.layer-infos{
+					padding: 0 !important;
+					.layer-search-item{
+						padding:3.4rem 0;
+						border-bottom:.6rem solid #f5f5f5;
+						&:last-child {
+							border-bottom: 0;
+						}
+						h5 {
+							font-size: 1.4rem;
+							padding-bottom:1.3rem;
+							@include Bold;
+						}
+						.section-filter {
+							padding:0 1.7rem;
+						}
+						.section-filter-list{
+							.result {
+								.filter-col {
+									padding:0 0 2rem 0;
+									.chk-list {
+										margin-top:0;
+										li {
+											label {
+												height:8.6rem;
+												border-radius: .4rem;
+												color:#54585a;
+												@include Align-middle-column;
+												background-color: #fff;
+												font-size:1rem;
+												@include Regular;
+												span{
+													margin:1.7rem 0 0 0;
+												}
+											}
+											input:checked + label {
+												background-color:rgb(255,249,249);
+												background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+												color:#ff404b;
+												border:1px solid #ff404b;
+												.brand01{
+													@include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+												}
+												.brand02{
+													@include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+												}
+												.brand03{
+													@include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+												}
+												.brand04{
+													@include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+												}
+												.brand05{
+													@include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+												}
+												.brand06{
+													@include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+												}
+											}
+											input:checked + label:after{
+												display:none;
+											}
+										}
+									}
+								}
+							}
+							.result-type {
+								.filter-col {
+									padding:0;
+									.chk-list {
+										li {
+											label {
+												height:3.9rem;
+												font-size:1.1rem;
+											}
+										}
+									}
+								}
+							}
+							.detail-iconBox{
+								margin-left: -.6rem;
+								label {
+									border:0 none;
+									border-radius: 0;
+									@include Regular;
+									&:after {
+										width: 1.7rem;
+										height: 1.7rem;
+										margin-top: -.85rem;
+										left:.5rem;
+									}
+								}
+								input:checked + label {
+									@include Regular;
+								}
+								input[type='checkbox'] + label:after{
+									@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+								}
+								input[type='checkbox']:checked + label:after{
+									@include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+								}
+							}
+						}
+						&.search-item-step1{
+							.result {
+								.filter-col {
+									padding-bottom:2.6rem;
+									.chk-list {
+										ul {
+											@include Inline-scrolling;
+											padding-bottom:.5rem;
+											li {
+												display: inline-flex;
+												width:6rem;
+												margin-left:1rem;
+												> div { 
+													width:100%;
+												}
+												&:first-child {
+													margin-left:0;
+												}
+												label {
+													@include Align-middle-column;
+													padding:0;
+													height:8.6rem;
+													border-radius: .4rem;
+													color:#54585a;
+													background-color: #fff;
+													font-size:1rem;
+													@include Regular;
+													border:1px solid #d2d2d2;
+													span{
+														margin:1.7rem 0 0 0;
+													}
+													i {
+														min-height:2.6rem;
+													}
+												}
+												input:checked + label {
+													background-color:rgb(255,249,249);
+													background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+													color:#ff404b;
+													border:1px solid #ff404b;
+													.brand01{
+														@include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+													}
+													.brand02{
+														@include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+													}
+													.brand03{
+														@include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+													}
+													.brand04{
+														@include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+													}
+													.brand05{
+														@include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+													}
+													.brand06{
+														@include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							.selection {
+								@include Align-between;
+								padding:0;
+								.selectbox {
+									width:60%;
+									border-right:0;
+									border-radius: .5rem 0 0 .5rem;
+								}
+								.detail-iconBox{
+									width:40%;
+									height:4.1rem;
+									border:1px solid #d2d2d2;
+									box-sizing: border-box;
+									border-left:0;
+									border-radius:0 .5rem .5rem 0;
+									position: relative;
+									@include Align-middle;
+									label {
+										border:0 none;
+										border-radius: 0;
+										font-size:1.1rem;
+										color:#8f9191;
+										@include Regular;
+										&::before {
+											content:'';
+											display: inline-block;
+											width: 1.2rem;
+											height: .9rem;
+											vertical-align: middle;
+											margin-right:.4rem;
+										}
+									}
+									input {
+										&::before {
+											content:'';
+											height:2rem;
+											display: inline-block;
+											border-left:1px solid #d2d2d2;
+											@include Position($top: 25%, $left: 0);
+										}
+									}
+									input:checked + label {
+										@include Regular;
+									}
+									input[type='checkbox'] + label:before{
+										@include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+									}
+									input[type='checkbox']:checked + label:before{
+										@include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+									}
+								}
+							}
+						}
+						&.search-item-step2{
+							.result-type {
+								.filter-col {
+									.chk-list {
+										li:last-child {
+											label {
+												padding:0;
+											}
+										}
+									}
+								}
+							}
+						}
+						&.search-item-step3{
+							.list-type-col2{
+								margin-top:.4rem;
+							}
+						}
+						&.search-item-step4{
+							
+						}
+						&.search-item-step5{
+							
+						}
+						&.search-item-step6{
+							.filter-col {
+								.slider_price_box{
+									li{
+										input{
+											width:2.8rem;
+										}
+									}
+								}
+							}
+						}
+						&.search-item-step7{
+							.filter-col {
+								.slider_price_box{
+									li{
+										input{
+											width:4rem;
+										}
+									}
+								}
+							}
+						}
+						&.search-item-step8{
+							.detail-layer-inputT{
+								margin-top:1.2rem;
+							}
+						}
+						.filter-col {
+							position: relative;
+							padding-top: 2rem;
+							.slider_price_box{
+								@include Position($top: 2rem, $right: 1.7rem);
+								@include Align-middle-left;
+								li{
+									@include Align-middle-left;
+									input{
+										font-size:1.1rem;
+										color:#ed1c24;
+										@include Regular;
+										width:1.3rem;
+									}
+									span {
+										font-size:1.1rem;
+										color:#ed1c24;
+										@include Regular;
+										vertical-align: middle;
+									}
+									em{
+										padding:0 .5rem;
+									}
+								}
+							}
+							.price-all {
+								border-bottom:1px solid #2B2B2B;
+								@include Position($top: 2rem, $right: 0);
+							}
+							.chk-list {
+								margin-top: .4rem;
+								li {
+									input {
+										display: none;
+									}
+									label {
+										position: relative;
+										height: 4.1rem;
+										display: block;
+										@include Align-middle;
+										box-sizing: border-box;
+										font-size: 1.2rem;
+										border-radius: 1rem;
+										border: .15rem solid #EBEBEB;
+										padding: 0 1.2rem;
+										transition: all .4s;
+									}
+									input:checked + label {
+										border-color: #2B2B2B;
+										@include Bold;
+										&:after {
+											display: block;
+											content: '';
+											@include Position( $top: .7rem, $right: .7rem);
+											z-index: 1;
+											width: .5rem;
+											height: .5rem;
+											margin-left: -.2rem;
+											border-radius: 100%;
+											background-color: #F04040;
+										}
+									}
+								}
+							}
+							.price_box_case {
+								position: relative;
+								top:.4rem;
+								&:before {
+									display: block;
+									content: '';
+									width: 100%;
+									width: calc(100% - 1.3rem);;
+									height: .2rem;
+									background-color: #EBEBEB;
+									border-radius: .5rem;
+									margin: 1.7rem 0;
+								}
+								.price-box {
+									@include Position($top: 0, $right: 0);
+									width: 100%;
+									.ui-widget.ui-widget-content {
+										background-color: #EBEBEB;
+										border:0;
+										height: .2rem;
+										margin: 0 .8rem 0 .8rem;
+									}
+									.ui-slider .ui-slider-range {
+										background-color: #f04040;
+										height: .2rem;
+									}
+									.ui-slider-horizontal .ui-slider-handle {
+										width: 2.2rem;
+										height: 2.2rem;
+										background-color: #fff;
+										border-radius: 100%;
+										border:1px solid #353535;
+										top: -1.1rem;
+										box-shadow: 0 1px 5px rgba(96,97,112,0.3);
+									}
+								}
+								.price-txt {
+									@include Align-between;
+									span {
+										position: relative;
+										&:first-child {
+											margin-right: 1rem;
+										}
+										&:after {
+											display: block;
+											content: '';
+											@include Position($top:-2.05rem, $left:50%);
+											background-color: #fff;
+											width: .2rem;
+											height: .2rem;
+											border-radius: 100%;
+											margin-left: -.1rem;
+										}
+										&.active {
+											@include Bold;
+										}
+									}
+								}
+							}
+			
+						}
+						.slide-btn {
+							padding: 2.6rem 1.7rem;
+						}
+					}
 				}
 			}
 		}
