@@ -3303,6 +3303,17 @@ a.btn {
 	height: 2rem;
 }
 
+.icon.close04 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-close4.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 1.3rem;
+	height: 1.3rem;
+}
+
 .icon.logo {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-mo/images/icons/ico-logo.png");
@@ -9183,21 +9194,19 @@ body.fixed {
 	color: #8f9191;
 }
 
-.layer-full.layer-photo-info .full-cont .cont-in p::before {
-	content: '';
-	display: inline-block;
-	width: .2rem;
-	height: .2rem;
-	background-color: #000;
-	vertical-align: middle;
-	margin-right: .4rem;
-	-webkit-border-radius: 100%;
-	   -moz-border-radius: 100%;
-	        border-radius: 100%;
+.layer-full.layer-photo-info .full-cont .cont-in p .icon.pannel09 {
+	width: 2.1rem;
+	height: 1.9rem;
+	margin-right: 1rem;
 }
 
 .layer-full.layer-photo-info .full-cont .cont-in .file-box {
 	margin-top: 1rem;
+}
+
+.layer-full.layer-photo-info .full-cont .cont-in .file-box.hidden-filebox-toggle {
+	display: none;
+	margin-top: 0;
 }
 
 .layer-full.layer-photo-info .full-cont .cont-in .file-box li .inner {
@@ -9269,11 +9278,24 @@ body.fixed {
 	        background-size: 100% 100%;
 }
 
-.layer-full.layer-photo-info .full-cont .cont-in .file-box li .inner .inputF.active i {
+.layer-full.layer-photo-info .full-cont .cont-in .file-box li .inner .inputF.active .btn-close {
+	position: absolute;
+	top: 0.4rem;
+	right: 0.4rem;
+	padding: 0;
+	height: auto;
+	z-index: 2;
+}
+
+.layer-full.layer-photo-info .full-cont .cont-in .file-box li .inner .inputF.active .btn-close i {
+	display: block;
+}
+
+.layer-full.layer-photo-info .full-cont .cont-in .file-box li .inner .inputF.active label i {
 	display: none;
 }
 
-.layer-full.layer-photo-info .full-cont .cont-in .file-box li .inner .inputF.active span {
+.layer-full.layer-photo-info .full-cont .cont-in .file-box li .inner .inputF.active label span {
 	display: block;
 	margin-top: 0;
 	padding: .4rem 0;
@@ -9281,6 +9303,10 @@ body.fixed {
 	color: #fff;
 	background-color: rgba(0, 0, 0, 0.6);
 	text-align: center;
+	font-size: .8rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -9314,7 +9340,7 @@ body.fixed {
 	padding: 2.3rem 0;
 }
 
-.layer-full.layer-photo-info .full-cont .cont-in .btn-addphoto button {
+.layer-full.layer-photo-info .full-cont .cont-in .btn-addphoto .add-photo {
 	width: 100%;
 	background-color: #54585a;
 	color: #fff;
