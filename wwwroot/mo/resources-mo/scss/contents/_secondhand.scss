@@ -2081,6 +2081,31 @@
                 .tab-cont {
                     .corporation-tab {
                         display:none;
+                        li:first-child {
+                            .inputT {
+                                padding:1rem 0;
+                                @include Align-box-left;
+                                p {
+                                    padding-top:1.3rem;
+                                    &.red {
+                                        color:#F04040;
+                                        padding-left:1rem;
+                                        text-indent:-.7rem;
+                                        font-size:1.1rem;
+                                        &::before {
+                                            width:.2rem;
+                                            height:.2rem;
+                                            content:'';
+                                            display: inline-block;
+                                            background-color: #F04040;
+                                            border-radius: 100%;
+                                            vertical-align: middle;
+                                            margin-right:.4rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     li {
                         border-bottom:1px solid #e7e7e7;
@@ -2243,7 +2268,6 @@
                     }
                 }
             }
-
             &.cont-item5 {
                 .cont-in {
                     > div + div {
@@ -2273,7 +2297,6 @@
                 }
                 
             }
-
             &.cont-item6 {
                 .cont-in {
                     p {

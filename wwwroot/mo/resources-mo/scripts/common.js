@@ -53,12 +53,14 @@ $(function(){
         $('.drawer').scrollTop(0);
     });
 
+
     //햄버거 메뉴 토글
     if($('.drawer .drawer-toggle-btn').length) {
         MUI.event.toggle('.drawer .drawer-toggle-btn', '.drawer .drawer-toggle-cont', true, function(logic, layer) {
             logic();
         });
     }
+
 
     //햄버거 메뉴 상세메뉴 탭전환
     if($('.drawer .tab-normal').length){
@@ -357,6 +359,7 @@ if($('.specials-list .tab-normal').length){
             show();
         });
     }
+
 
     //본인인증 슬라이드 팝업
     if($('.layer-certification').length) {
@@ -1113,6 +1116,18 @@ if($('.secondhand-wrap .tab-normal').length){
         swap();
     });
 }
+
+//중고차 승계렌터카 등록 - 차량상세 팝업
+if($('.layer-car-detail').length){
+    MUI.event.toggle('.layer-car-detail .carinfo-toggle-btn', '.layer-car-detail .carinfo-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+//중고차 승계렌터카 등록 - 사진정보 팝업
+  
+
 /* -------------------------------------------------중고차 승계렌터카 end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
