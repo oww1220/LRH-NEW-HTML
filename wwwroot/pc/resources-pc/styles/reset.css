@@ -136,44 +136,6 @@ html, body {
 	text-align: left;
 }
 
-.tbl-box {
-	margin-bottom: 60px;
-}
-
-.tbl-box table {
-	width: 100%;
-	border-top: 1px solid #e7e7e7;
-}
-
-.tbl-box table th, .tbl-box table td {
-	padding: 30px;
-	text-align: center;
-	border-bottom: 1px solid #e7e7e7;
-	border-right: 1px solid #e7e7e7;
-	color: #54585a;
-	vertical-align: middle;
-}
-
-.tbl-box table thead th:last-of-type, .tbl-box table td:last-of-type {
-	border-right: none;
-}
-
-.tbl-box table thead th {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	font-weight: normal;
-	background-color: #fafafa;
-}
-
-.tbl-box table .align-l {
-	text-align: left;
-}
-
-.tbl-box table + .lst {
-	margin-top: 20px;
-	margin-bottom: 0;
-}
-
 .section-headline {
 	text-align: center;
 	padding-bottom: 60px;
@@ -228,6 +190,10 @@ html, body {
 	margin-top: 60px;
 }
 
+.section-explain .explain-cont > .row .tit-size-mid {
+	margin-bottom: 25px;
+}
+
 .section-explain .explain-cont .lst {
 	margin-bottom: 30px;
 }
@@ -250,6 +216,44 @@ html, body {
 
 .section-explain .explain-cont .btn-box {
 	padding: 40px 0;
+}
+
+.section-explain .explain-cont .tbl-box {
+	margin-bottom: 60px;
+}
+
+.section-explain .explain-cont .tbl-box table {
+	width: 100%;
+	border-top: 1px solid #e7e7e7;
+}
+
+.section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td {
+	padding: 30px;
+	text-align: center;
+	border-bottom: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+	color: #54585a;
+	vertical-align: middle;
+}
+
+.section-explain .explain-cont .tbl-box table thead th:last-of-type, .section-explain .explain-cont .tbl-box table td:last-of-type {
+	border-right: none;
+}
+
+.section-explain .explain-cont .tbl-box table thead th {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	background-color: #fafafa;
+}
+
+.section-explain .explain-cont .tbl-box table .align-l {
+	text-align: left;
+}
+
+.section-explain .explain-cont .tbl-box table + .lst {
+	margin-top: 20px;
+	margin-bottom: 0;
 }
 
 .section-form .form-header {
@@ -447,10 +451,24 @@ html, body {
 }
 
 .box-type2 .right {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: auto;
+	min-width: 80px;
 	margin-left: auto;
 }
 
 .box-type2 .left {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: auto;
+	min-width: 80px;
 	margin-right: 5px;
 }
 
@@ -469,10 +487,24 @@ html, body {
 }
 
 .box-type3 .right {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: auto;
+	min-width: 80px;
 	margin-left: auto;
 }
 
 .box-type3 .left {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: auto;
+	min-width: 80px;
 	margin-right: 5px;
 }
 
@@ -510,6 +542,16 @@ html, body {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+}
+
+.box-between .right-btn {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: auto;
+	margin-left: 5px;
 }
 
 .box-align {
@@ -664,6 +706,30 @@ html, body {
 	font-weight: normal;
 	font-size: 1.125rem;
 	margin-bottom: 24px;
+}
+
+.grid-col-space-around {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+}
+
+.grid-col-space-around.type-align-c {
+	text-align: center;
+}
+
+.grid-col-space-around.type-align-c .img-item {
+	margin-bottom: 35px;
+}
+
+.grid-col-space-around.type-align-c .lst {
+	display: inline-block;
+	text-align: left;
 }
 
 .grid-col-inline {
@@ -841,6 +907,17 @@ html, body {
 	z-index: 5;
 }
 
+.purchase-step > li .tit.type-line2 {
+	display: block;
+	height: 50px;
+	margin-bottom: 0;
+}
+
+.purchase-step > li .txt {
+	text-align: center;
+	margin-top: 25px;
+}
+
 .purchase-step > li .img-item {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -870,13 +947,16 @@ html, body {
 	background-color: #fafafa;
 }
 
-.purchase-step > li .txt {
-	text-align: center;
+.purchase-step > li .lst {
 	margin-top: 25px;
 }
 
-.purchase-step > li .lst {
-	margin-top: 25px;
+.purchase-step > li .align-c > .lst {
+	display: inline-block;
+}
+
+.purchase-step > li .align-c > .lst li {
+	text-align: left;
 }
 
 .purchase-step > li:last-of-type:after, .purchase-step > li:last-of-type:before {

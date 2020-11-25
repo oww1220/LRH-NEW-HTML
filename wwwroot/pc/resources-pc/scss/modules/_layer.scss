@@ -38,7 +38,7 @@ body.fixed {
 	//팝업 형태
 	&-popup {
 		position: fixed;
-		width: 640px;
+		width: 700px;
 		display: none;
 		&.active {
 			display: block !important;
@@ -58,31 +58,51 @@ body.fixed {
 			z-index: 2;
 		}
 		.pop-inner {
-			border-radius:20px;
-			background-color:#fff;
-			margin:50px 30px 30px;
 			position: relative;
+			overflow:hidden;
+			@include roundBox;
+			margin:50px 30px 30px;
+			background-color:#fff;
 			box-shadow: 0 1px 15px rgba(96, 97, 112, 0.5);
 		}
 		.popup-top {
 			position: relative;
+			padding:0 50px;
+			background: rgb(251,68,87);
+			background: linear-gradient(90deg, rgba(251,68,87,1) 0%, rgba(246,81,71,1) 50%, rgba(241,93,55,1) 100%);
 			z-index: 1;
+
 			> h4 {
-				@include Align-middle;
-				font-size: 26px;
-				@include Bold;
 				height: 100px;
+				@include Align-middle-left;
+				font-size: 24px;
+				@include Bold;
+				color:#fff;
+			}
+
+			.layer-popup-close{
+				cursor: pointer;
+				@include Position($top: 25px, $right: 40px);
+				width: 50px;
+				height: 50px;
+				z-index: 2;
 			}
 		}
 		.popup-cont {
 			position: relative;
 			box-sizing:border-box;
-			overflow: hidden;
-			border-radius: 0 0 20px 20px;
+			padding:50px;
 			.iscroll-in {
-				padding-bottom: 40px;
+				//padding-bottom: 40px;
 			}
 			@include CustumScroll;
+
+			.popup-cont-bot-btn{
+				margin:35px 0 0;
+				text-align:center;
+
+				.btn{width:auto; margin:0 auto;}
+			}
 		}
 		.popup-bottom-btn {
 			margin-top: 10px;
@@ -103,7 +123,6 @@ body.fixed {
 				border-radius: 15px;
 			}
 		}
-
 		.popup-normal-btns {
 			width: 100%;
 			@include Align-middle;
@@ -166,104 +185,6 @@ body.fixed {
 			}
 		}
 
-		//주소찾기 팝업 
-		&.layer-address {
-			.layer-address-top {
-				padding: 0 40px;
-				@include Align-middle-left;
-				> button {
-					margin-left: 10px;
-					width: 120px;
-					height: 60px;
-					flex:none;
-					font-size: 16px;
-				}
-			}
-			.layer-address-guide {
-				margin: 0 40px;
-				position: relative;
-				margin-top: 15px;
-				padding-left: 40px;
-				&:before {
-					display: block;
-					content: 'TIP.';
-					font-size: 13px;
-					line-height: 1.3;
-					@include Bold;
-					@include Position($top:0, $left: 1.3rem)
-				}
-				> p {
-					font-size: 13px;
-					line-height: 1.4;
-				}
-				> span {
-					font-size: 13px;
-					color: #999;
-					line-height: 1.4;
-					display: block;
-					margin-top:10px;
-					a {
-						font-size: 13px;
-						color: #999;
-						line-height: 1.4;
-					}
-				}
-				
-			}
-			.layer-address-result {
-				padding: 0 40px;
-				margin-top: 30px;
-				.address-result-top {
-					strong {
-						@include Bold;
-						margin-left: 10px;
-						b {
-							color: #F04040;
-						}
-					}
-				}
-				.address-result-list {
-					border: 1px solid #EBEBEB;
-					border-radius: 15px;
-					margin-top: 10px;
-					> ul {
-						max-height: 340px;
-						overflow-y: auto;
-						overflow-x: hidden;
-						@include CustumScroll;
-						> li {
-							margin: 0 20px;
-							a {
-								@include Align-top-left;
-								padding: 20px 0;
-								> strong {
-									font-size: 13px;
-									line-height: 1.5;
-									@include Bold;
-									flex:none;
-									margin-right:15px;
-								}
-								> span {
-									font-size: 13px;
-									line-height: 1.5;
-								}
-							}
-							& + li {
-								border-top: 1px solid #EBEBEB;
-							}
-							.none {
-								@include Align-middle;
-								height: 330px;
-							}
-						}
-					}
-				}
-			}
-			.pagination-wrap {
-				margin-top:30px;
-			}
-		}
-		
 		//운전면허 정보안내 팝업
 		&.layer-license {
 			.layer-license-top {
@@ -840,6 +761,108 @@ body.fixed {
 					}
 				}
 
+			}
+		}
+
+		//대여 차량 상세
+		&.layer-carDetail-info{
+			.img-box{
+				text-align:center;
+				margin-bottom:40px;
+			}
+			.tit-size-big{
+				margin-bottom:20px;
+			}
+			.tbl-box{
+				padding:25px 0;
+				border-top: 1px solid $border-darkgrey;
+				border-bottom: 1px solid $border-darkgrey;
+				
+				table{
+					width:100%;					
+					th, td{
+						text-align:left;
+						padding:0 0 30px;
+					}
+					tr{
+						&:last-of-type{
+							th, td{padding-bottom:0;}
+						}
+					}
+				}
+				.icon{margin-right:10px;}
+			}
+		}
+		//주소찾기 팝업 
+		&.layer-address {
+			.srch-box{
+				margin-bottom:40px;
+			}
+			.address-result-box{
+				.address-result-top{
+					margin-bottom:20px;
+
+					strong{
+						@include Bold;
+						color:$txt-red;
+					}
+				}
+				.address-result-cont{
+					border-top:1px solid $border-darkgrey;
+					border-bottom:1px solid $border-darkgrey;
+					
+					.address-result-list{
+						li{
+							padding:20px 15px;
+							border-bottom:1px solid $border-grey;
+
+							&:hover{ background-color: #fafafa;}
+
+							.addr-area{
+								@include Align-between;
+
+								.addr-col01{
+									flex-grow: 1;
+
+									.addr-item{
+										@include Align-middle-left;
+										margin-bottom:10px;
+
+										dt{
+											flex:none;
+											width:60px;
+											
+											.addr-flag{
+												@include Align-middle;
+												width:48px;
+												height:20px;
+												font-size:12px;
+												color:#fff;
+												border-radius: 6px;
+												background-color:#8f9191;
+											}	
+										}
+
+										&:last-of-type{margin-bottom:0;}										
+									}
+									
+								}
+								.addr-col02{
+									flex:none;
+									width:100px;
+									text-align:right;
+								}
+							}
+
+							&:last-child{border-bottom:none;}
+						}	
+					}
+
+					.result-none{
+						padding:50px 20px;
+						text-align:center;
+					}
+				}
 			}
 		}
 

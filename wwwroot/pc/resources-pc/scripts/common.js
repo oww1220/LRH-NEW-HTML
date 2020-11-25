@@ -353,15 +353,6 @@ if($('.carLife-container .tab-normal').length){
         });
     }
 
-    //주소찾기 모달 팝업
-    if($('.layer-address').length) {
-        MUI.layer.openClick('.layer-address-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
-            //console.log('open');
-            //iscrollReset(show, layer);
-            show();
-        });
-    }
-
     //제휴카드 혜택안내 모달 팝업
     if($('.layer-cards').length) {
         MUI.layer.openClick('.layer-cards-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
@@ -374,6 +365,21 @@ if($('.carLife-container .tab-normal').length){
     //안내문구 공통 모달 팝업
     if($('.layer-infos').length) {
         MUI.layer.openClick('.layer-infos-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            //console.log('open');
+            //iscrollReset(show, layer);
+            show();
+        });
+    }
+
+    //대여 차량 상세
+    if($('.layer-carDetail-info').length) {
+        MUI.layer.openClick('.layer-carDetail-info-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }
+    //주소찾기 모달 팝업
+    if($('.layer-address').length) {
+        MUI.layer.openClick('.layer-address-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
             //console.log('open');
             //iscrollReset(show, layer);
             show();
@@ -747,6 +753,34 @@ if($('.agreeAccor').length){
         logic();
     });
 }
+
+//중고차 장기렌터카 - 차량 검색
+if($('.secondhand-container .filterAccor').length) {
+    MUI.event.toggle('.filterAccor .filterToggleBtn', '.filterAccorfilterAccor .filterToggleCon', false, function(logic, layer) {
+        //console.log('toggle');
+        //$('.secondhand-container .filterAccor input').prop('checked', false);
+        logic();
+    });
+}
+//중고차 목록 - 보기모드
+if($('.secondhand-container').length){
+    var listViewFlag = true;    
+
+    $('.sort-section .listViewBtn').on('click', function(){        
+        if(listViewFlag){
+            $('.listViewDefault').removeClass('listViewDefault').addClass('listViewActive');  
+            $('.result-cont').children('.grid-col').removeClass('col3').addClass('col2');
+
+            listViewFlag = false;
+        }else{
+            $('.listViewActive').removeClass('listViewActive').addClass('listViewDefault');         
+            $('.result-cont').children('.grid-col').removeClass('col2').addClass('col3');
+
+            listViewFlag = true;            
+        }
+    });
+}
+
 /* -------------------------------------------------중고차장기렌터카end*/
 
 

@@ -2037,145 +2037,361 @@
                 }
             }
         }
-        .section-top-cont {
+        .section-cont {
             background-color: #fff;
-            padding-bottom:1.7rem;
-            .tab-cont {
-                .corporation-tab {
-                    display:none;
+            padding:1.7rem 0;
+            .wrap {
+                padding:0 1.7rem;
+                .cont-tit {
+                    h3 {
+                        background-color: #EFF2F7;
+                        padding: 1.5rem 1.3rem;
+                        border-radius: 1rem;
+                        @include Bold;
+                        font-size:1.4rem;
+                    }
                 }
-                li {
-                    border-bottom:1px solid #e7e7e7;
-                    &.active {
-                        background-color: #fff9f9;
+                .cont-in {
+                    padding-top:1.7rem;
+                }
+                > strong {
+                    @include Bold;
+                    font-size:1.8rem;
+                }
+                .detail-cont {
+                    padding:2.6rem 0;
+                    margin-top:1.7rem;
+                    border-top:1px solid #d2d2d2;
+                    border-bottom:1px solid #d2d2d2;
+                    > div { 
+                        @include Align-middle-left;
                         strong {
-                            &:after {
-                                content:'';
-                                display: inline-block;
-                                width: 1.5rem;
-                                height: 1.5rem;
-                                margin-left:1rem;
-                                @include Background($sprite:'ico-chk-on06', $type:'png', $size:92% auto, $position:center center);
-                            }
-                        }
-                        button {
-                            background-color: #F04040;
-                            color:#fff;
-                            border:0 !important;
                             @include Bold;
+                            width:30%;
+                        }
+                        & + div {
+                            padding-top:2.6rem;
                         }
                     }
-                    .wrap {
-                        padding:1.7rem;
-                        > div {
-                            @include Align-between;
-                            .text-cont {
-                                width:75%;
-                                strong {
-                                    @include Bold;
-                                    font-size:1.4rem;
-                                }
-                                .info {
-                                    @include Align-left-column;
-                                    margin-top:1rem;
-                                    > div {
-                                        @include Align-middle-left;
-                                    
-                                        em {
-                                            min-width:3.6rem;
-                                            margin-right:1rem;
-                                        }
-                                        span {
-                                            &:before {
-                                                content:'|';
-                                                display:inline-block;
-                                                padding-right:1rem;
-                                                color:#e7e7e7;
-                                            }
+                }
+            }
+            
+            &.cont-item1 {
+                padding-top:0;
+                .tab-cont {
+                    .corporation-tab {
+                        display:none;
+                        li:first-child {
+                            .inputT {
+                                padding:1rem 0;
+                                @include Align-box-left;
+                                p {
+                                    padding-top:1.3rem;
+                                    &.red {
+                                        color:#F04040;
+                                        padding-left:1rem;
+                                        text-indent:-.7rem;
+                                        font-size:1.1rem;
+                                        &::before {
+                                            width:.2rem;
+                                            height:.2rem;
+                                            content:'';
+                                            display: inline-block;
+                                            background-color: #F04040;
+                                            border-radius: 100%;
+                                            vertical-align: middle;
+                                            margin-right:.4rem;
                                         }
                                     }
                                 }
                             }
-                            .cover {
-                                width:8.8rem;
-                                min-height:4.4rem;
-                                @include Align-middle;
-                                img {
-                                    width:100%;
-                                    height:100%;
+                        }
+                    }
+                    li {
+                        border-bottom:1px solid #e7e7e7;
+                        &.active {
+                            background-color: #fff9f9;
+                            strong {
+                                &:after {
+                                    content:'';
+                                    display: inline-block;
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    margin-left:1rem;
+                                    @include Background($sprite:'ico-chk-on06', $type:'png', $size:92% auto, $position:center center);
                                 }
                             }
+                            button {
+                                background-color: #F04040;
+                                color:#fff;
+                                border:0 !important;
+                                @include Bold;
+                            }
                         }
-                        > button {
-                            margin-top:1.3rem;
-                            height:2.6rem;
-                            border:.1rem solid #d2d2d2;
-                            border-radius:.5rem;
+                        .wrap {
+                            padding:1.7rem;
+                            > div {
+                                @include Align-between;
+                                .text-cont {
+                                    width:75%;
+                                    strong {
+                                        @include Bold;
+                                        font-size:1.4rem;
+                                    }
+                                    .info {
+                                        @include Align-left-column;
+                                        margin-top:1rem;
+                                        > div {
+                                            @include Align-middle-left;
+                                        
+                                            em {
+                                                min-width:3.6rem;
+                                                margin-right:1rem;
+                                            }
+                                            span {
+                                                &:before {
+                                                    content:'|';
+                                                    display:inline-block;
+                                                    padding-right:1rem;
+                                                    color:#e7e7e7;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .cover {
+                                    width:8.8rem;
+                                    min-height:4.4rem;
+                                    @include Align-middle;
+                                    img {
+                                        width:100%;
+                                        height:100%;
+                                    }
+                                }
+                            }
+                            > button {
+                                margin-top:1.3rem;
+                                height:2.6rem;
+                                border:.1rem solid #d2d2d2;
+                                border-radius:.5rem;
+                            }
                         }
                     }
                 }
             }
-        }
-        .section-bott-cont {
-            background-color: #fff;
-            > div {
-                padding:1.7rem;
-            }
-            h3 {
-                background-color: #EFF2F7;
-                padding: 1.5rem 1.3rem;
-                border-radius: 1rem;
-                @include Bold;
-                font-size:1.4rem;
-            }
-            .chk-agree-list {
-                .chk-agree-cols {
-                    .chk-agree-top {
-                        .inputC {
-                            label {
-                               span { 
-                                    font-size:1.1rem;
-                               }
-                            }
-                            label:before {
-                                @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
-                            }
-                            input:checked + label {
-                                &:before{
-                                    @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+            &.cont-item2 {
+                padding-bottom:2.6rem;
+                .chk-agree-list {
+                    margin-top:0;
+                    .chk-agree-cols {
+                        .chk-agree-top {
+                            .inputC {
+                                label {
+                                span { 
+                                        font-size:1.1rem;
+                                }
+                                }
+                                label:before {
+                                    @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                                }
+                                input:checked + label {
+                                    &:before{
+                                        @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                                    }
+                                }
+                            } 
+                        }
+                        .chk-agree-cont {
+                            background-color:#f5f5f5;
+                            border-radius:.6rem;
+                            padding:1.7rem;
+                            li {
+                                border-bottom:0;
+                                color:#F04040;
+                                text-indent:-.8rem;
+                                padding-left:1rem;
+                                font-size:1.1rem;
+                                &::before {
+                                    content: '';
+                                    display: inline-block;
+                                    margin-right:.4rem;
+                                    width:.2rem;
+                                    height:.2rem;
+                                    background-color: #F04040;
+                                    border-radius: 100%;
+                                    vertical-align: middle;
+                                }
+                                & + li {
+                                    padding-top:1.3rem;
                                 }
                             }
-                        } 
+                        }
                     }
-                    .chk-agree-cont {
-                        background-color:#f5f5f5;
-                        border-radius:.6rem;
-                        padding:1.7rem;
+                }
+            }
+            &.cont-item3 {
+                .detail-cont {
+                    padding:0 1.3rem;
+                    margin-top:0;
+                    border:0;
+                    > div {
+                        @include Align-middle-left;
+                        padding-bottom:2.6rem;
+                        strong {
+                            width:25%;
+                            @include Bold;
+                        }
+                        & + div {
+                            padding-top:0;
+                        }
+                    }
+                }
+            }
+            &.cont-item4 {
+                .inputT {
+                    .inner {
+                        position: relative;
+                        input {
+                            width:100%;
+                            border: 1px solid #d2d2d2;
+                            border-radius: .5rem;
+                            background-color: #fff;
+                            height: 4.1rem;
+                            padding: 0 1.2rem;
+                            text-align: right;
+                            padding-right: 3.6rem;
+                        }
+                        span {
+                            @include Position($top: 28%, $right: 1rem);
+                            @include Bold;
+                        }
+                    }
+                }
+            }
+            &.cont-item5 {
+                .cont-in {
+                    > div + div {
+                        padding-top:3.4rem;
+                        margin-top:1.7rem;
+                        border-top:1px solid #d2d2d2;
+                    }
+                    h4 {
+                        @include Bold;
+                        font-size:1.2rem;
+                    }
+                    ul {
+                        margin-left:0;
                         li {
-                            border-bottom:0;
-                            color:#F04040;
-                            text-indent:-.8rem;
-                            padding-left:1rem;
-                            font-size:1.1rem;
+                            padding:1.3rem 0;
+                            @include Align-middle-left;
+                            > div {
+                                background-color: #ff404b;
+                                color:#fff;
+                                font-size:.6rem;
+                                padding:.4rem .2rem;
+                                margin-right:1rem;
+                            }
+                        }
+                    }
+                    
+                }
+                
+            }
+            &.cont-item6 {
+                .cont-in {
+                    p {
+                        text-indent: -.6rem;
+                        padding-left: 1rem;
+                        font-size: 1.1rem;
+                        color:#8f9191;
+                        &::before {
+                            content:'';
+                            display: inline-block;
+                            width:.2rem;
+                            height:.2rem;
+                            background-color: #000;
+                            vertical-align: middle;
+                            margin-right:.4rem;
+                            border-radius:100%;
+                        }
+                    }
+                    li {
+                        .inner {
+                            @include Align-middle-column;
+                            border: 1px solid #d2d2d2;
+                            border-radius: .5rem;
+                            padding:1.3rem 0;
+                            .cover {
+                                @include Align-middle;
+                                width:8rem;
+                                height: 5.5rem;
+                                img {
+                                    width: 70%;
+                                }
+                            }
+                            span {
+                                padding-top:.4rem;
+                            }
+                        }
+                    }
+                    .guide {
+                            padding:1.3rem 0;
+                            li {
+                            text-indent: -.6rem;
+                            padding-left: 1rem;
+                            font-size: 1.1rem;
+                            color:#8f9191;
+                            & + li {
+                                padding-top:1rem;
+                            }
                             &::before {
-                                content: '';
+                                content:'';
                                 display: inline-block;
-                                margin-right:.4rem;
                                 width:.2rem;
                                 height:.2rem;
-                                background-color: #F04040;
-                                border-radius: 100%;
+                                background-color: #000;
                                 vertical-align: middle;
+                                margin-right:.4rem;
+                                border-radius:100%;
                             }
-                            & + li {
-                                padding-top:1.3rem;
-                            }
+                        }
+                    }
+                    .btn-addphoto {
+                        padding-top:1.3rem;
+                        button {
+                            width: 100%;
+                            background-color: #54585a;
+                            color:#fff;
+                            border-radius: .5rem;
+                            font-size:1.6rem;
+                            @include Bold;
                         }
                     }
                 }
             }
 
+            &.cont-item7 {
+                .cont-in {
+                    .textarea {
+                        height: 11rem;
+                        textarea {
+                            font-size:1.1rem;
+                        }
+                    }
+                }
+            }  
+
+            &.cont-item8 {
+                > div {
+                    > strong {
+                        @include Bold;
+                        font-size:1.8rem;
+                    }
+                }
+                
+            }
         }
+       
     }
     .section-list {
         padding: 3.4rem 1.7rem 3.4rem;
