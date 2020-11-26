@@ -916,7 +916,7 @@ if($('.specials-list .tab-normal').length){
 if($('.carLife-wrap .carLife-tabwang-swiper').length) {
     MUI.slide.init('.carLife-wrap .carLife-tabwang-swiper','swiper', {
         loop: true,
-        autoHeight: true,
+        //autoHeight: true,
         pagination: {
             el: '.carLife-tabwang-pagination',
         },
