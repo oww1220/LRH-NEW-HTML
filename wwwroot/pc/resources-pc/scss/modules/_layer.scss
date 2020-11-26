@@ -811,6 +811,25 @@ body.fixed {
 					border-top:1px solid $border-darkgrey;
 					border-bottom:1px solid $border-darkgrey;
 					
+					.map{
+						min-height:368px;
+						.detail-map-marker{
+							@include Position();
+							cursor: pointer;
+							.map-marker-box{
+								@include Align-between;
+								border:.2rem solid #ff404b;
+								background-color:#fff;
+								border-radius: 1.7rem;
+								padding:.4rem .9rem;
+								.map-marker-txt{
+									font-size:.9rem;
+									@include Bold;
+									padding-left:.9rem;
+								}
+							}
+						}
+					}
 					.address-result-list{
 						li{
 							padding:20px 15px;

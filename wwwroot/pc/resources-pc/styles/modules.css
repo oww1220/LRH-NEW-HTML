@@ -379,6 +379,29 @@ html, body {
 	margin: 0 5px;
 }
 
+.section-form .form-cont .input-group {
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	padding: 20px 0 0;
+	margin: 0 80px 20px;
+}
+
+.section-form .form-cont .input-group .input-group-tit {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+
+.section-form .form-cont .input-group .row {
+	padding: 0;
+}
+
+.section-form .form-cont .input-group + .input-group {
+	border-top: none;
+	border-bottom: 1px solid #e7e7e7;
+}
+
 .section-format {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -4180,6 +4203,17 @@ button[disabled] {
 	height: 16px;
 }
 
+.icon.marker {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-marker.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 30px;
+	height: 30px;
+}
+
 button.active .filter {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-pc/images/icons/ico-select-on.png");
@@ -7577,6 +7611,47 @@ body.fixed {
 .layer-popup.layer-address .address-result-box .address-result-cont {
 	border-top: 1px solid #d2d2d2;
 	border-bottom: 1px solid #d2d2d2;
+}
+
+.layer-popup.layer-address .address-result-box .address-result-cont .map {
+	min-height: 368px;
+}
+
+.layer-popup.layer-address .address-result-box .address-result-cont .map .detail-map-marker {
+	position: absolute;
+	cursor: pointer;
+}
+
+.layer-popup.layer-address .address-result-box .address-result-cont .map .detail-map-marker .map-marker-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	border: .2rem solid #ff404b;
+	background-color: #fff;
+	-webkit-border-radius: 1.7rem;
+	   -moz-border-radius: 1.7rem;
+	        border-radius: 1.7rem;
+	padding: .4rem .9rem;
+}
+
+.layer-popup.layer-address .address-result-box .address-result-cont .map .detail-map-marker .map-marker-box .map-marker-txt {
+	font-size: .9rem;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	padding-left: .9rem;
 }
 
 .layer-popup.layer-address .address-result-box .address-result-cont .address-result-list li {
