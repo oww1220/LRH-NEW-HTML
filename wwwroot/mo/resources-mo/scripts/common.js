@@ -1133,24 +1133,32 @@ if($('.layer-car-detail').length){
 }
 
 //중고차 승계렌터카 등록 - 사진정보 팝업
-if($('.layer-photo-info').length){
-    MUI.event.toggle('.layer-photo-info .add-photo', '.layer-photo-info .hidden-filebox-toggle', false, function(logic, layer) {
-        //console.log('toggle');
-        logic();
-    });
-}
-
-
-// $(function(){
-//     $(".file-box > ul").slice(0, 6).show(); // 최초 10개 선택
-//     $(".add-photo02").click(function(e){ // Load More를 위한 클릭 이벤트e
-//         e.preventDefault();
-//         $(".file-box > ul > li:hidden").slice(0, 4).show(); // 숨김 설정된 다음 10개를 선택하여 표시
-//         if($("div:hidden").length == 0){ // 숨겨진 DIV가 있는지 체크
-//         alert("더 이상 항목이 없습니다"); // 더 이상 로드할 항목이 없는 경우 경고
-//         }
+// if($('.secondhand-wrap').length){
+//     MUI.event.toggle('.secondhand-wrap .add-photo', '.secondhand-wrap .live', false, function(logic, layer) {
+//         //console.log('toggle');
+//         logic();
 //     });
-// });
+// }
+
+
+$(function(){
+    $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").hide(); // 최초 10개 선택
+    
+    $(".secondhand-wrap .add-photo").click(function(e){ // Load More를 위한 클릭 이벤트e
+        $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").slice(0, 6).show(); // 최초 10개 선택
+        e.preventDefault();
+        $(".file-box > ul > li:hidden").slice(0, 3).show(); // 숨김 설정된 다음 10개를 선택하여 표시
+        if($("li:hidden").length == 0){ // 숨겨진 DIV가 있는지 체크
+        }
+        // if($(".file-box > ul > li").length){ // 숨겨진 DIV가 있는지 체크
+        //     alert("더 이상 항목이 없습니다"); // 더 이상 로드할 항목이 없는 경우 경고
+        //     if($(".file-box > ul > li:hidden").length <= 10){
+        //         $(".secondhand-wrap .add-photo").hide();
+        //     }
+        // }
+
+    });
+});
 
 //필터 슬라이드
 if($('.secondhand-wrap .item-step5 #slider-price').length) {
