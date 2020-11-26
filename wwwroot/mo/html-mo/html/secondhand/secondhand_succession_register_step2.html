@@ -237,7 +237,7 @@
 						<div class="cont-tit">
 							<h3>사진정보</h3>
 						</div>
-						<div class="cont-in">
+						<div class="cont-in example">
 							<p>필수 등록 이미지 예시</p>
 							<div>
 								<ul class="list-type-col3">
@@ -298,9 +298,138 @@
 									<li>10Mb 이하의 JPG, PNG 이미지 파일만 등록 가능합니다.</li>
 								</ul>
 							</div>
-							<div class="btn-addphoto">
-								<button type="button" class="btn layer-infos-open" data-layer="type-photo-info">사진추가</button>
+						</div>
+						<div class="cont-in live">
+							<p><i class="icon pannel09"></i>이미지를 길게 누르시면 순서를 변경하실 수 있습니다.</p>
+							<div class="file-box">
+								<ul class="list-type-col3">
+									<li>
+										<div class="inner">
+											<div class="inputF active active01">
+												<button type="button" class="btn btn-close">
+													<i class="icon close04">닫기 버튼</i>
+												</button>
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>전면(필수)</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<div class="inputF active active02">
+												<button type="button" class="btn btn-close">
+													<i class="icon close04">닫기 버튼</i>
+												</button>
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>후면(필수)</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<div class="inputF active active03">
+												<button type="button" class="btn btn-close">
+													<i class="icon close04">닫기 버튼</i>
+												</button>
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>실내(필수)</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li class="dp-none">
+										<div class="inner">
+											<div class="inputF active active04">
+												<button type="button" class="btn btn-close">
+													<i class="icon close04">닫기 버튼</i>
+												</button>
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>우측면(필수)</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li class="dp-none">
+										<div class="inner">
+											<div class="inputF">
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>좌측면(필수)</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li class="dp-none">
+										<div class="inner">
+											<div class="inputF">
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>추가사진1</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li class="dp-none">
+										<div class="inner">
+											<div class="inputF">
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>추가사진1</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li class="dp-none">
+										<div class="inner">
+											<div class="inputF">
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>추가사진1</span>
+												</label>
+											</div>
+										</div>
+									</li>
+									<li class="dp-none">
+										<div class="inner">
+											<div class="inputF">
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>추가사진1</span>
+												</label>
+											</div>
+										</div>
+									</li class="dp-none">
+									<li class="dp-none">
+										<div class="inner">
+											<div class="inputF">
+												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+												<label for="file">
+													<i class="icon plus-gray"></i>
+													<span>추가사진1</span>
+												</label>
+											</div>
+										</div>
+									</li>
+								</ul>	
 							</div>
+						</div>
+						<div class="btn-addphoto">
+							<button type="button" class="btn add-photo" data-target="live" data-on="true" data-siblings="true">사진추가</button>
 						</div>
 					</div>
 				</div>
@@ -335,9 +464,8 @@
 	<footer class="footer">
 	</footer>
 
-	<!--layer-full 상세검색 컴포넌트-->
-    <div class="layer-wrap layer-full layer-infos layer-photo-info type-photo-info" data-type="full">
-		<!--상단-->
+	<!--layer-full 사진정보 컴포넌트-->
+    <!-- <div class="layer-wrap layer-full layer-infos layer-photo-info type-photo-info" data-type="full">
         <div class="full-top">
             <h4>
                 사진정보
@@ -346,8 +474,6 @@
 				<i class="icon prev">닫기 버튼</i>
 			</button>
         </div>
-        <!--//상단-->
-        <!--컨텐츠-->
         <div class="full-inner">
             <div class="full-cont">
 				<div class="cont-in">
@@ -432,9 +558,53 @@
 									</div>
 								</div>
 							</li>
+							<li>
+								<div class="inner">
+									<div class="inputF">
+										<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+										<label for="file">
+											<i class="icon plus-gray"></i>
+											<span>추가사진1</span>
+										</label>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner">
+									<div class="inputF">
+										<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+										<label for="file">
+											<i class="icon plus-gray"></i>
+											<span>추가사진1</span>
+										</label>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner">
+									<div class="inputF">
+										<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+										<label for="file">
+											<i class="icon plus-gray"></i>
+											<span>추가사진1</span>
+										</label>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner">
+									<div class="inputF">
+										<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
+										<label for="file">
+											<i class="icon plus-gray"></i>
+											<span>추가사진1</span>
+										</label>
+									</div>
+								</div>
+							</li>
 						</ul>	
 					</div>
-					<div class="file-box hidden-filebox-toggle">
+					<!-- <div class="file-box hidden-filebox-toggle">
 						<ul class="list-type-col3">
 							<li>
 								<div class="inner">
@@ -482,9 +652,9 @@
 							</li>
 						</ul>
 
-					</div>
+					</div> -->
 					<div class="btn-addphoto">
-						<button type="button" class="btn add-photo" data-target="hidden-filebox-toggle" data-on="true">사진추가</button>
+						<button type="button" class="btn add-photo02">사진추가</button>
 					</div>
 					<div class="guide">
 						<ul>
@@ -497,9 +667,8 @@
 				</div>
 			</div>
 		</div>
-		<!--//컨텐츠-->
-	</div>
-	<!--//layer-full 상세검색 컴포넌트-->
+	</div> -->
+	<!--//layer-full 사진정보 컴포넌트-->
 
 	
 
