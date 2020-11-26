@@ -1205,7 +1205,7 @@ body.fixed {
 							@include Background($sprite:'ico-next08', $type:'png', $size:100% auto, $position:center center);
 							width: 1.6rem;
 							height: .7rem;
-							@include Position($top: 50%, $right: -50%);
+							@include Position($top: 50%, $right: -30%);
 							transform: translateY(-100%);
 						}
 						ul > li:last-child:after{
@@ -1222,9 +1222,27 @@ body.fixed {
 						}
 						.detail-layer-selectbox{
 							margin-top:1.3rem;
+							.list-type-col2{
+								justify-content: center;
+								li:after{
+									display:none;
+								}
+								li:first-child{
+									.selectbox{
+										border-right: 0;
+										border-radius: .5rem 0 0 .5rem;
+									}
+								}
+								li:last-child{
+									.selectbox{
+										border-left: 0;
+										border-radius: 0 .5rem .5rem 0;
+									}
+								}
+							}
 						}
 						.selectbox{
-							padding-right:3.4rem;
+							//padding-right:3.4rem;
 							height:3rem;
 						}
 					}
@@ -1275,17 +1293,19 @@ body.fixed {
 									&.start{
 										.btn{
 											width:100%;
-											background: rgb(254,43,123);
-											background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											// background: rgb(254,43,123);
+											// background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											background-color: #ff404b;
 											border-radius: 1.7rem 0 0 1.7rem;
 											@include Bold;
-											color:#fff;   
+											color:#fff;
 										}
 									}
 									&.during{
 										.btn{
 											width:100%;
-											background: rgb(254,43,123);
+											//background: rgb(254,43,123);
+											background-color: #ff404b;
 											@include Bold;
 											color:#fff;   
 										}
@@ -1293,8 +1313,9 @@ body.fixed {
 									&.end{
 										.btn{
 											width:100%;
-											background: rgb(254,43,123);
-											background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											// background: rgb(254,43,123);
+											// background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											background-color: #ff404b;
 											border-radius: 0 1.7rem 1.7rem 0;
 											@include Bold;
 											color:#fff;   
