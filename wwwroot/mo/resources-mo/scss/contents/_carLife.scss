@@ -632,10 +632,14 @@
                 padding:0;
                 .life-event-view{
                     padding-bottom:0;
+                    margin:0;
                 }
             }
             &.detail-main-list2{
                 padding-bottom:3.4rem;
+                .life-event-view{
+                    margin:0;
+                }
                 .list-type-col3{
                     margin-bottom:3.4rem;
                     i{
@@ -662,6 +666,36 @@
             &.detail-main-list3{
                 .life-event-view{
                     margin:0 -1.7rem;
+                    .swiper-slide{
+                        .flag-wrap{
+                            @include Position($top: 1.7rem, $left: auto, $right: 1.7rem);
+                            .flag{
+                                height:auto;
+                                margin:0;
+                                padding:0;
+                            }
+                        }
+                        .text{
+                            padding: 1.7rem;
+                            margin-top:-7rem;
+                            text-align: center;
+                            position: relative;
+                            b,em{
+                                color:#fff;
+                                z-index: 2;
+                                position: relative;
+                            }
+                        }
+                        .text:after{
+                            display:block;
+                            content: "";
+                            width:100%;
+                            height:7rem;
+                            background-color: #000;
+                            opacity: .4;
+                            @include Position($top: 0, $left: 0);
+                        }
+                    }
                 }
             }
             &.detail-main-list4{

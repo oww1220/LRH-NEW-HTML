@@ -755,7 +755,7 @@ if($('.specials-list .tab-normal').length){
     if($('.carLife-wrap .life-event-lists03').length) {
         MUI.slide.init('.carLife-wrap .life-event-lists03','swiper', {
             loop: true,
-            autoHeight: true,
+            //autoHeight: true,
             pagination: {
                 el: '.life-event-pagination03',
             },
