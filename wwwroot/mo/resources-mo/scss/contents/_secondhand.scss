@@ -1406,6 +1406,196 @@
                         }
                     }
                     &.item-step5{
+                        padding:2.6rem 0;
+                        .summary-table-wrap{
+                            border-radius: .5rem;
+                            &.summary-table-wrap-type01{
+                                border:1px solid #ff404b;
+                                .summary-toggle-btn{
+                                    background-color: #fff;
+                                    color:#ed1c24;
+                                    @include Bold;
+                                    &.active{
+                                        span:after{
+                                            display:inline-block;
+                                            content:"닫기";
+                                            margin-left:.4rem;
+                                        }
+                                    }
+                                    &.active:before{
+                                        display:block;
+                                        content:"";
+                                        border-top:1px solid #ed1c24;
+                                        width:90%;
+                                        @include Position($top: 0);
+                                    }
+                                    span:after{
+                                        display:inline-block;
+                                        content:"열기";
+                                        margin-left:.4rem;
+                                    }
+                                }
+                                .summary-toggle-btn:after{
+                                    width:.8rem;
+                                    height:.4rem;
+                                    top: 55%;
+                                    right: 32%;
+                                    @include Background($sprite:'ico-arrow-down5', $type:'png', $size:100% auto, $position:center center);
+                                }
+                            }
+                            &.summary-table-wrap-type02{
+                                .table{
+                                    padding:0 .9rem;
+                                    table{
+                                        tr:first-child{
+                                            th:first-child{
+                                                b{
+                                                    @include Bold;
+                                                }
+                                            }    
+                                        }
+                                    }
+                                    .guide{
+                                        margin:0;
+                                        padding:1.4rem 0 1.4rem 1rem;
+                                    }
+                                }
+                                .summary-toggle-btn{
+                                    @include Bold;
+                                    color:#54585a;
+                                    &.active:before{
+                                        display:block;
+                                        content:"";
+                                        border-bottom:1px solid #e7e7e7;
+                                        width:90%;
+                                        @include Position($bottom: 0);
+                                    }
+                                }
+                            }
+                            margin:0 1.7rem;
+                            .summary-toggle-btn{
+                                @include Align-middle;
+                                background-color: #fff;
+                            }
+                            .summary-toggle-btn:after{
+                                width:.8rem;
+                                height:.4rem;
+                                top: 58%;
+                                right: 37%;
+                            }
+                            .table{
+                                table{
+                                    tr:first-child{
+                                        th:first-child{
+                                            b{
+                                                @include Regular;
+                                            }
+                                        }    
+                                    }
+                                    th{
+                                        border-top:0 none;
+                                        @include Regular;
+                                        color:#54585a;
+                                        text-align:center;
+                                        padding:1.4rem 0;
+                                        button{
+                                            padding-left:.5rem;
+                                        }
+                                    }
+                                    td{
+                                        padding:1.4rem 0;
+                                        border-top:0 none;
+                                        @include Regular;
+                                        color:#54585a;
+                                        text-align:center;
+                                    }
+                                }
+                                table + table{
+                                    tr:first-child{
+                                        th:first-child{
+                                            b{
+                                                @include Bold;
+                                            }
+                                        }    
+                                    }
+                                    td{
+                                        text-align: right;
+                                        padding-right: 2rem;
+                                    }
+                                }
+                            }
+                        }
+                        h3{
+                            text-align: center;
+                            padding: 3.4rem 0 1.4rem 0;
+                            border-bottom:0 none;
+                            strong{
+                                font-size:1.8rem;
+                            }
+                        }
+                        .item-cont{
+                            border-bottom:0 none;
+                            .detail-layer-cont-terms{
+                                padding:0 0 2.3rem 0;
+                                .summary-table-wrap{
+                                    margin:0;
+                                    border:0 none;
+                                    .detail-item-tit{
+                                        @include Align-between;
+                                        padding:0;
+                                        height:4.7rem;
+                                        strong{
+                                            @include Bold;
+                                        }
+                                        b {
+                                            @include Bold;
+                                            color:#ed1c24;
+                                            font-size:1.4rem;
+                                            padding-right:1.3rem;
+                                            em{
+                                                font-size:1.6rem;
+                                            }
+                                        }
+                                       
+                                    }
+                                    .summary-toggle-btn{
+                                        height:4.7rem;
+                                        b{
+                                            padding-right:1.3rem;
+                                        }
+                                    }
+                                    .summary-toggle-btn:after{
+                                        right:0;
+                                        top:2.7rem;
+                                        width:.9rem;
+                                        height:.5rem;
+                                        @include Background($sprite:'ico-arrow-down2', $type:'png', $size:100% auto, $position:center center);
+                                    }
+                                    .summary-toggle-cont{
+                                        border-radius: .5rem;
+                                        padding:0 2.1rem;
+                                        background-color: #fafafa;
+                                    }
+                                    .table{
+                                        table{
+                                            th{
+                                                text-align: left;
+                                            }
+                                            td{
+                                                text-align: right;
+                                            }
+                                        }
+                                        .guide{
+                                            margin:0;
+                                            padding:1.4rem 0 1.4rem 1rem;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    &.item-step15{
                         padding:1.7rem;
                         .summary-table-wrap{
                             border-radius: .5rem;
