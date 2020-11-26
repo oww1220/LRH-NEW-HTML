@@ -1141,6 +1141,48 @@ if($('.layer-photo-info').length){
 }
 
 
+// $(function(){
+//     $(".file-box > ul").slice(0, 6).show(); // 최초 10개 선택
+//     $(".add-photo02").click(function(e){ // Load More를 위한 클릭 이벤트e
+//         e.preventDefault();
+//         $(".file-box > ul > li:hidden").slice(0, 4).show(); // 숨김 설정된 다음 10개를 선택하여 표시
+//         if($("div:hidden").length == 0){ // 숨겨진 DIV가 있는지 체크
+//         alert("더 이상 항목이 없습니다"); // 더 이상 로드할 항목이 없는 경우 경고
+//         }
+//     });
+// });
+
+//필터 슬라이드
+if($('.secondhand-wrap .item-step5 #slider-price').length) {
+
+    //필터 슬라이드 내 슬라이드
+    $('#slider-price').slider({
+        range: true,
+        min: 0,							// 최저
+        max: 60,						// 최고
+        orientation: 'horizontal',		// 바타입 수평
+        step: 12,						// 스텝
+        values: [12, 60],				// 디폴트 값
+        start: function(event, ui) {	// start
+        },
+        slide: function(event, ui) {	// mouse movement
+        },
+        stop: function(event, ui) {		// stop
+        },
+        change: function(event, ui) {
+            var min = ui.values[0],
+                max = ui.values[1];
+
+                console.log(ui, min, max);
+            // update form fields
+            $('#min_slider_price').val(min);
+            $('#max_slider_price').val(max);
+        }
+    });
+
+}
+
+
 /* -------------------------------------------------중고차 승계렌터카 end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
