@@ -355,6 +355,49 @@ body.fixed {
 			}
 		}
 
+		&.layer-suc-prog {
+			.slide-message {
+				color:#fff;
+				padding:1.7rem 1.7rem 2.3rem;
+			}
+			.slide-top { 
+				@include Align-between;
+				padding:4.3rem 1.7rem 0;
+				h4 {
+					border:0;
+					margin:0;
+					padding:0;
+				}
+				.layer-slide-close {
+					width: auto;
+					height: 2.3rem;
+					&:after {
+						display: none;
+					}
+				}
+			}
+			.slide-cont {
+				margin:3.4rem 0;
+				.item-info {
+					.detail-cont {
+						> div { 
+							@include Align-middle-left;
+							strong {
+								@include Bold;
+								width:30%;
+							}
+							& + div {
+								padding-top:2.6rem;
+							}
+							i {
+								margin-left:auto;
+							}
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 	//풀팝업 형태
