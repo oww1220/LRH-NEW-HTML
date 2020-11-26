@@ -107,6 +107,18 @@
 		padding:0 20px;
 		width: 100%;
 	}
+	
+	&.type-right{
+		position:relative;
+
+		input{padding-right:60px;}
+		.right-txt{
+			@include Bold;
+			@include Position($top:0, $right:20px);
+			@include Align-middle;
+			height:50px;
+		}
+	}
 }
 
 .radioIconBox {
@@ -393,6 +405,25 @@
 			@include Background($sprite:'ico-check-on', $position:center center);
 		}
 	}
+	&.type-square{
+		label{
+			padding-left:32px;
+			
+			&:after {
+				@include Position($top: 50%, $left: 6px);
+				@include Background($sprite:'ico-chk3-off', $position:center center);
+				width: 20px;
+				height: 20px;
+				margin-top: -10px;
+			}
+
+		}
+		input[type='checkbox']:checked + label:after{
+			@include Background($sprite:'ico-chk3-on', $position:center center);
+		}
+	}
+
+	
 	
 	&.type-chkOn-red{
 		label{padding-left:24px;}

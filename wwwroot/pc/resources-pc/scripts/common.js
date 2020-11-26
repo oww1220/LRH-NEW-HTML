@@ -408,6 +408,26 @@ if($('.carLife-container .tab-normal').length){
         });
     }
 
+    //가격 상세 정보
+    if($('.layer-priceDetail-info').length) {
+        MUI.layer.openClick('.layer-priceDetail-info-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }
+    //차량 성능 검사
+    if($('.layer-carInspection-info').length) {
+        MUI.layer.openClick('.layer-carInspection-info-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }    
+
+    //할부 계산기
+    if($('.layer-calculator').length) {
+        MUI.layer.openClick('.layer-calculator-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }        
+    
     //bg-dimmed 클릭시 열린 레이어 들 닫기
     MUI.layer.closeClick(LAYER_DIM, LAYER_DIM, LAYER_PARENT, true, function(hide){
         //console.log('close');
@@ -810,6 +830,12 @@ if($('.secondhand-container .carInfoAccor').length) {
     });
 }
 
+//상담하기 - 월 대여료
+if($('.secondhand-container .carInfoAccor').length) {
+    MUI.event.toggle('.carInfoAccor .priceSelectBtn', '.carInfoAccor .priceSelectCont', false, function(logic, layer) {
+        logic();
+    });
+}
 
 /* -------------------------------------------------중고차장기렌터카end*/
 

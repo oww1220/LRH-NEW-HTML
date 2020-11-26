@@ -186,7 +186,7 @@
         }
         
     }
-    .accor-header{margin-bottom:30px;}
+    //.accor-header{margin-bottom:30px;}
     .terms-area{    
         font-size:14px;
         padding:30px;
@@ -587,15 +587,7 @@
                 + .row{margin-top:60px;}
 
                 .tit-size-def{margin-bottom:40px;}
-                .grid-col{
-                    li{
-                        margin-bottom:40px;
-
-                        span{display:block; font-size:14px; color:#54585a; margin-bottom:15px;}
-                        strong {@include Bold;}
-                    }
-                }
-                .img-type-grid-list{
+                .img-type-list{
                     li{
                         text-align:center;
                         .icon {
@@ -737,4 +729,176 @@
             
         }
     }
+
+    //차량상세, 상담하기
+    .row{
+        .txt-type-list{
+            li{
+                margin-bottom:40px;
+
+                span{display:block; font-size:14px; color:#54585a; margin-bottom:15px;}
+                strong {@include Bold;}
+            }
+        }
+    }
+    .agree-area{
+        .agree-header{
+            margin-bottom:30px;
+            label{color:#8f9191;}
+        }
+        .terms-area{    
+            font-size:14px;
+            padding:30px;
+            margin:35px 40px 0;
+            background-color:#fafafa;
+            @include roundBox;
+
+            > p {margin-bottom:35px;}
+            > ul{margin-bottom:30px;}
+            h4{margin:10px 0;}
+            
+        }
+        .info-box{
+            font-size:14px;
+            margin-top:20px;
+        }
+        .agree-list{
+            border-top:1px solid #e7e7e7;
+
+            > li{
+                padding:30px 30px 30px 0;
+                margin:5px 0;
+                border-bottom:1px solid #e7e7e7;
+            }
+        }
+    }
+    .carSpec-section{
+        @include Align-box;
+        margin-bottom:80px;
+
+        .car-img{
+            flex:none;
+            width:680px;
+            flex-basis: 680px;
+        }
+        .carSpec-infos{
+            .tit{
+                @include Bold;
+                font-size:35px;
+                margin-bottom:35px;
+            }
+            .bar-type{
+                display:flex;
+                margin-bottom:30px;
+
+                li{
+                    position:relative;
+                    color:#54585a;
+                    padding-right:20px;
+                    font-size:14px;
+
+                    + li{                            
+                        padding-left:20px;
+
+                        &:before{
+                            content:"";
+                            @include Position($top:50%, $left:0);
+                            width:1px;
+                            height:15px;
+                            margin-top:-7px;
+                            background-color:#e7e7e7;
+                        }
+                    }
+                }
+            }
+            .selection{
+                @include roundBox;
+                border:1px solid $border-darkgrey;
+                padding:0 20px;
+                box-sizing: border-box;
+
+                .tbl-type-list{
+                    .thead-row, .tbody-row{
+                        @include Align-middle;
+                                        
+                        .th-col, .td-col{
+                            position:relative;
+                            flex:1; 
+                            text-align:center;                             
+    
+                            .item{
+                                @include Align-middle;
+                                height:70px;
+                                padding:0 10px;
+                                font-size:14px;
+                                box-sizing: border-box;    
+                            }                   
+                        } 
+                        .th-col, strong{@include Bold;}
+                    }            
+                    .thead-row{
+                        .th-col{@include Regular;}
+                    }
+                } 
+                .tbody-row{
+                    .th-col, .td-col{
+                        border-top:1px solid $border-darkgrey;
+                    }
+                }
+
+                .btn-box{
+                    padding: 20px 20px 30px;
+                    border-top:1px solid $border-darkgrey;                    
+                }
+
+                .priceInfo-box{         
+                    display:none;           
+                    @include Position($top:100%, $right:0);            
+                    width:240px;
+                    box-sizing:border-box;
+                    border:1px solid #2f2f2f;
+                    text-align:left;
+                    padding:15px 20px 25px;
+                    margin-top:-15px;
+                    background-color:#fff;
+                    z-index:5;
+
+                    > ul{
+                        border-bottom:1px solid $border-grey;
+
+                        li{                            
+                            padding:10px 0;
+                            color:#8f9191;
+
+                            + li{padding-top:0;}
+
+                            
+                            label{
+                                @include Align-between;
+                                span {
+                                    &:first-child{ margin-right:5px;}
+                                }
+                            }
+                            input{display:none;}
+                            input:checked + label{
+                                @include Bold;
+                                color:#2f2f2f;
+                            }
+                        }
+                    }
+                    > div{
+                        @include Align-between;
+                        padding:10px 0 0;
+                        color:#8f9191;
+
+                        span {
+                            &:first-child{ margin-right:5px;}
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
 }

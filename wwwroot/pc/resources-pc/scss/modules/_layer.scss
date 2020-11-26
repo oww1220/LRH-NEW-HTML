@@ -885,6 +885,107 @@ body.fixed {
 			}
 		}
 
+		//가격 상세 정보
+		&.layer-priceDetail-info{
+			.tit-size-big{		
+				text-align:center;
+			}
+			.top-price-box{
+				padding:40px 0;
+				@include Bold;				
+
+				.price{font-size:20px; color:$txt-red; text-align:right;}
+
+				> p{width:50%; padding: 0 50px; box-sizing: border-box;}
+			}
+			.tbl-box{
+				table{
+					width:100%;
+					border-top:1px solid $border-grey;
+
+					th, td{border-bottom:1px solid $border-grey; padding:30px 50px;}
+					th{text-align:left;}
+					td{text-align:right; @include Bold; color:#2f2f2f;}
+				}
+			}
+		}
+
+		//차량 성능 검사
+		&.layer-carInspection-info{
+			.img-box{height:406px;}
+		}
+
+		//할부 계산기
+		&.layer-calculator{
+			.selection-area{
+				@include Align-between;
+				
+				.select-row{
+					@include Align-middle-left;
+					
+
+					.tit{						
+						margin-right:10px;
+					}
+					.selectbox{width:190px;}
+				}
+			}
+			.guide-area{margin-bottom:30px;}
+			.price-area, .selection-area{				
+				border-top:1px solid $border-grey;
+				padding:40px 0;
+			}
+			.price-area{
+				.tit{
+					@include Bold;
+					font-size:18px;	
+				}
+				.box-between{
+					+.box-between{margin-top:30px;}
+				}
+				.icon{margin-right:10px;}
+				.chk-icon-box.type-square label:after{
+					left:0;
+				}
+				.price {
+					@include Bold;
+					font-size:24px;
+				}
+				.inputT.type-right{
+					max-width:270px;
+					color:#999;
+
+					input{text-align:right; color:$txt-red;}
+					::-webkit-input-placeholder { /* Edge */
+						color: $txt-red;
+					}					
+					:-ms-input-placeholder { /* Internet Explorer 10-11 */
+						color: $txt-red;
+					}					
+					::placeholder {
+						color: $txt-red;
+					}
+				}
+			}
+			.price-result-box{
+				text-align:center;
+				padding:40px;
+				margin-bottom:30px;
+				background-color:#f5f5f5;
+
+				strong{
+					@include Bold;
+					font-size:18px;					
+				}
+				span{
+					@include Bold;
+					color:$txt-red;
+					font-size:24px;
+					line-height:2;
+				}
+			}
+		}
+
 	}
 
 	//슬라이드 형태
