@@ -367,6 +367,7 @@ body.fixed {
 					border:0;
 					margin:0;
 					padding:0;
+					font-size:1.8rem;
 				}
 				.layer-slide-close {
 					width: auto;
@@ -393,6 +394,44 @@ body.fixed {
 								margin-left:auto;
 							}
 						}
+					}
+				}
+			}
+		}
+
+		//승계렌터가-진행팝업
+		&.layer-cus-premium {
+			.slide-top { 
+				@include Align-between;
+				padding:4.3rem 1.7rem 0;
+				h4 {
+					border:0;
+					margin:0;
+					padding:0;
+					font-size:1.8rem;
+				}
+				.layer-slide-close {
+					width: auto;
+					height: 2.3rem;
+					&:after {
+						display: none;
+					}
+				}
+			}
+			.slide-cont {
+				margin:4.5rem 0;
+				.item-cont {
+					strong {
+						font-size:1.2rem;
+						@include Bold;
+					}
+					p {
+						font-size:1.2rem;
+						margin-top:1.2rem;
+						line-height: 1.4;
+					}
+					& + .item-cont {
+						margin-top:2.6rem;
 					}
 				}
 			}

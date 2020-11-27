@@ -1117,6 +1117,7 @@ if($('.shor-wrap').length){
 /* -------------------------------------------------단기렌터카 end*/
 
 /*중고차 승계렌터카 start-------------------------------------------------*/
+
 //중고차 승계렌터카 등록 탭전환
 if($('.secondhand-wrap .tab-normal').length){
     MUI.event.taps('.secondhand-wrap .tab-normal', false, function(swap){
@@ -1185,6 +1186,13 @@ if($('.layer-national-branch .cont-slide').length) {
         pagination: {
             el: '.swiper-pagination',
         },
+    });
+}
+
+//해외지사안내 탭전환
+if($('.customer-wrap .tab-normal').length){
+    MUI.event.taps('.customer-wrap .tab-normal', false, function(swap){
+        swap();
     });
 }
 
