@@ -426,7 +426,15 @@ if($('.carLife-container .tab-normal').length){
         MUI.layer.openClick('.layer-calculator-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
             show();
         });
-    }        
+    } 
+    
+    //차량 옵션
+    if($('.layer-carOption-info').length) {
+        MUI.layer.openClick('.layer-carOption-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }
+    
     
     //bg-dimmed 클릭시 열린 레이어 들 닫기
     MUI.layer.closeClick(LAYER_DIM, LAYER_DIM, LAYER_PARENT, true, function(hide){

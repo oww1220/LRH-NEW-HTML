@@ -325,9 +325,12 @@
 									<h4 class="tit-size-def">편의장치</h4>
 									<ul class="grid-col col4 img-type-list">
 										<li>
-											<span class="icon carInfo-opt01"></span>
-											<p class="txt">스마트키</p>
-										</li>								
+											<!-- 20201127 : 차량에 장착된 옵션만 활성 상태 > 디자인 미완료 > 해당 옵션 터치 시 레이어팝업 실행 처리 -->
+											<button type="button" class="layer-carOption-open" data-layer="layer-carOption-info">
+												<span class="icon carInfo-opt01"></span>
+												<p class="txt">스마트키</p>
+											</button>			
+										</li>							
 										<li>
 											<span class="icon carInfo-opt01"></span>
 											<p class="txt">썬루프</p>
@@ -809,6 +812,34 @@
 		</div>
 	</div>
 	<!-- //할부 계산기 레이어 -->
+
+	<!-- 차량 옵션 레이어 -->
+	<div class="layer-wrap layer-popup layer-carOption-info">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>스마트키란?</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-carOption-info"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					
+					<div class="img-box">
+						<img src="http://via.placeholder.com/344x250.png?text=image" alt="">
+					</div>
+					<div class="guide-box">
+						<p>
+							차량의 양방향 통신에 의해 키를 몸에 지니는 것만으로도 잠금장치를 해지할 수 있고<br> 시동까지 걸 수 있는 최첨단 시스템입니다.
+						</p>
+					</div>
+
+					<div class="popup-cont-bot-btn">
+						<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-carOption-info">확인</button>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //차량 옵션 레이어 -->
 	
 
 
