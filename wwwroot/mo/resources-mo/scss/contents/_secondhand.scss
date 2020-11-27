@@ -1442,6 +1442,47 @@
                                     right: 32%;
                                     @include Background($sprite:'ico-arrow-down5', $type:'png', $size:100% auto, $position:center center);
                                 }
+                                .table{
+                                    &.table-type01{
+                                        table{
+                                            .table-type01-opt{
+                                                cursor: pointer;
+                                                th{
+                                                    @include Align-middle;
+                                                    position: relative;
+                                                }
+                                                i{
+                                                    display:none;
+                                                    @include Position($top: 50%, $right: 0);
+                                                    transform: translate(-50%, -50%);
+                                                }
+                                                &.active{
+                                                    th{
+                                                        @include Bold;
+                                                        color:#ed1c24;
+                                                    }
+                                                    i{
+                                                        @include Inline-align-middle;
+                                                    }
+                                                }
+                                                .radioIconBox{
+                                                    label{
+                                                        border:0 none;
+                                                    }
+                                                    input:checked + label{
+                                                        border:1px solid #ff404b;
+                                                        height:3.1rem;
+                                                        width: 80%;
+                                                        margin: 0 auto;
+                                                    }
+                                                    input:checked + label:after{
+                                                        display:none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             &.summary-table-wrap-type02{
                                 .table{
@@ -1452,7 +1493,27 @@
                                                 b{
                                                     @include Bold;
                                                 }
-                                            }    
+                                            }
+                                        }
+                                        th{
+                                            text-align: left;
+                                            padding-left:2.2rem;
+                                            span{
+                                                color:#54585a;
+                                                @include Regular;
+                                            }
+                                        }
+                                        td{
+                                            text-align: right;
+                                            padding-right:2.2rem;
+                                            strong{
+                                                @include Bold;
+                                                font-size:1.6rem;
+                                            }
+                                            em{
+                                                @include Bold;
+                                                color:#2f2f2f;
+                                            }
                                         }
                                     }
                                     .guide{
@@ -1523,6 +1584,40 @@
                                         padding-right: 2rem;
                                     }
                                 }
+                                &.table-buy-type01{
+                                    margin:0 2.1rem;
+                                    padding:0;
+                                    border-top:1px solid #e7e7e7;
+                                    table{
+                                        tr:first-child{
+                                            th{
+                                                padding-left:0;
+                                            }
+                                            td{
+                                                padding-right:0;
+                                            }
+                                        }
+                                        tr:nth-child(2){
+                                            th{
+                                                padding:0;
+                                            }
+                                            td{
+                                                padding:0;
+                                            }
+                                        }
+                                        tr:nth-child(3){
+                                            th{
+                                                padding:0;
+                                            }
+                                            td{
+                                                padding:0;
+                                            }
+                                        }
+                                    }
+                                    &:first-child{
+                                        border-top:0 none;
+                                    }
+                                }
                             }
                         }
                         h3{
@@ -1588,6 +1683,91 @@
                                         .guide{
                                             margin:0;
                                             padding:1.4rem 0 1.4rem 1rem;
+                                        }
+                                    }
+                                }
+                                .filter-col {
+                                    position: relative;
+                                    padding-top: 2.6rem;
+                                    .month_box_case {
+                                        position: relative;
+                                        &:before {
+                                            display: block;
+                                            content: '';
+                                            width: 100%;
+                                            height: .5rem;
+                                            background-color: #EBEBEB;
+                                            border-radius: .5rem;
+                                            margin: 0 0 .5rem;
+                                        }
+                                        .month-display {
+                                            @include Position($top: -3.6rem);
+                                            span {
+                                                font-size:.95rem;
+                                                display: block;
+                                                color:#5079f5;
+                                                padding:.4rem 1.1rem;
+                                                border:1px solid #5079f5;
+                                                border-radius: 25px;
+                                            }
+                                            &:after {
+                                                content:'';
+                                                display: block;
+                                                margin:0 auto;
+                                                height: 1.3rem;
+                                                width:.1rem;
+                                                background-color: #5079f5;
+                                            }
+                                            
+                                        }
+                                        .month-box {
+                                            @include Position($top: 0, $right: 0);
+                                            width: 100%;
+                                            .month-slider-range {
+                                                background-color: #f04040;
+                                                height: .5rem;
+                                                position: absolute;
+                                                z-index: 1;
+                                                display: block;
+                                                border: 0;
+                                                background-position: 0 0;
+                                                border-radius: 3px;
+                                            }
+                                        }
+                                        .month-txt {
+                                            @include Align-between;
+                                            span {
+                                                position: relative;
+                                                font-size:.95rem;
+                                                color:#999;
+                                                &.active {
+                                                    @include Bold;
+                                                }
+                                            }
+                                        }
+                                        .month-slider-share{
+                                            width: 1.7rem;
+                                            height: 1.7rem;
+                                            background-color: #5079f5;
+                                            border-radius: 100%;
+                                            border: 1px solid #000;
+                                            box-sizing: border-box;
+                                            box-shadow: 0 1px 5px rgba(96,97,112,0.3);
+                                            @include Position($top: -.66rem, $left: 0);
+                                            z-index: 2;
+                                            opacity: .7;
+                                        }
+                                    }
+                                }
+                                .detail-item-monthly-wrap{
+                                    @include Align-between;
+                                    padding:1.3rem 0;
+                                    border-top: 1px solid #e7e7e7;
+                                    border-bottom: 1px solid #e7e7e7;
+                                    .detail-item-monthly-txt{
+                                        b{
+                                            @include Regular;
+                                            padding-left:.9rem;
                                         }
                                     }
                                 }

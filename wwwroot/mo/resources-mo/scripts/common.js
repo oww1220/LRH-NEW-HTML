@@ -486,6 +486,32 @@ if($('.specials-list .tab-normal').length){
         //console.log('close');
         hide();
     });
+
+    //차량사진 풀팝업 줌아웃 
+    if($('.layer-car-images .galleryThumbs-list').length) {
+        MUI.slide.init('.layer-car-images .galleryThumbs-list','swiper', {
+            zoom: {
+                maxRatio: 2,
+            },
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            mousewheel: true,
+        });
+    }
+
+    //차량 성능검사 풀팝업 줌아웃 
+    if($('.layer-car-check .galleryThumbs-list').length) {
+        MUI.slide.init('.layer-car-check .galleryThumbs-list','swiper', {
+            zoom: {
+                maxRatio: 2,
+            },
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            mousewheel: true,
+        });
+    }
 /* -------------------------------------------------레이어팝업end*/
 
 
@@ -1002,6 +1028,17 @@ if($('.secondhand-wrap .detail-sub-slide-list1').length) {
         subTopSlide.autoplay.start();
         $(".swiper-button-pause").show();
         $(".swiper-button-play").hide();
+    });
+}
+
+if($('.secondhand-wrap').length){
+    $(".summary-table-wrap-type01 .table-type01 table .table-type01-opt").on('click', function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+        }else{
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        }
     });
 }
 /* -------------------------------------------------중고차 end*/
