@@ -755,7 +755,7 @@ if($('.specials-list .tab-normal').length){
     if($('.carLife-wrap .life-event-lists03').length) {
         MUI.slide.init('.carLife-wrap .life-event-lists03','swiper', {
             loop: true,
-            autoHeight: true,
+            //autoHeight: true,
             pagination: {
                 el: '.life-event-pagination03',
             },
@@ -1150,18 +1150,11 @@ $(function(){
         $(".file-box > ul > li:hidden").slice(0, 3).show(); // 숨김 설정된 다음 10개를 선택하여 표시
         if($("li:hidden").length == 0){ // 숨겨진 DIV가 있는지 체크
         }
-        // if($(".file-box > ul > li").length){ // 숨겨진 DIV가 있는지 체크
-        //     alert("더 이상 항목이 없습니다"); // 더 이상 로드할 항목이 없는 경우 경고
-        //     if($(".file-box > ul > li:hidden").length <= 10){
-        //         $(".secondhand-wrap .add-photo").hide();
-        //     }
-        // }
-
     });
 });
 
 //필터 슬라이드
-if($('.secondhand-wrap .item-step5 #slider-price').length) {
+if($('.secondhand-wrap .item-step15 #slider-price').length) {
 
     //필터 슬라이드 내 슬라이드
     $('#slider-price').slider({
