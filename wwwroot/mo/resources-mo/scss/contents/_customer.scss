@@ -186,6 +186,61 @@
                 padding:1.7rem;
             }
         }
+        .section-cont {
+            .tab-nav {
+                padding:2.6rem 1.7rem;
+                li {
+                    .inner {
+                        margin:.4rem .4rem;
+                        button {
+                            border:1px solid #e7e7e7;
+                            border-radius: .5rem;
+                        }
+                    }
+                    &.active {
+                        button {
+                            background-color: #fff9f9;
+                            border-color:#ff3f4c;
+                        }
+                    }
+                    
+                }
+            }
+            .tab-list  {
+                &.tab-cont2 {
+                    display: none;
+                }
+                > li {
+                    border-top:.6rem solid #f5f5f5;
+                    > div {
+                        padding:2.6rem 1.7rem;
+                        > strong {
+                            @include Bold;
+                            font-size:1.4rem;
+                        }
+                        .cover {
+                            padding: 1.4rem 0 1.9rem;
+                        }
+                        > ul {
+                            li {
+                                @include Align-top-left;
+                                i {
+                                    margin-right:1rem;
+                                }
+                                strong {
+                                    @include Bold;
+                                    vertical-align: top;
+                                }
+                                & + li {
+                                    margin-top: 1.3rem;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
     }
     .section-detail{
         .detail-cont-info{
@@ -230,6 +285,21 @@
                     @include Normal;
                     line-height: 1.5;
                 }
+            }
+            &.cus-brc-abroad {
+                @include Background($sprite:'customer-branch-map2', $size:cover, $position:center center, $path:'bgs');
+                padding:3.4rem 1.7rem 4.5rem;
+                em {
+                    color:#fff;
+                    font-size:1.9rem;
+                    @include Normal;
+                }
+                strong {
+                    color:#fff;
+                    font-size:2.3rem;
+                    @include Bold;
+                }
+
             }
         }
     }
