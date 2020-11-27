@@ -501,6 +501,30 @@ body.fixed {
 					// border-radius: 1rem;
 					border-bottom: 1px solid #EBEBEB;
 					margin-top: 1rem;
+					.map-wrap{
+						position: relative;
+						margin-bottom:1.2rem;
+						.cover{
+							width:100%;
+							height:23.5rem;
+						}
+					}
+					.detail-map-marker{
+                        @include Position();
+                        cursor: pointer;
+                        .map-marker-box{
+                            @include Align-between;
+                            border:.2rem solid #ff404b;
+                            background-color:#fff;
+                            border-radius: 1.7rem;
+                            padding:.4rem .9rem;
+                            .map-marker-txt{
+                                font-size:.9rem;
+                                @include Bold;
+                                padding-left:.9rem;
+                            }
+                        }
+                    }
 					> ul {
 						> li {
 							border-top: 1px solid #EBEBEB;
