@@ -837,6 +837,15 @@ if($('.secondhand-container .carInfoAccor').length) {
     });
 }
 
+//승계 > 상담 툴팁, 승계진행 툴팁
+if($('.secondhand-container .tooltipToggle').length) {
+    MUI.event.toggle('.tooltipToggle .tooltipOpenBtn', '.tooltipToggle .tooltipCont', false, function(logic, layer) {
+        logic();
+    });
+}
+
+
+
 /* -------------------------------------------------중고차장기렌터카end*/
 
 
