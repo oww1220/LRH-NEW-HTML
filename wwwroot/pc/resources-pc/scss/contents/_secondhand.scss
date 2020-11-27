@@ -1092,5 +1092,100 @@
             
         }
     }
+
+    .section-rergister-tab{
+        .registerTab{
+
+            .tab-cont-inner{                
+                padding:60px 80px 120px;
+            }
+        }
+        .choice-list-type2{
+            > li{                
+
+                .chk-view-box{	
+                    position: relative;
+
+                    input{display:none;}	
+                    label{		
+                        display:flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+                        position:relative;						
+                        @include roundBox();
+                        padding:40px 240px 40px 140px;
+                        border:1px solid $border-grey;
+                        box-sizing: border-box;
+            
+                        &:after {
+                            display: block;
+                            content: '';
+                            @include Position($top:50%, $left:105px);
+                            margin-top:-26px;
+                            width: 13px;
+                            height: 12px;
+                        }
+
+                        .car-infos, .car-img{width:100%;}
+                        .car-img{
+                            flex:none;
+                            width:270px;
+                            flex-basis: 270px;
+                        }
+                    }
+            
+                    input:checked + label{
+                        color:$txt-red;
+                        border-color:$txt-red;
+                        background-color:#fff9f9;
+                    }
+                    input:checked + label:after{
+                        @include Background($sprite:'ico-chk-on2', $position:center center);
+                    }		
+                    .btn-box{
+                        @include Align-box;
+                        @include Position($top:0, $bottom:0, $right:140px);                        
+                        z-index:5;
+
+                        .btn{height:35px;}
+                    }
+                }
+                strong {
+                    display:block;
+                    @include Bold; 
+                    margin-bottom:20px;
+                }
+
+                + li{margin-top:20px;}
+            }
+        }
+        .bar-type{
+            display:flex;
+
+            li{
+                position:relative;
+                color:#54585a;
+                padding-right:20px;
+                font-size:14px;
+
+                + li{                            
+                    padding-left:20px;
+
+                    &:before{
+                        content:"";
+                        @include Position($top:50%, $left:0);
+                        width:1px;
+                        height:15px;
+                        margin-top:-7px;
+                        background-color:#e7e7e7;
+                    }
+                }
+            }
+        }
+    }
+
+    
+           
     
 }

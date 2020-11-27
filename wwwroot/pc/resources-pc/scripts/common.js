@@ -434,6 +434,14 @@ if($('.carLife-container .tab-normal').length){
             show();
         });
     }
+    //정비 이력
+    if($('.layer-carRepair-info').length) {
+        MUI.layer.openClick('.layer-carRepair-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }
+
+    
     
     
     //bg-dimmed 클릭시 열린 레이어 들 닫기
@@ -849,6 +857,13 @@ if($('.secondhand-container .carInfoAccor').length) {
 if($('.secondhand-container .tooltipToggle').length) {
     MUI.event.toggle('.tooltipToggle .tooltipOpenBtn', '.tooltipToggle .tooltipCont', false, function(logic, layer) {
         logic();
+    });
+}
+
+//상담신청 - 차량 선택
+if($('.registerTab').length){
+    MUI.event.taps('.registerTab', false, function(swap){
+        swap();
     });
 }
 

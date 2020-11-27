@@ -1001,6 +1001,42 @@ body.fixed {
 			}
 			
 		}
+		//정비 이력
+		&.layer-carRepair-info{
+			.guide-box{
+				margin-bottom:30px;
+			}
+			
+			.tbl-box{
+				table{
+					width:100%;
+					border-top:1px solid #e7e7e7;
+					
+					th, td{
+						padding:30px; 
+						text-align:center; 
+						border-bottom:1px solid #e7e7e7; 
+						border-right:1px solid #e7e7e7;
+						color:#54585a; 
+						vertical-align: middle;
+					}
+					thead th, td{
+						&:last-of-type{border-right:none;}
+					}
+					thead th{
+						@include Bold;
+						background-color:#fafafa;
+					}	
+					tbody td{
+						&:last-of-type{text-align:left;}
+					}		
+					.cont-none{
+						padding:110px 20px;
+						text-align:center;
+					}		
+				}
+			}
+		}
 	}
 
 	//슬라이드 형태
