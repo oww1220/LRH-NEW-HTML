@@ -501,6 +501,30 @@ body.fixed {
 					// border-radius: 1rem;
 					border-bottom: 1px solid #EBEBEB;
 					margin-top: 1rem;
+					.map-wrap{
+						position: relative;
+						margin-bottom:1.2rem;
+						.cover{
+							width:100%;
+							height:23.5rem;
+						}
+					}
+					.detail-map-marker{
+                        @include Position();
+                        cursor: pointer;
+                        .map-marker-box{
+                            @include Align-between;
+                            border:.2rem solid #ff404b;
+                            background-color:#fff;
+                            border-radius: 1.7rem;
+                            padding:.4rem .9rem;
+                            .map-marker-txt{
+                                font-size:.9rem;
+                                @include Bold;
+                                padding-left:.9rem;
+                            }
+                        }
+                    }
 					> ul {
 						> li {
 							border-top: 1px solid #EBEBEB;
@@ -509,6 +533,7 @@ body.fixed {
 								font-size: 1.1rem;
 								line-height: 1.4;
 								padding:1.2rem 1.2rem 1.2rem 4.7rem;
+								//padding:1.2rem 1.2rem 1.2rem 0;
 								position: relative;
 								.flag-wrap{
 									top: 1.3rem;
@@ -520,6 +545,16 @@ body.fixed {
 										display:block;
 										padding-top:.9rem;
 										font-size:1rem;
+									}
+								}
+								.address-result-txt-wrap{
+									position: relative;
+									margin-left:-4.7rem;
+									.flag-wrap{
+										top:.3rem;
+									}
+									.address-result-txt{
+										padding-left:4.7rem;
 									}
 								}
 							}
@@ -2337,6 +2372,151 @@ body.fixed {
 				}
 			}
 
+		}
+
+		//지점안내-전국지점안내 검색 팝업
+		&.layer-national-branch {
+			.full-top {
+				.layer-full-close {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.cont-top {
+					.cont-tit {
+						padding: 2.2rem 1.7rem 2.6rem;
+						@include Background($sprite:'bg_cus_branch', $size:cover, $position:center center, $path:'bgs');
+						em {
+							@include Align-middle-left;
+							color:#fff;
+							font-size:2.3rem;
+							@include Bold;
+							i {
+								margin-right:.4rem;
+							}
+						}
+						strong {
+							display: block;
+							margin-top:1.7rem;
+							color:#fff;
+							font-size:1.4rem;
+							@include Normal;
+							line-height: 1.5;
+						}
+						
+					}
+				}
+				.cont-in {
+					padding:3.4rem 1.7rem;
+					.cont-map {
+						.point-tit {
+							@include Align-middle-left;
+							strong {
+								@include Bold;
+								font-size:1.4rem;
+								margin-left:.8rem;
+								&::after {
+									content:'';
+									display: block;
+									padding-top:.1rem;
+									border-bottom:1px solid #000;
+								}
+							}
+							.flagwrap {
+								@include Align-middle;
+								margin-left:auto;
+								li {
+									span {
+										font-size: .9rem;
+										&.notice {
+											border-color: #6e5d50;
+											color: #6e5d50;
+										}
+									}
+									.notice {
+										border-color: #6e5d50;
+										color: #6e5d50;
+									}
+									& + li {
+										margin-left:.5rem;
+									}
+								}
+								
+							}
+						}
+						.cover {
+							padding:1.4rem 0 1.7rem;
+						}
+						> button {
+							height:4.3rem;
+							width:100%;
+							border:1px solid #d2d2d2;
+							border-radius:.5rem;
+							font-size:1.4rem;
+							@include Bold;
+						}
+					}
+					.cont-info {
+						padding:2.6rem 0 3.4rem;
+						li {
+							@include Align-top-left;
+							> div {
+								padding-left:1rem;
+								strong {
+									@include Bold;
+									font-size:1.1rem;
+									vertical-align: top;
+									&.underline {
+										display: inline-block;
+										&::after {
+											content:'';
+											display: block;
+											padding-top:.1rem;
+											border-bottom:1px solid #000;
+										}
+									}
+								}
+								p {
+									padding-top:.8rem;
+									font-size:1.1rem;
+									line-height: 1.3;
+								}
+							}
+							
+							& + li {
+								margin-top:2.6rem;
+							}
+						}
+					}
+					.cont-slide {
+						.swiper-pagination-wrap{
+							@include Align-middle;
+							width: 100%;
+							z-index: 1;
+							.swiper-pagination {
+								margin-top:1rem;
+								position: static;
+								height: 2rem;
+								padding: 0 1.4rem;
+								.swiper-pagination-bullet {
+									margin:0 .4rem;
+									width:.7rem;
+									height: .7rem;
+									border-radius: .5rem;
+									background-color: #ddd;
+									opacity: 1;
+									&-active {
+										background-color: #ff404b;
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+			
 		}
 	}
 

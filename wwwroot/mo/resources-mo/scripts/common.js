@@ -1132,26 +1132,19 @@ if($('.layer-car-detail').length){
     });
 }
 
-//중고차 승계렌터카 등록 - 사진정보 팝업
-// if($('.secondhand-wrap').length){
-//     MUI.event.toggle('.secondhand-wrap .add-photo', '.secondhand-wrap .live', false, function(logic, layer) {
-//         //console.log('toggle');
-//         logic();
-//     });
-// }
-
-
-$(function(){
-    $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").hide(); // 최초 10개 선택
-    
-    $(".secondhand-wrap .add-photo").click(function(e){ // Load More를 위한 클릭 이벤트e
-        $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").slice(0, 6).show(); // 최초 10개 선택
-        e.preventDefault();
-        $(".file-box > ul > li:hidden").slice(0, 3).show(); // 숨김 설정된 다음 10개를 선택하여 표시
-        if($("li:hidden").length == 0){ // 숨겨진 DIV가 있는지 체크
-        }
-    });
+//중고차 승계렌터카 등록 - 사진정보 - 추가
+$(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").hide();
+$(".secondhand-wrap .add-photo").click(function(e){
+    $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").slice(0, 6).show();
+    e.preventDefault();
+    $(".secondhand-wrap .file-box > ul").slice(0, 3).show();
+    if($(".secondhand-wrap .file-box > ul:hidden").length == 0){
+        //alert("더 이상 항목이 없습니다");
+        $(".secondhand-wrap .add-photo").hide();
+    }
 });
+
+
 
 //필터 슬라이드
 if($('.secondhand-wrap .item-step15 #slider-price').length) {
@@ -1180,11 +1173,22 @@ if($('.secondhand-wrap .item-step15 #slider-price').length) {
             $('#max_slider_price').val(max);
         }
     });
+}
+/* -------------------------------------------------중고차 승계렌터카 end*/
 
+/*지점안내 start-------------------------------------------------*/
+
+// 전국지점안내 슬리이더
+if($('.layer-national-branch .cont-slide').length) {
+    MUI.slide.init('.layer-national-branch .cont-slide','swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
 }
 
-
-/* -------------------------------------------------중고차 승계렌터카 end*/
+/* -------------------------------------------------지점안내 end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){
