@@ -2928,8 +2928,8 @@
                         }
                     }
                     .guide {
-                            padding:1.3rem 0;
-                            li {
+                        padding:1.3rem 0 0;
+                        li {
                             text-indent: -.6rem;
                             padding-left: 1rem;
                             font-size: 1.1rem;
@@ -2952,7 +2952,11 @@
                 }
                 .live {
                     //display: none;
+                    padding-top:0;
                     p {
+                        border-top:1px solid #d2d2d2;
+                        margin:1.3rem 0 1rem;
+                        padding-top:2.6rem;
                         text-indent: -.6rem;
                         padding-left: 1rem;
                         font-size: 1.1rem;
@@ -2964,7 +2968,6 @@
 						}
 					}
 					.file-box {
-						margin-top:1rem;
 						&.hidden-filebox-toggle {
 							display: none;
 							margin-top:0;
@@ -2980,7 +2983,6 @@
 									border:0;
 									border-radius: 0;
 									&.active {
-										
 										&.active01 {
 											@include Background($sprite:'car-front', $size:100% 100%, $position:center center, $path:'bgs');
 										}
@@ -3024,41 +3026,7 @@
 							}
 						}
 					}
-                    
-                    .guide {
-                            li {
-                            text-indent: -.6rem;
-                            padding-left: 1rem;
-                            font-size: 1.1rem;
-                            color:#8f9191;
-                            & + li {
-                                padding-top:1rem;
-                            }
-                            &::before {
-                                content:'';
-                                display: inline-block;
-                                width:.2rem;
-                                height:.2rem;
-                                background-color: #000;
-                                vertical-align: middle;
-                                margin-right:.4rem;
-                                border-radius:100%;
-                            }
-                        }
-                    }
-                    .btn-addphoto {
-                        padding:2.3rem 0;
-                        .add-photo {
-                            width: 100%;
-                            background-color: #54585a;
-                            color:#fff;
-                            border-radius: .5rem;
-                            font-size:1.6rem;
-							@include Bold;
-                        }
-                    }
                 }
-
                 .btn-addphoto {
                     padding-top:1.3rem;
                     button {

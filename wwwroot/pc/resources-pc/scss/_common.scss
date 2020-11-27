@@ -270,6 +270,18 @@ $extra-small-devices: 320px;
 	justify-content: left;
 }
 
+//@include box-shadow($top:0, $left:0px, $blur:15px, $color:rgba(50, 50, 50, 0.75));
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+	  -webkit-box-shadow:inset $top $left $blur $color;
+	  -moz-box-shadow:inset $top $left $blur $color;
+	  box-shadow:inset $top $left $blur $color;
+	} @else {
+	  -webkit-box-shadow: $top $left $blur $color;
+	  -moz-box-shadow: $top $left $blur $color;
+	  box-shadow: $top $left $blur $color;
+	}
+  }
 
 html, body{
 	font-size:16px;
