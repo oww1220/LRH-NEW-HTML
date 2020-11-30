@@ -606,14 +606,18 @@
                     background-color:#f5f5f5;
                     padding:1.5rem 1.3rem;
                     border-radius: .5rem;
-                    .t_red {
-                        font-size: 1rem;
-                        color: #ed1c24;
-                        text-align: right;
-                    }
+                }
+                .t_red {
+                    font-size: 1rem;
+                    color: #ed1c24;
+                    text-align: right;
                 }
                 .item-cont {
                     padding: 0 1.7rem;
+                    &.mem_cont{
+                        padding-bottom: 3rem;
+                        border-bottom: .6rem solid #f5f5f5;
+                    }
                     .detail-layer-inputT-tit{
                         @include Bold;
                         @include Align-between;
@@ -629,6 +633,10 @@
                         button{
                             padding:0 0 0 .4rem;
                         }
+                    }
+                    .detail-layer-inputT-stit{
+                        justify-content: flex-start;
+                        font-size: 1.1rem;
                     }
                     .detail-layer-inputT:first-child{
                         margin-top: 0;
@@ -735,6 +743,28 @@
                             }
                             &:last-child{
                                 width:80%;
+                                .detail-layer-inputR{
+                                    margin-right:1.7rem;
+                                    label{
+                                        span{
+                                            @include Regular;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .detail-layer-inputT-list2{
+                        display:flex;
+                        width:100%;
+                        margin:.9rem 0 0 0;
+                        li{
+                            position: relative;
+                            &:first-child{
+                                width:35%;
+                            }
+                            &:last-child{
+                                width:65%;
                                 .detail-layer-inputR{
                                     margin-right:1.7rem;
                                     label{
@@ -956,7 +986,7 @@
                         margin-left:0;
                         width:100%;
                     }
-                    &.mt-30 {
+                    .mt-1_5 {
                         margin-top: 1.5rem;
                     }
                     .detail-layer-inputR{
@@ -985,6 +1015,21 @@
                             span{
                                 @include Regular;
                             }
+                        }
+                    }
+                    .red_star{
+                        display: inline-block;
+                        font-size: 1rem;
+                        color: #ed1c24;
+                        vertical-align: bottom;
+                        margin-left:.2rem;
+                    }
+                    .btn {
+                        font-size: 1.1rem;
+                        color: #54585a;
+                        font-weight: normal;
+                        .icon{
+                            margin-left: .4rem;
                         }
                     }
                 }
