@@ -3288,39 +3288,6 @@
                         }
                         
                     }
-                    .chk-agree-list {
-                        .chk-agree-cols {
-                            padding-top:2rem;
-                            li {
-                                border-bottom:0;
-                                padding:.6rem 0;
-                                .chk-agree-top {
-                                    @include Align-between-top;
-                                    input {
-                                        &[type='checkbox'] + label:before {
-                                            width:1.2rem;
-                                            height:.9rem;
-                                            padding-top:.4rem;
-                                            @include Background($sprite:'ico-chk-off04', $size:92% auto, $type:'png', $position:center center);
-                                        }
-                                        &[type='checkbox']:checked + label:before {
-                                            @include Background($sprite:'ico-chk-on04', $size:92% auto, $type:'png', $position:center center);
-                                        }
-                                        &[type='checkbox']:checked + label span {
-                                            color:#2e2e2e;
-                                        }
-                                    }
-                                    label {
-                                        padding:0;
-                                        color:#8f9191;
-                                        span {
-                                            font-size:1.1rem;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
                 .cont-guide {
                     margin-top:1rem;
@@ -3351,6 +3318,45 @@
                         }
                     }
                 }
+                .chk-agree-list {
+                    margin-top:0;
+                    .chk-agree-all {
+                        label {
+                            padding:1.7rem 0;
+                        }
+                    }
+                    .chk-agree-cols {
+                        padding-top:2rem;
+                        li {
+                            border-bottom:0;
+                            padding:.6rem 0;
+                            .chk-agree-top {
+                                @include Align-between-top;
+                                input {
+                                    &[type='checkbox'] + label:before {
+                                        width:1.2rem;
+                                        height:.9rem;
+                                        padding-top:.4rem;
+                                        @include Background($sprite:'ico-chk-off04', $size:92% auto, $type:'png', $position:center center);
+                                    }
+                                    &[type='checkbox']:checked + label:before {
+                                        @include Background($sprite:'ico-chk-on04', $size:92% auto, $type:'png', $position:center center);
+                                    }
+                                    &[type='checkbox']:checked + label span {
+                                        color:#2e2e2e;
+                                    }
+                                }
+                                label {
+                                    padding:0;
+                                    color:#8f9191;
+                                    span {
+                                        font-size:1.1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 .btn-submit-gray {
                     width:100%;
                     background-color: #54585a;
@@ -3365,7 +3371,6 @@
                 padding-top:0;
                 .cont-in {
                     padding-top:0;
-                    
                 }
             }
             & + .detail-layer-submit {
