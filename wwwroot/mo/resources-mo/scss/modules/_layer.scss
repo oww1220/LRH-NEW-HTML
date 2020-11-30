@@ -354,6 +354,71 @@ body.fixed {
 				}
 			}
 		}
+
+		//중고차 등록 - 슬라이드 팝업
+		&.layer-rental{
+			.layer-time-col-cont{
+				padding:3.4rem 1.7rem;
+				.rental-selectbox-wrap{
+					.selectbox-list{
+						border-top: 1px solid #d2d2d2;
+						overflow-y: visible;
+						overflow-x: hidden;
+						height:17.2rem;
+						.selectbox-list-col2{
+							height:4.3rem;
+							box-sizing: border-box;
+							border-bottom: 1px solid #d2d2d2;
+							background-color: #fff;
+							@include Align-between;
+							padding:0 1.3rem;
+							li{
+								border-bottom:0 none;
+								.inner{
+									margin-top:0;	
+								}
+							}
+							li:last-child{
+								text-align: right;
+							}
+						}
+						li{
+							&.active{
+								b{
+									@include Bold;
+									color:#2f2f2f;
+									i{
+										display:inline-flex;
+									}
+								}
+								em{
+									@include Bold;
+									color:#ed1c24;
+								}
+							}
+						}
+					}
+					b{
+						@include Regular;
+						color:#54585a;
+						i{
+							display:none;
+							margin-left:.9rem;
+						}
+					}
+					em{
+						@include Regular;
+						color:#54585a;
+					}
+				}
+				.selectbox{
+					border-left:0;
+					border-right:0;
+					border-radius: 0;
+				}
+			}
+		}
+
 		//승계렌터가-진행팝업
 		&.layer-suc-prog {
 			.slide-message {
@@ -2558,6 +2623,176 @@ body.fixed {
 				}
 			}
 			
+		}
+		//중고차상세 - 할부계산기 팝업
+		&.layer-detail-monthl {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding-top:1.7rem;
+				.section-cont:first-child{
+					border-top:0 none;
+				}
+				.section-cont {
+					background-color: #fff;
+					padding:1.7rem 0;
+					border-top:1px solid #e7e7e7;
+					.wrap {
+						.cont-tit {
+							h3 {
+								background-color: #EFF2F7;
+								padding: 1.5rem 1.3rem;
+								border-radius: 1rem;
+								@include Bold;
+								font-size:1.4rem;
+							}
+						}
+						.cont-in {
+							padding-top:1.7rem;
+						}
+						> strong {
+							@include Bold;
+							font-size:1.8rem;
+						}
+						.guide {
+							font-size: 1.1rem;
+							line-height: 1.3;
+							text-indent: -.8rem;
+							padding:1.1rem 0;
+							& > li{
+								color:#54585a;
+								@include Regular;
+								line-height: 1.4;
+								margin:.4rem 0 0 0;
+								padding-left:1rem;
+								& > i{
+									margin-right: .6rem;
+									margin-top: -.4rem;
+								}
+								&.red_txt{
+									color:#ed1c24;
+								}
+								&.gray_txt{
+									color:#8f9191;
+								}
+							}
+							& > li:first-child{
+								margin-top:0;
+							}
+						}
+					}
+					&.cont-item2 {
+						.cont-in {
+							padding-top:0;
+						}
+					}
+					&.cont-item3 {
+						.cont-in {
+							padding-top:0;
+							.detail-iconBox{
+								margin-left: -.2rem;
+								label {
+									border:0 none;
+									border-radius: 0;
+									@include Bold;
+									&:after {
+										width: 1.7rem;
+										height: 1.7rem;
+										margin-top: -.85rem;
+										left:.5rem;
+									}
+								}
+								input:checked + label {
+									@include Bold;
+								}
+								input[type='checkbox'] + label:after{
+									@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+								}
+								input[type='checkbox']:checked + label:after{
+									@include Background($sprite:'ico-chk-on07', $type:'png', $size:92% auto, $position:center center);
+								}
+							}
+							.inputT-txt{
+								@include Align-middle-right;
+								b{
+									font-size:1.6rem;
+									@include Bold;
+								}
+							}
+							.detail-layer-inputT-tit{
+								@include Bold;
+								@include Align-between;
+								margin:.9rem 0 .8rem 0;
+								& > span{
+									font-size:1rem;
+									@include Regular;
+									b{
+										font-size:1rem;
+										color:#ff404b;
+									}
+								}
+							}
+							.inputT {
+								.inner {
+									position: relative;
+									input {
+										width:100%;
+										border: 1px solid #d2d2d2;
+										border-radius: .5rem;
+										background-color: #fff;
+										height: 4.1rem;
+										padding: 0 1.2rem;
+										text-align: right;
+										padding-right: 3.6rem;
+										color:#ed1c24;
+										@include Regular;
+									}
+									span {
+										@include Position($top: 35%, $right: 1rem);
+										@include Regular;
+										color:#8f9191;
+									}
+								}
+							}
+						}
+					}
+					&.cont-item4 {
+						.cont-in {
+							padding-top:0;
+							.detail-layer-inputT-tit{
+								@include Bold;
+								@include Align-between;
+								& > span{
+									font-size:1rem;
+									@include Regular;
+									b{
+										font-size:1rem;
+										color:#ff404b;
+									}
+								}
+							}
+							.info-monthl{
+								background-color: #fafafa;
+								padding: 1.5rem 1.3rem;
+								border-radius: .5rem;
+								@include Regular;
+								line-height: 2;
+								margin:3.4rem 0 0 0;
+								em{
+									@include Bold;
+								}
+								b{
+									font-size:1.8rem;
+									@include Bold;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 

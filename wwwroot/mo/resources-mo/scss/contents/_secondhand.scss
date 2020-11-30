@@ -89,6 +89,16 @@
         // overflow: hidden;
         // border-radius: .9rem;
         // height: 10.4rem;
+        &.detail-layer-top-step{
+            .normal{
+                padding:0 0;
+                .tit-box{
+                    h2{
+                        padding:0;
+                    }
+                }
+            }
+        }
         p {
             color:#54585a;
             @include Regular;
@@ -972,6 +982,12 @@
                 }
             }
             &.detail-layer-cont-terms02{
+                > strong {
+                    display:block;
+                    @include Bold;
+                    font-size:1.8rem;
+                    margin-bottom: 1.7rem;
+                }
                 .table{
                     tbody{
                         td{
@@ -1055,6 +1071,9 @@
             }
             .detail-layer-items {
                 border-top:.6rem solid #f1f1f1;
+                &.detail-layer-items-step{
+                    border-top:0 none;
+                }
                 .layer-item {
                     background-color:#fff;
                     padding: 3.4rem 0 0;
@@ -1284,6 +1303,7 @@
                         }
                         .item-cont {
                             padding: 0 1.7rem;
+                            border-bottom:0 none;
                             .detail-layer-cont-terms{
                                 padding:0 1.7rem;
                                 & > .table{
@@ -1307,6 +1327,57 @@
                                         }
                                     }
                                 }
+                                & > button{
+                                    @include Align-middle;
+                                    i{
+                                        margin-right:.9rem;
+                                    }
+                                }
+                            }
+                            .detail-layer-inputT-email{
+                                display:flex;
+                                width:100%;
+                                margin-left:0;
+                                li{
+                                    position: relative;
+                                    &:first-child{
+                                        width:60%;
+                                        margin-right:0;
+                                    }
+                                    &:last-child{
+                                        width:40%;
+                                    }
+                                    & > input{
+                                        border:1px solid #d2d2d2;
+                                        border-radius: .5rem 0 0 .5rem;
+                                        background-color: #fff;
+                                        height: 4.1rem;
+                                        width:100%;
+                                        padding:0 1.2rem;
+                                        border-right:0;
+                                        position: relative;
+                                    }
+                                    & > em{
+                                        display:block;
+                                        content:"@";
+                                        @include Position($top: 50%, $right: 0);
+                                        transform: translateY(-50%);
+                                    }
+                                    &:last-child > input{
+                                        border-radius: 0 .5rem .5rem 0;
+                                        border:1px solid #d2d2d2;
+                                        border-left:0;
+                                    }
+                                    & > .selectbox{
+                                        width:100%;
+                                        height: 4.1rem;
+                                        border-radius: 0 .5rem .5rem 0; 
+                                        background-color: #fff;
+                                        border-color:#EBEBEB;
+                                        font-size:1.2rem;
+                                        border-left:0;
+                                    }
+                                }
                             }
                         }
                     }
@@ -1320,6 +1391,7 @@
                         }
                         .item-cont {
                             padding: 0 1.7rem;
+                            border-bottom:0 none;
                             .detail-layer-inputT:first-child{
                                 margin-top: 0;
                             }
@@ -1338,6 +1410,7 @@
                         }
                         .item-cont {
                             padding: 0 1.7rem;
+                            border-bottom:0 none;
                             .input-date-box{
                                 @include Align-between;
                                 .btn-schedule-toggle{
@@ -1364,6 +1437,15 @@
                             .chk-agree-list{
                                 margin-top:0;
                                 padding: 0 1.3rem;
+                                .chk-agree-all{
+                                    .guide{
+                                        margin-top: 0;
+                                        margin-bottom: 1.2rem;
+                                        li{
+                                            color:#8f9191;
+                                        }
+                                    }
+                                }
                                 .chk-agree-cols{
                                     & > li{
                                         border-bottom:0;
@@ -1385,11 +1467,13 @@
                                                 @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
                                                 width: 1.2rem;
                                                 height: .9rem;
+                                                margin-top: .2rem;
                                             }
                                             span{
                                                 font-size:1.1rem;
                                                 color:#999;
                                                 @include Regular;
+                                                line-height: 1.3;
                                             }
                                         }
                                         input:checked + label {
@@ -1411,6 +1495,21 @@
                             border-radius: .5rem;
                             &.summary-table-wrap-type01{
                                 border:1px solid #ff404b;
+                                &.summary-table-wrap-type01-1{
+                                    border-color: #d2d2d2;
+                                    .table{
+                                        &.table-type04{
+                                            border-bottom:0 none;
+                                            table{
+                                                td{
+                                                    strong:after{
+                                                        transform: translate(0);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 .summary-toggle-btn{
                                     background-color: #fff;
                                     color:#ed1c24;
@@ -1482,6 +1581,87 @@
                                             }
                                         }
                                     }
+                                    &.table-type02{
+                                        padding:0 1.3rem 2.2rem;
+                                        table{
+                                            tr:first-child{
+                                                th:first-child{
+                                                    b{
+                                                        @include Bold;
+                                                    }
+                                                }
+                                            }
+                                            th{
+                                                text-align: left;
+                                                padding:1.4rem 0 1.4rem .9rem;
+                                            }
+                                            td{
+                                                text-align: right;
+                                                padding:1.4rem .9rem 1.4rem 0;
+                                            }
+                                        }
+                                    }
+                                    &.table-type04{
+                                        //padding:0 1.3rem 0 0;
+                                        margin:0 1.3rem;
+                                        border-bottom:1px solid #e7e7e7;
+                                        table{
+                                            th:first-child{
+                                                padding:1.4rem 0 0 0;
+                                                position: relative;
+                                            }
+                                            th:first-child:after{
+                                                display:block;
+                                                content: "";
+                                                border-right:1px solid #e7e7e7;
+                                                width:1px;
+                                                height:3.4rem;
+                                                @include Position($top: 70%, $right: 0);
+                                            }
+                                            th:last-child{
+                                                padding:1.4rem 0 0 0;
+                                                position: relative;
+                                            }
+                                            th:last-child:after{
+                                                display:block;
+                                                content: "";
+                                                border-left:1px solid #e7e7e7;
+                                                width:1px;
+                                                height:3.4rem;
+                                                @include Position($top: 70%, $left: 0);
+                                            }
+                                            th{
+                                                padding-bottom:0;
+                                            }
+                                            td:first-child{
+                                                padding:1.4rem 0 1.4rem 0;
+                                            }
+                                            td:last-child{
+                                                padding:1.4rem 0 1.4rem .9rem;
+                                            }
+                                            td{
+                                                strong{
+                                                    display: block;
+                                                    @include Bold;
+                                                    font-size:1.6rem;
+                                                    position: relative;
+                                                    padding-right:1.3rem;
+                                                }
+                                                strong:after{
+                                                    display: block;
+                                                    content: '';
+                                                    position: absolute;
+                                                    width: .9rem;
+                                                    height: .5rem;
+                                                    top: 70%;
+                                                    right: 10%;
+                                                    @include Background($sprite:'ico-arrow-down2', $type:'png', $size:100% auto, $position:center center);
+                                                    transform: rotate(180deg);
+                                                    margin-top: -.45rem;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             &.summary-table-wrap-type02{
@@ -1520,6 +1700,25 @@
                                         margin:0;
                                         padding:1.4rem 0 1.4rem 1rem;
                                     }
+                                    &.table-type03{
+                                        padding:0 1.4rem;
+                                        table{
+                                            th{
+                                                border-top:0 none;
+                                                padding: 1.4rem 0;
+                                                vertical-align: middle;
+                                            }
+                                            td{
+                                                border-top:0 none;
+                                                @include Align-between;
+                                                @include Regular;
+                                                padding: 1.4rem 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.summary-table-wrap-type02-2{
+                                    margin:3.4rem 1.7rem 0;       
                                 }
                                 .summary-toggle-btn{
                                     @include Bold;
@@ -1688,7 +1887,8 @@
                                 }
                                 .filter-col {
                                     position: relative;
-                                    padding-top: 2.6rem;
+                                    padding-top: 3.6rem;
+                                    margin:1.7rem 0 3.4rem 0;
                                     .month_box_case {
                                         position: relative;
                                         &:before {
@@ -1756,6 +1956,18 @@
                                             @include Position($top: -.66rem, $left: 0);
                                             z-index: 2;
                                             opacity: .7;
+                                        }
+                                    }
+                                    .month_value{
+                                        padding: 1.7rem 0 0 0;
+                                        p{
+                                            color:#999;
+                                            font-size:1rem;
+                                            @include Regular;
+                                        }
+                                        b{
+                                            font-size:1.4rem;
+                                            @include Bold;
                                         }
                                     }
                                 }
