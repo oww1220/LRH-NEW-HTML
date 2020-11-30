@@ -440,7 +440,12 @@ if($('.carLife-container .tab-normal').length){
             show();
         });
     }
-
+    //차량 상세
+    if($('.layer-registCarDetail-info').length) {
+        MUI.layer.openClick('.layer-registCarDetail-info-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }
     
     
     
@@ -867,7 +872,21 @@ if($('.registerTab').length){
     });
 }
 
+//사진추가
+if($('.secondhand-container .imgUpload-section').length){
+    MUI.event.toggle('.imgUploadOpen', '.imgUploadCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
 
+//차량상세 레이어 토글
+if($('.layer-registCarDetail-info').length){
+    MUI.event.toggle('.layer-registCarDetail-info .toggleBtn', '.layer-registCarDetail-info .toggleCont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
 
 /* -------------------------------------------------중고차장기렌터카end*/
 

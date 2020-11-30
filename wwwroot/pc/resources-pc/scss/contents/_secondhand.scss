@@ -208,8 +208,9 @@
 
         .tit{
             display:block; 
-            font-size:26px;
-            margin-bottom:20px;
+            font-size:26px;           
+            
+            + p{margin-top:20px;}
         }
     }    
 
@@ -485,7 +486,7 @@
             margin-left:10px;
         }                    
     }
-
+    
     //차량 상세
     .car-detail-visual-section{
         margin-bottom:48px;
@@ -1098,6 +1099,10 @@
 
             .tab-cont-inner{                
                 padding:60px 80px 120px;
+
+                .form-cont{
+                    + .choice-list-type2{margin-top:60px;}
+                }
             }
         }
         .choice-list-type2{
@@ -1185,7 +1190,157 @@
         }
     }
 
+    .carOpt-section{
+        .row{     
+            margin:0 80px;
+            padding:0;
+
+            + .row{padding-top:60px; border-top:1px solid $border-grey;}
+
+            .tit-size-def{margin-bottom:40px;}
+            .img-type-list{
+                li{
+                    text-align:center;
+                    .icon {
+                        width:110px;
+                        height:70px;
+                        background-color:#ab8f7a;                            
+                        margin:0 auto 10px; 
+                    }
+                    .txt{color:#54585a; font-size:14px;}
+
+                    .chk-box{
+                        input{display:none;}
+                        input:checked + label .txt{
+                            @include Bold;
+                            color:$txt-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
-           
+    .imgUpload-section{
+        .imgUpload-exam-box, .imgUpload-list-box{        
+            ul{
+                display:flex;
+                flex-wrap: wrap;
+                align-items:stretch;
+                justify-content:space-between;
+                box-sizing: border-box;
+
+                li{
+                    //overflow:hidden;
+                    position:relative;
+                    @include Align-middle-column;
+                    width:200px;
+                    height:170px;
+                    @include roundBox;
+                    border: 1px solid $border-darkgrey;
+                    box-sizing: border-box;
+                    color:#8f9191;
+                    text-align:center;      
+                    margin-bottom:10px;              
+                    
+                    span{display:block; font-size:14px;}
+                    
+                    .cover{
+                        @include Position($bottom:0, $left:0);
+                        padding:10px;
+                        background-color:rgba(47,47,47,.8);
+                        z-index: 5;
+                        color:#fff;
+                        border-top-right-radius: $main-border-radius;
+                    }
+                    .btn-img-del{
+                        @include Position($top:6px, $right:6px);
+                        z-index: 5;
+
+                        .icon{
+                            @include Hide_txt;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .imgUpload-exam-box{
+            margin:20px 0 50px;
+            li{
+                .icon{
+                    width:81px;
+                    height:66px;
+                    background-color:green;
+
+                    + span{margin-top:20px;}
+                }
+            }
+        }
+        
+        .imgUpload-list-box{
+            padding:40px 0 10px;
+
+            > .tit{margin-bottom: 40px; text-align:center;}
+
+            .imgUpload-item,.upload-btn{
+                display:block;
+                width:100%;
+                height:100%;
+            }
+            .imgUpload-item{
+                position:relative;
+                
+                input{display:none;}
+                .upload-btn{
+                    @include Align-middle-column;
+
+                    .icon{
+                        + span{margin-top:20px;}
+                    }
+                }
+            }
+        }  
+
+        .row{
+            + .row{border-top:1px solid $border-grey; padding-top:20px;}
+        }
+    }
+
+    .carDetail-section{
+        display:flex;
+        justify-content: left;
+        align-items: center;
+        padding:30px 80px;
+        margin-bottom:50px;
+
+        .car-img{
+            flex:none;
+            width:680px;
+            flex-basis: 680px;
+        }
+        .carDetail-infos{
+            .tit{@include Bold; font-size:26px; word-break: break-word;}
+            .infos-box{
+                margin-top:60px;
+                .infos-row{
+                    display:flex;
+                    font-size:14px;
+
+                    dt{
+                        flex:none;
+                        width:190px;
+                        flex-basis: 190px;
+                        color:#2f2f2f;
+                        font-weight:600;
+                    }
+                    dd{color:#54585a;}
+
+                    + .infos-row{margin-top:25px;}
+                }
+            }
+        }
+    }
     
 }
