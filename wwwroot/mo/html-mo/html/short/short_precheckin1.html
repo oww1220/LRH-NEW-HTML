@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="../../../resources-mo/images/favicon.ico">
+<link rel="stylesheet" href="../../../resources-mo/styles/reset.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/layout.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/modules.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/contents.css">
+
+<script src="../../../resources-mo/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/jquery-ui.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/jquery.ui.touch-punch.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/slick.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_main_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="../../../resources-mo/scripts/MUI.js"></script>
+<script src="../../../resources-mo/scripts/common.js"></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+	</header>
+
+
+	<main id="wrap" >
+		<!--단기렌터카-실시간예약/사전체크인-->
+		<div class="shor-wrap">
+			<!-- 상세 -->
+			<div class="section-detail">
+				<div class="section-tit pd40">
+					<h3>
+						더 빠르게 처리되는
+						<b>사전체크인 서비스</b>
+					</h3>
+				</div>
+				<div class="section-cont cont-item1">
+					<div class="wrap">
+						<div class="cont-tit">
+							<h4>예약자 정보</h4>
+						</div>
+						<div class="cont-in">
+							<div class="detail-layer-inputT inputT">
+								<ul class="detail-layer-inputT-email list-type-col2">
+									<li class="inputT">
+										<input type="text" id="" value="" name="email" title="이메일 정보 입력" placeholder="이메일 정보 입력하세요.">
+									</li>
+									<li class="inputT">
+										<input type="text" class="direct-input" id="" value="" title="이메일 종류 선택" placeholder="직접입력">
+									</li>
+								</ul>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<input type="text" id="" value="" name="email" title="이름 입력" placeholder="이름을 입력하세요.">
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<select class="selectbox" name="" id="gender_list" onchange="$('#gender_ls').val($('#gender_list').val());">
+									<option value="">성별을 선택하세요</option>
+									<option value="men">남자</option>
+									<option value="women">여자</option>
+								</select>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<ul class="detail-layer-inputT-birth list-type-col2">
+									<li class="inputT"><input type="text" id="" name="" title="생년월일 앞자리" placeholder="생년월일" value=""></li>
+									<li class="inputT"><input type="text" id="" name="" title="생년월일 뒷자리" placeholder="*******" value=""></li>
+								</ul>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<select class="selectbox" name="" id="">
+									<option value="">면허구분 선택하세요.</option>
+									<option value="">선택1</option>
+									<option value="">선택2</option>
+								</select>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<select class="selectbox" name="" id="">
+									<option value="">면허종류 선택하세요.</option>
+									<option value="">선택1</option>
+									<option value="">선택2</option>
+								</select>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<ul class="detail-layer-inputT-number list-type-col4">
+									<li class="inputT">
+										<select class="selectbox" name="" id="">
+											<option value="">선택</option>
+											<option value="">01</option>
+											<option value="">02</option>
+										</select>
+									</li>
+									<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+									<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+									<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+								</ul>
+								<p class="message-red">2014년 07월 02일 이후 발급 면허는 숫자 코드로 지역 입력합니다.</p>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<input type="text" id="" name="" title="name" placeholder="적성검사 만료 기간을 입력하세요" value="">
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<input type="text" id="" name="" title="name" placeholder="운전면허 발급일자를 입력하세요" value="">
+							</div>
+							
+						</div>
+						<div class="cont-guide">
+							<ul>
+								<li>
+									대여 기간 동안 이용하시는 연락정보가 예약 시 정보와 다른 경우 
+									실제 연락이 가능한 정보로 변경해주시기 바랍니다.
+								</li>
+								<li>
+									대여시작 및 반납완료 후 본 예약의 계약서가 위 입력된 메일주소로 
+									발송되오니, 입력된 정보가 정확한지 확인해주시기 바랍니다.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="section-cont cont-item2">
+					<div class="wrap">
+						<div class="cont-tit">
+							<h4>추가 운전자 등록</h4>
+						</div>
+						<div class="cont-in">
+							<div class="detail-layer-inputR">
+								<div class="detail-iconBox iconBox">
+									<input type="checkbox" checked="checked" id="checkbox1-1" name="checkbox1-1">
+									<label for="checkbox1-1">제 2 운전자 동의</label>
+								</div>
+								<ul class="list-type-col2">
+									<li class="inputR">
+										<input type="radio" name="radio1" id="radio1-1" checked="checked">
+										<label for="radio1-1">
+											<span>직접등록 (SMS발송)</span>
+										</label>
+									</li>
+									<li class="inputR">
+										<input type="radio" name="radio1" id="radio1-2">
+										<label for="radio1-2">
+											<span>예약자 등록</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<p class="message-gray">별도의 비용 없이 SMS링크를 통해 추가 운전자 등록이 가능합니다.</p>
+								<input type="text" id="" value="" name="email" title="제2운전자 입력" placeholder="제 2 운전자 이름을 입력하세요.">
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<input type="text" id="" value="" name="email" title="연락처 입력" placeholder="연락처를 입력하세요.">
+							</div>
+						</div>
+						<div class="cont-guide">
+							<ul>
+								<li class="red">
+									추가 /공동임차인 운전자 등록 링크는 대여시간 전까지 등록 
+									가능하며, 수정/변경이 필요 시 임차인만 가능합니다.
+								</li>
+							</ul>
+						</div>
+						<button type="submit" class="btn btn-submit-gray">추가운전자 등록 링크 발송하기</button>
+					</div>
+				</div>
+
+				<div class="section-cont cont-item3">
+					<div class="wrap">
+						<div class="cont-in">
+							<div class="detail-layer-inputR">
+								<div class="detail-iconBox iconBox">
+									<input type="checkbox" id="checkbox2-1" name="checkbox2-1">
+									<label for="checkbox2-1">공동임차인 동의</label>
+								</div>
+								<ul class="list-type-col2">
+									<li class="detail-layer-inputR inputR">
+										<input type="radio" name="radio2" id="radio2-1">
+										<label for="radio2-1">
+											<span>직접등록 (SMS발송)</span>
+										</label>
+									</li>
+									<li class="detail-layer-inputR inputR">
+										<input type="radio" name="radio2" id="radio2-2" checked="checked">
+										<label for="radio2-2">
+											<span>예약자 등록</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<input type="text" id="" value="" name="email" title="이름 입력" placeholder="이름을 입력하세요.">
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<select class="selectbox" name="" id="gender_list" onchange="$('#gender_ls').val($('#gender_list').val());">
+									<option value="">성별을 선택하세요</option>
+									<option value="men">남자</option>
+									<option value="women">여자</option>
+								</select>
+							</div>
+							<div class="detail-layer-inputT inputT phone-num">
+								<ul class="detail-layer-inputT-phone list-type-col2">
+									<li class="inputT">
+										<select class="selectbox" name="" id="">
+											<option value="">선택</option>
+											<option value="">010</option>
+											<option value="">011</option>
+										</select>
+									</li>
+									<li class="inputT"><input type="text" id="" name="" title="인증번호" placeholder="" value=""></li>
+								</ul>
+								<button type="button" class="btn-default black">인증번호받기</button>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<ul class="detail-layer-inputT-certification list-type-col2">
+									<li class="inputT"><input type="text" id="" name="" title="인증번호를 입력하세요" placeholder="인증번호를 입력하세요" value=""></li>
+									<li class="inputT"><button type="button" class="btn-default black">확인</button></li>
+								</ul>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<ul class="detail-layer-inputT-birth list-type-col2">
+									<li class="inputT"><input type="text" id="" name="" title="생년월일 앞자리" placeholder="생년월일" value=""></li>
+									<li class="inputT"><input type="text" id="" name="" title="생년월일 뒷자리" placeholder="*******" value=""></li>
+								</ul>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<select class="selectbox" name="" id="">
+									<option value="">면허구분 선택하세요.</option>
+									<option value="">선택1</option>
+									<option value="">선택2</option>
+								</select>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<select class="selectbox" name="" id="">
+									<option value="">면허종류 선택하세요.</option>
+									<option value="">선택1</option>
+									<option value="">선택2</option>
+								</select>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<ul class="detail-layer-inputT-number list-type-col4">
+									<li class="inputT">
+										<select class="selectbox" name="" id="">
+											<option value="">선택</option>
+											<option value="">01</option>
+											<option value="">02</option>
+										</select>
+									</li>
+									<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+									<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+									<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+								</ul>
+								<p class="message-red">2014년 07월 02일 이후 발급 면허는 숫자 코드로 지역 입력합니다.</p>
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<input type="text" id="" name="" title="name" placeholder="적성검사 만료 기간을 입력하세요" value="">
+							</div>
+							<div class="detail-layer-inputT inputT">
+								<input type="text" id="" name="" title="name" placeholder="운전면허 발급일자를 입력하세요" value="">
+							</div>
+						</div>
+						<div class="cont-guide">
+							<ul>
+								<li class="red">
+									제2운전자 등록시 임차인은 반드시 제2운전자의 개인정보제공에 
+									대한 동의를 얻어야하며 이에 대한 모든 책임은 임차인에게 
+									있으므로 등록시 주의하여주시기 바랍니다.
+								</li>
+							</ul>
+						</div>
+						<button type="submit" class="btn btn-submit-gray">공동임차인 등록 링크 발송하기</button>
+					</div>
+				</div>
+
+				<div class="section-cont cont-item4">
+					<div class="wrap">
+						<div class="cont-tit">
+							<h4>사전체크인을 위한 이용자 동의 사항</h4>
+						</div>
+						<div class="cont-in">
+							<div class="chk-agree-list">
+								<div class="chk-agree-all">
+									<div class="inputC">
+										<input type="checkbox" name="checkbox10" id="checkbox10-1">
+										<label for="checkbox10-1">
+											
+											<span class="txtBold">전체동의</span>
+										</label>
+									</div> 
+								</div>
+								<ul class="chk-agree-cols">
+									<li>
+										<div class="chk-agree-top">
+											<div class="inputC inputC02">
+												<input type="checkbox" name="checkbox10" id="checkbox10-2">
+												<label for="checkbox10-2">
+													<span>자차손해면책제도/휴차보상료에 대한 동의</span>
+												</label>
+											</div> 
+											<a href="#none" class="layer-infos-open" data-layer="type-"><i class="icon next2"></i></a>
+										</div>
+									</li>
+									<li>
+										<div class="chk-agree-top">
+											<div class="inputC inputC02">
+												<input type="checkbox" name="checkbox10" id="checkbox10-3">
+												<label for="checkbox10-3">
+													<span>계약 및 롯데렌터카 자동차대여약관의 주요 고지사항</span>
+												</label>
+											</div> 
+											<a href="#none" class="layer-infos-open" data-layer="type-"><i class="icon next2"></i></a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- 하단 버튼 -->
+				<div class="detail-layer-submit">
+					<ul class="">
+						<li>
+							<button type="button" class="btn btn-red">확인</button>
+						</li>
+					</ul>
+				</div>
+				<!-- //하단 버튼 -->
+
+			</div>
+			<!--//상세-->
+
+		</div>
+		<!--//단기렌터카-실시간예약/사전체크인-->
+
+	</main>
+
+
+	<footer class="footer">
+	</footer>
+
+
+	<!--상단 타이틀(추후삭제)-->
+    <script>
+	$(function(){
+		$('.header-top').css('border-bottom','1px solid #d2d2d2');
+		$('.header-nav').css('display','none');
+
+	});
+	</script>
+	<!--//상단 타이틀(추후삭제)-->
+
+
+</body>
+</html>
+

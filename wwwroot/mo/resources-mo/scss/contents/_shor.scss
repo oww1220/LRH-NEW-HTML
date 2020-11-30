@@ -40,6 +40,19 @@
                 color:#8f9191;
             }
         }
+        &.pd40 {
+            padding:3.4rem 1.7rem 1.7rem;
+            h3{
+                color:#8f9191;
+                font-size:1.9rem;
+                b {
+                    color:#2f2f2f;
+                    font-size:2.3rem;
+                    display: block;
+                    @include Bold;
+                }
+            }
+        }
     }
 
     .detail-layer-top {
@@ -3070,6 +3083,295 @@
         .main-accor-btn-group{
             .btn{
                 margin:0;
+            }
+        }
+        .section-cont {
+            padding:1.7rem 0;
+            .wrap {
+                padding:0 1.7rem;
+                .cont-tit h4 {
+                    background-color: #EFF2F7;
+                    padding:1.5rem 1.3rem;
+                    font-size: 1.4rem;
+                    border-radius: 1rem;
+                    @include Bold;
+                }
+                .cont-in {
+                    padding-top:1rem;
+                    .detail-layer-inputT {
+                        padding:.4rem 0;
+                        .detail-layer-inputT-email {
+                            margin-left:0;
+                            width:100%;
+                            li {
+                                &:first-child {
+                                    width:60%;
+                                    input {
+                                        border: 1px solid #d2d2d2;
+                                        border-radius: .5rem 0 0 .5rem;
+                                        height: 4.1rem;
+                                        width: 100%;
+                                        padding: 0 1.2rem;
+                                        border-right: 0;
+                                        position: relative;
+                                    }
+                                    &::after {
+                                        display: block;
+                                        content: "@";
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 0;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                                &:last-child {
+                                    width:40%;
+                                    input {
+                                        border-radius: 0 .5rem .5rem 0;
+                                        border-left:0;
+                                        text-align: right;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        .detail-layer-inputT-birth {
+                            margin:0;
+                            width:100%;
+                            justify-content: space-between;
+                            li {
+                                width:48%;
+                                &:last-child {
+                                    position: relative;
+                                    &:before {
+                                        display: block;
+                                        content: "";
+                                        border-left: .6rem solid #2B2B2B;
+                                        @include Position($top: 50%, $left: -.8rem);
+                                        height: 0.05rem;    
+                                    }
+                                }
+                                
+                            }
+                        }
+                        .detail-layer-inputT-number {
+                            width:100%;
+                            margin:0;
+                            justify-content: space-between;
+                            li {
+                                width:22%;
+                                & + li + li {
+                                    position: relative;
+                                    &:before {
+                                        display: block;
+                                        content: "";
+                                        border-left: .6rem solid #2B2B2B;
+                                        @include Position($top: 50%, $left: -.9rem);
+                                        height: 0.05rem;    
+                                    }
+                                }
+                            }
+                        }
+                        &.phone-num {
+                            @include Align-between;
+                            .detail-layer-inputT-phone {
+                                width:68%;
+                                margin:0;
+                                @include Align-between;
+                                li {
+                                    &:first-child {
+                                        width:30%;
+                                    }
+                                    & + li {
+                                        width:68%;
+                                    }
+                                }
+                            }
+                            button {
+                                width:30%;
+                                height:4.1rem;
+                                border-radius: .5rem;
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .detail-layer-inputT-certification {
+                            width:100%;
+                            margin:0;
+                            justify-content: space-between;
+                            li {
+                                &:first-child {
+                                    width:68%;
+                                }
+                                & + li { 
+                                    width:30%;
+                                }
+                                button {
+                                    height:4.1rem;
+                                    width:100%;
+                                    border-radius:.5rem;
+                                    font-size:1.2rem;
+
+                                }
+                            }
+                        }
+                    }
+                    .detail-layer-inputR {
+                        padding-bottom:1.7rem;
+                        border-bottom:1px solid #f1f1f1;
+                        .detail-iconBox {
+                            input {
+                                &:checked + label {
+                                    border:0;
+                                }
+                                &[type='checkbox'] + label:after {
+                                    @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                                }
+                                &[type='checkbox']:checked + label:after {
+                                    @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                                }
+                            }
+                            
+                            label {
+                                border:0;
+                                &:after {
+                                    width:1.7rem;
+                                    height:1.7rem;
+                                    margin-top:-.85rem;
+                                    @include Position($top: 50%, $left: 0);
+                                }
+                            }  
+                        }
+                        ul {
+                            margin:0;
+                            width:100%;
+                        }
+                       
+                    }
+                    .message {
+                        &-red {
+                            color:#ff404b;
+                            font-size:1.1rem;
+                            text-indent: -.6rem;
+                            padding-left:1rem;
+                            word-break: break-all;
+                            margin:1rem 0;
+                            &::before {
+                                content:'';
+                                display: inline-block;
+                                width:.2rem;
+                                height:.2rem;
+                                background-color: #ff404b;
+                                margin-right:.4rem;
+                                margin-top:-.2rem;
+                                border-radius:100%;
+                                vertical-align: middle;
+                            }
+                        }
+                        &-gray {
+                            color:#8f9191;
+                            font-size:1.1rem;
+                            text-indent: -.6rem;
+                            padding-left:1rem;
+                            word-break: break-all;
+                            margin:1rem 0;
+                            &::before {
+                                content:'';
+                                display: inline-block;
+                                width:.2rem;
+                                height:.2rem;
+                                background-color: #8f9191;
+                                margin-right:.4rem;
+                                margin-top:-.2rem;
+                                border-radius:100%;
+                                vertical-align: middle;
+                            }
+                        }
+                        
+                    }
+                    .chk-agree-list {
+                        .chk-agree-cols {
+                            padding-top:2rem;
+                            li {
+                                border-bottom:0;
+                                padding:.6rem 0;
+                                .chk-agree-top {
+                                    @include Align-between-top;
+                                    input {
+                                        &[type='checkbox'] + label:before {
+                                            width:1.2rem;
+                                            height:.9rem;
+                                            padding-top:.4rem;
+                                            @include Background($sprite:'ico-chk-off04', $size:92% auto, $type:'png', $position:center center);
+                                        }
+                                        &[type='checkbox']:checked + label:before {
+                                            @include Background($sprite:'ico-chk-on04', $size:92% auto, $type:'png', $position:center center);
+                                        }
+                                        &[type='checkbox']:checked + label span {
+                                            color:#2e2e2e;
+                                        }
+                                    }
+                                    label {
+                                        padding:0;
+                                        color:#8f9191;
+                                        span {
+                                            font-size:1.1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .cont-guide {
+                    margin-top:1rem;
+                    li {
+                        text-indent: -.7rem;
+                        padding-left:1rem;
+                        font-size:1.1rem;
+                        color:#8f9191;
+                        & + li {
+                            padding-top:.3rem;
+                        }
+                        &::before {
+                            content:'';
+                            display: inline-block;
+                            width:.2rem;
+                            height:.2rem;
+                            background-color: #000;
+                            margin-right:.4rem;
+                            margin-top:-.2rem;
+                            border-radius:100%;
+                            vertical-align: middle;
+                        }
+                        &.red {
+                            color:#ff404b;
+                            &::before {
+                                background-color: #ff404b;
+                            }
+                        }
+                    }
+                }
+                .btn-submit-gray {
+                    width:100%;
+                    background-color: #54585a;
+                    color:#fff;
+                    font-size:1.2rem;
+                    border-radius: .5rem;
+                    margin-top:1.7rem;
+                    @include Bold;
+                }
+            }
+            &.cont-item3 {
+                padding-top:0;
+                .cont-in {
+                    padding-top:0;
+                    
+                }
+            }
+            & + .detail-layer-submit {
+                button {
+                    border-radius: .5rem;
+                }
             }
         }
     }
