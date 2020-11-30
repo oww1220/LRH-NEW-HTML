@@ -3247,6 +3247,28 @@
                         }
                        
                     }
+                    .detail-layer-cont {
+                        padding-top:.7rem;
+                        > div {
+                            @include Align-middle-left;
+                            padding:0 1.3rem 1.3rem;
+                            strong {
+                                width:25%;
+                                font-size:1.1rem;
+                                @include Bold;
+                            }
+                            b {
+                                font-size:1.1rem;
+                            }
+                            span {
+                                color:#fff;
+                                font-size:.9rem;
+                            }
+                            & + div {
+                                padding:1.3rem;
+                            }
+                       } 
+                    }
                     .message {
                         &-red {
                             color:#ff404b;
@@ -3321,12 +3343,12 @@
                 .chk-agree-list {
                     margin-top:0;
                     .chk-agree-all {
+                        margin-bottom:2rem;
                         label {
                             padding:1.7rem 0;
                         }
                     }
                     .chk-agree-cols {
-                        padding-top:2rem;
                         li {
                             border-bottom:0;
                             padding:.6rem 0;
