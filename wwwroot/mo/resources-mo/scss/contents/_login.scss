@@ -538,6 +538,17 @@
                 h4 {
                     @include Bold;
                 }
+                .t_comment {
+                    padding: 0 1.7rem;
+                    font-size: 1.1rem;
+                    line-height: 2;
+                    margin-bottom: 2.2rem;
+                    > .pannel09 {
+                        width: 2.2rem;
+                        height: 2.1rem;
+                        margin-right: .5rem;
+                    }
+                }
                 .item-cont {
                     padding: 0 1.7rem;
                     .chk-agree-list{
@@ -595,6 +606,11 @@
                     background-color:#f5f5f5;
                     padding:1.5rem 1.3rem;
                     border-radius: .5rem;
+                    .t_red {
+                        font-size: 1rem;
+                        color: #ed1c24;
+                        text-align: right;
+                    }
                 }
                 .item-cont {
                     padding: 0 1.7rem;
@@ -749,6 +765,63 @@
                         text-indent: 0;
                         padding-left:0;
                     }
+                    .detail-layer-inputT-email{
+                        display:flex;
+                        width:100%;
+                        margin-top:.9rem;
+                        margin-left:0;
+                        li{
+                            position: relative;
+                            &:first-child{
+                                width:60%;
+                            }
+                            &:last-child{
+                                width:40%;
+                            }
+                            & > input{
+                                border:1px solid #EBEBEB;
+                                border-radius: 1rem 0 0 1rem;
+                                background-color: #fff;
+                                height: 4.1rem;
+                                width:100%;
+                                padding:0 1.2rem;
+                                border-right:0;
+                                position: relative;
+                            }
+                            & > em{
+                                display:block;
+                                content:"@";
+                                @include Position($top: 50%, $right: 0);
+                                transform: translateY(-50%);
+                            }
+                            &:last-child > input{
+                                border-radius: 0 1rem 1rem 0;
+                                border:1px solid #EBEBEB;
+                                border-left:0;
+                            }
+                            & > .selectbox{
+                                width:100%;
+                                height: 4.1rem;
+                                border-radius: 0 1rem 1rem 0; 
+                                background-color: #fff;
+                                border-color:#EBEBEB;
+                                font-size:1.2rem;
+                                border-left:0;
+                            }
+                        }
+                    }
+                    .gray{
+                        height: 2.6rem;
+                        margin-left: 1rem;
+                        vertical-align: baseline;
+                    }
+                    .red_star{
+                        display: inline-block;
+                        font-size: 1rem;
+                        color: #ed1c24;
+                        vertical-align: bottom;
+                        margin-left:.2rem;
+                    }
                 }
             }
             &.item-step3 {
@@ -882,6 +955,9 @@
                         margin-top:.9rem;
                         margin-left:0;
                         width:100%;
+                    }
+                    &.mt-30 {
+                        margin-top: 1.5rem;
                     }
                     .detail-layer-inputR{
                         margin-top:.9rem;
