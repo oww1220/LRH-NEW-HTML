@@ -538,6 +538,17 @@
                 h4 {
                     @include Bold;
                 }
+                .t_comment {
+                    padding: 0 1.7rem;
+                    font-size: 1.1rem;
+                    line-height: 2;
+                    margin-bottom: 2.2rem;
+                    > .pannel09 {
+                        width: 2.2rem;
+                        height: 2.1rem;
+                        margin-right: .5rem;
+                    }
+                }
                 .item-cont {
                     padding: 0 1.7rem;
                     .chk-agree-list{
@@ -596,8 +607,17 @@
                     padding:1.5rem 1.3rem;
                     border-radius: .5rem;
                 }
+                .t_red {
+                    font-size: 1rem;
+                    color: #ed1c24;
+                    text-align: right;
+                }
                 .item-cont {
                     padding: 0 1.7rem;
+                    &.mem_cont{
+                        padding-bottom: 3rem;
+                        border-bottom: .6rem solid #f5f5f5;
+                    }
                     .detail-layer-inputT-tit{
                         @include Bold;
                         @include Align-between;
@@ -613,6 +633,10 @@
                         button{
                             padding:0 0 0 .4rem;
                         }
+                    }
+                    .detail-layer-inputT-stit{
+                        justify-content: flex-start;
+                        font-size: 1.1rem;
                     }
                     .detail-layer-inputT:first-child{
                         margin-top: 0;
@@ -730,6 +754,28 @@
                             }
                         }
                     }
+                    .detail-layer-inputT-list2{
+                        display:flex;
+                        width:100%;
+                        margin:.9rem 0 0 0;
+                        li{
+                            position: relative;
+                            &:first-child{
+                                width:35%;
+                            }
+                            &:last-child{
+                                width:65%;
+                                .detail-layer-inputR{
+                                    margin-right:1.7rem;
+                                    label{
+                                        span{
+                                            @include Regular;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                     .detail-layer-cont-terms{
                         margin:.9rem 0 0 0;
                         .table{
@@ -748,6 +794,63 @@
                     .guide{
                         text-indent: 0;
                         padding-left:0;
+                    }
+                    .detail-layer-inputT-email{
+                        display:flex;
+                        width:100%;
+                        margin-top:.9rem;
+                        margin-left:0;
+                        li{
+                            position: relative;
+                            &:first-child{
+                                width:60%;
+                            }
+                            &:last-child{
+                                width:40%;
+                            }
+                            & > input{
+                                border:1px solid #EBEBEB;
+                                border-radius: 1rem 0 0 1rem;
+                                background-color: #fff;
+                                height: 4.1rem;
+                                width:100%;
+                                padding:0 1.2rem;
+                                border-right:0;
+                                position: relative;
+                            }
+                            & > em{
+                                display:block;
+                                content:"@";
+                                @include Position($top: 50%, $right: 0);
+                                transform: translateY(-50%);
+                            }
+                            &:last-child > input{
+                                border-radius: 0 1rem 1rem 0;
+                                border:1px solid #EBEBEB;
+                                border-left:0;
+                            }
+                            & > .selectbox{
+                                width:100%;
+                                height: 4.1rem;
+                                border-radius: 0 1rem 1rem 0; 
+                                background-color: #fff;
+                                border-color:#EBEBEB;
+                                font-size:1.2rem;
+                                border-left:0;
+                            }
+                        }
+                    }
+                    .gray{
+                        height: 2.6rem;
+                        margin-left: 1rem;
+                        vertical-align: baseline;
+                    }
+                    .red_star{
+                        display: inline-block;
+                        font-size: 1rem;
+                        color: #ed1c24;
+                        vertical-align: bottom;
+                        margin-left:.2rem;
                     }
                 }
             }
@@ -883,6 +986,9 @@
                         margin-left:0;
                         width:100%;
                     }
+                    .mt-1_5 {
+                        margin-top: 1.5rem;
+                    }
                     .detail-layer-inputR{
                         margin-top:.9rem;
                         margin-left:0;
@@ -909,6 +1015,21 @@
                             span{
                                 @include Regular;
                             }
+                        }
+                    }
+                    .red_star{
+                        display: inline-block;
+                        font-size: 1rem;
+                        color: #ed1c24;
+                        vertical-align: bottom;
+                        margin-left:.2rem;
+                    }
+                    .btn {
+                        font-size: 1.1rem;
+                        color: #54585a;
+                        font-weight: normal;
+                        .icon{
+                            margin-left: .4rem;
                         }
                     }
                 }

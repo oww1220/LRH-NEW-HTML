@@ -1036,6 +1036,11 @@
         width: 1.2rem;
         height: 1.2rem;
     }
+    &.won {
+        @include Background($sprite:'ico-won', $size:100%, $position:center center);
+        width:2rem;
+        height:2rem;
+    }
     
 }
 
@@ -1196,6 +1201,31 @@ button.active .unlike{
         padding: 0 .7rem;
         background-color:#54585a;
     }
+    &.verific-completed {
+        @include Background($sprite:'bg-verific-comple', $type:'png', $position:center center, $path:'bgs');
+        width:4.7rem;
+        height:2.1rem;
+        padding:0;
+    }
+    &.waiting {
+        background-color: #54585a;
+        border-radius:1rem;
+        color:#fff;
+        font-size:.9rem;
+    }
+    &.cancel {
+        border-radius:1rem;
+        color:#8f9191;
+        border:1px solid #d2d2d2;
+        font-size:.9rem;
+    }
+    &.use {
+        border-radius:1rem;
+        color:#fff;
+        background-color: #ff404b;
+        font-size:.9rem;
+    }
+
 }
 
 .flag-wrap {

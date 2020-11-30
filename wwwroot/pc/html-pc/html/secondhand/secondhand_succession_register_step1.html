@@ -67,7 +67,7 @@
 					<ol class="step-list">
 						<li class="active">
 							<span class="icon complete"></span>
-							<p class="txt">상담작성</p>
+							<p class="txt">차량선택</p>
 						</li>
 						<li>
 							<span class="icon progress"></span>
@@ -75,7 +75,7 @@
 						</li>
 						<li>
 							<span class="icon progress"></span>
-							<p class="txt">작성완료</p>
+							<p class="txt">등록완료</p>
 						</li>
 					</ol>
 				</div>
@@ -107,10 +107,10 @@
 									<ul class="choice-list-type2">
 										<li>
 											<div class="chk-view-box">
-												<input type="radio" id="radio01" name="radio">
+												<input type="radio" id="radio01" name="radio" checked>
 												<label for="radio01">
 													<div class="car-infos">
-														<strong>THE ALL-NEW VELOSTER (G) 1.4</strong>
+														<strong>THE ALL-NEW VELOSTER (G) 1.45</strong>
 														<ul class="bar-type">
 															<li>인수형</li>
 															<li>24개월 (2020-03 ~ 2022-02)</li>
@@ -122,7 +122,7 @@
 													</div>													
 												</label>
 												<div class="btn-box">
-													<button type="button" class="btn btn-black" onclick="javascript:(alert('dd'))">상세</button>
+													<button type="button" class="btn btn-black layer-registCarDetail-info-open" data-layer="layer-registCarDetail-info">상세</button>
 												</div>
 											</div>
 										</li>
@@ -143,14 +143,60 @@
 													</div>													
 												</label>
 												<div class="btn-box">
-													<button type="button" class="btn btn-black" onclick="javascript:(alert('dd'))">상세</button>
+													<button type="button" class="btn btn-black layer-registCarDetail-info-open" data-layer="layer-registCarDetail-info">상세</button>
 												</div>
 											</div>
 										</li>										
 									</ul>
 								</div>
 								<div class="tab-cont-inner" style="display:none;">
-									456
+									<div class="form-cont">
+										<div class="form-row">
+											<label for="input01" class="input-tit">사업자번호 <span class="txt-color-red">*</span></label>
+											<div class="input-cont">												
+												<div class="box-align-middle">
+													<div class="inputT">						
+														<input type="text" id="input01" placeholder="사업자번호를 입력하세요">		
+													</div>
+													<p class="txt-exam txt-color-red">123-12-12345 형식으로 입력해주세요</p>
+												</div>
+											</div>
+										</div>
+										<div class="form-row">
+											<label for="input02" class="input-tit">차량번호 <span class="txt-color-red">*</span></label>
+											<div class="input-cont">		
+												<div class="box-align-middle">
+													<div class="inputT">						
+														<input type="text" id="input02" placeholder="차량번호를 입력하세요">
+													</div>
+													<p class="txt-exam txt-color-red">01가1234   형식으로 입력해주세요</p>
+												</div>										
+											</div>
+										</div>
+									</div>
+									<ul class="choice-list-type2">
+										<li>
+											<div class="chk-view-box">
+												<input type="radio" id="radio03" name="radio1" checked>
+												<label for="radio03">
+													<div class="car-infos">
+														<strong>THE ALL-NEW VELOSTER (G) 1.4</strong>
+														<ul class="bar-type">
+															<li>인수형</li>
+															<li>24개월 (2020-03 ~ 2022-02)</li>
+															<li>월 58,100 원</li>
+														</ul>
+													</div>
+													<div class="car-img">
+														<img src="../../../resources-pc/images/@temp-short-detail.png" alt="더미 이미지">
+													</div>													
+												</label>
+												<div class="btn-box">
+													<button type="button" class="btn btn-black layer-registCarDetail-info-open" data-layer="layer-registCarDetail-info">상세</button>
+												</div>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 							<!-- //탭 -->
@@ -270,54 +316,120 @@
 	<!--//footer 컴포넌트-->
 
 	<!-- 가격 상세 정보 레이어 -->
-	<div class="layer-wrap layer-popup layer-priceDetail-info">
+	<div class="layer-wrap layer-popup layer-registCarDetail-info">
 		<div class="pop-inner">
 			<div class="popup-top">
-				<h4>가격 상세 정보</h4>
-				<button type="button" class="layer-popup-close" data-layer="layer-priceDetail-info"><span class="icon pop-close">닫기 버튼</span></button>
+				<h4>차량 상세</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-registCarDetail-info"><span class="icon pop-close">닫기 버튼</span></button>
 			</div>
 			<div class="popup-cont layer-iscroll">
 				<div class="iscroll-in">
+
 					
-					<p class="tit-size-big">반납형 / 24개월</p>
-					<div class="box-between top-price-box">
-						<p class="tit">월 대여료</p>
-						<p class="price">630,000<small>원</small></p>
-					</div>
-					<div class="tbl-box">
+					<button type="button" class="btn-toggle-wide active toggleBtn" data-target="toggleCont01" data-on="true" data-siblings="ture">
+						차량 정보
+					</button>
+					<div class="tbl-box toggleCont toggleCont01 active" style="display:block;">
 						<table>
 							<caption></caption>
 							<colgroup>
-								<col style="width:50%">
-								<col style="width:50%">
+								<col style="width:35.1%">
+								<col>
 							</colgroup>
 							<tbody>
 								<tr>
-									<th>24개월</th>
-									<td>13,200,000원</td>
+									<th>브랜드</th>
+									<td>현대</td>
+								</tr>
+								<tr>
+									<th>차량명</th>
+									<td>THE ALL-NEW VELOSTER (G) 1.4 MODERN</td>
+								</tr>
+								<tr>
+									<th>차량번호</th>
+									<td>24호3957</td>
+								</tr>
+								<tr>
+									<th>차량 연식</th>
+									<td>2019연식 </td>
+								</tr>
+								<tr>
+									<th>배기량/등급</th>
+									<td>2400 CC / 대형</td>
+								</tr>
+								<tr>
+									<th>연료</th>
+									<td>가솔린</td>
+								</tr>
+								<tr>
+									<th>변속기</th>
+									<td>자동</td>
+								</tr>
+								<tr>
+									<th>색상</th>
+									<td>미드나잇블랙</td>
+								</tr>
+								<tr>
+									<th>차량 등록번호</th>
+									<td>1000013770</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				
+					<button type="button" class="btn-toggle-wide active toggleBtn" data-target="toggleCont02" data-on="true" data-siblings="ture">
+						주요 계약 정보
+					</button>
+					<div class="tbl-box toggleCont toggleCont02 active" style="display:block;">
+						<table>
+							<caption></caption>
+							<colgroup>
+								<col style="width:35.1%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>유형</th>
+									<td>인수형</td>
+								</tr>
+								<tr>
+									<th>잔여계약기간</th>
+									<td>24개월 / 2020-03 ~ 2022-02</td>
+								</tr>
+								<tr>
+									<th>인수가 (VAT포함)</th>
+									<td>4,781,600원</td>
+								</tr>
+								<tr>
+									<th>월대여료 (VAT포함)</th>
+									<td>559,000 원</td>
 								</tr>
 								<tr>
 									<th>보증금</th>
-									<td>1,320,000원</td>
+									<td>0원</td>
 								</tr>
 								<tr>
 									<th>선납금</th>
-									<td>1,320,000원</td>
+									<td>0원</td>
 								</tr>
 								<tr>
-									<th>인수가(VAT포함)</th>
-									<td>1,320,000원</td>
+									<th>정비상품</th>
+									<td>알뜰형</td>
 								</tr>
 								<tr>
-									<th>약정 주행거리</th>
-									<td>1,320,000원</td>
+									<th>약정주행거리</th>
+									<td>3만KM/년 km</td>
+								</tr>
+								<tr>
+									<th>면책금</th>
+									<td>30만원</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 
 					<div class="popup-cont-bot-btn">
-						<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-carDetail-info">닫기</button>		
+						<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-registCarDetail-info">닫기</button>		
 					</div>
 				</div>
 			</div>
