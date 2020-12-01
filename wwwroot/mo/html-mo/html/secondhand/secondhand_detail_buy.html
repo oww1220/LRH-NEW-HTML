@@ -331,13 +331,16 @@
 												</div>
 												<i class="icon month-slider-share" style="left:50%;"></i>
 											</div>
+											<div class="month_value">
+												<p class="align-c">해당 차량의 시세는 <b>4800 ~ 6300만원</b>입니다.</p>
+											</div>
 										</div>
 										<div class="detail-item-monthly-wrap">
 											<div class="detail-item-monthly-txt">
 												<i class="icon pannel22"></i>
 												<b>할부구매 납입금 계산해보기</b>
 											</div>
-											<button type="button" class="btn btn-simple gray layer-infos-open" data-layer="type-detail-info">할부 계산기</button>
+											<button type="button" class="btn btn-simple gray layer-infos-open" data-layer="type-detail-monthl">할부 계산기</button>
 										</div>
 									</div>
 								</div>
@@ -902,10 +905,123 @@
 	</div>
 	<!--//layer-full 차량 성능검사 컴포넌트-->
 
+	<!--layer-full 차량상세 수정 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-detail-monthl type-detail-monthl" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+			<h4>
+				할부 계산기
+            </h4>
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="layer-detail-monthl">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="section-cont cont-item2">
+					<div class="wrap">
+						<div class="cont-in">
+							<ul class="guide">
+								<li class="gray_txt"><i class="icon listCircle03"></i>할부 기간과 금리를 선택하여 월 납입금을 계산해보세요.</li>
+								<li class="gray_txt"><i class="icon listCircle03"></i>참고 정보로 제공하는 것으로 고객님의 신용등급과 금융 회사에 따라 금리는 다를 수 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="section-cont cont-item3">
+					<div class="wrap">
+						<div class="cont-in">
+							<div class="inputT">
+								<ul class="detail-layer-inputT list-type-col2">
+									<li class="inputT">
+										<div class="inner detail-iconBox iconBox">
+											<input type="checkbox" id="checkbox1-1" name="checkbox1-1"><label for="checkbox1-1">차량 총 금액</label>
+										</div>
+									</li>
+									<li class="inputT inputT-txt">
+										<b class="inner texRed">53,502,500원</b>
+									</li>
+								</ul>
+							</div>
+							<div class="inputT">
+								<ul class="detail-layer-inputT list-type-col2">
+									<li class="inputT">
+										<div class="inner detail-iconBox iconBox">
+											<input type="checkbox" id="checkbox1-2" name="checkbox1-2"><label for="checkbox1-2">세금 및 부대비용</label>
+										</div>
+									</li>
+									<li class="inputT inputT-txt">
+										<b class="inner texRed">4,230,000원</b>
+									</li>
+								</ul>
+							</div>
+							<div class="inputT">
+								<div class="inner detail-layer-inputT-tit">선수금</div>
+								<div class="inner">
+									<input type="text" value="0">
+									<span>만원</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section-cont cont-item4">
+					<div class="wrap">
+						<div class="cont-in">
+							<div class="inputT">
+								<ul class="list-type-col2">
+									<li class="inputT">
+										<div class="inner detail-layer-inputT-tit">할부 기간</div>
+										<div class="inner selection">
+											<select class="selectbox" name="" id="">
+												<option value="">12개월</option>
+												<option value="">24개월</option>
+												<option value="">36개월</option>
+												<option value="">48개월</option>
+												<option value="">60개월</option>
+											</select>
+										</div>
+									</li>
+									<li class="inputT">
+										<div class="inner detail-layer-inputT-tit">금리</div>
+										<div class="inner selection">
+											<select class="selectbox" name="" id="">
+												<option value="">3.5%</option>
+												<option value="">5.8%</option>
+												<option value="">8.2%</option>
+												<option value="">13.5%</option>
+												<option value="">18.9%</option>
+											</select>
+										</div>
+									</li>
+								</ul>	
+							</div>
+							<div class="info-monthl align-c"><em>12개월</em> 동안 <em>3.5%</em>의 금리로 <br>매월 납부 금액은 <b class="texRed">142,307원</b> 입니다.</div>
+							<ul class="guide">
+								<li class="gray_txt"><i class="icon listCircle03"></i>할부 선택 시 차량상담 담당자에게 문의주시면 안내 도와드리겠습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="detail-layer-submit submit-normal">
+				<button type="button" class="btn btn-default black noRadius layer-full-close" data-layer="type-detail-monthl">확인</button>
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 차량상세 수정 컴포넌트-->
+
 	<!--상단 타이틀(추후삭제)-->
     <script>
 	$(function(){
-		$('.header-top.sub h1').text('내 차 팔기 서비스');
+		$('.header-top.sub h1').text('중고차 장기렌터카 상세');
 
 	});
 	</script>

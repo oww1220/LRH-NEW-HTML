@@ -1041,6 +1041,23 @@ if($('.secondhand-wrap').length){
         }
     });
 }
+
+//단기예약 메인 슬라이드 팝업 - 대여시간
+if($('.layer-rental').length) {
+    MUI.layer.openClick('.layer-rental-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+        //console.log('open');
+        show();
+    });
+
+    $(".rental-selectbox-wrap .selectbox-list .selectbox-list-col2").on('click', function(){
+        if($(this).parent().hasClass('active')){
+            $(this).parent().removeClass('active');
+        }else{
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+        }
+    });
+}
 /* -------------------------------------------------중고차 end*/
 
 /* 중고차 내차팔기 start-------------------------------------------------*/
