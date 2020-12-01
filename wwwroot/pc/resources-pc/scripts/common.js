@@ -865,7 +865,7 @@ if($('.secondhand-container .tooltipToggle').length) {
     });
 }
 
-//상담신청 - 차량 선택
+//상담신청 - 차량 선택.
 if($('.registerTab').length){
     MUI.event.taps('.registerTab', false, function(swap){
         swap();
