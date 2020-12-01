@@ -487,6 +487,46 @@ html, body {
 	border-bottom: 1px solid #e7e7e7;
 }
 
+.section-form-align-c .form-cont {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	   -moz-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+}
+
+.section-form-align-c .form-cont .form-row {
+	max-width: 530px;
+}
+
+.section-form-align-c .form-cont .form-row .inputT {
+	max-width: 100%;
+}
+
+.section-form-align-c .form-cont .form-row .input-tit {
+	width: 130px;
+	-webkit-flex-basis: 130px;
+	    -ms-flex-preferred-size: 130px;
+	        flex-basis: 130px;
+}
+
 .section-format {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -4232,6 +4272,17 @@ button[disabled] {
 	height: 91px;
 }
 
+.icon.certi-pc {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-certi-pc.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 118px;
+	height: 101px;
+}
+
 .icon.pannel01 {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-pc/images/icons/ico-pannel01.png");
@@ -6457,15 +6508,37 @@ button.active .filter {
 	margin-left: 5px;
 }
 
+.pagination-wrap .btn {
+	width: 40px;
+	height: 40px;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	        border-radius: 40px;
+}
+
 .pagination-list {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding: 0 20px;
+}
+
+.pagination-list strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
 }
 
 .pagination-list li {
@@ -6529,9 +6602,6 @@ button.active .filter {
 	-webkit-border-radius: 10px;
 	   -moz-border-radius: 10px;
 	        border-radius: 10px;
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	font-weight: normal;
 }
 
 /*

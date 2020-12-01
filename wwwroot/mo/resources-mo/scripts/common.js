@@ -1233,6 +1233,20 @@ if($('.secondhand-wrap .item-step15 #slider-price').length) {
 }
 /* -------------------------------------------------중고차 승계렌터카 end*/
 
+
+/*마이페이지 start-------------------------------------------------*/
+
+//단기렌터카 예약상세- 최종결제정보 열고 닫기
+if($('.mypage-wrap').length){
+    MUI.event.toggle('.mypage-wrap .mypage-toggle-btn', '.mypage-wrap .mypage-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
+/* -------------------------------------------------중고차 승계렌터카 end*/
+
+
 /*지점안내 start-------------------------------------------------*/
 
 // 전국지점안내 슬리이더
