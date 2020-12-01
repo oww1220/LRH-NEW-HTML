@@ -933,6 +933,71 @@ if($('.specials-list .tab-normal').length){
             },
         });
     }
+
+    //신차장 메인 롤링 01
+    if($('.longTerm-wrap .life-event-lists').length) {
+        var mainTopSlide = MUI.slide.init('.longTerm-wrap .life-event-lists','swiper', {
+            loop: true,
+            //autoHeight: true,
+            autoplay: {
+                delay: 3000,
+            },
+        });
+        
+        $(".swiper-button-pause").on('click', function(){
+            mainTopSlide.autoplay.stop();
+            $(".swiper-button-play").show();
+            $(".swiper-button-pause").hide();
+        });
+        $(".swiper-button-play").on('click',function(){
+            mainTopSlide.autoplay.start();
+            $(".swiper-button-pause").show();
+            $(".swiper-button-play").hide();
+        });
+    }
+
+    //신차장 메인 중단 슬라이더
+    if($('.longTerm-wrap .main-col5 .swiper-container').length) {
+        $('.longTerm-wrap .main-col5 .swiper-container').each(function(idx, item){
+            //console.log($(this).find('.swiper-slide').length);
+            if($(item).find('.swiper-slide').length < 2) return;
+            MUI.slide.init(item,'swiper', {
+                loop: true,
+                //speed:1200,
+                loopAdditionalSlides: 1,
+                slidesPerView: 2,
+                centeredSlides: true,
+            });
+        });
+    }
+
+    //신차장 메인 롤링 02
+    if($('.longTerm-wrap .life-event-lists02').length) {
+        MUI.slide.init('.longTerm-wrap .life-event-lists02','swiper', {
+            loop: true,
+            //autoHeight: true,
+            pagination: {
+                el: '.life-event-pagination02',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
+    //신차장 메인 롤링 03
+    if($('.longTerm-wrap .life-event-lists03').length) {
+        MUI.slide.init('.longTerm-wrap .life-event-lists03','swiper', {
+            loop: true,
+            //autoHeight: true,
+            pagination: {
+                el: '.life-event-pagination03',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
 /* -------------------------------------------------메인end*/
 
 
