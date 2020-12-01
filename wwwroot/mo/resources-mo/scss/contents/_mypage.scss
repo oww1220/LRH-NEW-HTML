@@ -33,6 +33,26 @@
             margin-top:1.7rem;
             padding:0 1.7rem;
         }
+        .list-view-info {
+            background-color: #eff2f7;
+            padding: 1.5rem 1.3rem;
+            border-radius: 1rem;
+            margin:1.7rem 0;
+            @include Align-middle-column;
+            strong {
+                @include Bold;
+                font-size:1.6rem;
+                b {
+                    @include Bold;
+                    font-size:1.6rem;
+                }
+            }
+            em {
+                padding-top:1.3rem;
+                color:#54585a;
+                font-size:1.1rem;
+            }
+        }
         .list-item {
             padding:.9rem 0;
             
@@ -52,14 +72,26 @@
                         strong {
                             @include Bold;
                             padding-top:.7rem;
+                            &.pd-none {
+                                padding:0;
+                            }
+                            &.txt-gray {
+                                color:#8f9191;
+                            }
                         }
                     }
                     span {
                         width:4.7rem;
                         height:1.7rem;
-                        i {
+                        @include Align-middle-right;
+                        i.flag {
                             width:100%;
                             height:100%;
+                        }
+                        i.icon {
+                            width:1.2rem;
+                            height:1.5rem;
+                            margin-right:.3rem;
                         }
                     }
                 }
@@ -84,7 +116,16 @@
                             &.bold {
                                 @include Bold;
                             }
-                            
+                            &.underline {
+                                position: relative;
+                                &::before {
+                                    content:'';
+                                    display: inline-block;
+                                    border-bottom:1px solid #000;
+                                    width:100%;
+                                    @include Position($bottom: 0, $left: 0)
+                                }
+                            }
                         }
                         & + li {
                             padding-top:.9rem;
@@ -95,6 +136,21 @@
                     border-top:1px solid #d2d2d2;
                     margin:0 1.3rem;
                     padding:0;
+                    ul.list-type-col2 {
+                        li + li {
+                            button { 
+                                position: relative;
+                                &:before {
+                                    content: '';
+                                    height:1.3rem;
+                                    display: inline-block;
+                                    border-left: 1px solid #d2d2d2;
+                                    @include Position($top: 50%, $left: 0);
+                                    transform: translateY(-.6rem);
+                                }
+                            }
+                        }
+                    }
                     button {
                         width:100%;
                         color:#ed1c24;
@@ -104,6 +160,9 @@
                         i {
                             margin-right:.5rem;
                         }
+                        &.txt-black {
+                            color:#2f2f2f;
+                        }
                     }
                 }
             }
@@ -111,11 +170,13 @@
         .list-none-item {
             @include Align-middle;
             min-height:12rem;
+            margin:.9rem 0;
             border-top:1px solid #e7e7e7;
             border-bottom:1px solid #e7e7e7;
         }
         .cont-guide {
             margin-top:1rem;
+            padding:0 1.7rem;
             li {
                 text-indent: -.7rem;
                 padding-left:1rem;
@@ -164,6 +225,10 @@
                 font-size:1.6rem;
                 border:1px solid #d2d2d2;
                 border-radius:.5rem;
+            }
+            .btn-gray {
+                color:#fff;
+                font-size:1.4rem;
             }
         }
     }
