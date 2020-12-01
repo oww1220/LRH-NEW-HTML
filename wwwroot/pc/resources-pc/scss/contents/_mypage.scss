@@ -1,3 +1,201 @@
-.mypage-wrap {
+.mypage-container {
+    .mypage-header{
+        .myInfos-area{
+            padding:60px;
+            margin-bottom:60px;
+            color:#fff;
+            background-color:#ed1c24;
 
+            .box-between{
+                .txt{
+                    font-size:30px;
+                    //@include Normal;
+                    @include Regular;
+
+                    .name{@include Bold; color:inherit; font-size:inherit;}
+                }
+                .btns{
+                    .link-item{
+
+                        + .link-item{margin-left:30px;}
+                    }
+                }
+            }
+            .item-list{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+
+                text-align:center;
+                margin-top:40px;
+                padding-top:40px;
+                border-top:1px solid rgba(255,255,255,.2);
+
+                .icon{
+                    width:44px;
+                    height:48px;
+                    background-color:#fff;
+                }
+
+                li{
+                    > p{
+                        margin-top:25px;
+
+                        + a{display: inline-block; margin-top:14px;}
+                    }
+                    .underline{
+                        @include Regular;
+                        border-bottom-color:#fff;
+                    }
+                }
+            }
+        }
+    }
+    .mypage-body{
+        @include Align-between-top;        
+        
+        .mypage-lnb{
+            flex:none;
+            width:300px;
+            flex-basis: 300px;
+            box-sizing: border-box;
+            background-color:#fafafa;
+            padding:50px 0;
+
+            
+
+            > ul{
+                padding:0 30px;
+
+                > li{
+                    @include Bold;
+                    
+                    + li{margin-top:40px;}
+
+                    > ul{
+                        margin-top:20px;
+
+                        > li{
+                            font-size:14px; color:#54585a;
+
+                            + li{margin-top:10px}
+                        }
+                    }
+                }
+
+                
+            }
+        }
+        .mypageBody-cont{
+            width:100%;
+            padding-left:60px;
+            box-sizing: border-box;
+        }
+    }
+    
+    .card{
+        margin-top:50px;
+        
+        .card-body{
+            @include roundBox;
+            border:1px solid $border-darkgrey;
+        }
+
+        .card-header{
+            @include Align-between;
+            margin-bottom:25px;
+
+            .tit{
+                font-size:24px;
+            }
+        }
+        .card-body{
+            border-top:1px solid $border-darkgrey;
+            
+            .cardBody-header{
+                @include Align-between;
+                padding:30px 40px;
+                background-color:#f5f5f5;
+
+                .txt-box{
+                    @include Bold;
+                    padding-right:20px;
+                    box-sizing: border-box;
+                                        
+                    > span{color:#8f9191; font-size:14px;}
+                    > strong{display:block; font-size:16px; margin-top:10px;}
+                }
+                
+                .info-flag{
+                    @include Bold;
+                    @include Align-middle;
+                    min-width:84px;
+                    height:36px;    
+                    padding:0 10px;
+                    font-size:14px;
+                    box-sizing: border-box;
+                    border-radius: 36px;
+
+                    &.ing{background-color: #ff404b; color:#fff;}
+                    &.waiting{background-color:#54585a; color:#fff;}
+                    &.complete{border:1px solid $border-darkgrey; color:#8f9191;}
+                }
+            }
+            .cardBody-cont{
+                padding:30px 40px;
+                
+                .info-list{      
+                               
+                    font-size:14px;
+                    color:#8f9191;
+
+                    li{
+                        display:flex;
+                        align-items: baseline;                        
+
+                        .tit{
+                            position:relative;
+                            flex:none;
+                            width:110px;
+                            flex-basis: 110px;
+                            @include Regular;
+
+                            &:after{
+                                @include Position($top:50%, $right:0px);
+                                content:"";
+                                display:block;
+                                width:1px;
+                                height:14px;
+                                margin-top:-7px;
+                                background-color:#e7e7e7;
+                            }
+                        }
+                        .cont{padding:0 20px;}
+                        .underline{color:#2f2f2f;}
+                        + li{ margin-top:20px; }
+                    }
+                }
+            }
+            .cardBody-foot{
+                margin:0 40px;
+                border-top:1px solid $border-grey;
+
+                .btns{
+                    display:flex;
+                    justify-content: center;                    
+
+                    .btn-link2 {
+                        @include Align-middle;
+                        width:100%;
+                        height:80px;
+                        font-size:20px;
+                        @include Bold;
+
+                        &.red{color:$txt-red;}
+                    }
+                }
+            }
+        }
+        .card-foot{padding:30px 0;}
+    }
 }
