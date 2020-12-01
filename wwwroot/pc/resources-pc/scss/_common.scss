@@ -542,6 +542,19 @@ $txt-red: #ed1c24;
 		}
 	}
 
+	&-form-align-c{ //form-cont 가운데 정렬
+		.form-cont{
+			@include Align-top-column;
+			.form-row{
+				max-width:530px;				
+				.inputT{max-width:100%;}
+				.input-tit{
+					width:130px;
+					flex-basis: 130px;
+				}
+			}
+		}
+	}
 	&-format{
 		@include Align-middle;        
 		padding-bottom:40px;
@@ -599,8 +612,7 @@ $txt-red: #ed1c24;
 			}
 		}
 
-	}
-
+	}	
 	&.round{
 		@include roundBox;
 	}
@@ -652,7 +664,7 @@ $txt-red: #ed1c24;
 			width:auto;
 			margin-left:5px;
 		}
-	}
+	}	
 	&-align{
 		@include Align-box;
 		flex-wrap: nowrap;		
