@@ -237,7 +237,72 @@
                     }
                 }
             }
+            &.detail-cont-pw-change {
+                margin-top:0;              
+                .detail-inputT-tit {
+                    @include Bold;
+                    @include Align-middle-left;
+                    margin-top: 2rem;
+                }
+                .detail-inputT-tit:first-of-type {
+                    margin-top: 2.2rem;
+                }
+                .detail-inputT {
+                    margin-top:1.7rem;
+                    p {
+                        margin-top:1.3rem;
+                        font-size:1rem;
+                        color:#ff404b;
+                    }
+                    & > input {
+                        border-radius: .5rem;
+                    }
+                    .pw-safe {
+                        display: flex;
+                        margin-top: 1.7rem;
+                        font-size: 1.1rem;
+                        color: #2f2f2f;
+                        align-items: center;
+                        > strong {
+                            margin-left:.9rem;
+                            font-size: 1.1rem;
+                            color: #ff404b;
+                        }
+                        > strong:before {
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: .9rem;
+                            background: #d2d2d2;
+                            margin-right: .9rem;
+                        }
+                        > span {
+                            width: .7rem;
+                            height: 2px;
+                            background: #e7e7e7;
+                            color: #e7e7e7;
+                            vertical-align: middle;
+                            margin: 0 2px;
+                            &.on {
+                               background-color: #ff404b; 
+                            }
+                        }
+                    }
+                }
+                .detail-info {
+                    margin-top: 1.3rem;
+                    font-size: 1.1rem;
+                    color: #8f9191;
+                    line-height: 1.7;
+                    .no-list li {
+                        text-indent: -1.2rem;
+                        padding-left: 2rem;
+                    }
+                }
+            }
+            
         }
+    }
         .descri-tit{
             position: absolute;
             top:2.8rem;
@@ -357,7 +422,7 @@
                 @include Regular;
             }
         }
-    }
+    
     .section-tit{
         padding:3.4rem 1.7rem 0;
         em{
@@ -381,6 +446,18 @@
             @include Align-middle-left;
             i{
                 margin:0 .6rem 0 0;
+            }
+        }
+        .t_comment {
+            padding: 0;
+            font-size: 1.1rem;
+            color: #2f2f2f;
+            line-height: 2;
+            margin-bottom: 2.2rem;
+            > .pannel09 {
+                width: 2.3rem;
+                height: 2.2rem;
+                margin-right: .5rem;
             }
         }
     }
@@ -1187,6 +1264,16 @@
             }
             .join-toggle-cont{
                 display:none;
+            }
+            &.mem-step1 {
+                h4 {
+                    @include Bold;
+                    font-size: 1.2rem;
+                    color: #2f2f2f;
+                }
+                .item-cont {
+                    padding: 0 1.7rem;
+                }
             }
         }
     }
