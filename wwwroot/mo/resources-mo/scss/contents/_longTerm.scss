@@ -976,10 +976,15 @@
                 }
             }
             &.detail-main-list7{
+                margin:1.1rem 0 3.4rem 0;
                 .list-cont{
                     .use-info-wrap{
                         .inner{
                             @include Align-middle-column;
+                            .longTerm-notice-icon{
+                                min-height:2.6rem;
+                                @include Align-middle;
+                            }
                             em{
                                 text-align: center;
                                 @include Regular;
@@ -989,7 +994,31 @@
                         }
                     }
                     .use-info-wrap02{
-                        
+                        border:1px solid #f1f1f1;
+                        border-radius: .5rem;
+                        margin:2.6rem 0 0 0;
+                        .inner{
+                            margin:0;
+                            padding:0 1.3rem;
+                            .btn{
+                                @include Align-between;
+                                height:3.9rem;
+                                @include Regular;
+                                color:#54585a;
+                                font-size:1.1rem;
+                            }
+                        }
+                        li:nth-child(odd){
+                            border-right:1px solid #f1f1f1;
+                            width:49%;
+                        }
+                        li{
+                            border-bottom:1px solid #f1f1f1;
+                        }
+                        li:nth-of-type(3),
+                        li:nth-of-type(4){
+                            border-bottom:0 none;
+                        }
                     }
                 }
             }
