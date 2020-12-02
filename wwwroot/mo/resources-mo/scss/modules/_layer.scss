@@ -1503,6 +1503,11 @@ body.fixed {
 											color:#fff;   
 										}
 									}
+									&.disabled{
+										.btn{
+											color: #ddd;
+										}
+									}
 								}
 							}
 						}
@@ -1966,123 +1971,6 @@ body.fixed {
 			}
 
 		}
-
-		//승계렌터카등록 - 사진추가 팝업
-		&.layer-photo-info {
-			.full-top {
-				button {
-					left:1.7rem;
-				}
-			}
-			.full-cont {
-				padding-top:2.6rem;
-				.cont-in {
-                    p {
-                        text-indent: -.6rem;
-                        padding-left: 1rem;
-                        font-size: 1.1rem;
-						color:#8f9191;
-						.icon.pannel09 { 
-							width:2.1rem;
-							height:1.9rem;
-							margin-right:1rem;
-						}
-					}
-					.file-box {
-						margin-top:1rem;
-						&.hidden-filebox-toggle {
-							display: none;
-							margin-top:0;
-						}
-						li {
-							.inner {
-								@include Align-middle-column;
-								position: relative;
-								.inputF {
-									border:0;
-									border-radius: 0;
-									&.active {
-										
-										&.active01 {
-											@include Background($sprite:'car-front', $size:100% 100%, $position:center center, $path:'bgs');
-										}
-										&.active02 {
-											@include Background($sprite:'car-back', $size:100% 100%, $position:center center, $path:'bgs');
-										}
-										&.active03 {
-											@include Background($sprite:'car-inside', $size:100% 100%, $position:center center, $path:'bgs');
-										}
-										&.active04 {
-											@include Background($sprite:'car-right', $size:100% 100%, $position:center center, $path:'bgs');
-										}
-										.btn-close {
-											@include Position($top: .4rem, $right: .4rem);
-											padding:0;
-											height: auto;
-											z-index: 2;
-											i {
-												display: block;
-											}
-										}
-										label {
-											i {
-												display: none;
-											}
-											span {
-												display: block;
-												margin-top:0;
-												padding:.4rem 0;
-												width:100%;
-												color:#fff;
-												background-color: rgba(0,0,0,.6);
-												text-align:center;
-												font-size:.8rem;
-												@include Bold;
-												@include Position($bottom: 0, $left: 0);
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-                    
-                    .guide {
-                            li {
-                            text-indent: -.6rem;
-                            padding-left: 1rem;
-                            font-size: 1.1rem;
-                            color:#8f9191;
-                            & + li {
-                                padding-top:1rem;
-                            }
-                            &::before {
-                                content:'';
-                                display: inline-block;
-                                width:.2rem;
-                                height:.2rem;
-                                background-color: #000;
-                                vertical-align: middle;
-                                margin-right:.4rem;
-                                border-radius:100%;
-                            }
-                        }
-                    }
-                    .btn-addphoto {
-                        padding:2.3rem 0;
-                        .add-photo {
-                            width: 100%;
-                            background-color: #54585a;
-                            color:#fff;
-                            border-radius: .5rem;
-                            font-size:1.6rem;
-							@include Bold;
-                        }
-                    }
-                }
-			}
-
-		}
 		//중고차상세 - 정비이력 팝업
 		&.layer-car-repair {
 			.full-top {
@@ -2208,7 +2096,7 @@ body.fixed {
 				}
 			}
 		}
-		//승계렌터카상세 - 수정 팝업
+		//승계렌터카 상세 - 수정 팝업
 		&.layer-suc-edit {
 			.full-top {
 				button {
@@ -2361,7 +2249,7 @@ body.fixed {
 						
 					}
 					&.cont-item6 {
-						.cont-in {
+						.example {
 							p {
 								text-indent: -.6rem;
 								padding-left: 1rem;
@@ -2398,8 +2286,8 @@ body.fixed {
 								}
 							}
 							.guide {
-									padding:1.3rem 0;
-									li {
+								padding:1.3rem 0 0;
+								li {
 									text-indent: -.6rem;
 									padding-left: 1rem;
 									font-size: 1.1rem;
@@ -2419,16 +2307,93 @@ body.fixed {
 									}
 								}
 							}
-							.btn-addphoto {
-								padding-top:1.3rem;
-								button {
-									width: 100%;
-									background-color: #54585a;
-									color:#fff;
-									border-radius: .5rem;
-									font-size:1.6rem;
-									@include Bold;
+						}
+						.live {
+							//display: none;
+							padding-top:0;
+							p {
+								border-top:1px solid #d2d2d2;
+								margin:1.3rem 0 1rem;
+								padding-top:2.6rem;
+								text-indent: -.6rem;
+								padding-left: 1rem;
+								font-size: 1.1rem;
+								color:#8f9191;
+								.icon.pannel09 { 
+									width:2.1rem;
+									height:1.9rem;
+									margin-right:1rem;
 								}
+							}
+							.file-box {
+								&.hidden-filebox-toggle {
+									display: none;
+									margin-top:0;
+								}
+								li {
+									&.dp-none {
+										display: none;
+									}
+									.inner {
+										@include Align-middle-column;
+										position: relative;
+										.inputF {
+											border:0;
+											border-radius: 0;
+											&.active {
+												&.active01 {
+													@include Background($sprite:'car-front', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												&.active02 {
+													@include Background($sprite:'car-back', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												&.active03 {
+													@include Background($sprite:'car-inside', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												&.active04 {
+													@include Background($sprite:'car-right', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												.btn-close {
+													@include Position($top: .4rem, $right: .4rem);
+													padding:0;
+													height: auto;
+													z-index: 2;
+													i {
+														display: block;
+													}
+												}
+												label {
+													i {
+														display: none;
+													}
+													span {
+														display: block;
+														margin-top:0;
+														padding:.4rem 0;
+														width:100%;
+														color:#fff;
+														background-color: rgba(0,0,0,.6);
+														text-align:center;
+														font-size:.8rem;
+														@include Bold;
+														@include Position($bottom: 0, $left: 0);
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						.btn-addphoto {
+							padding-top:1.3rem;
+							button {
+								width: 100%;
+								background-color: #54585a;
+								color:#fff;
+								border-radius: .5rem;
+								font-size:1.6rem;
+								@include Bold;
 							}
 						}
 					}
