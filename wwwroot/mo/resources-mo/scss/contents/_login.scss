@@ -1273,9 +1273,18 @@
                 }
                 .item-cont {
                     padding: 0 1.7rem;
-                    .guide li.red{
-                        color: #ed1c24;
-
+                    .guide {
+                        padding-bottom: 1.7rem;
+                        border-bottom: 1px solid #e7e7e7;
+                        li{
+                            letter-spacing: -1px;
+                            &.red{
+                                color: #ed1c24;
+                                .listCircle {
+                                    @include Background($sprite:'ico-circle02', $size:100% auto, $position:center center);
+                                }
+                            }
+                        }
                     }
                 }
             }
