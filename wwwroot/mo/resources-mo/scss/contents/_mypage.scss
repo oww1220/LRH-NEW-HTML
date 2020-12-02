@@ -329,6 +329,118 @@
                             }
                         }
                     }
+                    .list-table {
+                        border-top:1px solid #d5d5d5;
+                        li {
+                            @include Align-between;
+                            border-bottom:1px solid #e7e7e7;
+                            strong {
+                                padding:1.7rem 1.3rem;
+                                width:35%;
+                                font-size:1.1rem;
+                                background-color: #fafafa;
+                                border-left:1px solid #e7e7e7;
+                                @include Bold;
+                            }
+                            b {
+                                padding:1.7rem 1.3rem;
+                                width:65%;
+                                font-size:1.1rem;
+                                text-align: right;
+                                border-left:1px solid #e7e7e7;
+                                border-right:1px solid #e7e7e7;
+                                color:#54585a;
+                            }
+                        }
+                    }
+                }
+                .cont-toggle {
+                    padding:1.7rem 0 0;
+                    .payment-method {
+                        @include Align-between;
+                        border:1px solid #e7e7e7;
+                        padding:1.7rem 1.2rem;
+                        strong {
+                            font-size:1.1rem;
+                            color:#54585a;
+                        }
+                        p {
+                            font-size:1.1rem;
+                            color:#54585a;
+                        }
+                        .box {
+                            padding:.4rem .8rem;
+                            border-radius:.5rem;
+                            color:#fff;
+                            font-size:1.1rem;
+                            @include Bold;
+                            &.gray {
+                                background-color: #54585a;
+                            }
+                        }
+                    }
+                    .payment-detail {
+                        margin-top:1.3rem;
+                        .list-table {
+                            border-top:1px solid #d5d5d5;
+                            li {
+                                border-bottom:1px solid #e7e7e7;
+                                > div {
+                                    @include Align-between;
+                                    background-color: #fafafa;
+                                    border-bottom:1px solid #e7e7e7;
+                                }
+                                strong {
+                                    padding:1.7rem 1.3rem;
+                                    width:35%;
+                                    font-size:1.1rem;
+                                    background-color: #fafafa;
+                                    border-left:1px solid #e7e7e7;
+                                    @include Bold;
+                                }
+                                b {
+                                    padding:1.7rem 1.3rem;
+                                    width:65%;
+                                    font-size:1.1rem;
+                                    text-align: right;
+                                    border-left:1px solid #e7e7e7;
+                                    border-right:1px solid #e7e7e7;
+                                    color:#54585a;
+                                }
+                                > ul {
+                                    li {
+                                        @include Align-between;
+                                        border-bottom:0;
+                                        strong {
+                                            padding:1.7rem 1.3rem 0;
+                                        }
+                                        b {
+                                            padding:1.7rem 1.3rem 0;
+                                        }
+                                        &:last-child {
+                                            strong {
+                                                padding-bottom:1.7rem;
+                                            }
+                                            b {
+                                                padding-bottom:1.7rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .payinfo-box {
+                    margin-top:1.7rem;
+                    background-color: unset;
+                    height:auto;
+                    b {
+                        color:#2f2f2f;
+                    }
+                    em {
+                        color:#da291c;
+                    }
                 }
             }
             &.cont-item2 {
@@ -561,24 +673,14 @@
                         @include Bold;
                         font-size:1.8rem;
                     }
-                    .detail-result-cont {
-                        padding: 1.3rem 0;
+                    .list-type-value {
                         margin-top: 1.7rem;
-                        border-top: 1px solid #d2d2d2;
-                        border-bottom: 1px solid #d2d2d2;
-                        > div {
-                            @include Align-middle-left;
-                            padding:1.3rem 0;
-                            strong {
-                                @include Bold;
-                                width:30%;
-                            }
-                        }
                     }
 
                 }
             }
         }
+
         .detail-layer-submit {
             padding:0 1.7rem;
             margin-top:3.4rem;
