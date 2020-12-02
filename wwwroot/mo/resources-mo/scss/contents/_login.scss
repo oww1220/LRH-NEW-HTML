@@ -1266,23 +1266,46 @@
                 display:none;
             }
             &.mem-step1 {
-                h4 {
-                    @include Bold;
-                    font-size: 1.2rem;
-                    color: #2f2f2f;
-                }
                 .item-cont {
-                    padding: 0 1.7rem;
-                    .guide {
+                    padding: 0 1.7rem; 
+                    .mem-step-cont {
                         padding-bottom: 1.7rem;
                         border-bottom: 1px solid #e7e7e7;
-                        li{
+                        h4 {
+                            @include Bold;
+                            font-size: 1.2rem;
+                            color: #2f2f2f;
+                            }
+                        .guide li{  
                             letter-spacing: -1px;
+                            line-height: 1.5;
                             &.red{
                                 color: #ed1c24;
                                 .listCircle {
                                     @include Background($sprite:'ico-circle02', $size:100% auto, $position:center center);
                                 }
+                            }  
+                        }
+                    }
+                    .short-card-toggle-cont{
+                        border-bottom:1px solid #e7e7e7;
+                        padding:1.5rem 0;
+                        .list-type-col2{
+                            @include Align-middle-left;
+                            .inputT{
+                                .inputR{
+                                    width:49%;
+                                    border-bottom:0 none;
+                                }
+                            }
+                            li:first-child{
+                                width:30%;
+                                .detail-layer-inputT-tit{
+                                    margin-top:0;
+                                }
+                            }
+                            li:last-child{
+                                width:70%;
                             }
                         }
                     }
