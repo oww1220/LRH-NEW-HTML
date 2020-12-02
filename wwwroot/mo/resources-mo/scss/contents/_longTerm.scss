@@ -803,6 +803,12 @@
                 }
             }
             .customer-review-list{
+                li{
+                    margin:1.3rem 0 0 0;
+                }
+                li:first-child{
+                    margin:0;
+                }
                 .inner{
                     @include Align-middle-left;
                     .img{
@@ -810,11 +816,23 @@
                         @include Align-box-left;
                     }
                     .evaluation{
-                        @include Align-box-left;
+                        @include Align-between;
+                        .name{
+                            @include Regular;
+                            font-size:1rem;
+                            color:#8f9191;
+                            span{
+                                color:#e7e7e7;
+                                font-size:.6rem;
+                                padding:0 .5rem;
+                            }
+                        }
                     }
                     .text-box{
                         padding:0 0 0 1.7rem;
+                        width:70%;
                         .text{
+                            padding:1.3rem 0 0 0;
                             span{
                                 @include Align-box-left;
                                 @include Regular;
@@ -824,6 +842,7 @@
                                 @include Regular;
                                 font-size:1rem;
                                 color:#8f9191;
+                                padding:.6rem 0 0 0;
                             }
                         }
                     }
@@ -941,7 +960,7 @@
                             }
                         }
                         em{
-                            font-size:1rem;
+                            font-size:1.1rem;
                         }
                     }
                 }
@@ -953,6 +972,24 @@
                         i{
                             margin:0 0 0 .4rem;
                         }
+                    }
+                }
+            }
+            &.detail-main-list7{
+                .list-cont{
+                    .use-info-wrap{
+                        .inner{
+                            @include Align-middle-column;
+                            em{
+                                text-align: center;
+                                @include Regular;
+                                font-size:1.1rem;
+                                padding:.9rem 0 0 0;
+                            }
+                        }
+                    }
+                    .use-info-wrap02{
+                        
                     }
                 }
             }
