@@ -11961,18 +11961,7 @@ html, body {
 	        box-sizing: border-box;
 }
 
-.mypage-container .card {
-	margin-top: 50px;
-}
-
-.mypage-container .card .card-body {
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	border: 1px solid #d2d2d2;
-}
-
-.mypage-container .card .card-header {
+.mypage-container .card-header, .mypage-container .list-section-header {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -11991,15 +11980,22 @@ html, body {
 	margin-bottom: 25px;
 }
 
-.mypage-container .card .card-header .tit {
+.mypage-container .card-header .tit, .mypage-container .list-section-header .tit {
 	font-size: 24px;
 }
 
-.mypage-container .card .card-body {
-	border-top: 1px solid #d2d2d2;
+.mypage-container .card {
+	margin-top: 50px;
 }
 
-.mypage-container .card .card-body .cardBody-header {
+.mypage-container .card .card-body {
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	border: 1px solid #d2d2d2;
+}
+
+.mypage-container .card .card-body .card-body-header {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -12019,7 +12015,7 @@ html, body {
 	background-color: #f5f5f5;
 }
 
-.mypage-container .card .card-body .cardBody-header .txt-box {
+.mypage-container .card .card-body .card-body-header .txt-box {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -12029,18 +12025,18 @@ html, body {
 	        box-sizing: border-box;
 }
 
-.mypage-container .card .card-body .cardBody-header .txt-box > span {
+.mypage-container .card .card-body .card-body-header .txt-box > span {
 	color: #8f9191;
 	font-size: 14px;
 }
 
-.mypage-container .card .card-body .cardBody-header .txt-box > strong {
+.mypage-container .card .card-body .card-body-header .txt-box > strong {
 	display: block;
 	font-size: 16px;
 	margin-top: 10px;
 }
 
-.mypage-container .card .card-body .cardBody-header .info-flag {
+.mypage-container .card .card-body .card-body-header .info-flag {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -12071,31 +12067,32 @@ html, body {
 	        border-radius: 36px;
 }
 
-.mypage-container .card .card-body .cardBody-header .info-flag.ing {
+.mypage-container .card .card-body .card-body-header .info-flag.ing {
 	background-color: #ff404b;
 	color: #fff;
 }
 
-.mypage-container .card .card-body .cardBody-header .info-flag.waiting {
+.mypage-container .card .card-body .card-body-header .info-flag.waiting {
 	background-color: #54585a;
 	color: #fff;
 }
 
-.mypage-container .card .card-body .cardBody-header .info-flag.complete {
+.mypage-container .card .card-body .card-body-header .info-flag.complete {
 	border: 1px solid #d2d2d2;
 	color: #8f9191;
 }
 
-.mypage-container .card .card-body .cardBody-cont {
+.mypage-container .card .card-body .card-body-cont {
+	border-top: 1px solid #d2d2d2;
 	padding: 30px 40px;
 }
 
-.mypage-container .card .card-body .cardBody-cont .info-list {
+.mypage-container .card .card-body .card-body-cont .info-list {
 	font-size: 14px;
 	color: #8f9191;
 }
 
-.mypage-container .card .card-body .cardBody-cont .info-list li {
+.mypage-container .card .card-body .card-body-cont .info-list li {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -12108,7 +12105,7 @@ html, body {
 	        align-items: baseline;
 }
 
-.mypage-container .card .card-body .cardBody-cont .info-list li .tit {
+.mypage-container .card .card-body .card-body-cont .info-list li .tit {
 	position: relative;
 	-webkit-box-flex: 0;
 	-webkit-flex: none;
@@ -12124,7 +12121,7 @@ html, body {
 	font-weight: normal;
 }
 
-.mypage-container .card .card-body .cardBody-cont .info-list li .tit:after {
+.mypage-container .card .card-body .card-body-cont .info-list li .tit:after {
 	position: absolute;
 	top: 50%;
 	right: 0px;
@@ -12136,24 +12133,24 @@ html, body {
 	background-color: #e7e7e7;
 }
 
-.mypage-container .card .card-body .cardBody-cont .info-list li .cont {
+.mypage-container .card .card-body .card-body-cont .info-list li .cont {
 	padding: 0 20px;
 }
 
-.mypage-container .card .card-body .cardBody-cont .info-list li .underline {
+.mypage-container .card .card-body .card-body-cont .info-list li .underline {
 	color: #2f2f2f;
 }
 
-.mypage-container .card .card-body .cardBody-cont .info-list li + li {
+.mypage-container .card .card-body .card-body-cont .info-list li + li {
 	margin-top: 20px;
 }
 
-.mypage-container .card .card-body .cardBody-foot {
+.mypage-container .card .card-body .card-body-foot {
 	margin: 0 40px;
 	border-top: 1px solid #e7e7e7;
 }
 
-.mypage-container .card .card-body .cardBody-foot .btns {
+.mypage-container .card .card-body .card-body-foot .btns {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -12166,7 +12163,7 @@ html, body {
 	        justify-content: center;
 }
 
-.mypage-container .card .card-body .cardBody-foot .btns .btn-link2 {
+.mypage-container .card .card-body .card-body-foot .btns .btn-goLink {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -12190,12 +12187,245 @@ html, body {
 	font-weight: normal;
 }
 
-.mypage-container .card .card-body .cardBody-foot .btns .btn-link2.red {
+.mypage-container .card .card-body .card-body-foot .btns .btn-goLink.red {
 	color: #ed1c24;
 }
 
 .mypage-container .card .card-foot {
 	padding: 30px 0;
+}
+
+.mypage-container .card + .card {
+	margin-top: 80px;
+}
+
+.mypage-container .btn-box {
+	margin-top: 10px;
+}
+
+.mypage-container .btn-box .btn-wide {
+	height: 80px;
+	font-size: 20px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+}
+
+.mypage-container .btn-box .btn-wide.red {
+	color: #ed1c24;
+	border: 1px solid #ff404b;
+}
+
+.mypage-container .list-section {
+	margin-top: 80px;
+}
+
+.mypage-container .list-section .carInfo-list {
+	width: -webkit-calc(100% + 10px);
+	width: -moz-calc(100% + 10px);
+	width: calc(100% + 10px);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.mypage-container .list-section .carInfo-list li {
+	margin-bottom: 0;
+}
+
+.mypage-container .list-section .carInfo-list .item {
+	display: block;
+	padding-right: 10px;
+}
+
+.mypage-container .list-section .carInfo-list .item .img-box {
+	position: relative;
+}
+
+.mypage-container .list-section .carInfo-list .item .img-box .cover {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 10px 20px;
+	color: #fff;
+	background: rgba(29, 29, 29, 0.6);
+	z-index: 5;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area {
+	padding: 20px 0 0;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .tit {
+	width: 100%;
+	display: -webkit-box;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	font-size: 1rem;
+	height: 30px;
+	margin-bottom: 15px;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .bar-type {
+	color: #54585a;
+	font-size: 14px;
+	margin-bottom: 25px;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .bar-type > span {
+	position: relative;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .bar-type > span + span {
+	padding-left: 10px;
+	margin-left: 10px;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .bar-type > span + span:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 1px;
+	height: 14px;
+	margin-top: -7px;
+	background-color: #e7e7e7;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .price-box {
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	padding: 20px;
+	background-color: #f5f5f5;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .price-box .price-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .price-box .price-row + .price-row {
+	margin-top: 15px;
+}
+
+.mypage-container .list-section .carInfo-list .item .descri-area .price-box .price-row .price {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	color: #ed1c24;
+}
+
+.mypage-container .list-section .heart-chk-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.mypage-container .list-section .heart-chk-box input {
+	display: none;
+}
+
+.mypage-container .list-section .heart-chk-box .icon {
+	position: relative;
+	width: 18px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-heart2-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+	transition: all .4s;
+}
+
+.mypage-container .list-section .heart-chk-box input:checked + .icon {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-heart2-on.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.mypage-container .list-section .heart-chk-box span {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	margin-left: 10px;
+}
+
+.mypage-container .card-between-section {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 80px;
+}
+
+.mypage-container .card-between-section .card {
+	width: 410px;
+	margin-top: 0;
 }
 
 .error-wrap {
