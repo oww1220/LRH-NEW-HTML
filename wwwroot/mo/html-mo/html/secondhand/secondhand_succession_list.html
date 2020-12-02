@@ -18,6 +18,9 @@
 <script src="../../../resources-mo/scripts/jquery/plugins/slick.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/swiper.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/iscroll.min.js"></script>
+
+<script src="../../../resources-mo/scripts/jquery/plugins/mobileSelect.js"></script>
+
 <script src="../include_sub_header.js"></script><!--인크루드용..-->
 <script src="../include_footer.js"></script><!--인크루드용..-->
 <script src="../../../resources-mo/scripts/MUI.js"></script>
@@ -604,6 +607,9 @@
 							<ul class="list-type-col2">
 								<li>
 									<div class="inner selection">
+
+										<div id="carYear">차량 연식 선택</div>
+										<!--
 										<select class="selectbox" name="" id="">
 											<option value="">차량 연식 선택</option>
 											<option value="">2020년</option>
@@ -612,9 +618,10 @@
 											<option value="">2017년</option>
 											<option value="">2016년</option>
 											<option value="">2015년</option>
-										</select>
+										</select>-->
 									</div>
 								</li>
+								<!--
 								<li>
 									<div class="inner selection">
 										<select class="selectbox" name="" id="">
@@ -627,8 +634,10 @@
 											<option value="">2015년</option>
 										</select>
 									</div>
-								</li>
+								</li>-->
 							</ul>
+
+							
 						</div>
 					</div>
 
@@ -780,6 +789,68 @@
         <!--//컨텐츠-->
     </div>
 	<!--//layer-full 상세검색 컴포넌트-->
+
+	<div id="day">차량 연식 선택</div>
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#carYear', //유니크해야됨!
+				title: '차량 연식 선택', 
+				wheels: [
+							{data:[
+								{id:'', value:'최대'}, 
+								{id:'2020', value:'2020년'}, 
+								{id:'2019', value:'2019년'}, 
+								{id:'2018', value:'2018년'}, 
+								{id:'2017', value:'2017년'}, 
+								{id:'2016', value:'2016년'},
+								{id:'2015', value:'2015년'},
+								{id:'2014', value:'2014년'}
+							]},
+							{data:[
+								{id:'', value:'최소'}, 
+								{id:'2020', value:'2020년'}, 
+								{id:'2019', value:'2019년'}, 
+								{id:'2018', value:'2018년'}, 
+								{id:'2017', value:'2017년'}, 
+								{id:'2016', value:'2016년'},
+								{id:'2015', value:'2015년'},
+								{id:'2014', value:'2014년'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
 
 
 

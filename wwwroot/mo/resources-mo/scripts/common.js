@@ -1254,17 +1254,17 @@ if($('.layer-car-detail').length){
     });
 }
 
-//중고차 승계렌터카 등록 - 사진정보 - 추가
-$(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").hide();
-$(".secondhand-wrap .add-photo").click(function(e){
-    $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").slice(0, 6).show();
-    e.preventDefault();
-    $(".secondhand-wrap .file-box > ul").slice(0, 3).show();
-    if($(".secondhand-wrap .file-box > ul:hidden").length == 0){
-        //alert("더 이상 항목이 없습니다");
-        $(".secondhand-wrap .add-photo").hide();
-    }
-});
+//중고차 승계렌터카 등록 - 사진정보 추가
+// $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").hide();
+// $(".secondhand-wrap .add-photo").click(function(e){
+//     $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").slice(0, 6).show();
+//     e.preventDefault();
+//     $(".secondhand-wrap .file-box > ul").slice(0, 3).show();
+//     if($(".secondhand-wrap .file-box > ul:hidden").length == 0){
+//         //alert("더 이상 항목이 없습니다");
+//         $(".secondhand-wrap .add-photo").hide();
+//     }
+// });
 
 
 

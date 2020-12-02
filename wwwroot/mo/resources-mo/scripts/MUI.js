@@ -541,7 +541,9 @@ var MUI = MUI || {
 			toast.classList.add('active'),
 				toast.innerText = message
 		},
-
+		setMobileSelect: function(option) {
+			return new MobileSelect(option);
+		},
 	},
 	iscrolls: {
         cash: null,
