@@ -1287,17 +1287,13 @@
                             }  
                         }
                     }
-                    .short-card-toggle-cont{
+                    .mem-step-cont-01 {
                         border-bottom:1px solid #e7e7e7;
-                        padding:1.5rem 0;
+                        padding:1.7rem 1.3rem;
                         .list-type-col2{
                             @include Align-middle-left;
-                            .inputT{
-                                .inputR{
-                                    width:49%;
-                                    border-bottom:0 none;
-                                }
-                            }
+                            width: 100%;
+                            margin-left: 0;
                             li:first-child{
                                 width:30%;
                                 .detail-layer-inputT-tit{
@@ -1307,6 +1303,66 @@
                             li:last-child{
                                 width:70%;
                             }
+                        }
+                        .detail-layer-inputT:first-child{
+                            margin-top: 0;
+                        }
+                        .detail-layer-inputT{
+                            margin-top:2.6rem;
+                        }
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            margin-top:1.7rem;
+                            @include Align-middle;
+                            justify-content: left;
+                        }
+                    }
+                    .table{
+                        margin-top: -3.4rem;
+                        table{
+                            border-left:1px solid #e7e7e7;
+                            th{
+                                padding:1.4rem 0 1.4rem 0;
+                                background-color: #fafafa;
+                                @include Regular;
+                                text-align: center;
+                                border-top: 1px solid #d2d2d2;
+                                border-bottom:1px solid #e7e7e7;
+                                border-right:1px solid #e7e7e7;
+                            }
+                            td{
+                                padding:1.4rem 0 1.4rem 0;
+                                @include Regular;
+                                text-align: center;
+                                border-top: 1px solid #d2d2d2;
+                                border-bottom:1px solid #e7e7e7;
+                                border-right:1px solid #e7e7e7;
+                            }
+                        }
+                    }
+                }
+                .inputC02{
+                    padding: 1.7rem 0 0 1.3rem;
+                    label {
+                        line-height: 1;
+                        letter-spacing: -1px;
+                        &:before{
+                            @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                            width: 1.2rem;
+                            height: .9rem;
+                        }
+                        span{
+                            font-size:1.1rem;
+                            color:#999;
+                            @include Regular;
+                        }
+                    }
+                    input:checked + label {
+                        &:before{
+                            @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                        }
+                        span{
+                            color:#2f2f2f;
                         }
                     }
                 }
