@@ -31,7 +31,7 @@
 	</header>
 	<!--//header 컴포넌트-->
 
-	<!--container 컴포넌트-->
+	<!--마이페이지-단기렌터카 예약상세 컴포넌트-->
 	<main id="wrap">
 		<div class="mypage-wrap">
 			<div class="section-detail">
@@ -156,7 +156,7 @@
 							<h4>반납정보 변경</h4>
 						</div>
 						<div class="cont-in">
-							<span>변경일시:2020.11.24 18:00</span>
+							<span class="list-top-txt">변경일시:2020.11.24 18:00</span>
 							<ul class="list-table">
 								<li>
 									<strong>반납일시</strong>
@@ -173,7 +173,7 @@
 							</ul>
 						</div>
 						<div class="cont-guide">
-							<ul class="list-table">
+							<ul>
 								<li>
 									반납시간이 변경되면 이용시간 변경에 따라 대여금액이 변경됩니다.
 								</li>
@@ -222,12 +222,12 @@
 				<div class="detail-cont cont-item8">
 					<div class="item-wrap">
 						<div class="cont-tit">
-							<h4 class="mypage-toggle-btn" data-target="maypage-short-detail01" data-on="true" data-siblings="true">
+							<h4 class="mypage-toggle-btn" data-target="maypage-short-detail02" data-on="true" data-siblings="true">
 								예약자 운전면허 정보
 								<button type="button" class="btn-toggle gray"></button>
 							</h4>
 						</div>
-						<div class="cont-toggle mypage-toggle-cont maypage-short-detail01" >
+						<div class="cont-toggle mypage-toggle-cont maypage-short-detail02" >
 							<div class="list-type-value">
 								<div>
 									<strong>이름</strong>
@@ -285,10 +285,10 @@
 							</div>
 							<ul class="list-type-col2">
 								<li>
-									<button>예약취소</button>
+									<button type="button" class="layer-infos-open" data-layer="layer-cancel-reservation">예약취소</button>
 								</li>
 								<li>
-									<button>예약수정</button>
+									<button type="button" class="layer-infos-open" data-layer="layer-prepayment-info">예약수정</button>
 								</li>
 							</ul>
 						</div>
@@ -309,13 +309,205 @@
 			</div>
 		</div>
 	</main>
-	<!--//container 컴포넌트-->
+	<!--//마이페이지-단기렌터카 예약상세 컴포넌트-->
+
+	<div class="fixed-btnBottom">
+		<div class="bottom-top">
+			<ul class="list-type-col2">
+				<li>
+					<button type="button" class="btn active" data-layer="layer-">추가운전자 등록/수정</button>
+				</li>
+				<li>
+					<button type="button" class="btn" data-layer="layer-">사전체크인</button>
+				</li>
+			</ul>
+		</div>
+		<button type="button" class="btn btn-red" data-layer="layer-">결제하기</button>
+	</div>
 
 	<!--footer 컴포넌트-->
 	<footer class="footer">
 	</footer>
 	<!--//footer 컴포넌트-->
 
+
+	<!--layer-full 예약취소 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-cancel-reservation" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+			<h4>
+				예약취소
+            </h4>
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="layer-cancel-reservation">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="section-cont">
+					<div class="cont-top">
+						<strong>
+							예약취소 시 수수료 및 환불 규정을 안내합니다.
+						</strong>
+					</div>
+					<div class="cont-in">
+						<div class="">
+							<select class="selectbox" name="" id="">
+								<option value="">선택해주세요</option>
+								<option value="">이중계약</option>
+								<option value="">가격불만</option>
+								<option value="">여행일정 변경</option>
+								<option value="">기타사유</option>
+							</select>
+						</div>
+						<div>
+							<strong>취소 수수료 및 노쇼(No Show) 수수료 환불 규정</strong>
+							<ul class="list-type-col3 list-table">
+								<li>
+									<strong>대여 예정일 <br/>24시간 이전</strong>
+									<b>100% 환불</b>
+								</li>
+								<li>
+									<strong>대여 예정일 <br/>24시간 이내</strong>
+									<b>30,000원 <br/>(취소수수료)</b>
+								</li>
+								<li>
+									<strong>예정일 <br/>24시간 이후</strong>
+									<b>차량대여 <br/>요금의 10% <br/>(노쇼수수료)</b>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cont-btn">
+						<ul class="list-type-col2">
+							<li>
+								<button type="button" class="btn btn-white layer-full-close" data-layer="layer-cancel-reservation">이전</button>
+							</li>
+							<li>
+								<button type="button" class="btn btn-red">예약취소</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 예약취소 컴포넌트-->
+
+
+	<!--layer-full 예약 선결제 및 수수료안내 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-prepayment-info" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+			<h4>
+				예약 선 결제 및 수수료 안내
+            </h4>
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="layer-prepayment-info">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="section-cont">
+					<div class="cont-in payment-info">
+						<div>
+							<strong>선 결제 안내</strong>
+							<ul class="payment-step">
+								<li>
+									<span>추후제작</span>
+									<div>
+										<strong>선 결제 방법</strong>
+										<p>현장, 온라인, 전화 상으로 선 결제 할인이 모두 가능합니다.</p>
+									</div>
+								</li>
+								<li>
+									<span>추후제작</span>
+									<div>
+										<strong>선 결제 이용 방식</strong>
+										<p>예약 후 대여일 기준 최소 6시간 이전까지 홈페이지, 앱 또는 전화(고객 센터, 지점)를 통해 결제 가능합니다.</p>
+									</div>
+								</li>
+								<li>
+									<span>추후제작</span>
+									<div>
+										<strong>선 결제 확인</strong>
+										<p>24시간 이상 이용 시, 선 결제할 경우 5,000원 할인됩니다. (포인트 결제 시에도 적용)</p>
+									</div>
+								</li>
+								<li>
+									<span>추후제작</span>
+									<div>
+										<strong>신용정보 확인</strong>
+										<p>본인명의 신용카드 외에 체크카드로 결제 시에는 신용정보조회 동의를 요청드릴 수 있습니다.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="guide">
+							<ul>
+								<li>
+									고객 센터나 지점을 통해 선 결제를 진행하신 경우, 홈페이지, 
+									앱에서는 해당 선결제에 대한 취소가 불가합니다.
+								</li>
+								<li>
+									본 신용정보 조회는 개인 신용도에 영향을 미치지 않는 
+									단순 조회이며 조회결과 신용상의 문제가 발견될 경우 대여가 
+									불가능 합니다.
+								</li>
+								<li>
+									본인명의 신용카드를 소유하고 계심에도 불구하고 사용을 원치 
+									않으시는 경우, 차량 대여 시 일단 신용카드로 결제하시고, 반납 시 
+									신용카드 승인을 취소하고 체크카드로 재정산하실 수 있습니다.
+								</li>
+								<li>
+									결제하실 금액 중에 대여금액이 6,000원 미만일때, 선 결제 할인이 
+									적용되지 않습니다.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cont-in rule-info">
+						<div>
+							<strong>취소 수수료 및 노쇼(No Show) 수수료 환불 규정</strong>
+							<ul class="list-type-col3 list-table">
+								<li>
+									<strong>대여 예정일 <br/>24시간 이전</strong>
+									<b>100% 환불</b>
+								</li>
+								<li>
+									<strong>대여 예정일 <br/>24시간 이내</strong>
+									<b>30,000원 <br/>(취소수수료)</b>
+								</li>
+								<li>
+									<strong>예정일 <br/>24시간 이후</strong>
+									<b>차량대여 <br/>요금의 10% <br/>(노쇼수수료)</b>
+								</li>
+							</ul>
+						</div>
+						<div class="guide">
+							<ul>
+								<li>
+									수수료 청구방법 : 납입한 금액 중 수수료 금액을 차감한나머지 
+									금액을 환불 또는 납입한 카드 승인 내역을 전부 취소 후 승인한 
+									카드로 수수료 금액 재청구하실 수 있습니다.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cont-btn">
+						<button type="button" class="btn btn-red layer-full-close" data-layer="layer-prepayment-info">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 예약 선결제 및 수수료안내 컴포넌트-->
 
 	<!--상단 타이틀(추후삭제)-->
     <script>
