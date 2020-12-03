@@ -1319,9 +1319,23 @@ if($('.mypage-wrap').length){
     });
 }
 
-//포인트 - 사용내역, 포인트 전환신청 탭전환
+//포인트 > 상단 메인 탭메뉴
 if($('.mypage-wrap .tab-normal').length){
     MUI.event.taps('.mypage-wrap .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
+//포인트 > 사용내역 탭 > 하단 탭메뉴
+if($('.mypage-wrap .tab-history').length){
+    MUI.event.taps('.mypage-wrap .tab-history', false, function(swap){
+        swap();
+    });
+}
+
+//포인트 > 포인트전환 신청 탭 > 전환신청 탭메뉴
+if($('.mypage-wrap .tab-round').length){
+    MUI.event.taps('.mypage-wrap .tab-round', false, function(swap){
         swap();
     });
 }
