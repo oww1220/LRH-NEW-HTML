@@ -445,16 +445,16 @@ if($('.carLife-container .tab-normal').length){
         MUI.layer.openClick('.layer-registCarDetail-info-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
             show();
         });
-    }
-    
-    //예약취소
-    if($('.layer-myCancelReservat').length) {
-        MUI.layer.openClick('.layer-myCancelReservat-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+    }63    
+
+    //마이페이지 공통 모달 팝업
+    if($('.layer-mypage').length) {
+        MUI.layer.openClick('.layer-mypage-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            console.log('open');
+            //iscrollReset(show, layer);
             show();
         });
     }
-    
-
     
     //bg-dimmed 클릭시 열린 레이어 들 닫기
     MUI.layer.closeClick(LAYER_DIM, LAYER_DIM, LAYER_PARENT, true, function(hide){

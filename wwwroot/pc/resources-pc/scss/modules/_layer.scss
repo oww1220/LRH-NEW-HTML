@@ -107,7 +107,7 @@ body.fixed {
 			.popup-cont-bot-btns{
 				margin:35px 0 0;
 				text-align:center;
-				
+
 				.btn{
 					display:inline-block;
 					width:auto; 
@@ -1066,6 +1066,81 @@ body.fixed {
 
 				+.btn-toggle-wide{margin-top:40px;}
 			}
+		}
+
+		//마이페이지 (공통)
+		&.layer-mypage{
+
+			.popup-top{
+				background: #fff;
+				border-bottom:2px solid $border-darkgrey;
+
+				> h4{color:#2f2f2f; height:98px;}		
+				.layer-popup-close{
+					.pop-close{
+						@include Background($sprite:'ico-pop-close-black', $position:center center);
+					}
+				}		
+			}
+
+			.icon-guide-area{
+				padding-bottom:40px;
+
+				.icon-guide{
+					display:flex;
+					align-items: center;
+
+					.icon{
+						width:34px;
+						height:34px;
+						background-size: contain;
+						margin-right:10px;
+					}
+				}
+
+				&.border-bot{
+					border-bottom:1px solid $border-grey;
+				}
+			}
+			.cont-area{
+				margin-top:40px;
+
+				> .tit{margin-bottom:25px;}
+			}
+
+			.tbl-box{     
+				table{
+					width:100%;
+					border:1px solid $border-grey;
+					
+					th, td{
+						padding:30px 40px; 
+						text-align:center; 
+						border:1px solid $border-grey;
+						color:#54585a; 
+						vertical-align: middle;
+					}
+					
+					th{
+						@include Bold;
+						background-color:#fafafa;
+					}
+					td{
+						font-size:14px;
+	
+						.box-between{
+							+ .box-between{margin-top:10px;}
+						}
+					}
+					.align-l{text-align:left;}
+					
+					+ .lst{margin-top:20px; margin-bottom:0;}
+					+ table{margin-top:20px;}
+				}
+	
+				+ .tbl-box{margin-top:80px;}
+			}
+			
 		}
 	}
 

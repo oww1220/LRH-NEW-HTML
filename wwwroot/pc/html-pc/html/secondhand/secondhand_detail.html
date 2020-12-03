@@ -15,6 +15,7 @@
 <script src="../../../resources-pc/scripts/jquery/jquery-ui.min.js"></script>
 <script src="../../../resources-pc/scripts/jquery/plugins/slick.min.js"></script>
 <script src="../../../resources-pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="../../../resources-pc/scripts/jquery/plugins/iscroll.min.js"></script>
 <script src="../include_sub_header.js"></script><!--인크루드용..-->
 <script src="../include_footer.js"></script><!--인크루드용..-->
@@ -429,8 +430,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-scrollbar"></div>
 						</div>
+
+						<div class="swiper-scrollbar"></div>
+
 					</div>
 
 				</div>
@@ -1142,6 +1145,7 @@
 						el: '#secondhand-slide .swiper-scrollbar',
 						hide: false,
 						dragSize: 50,
+						draggable: true,
 					},
 				});				
 				var subTopSlide = MUI.slide.init('#secondhand-slide .detail-slide-gallery-top', 'swiper', {
