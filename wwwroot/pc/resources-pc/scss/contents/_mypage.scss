@@ -167,7 +167,7 @@
         @include Align-between;
         padding-top:20px;
         
-        .box-between-col01-btns, .box-between-col02-btns, {
+        .box-between-col01-btns, .box-between-col02-btns {
             display:flex;
             padding:10px 0;
             @include roundBox;
@@ -186,8 +186,8 @@
         .box-between-col02-btns {
             margin-left:auto;
             margin-right:0;
-            border-color:#ed1c24;
-            background-color:#ed1c24;
+            border-color:#54585a;
+            background-color:#54585a;
 
             .btn-small{        
                 color:#fff;
@@ -205,6 +205,7 @@
             font-size:20px;
             padding:90px 40px;
             text-align:center;
+            border-bottom:1px solid $border-grey;
         }
         .bar-type{
             color:#54585a;
@@ -250,6 +251,7 @@
                 }
                 td{
                     font-size:14px;
+                    vertical-align: top;
 
                     .box-between{
                         + .box-between{margin-top:10px;}
@@ -433,6 +435,28 @@
         }
 
         + .card{margin-top:20px;}
+        .heart-chk-box{
+            @include Align-middle;
+    
+            input {
+                display: none;
+            }
+            .icon {
+                position: relative;
+                width: 23px;
+                height: 21px;
+                @include Background($sprite:'ico-heart3-off', $position:center center);
+                transition: all .4s;
+            }
+            input:checked + .icon {
+                @include Background($sprite:'ico-heart3-on', $position:center center);
+            }        
+            span{
+                @include Bold;
+                color:#54585a;
+                margin-left:10px;
+            }                    
+        }
     }
     .lst{margin-top:30px;}
     .banner-area{margin-top:60px;}
@@ -575,6 +599,21 @@
             .card-cont{
                 padding:30px;
             }
+        }
+    }
+    .count-section{
+        font-size:26px;
+        padding:60px;
+        @include roundBox;
+        @include Bold;
+        text-align:center;
+        background-color:#f5f5f5;
+        margin-top:50px;
+
+        .sub-txt{
+            color:#54585a;
+            font-size:16px;
+            margin-top:20px;
         }
     }
 }
