@@ -447,7 +447,14 @@ if($('.carLife-container .tab-normal').length){
         });
     }
     
+    //예약취소
+    if($('.layer-myCancelReservat').length) {
+        MUI.layer.openClick('.layer-myCancelReservat-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }
     
+
     
     //bg-dimmed 클릭시 열린 레이어 들 닫기
     MUI.layer.closeClick(LAYER_DIM, LAYER_DIM, LAYER_PARENT, true, function(hide){

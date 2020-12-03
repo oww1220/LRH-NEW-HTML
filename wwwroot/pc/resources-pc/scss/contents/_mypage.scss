@@ -184,8 +184,11 @@
             }
         }
         .box-between-col02-btns {
+            margin-left:auto;
+            margin-right:0;
             border-color:#ed1c24;
             background-color:#ed1c24;
+
             .btn-small{        
                 color:#fff;
             }
@@ -206,7 +209,6 @@
         .bar-type{
             color:#54585a;
             font-size:14px;
-            margin-bottom:25px;
 
             > span{ 
                 position:relative; 
@@ -246,6 +248,13 @@
                     @include Bold;
                     background-color:#fafafa;
                 }
+                td{
+                    font-size:14px;
+
+                    .box-between{
+                        + .box-between{margin-top:10px;}
+                    }
+                }
                 .align-l{text-align:left;}
                 
                 + .lst{margin-top:20px; margin-bottom:0;}
@@ -254,8 +263,21 @@
 
             + .tbl-box{margin-top:80px;}
         }
-        
+        .small-btns{            
+            margin-left:20px;
+
+            .btn{
+                width:auto; 
+                height:30px; 
+                font-size:12px;
+
+                + .btn{margin-left:10px;}
+            }
+        }
+
         &:first-child{margin-top:50px;}
+
+        + .indicator-area{margin-top:40px;}
     }
     .card{
         @include roundBox;
