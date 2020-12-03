@@ -15,6 +15,12 @@
             display: inline-block;
             vertical-align: top;
             width: 9.5rem;
+            .img-area {
+                display: none;
+            }
+            &.view2, &.view3 {
+                display: none;
+            }
             &.ui-state-disabled {
                 pointer-events: auto;
                 opacity: 1;
@@ -39,8 +45,7 @@
                     height: 100%;
                 }
                 label {
-                    position: relative;
-                    z-index: 1;
+                    pointer-events: none;
                     i {
                         display: none;
                     }
