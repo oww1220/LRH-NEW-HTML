@@ -1399,9 +1399,44 @@ button.swiper-pagination-bullet {
 	   -moz-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	/* 인디게이터바 한개씩 */
+	/* 인디게이터바 퍼센트로 늘어나는 */
 }
 
 .swipe-detail-wrap .life-event-view .swiper-pagination-wrap .swiper-pagination .swiper-pagination-bullet {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	width: 100%;
+	height: .7rem;
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
+	background-color: #ddd;
+	border: 0;
+	opacity: 1;
+}
+
+.swipe-detail-wrap .life-event-view .swiper-pagination-wrap .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: #54585a;
+}
+
+.swipe-detail-wrap .life-event-view .swiper-pagination-wrap .swiper-pagination .swiper-pagination-bullet-type02 {
 	display: -webkit-inline-box;
 	display: -webkit-inline-flex;
 	display: -moz-inline-box;
@@ -1430,7 +1465,7 @@ button.swiper-pagination-bullet {
 	opacity: 1;
 }
 
-.swipe-detail-wrap .life-event-view .swiper-pagination-wrap .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+.swipe-detail-wrap .life-event-view .swiper-pagination-wrap .swiper-pagination .swiper-pagination-bullet-type02.swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
 	background-color: #ddd;
 }
 
