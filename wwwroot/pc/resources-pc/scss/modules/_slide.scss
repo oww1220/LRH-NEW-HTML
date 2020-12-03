@@ -131,3 +131,62 @@
 		position: relative;
 	}
 }
+
+
+
+.swipe-detail-wrap {
+	.cover{
+		@include Position($top:0, $right:0);
+		@include Align-between;
+		padding:25px;
+		color:#fff;
+		background: rgba(29,29,29,.6);
+		z-index:5;
+	}
+	.heart-chk-box{
+        @include Align-middle;
+
+        input {
+            display: none;
+        }
+        .icon {
+            position: relative;
+            width: 18px;
+            height: 16px;
+            @include Background($sprite:'ico-heart2-off', $position:center center);
+            transition: all .4s;
+        }
+        input:checked + .icon {
+            @include Background($sprite:'ico-heart2-on', $position:center center);
+        }        
+        span{
+            @include Bold;
+            margin-left:10px;
+        }                    
+	}
+	.detail-slide-gallery-thumbs { 
+		padding:35px 0;
+		height: 80px;
+		//width: 100%;
+		.swiper-slide {
+			width: 120px;
+			box-sizing: border-box;
+			cursor: pointer;
+			&.swiper-slide-thumb-active {
+				border: 2px solid red;
+			}
+		}
+	}
+	.swiper-scrollbar {
+		bottom: 10px;
+		left: 0;
+		width: 100%;
+	}
+	.swiper-pagination {
+		@include Position($bottom: 0, $right: 0, $left:auto);
+		@include Bold;
+		width: auto;
+		color: #fff;
+    	padding: 20px 30px;
+	}
+}
