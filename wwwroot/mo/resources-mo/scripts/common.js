@@ -1059,42 +1059,6 @@ if($('.secondhand-wrap').length){
     });
 }
 
-//중고차 상세 롤링 01
-if($('.secondhand-wrap .detail-sub-slide-list1').length) {
-
-    var subTopSlideThumbs = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-thumbs','swiper', {
-        spaceBetween: 10,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            hide: true,
-        },
-    });
-
-    var subTopSlide = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-top','swiper', {
-        spaceBetween: 10,
-        // autoplay: {
-        //     delay: 3000,
-        // },
-        thumbs: {
-            swiper: subTopSlideThumbs
-        },
-    });
-    
-    $(".swiper-button-pause").on('click', function(){
-        subTopSlide.autoplay.stop();
-        $(".swiper-button-play").show();
-        $(".swiper-button-pause").hide();
-    });
-    $(".swiper-button-play").on('click',function(){
-        subTopSlide.autoplay.start();
-        $(".swiper-button-pause").show();
-        $(".swiper-button-play").hide();
-    });
-}
 
 if($('.secondhand-wrap').length){
     $(".summary-table-wrap-type01 .table-type01 table .table-type01-opt").on('click', function(){
