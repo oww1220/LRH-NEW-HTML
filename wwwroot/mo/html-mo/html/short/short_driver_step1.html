@@ -17,6 +17,9 @@
 <script src="../../../resources-mo/scripts/jquery/jquery.ui.touch-punch.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/slick.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/iscroll.min.js"></script>
+
+<script src="../../../resources-mo/scripts/jquery/plugins/mobileSelect.js"></script>
+
 <script src="../include_sub_header_type1.js"></script><!--인크루드용..-->
 <script src="../include_footer.js"></script><!--인크루드용..-->
 <script src="../../../resources-mo/scripts/MUI.js"></script>
@@ -374,7 +377,7 @@
 									<strong>대여일시</strong>
 									<b>2020.09.21 (월)</b>
 									<div class="detail-layer-selectbox">
-										<ul class="list-type-col2">
+										<!-- <ul class="list-type-col2">
 											<li>
 												<select class="selectbox" name="" id="">
 													<option value="">01시</option>
@@ -401,14 +404,17 @@
 													<option value="">50분</option>
 												</select>
 											</li>
-										</ul>
+										</ul> -->
+										<div class="inner selection">
+											<div id="schedule-opt-lt" class="selectbox selectbox-layer">대여일시선택</div>
+										</div>
 									</div>
 								</li>
 								<li>
 									<strong>대여일시</strong>
 									<b>2020.09.23 (수)</b>
 									<div class="detail-layer-selectbox">
-										<ul class="list-type-col2">
+										<!-- <ul class="list-type-col2">
 											<li>
 												<select class="selectbox" name="" id="">
 													<option value="">01시</option>
@@ -435,7 +441,10 @@
 													<option value="">50분</option>
 												</select>
 											</li>
-										</ul>
+										</ul> -->
+										<div class="inner selection">
+											<div id="schedule-opt-rt" class="selectbox selectbox-layer">대여일시선택</div>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -487,7 +496,7 @@
 										<tr>
 											<td class="during"><button type="button" class="btn">9</button></td>
 											<td class="end"><button type="button" class="btn">10</button></td>
-											<td><button type="button" class="btn">11</button></td>
+											<td class="day"><button type="button" class="btn">11</button></td>
 											<td><button type="button" class="btn">12</button></td>
 											<td><button type="button" class="btn">13</button></td>
 											<td><button type="button" class="btn">14</button></td>
@@ -615,6 +624,138 @@
         <!--//컨텐츠-->
     </div>
 	<!--//layer-full 달력 컴포넌트-->
+
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-lt', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
+
+<script>
+	// 모바일 슬라이드 셀렉트 안내 : 
+
+	// 1개 일때는 position:[2]
+	// 2개 일때는 position:[2, 2]
+
+	// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+	// trigger 는 유니크해야됨
+
+	// 각 페이지에 스크립트 삽입
+	
+	$(function(){
+
+		MUI.event.setMobileSelect({
+			trigger: '#schedule-opt-rt', //유니크해야됨!
+			title: '대여일시', 
+			wheels: [
+						{data:[
+							{id:'', value:'시'}, 
+							{id:'01', value:'01시 '}, 
+							{id:'02', value:'02시 '}, 
+							{id:'03', value:'03시 '}, 
+							{id:'04', value:'04시 '}, 
+							{id:'05', value:'05시 '},
+							{id:'06', value:'06시 '},
+							{id:'07', value:'07시 '},
+							{id:'08', value:'08시 '},
+							{id:'09', value:'09시 '},
+							{id:'10', value:'10시 '},
+							{id:'11', value:'11시 '},
+							{id:'12', value:'12시 '}
+						]},
+						{data:[
+							{id:'', value:'분'}, 
+							{id:'0', value:'0분'}, 
+							{id:'10', value:'10분'}, 
+							{id:'20', value:'20분'}, 
+							{id:'30', value:'30분'}, 
+							{id:'40', value:'40분'},
+							{id:'50', value:'50분'}
+						]}
+					],
+			position:[2, 2], //Initialize positioning
+			cancelBtnText: '취소',
+			ensureBtnText: '확인',
+			callback:function(indexArr, data){
+				console.log(indexArr, data);
+			},
+			transitionEnd:function(indexArr, data){
+				console.log(indexArr, data);
+			},
+			cancel:function(indexArr, data){
+				console.log(indexArr, data);
+			},
+			onShow : function(e) {
+			},
+			onHide : function(e) {
+			}
+		});
+
+		
+	});
+</script>
+
+	
 
 	<!--상단 타이틀(추후삭제)-->
     <script>
