@@ -1373,7 +1373,7 @@ body.fixed {
 						margin:0;
 						background-color: #fafafa;
 						ul{
-							justify-content: space-between;
+							@include Align-between-top;
 						}
 						ul > li{
 							@include Align-middle-column;
@@ -1387,7 +1387,7 @@ body.fixed {
 							@include Background($sprite:'ico-next08', $type:'png', $size:100% auto, $position:center center);
 							width: 1.6rem;
 							height: .7rem;
-							@include Position($top: 50%, $right: -30%);
+							@include Position($top: 50%, $right: -40%);
 							transform: translateY(-100%);
 						}
 						ul > li:last-child:after{
@@ -1426,6 +1426,8 @@ body.fixed {
 						.selectbox{
 							//padding-right:3.4rem;
 							height:3rem;
+							@include Align-middle;
+							width:9.8rem;
 						}
 					}
 					.calendar-wrap{
@@ -1506,6 +1508,15 @@ body.fixed {
 									&.disabled{
 										.btn{
 											color: #ddd;
+										}
+									}
+									&.day{
+										.btn{
+											width:50%;
+											background-color: #ff404b;
+											border-radius: 1.7rem;
+											@include Bold;
+											color:#fff;   
 										}
 									}
 								}
