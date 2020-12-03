@@ -783,6 +783,215 @@
                 }
             }
         }
+
+        .detail-layout {
+            position: relative;
+            background-color:#fff;
+            padding: 3.4rem 1.7rem 0;
+            .guide {
+                font-size: 1.1rem;
+                line-height: 1.5;
+                margin-top: 1.2rem;
+                text-indent: -.8rem;
+                padding-left:1rem;
+                & > li{
+                    margin-top:.4rem;
+                    color:#8f9191;
+                    @include Regular;
+                    & > i{
+                        margin-right: .6rem;
+                    }
+                    &.red_txt{
+                        color:#ed1c24;
+                    }
+                }
+                & > li:first-child{
+                    margin-top:0;
+                }
+            }
+        }
+        .detail-layout-cont {
+            position: relative;
+            background-color:#fff;
+            padding: 3.4rem 1.7rem 0;
+            .detail-inputT-tit {
+                @include Bold;
+                @include Align-middle-left;
+                margin-top: 2rem;
+            }
+            .detail-inputT-tit:first-of-type {
+                margin-top: 0;
+            }
+            .box-type {
+                margin-top: 1.3rem;
+                padding: 2.1rem 1.3rem 1.7rem;
+                border: 1px dotted #eee;
+                > p {
+                    @include Align-middle;
+                    @include Regular;
+                    font-size: 1.1rem;
+                    color: #54585a;
+                    line-height: 1.5;
+                    padding: 1rem;
+                }
+                .car-chose {
+                    ul {
+                        @include Align-box;
+                        width: 100%;
+                        li {
+                            min-width: 20%;
+                            .inner {
+                                margin: .5rem .3rem;
+                                min-width: 5.7rem;
+                                position: relative;
+                                .brand {
+                                position: relative;
+                                border:1px solid #d2d2d2;
+                                height:2.6rem;
+                                @include Align-middle;
+                                box-sizing: border-box;
+                                font-size: 1.1rem;
+                                border-radius: 2rem;
+                                padding: 0 .3rem;
+                                transition: all .4s;
+                                @include Regular;
+                                color: #8f9191;
+                                background-color: #fff; 
+                                }
+                            }
+                            .btn-close {
+                                position: absolute;
+                                top: -0.5rem;
+                                right: 0;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .section-filter {
+                .result {
+                    padding-top:2.6rem;
+                    .filter-col {
+                        position: relative;
+                        .chk-list {
+                            ul {
+                                li {
+                                    width: initial;
+                                    input {
+                                        display: none;
+                                    }
+                                    label {
+                                        position: relative;
+                                        border:0 none;
+                                        height:2.6rem;
+                                        @include Align-middle;
+                                        box-sizing: border-box;
+                                        font-size: 1.1rem;
+                                        border-radius: 2rem;
+                                        padding: 0 1.2rem;
+                                        transition: all .4s;
+                                        @include Regular;
+                                        color: #8f9191;
+                                        background-color: #f5f5f5;
+                                    }
+                                    input:checked + label {
+                                        background: #fff9f9;
+                                        border: 1px solid #ff404b;
+                                        color:#ed1c24;
+                                        @include Bold;
+                                    }
+                                }
+                                &.list-type-col5{
+                                    li {
+                                        min-width: 20%;
+                                        .inner {
+                                            min-width: 3.7rem;
+                                            label {
+                                                padding: 0 .5rem;
+                                            }
+                                        }
+                                    }
+                                }    
+                            }
+                           
+                        }
+                    }
+                    
+                }
+                &.section-filter-list{
+                    padding:0;
+                    .result {
+                        .filter-col {
+                            .chk-list {
+                                margin-top:0;
+                                ul {
+                                    @include Inline-scrolling;
+                                    padding-bottom:.5rem;
+                                    li {
+                                        display: inline-flex;
+                                        width:6rem;
+                                        margin-left:1rem;
+                                        > div { 
+                                            width:100%;
+                                        }
+                                        &:first-child {
+                                            margin-left:0;
+                                        }
+                                        label {
+                                            @include Align-middle-column;
+                                            padding:0;
+                                            height:8.6rem;
+                                            border-radius: .4rem;
+                                            color:#54585a;
+                                            background-color: #fff;
+                                            font-size:1rem;
+                                            @include Regular;
+                                            border:1px solid #d2d2d2;
+                                            span{
+                                                margin:1.7rem 0 0 0;
+                                            }
+                                            i {
+                                                min-height:2.6rem;
+                                            }
+                                        }
+                                        input:checked + label {
+                                            background-color:rgb(255,249,249);
+                                            background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+                                            color:#ff404b;
+                                            border:1px solid #ff404b;
+                                            .brand01{
+                                                @include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+                                            }
+                                            .brand02{
+                                                @include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+                                            }
+                                            .brand03{
+                                                @include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+                                            }
+                                            .brand04{
+                                                @include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+                                            }
+                                            .brand05{
+                                                @include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+                                            }
+                                            .brand06{
+                                                @include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                    
+                }
+            }
+        }
+
+        
     }
 
     .section-layer-submit {
