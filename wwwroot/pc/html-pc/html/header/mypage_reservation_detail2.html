@@ -73,9 +73,9 @@
 							</div>
 							<div class="indicator-area">
 								<div class="btn-box-between">
-									<div class="box-between-col01-btns">										
-										<button type="button" class="btn-small layer-mypage-open" data-layer="layer-resevatCancel">예약취소</button>
-										<button type="button" class="btn-small layer-mypage-open" data-layer="layer-mypage02">예약수정</button>
+									<div class="box-between-col01-btns">
+										<button type="button" class="btn-small">예약취소</button>
+										<button type="button" class="btn-small">예약수정</button>
 									</div>
 									<div class="box-between-col02-btns">
 										<button type="button" class="btn-small">추가운전자 등록/수정</button>
@@ -171,6 +171,10 @@
 													<p>차량</p>
 													<p>150,000 원</p>
 												</div>
+												<div class="box-between">
+													<p>보험</p>
+													<p>50,000 원</p>
+												</div>
 											</td>
 											<td>
 												<div class="box-between">
@@ -229,6 +233,78 @@
 								</table>
 							</div>
 						</div>
+
+						<div class="infos-section">							
+							<div class="tbl-box">
+								<div class="tbl-header">
+									<div class="tit-area">	
+										<h5 class="tit">
+											환불 정보
+										</h5>
+									</div>
+								</div>
+								<table>
+									<colgroup>
+										<col style="width:22.6%;">
+										<col>
+									</colgroup>									
+									<tbody>
+										<tr>
+											<th>
+												총 환불 금액
+											</th>
+											<td>
+												<span class="txt-color-red">160,000 원</span>
+											</td>
+										</tr>										
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<ul class="lst dot txt-color-red">
+							<li>선택하신 결제 수단에 결제 최소 요청이 전달된 후 환불까지 평일기준 3일~7일 소요됩니다.</li>
+						</ul>
+						
+						<div class="infos-section">							
+							<div class="tbl-box">
+								<div class="tbl-header">
+									<div class="tit-area">	
+										<h5 class="tit">
+											반납정보 변경
+										</h5>
+										<span class="txt-small">변경일시 : 2020.11.24 18:00</span>
+									</div>
+								</div>
+								<table>
+									<colgroup>
+										<col style="width:22.6%;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>반납일시</th>
+											<td>2020.11.26  18:00</td>
+										</tr>
+										<tr>
+											<th>반납지점</th>
+											<td>강남점</td>
+										</tr>
+										<tr>
+											<th>추가(환불) 금액 </th>
+											<td>
+												<span class="txt-color-reD">+ 45,000 원</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<ul class="lst dot txt-color-red">
+							<li>반납시간이 변경되면 이용시간 변경에 따라 대여금액이 변경됩니다.</li>
+							<li>대여지점과 다른 지점으로 반납하실 경우 별도의 수수료가 부가됩니다.</li>
+							<li>최종 추가금액이 마이너스(-)인 경우 반납 시 환불 처리 됩니다.</li>
+							<li>위 결제 금액은 대략적인 금액이며 차량 반납 시 변동 될 수 있습니다.</li>
+						</ul>
 
 						<div class="infos-section">							
 							<div class="tbl-box">
@@ -520,16 +596,10 @@
 						</div>
 
 						<div class="indicator-area">
-							<div class="btn-box-between">
-								<div class="box-between-col01-btns">
-									<button type="button" class="btn-small">예약취소</button>
-									<button type="button" class="btn-small">예약수정</button>
-								</div>
+							<div class="btn-box-between">								
 								<div class="box-between-col02-btns">
 									<button type="button" class="btn-small">추가운전자 등록/수정</button>
-									<button type="button" class="btn-small">사전체크인</button>
 									<button type="button" class="btn-small">반납정보변경</button>
-									<button type="button" class="btn-small">결제하기</button>
 								</div>
 							</div>
 						</div>
@@ -559,87 +629,6 @@
 	<footer class="footer">
 	</footer>
 	<!--//footer 컴포넌트-->
-
-	<!-- 예약취소 레이어 -->
-	<div class="layer-wrap layer-popup layer-mypage layer-resevatCancel">
-		<div class="pop-inner">
-			<div class="popup-top">
-				<h4>예약취소</h4>
-				<button type="button" class="layer-popup-close" data-layer="layer-resevatCancel"><span class="icon pop-close">닫기 버튼</span></button>
-			</div>
-			<div class="popup-cont layer-iscroll">
-				<div class="iscroll-in">
-
-					<div class="icon-guide-area border-bot">
-						<p class="icon-guide"><span class="icon talk"></span> 예약취소 시 수수료 몇 환불규정을 안내 합니다.</p>
-					</div>				
-
-					<div class="cont-area">
-						<p class="tit">취소 사유를 선택해 주세요.</p>
-						<div class="cont">
-							<select name="" id="" class="selectbox">
-								<option value="">선택하세요.</option>
-								<option value="">이중계약</option>
-								<option value="">가격불만</option>
-								<option value="">여행일정 변경</option>
-								<option value="">기타사유</option>
-
-							</select>
-						</div>						
-					</div>					
-					<div class="cont-area">
-						<p class="tit">취소 수수료 및 노쇼(No Show) 수수료 환불 규정</p>
-						<div class="cont tbl-box">
-							<table>
-								<caption></caption>
-								<colgroup>
-									<col style="width:33.3%">
-									<col style="width:33.3%">
-									<col>
-								</colgroup>
-								<thead>
-									<tr>
-										<th>
-											대여 예정일<br>
-											24시간 이전 
-										</th>
-										<th>
-											대여 예정일<br>
-											24시간 이내
-										</th>
-										<th>
-											예정일<br>
-											24시간 이후
-										</th>
-									</tr>
-								</thead>
-								<tbody>								
-									<tr>
-										<td>100% 환불 </td>
-										<td>
-											3,000원<br>
-											(취소 수수료)
-										</td>
-										<td>
-											차량대여<br>
-											요금의 10%<br>
-											(노쇼 수수료)
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>				
-					</div>					
-
-				</div>
-				<div class="popup-cont-bot-btns">
-					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-resevatCancel">취소</button>		
-					<button type="button" class="btn btn-red layer-popup-close" data-layer="layer-resevatCancel">예약취소</button>		
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //예약취소 레이어 -->
 
 
 </body>

@@ -234,6 +234,7 @@
 				width: 100%;
 				position: static;
 				@include Align-middle;
+				/* 인디게이터바 한개씩 */
 				.swiper-pagination-bullet {
 					@include Inline-align-middle;
 					justify-content: space-around;
@@ -241,11 +242,35 @@
 					height: .7rem;
 					border-radius: 0;
 					background-color: #ddd;
+					//background-color:#54585a;
 					border:0;
 					opacity: 1;
 					//transition: all .4s;
 					&.swiper-pagination-bullet-active {
 						background-color:#54585a;
+					}
+					// &.swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+					// 	background-color: #ddd;
+					// }
+				}
+
+				/* 인디게이터바 퍼센트로 늘어나는 */
+				.swiper-pagination-bullet-type02 {
+					@include Inline-align-middle;
+					justify-content: space-around;
+					width: 100%;
+					height: .7rem;
+					border-radius: 0;
+					//background-color: #ddd;
+					background-color:#54585a;
+					border:0;
+					opacity: 1;
+					//transition: all .4s;
+					// &.swiper-pagination-bullet-active {
+					// 	background-color:#54585a;
+					// }
+					&.swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+						background-color: #ddd;
 					}
 				}
 			}
