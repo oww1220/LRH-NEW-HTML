@@ -1060,40 +1060,50 @@ if($('.secondhand-wrap').length){
 }
 
 //중고차 상세 롤링 01
-if($('.secondhand-wrap .detail-sub-slide-list1').length) {
+if($('.secondhand-wrap #secondhand-slide').length) {
 
-    var subTopSlideThumbs = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-thumbs','swiper', {
-        spaceBetween: 10,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            hide: true,
-        },
-    });
+    (function(){
+        var subTopSlideThumbs = MUI.slide.init('#secondhand-slide .detail-slide-gallery-thumbs','swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5,
+            watchSlidesVisibility: true,
+              watchSlidesProgress: true,
+            //scrollbar: {
+                //el: '#secondhand-slide .swiper-scrollbar',
+                //hide: true,
+            //},
+        });				
+        var subTopSlide = MUI.slide.init('#secondhand-slide .detail-slide-gallery-top', 'swiper', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            thumbs: {
+                swiper: subTopSlideThumbs,
+            },
+            pagination: {
+                el: '#secondhand-slide .swiper-pagination',
+            },
 
-    var subTopSlide = MUI.slide.init('.detail-sub-slide-list1 .detail-slide-gallery-top','swiper', {
-        spaceBetween: 10,
-        // autoplay: {
-        //     delay: 3000,
-        // },
-        thumbs: {
-            swiper: subTopSlideThumbs
-        },
-    });
-    
-    $(".swiper-button-pause").on('click', function(){
-        subTopSlide.autoplay.stop();
-        $(".swiper-button-play").show();
-        $(".swiper-button-pause").hide();
-    });
-    $(".swiper-button-play").on('click',function(){
-        subTopSlide.autoplay.start();
-        $(".swiper-button-pause").show();
-        $(".swiper-button-play").hide();
-    });
+        });
+
+        $('.swiper-button-pause').on('click', function(){
+            subTopSlide.autoplay.stop();
+            $('.swiper-button-play').show();
+            $('.swiper-button-pause').hide();
+        });
+        $('.swiper-button-play').on('click',function(){
+            subTopSlide.autoplay.start();
+            $('.swiper-button-pause').show();
+            $('.swiper-button-play').hide();
+        });
+    })();
 }
 
 if($('.secondhand-wrap').length){
@@ -1308,6 +1318,14 @@ if($('.mypage-wrap').length){
         logic();
     });
 }
+
+//포인트 - 사용내역, 포인트 전환신청 탭전환
+if($('.mypage-wrap .tab-normal').length){
+    MUI.event.taps('.mypage-wrap .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
 
 /* -------------------------------------------------중고차 승계렌터카 end*/
 
