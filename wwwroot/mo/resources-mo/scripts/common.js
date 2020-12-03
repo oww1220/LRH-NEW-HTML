@@ -1273,6 +1273,14 @@ if($('.mypage-wrap').length){
     });
 }
 
+//포인트 - 사용내역, 포인트 전환신청 탭전환
+if($('.mypage-wrap .tab-normal').length){
+    MUI.event.taps('.mypage-wrap .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
+
 /* -------------------------------------------------중고차 승계렌터카 end*/
 
 
