@@ -302,14 +302,18 @@
 						<!-- 스크립트 지원 필요 -->
 						<div class="cont-in live">
 							<p><i class="icon pannel09"></i>이미지를 길게 누르시면 순서를 변경하실 수 있습니다.</p>
-							<div class="file-box">
-								<ul class="list-type-col3">
-									<li>
+
+							<div class="file-box-sort">
+								<ul id="box-sort-list">
+									<li class="ui-state-default active">
 										<div class="inner">
-											<div class="inputF active active01">
+											<div class="inputF">
 												<button type="button" class="btn btn-close">
 													<i class="icon close04">닫기 버튼</i>
 												</button>
+												<div class="img-area">
+													<img src="../../../resources-mo/images/bgs/car-front.png" alt="이미지"/>
+												</div>
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
 												<label for="file">
 													<i class="icon plus-gray"></i>
@@ -318,12 +322,15 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="ui-state-default active">
 										<div class="inner">
-											<div class="inputF active active02">
+											<div class="inputF">
 												<button type="button" class="btn btn-close">
 													<i class="icon close04">닫기 버튼</i>
 												</button>
+												<div class="img-area">
+													<img src="../../../resources-mo/images/bgs/car-back.png" alt="이미지"/>
+												</div>
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
 												<label for="file">
 													<i class="icon plus-gray"></i>
@@ -332,12 +339,15 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="ui-state-default active">
 										<div class="inner">
-											<div class="inputF active active03">
+											<div class="inputF">
 												<button type="button" class="btn btn-close">
 													<i class="icon close04">닫기 버튼</i>
 												</button>
+												<div class="img-area">
+													<img src="../../../resources-mo/images/bgs/car-inside.png" alt="이미지"/>
+												</div>
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
 												<label for="file">
 													<i class="icon plus-gray"></i>
@@ -346,12 +356,15 @@
 											</div>
 										</div>
 									</li>
-									<li >
+									<li class="ui-state-default active">
 										<div class="inner">
-											<div class="inputF active active04">
+											<div class="inputF">
 												<button type="button" class="btn btn-close">
 													<i class="icon close04">닫기 버튼</i>
 												</button>
+												<div class="img-area">
+													<img src="../../../resources-mo/images/bgs/car-right.png" alt="이미지"/>
+												</div>
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
 												<label for="file">
 													<i class="icon plus-gray"></i>
@@ -360,7 +373,7 @@
 											</div>
 										</div>
 									</li>
-									<li >
+									<li class="ui-state-default">
 										<div class="inner">
 											<div class="inputF">
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
@@ -371,7 +384,7 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="ui-state-default">
 										<div class="inner">
 											<div class="inputF">
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
@@ -382,7 +395,7 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="ui-state-default" style="display: none;">
 										<div class="inner">
 											<div class="inputF">
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
@@ -393,7 +406,7 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="ui-state-default" style="display: none;">
 										<div class="inner">
 											<div class="inputF">
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
@@ -404,7 +417,7 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="ui-state-default" style="display: none;">
 										<div class="inner">
 											<div class="inputF">
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
@@ -415,7 +428,7 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="ui-state-default" style="display: none;">
 										<div class="inner">
 											<div class="inputF">
 												<input type="file" class="layer-carSelect-open" data-layer="layer-carSelect" id="file">
@@ -467,12 +480,40 @@
 	<footer class="footer">
 	</footer>
 
+	
 
 	<!--상단 타이틀(추후삭제)-->
 	<script>
 	$(function(){
 		$('.header-top.sub h1').text('중고차 승계렌터카 등록');
-	})
+
+		//이미지 순서 변경 가능한 드래그
+		(function(){
+			var $target = $('#box-sort-list');
+			$target.sortable({
+				containment: 'parent',
+				cancel: '.ui-state-disabled',
+				dropOnEmpty: false,
+				forcePlaceholderSize: true,
+				forceHelperSize: true,
+				helper: 'clone',
+				items: '.ui-state-default.active',
+				change: function(event, ui) {
+					//console.log(event, ui);
+				},
+				update: function(event, ui) {
+					//console.log(event, ui);
+				},
+			}).disableSelection();
+
+			//솔터블 액티브 예제
+			$target.on('click', 'li', function(){
+				//$(this).toggleClass('active');
+			});
+
+		})();
+
+	});
 	</script>
 	<!--//상단 타이틀(추후삭제)-->
 
