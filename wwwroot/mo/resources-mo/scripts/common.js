@@ -493,6 +493,7 @@ if($('.specials-list .tab-normal').length){
             zoom: {
                 maxRatio: 2,
             },
+            virtualTranslate: true,
             //direction: 'vertical',
             //slidesPerView: 'auto',
             //freeMode: true,
@@ -506,6 +507,7 @@ if($('.specials-list .tab-normal').length){
             zoom: {
                 maxRatio: 2,
             },
+            virtualTranslate: true,
             //direction: 'vertical',
             //slidesPerView: 'auto',
             //freeMode: true,
