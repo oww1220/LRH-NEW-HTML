@@ -1111,7 +1111,7 @@
         .detail-layout-cont {
             position: relative;
             background-color:#fff;
-            padding: 3.4rem 1.7rem 0;
+            padding: 3.4rem 1.7rem;
             .detail-inputT-tit {
                 @include Bold;
                 @include Align-middle-left;
@@ -1291,7 +1291,7 @@
         .detail-layout-list {
             position: relative;
             background-color:#fff;
-            padding: 3.4rem 1.7rem 0;
+            padding: 1.7rem 1.7rem 3.4rem;
             .list-none {
                 @include Align-middle;
                 min-height:12rem;
@@ -1299,8 +1299,244 @@
                 border-top:1px solid #e7e7e7;
                 border-bottom:1px solid #e7e7e7;
             }
+            .list-type {
+                .list-type-T {
+                    @include Align-middle-right;
+                    .btn {
+                        @include Bold;
+                        font-size: 1.1rem;
+                        height: 1rem;
+                        .next4 {
+                            margin-left: .5rem;
+                        }
+                    }                   
+                }
+                .list-item-type {
+                    border-bottom: 1px solid #e7e7e7;
+                    padding: 1.7rem 0;
+                    box-sizing: border-box;
+                    &:nth-of-type(2) {
+                        border-top: 1px solid #e7e7e7;
+                        margin-top: 1.2rem;
+                    }
+                    .list-item-type-tit {
+                        @include Bold;
+                        padding: 0 1.3rem;
+                    }
+                    .list-item-type-cont {
+                        padding: 1.3rem 1.3rem 1.7rem;
+                        li {
+                            font-size: 1.1rem;
+                            color: #54585a;
+                            height: 1.7rem;
+                        }                      
+                    }
+                    .list-type-col3 {
+                        width: 100%;
+                        margin-left: 0;
+                        li{
+                            width: 35%;
+                            box-sizing: border-box;
+                            + li {
+                                margin-left:2.5%;
+                            }
+                            &:last-child{
+                                width: 25%;
+                            }
+                            .btn {
+                                height: 3.8rem;
+                                border-radius: .5rem;
+                                font-size: 1.2rem;
+                            }
+                            .btn-white {
+                                border: 1px solid #54585a;
+                                color: #2f2f2f;
+                            }
+                            .btn-red {
+                                border: 1px solid #ff404b;
+                                background-color: #fff;
+                                color: #ed1c24;
+                            }
+                        }
+                    }
+                }
+            }
+            .list-T {
+                @include Align-between;
+                margin-top: 1.7rem;
+                .btn-simple {
+                    border-radius: .5rem;
+                    background: #54585a;
+                    font-size: 1rem;
+                    color: #fff;
+                    height: 2.2rem;
+                }
+            }
         }
-        
+        .section-list {
+            ul {
+                @include Align-box;
+                border-top: 1px solid #e7e7e7;
+                margin-top: 1.5rem;
+                &.list-type-col2{
+                    li{
+                        width:50%;
+                        .img {
+                            position: relative;
+                            overflow: hidden;
+                            height:9rem;
+                            .inputC {
+                                @include Hide_txt;
+                                position: absolute;
+                                top: .5rem;
+                                left: .5rem;
+                            }
+                            img {
+                                width: 100%;
+                                height:100%;
+                            }
+                        }
+                        .text {
+                            > strong {
+                                margin-top: 1rem;
+                                display: block;
+                                color: #2f2f2f;
+                                min-height: 3.4rem;
+                                line-height: 1.3;
+                                @include Bold;
+                            }
+                            em{
+                                display: block;
+                                b{
+                                    font-size:1rem;
+                                }
+                            }
+                            .price{
+                                background-color: #f5f5f5;
+                                border-radius:.5rem;
+                                padding:1.3rem .8rem;
+                                span {
+                                    width:100%;
+                                    @include Align-between-top;
+                                    padding:0;
+                                    margin:0;
+                                    & + span {
+                                        margin-top:1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                li {
+                    width:100%;
+                    margin-bottom:1.3rem;
+                    .inner{
+                        margin-top:1.7rem;
+                    }
+                    a {
+                        display: block;
+                        //margin: 0 1.3rem 0 0;
+                    }
+    
+                    .img {
+                        position: relative;
+                        overflow: hidden;
+                        height:14rem;
+                        img {
+                            width: 100%;
+                            height:100%;
+                        }
+                        .flag{
+                            @include Position($bottom: 0, $left: 0);
+                            width:100%;
+                            background-color: #2f2f2f;
+                            opacity: .8;
+                            border-radius: 0;
+                            padding:0 .5rem;
+                            justify-content: space-between;
+                            // justify-content: flex-start;
+                            p{
+                                color:#fff;
+                                font-size:.8rem;
+                                @include Bold;
+                            }
+                            .btn-small{
+                                border-radius: 0;
+                                border: 0 none;
+                                background-color: transparent;
+                                height:auto;
+                                padding:0 0 0 0;
+                                color:#fff;
+                                font-size:1rem;
+                                margin:0 .4rem 0 0;
+                            }
+                        }
+                    }
+    
+                    .text {
+                        strong {
+                            margin-top: 1rem;
+                            display: block;
+                            color: #2f2f2f;
+                            @include Bold;
+                        }
+                        em{
+                            color:#8f9191;
+                            display: inline-block;
+                            margin-top: .6rem;
+                            font-size:1rem;
+                            b{
+                                color:#8f9191;
+                                margin-left:1.1rem;
+                            }
+                            b:before{
+                                display:inline-block;
+                                content:"";
+                                width:1px;
+                                height:1rem;
+                                background-color:#d2d2d2;
+                                position: relative;
+                                left:-.6rem;
+                                top:0;
+                            }
+                        }
+                        .price{
+                            margin-top:1.7rem;
+                            background-color: #f5f5f5;
+                            border-radius:.5rem;
+                            padding:1.3rem 0;
+                            @include Align-box;
+                            span {
+                                width:44%;
+                                @include Align-between-top;
+                                padding:.4rem .8rem;
+                                b{
+                                    font-size:1rem;
+                                    margin-right:.4rem;
+                                    @include Regular;
+                                }
+                                strong{
+                                    display:inline-block;
+                                    @include Bold;
+                                    color:#da291c;
+                                    font-size:1.1rem;
+                                    margin:0;
+                                    em{
+                                        display:inline-block;
+                                        font-size:1rem;
+                                        color:#da291c;
+                                        @include Bold;
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }       
     }
 
     .section-layer-submit {
