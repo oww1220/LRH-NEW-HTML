@@ -4913,8 +4913,7 @@ html, body {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	border: 0 solid #d2d2d2;
-	border-width: 0 0 1px 1px;
+	border: 1px solid #d2d2d2;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -4923,7 +4922,7 @@ html, body {
 .secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li {
 	width: 33.333%;
 	border: 0 solid #d2d2d2;
-	border-width: 1px 1px 0 0;
+	border-width: 0 1px 1px 0;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -4975,9 +4974,26 @@ html, body {
 	top: -1px;
 	right: -1px;
 	bottom: -1px;
-	left: -1px;
+	left: -2px;
 	border: 1px solid #ff404b;
 	z-index: 5;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:last-child {
+	border-bottom: 0 none;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:nth-of-type(3n) {
+	border-right: 0 none;
+	width: 33.334%;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:nth-of-type(3n+1) input:checked + label:after {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
 }
 
 .secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-list li + li {
@@ -5004,6 +5020,42 @@ html, body {
 	border-top: 1px solid #e7e7e7;
 	margin-top: 20px;
 	padding-top: 30px;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT {
+	position: relative;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT input {
+	border-color: #d2d2d2;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT .btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 20px;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT .icon {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .txt-exam {
+	font-size: 14px;
+	margin-top: 15px;
 }
 
 .secondhand-container .sort-section .result-area {
