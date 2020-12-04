@@ -3072,8 +3072,7 @@ body.fixed {
 			}
 			
 		}
-
-		//마이페이지-포인트 - 아시아나 마일리지 전환 팝업
+		//마이페이지-포인트 - 아시아나 마일리지 전환 - 롯데렌터카 이용안내 팝업
 		&.layer-rentercar-info {
 			.full-top {
 				button {
@@ -3157,7 +3156,6 @@ body.fixed {
 				}
 			}
 		}
-
 		//마이페이지-포인트 - 할인쿠폰 전환 신청 팝업
 		&.layer-discount-coupon {
 			.full-top {
@@ -3265,6 +3263,77 @@ body.fixed {
 					}
 				}
 			}
+		}
+		//마이페이지- 할인 쿠폰 등록 팝업
+		&.layer-coupon-enroll {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				.cont-in {
+					padding:3.4rem 0 1.3rem;
+					> div {
+						.inputT {
+							@include Align-left-column;
+							label {
+								@include Bold;
+								font-size:1.2rem;
+								margin-bottom:1.2rem;
+							}
+							& + .inputT {
+								padding-top:2.6rem;
+							}
+						}
+					}
+				}
+				.cont-guide {
+					padding:0;
+					li {
+						text-indent: -.7rem;
+						padding-top:.9rem;
+						padding-left:1rem;
+						font-size:1rem;
+						color:#8f9191;
+						word-break: break-all;
+						&::before {
+							content:'';
+							display: inline-block;
+							width:.2rem;
+							height:.2rem;
+							background-color: #000;
+							margin-right:.4rem;
+							margin-top:-.2rem;
+							border-radius:100%;
+							vertical-align: middle;
+						}
+						&:first-child {
+							padding-top:0;
+						}
+					}
+					
+				}
+				.cont-btn {
+					padding-top:3.4rem;
+					ul {
+						width: 100%;
+						margin:0;
+						justify-content: space-between;
+					}
+					li {
+						width:48%;
+						button {
+							border-radius: .6rem;
+							&.btn-white {
+								border:1px solid #d2d2d2;
+								color:#54585a;
+							}
+						}
+					}
+				}
+			}
+			
 		}
 
 		
