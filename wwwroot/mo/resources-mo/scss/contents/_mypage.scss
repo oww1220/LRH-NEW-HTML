@@ -799,6 +799,82 @@
             }
             
         }
+
+        //운전면허증정보
+        .license-list {
+            margin-top: 2.6rem;
+            padding: 0 1.7rem;
+            h3 {
+                margin-top:3.4rem;
+                padding: 1.5rem 1.3rem;
+                background-color: #eff2f7;
+                border-radius: 1rem;
+                strong{
+                    @include Bold
+                    font-size: 1.4rem;
+                }
+            }
+            .t-notice {
+                @include Align-right-column;
+                color: #ed1c24;
+                font-size: 1rem;
+                margin-bottom: 1.3rem;
+            }
+            .item-cont {
+        
+                .detail-layer-inputT{
+                    margin-top:.9rem;
+                }
+            }
+            .chk-agree-list {
+                margin-top:0;
+                .chk-agree-cols {
+                    .chk-agree-top {
+                        .inputC {
+                            label {
+                            span { 
+                                    font-size:1.1rem;
+                            }
+                            }
+                            label:before {
+                                @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                            }
+                            input:checked + label {
+                                &:before{
+                                    @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                                }
+                            }
+                        } 
+                    }
+                    .chk-agree-cont {
+                        background-color:#f5f5f5;
+                        border-radius:.6rem;
+                        padding:1.7rem;
+                        li {
+                            border-bottom:0;
+                            color: #8f9191;
+                            text-indent:-.8rem;
+                            padding-left:1rem;
+                            font-size:1.1rem;
+                            &::before {
+                                content: '';
+                                display: inline-block;
+                                margin-right:.4rem;
+                                width:.2rem;
+                                height:.2rem;
+                                background-color: #8f9191;
+                                border-radius: 100%;
+                                vertical-align: middle;
+                            }
+                            & + li {
+                                padding-top:1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
         // .cont-bottom-bn {
         //     @include Position($position:sticky, $bottom: 0, $left: 0);
         // }
@@ -1376,6 +1452,22 @@
                     margin-top:0;
                 }
             }
+            .t_comment {
+                @include Align-between;
+                padding: 0;
+                font-size: 1.1rem;
+                color: #2f2f2f;
+                line-height: 1.5;
+                margin-bottom: 2.2rem;
+                > .pannel09 {
+                    width: 2.3rem;
+                    height: 2.2rem;
+                    margin-right: .5rem;
+                }
+            }
+            .btn {
+                border-radius: .5rem;
+            }
         }
         .detail-layout-cont {
             position: relative;
@@ -1629,6 +1721,35 @@
                         }
                     }
                 }
+                .list-item-type2 {
+                    @include Align-between;
+                    border-bottom: 1px solid #e7e7e7;
+                    padding: 1.7rem .9rem;
+                    &:nth-of-type(1) {
+                        border-top: 1px solid #e7e7e7;
+                        margin-top: 1.2rem;
+                    }
+                    .card-ci {
+                        width: 3.4rem;
+                        height: 3.4rem;
+                        background-size: 100% auto;
+                        margin-right: 2%;
+                    }
+                    ul{
+                        width: 67%;
+                        li:nth-of-type(1) {
+                            font-size: 1.1rem;
+                        }
+                        li:nth-of-type(2) {
+                            @include Bold;
+                            font-size: 1.2rem;
+                        }
+                        li:nth-of-type(3) {
+                            font-size: 1rem;
+                        }
+                    }
+                   
+                }
             }
             .list-T {
                 @include Align-between;
@@ -1805,7 +1926,24 @@
     
                 }
             }
-        }       
+        }
+        .list-view-info {
+            background-color: #eff2f7;
+            padding: 1.5rem 1.3rem;
+            border-radius: 1rem;
+            margin:1.7rem 1.7rem 1.3rem;
+            strong {
+                @include Bold;
+                @include Align-middle;
+                font-size:1.4rem;
+                span {
+                    color:#ff404b;
+                    font-size:1.4rem;
+                    margin-left:.4rem;
+                }
+            }
+            
+        }      
     }
     .section-layer-submit {
         padding:5rem 1.7rem 0;
