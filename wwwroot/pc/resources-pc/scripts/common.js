@@ -464,6 +464,7 @@ if($('.carLife-container .tab-normal').length){
     });
 /* -------------------------------------------------레이어팝업end*/
 
+
 /* 견적start-------------------------------------------------*/
     //견적 상단 슬리이더
     if($('.estimate-wrap .detail-view-list').length) {
@@ -917,7 +918,6 @@ if($('.tabwang-swiper-section .carLife-tabwang-swiper').length) {
         // },
     });
 }
-
 /* -------------------------------------------------카라이프end*/
 
 
@@ -1107,6 +1107,31 @@ if($('.longTerm-container .qnaAccor5').length){
 
 
 /* -------------------------------------------------신차장장기렌터카 end*/
+
+
+/* 마이페이지start-------------------------------------------------*/
+
+//이달의 핫딜 찬스
+if($('.hotDealswiper').length) {
+    MUI.slide.init('.hotDealswiper','swiper', {
+        loop: true,
+        navigation: {
+            nextEl: '.hotDealswiper-button-next',
+            prevEl: '.hotDealswiper-button-prev',
+         },
+        autoplay: {
+            delay: 3000,
+        },
+        pagination: {
+            el: '.hotDealswiper .pagination-list',
+            type: 'fraction',
+            //renderFraction: function(currentClass, totalClass) {
+            //    return '<strong class="' + currentClass + '"></strong>' + '/' + '<em class="' + totalClass + '"></em>';
+            //}          
+        },        
+    });
+}
+/* 마이페이지end-------------------------------------------------*/
 
     //푸터 슬라이더
     if($('.footer .detail-view-list').length) {

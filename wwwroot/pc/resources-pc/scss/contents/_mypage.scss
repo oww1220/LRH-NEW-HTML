@@ -85,7 +85,12 @@
             }
         }
         .mypage-body-cont{
-            width:100%;
+            
+            flex:none;
+            width:900px;
+            flex-basis: 900px;
+            //width:100%;
+
             padding-left:60px;
             box-sizing: border-box;
 
@@ -203,7 +208,8 @@
         //내역 없음
         .result-none{
             font-size:20px;
-            padding:90px 40px;
+            //padding:90px 40px;
+            padding:150px 40px;
             text-align:center;
             border-bottom:1px solid $border-grey;
         }
@@ -614,6 +620,119 @@
             color:#54585a;
             font-size:16px;
             margin-top:20px;
+        }
+
+        + .infos-section{
+            margin-top: 60px;
+            .result-none{
+                border-top:1px solid $border-grey;
+            }
+        }
+    }
+
+    .hotDeal-section{
+        margin-top:80px;
+        
+        .hotDeal-header{
+            @include Align-between;
+            align-items: flex-end;
+            padding-bottom:35px;
+
+            .alert-area{
+                display:flex;
+                align-items: flex-end;
+
+                .deadline{
+                    @include Bold;
+                    display:flex;
+                    font-size:26px;
+                    margin-left:50px;
+                    text-align:center;
+
+                    > p{
+                        + p{
+                            position:relative;
+                            padding-left:40px;
+
+                            &:before{
+                                content: ":";
+                                width:8px;
+                                @include Position($top:0, $left:20px);
+                                margin-left:-4px;
+                                color:#999;
+                                z-index:5;
+                            }
+                        }
+                    }
+
+                    strong, span {
+                        color:#54585a;
+                        font-size:inherit;
+
+                        &.txt-color-red{
+                            color:$txt-red;
+                        }
+                    }
+                    span {
+                        display:block;
+                        font-size:12px;
+                    }
+                }
+            }
+        }
+        .hotDeal-cont{
+            padding-top:80px;
+            border-top:1px solid #eee;
+
+            .detail{
+                @include Align-between;
+                padding:0 95px;
+                box-sizing: border-box;
+
+                .txt-box{
+                    @include Bold;
+
+                    .tit{
+                        strong{@include Bold; font-size:26px;}
+                        span{
+                            @include Regular;
+                            display:block;
+                            font-size:18px; 
+                            color:#8f9191;
+                            margin-top:10px;
+                        }
+                    }
+                    .price{
+                        @include Bold;
+                        margin-top:40px;
+
+                        .cost{
+                            color:#ddd;
+                            font-size:18px;
+                            small{font-size:14px;}
+                        }
+                        .sale{
+                            font-size:28px;
+                            color:#da291c;
+                            margin-top:15px;
+                            small{font-size:18px;}
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .pagination-wrap{
+            margin-top:50px;
+            .pagination-list{                
+                width:60px;
+                padding:0;
+                font-size:14px;
+                align-items: baseline;
+                box-sizing: border-box;
+
+                strong, em{font-size:inherit;}
+            }
         }
     }
 }
