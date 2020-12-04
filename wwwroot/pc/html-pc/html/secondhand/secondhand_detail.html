@@ -349,82 +349,82 @@
 						</div>
 						<div class="swiper-container detail-slide-gallery-thumbs">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="1">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_1" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="2">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_2" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="3">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_3" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="4">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_4" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="5">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_5" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="6">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_6" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="7">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_7" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="8">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_8" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="9">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_9" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="10">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_10" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="11">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_11" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="12">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_12" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="13">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_13" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="14">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_14" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="15">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_15" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-link="16">
 									<div class="img">
 										<img src="http://via.placeholder.com/120x80.png?text=120x80_16" alt="">
 									</div>
@@ -1159,6 +1159,12 @@
 					},
 
 				});
+
+				$('#secondhand-slide .detail-slide-gallery-thumbs').on('click', '.swiper-slide', function() {
+					//console.log($(this).attr('data-link'));
+					var idx = $(this).attr('data-link') - 1;
+					subTopSlide.slideTo(idx);
+				});	
 
 			})();
 		}
