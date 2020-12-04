@@ -29,6 +29,11 @@
         }
     }
 
+    //메인
+    .section-main {
+
+    }
+
     //리스트 구조
     .section-list {
         .list-view-info {
@@ -54,6 +59,11 @@
         .list-cont-wrap {
             margin-top:1.7rem;
             padding:0 1.7rem;
+            > div {
+                &.tab2, &.tab3 {
+                    display: none;
+                }
+            }
             .list-item {
                 padding:.9rem 0;
                 border-bottom:0;
@@ -187,7 +197,89 @@
                 border-bottom:1px solid #e7e7e7;
             }
         }
-
+        .cont-guide {
+            margin-top:1rem;
+            padding:0 1.7rem;
+            //두줄이상 인 경우 가이드
+            li {
+                text-indent: -.7rem;
+                padding-left:1rem;
+                font-size:1rem;
+                color:#8f9191;
+                word-break: break-all;
+                & + li {
+                    padding-top:.3rem;
+                }
+                &::before {
+                    content:'';
+                    display: inline-block;
+                    width:.2rem;
+                    height:.2rem;
+                    background-color: #000;
+                    margin-right:.4rem;
+                    margin-top:-.2rem;
+                    border-radius:100%;
+                    vertical-align: middle;
+                }
+                &.red {
+                    color:#ff404b;
+                    &::before {
+                        background-color: #ff404b;
+                    }
+                }
+                b.underline {
+                    font-size:1.1rem;
+                    color:#8f9191;
+                    position: relative;
+                    &::before {
+                        content:'';
+                        display: inline-block;
+                        border-bottom:1px solid #8f9191;
+                        width:100%;
+                        @include Position($bottom: 0, $left: 0)
+                    }
+                   
+                }
+            }
+            //한줄 인 경우 가이드
+            p {
+                text-indent: -.7rem;
+                padding-left:1rem;
+                font-size:1.1rem;
+                color:#8f9191;
+                word-break: break-all;
+                &::before {
+                    content:'';
+                    display: inline-block;
+                    width:.2rem;
+                    height:.2rem;
+                    background-color: #000;
+                    margin-right:.4rem;
+                    margin-top:-.2rem;
+                    border-radius:100%;
+                    vertical-align: middle;
+                }
+                &.red {
+                    color:#ff404b;
+                    &::before {
+                        background-color: #ff404b;
+                    }
+                }
+                b.underline {
+                    font-size:1.1rem;
+                    color:#8f9191;
+                    position: relative;
+                    &::before {
+                        content:'';
+                        display: inline-block;
+                        border-bottom:1px solid #8f9191;
+                        width:100%;
+                        @include Position($bottom: 0, $left: 0)
+                    }
+                   
+                }
+            }
+        }
         //포인트 사용내역
         .point-usage-history {
             .list-view-info {
@@ -254,7 +346,6 @@
                 }
             }
         }
-
         //포인트 전환신청
         .point-apply {
             display: none;
@@ -435,7 +526,6 @@
             
             
         }
-
         //할인쿠폰
         .discount-coupon {
             .coupon-enroll {
@@ -526,7 +616,6 @@
             }
             
         }
-
         //무료이용권
         .free-pass {
             display: none;
@@ -600,7 +689,6 @@
             
             
         }
-
         //신차장 친구추천 활동
         .refer-friend {
             .list-view-info {
@@ -711,96 +799,10 @@
             }
             
         }
-
-        .cont-guide {
-            margin-top:1rem;
-            padding:0 1.7rem;
-            //두줄이상 인 경우 가이드
-            li {
-                text-indent: -.7rem;
-                padding-left:1rem;
-                font-size:1rem;
-                color:#8f9191;
-                word-break: break-all;
-                & + li {
-                    padding-top:.3rem;
-                }
-                &::before {
-                    content:'';
-                    display: inline-block;
-                    width:.2rem;
-                    height:.2rem;
-                    background-color: #000;
-                    margin-right:.4rem;
-                    margin-top:-.2rem;
-                    border-radius:100%;
-                    vertical-align: middle;
-                }
-                &.red {
-                    color:#ff404b;
-                    &::before {
-                        background-color: #ff404b;
-                    }
-                }
-                b.underline {
-                    font-size:1.1rem;
-                    color:#8f9191;
-                    position: relative;
-                    &::before {
-                        content:'';
-                        display: inline-block;
-                        border-bottom:1px solid #8f9191;
-                        width:100%;
-                        @include Position($bottom: 0, $left: 0)
-                    }
-                   
-                }
-            }
-            //한줄 인 경우 가이드
-            p {
-                text-indent: -.7rem;
-                padding-left:1rem;
-                font-size:1.1rem;
-                color:#8f9191;
-                word-break: break-all;
-                &::before {
-                    content:'';
-                    display: inline-block;
-                    width:.2rem;
-                    height:.2rem;
-                    background-color: #000;
-                    margin-right:.4rem;
-                    margin-top:-.2rem;
-                    border-radius:100%;
-                    vertical-align: middle;
-                }
-                &.red {
-                    color:#ff404b;
-                    &::before {
-                        background-color: #ff404b;
-                    }
-                }
-                b.underline {
-                    font-size:1.1rem;
-                    color:#8f9191;
-                    position: relative;
-                    &::before {
-                        content:'';
-                        display: inline-block;
-                        border-bottom:1px solid #8f9191;
-                        width:100%;
-                        @include Position($bottom: 0, $left: 0)
-                    }
-                   
-                }
-            }
-        }
         // .cont-bottom-bn {
         //     @include Position($position:sticky, $bottom: 0, $left: 0);
         // }
-        
     }
-
     //상세구조
     .section-detail {
         .detail-view-rest{
@@ -1569,7 +1571,6 @@
         }
         
     }
-
     .section-layer-submit {
         padding:5rem 1.7rem 0;
         button {

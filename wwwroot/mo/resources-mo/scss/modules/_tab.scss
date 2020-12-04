@@ -32,6 +32,31 @@
 			&.tab-col5 > li {
 				width: 20%;
 			}
+			&.tab-col6 {
+				padding:0 1.7rem;
+				border-bottom:1px solid #e7e7e7;
+				@include Inline-scrolling;
+				padding-bottom:0;
+				display: block;
+				> li {
+					width: auto;
+					margin-left:1.3rem;
+					display:inline-block;
+					&:first-child {
+						margin-left:0;
+					}
+					button {
+						border:0;
+					}
+					&.active {
+						button {
+							color: #ff3f4c;
+							@include Bold;
+							border-bottom: .3rem solid #ff3f4c;
+						}
+					}
+				}
+			}
 		}
 	}
 	&-history {
