@@ -297,14 +297,14 @@
                         align-items:stretch;
                         justify-content:space-between;
 
-                        border: 0 solid $border-darkgrey;
-                        border-width: 0 0 1px 1px;
+                        border: 1px solid $border-darkgrey;
+                        //border-width: 0 0 1px 1px;
                         box-sizing: border-box;
 
                         li{
                             width:33.333%;
                             border: 0 solid $border-darkgrey;
-                            border-width: 1px 1px 0 0;
+                            border-width: 0 1px 1px 0;
                             box-sizing: border-box;
 
                             .chk-box{
@@ -326,7 +326,7 @@
                                     &:after{
                                         content:"";
                                         display:block;
-                                        @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
+                                        @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-2px);
                                         border:1px solid $border-red;
                                         z-index: 5;
                                     }
@@ -334,6 +334,20 @@
                             }
                             
 
+                        }
+                        li:last-child{
+                            border-bottom:0 none;
+                        }
+                        li:nth-of-type(3n){
+                            border-right:0 none;
+                            width:33.334%;
+                        }
+                        li:nth-of-type(3n+1){
+                            input:checked + label {
+                                &:after{
+                                    @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
+                                }
+                            }
                         }
                     }
                     .select-list{

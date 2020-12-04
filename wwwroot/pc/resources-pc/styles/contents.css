@@ -4909,8 +4909,7 @@ html, body {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	border: 0 solid #d2d2d2;
-	border-width: 0 0 1px 1px;
+	border: 1px solid #d2d2d2;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -4919,7 +4918,7 @@ html, body {
 .secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li {
 	width: 33.333%;
 	border: 0 solid #d2d2d2;
-	border-width: 1px 1px 0 0;
+	border-width: 0 1px 1px 0;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -4971,9 +4970,26 @@ html, body {
 	top: -1px;
 	right: -1px;
 	bottom: -1px;
-	left: -1px;
+	left: -2px;
 	border: 1px solid #ff404b;
 	z-index: 5;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:last-child {
+	border-bottom: 0 none;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:nth-of-type(3n) {
+	border-right: 0 none;
+	width: 33.334%;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:nth-of-type(3n+1) input:checked + label:after {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
 }
 
 .secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-list li + li {

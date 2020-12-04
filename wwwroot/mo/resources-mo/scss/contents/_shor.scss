@@ -273,7 +273,7 @@
         .list-detail-top{
             @include Align-between;
 			height:4.1rem;
-			border-bottom: 1px solid #EBEBEB;
+			border-bottom: 1px solid #d2d2d2;
 			> strong {
 				font-size: 1.1rem;
 				@include Bold;
@@ -407,8 +407,8 @@
                 background-color: #fff;
                 padding: 0 1.7rem 2.3rem;
                 & > .table{
-                    border-top:1px solid #EBEBEB;
-                    border-bottom:1px solid #EBEBEB;
+                    border-top:1px solid #d2d2d2;
+                    border-bottom:1px solid #d2d2d2;
                     margin-bottom:.9rem;
                     & > table {
                         table-layout: fixed;
@@ -609,7 +609,7 @@
                 }
                 .table{
                     border-radius: 1.5rem;
-                    border:1px solid #EBEBEB;
+                    border:1px solid #d2d2d2;
                     margin-bottom:.9rem;
                     & > table tr:first-child th{
                         border-top:0 none;
@@ -652,7 +652,7 @@
                                         width:30%;
                                     }
                                     & > input{
-                                        border:1px solid #EBEBEB;
+                                        border:1px solid #d2d2d2;
                                         border-radius: 1rem;
                                         background-color: #fff;
                                         height: 4.1rem;
@@ -712,7 +712,7 @@
                                     width:40%;
                                 }
                                 & > input{
-                                    border:1px solid #EBEBEB;
+                                    border:1px solid #d2d2d2;
                                     border-radius: 1rem 0 0 1rem;
                                     background-color: #fff;
                                     height: 4.1rem;
@@ -729,7 +729,7 @@
                                 }
                                 &:last-child > input{
                                     border-radius: 0 1rem 1rem 0;
-                                    border:1px solid #EBEBEB;
+                                    border:1px solid #d2d2d2;
                                     border-left:0;
                                 }
                                 & > .selectbox{
@@ -737,7 +737,7 @@
                                     height: 4.1rem;
                                     border-radius: 0 1rem 1rem 0; 
                                     background-color: #fff;
-                                    border-color:#EBEBEB;
+                                    border-color:#d2d2d2;
                                     font-size:1.2rem;
                                     border-left:0;
                                 }
@@ -821,7 +821,7 @@
                                     width:40%;
                                 }
                                 & > input{
-                                    border:1px solid #EBEBEB;
+                                    border:1px solid #d2d2d2;
                                     border-radius: 1rem 0 0 1rem;
                                     background-color: #fff;
                                     height: 4.1rem;
@@ -838,7 +838,7 @@
                                 }
                                 &:last-child > input{
                                     border-radius: 0 1rem 1rem 0;
-                                    border:1px solid #EBEBEB;
+                                    border:1px solid #d2d2d2;
                                     border-left:0;
                                 }
                                 & > .selectbox{
@@ -846,7 +846,7 @@
                                     height: 4.1rem;
                                     border-radius: 0 1rem 1rem 0; 
                                     background-color: #fff;
-                                    border-color:#EBEBEB;
+                                    border-color:#d2d2d2;
                                     font-size:1.2rem;
                                     border-left:0;
                                 }
@@ -1084,7 +1084,7 @@
                                     width:30%;
                                 }
                                 & > input{
-                                    border:1px solid #EBEBEB;
+                                    border:1px solid #d2d2d2;
                                     border-radius: 1rem;
                                     background-color: #fff;
                                     height: 4.1rem;
@@ -1830,7 +1830,7 @@
                                         width:21%;
                                     }
                                     & > input{
-                                        border:1px solid #EBEBEB;
+                                        border:1px solid #d2d2d2;
                                         border-radius: 1rem;
                                         background-color: #fff;
                                         height: 4.1rem;
@@ -2052,18 +2052,18 @@
                     .table{
                         @include Inline-scrolling;
                         margin:1.3rem 0 0 0;
-                        border-right: 1px solid #EBEBEB;
-                        border-bottom: 1px solid #EBEBEB;
+                        border-right: 1px solid #d2d2d2;
+                        border-bottom: 1px solid #d2d2d2;
                         table{
                             th{
                                 font-size: 1.1rem;
                                 padding:1.4rem 1.3rem 1.4rem 1.3rem;
-                                border-left: 1px solid #EBEBEB;
+                                border-left: 1px solid #d2d2d2;
                                 text-align: center;
                             }
                             td{
                                 padding:1.4rem 1.3rem 1.4rem 1.3rem;
-                                border-left: 1px solid #EBEBEB;
+                                border-left: 1px solid #d2d2d2;
                                 .guide{
                                     margin:0;
                                 }
@@ -3240,6 +3240,56 @@
                                     border-radius:.5rem;
                                     font-size:1.2rem;
 
+                                }
+                            }
+                        }
+                        .detail-layer-inputT-tit{
+                            @include Bold;
+                            @include Align-between;
+                            justify-content: flex-start;
+                            & > span{
+                                font-size:1rem;
+                                @include Regular;
+                                b{
+                                    font-size:1rem;
+                                    color:#ff404b;
+                                }
+                            }
+                            button{
+                                padding:0 0 0 .4rem;
+                            }
+                            &.family-tit {
+                                justify-content: space-between;
+                            }
+                        }
+                        .detail-layer-inputT-number02{
+                            margin-left:0;
+                            width:100%;
+                            li{
+                                position: relative;
+                                &:first-child{
+                                    width:30%;
+                                    margin-right:.4rem;
+                                }
+                                &:last-child{
+                                    width:68%;
+                                }
+                                & > input{
+                                    border:1px solid #d2d2d2;
+                                    border-radius: .5rem;
+                                    background-color: #fff;
+                                    height: 4.1rem;
+                                    width:100%;
+                                    padding:0 1.2rem;
+                                }
+                                & > button{
+                                    width:100%;
+                                    height: 4.1rem;
+                                    border-radius: .5rem; 
+                                    background-color:#54585a;
+                                    border-color:#54585a;
+                                    color:#fff;
+                                    font-size:1.2rem;
                                 }
                             }
                         }
