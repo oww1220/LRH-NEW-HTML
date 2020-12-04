@@ -493,10 +493,10 @@ if($('.specials-list .tab-normal').length){
             zoom: {
                 maxRatio: 2,
             },
-            direction: 'vertical',
-            slidesPerView: 'auto',
-            freeMode: true,
-            mousewheel: true,
+            //direction: 'vertical',
+            //slidesPerView: 'auto',
+            //freeMode: true,
+            //mousewheel: true,
         });
     }
 
@@ -506,10 +506,10 @@ if($('.specials-list .tab-normal').length){
             zoom: {
                 maxRatio: 2,
             },
-            direction: 'vertical',
-            slidesPerView: 'auto',
-            freeMode: true,
-            mousewheel: true,
+            //direction: 'vertical',
+            //slidesPerView: 'auto',
+            //freeMode: true,
+            //mousewheel: true,
         });
     }
 /* -------------------------------------------------레이어팝업end*/
