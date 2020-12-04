@@ -188,19 +188,19 @@ $extra-small-devices: 320px;
 }
 
 //커스텀 스크롤바
-@mixin CustumScroll {
+@mixin CustumScroll($minus:5px) {
 	&::-webkit-scrollbar {
 		width: 17px;
 	}
 	&::-webkit-scrollbar-thumb {
 		background-color: #E1E1E1;
-		border: 5px solid transparent;
+		border: $minus solid transparent;
 		background-clip: content-box;
 		border-radius: 15px;
 	}
 	&::-webkit-scrollbar-track {
 		background-color: #FAFAFA;
-		border: 5px solid transparent;
+		border: $minus solid transparent;
 		background-clip: content-box;
 		border-radius: 15px;
 	}

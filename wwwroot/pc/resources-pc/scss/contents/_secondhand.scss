@@ -618,12 +618,18 @@
             }
         }
         .car-detail-sticky-wrap{
-            @include Position($top:0, $right:0);
-            width:330px;
+            @include Position($top:0, $right:-20px);
+            width:350px;
             z-index:5;
 
-
             .car-detail-sticky{
+                position: relative;
+                top:0;
+                background-color: #fff;
+                width:350px;
+                .detail-sticky-iscroll {
+                    width: 330px;
+                }
                 .sticky-row-box{
                     //overflow:hidden;
                     @include roundBox;
@@ -840,6 +846,16 @@
                         border-top:1px solid $border-darkgrey;
                         background-color:#f5f5f5;
                     }
+                }
+            }
+
+            &.fixed {
+                .car-detail-sticky {
+                    position: fixed;
+                    height: 100vh;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    @include CustumScroll($minus:5px);
                 }
             }
 
