@@ -38,6 +38,10 @@ html, body {
 	color: #ba9a81;
 }
 
+.txt-color-black {
+	color: #2f2f2f;
+}
+
 .txt-bold {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
@@ -4909,8 +4913,7 @@ html, body {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	border: 0 solid #d2d2d2;
-	border-width: 0 0 1px 1px;
+	border: 1px solid #d2d2d2;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -4919,7 +4922,7 @@ html, body {
 .secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li {
 	width: 33.333%;
 	border: 0 solid #d2d2d2;
-	border-width: 1px 1px 0 0;
+	border-width: 0 1px 1px 0;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -4971,9 +4974,26 @@ html, body {
 	top: -1px;
 	right: -1px;
 	bottom: -1px;
-	left: -1px;
+	left: -2px;
 	border: 1px solid #ff404b;
 	z-index: 5;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:last-child {
+	border-bottom: 0 none;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:nth-of-type(3n) {
+	border-right: 0 none;
+	width: 33.334%;
+}
+
+.secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-grid li:nth-of-type(3n+1) input:checked + label:after {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
 }
 
 .secondhand-container .sort-section .selection-area .selection-cont .selection-cont-body .select-list li + li {
@@ -5000,6 +5020,42 @@ html, body {
 	border-top: 1px solid #e7e7e7;
 	margin-top: 20px;
 	padding-top: 30px;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT {
+	position: relative;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT input {
+	border-color: #d2d2d2;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT .btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 20px;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .inputT .icon {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
+}
+
+.secondhand-container .sort-section .selection-area .inputT-cont .txt-exam {
+	font-size: 14px;
+	margin-top: 15px;
 }
 
 .secondhand-container .sort-section .result-area {
@@ -5466,9 +5522,20 @@ html, body {
 .secondhand-container .car-detail-info-section .car-detail-sticky-wrap {
 	position: absolute;
 	top: 0;
-	right: 0;
-	width: 330px;
+	right: -20px;
+	width: 350px;
 	z-index: 5;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky {
+	position: relative;
+	top: 0;
+	background-color: #fff;
+	width: 350px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .detail-sticky-iscroll {
+	width: 330px;
 }
 
 .secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .sticky-row-box {
@@ -5898,6 +5965,41 @@ html, body {
 	margin: 0 -20px;
 	border-top: 1px solid #d2d2d2;
 	background-color: #f5f5f5;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap.fixed .car-detail-sticky {
+	position: fixed;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-base-color: #E1E1E1;
+	scrollbar-face-color: #E1E1E1;
+	scrollbar-3dlight-color: #E1E1E1;
+	scrollbar-highlight-color: #E1E1E1;
+	scrollbar-track-color: #FAFAFA;
+	scrollbar-arrow-color: #FAFAFA;
+	scrollbar-shadow-color: #FAFAFA;
+	scrollbar-dark-shadow-color: #FAFAFA;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap.fixed .car-detail-sticky::-webkit-scrollbar {
+	width: 17px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap.fixed .car-detail-sticky::-webkit-scrollbar-thumb {
+	background-color: #E1E1E1;
+	border: 5px solid transparent;
+	background-clip: content-box;
+	-webkit-border-radius: 15px;
+	        border-radius: 15px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap.fixed .car-detail-sticky::-webkit-scrollbar-track {
+	background-color: #FAFAFA;
+	border: 5px solid transparent;
+	background-clip: content-box;
+	-webkit-border-radius: 15px;
+	        border-radius: 15px;
 }
 
 .secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap {
@@ -11956,7 +12058,15 @@ html, body {
 }
 
 .mypage-container .mypage-body .mypage-body-cont {
-	width: 100%;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 900px;
+	-webkit-flex-basis: 900px;
+	    -ms-flex-preferred-size: 900px;
+	        flex-basis: 900px;
 	padding-left: 60px;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -11997,11 +12107,11 @@ html, body {
 	margin-left: 15px;
 }
 
-.mypage-container .list-section-header .indicator-area, .mypage-container .infos-section-header .indicator-area, .mypage-container .mypage-body-cont-header .indicator-area, .mypage-container .tbl-header .indicator-area {
+.mypage-container .indicator-area {
 	padding-top: 10px;
 }
 
-.mypage-container .list-section-header .indicator-area .menu-list, .mypage-container .infos-section-header .indicator-area .menu-list, .mypage-container .mypage-body-cont-header .indicator-area .menu-list, .mypage-container .tbl-header .indicator-area .menu-list {
+.mypage-container .indicator-area .menu-list {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -12011,17 +12121,19 @@ html, body {
 	border-bottom: 1px solid #e7e7e7;
 }
 
-.mypage-container .list-section-header .indicator-area .menu-list li input, .mypage-container .infos-section-header .indicator-area .menu-list li input, .mypage-container .mypage-body-cont-header .indicator-area .menu-list li input, .mypage-container .tbl-header .indicator-area .menu-list li input {
+.mypage-container .indicator-area .menu-list li input {
 	display: none;
 }
 
-.mypage-container .list-section-header .indicator-area .menu-list li label, .mypage-container .list-section-header .indicator-area .menu-list li button, .mypage-container .infos-section-header .indicator-area .menu-list li label, .mypage-container .infos-section-header .indicator-area .menu-list li button, .mypage-container .mypage-body-cont-header .indicator-area .menu-list li label, .mypage-container .mypage-body-cont-header .indicator-area .menu-list li button, .mypage-container .tbl-header .indicator-area .menu-list li label, .mypage-container .tbl-header .indicator-area .menu-list li button {
+.mypage-container .indicator-area .menu-list li label, .mypage-container .indicator-area .menu-list li button {
 	position: relative;
 	display: block;
 	padding: 20px;
+	font-size: 1rem;
+	text-align: center;
 }
 
-.mypage-container .list-section-header .indicator-area .menu-list li input:checked + label:after, .mypage-container .infos-section-header .indicator-area .menu-list li input:checked + label:after, .mypage-container .mypage-body-cont-header .indicator-area .menu-list li input:checked + label:after, .mypage-container .tbl-header .indicator-area .menu-list li input:checked + label:after {
+.mypage-container .indicator-area .menu-list li input:checked + label:after {
 	content: "";
 	position: absolute;
 	bottom: -1px;
@@ -12033,11 +12145,11 @@ html, body {
 	z-index: 5;
 }
 
-.mypage-container .list-section-header .indicator-area .menu-list li.active, .mypage-container .infos-section-header .indicator-area .menu-list li.active, .mypage-container .mypage-body-cont-header .indicator-area .menu-list li.active, .mypage-container .tbl-header .indicator-area .menu-list li.active {
+.mypage-container .indicator-area .menu-list li.active {
 	position: relative;
 }
 
-.mypage-container .list-section-header .indicator-area .menu-list li.active:after, .mypage-container .infos-section-header .indicator-area .menu-list li.active:after, .mypage-container .mypage-body-cont-header .indicator-area .menu-list li.active:after, .mypage-container .tbl-header .indicator-area .menu-list li.active:after {
+.mypage-container .indicator-area .menu-list li.active:after {
 	content: "";
 	position: absolute;
 	bottom: -1px;
@@ -12047,6 +12159,36 @@ html, body {
 	height: 4px;
 	background-color: #ff404b;
 	z-index: 5;
+}
+
+.mypage-container .indicator-area .menu-list.wide-type {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.mypage-container .indicator-area .menu-list.wide-type li {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	   -moz-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.mypage-container .indicator-area + .infos-section {
+	margin-top: 60px;
 }
 
 .mypage-container .mypage-body-cont-header {
@@ -12122,6 +12264,69 @@ html, body {
 	color: #fff;
 }
 
+.mypage-container .tbl-box table {
+	width: 100%;
+	border: 1px solid #e7e7e7;
+}
+
+.mypage-container .tbl-box table th, .mypage-container .tbl-box table td {
+	padding: 30px 40px;
+	text-align: left;
+	border: 1px solid #e7e7e7;
+	color: #54585a;
+}
+
+.mypage-container .tbl-box table th {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	background-color: #fafafa;
+}
+
+.mypage-container .tbl-box table td {
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.mypage-container .tbl-box table td .tit {
+	font-size: 16px;
+	color: #2f2f2f;
+}
+
+.mypage-container .tbl-box table td .tit + p {
+	margin-top: 14px;
+}
+
+.mypage-container .tbl-box table td .box-between + .box-between {
+	margin-top: 10px;
+}
+
+.mypage-container .tbl-box table + .lst {
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.mypage-container .tbl-box table + table {
+	margin-top: 20px;
+}
+
+.mypage-container .tbl-box + .tbl-box {
+	margin-top: 80px;
+}
+
+.mypage-container .tbl-box.cont-align-c th, .mypage-container .tbl-box.cont-align-c td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.mypage-container .tbl-box.cont-align-c .align-l {
+	text-align: left;
+}
+
+.mypage-container .tbl-box.cont-align-c .lst {
+	text-align: left;
+}
+
 .mypage-container .infos-section {
 	margin-top: 80px;
 }
@@ -12132,7 +12337,7 @@ html, body {
 
 .mypage-container .infos-section .result-none {
 	font-size: 20px;
-	padding: 90px 40px;
+	padding: 150px 40px;
 	text-align: center;
 	border-bottom: 1px solid #e7e7e7;
 }
@@ -12161,51 +12366,6 @@ html, body {
 	height: 14px;
 	margin-top: -7px;
 	background-color: #e7e7e7;
-}
-
-.mypage-container .infos-section .tbl-box table {
-	width: 100%;
-	border: 1px solid #e7e7e7;
-}
-
-.mypage-container .infos-section .tbl-box table th, .mypage-container .infos-section .tbl-box table td {
-	padding: 30px 40px;
-	text-align: left;
-	border: 1px solid #e7e7e7;
-	color: #54585a;
-}
-
-.mypage-container .infos-section .tbl-box table th {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	font-weight: normal;
-	background-color: #fafafa;
-}
-
-.mypage-container .infos-section .tbl-box table td {
-	font-size: 14px;
-	vertical-align: top;
-}
-
-.mypage-container .infos-section .tbl-box table td .box-between + .box-between {
-	margin-top: 10px;
-}
-
-.mypage-container .infos-section .tbl-box table .align-l {
-	text-align: left;
-}
-
-.mypage-container .infos-section .tbl-box table + .lst {
-	margin-top: 20px;
-	margin-bottom: 0;
-}
-
-.mypage-container .infos-section .tbl-box table + table {
-	margin-top: 20px;
-}
-
-.mypage-container .infos-section .tbl-box + .tbl-box {
-	margin-top: 80px;
 }
 
 .mypage-container .infos-section .small-btns {
@@ -12866,7 +13026,7 @@ html, body {
 
 .mypage-container .count-section {
 	font-size: 26px;
-	padding: 60px;
+	padding: 60px 40px;
 	-webkit-border-radius: 6px;
 	   -moz-border-radius: 6px;
 	        border-radius: 6px;
@@ -12882,6 +13042,404 @@ html, body {
 	color: #54585a;
 	font-size: 16px;
 	margin-top: 20px;
+}
+
+.mypage-container .count-section + .infos-section {
+	margin-top: 60px;
+}
+
+.mypage-container .count-section + .infos-section .result-none {
+	border-top: 1px solid #e7e7e7;
+}
+
+.mypage-container .hotDeal-section {
+	margin-top: 80px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	padding-bottom: 35px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .alert-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 26px;
+	margin-left: 50px;
+	text-align: center;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline > p + p {
+	position: relative;
+	padding-left: 40px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline > p + p:before {
+	content: ":";
+	width: 8px;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	margin-left: -4px;
+	color: #999;
+	z-index: 5;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline strong, .mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline span {
+	color: #54585a;
+	font-size: inherit;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline strong.txt-color-red, .mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline span.txt-color-red {
+	color: #ed1c24;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .alert-area .deadline span {
+	display: block;
+	font-size: 12px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .btn-goLink {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .btn-goLink .arrow-r {
+	position: relative;
+	margin-left: 10px;
+	height: 14px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .btn-goLink .arrow-r:before, .mypage-container .hotDeal-section .hotDeal-header .btn-goLink .arrow-r:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .btn-goLink .arrow-r:before {
+	border-width: 7px 0 7px 10px;
+	border-color: transparent transparent transparent #2f2f2f;
+}
+
+.mypage-container .hotDeal-section .hotDeal-header .btn-goLink .arrow-r:after {
+	position: absolute;
+	top: 4px;
+	left: 2px;
+	border-width: 3px 0 3px 4px;
+	border-color: transparent transparent transparent #ffffff;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont {
+	padding-top: 80px;
+	border-top: 1px solid #eee;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 0 95px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box .tit strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	font-size: 26px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box .tit span {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+	display: block;
+	font-size: 18px;
+	color: #8f9191;
+	margin-top: 10px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box .price {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	margin-top: 40px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box .price .cost {
+	color: #ddd;
+	font-size: 18px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box .price .cost small {
+	font-size: 14px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box .price .sale {
+	font-size: 28px;
+	color: #da291c;
+	margin-top: 15px;
+}
+
+.mypage-container .hotDeal-section .hotDeal-cont .detail .txt-box .price .sale small {
+	font-size: 18px;
+}
+
+.mypage-container .hotDeal-section .pagination-wrap {
+	margin-top: 50px;
+}
+
+.mypage-container .hotDeal-section .pagination-wrap .pagination-list {
+	width: 60px;
+	padding: 0;
+	font-size: 14px;
+	-webkit-box-align: baseline;
+	-webkit-align-items: baseline;
+	   -moz-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.mypage-container .hotDeal-section .pagination-wrap .pagination-list strong, .mypage-container .hotDeal-section .pagination-wrap .pagination-list em {
+	font-size: inherit;
+}
+
+.mypage-container .hotDeal-section .pagination-wrap .pagination-list .swiper-pagination-current {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+}
+
+.mypage-container .point-infos-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding: 60px 70px;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	background-color: #f5f5f5;
+	margin-top: 50px;
+}
+
+.mypage-container .point-infos-area .box-between {
+	width: 50%;
+	padding: 0 30px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.mypage-container .point-infos-area .box-between .tit, .mypage-container .point-infos-area .box-between .point {
+	font-size: 20px;
+}
+
+.mypage-container .point-infos-area .box-between .tit {
+	margin-right: 40px;
+}
+
+.mypage-container .point-infos-area .box-between .point {
+	color: #54585a;
+}
+
+.mypage-container .point-infos-area .box-between .txt-color-red {
+	color: #ed1c24;
+}
+
+.mypage-container .point-infos-area + .infos-section {
+	margin-top: 60px;
+}
+
+.mypage-container .point-infos-area + .infos-section .result-none {
+	border-top: 1px solid #e7e7e7;
+}
+
+.mypage-container .icon-point-plus, .mypage-container .icon-point-minus {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 17px;
+	height: 17px;
+	-webkit-border-radius: 17px;
+	   -moz-border-radius: 17px;
+	        border-radius: 17px;
+	font-size: 16px;
+	font-family: "ManropeR", "NotoR", serif;
+	color: #fff;
+	margin: 0 5px;
+}
+
+.mypage-container .icon-point-plus {
+	background-color: #ff404b;
+}
+
+.mypage-container .icon-point-minus {
+	background-color: #54585a;
+}
+
+.mypage-container ul.icon-guide-area {
+	border-top: 1px solid #e7e7e7;
+	padding: 30px 0;
+}
+
+.mypage-container ul.icon-guide-area li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+}
+
+.mypage-container ul.icon-guide-area li .icon {
+	margin-right: 10px;
+}
+
+.mypage-container ul.icon-guide-area li + li {
+	margin-top: 10px;
+}
+
+.mypage-container ul.icon-guide-area + .lst {
+	border-top: 1px solid #e7e7e7;
+	padding-top: 30px;
+	margin-top: 0;
+}
+
+.mypage-container .tab-cont-inner .btn-box {
+	margin: 60px 0;
+}
+
+.mypage-container .tab-cont-inner .grey-guide-box {
+	padding: 30px 40px;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	background-color: #f5f5f5;
+}
+
+.mypage-container .tab-cont-inner .grey-guide-box .tit {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.mypage-container .tab-cont-inner .grey-guide-box .txt {
+	margin-top: 15px;
+	color: #54585a;
+}
+
+.mypage-container .tab-cont-inner .grey-guide-box .underline {
+	margin: 0 10px;
 }
 
 .error-wrap {

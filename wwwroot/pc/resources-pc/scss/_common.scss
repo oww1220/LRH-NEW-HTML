@@ -188,19 +188,19 @@ $extra-small-devices: 320px;
 }
 
 //커스텀 스크롤바
-@mixin CustumScroll {
+@mixin CustumScroll($minus:5px) {
 	&::-webkit-scrollbar {
 		width: 17px;
 	}
 	&::-webkit-scrollbar-thumb {
 		background-color: #E1E1E1;
-		border: 5px solid transparent;
+		border: $minus solid transparent;
 		background-clip: content-box;
 		border-radius: 15px;
 	}
 	&::-webkit-scrollbar-track {
 		background-color: #FAFAFA;
-		border: 5px solid transparent;
+		border: $minus solid transparent;
 		background-clip: content-box;
 		border-radius: 15px;
 	}
@@ -336,6 +336,7 @@ $border-grey:#e7e7e7;
 $border-darkgrey:#d2d2d2;
 $border-red:#ff404b;
 $txt-red: #ed1c24;
+$txt-darkblack: #2f2f2f;
 
 
 .txt-brown{color:#ba9a81;}
@@ -343,6 +344,7 @@ $txt-red: #ed1c24;
 .txt-color-red{color:$txt-red;}
 .txt-color-lightgrey{color:#8f9191}
 .txt-color-brown{color:#ba9a81;}
+.txt-color-black{color:$txt-darkblack;}
 .txt-bold{@include Bold;}
 .txt-hide{@include Hide_txt;}
 .txt-small{font-size:14px;}
