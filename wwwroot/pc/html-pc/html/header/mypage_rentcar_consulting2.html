@@ -111,7 +111,10 @@
 										</p>
 									</div>
 								</div>
-								<a href="#" class="btn-goLink arrow-r">전체보기</a>
+								<a href="#" class="btn-goLink">
+									전체보기
+									<span class="arrow-r"></span>
+								</a>
 							</div>
 							<div class="hotDeal-cont">
 								<div class="swiper-container hotDealswiper">
@@ -213,6 +216,31 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
+
+	<script>
+		$(function(){
+			//이달의 핫딜 찬스
+			if($('.hotDealswiper').length) {
+				MUI.slide.init('.hotDealswiper','swiper', {
+					loop: true,
+					navigation: {
+						nextEl: '.hotDealswiper-button-next',
+						prevEl: '.hotDealswiper-button-prev',
+					},
+					autoplay: {
+						delay: 3000,
+					},
+					pagination: {
+						el: '.hotDealswiper .pagination-list',
+						type: 'fraction',
+						//renderFraction: function(currentClass, totalClass) {
+						//    return '<strong class="' + currentClass + '"></strong>' + '/' + '<em class="' + totalClass + '"></em>';
+						//}          
+					},        
+				});
+			}
+		});
+	</script>
 
 </body>
 </html>

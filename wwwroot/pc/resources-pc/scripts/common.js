@@ -1111,26 +1111,7 @@ if($('.longTerm-container .qnaAccor5').length){
 
 /* 마이페이지start-------------------------------------------------*/
 
-//이달의 핫딜 찬스
-if($('.hotDealswiper').length) {
-    MUI.slide.init('.hotDealswiper','swiper', {
-        loop: true,
-        navigation: {
-            nextEl: '.hotDealswiper-button-next',
-            prevEl: '.hotDealswiper-button-prev',
-         },
-        autoplay: {
-            delay: 3000,
-        },
-        pagination: {
-            el: '.hotDealswiper .pagination-list',
-            type: 'fraction',
-            //renderFraction: function(currentClass, totalClass) {
-            //    return '<strong class="' + currentClass + '"></strong>' + '/' + '<em class="' + totalClass + '"></em>';
-            //}          
-        },        
-    });
-}
+
 /* 마이페이지end-------------------------------------------------*/
 
     //푸터 슬라이더

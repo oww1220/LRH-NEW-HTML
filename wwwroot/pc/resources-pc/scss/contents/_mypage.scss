@@ -679,6 +679,32 @@
                     }
                 }
             }
+            .btn-goLink{
+                @include Align-middle;
+
+                .arrow-r{
+                    position: relative;
+                    margin-left:10px;
+                    height:14px;
+
+                    &:before, &:after{
+                        @include Position($top:0, $left:0);
+                        content:"";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                    }
+                    &:before{
+                        border-width: 7px 0 7px 10px;
+                        border-color: transparent transparent transparent #2f2f2f;
+                    }
+                    &:after{
+                        @include Position($top:4px, $left:2px);
+                        border-width: 3px 0 3px 4px;
+                        border-color: transparent transparent transparent #ffffff;
+                    }
+                }
+            } 
         }
         .hotDeal-cont{
             padding-top:80px;
@@ -732,6 +758,9 @@
                 box-sizing: border-box;
 
                 strong, em{font-size:inherit;}
+                .swiper-pagination-current{
+                    @include Bold;
+                }
             }
         }
     }
