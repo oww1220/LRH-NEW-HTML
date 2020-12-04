@@ -1110,7 +1110,11 @@ if($('.longTerm-container .qnaAccor5').length){
 
 
 /* 마이페이지start-------------------------------------------------*/
-
+if($('.mypage-container .pointTransitionTab').length){
+    MUI.event.taps('.mypage-container .pointTransitionTab', false, function(swap){
+        swap();
+    });
+}
 
 /* 마이페이지end-------------------------------------------------*/
 
