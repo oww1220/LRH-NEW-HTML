@@ -1,0 +1,329 @@
+.mypage-block{
+    @include Position( $position:fixed, $top: 0, $right: 0);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 70;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform .4s;
+    -webkit-overflow-scrolling:touch;
+    &.active {
+        transform: translateX(0);
+    }
+
+    .mypage-top {
+        background-color: #ed1c24;
+        z-index: 1;
+        padding: 2.6rem;
+        position: relative;
+        > .btn-prev {
+            margin-left:-.9rem;
+        }
+        .customer-info {
+            padding:2.6rem 0;
+            border-bottom:1px solid #fff;
+            strong {
+                color:#fff;
+                font-size:2.4rem;
+                @include Bold;
+                em {
+                    @include Normal;
+                }
+            }
+            ul {
+                @include Align-middle-left;
+                padding-top:2.1rem;
+                li {
+                    & + li {
+                        margin-left:1.7rem;
+                    }
+                    button {
+                        color:#fff;
+                        font-size:1.2rem;
+                        @include Align-middle;
+                        i {
+                            background-size: 80%;
+                            margin-left:.4rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .customer-accumulate {
+            padding-top:2.6rem;
+            ul {
+                width:100%;
+                margin:0;
+                li {
+                    a {
+                        @include Align-middle-column;
+                        strong {
+                            color:#fff;
+                            font-size:1rem;
+                            margin-top:1.4rem;
+                        }
+                        b {
+                            color:#fff;
+                            margin-top:.9rem;
+                            &::after {
+                                content:'';
+                                display: block;
+                                padding-top:.1rem;
+                                border-bottom:1px solid #fff;
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
+            
+        }
+        
+    }
+    .mypage-cont {
+        background-color: #fff;
+        .my-consulting {
+            padding:2.6rem 1.7rem;
+            border-bottom:7px solid #f5f5f5;
+            ul {
+                width:100%;
+                margin:0;
+                li {
+                    a {
+                        @include Align-between;
+                        @include Bold;
+                        font-size:1.1rem;
+                    }
+                    &:first-child {
+                        a {
+                            i {
+                                margin-right:1.7rem;
+                            }
+                        }
+                    }
+                    & + li {
+                        a {
+                            margin-left:1.7rem;
+                        }
+                    }
+                }
+            }
+        }
+        .my-reservation-list {
+            > div {
+                padding:3.4rem 1.7rem;
+                border-bottom:7px solid #f5f5f5;
+            }
+            .list-tit {
+                @include Align-between;
+                h2 {
+                    font-size:1.4rem;
+                    @include Bold;
+                }
+                button {
+                    @include Align-middle;
+                    @include Bold;
+                    font-size:1.1rem;
+                    i {
+                        margin-left:.2rem;
+                    }
+                }
+            }
+            .list-item {
+                .list-wrap {
+                    border:1px solid #d2d2d2;
+                    border-radius: .5rem;
+                    box-sizing: border-box;
+                    margin-top:1.7rem;
+                    > div {
+                        padding:1.3rem;
+                    }
+                
+                    .cont-top {
+                        background-color: #f5f5f5;
+                        border-bottom:1px solid #d2d2d2;
+                        border-radius: .5rem .5rem 0 0;
+                        box-sizing: border-box;
+                        @include Align-between;
+                        > div {
+                            @include Align-left-column;
+                            em {
+                                @include Align-middle-left;
+                                .btn-detail {
+                                    font-size:.9rem;
+                                    background-color: #fff;
+                                    border:1px solid #d2d2d2;
+                                    border-radius: .5rem;
+                                    padding:.4rem .6rem;
+                                    margin-left:.4rem;
+                                }
+                            }
+                            strong {
+                                @include Bold;
+                                padding-top:.7rem;
+                                &.pd-none {
+                                    padding:0;
+                                }
+                                &.txt-gray {
+                                    color:#8f9191;
+                                }
+                            }
+                        }
+                        span {
+                            width:4.7rem;
+                            height:1.7rem;
+                            @include Align-middle-right;
+                            i.flag {
+                                width:100%;
+                                height:100%;
+                            }
+                            i.icon {
+                                width:1.2rem;
+                                height:1.5rem;
+                                margin-right:.3rem;
+                            }
+                        }
+                    }
+                    .cont-in {
+                        li {
+                            @include Align-middle-left;
+                            strong {
+                                width:30%;
+                                font-size:1rem;
+                                @include Align-middle;
+                                &::after {
+                                    content:'';
+                                    display: block;
+                                    margin-left:auto;
+                                    margin-right:1rem;
+                                    height:1.3rem;
+                                    border-right:1px solid #d2d2d2;
+                                    box-sizing: border-box;
+                                }
+                            }
+                            b {
+                                font-size:1rem;
+                                &.bold {
+                                    @include Bold;
+                                }
+                                &.underline {
+                                    position: relative;
+                                    &::before {
+                                        content:'';
+                                        display: inline-block;
+                                        border-bottom:1px solid #000;
+                                        width:100%;
+                                        @include Position($bottom: 0, $left: 0)
+                                    }
+                                }
+                            }
+                            & + li {
+                                padding-top:.9rem;
+                            }
+                        }
+                    }
+                    .cont-btn {
+                        border-top:1px solid #d2d2d2;
+                        box-sizing: border-box;
+                        margin:0 1.3rem;
+                        padding:0;
+                        ul.list-type-col2 {
+                            li + li {
+                                button { 
+                                    position: relative;
+                                    &:before {
+                                        content: '';
+                                        height:1.3rem;
+                                        display: inline-block;
+                                        border-left: 1px solid #d2d2d2;
+                                        @include Position($top: 50%, $left: 0);
+                                        transform: translateY(-.6rem);
+                                    }
+                                }
+                            }
+                        }
+                        button {
+                            width:100%;
+                            color:#ed1c24;
+                            font-size:1.2rem;
+                            @include Align-middle;
+                            @include Bold;
+                            i {
+                                margin-right:.5rem;
+                            }
+                            &.txt-black {
+                                color:#2f2f2f;
+                            }
+                        }
+                    }
+                }
+                .swiper-pagination-wrap {
+                    @include Align-middle;
+                    margin-top:2.6rem;
+                    width:100%;
+                    .swiper-pagination {
+                        position: static;
+                        height:2rem;
+                        .swiper-pagination-bullet {
+                            margin:0 .4rem;
+                            width:.7rem;
+                            height:.7rem;
+                            border-radius:.5rem;
+                            opacity: 1;
+                            background-color: #ddd;
+                            &-active {
+                                background-color: #ff404b;
+                            }
+                        }
+                    }
+                }
+            }
+            .list-btn {
+                margin-top:2.6rem;
+                button {
+                    border:1px solid #F04040;
+                    border-radius:.5rem;
+                    i {
+                        margin-left:.3rem;
+                    }
+                }
+            }
+            &.dp-none {
+                display: none;
+            }
+        }
+    }
+    .mypage-bottom {
+        .my-sitemap {
+            padding:1.7rem;
+            > ul > li {
+                padding:1.1rem 0;
+                > a {
+                    @include Regular;
+                    font-size:1.1rem;
+                    color:#2f2f2f;
+                }
+                > ul {
+                    padding-top:.4rem;
+                    li {
+                        padding-top:1.3rem;
+                        a {
+                            @include Regular;
+                            font-size:1.1rem;
+                            color:#8f9191;
+                            &::before {
+                                content:'-';
+                                display: inline-block;
+                                padding-right:.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
