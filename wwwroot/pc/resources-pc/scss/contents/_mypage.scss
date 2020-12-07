@@ -264,6 +264,9 @@
                 text-align:left;
             }
         }
+        &.type2{
+            th, td{ padding:30px 20px; }
+        }
     }
     .infos-section{
         margin-top:80px;        
@@ -312,6 +315,13 @@
 
                 + .btn{margin-left:10px;}
             }
+        }
+
+        .txt-align{
+            display:flex;
+            align-items: center;
+            max-width:510px;
+            .icon{margin-right:10px;}
         }
 
         &:first-child{margin-top:50px;}
@@ -809,11 +819,14 @@
             padding:0 30px;
             box-sizing:border-box;
 
-            .tit, .point{font-size:20px;}
+            .tit, .point{
+                font-size:20px;
+                letter-spacing: -1px;
+            }
             .tit{
                 margin-right:40px;
             }
-            .point{color:#54585a;}
+            .point{color:#54585a; font-size:26px;}
             .txt-color-red{color:$txt-red;}
         }
 
@@ -869,4 +882,302 @@
             .underline{margin:0 10px;}
         }   
     }
+
+    .icon.coupon{margin-left:10px;}
+    .tiket-list{
+        width: calc(100% + 10px);
+        display:flex;
+		flex-wrap: wrap;
+		align-items:stretch;
+		justify-content:center;
+
+		> li{		    
+            overflow:hidden;	
+            width:50%;            
+            margin-bottom:20px;
+        }
+        .tiket-item{     
+            position:relative;
+            border-radius: 10px;
+            border:2px solid $border-darkgrey;
+            padding:30px 40px;
+            margin-right:10px;
+            box-sizing:border-box;
+
+            &:before, &:after{
+                @include Position($top:50%);
+                content:"";
+                display:block;
+                width:40px;
+                height:40px;
+                border:2px solid $border-darkgrey;
+                border-radius: 40px;
+                border-bottom-color: #fff;
+                border-right-color: #fff;
+                
+                background-color:#fff;
+                margin-top:-20px;
+                z-index:5;
+            }
+            &:before{
+                left:-24px; 
+                transform: rotate(135deg);
+            }
+            &:after{
+                right:-24px;
+                transform: rotate(-45deg);
+            }
+
+            .tiket-item-header{
+                strong {
+                    display:block;
+                    @include Bold;
+                    font-size:20px;
+                }
+                p{margin-top:15px;}
+                
+            }
+            .info-list{
+                margin-top:30px;
+                padding-top:30px;
+                border-top:1px dashed $border-darkgrey;
+                
+                font-size:14px;
+                color:#8f9191;
+
+                li{
+                    display:flex;
+                    align-items: baseline;                        
+
+                    .tit{
+                        position:relative;
+                        flex:none;
+                        width:110px;
+                        flex-basis: 110px;
+                        @include Regular;
+
+                        &:after{
+                            @include Position($top:50%, $right:0px);
+                            content:"";
+                            display:block;
+                            width:1px;
+                            height:14px;
+                            margin-top:-7px;
+                            background-color:#e7e7e7;
+                        }
+                    }
+                    .cont{
+                        padding:0 20px;
+                    }
+                    .underline{color:#2f2f2f;}
+                    + li{ margin-top:20px; }
+                }
+            }
+        }
+    }
+
+    .event-btn-box{
+        padding:20px 0;
+        margin-top:60px;
+        border-top:1px solid $border-grey;
+
+        .txt-top{
+            @include Bold;
+            color:#54585a;
+            font-size:20px;
+            text-align:center;
+            padding:40px 0;
+
+            .icon{margin-right:15px;}
+        }
+        .btn-list{
+            width: calc(100% + 10px);
+            display:flex;
+            flex-wrap: wrap;
+            align-items:stretch;
+            justify-content:center;
+
+            li{
+                width:50%;
+                padding-right:10px;
+                box-sizing: border-box;
+                .btn{
+                    > .span{
+                        display:flex;
+                        align-items: baseline;
+                    }
+                }
+                .multiple-txt{font-size:20px;}
+            }
+            
+        }
+    }
+
+    .paymentCard-list{
+        border-top:1px solid $border-grey;
+
+        li{
+            padding:30px 40px;
+            border-bottom:1px solid $border-grey;
+        }
+        .card-item{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card-infos{
+                display:flex; 
+                justify-content: flex-start;
+                align-items: center;
+
+                .card-logo{
+                    margin-right:30px;
+                }
+                > strong{@include Bold; font-size:18px;}
+                .number{font-size:14px; color:#54585a; margin-left:40px;}
+            }
+            .btns{
+                .btn{height: 34px; font-size:14px;}
+            }
+        }
+    }
+    .driver-license-section{
+        .selection{
+            display:flex;
+            align-items: center;
+
+            .input-tit{
+                flex:none;
+                flex-basis: 170px;
+                width:170px;
+            }
+        }
+        
+        .driver-license-cont{ 
+            position: relative;
+            margin-top:40px;
+
+            input, select{
+                max-width:130px;
+                height:40px;
+            }
+            .box-align{
+                align-items: center;
+
+                .symbol{margin-right:5px;}
+            }
+        
+        }
+
+        .domestic-license{
+            .driver-license-cont{               
+                width:670px;
+                height:378px;
+                @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
+
+                .type-box, .number-box, .expiration-date-box, .issue-date-box{
+                    position:relative;
+                    display:block;
+    
+                    .numbering{
+                        @include Position($top:10px,$right:-26px);
+                    }            
+                }
+                .type-box{
+                    @include Position($top:30px, $left:55px);
+    
+                    select{width: 130px;}
+                }
+                .number-box{
+                    @include Position($top:90px, $left:202px);
+    
+                    .box-between{
+                        width:430px;
+    
+                        .inputT{width:auto;}
+                        select, input{max-width:102px;}
+                    }
+                }
+                .expiration-date-box{
+                    @include Position($top:256px, $left:270px);
+                }
+                .issue-date-box{
+                    @include Position($bottom:30px, $left:202px);
+                }
+            }
+        }
+        .international-license{
+            .driver-license-cont{               
+                width:670px;
+                height:553px;
+                @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
+            }            
+        }
+
+        .guide-cont{
+            margin-top:30px;
+
+            .tit{
+                font-size:18px;
+            }
+            .lst{
+                margin-top:20px;
+
+                li{
+                    padding-left:28px;
+                    + li{margin-top:10px;}
+                }
+            }
+        }
+        .numbering{
+            @include Align-middle;
+            width:18px;
+            height:18px;
+            color:#fff;
+            font-size:12px;
+            border-radius:18px;
+            background-color:#ff404b;
+        }        
+    }
+    .section-form{
+        margin-top:80px;
+        
+        .form-cont{
+            .row{padding:0 40px;}
+        } 
+        
+        .agree-area{
+            .agree-header{
+                margin-bottom:30px;
+                label{color:#8f9191;}
+            }
+            .terms-area{    
+                font-size:14px;
+                padding:30px;
+                margin:35px 40px 0;
+                background-color:#fafafa;
+                @include roundBox;
+    
+                > p {margin-bottom:35px;}
+                > ul{margin-bottom:30px;}
+                h4{margin:10px 0;}
+                
+            }
+            .info-box{
+                font-size:14px;
+                margin-top:20px;
+            }
+            .agree-list{
+                border-top:1px solid #e7e7e7;
+    
+                > li{
+                    padding:30px 0 30px 0;
+                    margin:5px 0;
+                    border-bottom:1px solid #e7e7e7;
+                }
+            }
+        }
+    }
+    
 }
+
