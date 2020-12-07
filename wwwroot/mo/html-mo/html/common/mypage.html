@@ -28,13 +28,14 @@
 	<!--header 컴포넌트-->
 	<header class="header">
 		<div class="header-top sub">
-			<h1>차량선택</h1>
+			<h1>마이페이지</h1>
 			<button type="button" class="btn-prev"><i class="icon prev">이전으로</i></button>
 			<button type="button" class="btn-mypage" data-target="mypage-block" data-on="true" data-sort="none">
 				<i class="icon mypage">마이페이지</i>
 			</button>
 			<button type="button" class="btn-drawer" data-target="drawer" data-on="true" data-sort="none">
-				<i class="icon draw">메뉴열기</i></button>
+				<i class="icon draw">메뉴열기</i>
+			</button>
 		</div>
 		
 	</header>
@@ -55,11 +56,18 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
+	<!--drawer 컴포넌트-->
+	<div class="drawer">
+		<button type="button" class="btn-drawer-close"  data-target="drawer" data-on="true" data-sort="none">레이어닫기</button>
+		전체메뉴 부분
+	</div>
+	<!--//drawer 컴포넌트-->
+
 	<!--mypage 컴포넌트-->
 	<div class="mypage-block">
 		<div class="mypage-in">
 			<div class="mypage-top">
-				<button type="button" class="btn-prev"><i class="icon prev-w">이전으로</i></button>
+				<button type="button" class="btn-prev btn-mypage-close" data-target="mypage-block" data-on="true" data-sort="none"><i class="icon prev-w">이전으로</i></button>
 				<div class="customer-info">
 					<strong>김롯데님 <em>일반회원</em></strong>
 					<ul>

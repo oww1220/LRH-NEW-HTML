@@ -330,6 +330,11 @@
         width: 48px;
         height: 44px;
     }
+    &.talk-small{
+        @include Background($sprite:'ico-talk', $position:center, $size:contain);
+        width: 40px;
+        height: 30px;
+    }
     &.talk2{
         @include Background($sprite:'ico-talk2', $position:center);
         width: 25px;
@@ -621,8 +626,26 @@
         width: 35px;
 		height: 35px;
     }
+    &.coupon {
+        @include Background($sprite:'ico-coupon', $position:center center);
+        width: 28px;
+		height: 21px;
+    }
 }
 
+
+//카드 로고
+.card-logo {
+    width:64px;
+    height: 64px;
+    
+    &.kebhana {
+        @include Background($sprite:'logo-kebhana', $position:center, $path:'logos', $size:contain);
+    }
+    &.hyundai {
+        @include Background($sprite:'logo-hyundai', $position:center, $path:'logos', $size:contain);
+    }
+}
 
 //캐스케이드
 button.active .filter{
