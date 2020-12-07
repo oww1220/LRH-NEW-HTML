@@ -804,6 +804,9 @@
         .license-list {
             margin-top: 2.6rem;
             padding: 0 1.7rem;
+            &.global {
+                display: none;
+            }
             h3 {
                 margin-top:3.4rem;
                 padding: 1.5rem 1.3rem;
@@ -828,13 +831,16 @@
             }
             .chk-agree-list {
                 margin-top:0;
+                padding-bottom: 1.7rem;
+                border-bottom: 1px solid #e7e7e7;
                 .chk-agree-cols {
                     .chk-agree-top {
                         .inputC {
                             label {
-                            span { 
-                                    font-size:1.1rem;
-                            }
+                                @include Regular;
+                                span { 
+                                        font-size:1.1rem;
+                                }
                             }
                             label:before {
                                 @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
@@ -846,29 +852,29 @@
                             }
                         } 
                     }
-                    .chk-agree-cont {
+                    .chk-agree-cont2 {
+                        @include Regular;
                         background-color:#f5f5f5;
                         border-radius:.6rem;
-                        padding:1.7rem;
-                        li {
-                            border-bottom:0;
-                            color: #8f9191;
-                            text-indent:-.8rem;
+                        padding:1.7rem .9rem;
+                        font-size: 1.1rem;
+                        color:#8f9191;
+                        .guide {
+                            line-height: 1.5;
+                            text-indent: -.8rem;
                             padding-left:1rem;
-                            font-size:1.1rem;
-                            &::before {
-                                content: '';
-                                display: inline-block;
-                                margin-right:.4rem;
-                                width:.2rem;
-                                height:.2rem;
-                                background-color: #8f9191;
-                                border-radius: 100%;
-                                vertical-align: middle;
+                            & > li{
+                                border: 0;
+                                & > i{
+                                    margin-right: .6rem;
+                                }
+                                &.red_txt{
+                                    color:#ed1c24;
+                                }
                             }
-                            & + li {
-                                padding-top:1.3rem;
-                            }
+                        }
+                        > p {
+                            padding: 0 1rem;
                         }
                     }
                 }
