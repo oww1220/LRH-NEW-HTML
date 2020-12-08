@@ -23175,6 +23175,10 @@
 	display: none;
 }
 
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont .corporation-tab li:first-child .wrap {
+	padding: 0 1.7rem;
+}
+
 .secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont .corporation-tab li:first-child .inputT {
 	padding: 1rem 0;
 	display: -webkit-box;
@@ -23253,39 +23257,47 @@
 }
 
 .secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap {
-	padding: 1.7rem;
+	padding: 0;
+	position: relative;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div {
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont input {
+	display: none;
+}
+
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont label {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	   -moz-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	padding: 1.7rem 1.7rem 5.6rem;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .text-cont {
-	width: 75%;
-}
-
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .text-cont strong {
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont label strong {
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaB", serif;
 	font-weight: normal;
 	font-size: 1.4rem;
+	position: relative;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .text-cont .info {
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont label strong:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont label .info {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -23301,7 +23313,7 @@
 	margin-top: 1rem;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .text-cont .info > div {
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont label .info > div {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -23314,50 +23326,47 @@
 	        align-items: center;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .text-cont .info > div em {
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont label .info > div em {
 	min-width: 3.6rem;
 	margin-right: 1rem;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .text-cont .info > div span:before {
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont label .info > div span:before {
 	content: '|';
 	display: inline-block;
 	padding-right: 1rem;
 	color: #e7e7e7;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .cover {
-	width: 8.8rem;
-	min-height: 4.4rem;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	   -moz-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont input:checked + label {
+	border-top: 1px solid #ed1c24;
+	border-bottom: 1px solid #ed1c24;
+	background-color: #fff9f9;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
-.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > div .cover img {
-	width: 100%;
-	height: 100%;
+.secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap .text-cont input:checked + label strong::before {
+	width: 1.4rem;
+	height: 1.2rem;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-radio-on03.png");
+	background-position: center center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
 }
 
 .secondhand-wrap .section-detail .section-cont.cont-item1 .tab-cont li .wrap > button {
-	margin-top: 1.3rem;
 	height: 2.6rem;
 	border: .1rem solid #d2d2d2;
 	-webkit-border-radius: .5rem;
 	   -moz-border-radius: .5rem;
 	        border-radius: .5rem;
+	position: absolute;
+	bottom: 1.7rem;
+	left: 1.7rem;
 }
 
 .secondhand-wrap .section-detail .section-cont.cont-item2 {
