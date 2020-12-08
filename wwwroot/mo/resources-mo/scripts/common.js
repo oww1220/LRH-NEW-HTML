@@ -1344,8 +1344,8 @@ if($('.mypage-wrap .tab-round').length){
 }
 
 //mypage - cont swiper
-if($('.mypage-block .swiper-item').length) {
-    MUI.slide.init('.mypage-block .swiper-item','swiper', {
+if($('.mypage-main .swiper-item').length) {
+    MUI.slide.init('.mypage-main .swiper-item','swiper', {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
