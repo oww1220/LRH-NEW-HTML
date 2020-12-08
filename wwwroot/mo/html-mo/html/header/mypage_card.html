@@ -38,7 +38,7 @@
                 
                 <div class="detail-layout">
                     <p class="t_comment"><i class="icon pannel09"></i>결제 카드를 등록하시면 차량 대여요금 5천원 추가 할인 됩니다.</p>
-                    <button type="button" class="btn btn-gray">결제카드 등록하기</button>
+                    <button type="button" class="btn btn-gray layer-infos-open" data-layer="type-shor-card">결제카드 등록하기</button>
                 </div>
                 <div class="list-view-info">
                     <strong>나의 결제카드<span>3건</span></strong>
@@ -81,7 +81,146 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
+    <!--layer-full 등록카드 정보 입력 컴포넌트-->
+	<div class="layer-wrap layer-full layer-infos type-shor-card" data-type="full">
+		<!--상단-->
+		<div class="full-top">
+			<button type="button" class="btn btn-pannel layer-full-close" data-layer="type-shor-card"><i class="icon layerclose">닫기 버튼</i></button>
+			<h4>
+				등록카드 정보 입력
+			</h4>
+		</div>
+		<!--//상단-->
+		<!--컨텐츠-->
+		<div class="full-inner">
+			<div class="full-cont">
 
+				<div class="layer-infos short-payment">
+					<div class="short-payment-cont">
+						<div class="detail-layer-inputT inputT">
+							<div class="detail-layer-inputT-tit">카드사</div>
+							<div class="inputT">
+								<select class="selectbox" name="" id="">
+									<option value="">선택하세요.</option>
+									<option value="">현대카드</option>
+									<option value="">삼성카드</option>
+								</select>
+							</div>
+						</div>
+						<div class="detail-layer-inputT inputT">
+							<div class="detail-layer-inputT-tit">카드별명</div>
+							<div class="inputT">
+								<input type="text" id="" name="" title="카드별명" placeholder="" value="">
+							</div>
+						</div>
+						<div class="detail-layer-inputT inputT">
+							<div class="detail-layer-inputT-tit">카드번호</div>
+							<ul class="detail-layer-inputT-number02 list-type-col4">
+								<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+								<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+								<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+								<li class="inputT"><input type="text" id="" name="" title="name" placeholder="" value=""></li>
+							</ul>
+						</div>
+						<div class="detail-layer-inputT inputT">
+							<div class="detail-layer-inputT-tit">유효기간</div>
+							<ul class="detail-layer-inputT-number03 list-type-col2">
+								<li class="inputT">
+									<select class="selectbox" name="" id="">
+										<option value="">년</option>
+										<option value="">2022</option>
+										<option value="">2021</option>
+									</select>
+								</li>
+								<li class="inputT">
+									<select class="selectbox" name="" id="">
+										<option value="">월</option>
+										<option value="">01</option>
+										<option value="">02</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+						<div class="detail-layer-inputT inputT">
+							<div class="detail-layer-inputT-tit">비밀번호</div>
+							<div class="inputT">
+								<input type="text" id="" name="" title="비밀번호" placeholder="비밀번호 앞 2자리 숫자" value="">
+							</div>
+						</div>
+						<div class="detail-layer-chk-box">
+							<div class="chk-agree-tit">
+								<strong>카드정보 등록을 위한 이용자 동의 사항</strong>
+							</div>
+							<div class="chk-agree-list">
+								<div class="chk-agree-all">
+									<div class="inputC">
+										<input type="checkbox" name="checkbox11" id="checkbox11-1">
+										<label for="checkbox11-1">
+											<span class="txtBold">전체동의</span>
+										</label>
+									</div> 
+								</div>
+								<ul class="chk-agree-cols">
+									<li>
+										<div class="chk-agree-top">
+											<div class="inputC inputC02">
+												<input type="checkbox" name="checkbox11" id="checkbox11-2">
+												<label for="checkbox11-2">
+													<span>개인정보 수집 및 이용안내 동의 사항 (필수)</span>
+												</label>
+											</div> 
+											<a href="#none" class="layer-infos-open" data-layer="type-"><i class="icon next2"></i></a>
+										</div>
+									</li>
+									<li>
+										<div class="chk-agree-top">
+											<div class="inputC inputC02">
+												<input type="checkbox" name="checkbox11" id="checkbox11-3">
+												<label for="checkbox11-3">
+													<span>개인정보 위탁 및 제공안내 이용자 동의 사항 (필수)</span>
+												</label>
+											</div> 
+											<a href="#none" class="layer-infos-open" data-layer="type-"><i class="icon next2"></i></a>
+										</div>
+									</li>
+									<li>
+										<div class="chk-agree-top">
+											<div class="inputC inputC02">
+												<input type="checkbox" name="checkbox11" id="checkbox11-4">
+												<label for="checkbox11-4">
+													<span>정기과금 이용약관 이용자 동의 사항 (필수)</span>
+												</label>
+											</div> 
+											<a href="#none" class="layer-infos-open" data-layer="type-"><i class="icon next2"></i></a>
+										</div>
+									</li>
+									<li>
+										<div class="chk-agree-top">
+											<div class="inputC inputC02">
+												<input type="checkbox" name="checkbox11" id="checkbox11-5">
+												<label for="checkbox11-5">
+													<span>정기과금 이용약관 이용자 동의 사항 (필수)</span>
+												</label>
+											</div> 
+											<a href="#none" class="layer-infos-open" data-layer="type-"><i class="icon next2"></i></a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--//컨텐츠-->
+		<div class="btn-group">
+			<button type="button" class="btn btn-gray">취소</button>
+			<button type="button" class="btn btn-red">등록</button>
+		</div>
+	</div>
+    <!--//layer-full 등록카드 정보 입력 컴포넌트-->
+    
 	<!--상단 타이틀(추후삭제)-->
     <script>
 	$(function(){

@@ -167,14 +167,164 @@
                     }
                 }
             }
+
             &.branch {
                 padding: 50px 20px 35px 50px;
                 background: #2a2a2a;
+                .m-tit {
+                    @include Align-between;
+                    .inputC{
+                        position: relative;
+                        z-index: 11;
+                        label {
+                            line-height: 1;
+                            &:before{
+                                background: url(../../resources-pc/images/icons/ico-check3-off.png) 0 0 no-repeat;
+                                width: 14px;
+                                height: 11px;
+                            }
+                            span{
+                                font-size:16px;
+                                color:#bbb;
+                                @include Regular;
+                            }
+                        }
+                        input:checked + label {
+                            &:before{
+                                background: url(../../resources-pc/images/icons/ico-check3-on.png) 0 0 no-repeat;
+                            }
+                            span{
+                                color:#fff;
+                            }
+                        }
+                    }
+                }
                 h2:before {
                     height: 27px;
                     background: url(../../resources-pc/images/icons/ico-main-branch.png) 0 0 no-repeat;
                 }
+                .shor-main-toggle-cont {
+                    display: none;
+                    position: relative;
+                    .shor-main-toggle-txt {
+                        line-height: 1.4;
+                        font-size:1.1rem;
+                    }
+                    .shor-main-list-tit{
+                        border-bottom:1px solid #e7e7e7;
+                        padding:0 1.3rem;
+                        @include Align-between;
+                        .iconList{
+                            width:30%;
+                            border:0 none;
+                            border-radius: 0;
+                            li{
+                                label {
+                                    border:0 none;
+                                    background-color:#fff;
+                                    font-size:1.3rem;
+                                    @include Regular;
+                                }
+                                input:checked + label {
+                                    border-bottom:2px solid #ff404b;
+                                    @include Bold;
+                                }
+                            }
+                        }
+                    }
+                    .shor-main-list-branch{
+                        display:none;
+                        @include Position($top: 0, $left: 0);
+                        width:100%;
+                        height:100%;
+                        z-index: 10;
+                        background-color: #fff;
+                        .shor-main-list-rt{
+                            .iconList{
+                                border:0 none;
+                                border-radius: 0;
+                                padding: 0 0 0 1.3rem;
+                                li{
+                                    width:auto;
+                                    margin:0 .9rem 0 .9rem;
+                                    position: relative;
+                                    label {
+                                        border:0 none;
+                                        background-color: #ed1c24;
+                                        font-size:1.2rem;
+                                        @include Regular;
+                                        color:#fff;
+                                        height:auto;
+                                        margin:0.9rem 0 .9rem 0;
+                                    }
+                                    input:checked + label {
+                                        border-bottom:2px solid #ed1c24;
+                                        @include Bold;
+                                        color:#fff;
+                                    }
+                                }
+                                li:first-child{
+                                    margin:0 .9rem 0 0;
+                                }
+                                li:first-child:after{
+                                    display:inline-block;
+                                    content:"";
+                                    border-right:1px solid #e7e7e7;
+                                    height:40%;
+                                    @include Position($top: 50%, $right: -20%);
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                    }
+                    .shor-main-list-wrap{
+                        @include Align-box;
+                        // padding:1.7rem;
+                        .shor-main-list-lt{
+                            overflow-y: auto;
+                            height:27.3rem;
+                            // width:40%;
+                            width:36.1%;
+                            background-color: #fafafa;
+                            padding:1.7rem 1.3rem 1.7rem 1.7rem;
+                            @include Align-box;
+                            ul{
+                                width:100%;
+                            }
+                        }
+                        .shor-main-list-rt{
+                            overflow-y: auto;
+                            height:27.3rem;
+                            width:44.5%;
+                            border-left:1px solid #e7e7e7;
+                            padding:1.7rem 1.7rem 1.7rem 1.3rem;
+                            @include Align-box;
+                            ul{
+                                width:100%;
+                            }
+                        }
+                        .btn-link{
+                            border:0 none;
+                            color:#54585a;
+                            height:3.6rem;
+                            padding:0 0 0 1.3rem;
+                            text-align: left;
+                            line-height:1.4;
+                            @include Regular;
+                            &.active{
+                                @include Bold;
+                                b{
+                                    border-bottom: 1px solid #a02a3d;
+                                    font-size:1.1rem;
+                                    color:#a02a3d;
+                                    padding-bottom:.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
             }
+
             &.time {
                 padding: 50px 20px 35px 30px;
                 width: 250px;
@@ -192,11 +342,6 @@
         //@include Position($top: 0, $right: 0);
     }
 }
-
-
-
-
-
 
 
 
