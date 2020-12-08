@@ -31,7 +31,7 @@ $(function(){
 			</li>
 			<li>	
 				<span class="icon myPannel04"></span>
-				<p>메버쉽 쿠폰</p>
+				<p>멤버쉽 쿠폰</p>
 				<a href="#" class="underline">2장</a>
 			</li>
 			<li>	
