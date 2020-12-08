@@ -1343,7 +1343,7 @@ if($('.mypage-wrap .tab-round').length){
     });
 }
 
-//mypage - cont swiper
+//마이페이지-메인
 if($('.mypage-main .swiper-item').length) {
     MUI.slide.init('.mypage-main .swiper-item','swiper', {
         loop: true,
