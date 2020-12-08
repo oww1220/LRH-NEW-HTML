@@ -74,11 +74,21 @@
 	}
 	.footer-infos-bn{
 		@include Align-top;
+		align-items: flex-end;
 		justify-content: flex-start;
 		margin-top:45px;
+		.footer-infos-bn-box{
+			
+		}
 		.footer-infos-sns{
-			@include Align-middle-left;
-			margin-left:25px;
+			@include Align-middle-column;
+			align-items: flex-start;
+			margin-left:45px;
+			p{
+				font-size:14px;
+				@include Bold;
+				margin-bottom:15px;
+			}
 			ul{
 				@include Align-middle-left;
 				& > li{
@@ -91,6 +101,7 @@
 		}
 		.footer-infos-list{
 			@include Align-middle-left;
+			margin-left:50px;
 			.detail-view-list-wrap {
 				width: 202px;
 				@include Align-middle-left;

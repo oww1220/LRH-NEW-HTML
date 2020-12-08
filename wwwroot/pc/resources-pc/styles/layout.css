@@ -1034,15 +1034,16 @@ html, body {
 	position: relative;
 	padding-left: 12px;
 	font-size: 14px;
+	line-height: 1.5;
 }
 
 .lst.dot > li::before {
 	position: absolute;
-	top: 0;
+	top: -2px;
 	left: 0;
-	content: "·";
 	width: 12px;
 	font-size: 18px;
+	content: "·";
 }
 
 .lst.hypen > li::before {
@@ -2152,6 +2153,11 @@ html, body {
 	   -moz-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 	-webkit-box-pack: start;
 	-webkit-justify-content: flex-start;
 	   -moz-box-pack: start;
@@ -2171,7 +2177,32 @@ html, body {
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin-left: 25px;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	margin-left: 45px;
+}
+
+.footer .footer-infos-bn .footer-infos-sns p {
+	font-size: 14px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	margin-bottom: 15px;
 }
 
 .footer .footer-infos-bn .footer-infos-sns ul {
@@ -2206,6 +2237,7 @@ html, body {
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	margin-left: 50px;
 }
 
 .footer .footer-infos-bn .footer-infos-list .detail-view-list-wrap {

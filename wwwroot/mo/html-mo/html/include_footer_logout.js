@@ -5,6 +5,9 @@ $(function(){
         <!--footer 컴포넌트-->
         <footer class="footer">
             <div class="inner">
+                <div class="footer-bn">
+                    <img src="../../../resources-mo/images/icons/ico-foot-bn.png" alt="bn">
+                </div>
                 <div class="footer-center">
                     <ul class="list-type-col2">
                         <li><em>고객센터</em><b><a href="tel:1588-1230">1588-1230</a></b></li>
@@ -46,13 +49,24 @@ $(function(){
                         <li><a href="#">이용약관</a></li>
                     </ul>
                 </div>
+                <div class="footer-sns">
+                    <p>롯데렌터카 공식 SNS 채널</p>
+                    <ul class="list-type-col5">
+                        <li><a href="#"><i class="icon foot-sns01">카카오</i></a></li>
+                        <li><a href="#"><i class="icon foot-sns02">페이스북</i></a></li>
+                        <li><a href="#"><i class="icon foot-sns03">인스타그램</i></a></li>
+                        <li><a href="#"><i class="icon foot-sns04">유튜브</i></a></li>
+                        <li><a href="#"><i class="icon foot-sns05">네이버포스트</i></a></li>
+                        <li><a href="#"><i class="icon foot-sns06">네이버블로그</i></a></li>
+                    </ul>
+                </div>
                 <div class="footer-app">
                     <p>추천APP서비스</p>
                     <ul class="list-type-col4">
-                        <li class=""><a href="#"><i class="icon app01">신차장 다이렉트</i></a></li>
-                        <li class=""><a href="#"><i class="icon app02">롯데렌터카 신차장 멤버십</i></a></li>
-                        <li class=""><a href="#"><i class="icon app03">MYOMEE</i></a></li>
-                        <li class=""><a href="#"><i class="icon app04">그린카</i></a></li>
+                        <li><a href="#"><i class="icon app01">신차장 다이렉트</i></a></li>
+                        <li><a href="#"><i class="icon app02">롯데렌터카 신차장 멤버십</i></a></li>
+                        <li><a href="#"><i class="icon app03">MYOMEE</i></a></li>
+                        <li><a href="#"><i class="icon app04">그린카</i></a></li>
                     </ul>
                 </div>
             </div>
