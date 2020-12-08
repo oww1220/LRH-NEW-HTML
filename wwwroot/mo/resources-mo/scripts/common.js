@@ -80,6 +80,49 @@ $(function(){
         });
     }
 
+
+    //goQuick 열기
+    MUI.event.toggle('.fixedRight .btn-goQuick', null, true, function(logic, layer) {
+        //console.log(11);
+        $BODY.addClass("fixed");
+        $('.goQuick-menu-list').addClass('active');
+        $('.bg-dimmed').show();
+        $('.btn-goQuick').addClass('btn-goQuick-close');
+        logic();
+    });
+
+    //goQuick 닫기
+    MUI.event.toggle('.fixedRight .btn-goQuick-close', null, true, function(logic, layer) {
+        $BODY.removeClass("fixed");
+        $('.goQuick-menu-list').removeClass('active');
+        $('.bg-dimmed').hide();
+        $('.btn-goQuick').removeClass('btn-goQuick-close');
+        logic();
+    });
+
+    //goQuick
+    if($('.fixedRight .btn-goQuick').length){
+        // MUI.layer.openClick('.btn-goQuick', LAYER_DIM, LAYER_PARENT, true, function(show){
+        //     $('.btn-goQuick').addClass('btn-goQuick-close');
+        //     $('.goQuick-menu-list').addClass('active');
+        //     show();
+        // });
+        // MUI.layer.closeClick('.btn-goQuick-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
+        //     $('.btn-goQuick').removeClass('btn-goQuick-close');
+        //     $('.goQuick-menu-list').removeClass('active');
+        //     console.log('close');
+        //     hide();
+        // });
+
+        MUI.event.toggle('.fixedRight .btn-goQuick', '.fixedRight .goQuick-menu-list', true, function(logic, layer) {
+            $('.bg-dimmed').on('click', function(){
+                $('.goQuick-menu-list').removeClass('active');
+                $('.btn-goQuick').removeClass('btn-goQuick-close');
+            });
+            logic();
+        });
+    }
+
     //차트그리기
     if($('.pie-chart').length){
         $('.pie-chart').easyPieChart({

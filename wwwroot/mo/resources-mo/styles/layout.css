@@ -814,7 +814,7 @@
 	position: fixed;
 	right: 0;
 	bottom: 1.7rem;
-	z-index: 41;
+	z-index: 51;
 	-webkit-transition: -webkit-transform .2s;
 	transition: -webkit-transform .2s;
 	-o-transition: -o-transform .2s;
@@ -822,6 +822,28 @@
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s, -moz-transform .2s, -o-transform .2s;
 	padding: 1.7rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
 }
 
 .fixedRight button {
@@ -848,6 +870,75 @@
 	-moz-transition: opacity .2s, transform .2s, -moz-transform .2s;
 	transition: opacity .2s, transform .2s;
 	transition: opacity .2s, transform .2s, -webkit-transform .2s, -moz-transform .2s, -o-transform .2s;
+}
+
+.fixedRight .goQuick-menu-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	    -ms-transform: scale(0);
+	     -o-transform: scale(0);
+	        transform: scale(0);
+	opacity: 0;
+	-webkit-transition: opacity .2s, -webkit-transform .2s;
+	transition: opacity .2s, -webkit-transform .2s;
+	-o-transition: opacity .2s, -o-transform .2s;
+	-moz-transition: opacity .2s, transform .2s, -moz-transform .2s;
+	transition: opacity .2s, transform .2s;
+	transition: opacity .2s, transform .2s, -webkit-transform .2s, -moz-transform .2s, -o-transform .2s;
+}
+
+.fixedRight .goQuick-menu-list li {
+	margin-top: .8rem;
+}
+
+.fixedRight .goQuick-menu-list span {
+	font-size: 1.1rem;
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+}
+
+.fixedRight .goQuick-menu-list i {
+	margin-left: .9rem;
+}
+
+.fixedRight .goQuick-menu-list.active {
+	-webkit-transform: translate3d(0, 0, 0) scale(1);
+	   -moz-transform: translate3d(0, 0, 0) scale(1);
+	        transform: translate3d(0, 0, 0) scale(1);
+	opacity: 1;
+}
+
+.fixedRight .btn-goQuick.btn-goQuick-close {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-goQuick-close.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
 }
 
 .toast-message {
