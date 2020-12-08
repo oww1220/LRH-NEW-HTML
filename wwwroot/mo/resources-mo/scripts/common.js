@@ -71,23 +71,6 @@ $(function(){
     }
 
 
-    //mypage버튼 열기
-    MUI.event.toggle('.btn-mypage', null, true, function(logic, layer) {
-        console.log(11);
-        $BODY.addClass("fixed");
-        $('.btn-mypage-close').addClass('active');
-        logic();
-    });
-
-    //mypage버튼 닫기
-    MUI.event.toggle('.btn-mypage-close', null, true, function(logic, layer) {
-        $BODY.removeClass("fixed");
-        $('.btn-mypage').removeClass('active');
-        logic();
-        $('.mypage').scrollTop(0);
-    });
-
-    
     //gotop
     if($('.fixedRight .btn-goTop').length){
         MUI.event.goTop($('.fixedRight .btn-goTop'));

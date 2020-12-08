@@ -18,7 +18,6 @@
 <script src="../../../resources-mo/scripts/jquery/plugins/slick.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/iscroll.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/masonry.min.js"></script>
-<script src="../include_sub_header_type1.js"></script><!--인크루드용..-->
 <script src="../include_footer_logout.js"></script><!--인크루드용..-->
 <script src="../../../resources-mo/scripts/MUI.js"></script>
 <script src="../../../resources-mo/scripts/common.js"></script>
@@ -33,164 +32,504 @@
 
 	<!--container 컴포넌트-->
 	<main id="wrap">
-		<div class="mypage-wrap">
-			<!--상단 탭메뉴-->
-			<div class="tab-nav tab-normal">
-				<ul class="tab-col6">
-					<li class="active">
-						<button type="button">전체</button>
-					</li>
-					<li class="">
-						<button type="button">결제대기</button>
-					</li>
-					<li class="">
-						<button type="button">예약완료</button>
-					</li>
-					<li class="">
-						<button type="button">이용중</button>
-					</li>
-					<li class="">
-						<button type="button">이용완료</button>
-					</li>
-					<li class="">
-						<button type="button">취소</button>
-					</li>
-				</ul>
-			</div>
-			<!--//상단 탭메뉴-->
-			<div class="section-list">
-				<div class="tab-cont tab-normal list-cont-wrap">
-					<!--목록이 있는 경우-->
-					<div class="tab1">
-						<div class="list-item">
-							<div class="item-wrap">
-								<div class="cont-top">
-									<div>
-										<em>12가4567<button type="button" class="btn-detail">상세보기</button></em>
-										<strong>ALL NEW K3 프레스티지(G)</strong>
-									</div>
-									<span><i class="flag waiting">결제대기</i></span>
-								</div>
-								<div class="cont-in">
-									<ul>
-										<li>
-											<strong>예약일자</strong>
-											<b>2020.10.20</b>
-										</li>
-										<li>
-											<strong>예약번호</strong>
-											<b>123456</b>
-										</li>
-										<li>
-											<strong>대여일시/지점</strong>
-											<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
-										</li>
-										<li>
-											<strong>반납일시/지점</strong>
-											<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
-										</li>
-									</ul>
-								</div>
-								<div class="cont-btn">
-									<button class="btn"><i class="icon won"></i>결제하기</button>
-								</div>
-							</div>
-						</div>
-						<div class="list-item">
-							<div class="item-wrap">
-								<div class="cont-top">
-									<div>
-										<em>12가4567<button type="button" class="btn-detail">상세보기</button></em>
-										<strong>ALL NEW K3 프레스티지(G)</strong>
-									</div>
-									<span><i class="flag cancel">취소</i></span>
-								</div>
-								<div class="cont-in">
-									<ul>
-										<li>
-											<strong>예약일자</strong>
-											<b>2020.10.20</b>
-										</li>
-										<li>
-											<strong>예약번호</strong>
-											<b>123456</b>
-										</li>
-										<li>
-											<strong>대여일시/지점</strong>
-											<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
-										</li>
-										<li>
-											<strong>반납일시/지점</strong>
-											<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
-										</li>
-									</ul>
-								</div>
-								<div class="cont-btn">
-									<button class="btn"><i class="icon won"></i>결제하기</button>
-								</div>
-							</div>
-						</div>
+		<div class="mypage-main">
+			<div class="mypage-in">
+				<div class="mypage-top">
+					<button type="button" class="btn-prev btn-mypage-close" data-target="mypage-block" data-on="true" data-sort="none"><i class="icon prev-w">이전으로</i></button>
+					<div class="customer-info">
+						<strong>김롯데님 <em>일반회원</em></strong>
+						<ul>
+							<li><button>운전면허증<i class="icon next6"></i></button></li>
+							<li><button>결제카드<i class="icon next6"></i></button></li>
+						</ul>
 					</div>
-					<div class="tab2">
-						<div class="list-item">
-							<div class="item-wrap">
-								<div class="cont-top">
-									<div>
-										<em>12가4567<button type="button" class="btn-detail">상세보기</button></em>
-										<strong>ALL NEW K3 프레스티지(G)</strong>
-									</div>
-									<span><i class="flag cancel">취소</i></span>
-								</div>
-								<div class="cont-in">
-									<ul>
-										<li>
-											<strong>예약일자</strong>
-											<b>2020.10.20</b>
-										</li>
-										<li>
-											<strong>예약번호</strong>
-											<b>123456</b>
-										</li>
-										<li>
-											<strong>대여일시/지점</strong>
-											<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
-										</li>
-										<li>
-											<strong>반납일시/지점</strong>
-											<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+					<div class="customer-accumulate">
+						<ul class="list-type-col4">
+							<li>
+								<a href="">
+									<i class="icon lpoint-w"></i>
+									<strong>L.POINT</strong>
+									<b>12,300</b>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="icon rentercar-w"></i>
+									<strong>렌터카 포인트</strong>
+									<b>469,100</b>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="icon coupon-w"></i>
+									<strong>렌터카 쿠폰</strong>
+									<b>2장</b>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="icon membership-w"></i>
+									<strong>멤버쉽 쿠폰</strong>
+									<b>2장</b>
+								</a>
+							</li>
+						</ul>
 					</div>
-					<!--//목록이 있는경우-->
-					<!--목록이 없는 경우-->
-					<div class="tab3">
-						<div class="list-none-item">
-							<p>단기렌트카 예약 내역이 없습니다.</p>
-						</div>
-					</div>
-					<!--//목록이 없는 경우-->
 				</div>
-
-				<div class="cont-guide">
-					<ul>
-						<li>
-							최근 90일 이내 예약건만 확인이 가능합니다. 
-						</li>
-						<li>
-							90일 이전 예약내역은 고객센터(<b class="underline">1588-1230</b>)로 문의해주시기 
-							바랍니다.
-						</li>
-					</ul>
+				<div class="mypage-cont">
+					<div class="my-consulting">
+						<ul class="list-type-col2">
+							<li>
+								<a>
+									<div>
+										내차팔기 상담 
+										<span class="texRed">(1)</span>
+									</div>
+									<i class="icon next4"></i>
+								</a>
+							</li>
+							<li>
+								<a>
+									<div>
+										렌터카 상담 
+										<span class="texRed">(2)</span>
+									</div>
+									<i class="icon next4"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 데이터가 있는 경우 -->
+					<div class="my-reservation-list">
+						<div class="list-box01">
+							<div class="list-tit">
+								<h2>단기렌트카 예약</h2>
+								<button>전체보기<i class="icon next4"></i></button>
+							</div>
+							<div class="swiper-container swiper-item list-item">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>56너0364</em>
+												<strong>THE ALL-NEW VELOSTER (G) 1.4</strong>
+											</div>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>등록일</strong>
+													<b>2020.12.12</b>
+												</li>
+												<li> 
+													<strong>대여기간</strong>
+													<b>2020.01.01 10:30 ~ 2020.01.02 6:30</b>
+												</li>
+												<li>
+													<strong>출발/도착지</strong>
+													<b>역삼동/신사동</b>
+												</li>
+												<li>
+													<strong>예상요금</strong>
+													<b>250,000원</b>
+												</li>
+											</ul>
+										</div>
+										<div class="cont-btn">
+											<ul class="list-type-col2">
+												<li><button class="btn txt-black">추가 운전자 등록</button></li>
+												<li><button class="btn txt-black">사전체크인</button></li>
+											</ul>
+										</div>
+									</div>
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>12가4567</em>
+												<strong>ALL NEW K3 프레스티지(G)</strong>
+											</div>
+											<span><i class="flag waiting">결제대기</i></span>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>예약일자</strong>
+													<b>2020.10.20</b>
+												</li>
+												<li>
+													<strong>예약번호</strong>
+													<b>123456</b>
+												</li>
+												<li>
+													<strong>대여일시/지점</strong>
+													<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
+												</li>
+												<li>
+													<strong>반납일시/지점</strong>
+													<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
+												</li>
+											</ul>
+										</div>
+										<div class="cont-btn">
+											<button class="btn"><i class="icon won"></i>결제하기</button>
+										</div>
+									</div>
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>12가4567</em>
+												<strong>ALL NEW K3 프레스티지(G)</strong>
+											</div>
+											<span><i class="flag waiting">결제대기</i></span>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>예약일자</strong>
+													<b>2020.10.20</b>
+												</li>
+												<li>
+													<strong>예약번호</strong>
+													<b>123456</b>
+												</li>
+												<li>
+													<strong>대여일시/지점</strong>
+													<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
+												</li>
+												<li>
+													<strong>반납일시/지점</strong>
+													<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
+												</li>
+											</ul>
+										</div>
+										<div class="cont-btn">
+											<button class="btn"><i class="icon won"></i>결제하기</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination-wrap">
+									<div class="swiper-pagination cont-slide-pagination"></div>
+								</div>
+							</div>
+						</div>
+						<div class="list-box02">
+							<div class="list-tit">
+								<h2>월간단기렌트카 예약</h2>
+								<button>전체보기<i class="icon next4"></i></button>
+							</div>
+							<div class="list-item">
+								<div class="list-wrap">
+									<div class="cont-top">
+										<div>
+											<em>12가4567<button type="button" class="btn-detail">상세보기</button></em>
+											<strong>ALL NEW K3 프레스티지(G)</strong>
+										</div>
+										<span><i class="flag waiting">결제대기</i></span>
+									</div>
+									<div class="cont-in">
+										<ul>
+											<li>
+												<strong>예약일자</strong>
+												<b>2020.10.20</b>
+											</li>
+											<li>
+												<strong>예약번호</strong>
+												<b>123456</b>
+											</li>
+											<li>
+												<strong>대여일시/지점</strong>
+												<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
+											</li>
+											<li>
+												<strong>반납일시/지점</strong>
+												<b>2020.12.01(월) 10:10 강릉 KTX 예약소</b>
+											</li>
+										</ul>
+									</div>
+									<div class="cont-btn">
+										<button class="btn"><i class="icon won"></i>결제하기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="list-box03">
+							<div class="list-tit">
+								<h2>기사포함단기렌터카 예약</h2>
+								<button>전체보기<i class="icon next4"></i></button>
+							</div>
+							<div class="list-item">
+								<div class="list-wrap">
+									<div class="cont-top">
+										<div>
+											<em>56너0364</em>
+											<strong>ALL NEW K3 프레스티지(G)</strong>
+										</div>
+										<span><i class="flag cancel">예약완료</i></span>
+									</div>
+									<div class="cont-in">
+										<ul>
+											<li> 
+												<strong>대여기간</strong>
+												<b>2020.01.01 10:30 ~ 2020.01.02 6:30</b>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="list-box04">
+							<div class="list-tit">
+								<h2>장기렌터카 계약 <span class="texRed">총 2건</span></h2>
+								<button>전체보기<i class="icon next4"></i></button>
+							</div>
+							<div class="swiper-container swiper-item list-item">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>12가4567</em>
+												<strong>ALL NEW K3 프레스티지(G)</strong>
+											</div>
+											<span><i class="flag waiting">승계중</i></span>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>계약기간</strong>
+													<b>2020.01.01~2020.12.12</b>
+												</li>
+												<li>
+													<strong>정비상품</strong>
+													<b>일반형</b>
+												</li>
+											</ul>
+										</div>
+										<div class="cont-btn">
+											<button class="btn txt-black">승계보기</button>
+										</div>
+									</div>
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>12가4567</em>
+												<strong>ALL NEW K3 프레스티지(G)</strong>
+											</div>
+											<span><i class="flag waiting">승계중</i></span>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>계약기간</strong>
+													<b>2020.01.01~2020.12.12</b>
+												</li>
+												<li>
+													<strong>정비상품</strong>
+													<b>일반형</b>
+												</li>
+											</ul>
+										</div>
+										<div class="cont-btn">
+											<button class="btn txt-black">승계보기</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination-wrap">
+									<div class="swiper-pagination cont-slide-pagination"></div>
+								</div>
+							</div>
+							<div class="list-btn">
+								<button type="button" class="btn btn-white">신차장 멤버십에서 혜택 확인하기<i class="icon submit"></i></button>
+							</div>
+						</div>
+						<div class="list-box05">
+							<div class="list-tit">
+								<h2>신차장 다이렉트 견적<span class="texRed">총 3건</span></h2>
+								<button>전체보기<i class="icon next4"></i></button>
+							</div>
+							<div class="swiper-container swiper-item list-item">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>12가4567</em>
+												<strong>ALL NEW K3 프레스티지(G)</strong>
+											</div>
+											<span><i class="flag waiting">심사중</i></span>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>계약기간</strong>
+													<b>2020.01.01~2020.12.12</b>
+												</li>
+												<li>
+													<strong>정비상품</strong>
+													<b>일반형</b>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>12가4567</em>
+												<strong>ALL NEW K3 프레스티지(G)</strong>
+											</div>
+											<span><i class="flag waiting">심사중</i></span>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>계약기간</strong>
+													<b>2020.01.01~2020.12.12</b>
+												</li>
+												<li>
+													<strong>정비상품</strong>
+													<b>일반형</b>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="swiper-slide list-wrap">
+										<div class="cont-top">
+											<div>
+												<em>12가4567</em>
+												<strong>ALL NEW K3 프레스티지(G)</strong>
+											</div>
+											<span><i class="flag waiting">심사중</i></span>
+										</div>
+										<div class="cont-in">
+											<ul>
+												<li>
+													<strong>계약기간</strong>
+													<b>2020.01.01~2020.12.12</b>
+												</li>
+												<li>
+													<strong>정비상품</strong>
+													<b>일반형</b>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination-wrap">
+									<div class="swiper-pagination cont-slide-pagination"></div>
+								</div>
+							</div>
+							<div class="list-btn">
+								<button type="button" class="btn btn-white">신차장 다이렉트에서 계약하기<i class="icon submit"></i></button>
+							</div>
+						</div>
+					</div>
+					<!-- //데이터가 있는 경우 -->
+					<!-- 데이터가 없는 경우 -->
+					<div class="my-reservation-list dp-none">
+						<img src="" alt=""/>
+					</div>
+					<!-- //데이터가 없는 경우 -->
 				</div>
-				
-				<!--목록이 없는 경우 하단배너-->
-				<!-- <div class="cont-bottom-bn">
-					<img src="../../../resources-mo/images/mypage-cont-banner.png" alt="더미이미지">
-				</div> -->
-				<!--//목록이 없는 경우 하단배너-->
+				<div class="mypage-bottom">
+					<div class="my-sitemap"> 
+						<ul>
+							<li>
+								<a href="#">단기렌터카 예약</a>
+							</li>
+							<li>
+								<a href="#">월간단기렌터카 예약</a>
+							</li>
+							<li>
+								<a href="#">기사포함단기렌터카 예약 </a>
+	
+							</li>
+							<li>
+								<a href="#">장기렌터카 계약 </a>
+	
+							</li>
+							<li>
+								<a href="#">렌터카 상담 </a>
+	
+							</li>
+							<li>
+								<a href="#">내차 팔기 상담 </a>
+	
+							</li>
+							<li>
+								<a href="#">포인트</a>
+								<ul>
+									<li>
+										<a href="#">사용내역 </a>
+									</li>
+									<li>
+										<a href="#">포인트 전환 신청 </a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">할인쿠폰 및 무료이용권 </a>
+								<ul>
+									<li>
+										<a href="#">할인쿠폰 </a>
+									</li>
+									<li>
+										<a href="#">무료이용권 </a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">신차장 친구추천 활동</a>
+							</li>
+							<li>
+								<a href="#">결제카드</a>
+							</li>
+							<li>
+								<a href="#">운전면허증</a>
+								<ul>
+									<li>
+										<a href="#">국내</a>										
+									</li>
+									<li><a href="#">국제</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">내의 부과 정보</a>
+								<ul>
+									<li>
+										<a href="#">나의 관심 차종</a>
+									</li>
+									<li>
+										<a href="#">나의 찜 차량</a>
+									</li>
+									<li>
+										<a href="#">나의 단골 지점</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">고객센터</a>
+							</li>
+							<li>
+								<a href="#">회원</a>
+								<ul>
+									<li>
+										<a href="#">회원정보수정</a>
+									</li>
+									<li>
+										<a href="#">비밀번호 변경</a>
+									</li>
+									<li>
+										<a href="#">회원탈퇴</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">로그아웃</a>
+							</li>
+							<li>
+								<a href="#">롯데그룹사 임직원 인증</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
