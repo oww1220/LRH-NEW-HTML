@@ -50,8 +50,7 @@
         }
     }
     .mypage-body{
-        @include Align-between-top;        
-        
+        @include Align-between-top;    
         .mypage-lnb{
             flex:none;
             width:300px;
@@ -59,9 +58,6 @@
             box-sizing: border-box;
             background-color:#fafafa;
             padding:50px 0;
-
-            
-
             > ul{
                 padding:0 30px;
 
@@ -1148,11 +1144,11 @@
     }
     .section-form{
         margin-top:80px;
-        
         .form-cont{
-            .row{padding:0 40px;}
+            .row {
+                padding:0 40px;
+            }
         } 
-        
         .agree-area{
             .agree-header{
                 margin-bottom:30px;
@@ -1184,55 +1180,6 @@
                 }
             }
         }
-    }
-    .gray-noti-section{
-        text-align:center;
-        padding:60px;
-        margin:50px 0 60px 0;
-        background-color:#f5f5f5;
-        @include roundBox;
-
-        .tit{
-            @include Bold;
-            display:block; 
-            font-size:26px;            
-
-            + p{margin-top:20px;}
-        }
-        .sub-txt{color:#54585a;}
-        .icon{margin-right:5px;}
-    }
-    .section-certi{
-        padding:0 80px;
-
-       .certi-list{
-            @include Align-top;
-           
-            li{
-                margin:0 50px;
-                text-align:center;
-
-                .circle{
-                    width:230px;
-                    height:230px;
-                    border:1px solid #f1f1f1;
-                    border-radius:230px;
-                }
-                .certi-tit{margin:40px 0; font-size:18px;}
-           }
-
-           + .lst{
-               padding-top:20px;
-               border-top:1px solid #e7e7e7;
-            }
-       } 
-
-       .lst{
-           li{font-size:14px;}
-       }
-    }
-
-    .section-form{
         &.type2{
             margin-top:0;
             .form-cont{
@@ -1320,6 +1267,52 @@
                             margin: 0 2px;
                             &.on {
                                background-color: #ff404b; 
+                            }
+                        }
+                    }
+                    .input-cont {
+                        &.type2 {
+                            @include Align-middle-left;
+                           .inputT {
+                               max-width: 35%;
+                                &:before {
+                                    content:'@';
+                                    display: inline-block;
+                                    @include Position($top: 50%, $right: 0);
+                                    transform: translateY(-13px);
+                                }
+                                input {
+                                    border-right:0;
+                                    border-radius:6px 0 0 6px;
+                                }
+                            } 
+                            select {
+                                width: 35%;
+                                border-left:0;
+                                border-radius:0 6px 6px 0;
+                                margin-left:0;
+                                margin-top:0;
+                            }
+                            button {
+                                width:25%;
+                                margin-left:10px;
+                                margin-top:0;
+                            }
+                        }
+                    }
+                    & + .row {
+                        .input-cont {
+                            &.type2 {
+                                .inputT {
+                                    max-width:70%;
+                                    input {
+                                        border: 1px solid #EBEBEB;
+                                        border-radius: 6px;
+                                    }
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
                             }
                         }
                     }
@@ -1411,5 +1404,103 @@
                 }
             }
         }
+        &.type3 {
+            margin-top:0;
+            .form-cont {
+                margin-top:60px;
+                padding:0;
+                border-top:1px solid #d2d2d2;
+                .row {
+                    padding:0;
+                    margin-bottom:0;
+                    border-bottom:1px solid #e7e7e7;
+                    label {
+                        padding:30px 0;
+                        text-align:center;
+                        background-color: #fafafa;
+                        border-right:1px solid #e7e7e7;
+                    }
+                    .input-cont {
+                        padding-left:70px;
+                    }
+                }
+            }
+            .agree-area {
+                margin-top:40px;
+                border-top:0;
+                .row {
+                    border-bottom:0;
+                    label {
+                        padding:0 0 0 40px;
+                        background-color: unset;
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .gray-noti-section{
+        text-align:center;
+        padding:60px;
+        margin:50px 0 60px 0;
+        background-color:#f5f5f5;
+        @include roundBox;
+
+        .tit{
+            @include Bold;
+            display:block; 
+            font-size:26px;            
+
+            + p{margin-top:20px;}
+        }
+        .sub-txt{color:#54585a;}
+        .icon{margin-right:5px;}
+    }
+    .section-certi{
+        padding:0 80px;
+
+       .certi-list{
+            @include Align-top;
+           
+            li{
+                margin:0 50px;
+                text-align:center;
+
+                .circle{
+                    width:230px;
+                    height:230px;
+                    border:1px solid #f1f1f1;
+                    border-radius:230px;
+                }
+                .certi-tit{margin:40px 0; font-size:18px;}
+           }
+
+           + .lst{
+               padding-top:20px;
+               border-top:1px solid #e7e7e7;
+            }
+       } 
+
+       .lst{
+           li{font-size:14px;}
+       }
+    }
+    .section-cont {
+        width:55%;
+        margin:0 auto;
+        .txt-header {
+            background-color: #f5f5f5;
+            padding:30px 0;
+            text-align: center;
+            border-top:1px solid #d2d2d2;
+        }
+        .txt-cont {
+            padding:30px 0;
+            text-align: center;
+            border-top:1px solid #e7e7e7;
+            border-bottom:1px solid #e7e7e7;
+
+        }
+
     }
 }
