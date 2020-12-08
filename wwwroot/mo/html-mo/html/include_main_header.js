@@ -6,7 +6,7 @@ $(function(){
         <header class="header">
             <div class="header-top">
                 <h1 class="header-logo"><a href="#none"><i class="icon logo">롯데렌터카</i></a></h1>
-                <button type="button" class="btn-mypage">
+                <button type="button" class="btn-mypage" data-target="mypage-block" data-on="true" data-sort="none">
                     <i class="icon mypage">마이페이지</i>
                 </button>
                 <button type="button" class="btn-drawer" data-target="drawer" data-on="true" data-sort="none">

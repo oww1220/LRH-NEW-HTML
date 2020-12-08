@@ -99,7 +99,6 @@
 		background-color: #F04040;
 		@include Bold;
 		@include Align-middle;
-		border-radius: 0;
 	}
 	&-sns-naver {
 		@include Background($sprite:'ico-naver_login', $position: center center); 
@@ -250,6 +249,24 @@
 		background-color: #54585a;
 		@include Bold;
 		@include Align-middle;
+	}
+	&-normal{
+		@include Vertical-inline;
+		width:auto;
+		height: 50px;
+		padding: 0 15px;
+		box-sizing: border-box;
+		line-height: 1;
+		color:#2B2B2B;
+		@include roundBox;
+
+		&.black{
+			color:#fff;
+			border: 1px solid #54585a;
+			background-color: #54585a;
+			@include Bold;
+			@include Align-middle;
+		}
 	}
 }
 
