@@ -68,7 +68,7 @@
             h2 {
                 @include Bold;
                 font-size: 22px;
-                padding-left: 10px;
+                padding-left: 5px;
             }
             h2:before {
                 content: "";
@@ -78,6 +78,37 @@
                 margin-right: 10px;
                 background-size: 100% auto;
                 vertical-align: text-top;
+            }
+            .btn-link{
+                border:0 none;
+                color:#aaa;
+                height:50px;
+                padding:0 0 0 5px;
+                text-align: left;
+                line-height:1.4;
+                font-size: 16px;
+                @include Regular;
+                    b{
+                        color: #aaa;
+                        font-size: 16px;
+                    }
+                &.active{
+                    @include Bold;
+                    &:after {
+                        display: inline-block;
+                        content: "";
+                        background: url(../../resources-pc/images/icons/ico-check3-on.png) 0 0 no-repeat;
+                        width: 14px;
+                        height: 11px;
+                        margin-left: 10px;
+                        background-size: 100% auto;
+                    }
+                    b{
+                        border-bottom: 1px solid #fff;
+                        color:#fff;
+                        font-size: 16px;
+                    }
+                }
             }
             &.calendar {
                 padding: 50px 20px 35px 30px;
@@ -169,7 +200,7 @@
             }
 
             &.branch {
-                padding: 50px 20px 35px 50px;
+                padding: 50px 20px 35px 40px;
                 background: #2a2a2a;
                 .m-tit {
                     @include Align-between;
@@ -204,63 +235,64 @@
                     background: url(../../resources-pc/images/icons/ico-main-branch.png) 0 0 no-repeat;
                 }
                 .shor-main-toggle-cont {
-                    display: none;
                     position: relative;
+                    overflow: hidden;
+                    height: 600px;
                     .shor-main-toggle-txt {
                         line-height: 1.4;
-                        font-size:1.1rem;
+                        font-size:16px;
+                        overflow: hidden;
                     }
                     .shor-main-list-tit{
-                        border-bottom:1px solid #e7e7e7;
-                        padding:0 1.3rem;
+                        padding:35px 0;
                         @include Align-between;
                         .iconList{
-                            width:30%;
                             border:0 none;
                             border-radius: 0;
                             li{
+                                padding-right: 5px;
                                 label {
-                                    border:0 none;
-                                    background-color:#fff;
-                                    font-size:1.3rem;
+                                    width: 110px;
+                                    height: 40px;
+                                    background: #242424;
+                                    border: 1px solid #666;
+                                    border-radius: 50px;
+                                    font-size:18px;
                                     @include Regular;
+                                    color: #ddd;
                                 }
                                 input:checked + label {
-                                    border-bottom:2px solid #ff404b;
+                                    background: #ff404b;
+                                    border-color: #ff404b;
                                     @include Bold;
+                                    color: #fff;
                                 }
                             }
                         }
                     }
                     .shor-main-list-branch{
                         display:none;
-                        @include Position($top: 0, $left: 0);
-                        width:100%;
-                        height:100%;
-                        z-index: 10;
-                        background-color: #fff;
-                        .shor-main-list-rt{
+                        .shor-main-list-lt{
                             .iconList{
                                 border:0 none;
                                 border-radius: 0;
-                                padding: 0 0 0 1.3rem;
                                 li{
                                     width:auto;
-                                    margin:0 .9rem 0 .9rem;
+                                    margin-right:10px;
                                     position: relative;
                                     label {
                                         border:0 none;
-                                        background-color: #ed1c24;
-                                        font-size:1.2rem;
+                                        background: #242424;
+                                        font-size:16px;
                                         @include Regular;
-                                        color:#fff;
+                                        color:#aaa;
                                         height:auto;
                                         margin:0.9rem 0 .9rem 0;
                                     }
                                     input:checked + label {
-                                        border-bottom:2px solid #ed1c24;
+                                        border-bottom:1px solid #ce8d57;
                                         @include Bold;
-                                        color:#fff;
+                                        color:#ce8d57;
                                     }
                                 }
                                 li:first-child{
@@ -269,9 +301,9 @@
                                 li:first-child:after{
                                     display:inline-block;
                                     content:"";
-                                    border-right:1px solid #e7e7e7;
-                                    height:40%;
-                                    @include Position($top: 50%, $right: -20%);
+                                    border-right:1px solid #aaa;
+                                    height:30%;
+                                    @include Position($top: 50%, $right: -15%);
                                     transform: translateY(-50%);
                                 }
                             }
@@ -282,11 +314,10 @@
                         // padding:1.7rem;
                         .shor-main-list-lt{
                             overflow-y: auto;
-                            height:27.3rem;
+                            height: 495px;
                             // width:40%;
-                            width:36.1%;
-                            background-color: #fafafa;
-                            padding:1.7rem 1.3rem 1.7rem 1.7rem;
+                            width:55%;
+                            padding:5px;
                             @include Align-box;
                             ul{
                                 width:100%;
@@ -294,44 +325,57 @@
                         }
                         .shor-main-list-rt{
                             overflow-y: auto;
-                            height:27.3rem;
-                            width:44.5%;
-                            border-left:1px solid #e7e7e7;
-                            padding:1.7rem 1.7rem 1.7rem 1.3rem;
+                            height: 495px;
+                            width:45%;
+                            padding:5px;
                             @include Align-box;
                             ul{
                                 width:100%;
                             }
                         }
-                        .btn-link{
-                            border:0 none;
-                            color:#54585a;
-                            height:3.6rem;
-                            padding:0 0 0 1.3rem;
-                            text-align: left;
-                            line-height:1.4;
-                            @include Regular;
-                            &.active{
-                                @include Bold;
-                                b{
-                                    border-bottom: 1px solid #a02a3d;
-                                    font-size:1.1rem;
-                                    color:#a02a3d;
-                                    padding-bottom:.2rem;
-                                }
-                            }
-                        }
+
                     }
                 }
             }
 
             &.time {
-                padding: 50px 20px 35px 30px;
+                padding: 50px 30px 35px 30px;
                 width: 250px;
                 .m-time h2:before {
                     height: 30px;
                     width: 30px;
                     background: url(../../resources-pc/images/icons/ico-main-time.png) 0 0 no-repeat;
+                }
+                .m-car h2:before {
+                    height: 30px;
+                    width: 30px;
+                    background: url(../../resources-pc/images/icons/ico-main-car.png) 0 0 no-repeat;
+                }
+                .car-list ul{
+                    @include Align-box;
+                    margin-top: 10px;
+                    li {width: 50%;}
+                }
+                .time-list p {
+                    padding: 30px 0 5px;
+                    font-size: 14px;
+                    color: #fff;
+                }
+                .m-car {
+                    margin-top: 50px;
+                }
+                .selection-cont {
+                    @include Align-between;
+                    border-bottom: 1px solid #666;
+                    .selectbox {
+                        border: none;
+                        background: url(../../resources-pc/images/icons/ico-arrow-down2.png) center right no-repeat;
+                        height: 35px;
+                        width: 40%;
+                        padding:0 5px;
+                        color: #aaa;
+                        font-size: 16px;
+                    }
                 }
             }
         

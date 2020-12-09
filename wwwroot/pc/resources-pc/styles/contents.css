@@ -1550,7 +1550,7 @@ html, body {
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
 	font-size: 22px;
-	padding-left: 10px;
+	padding-left: 5px;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking h2:before {
@@ -1563,6 +1563,48 @@ html, body {
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
 	vertical-align: text-top;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking .btn-link {
+	border: 0 none;
+	color: #aaa;
+	height: 50px;
+	padding: 0 0 0 5px;
+	text-align: left;
+	line-height: 1.4;
+	font-size: 16px;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking .btn-link b {
+	color: #aaa;
+	font-size: 16px;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking .btn-link.active {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking .btn-link.active:after {
+	display: inline-block;
+	content: "";
+	background: url(../../resources-pc/images/icons/ico-check3-on.png) 0 0 no-repeat;
+	width: 14px;
+	height: 11px;
+	margin-left: 10px;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking .btn-link.active b {
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 16px;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.calendar {
@@ -1669,7 +1711,7 @@ html, body {
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch {
-	padding: 50px 20px 35px 50px;
+	padding: 50px 20px 35px 40px;
 	background: #2a2a2a;
 }
 
@@ -1728,18 +1770,19 @@ html, body {
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont {
-	display: none;
 	position: relative;
+	overflow: hidden;
+	height: 600px;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-toggle-txt {
 	line-height: 1.4;
-	font-size: 1.1rem;
+	font-size: 16px;
+	overflow: hidden;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-tit {
-	border-bottom: 1px solid #e7e7e7;
-	padding: 0 1.3rem;
+	padding: 35px 0;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1758,86 +1801,89 @@ html, body {
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-tit .iconList {
-	width: 30%;
 	border: 0 none;
 	-webkit-border-radius: 0;
 	   -moz-border-radius: 0;
 	        border-radius: 0;
 }
 
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-tit .iconList li {
+	padding-right: 5px;
+}
+
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-tit .iconList li label {
-	border: 0 none;
-	background-color: #fff;
-	font-size: 1.3rem;
+	width: 110px;
+	height: 40px;
+	background: #242424;
+	border: 1px solid #666;
+	-webkit-border-radius: 50px;
+	   -moz-border-radius: 50px;
+	        border-radius: 50px;
+	font-size: 18px;
 	font-family: "ManropeR", "NotoR", serif;
 	/*font-family: "SpoqaR", serif;*/
 	font-weight: normal;
+	color: #ddd;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-tit .iconList li input:checked + label {
-	border-bottom: 2px solid #ff404b;
+	background: #ff404b;
+	border-color: #ff404b;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
+	color: #fff;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch {
 	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	background-color: #fff;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-rt .iconList {
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-lt .iconList {
 	border: 0 none;
 	-webkit-border-radius: 0;
 	   -moz-border-radius: 0;
 	        border-radius: 0;
-	padding: 0 0 0 1.3rem;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-rt .iconList li {
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-lt .iconList li {
 	width: auto;
-	margin: 0 .9rem 0 .9rem;
+	margin-right: 10px;
 	position: relative;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-rt .iconList li label {
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-lt .iconList li label {
 	border: 0 none;
-	background-color: #ed1c24;
-	font-size: 1.2rem;
+	background: #242424;
+	font-size: 16px;
 	font-family: "ManropeR", "NotoR", serif;
 	/*font-family: "SpoqaR", serif;*/
 	font-weight: normal;
-	color: #fff;
+	color: #aaa;
 	height: auto;
 	margin: 0.9rem 0 .9rem 0;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-rt .iconList li input:checked + label {
-	border-bottom: 2px solid #ed1c24;
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-lt .iconList li input:checked + label {
+	border-bottom: 1px solid #ce8d57;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
-	color: #fff;
+	color: #ce8d57;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-rt .iconList li:first-child {
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-lt .iconList li:first-child {
 	margin: 0 .9rem 0 0;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-rt .iconList li:first-child:after {
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-branch .shor-main-list-lt .iconList li:first-child:after {
 	display: inline-block;
 	content: "";
-	border-right: 1px solid #e7e7e7;
-	height: 40%;
+	border-right: 1px solid #aaa;
+	height: 30%;
 	position: absolute;
 	top: 50%;
-	right: -20%;
+	right: -15%;
 	-webkit-transform: translateY(-50%);
 	   -moz-transform: translateY(-50%);
 	    -ms-transform: translateY(-50%);
@@ -1858,10 +1904,9 @@ html, body {
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-lt {
 	overflow-y: auto;
-	height: 27.3rem;
-	width: 36.1%;
-	background-color: #fafafa;
-	padding: 1.7rem 1.3rem 1.7rem 1.7rem;
+	height: 495px;
+	width: 55%;
+	padding: 5px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1878,10 +1923,9 @@ html, body {
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-rt {
 	overflow-y: auto;
-	height: 27.3rem;
-	width: 44.5%;
-	border-left: 1px solid #e7e7e7;
-	padding: 1.7rem 1.7rem 1.7rem 1.3rem;
+	height: 495px;
+	width: 45%;
+	padding: 5px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1896,33 +1940,8 @@ html, body {
 	width: 100%;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .btn-link {
-	border: 0 none;
-	color: #54585a;
-	height: 3.6rem;
-	padding: 0 0 0 1.3rem;
-	text-align: left;
-	line-height: 1.4;
-	font-family: "ManropeR", "NotoR", serif;
-	/*font-family: "SpoqaR", serif;*/
-	font-weight: normal;
-}
-
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .btn-link.active {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	font-weight: normal;
-}
-
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .btn-link.active b {
-	border-bottom: 1px solid #a02a3d;
-	font-size: 1.1rem;
-	color: #a02a3d;
-	padding-bottom: .2rem;
-}
-
 .main-wrap .main-visual-wrap .section-visual-booking.time {
-	padding: 50px 20px 35px 30px;
+	padding: 50px 30px 35px 30px;
 	width: 250px;
 }
 
@@ -1930,6 +1949,67 @@ html, body {
 	height: 30px;
 	width: 30px;
 	background: url(../../resources-pc/images/icons/ico-main-time.png) 0 0 no-repeat;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.time .m-car h2:before {
+	height: 30px;
+	width: 30px;
+	background: url(../../resources-pc/images/icons/ico-main-car.png) 0 0 no-repeat;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.time .car-list ul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	margin-top: 10px;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.time .car-list ul li {
+	width: 50%;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.time .time-list p {
+	padding: 30px 0 5px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.time .m-car {
+	margin-top: 50px;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.time .selection-cont {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	border-bottom: 1px solid #666;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.time .selection-cont .selectbox {
+	border: none;
+	background: url(../../resources-pc/images/icons/ico-arrow-down2.png) center right no-repeat;
+	height: 35px;
+	width: 40%;
+	padding: 0 5px;
+	color: #aaa;
+	font-size: 16px;
 }
 
 .estimate-wrap {
