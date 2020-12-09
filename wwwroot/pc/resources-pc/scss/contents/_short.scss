@@ -881,4 +881,240 @@
         h4{margin:10px 0;}
         
     }
+
+    //실시간예약
+    .realTime-cont {
+        @include Align-between-top;
+        .section-cont {
+            width:750px;
+            .section-form {
+                .form-header {
+                    margin-bottom:0;
+                }
+                .form-cont {
+                    padding:40px 0 80px;
+                    .row {
+                        padding:0 40px;
+                    }
+                }
+            }
+            //운전면허 정보입력
+            .driver-license-section{
+                .selection{
+                    display:flex;
+                    align-items: center;
+        
+                    .input-tit{
+                        flex:none;
+                        flex-basis: 170px;
+                        width:170px;
+                    }
+                }
+                
+                .driver-license-cont{ 
+                    position: relative;
+                    margin-top:40px;
+        
+                    input, select{
+                        max-width:130px;
+                        height:40px;
+                    }
+                    .box-align{
+                        align-items: center;
+        
+                        .symbol{margin-right:5px;}
+                    }
+                
+                }
+        
+                .domestic-license{
+                    .driver-license-cont{               
+                        width:670px;
+                        height:378px;
+                        @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
+        
+                        .type-box, .number-box, .expiration-date-box, .issue-date-box{
+                            position:relative;
+                            display:block;
+            
+                            .numbering{
+                                @include Position($top:10px,$right:-26px);
+                            }            
+                        }
+                        .type-box{
+                            @include Position($top:30px, $left:55px);
+            
+                            select{width: 130px;}
+                        }
+                        .number-box{
+                            @include Position($top:90px, $left:202px);
+            
+                            .box-between{
+                                width:430px;
+            
+                                .inputT{width:auto;}
+                                select, input{max-width:102px;}
+                            }
+                        }
+                        .expiration-date-box{
+                            @include Position($top:256px, $left:270px);
+                        }
+                        .issue-date-box{
+                            @include Position($bottom:30px, $left:202px);
+                        }
+                    }
+                }
+                .international-license{
+                    .driver-license-cont{               
+                        width:670px;
+                        height:553px;
+                        @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
+                    }            
+                }
+        
+                .guide-cont{
+                    margin-top:30px;
+        
+                    .tit{
+                        font-size:18px;
+                    }
+                    .lst{
+                        margin-top:20px;
+        
+                        li{
+                            padding-left:28px;
+                            + li{margin-top:10px;}
+                        }
+                    }
+                }
+                .numbering{
+                    @include Align-middle;
+                    width:18px;
+                    height:18px;
+                    color:#fff;
+                    font-size:12px;
+                    border-radius:18px;
+                    background-color:#ff404b;
+                }        
+            }
+        }
+        .section-sticky-lnb {
+            width:390px;
+            > div + div {
+                padding-top:15px;
+            }
+            .sticky-view-info {
+                border:1px solid #d2d2d2;
+                border-radius:10px;
+                .info-top {
+                    font-size:24px;
+                    background-color: #fafafa;
+                    padding:30px 0;
+                    border-radius:10px 10px 0 0;
+                    @include Bold;
+                }
+                .info-cover {
+                    padding-top:50px;
+                }
+                .lst {
+                    padding:30px;
+                    li {
+                        color:#8f9191;
+                        font-size:12px;
+                    }
+                }
+
+            }
+            .sticky-cont {
+                margin-top:20px;
+                .cont-result {
+                    > ul {
+                        > li {
+                            background-color: #4a4a4a;
+                            padding-bottom:20px;
+                            > div {
+                                @include Align-between;
+                                border-top: 1px solid #fff;
+                                margin:0 30px;
+                                padding-top:20px;
+                                strong {
+                                    padding-left:10px;
+                                    font-size:18px;
+                                    color:#fff;
+                                    @include Bold;
+                                }
+                                > div {
+                                    @include Align-top-right-column;
+                                    padding-right:10px;
+                                    span {
+                                        font-size:16px;
+                                        color:#fff;
+                                        @include Bold;
+                                        & + span {
+                                            @include Regular;
+                                            font-size:14px;
+                                            color:#bbb;
+                                            padding-top:10px;
+                                        }
+                                        &.price {
+                                            font-size:32px;
+                                            em {
+                                                font-size:18px;
+                                            }
+                                        }
+                                    }
+                                } 
+                            }
+                            > ul {
+                                li {
+                                    padding-top:10px;
+                                    > div {
+                                        @include Align-between;
+                                        margin:0 30px;
+                                        strong {
+                                            @include Regular;
+                                            font-size:14px;
+                                            color:#bbb;
+                                            padding-left:10px;
+                                        }
+                                        div {
+                                            padding-right:10px;
+                                            span {
+                                                @include Regular;
+                                                font-size:14px;
+                                                color:#bbb;
+                                            }
+                                        } 
+                                    }
+                                }
+                                
+                            }
+                            &:first-child {
+                                padding-top:20px;
+                                border-radius: 10px 10px 0 0;
+                                > div {
+                                    border-top:0;
+                                }
+                            } 
+                            &:last-child {
+                                background-color: #656565;
+                                border-radius: 0 0 10px 10px;
+                                > div {
+                                    border-top:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .sticky-btn {
+                padding:30px 0;
+                ul {
+                    width:100%;
+                    margin:0;
+                }
+            }
+        }
+    }
 }
