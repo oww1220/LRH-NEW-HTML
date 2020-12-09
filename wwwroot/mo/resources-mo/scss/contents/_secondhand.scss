@@ -2888,6 +2888,9 @@
                     .corporation-tab {
                         display:none;
                         li:first-child {
+                            .wrap {
+                                padding:0 1.7rem;
+                            }
                             .inputT {
                                 padding:1rem 0;
                                 @include Align-box-left;
@@ -2935,14 +2938,25 @@
                             }
                         }
                         .wrap {
-                            padding:1.7rem;
-                            > div {
-                                @include Align-between;
-                                .text-cont {
-                                    width:75%;
+                            padding:0;
+                            position: relative;
+                            .text-cont {
+                                input {
+                                    display: none;
+                                }
+                                label {
+                                    @include Align-left-column;
+                                    padding:1.7rem 1.7rem 5.6rem;
                                     strong {
                                         @include Bold;
                                         font-size:1.4rem;
+                                        position: relative;
+                                        &:before {
+                                            display:block;
+                                            content:'';
+                                            @include Position($top: 0, $right: 0);
+    
+                                        }
                                     }
                                     .info {
                                         @include Align-left-column;
@@ -2965,21 +2979,24 @@
                                         }
                                     }
                                 }
-                                .cover {
-                                    width:8.8rem;
-                                    min-height:4.4rem;
-                                    @include Align-middle;
-                                    img {
-                                        width:100%;
-                                        height:100%;
+                                input:checked + label {
+                                    border-top:1px solid #ed1c24;
+                                    border-bottom:1px solid #ed1c24;
+                                    background-color: #fff9f9;
+                                    box-sizing: border-box;
+                                    strong::before {
+                                        width: 1.4rem;
+                                        height: 1.2rem;
+                                        @include Background($sprite:'ico-radio-on03', $type:'png', $size:100%, $position:center center);
                                     }
                                 }
+                               
                             }
                             > button {
-                                margin-top:1.3rem;
                                 height:2.6rem;
                                 border:.1rem solid #d2d2d2;
                                 border-radius:.5rem;
+                                @include Position($bottom: 1.7rem, $left: 1.7rem);
                             }
                         }
                     }

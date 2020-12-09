@@ -80,6 +80,49 @@ $(function(){
         });
     }
 
+
+    //goQuick 열기
+    MUI.event.toggle('.fixedRight .btn-goQuick', null, true, function(logic, layer) {
+        //console.log(11);
+        $BODY.addClass("fixed");
+        $('.goQuick-menu-list').addClass('active');
+        $('.bg-dimmed').show();
+        $('.btn-goQuick').addClass('btn-goQuick-close');
+        logic();
+    });
+
+    //goQuick 닫기
+    MUI.event.toggle('.fixedRight .btn-goQuick-close', null, true, function(logic, layer) {
+        $BODY.removeClass("fixed");
+        $('.goQuick-menu-list').removeClass('active');
+        $('.bg-dimmed').hide();
+        $('.btn-goQuick').removeClass('btn-goQuick-close');
+        logic();
+    });
+
+    //goQuick
+    if($('.fixedRight .btn-goQuick').length){
+        // MUI.layer.openClick('.btn-goQuick', LAYER_DIM, LAYER_PARENT, true, function(show){
+        //     $('.btn-goQuick').addClass('btn-goQuick-close');
+        //     $('.goQuick-menu-list').addClass('active');
+        //     show();
+        // });
+        // MUI.layer.closeClick('.btn-goQuick-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
+        //     $('.btn-goQuick').removeClass('btn-goQuick-close');
+        //     $('.goQuick-menu-list').removeClass('active');
+        //     console.log('close');
+        //     hide();
+        // });
+
+        MUI.event.toggle('.fixedRight .btn-goQuick', '.fixedRight .goQuick-menu-list', true, function(logic, layer) {
+            $('.bg-dimmed').on('click', function(){
+                $('.goQuick-menu-list').removeClass('active');
+                $('.btn-goQuick').removeClass('btn-goQuick-close');
+            });
+            logic();
+        });
+    }
+
     //차트그리기
     if($('.pie-chart').length){
         $('.pie-chart').easyPieChart({
@@ -1267,19 +1310,6 @@ if($('.layer-car-detail').length){
     });
 }
 
-//중고차 승계렌터카 등록 - 사진정보 추가
-// $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").hide();
-// $(".secondhand-wrap .add-photo").click(function(e){
-//     $(".secondhand-wrap .file-box > ul, .secondhand-wrap .live > p").slice(0, 6).show();
-//     e.preventDefault();
-//     $(".secondhand-wrap .file-box > ul").slice(0, 3).show();
-//     if($(".secondhand-wrap .file-box > ul:hidden").length == 0){
-//         //alert("더 이상 항목이 없습니다");
-//         $(".secondhand-wrap .add-photo").hide();
-//     }
-// });
-
-
 
 //필터 슬라이드
 if($('.secondhand-wrap .item-step15 #slider-price').length) {
@@ -1352,6 +1382,18 @@ if($('.mypage-main .swiper-item').length) {
         },
     });
 }
+
+// if($('.secondhand-wrap').length) {
+//     $(".individual-tab .text-cont input:radio[type=radio]").on(function(){
+//         if($(".text-cont input:radio[type=radio]:checked").val() == "1"){
+//             $(".individual-tab button").hasClass('active');
+//             $(".individual-tab button").removeClass('active');
+//         }else if($(".text-cont input:radio[type=radio]:checked").val() == "0"){
+//             $(".individual-tab button").addClass('active');
+//         }
+//     });
+// }
+
 
 /* -------------------------------------------------중고차 승계렌터카 end*/
 
