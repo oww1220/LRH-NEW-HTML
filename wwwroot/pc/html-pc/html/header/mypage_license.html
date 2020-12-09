@@ -76,16 +76,17 @@
 							<div class="selection">
 								<p class="input-tit">면허구분</p>
 								<div class="input-cont">
+									<!-- 수정 시 참고 : 라디오박스 name, value값에 따라 국내/국제 면허증 영역 노출되도록 스크립트 처리 -->
 									<ul class="radio-area">
 										<li>
 											<div class="radio-icon-box">
-												<input type="radio" id="radio01" name="radio" checked>
+												<input type="radio" id="radio01" name="driverLicense" value="domestic" checked>
 												<label for="radio01">국내면허증</label>
 											</div>
 										</li>
 										<li>
 											<div class="radio-icon-box">
-												<input type="radio" id="radio02" name="radio">
+												<input type="radio" id="radio02" name="driverLicense" value="international" >
 												<label for="radio02">국제면허증</label>
 											</div>
 										</li>
@@ -93,7 +94,7 @@
 								</div>
 							</div>
 							<!-- 국내 면허증 -->
-							<div class="domestic-license">
+							<div class="domestic-license domesticLicense">
 								<div class="driver-license-cont">
 																
 									<div class="type-box">
@@ -131,14 +132,14 @@
 										<div class="box-align">
 											<span class="symbol">~</span>
 											<div class="inputT">
-												<input type="txt" placeholder="YYYY.MM.DD">
+												<input type="text" placeholder="YYYY.MM.DD">
 											</div>
 										</div>
 									</div>
 									<div class="issue-date-box">
 										<span class="numbering">3</span>									
 										<div class="inputT">
-											<input type="txt" placeholder="YYYY.MM.DD">
+											<input type="text" placeholder="YYYY.MM.DD">
 										</div>
 									</div>							
 								</div>
@@ -162,53 +163,59 @@
 							</div>
 							<!-- //국내 면허증 -->
 							<!-- 국제 면허증 -->
-							<div class="international-license">
+							<div class="international-license internationalLicense" style="display:none;">
 								<div class="driver-license-cont">
-									<div class="type-box">
+									<div class="country-box">
 										<span class="numbering">1</span>
 										<select name="" id="" class="selectbox">
 											<option value="">선택</option>
-											<option value="">1종대형</option>
-											<option value="">1종보통</option>
-											<option value="">2종보통</option>
-											<option value="">2종오토</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
 										</select>
-									</div>
-									
+									</div>									
 									<div class="number-box">
 										<span class="numbering">2</span>
-										<div class="box-between">
-											<select name="" id="" class="selectbox">
-												<option value="">선택</option>
-												<option value="">선택 1</option>
-												<option value="">선택 2</option>
-											</select>
-											<div class="inputT">
-												<input type="text">
-											</div>
-											<div class="inputT">
-												<input type="password">
-											</div>										
-											<div class="inputT">
-												<input type="text">
-											</div>
-										</div>
-									</div>							
-									<div class="expiration-date-box">
-										<span class="numbering">2</span>	
-										<div class="box-align">
-											<span class="symbol">~</span>
-											<div class="inputT">
-												<input type="txt" placeholder="YYYY.MM.DD">
-											</div>
-										</div>
-									</div>
-									<div class="issue-date-box">
-										<span class="numbering">3</span>									
 										<div class="inputT">
-											<input type="txt" placeholder="YYYY.MM.DD">
+											<input type="text" maxlength="12">
 										</div>
 									</div>							
+									<div class="type-box">
+										<span class="numbering">3</span>	
+										<ul>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk01">
+													<label for="chk01">A</label>											
+												</div>	
+											</li>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk02" checked>
+													<label for="chk02">B</label>											
+												</div>
+											</li>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk03">
+													<label for="chk03">C</label>											
+												</div>
+											</li>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk04" checked>
+													<label for="chk04">D</label>											
+												</div>
+											</li>
+											<!-- 
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk05">
+													<label for="chk05">E</label>											
+												</div>
+											</li>
+											 -->
+										</ul>									
+									</div>				
 								</div>
 								<div class="guide-cont">
 									<h5 class="tit">면허정보 입력항목 안내</h5>
@@ -232,15 +239,7 @@
 								<h3 class="tit-size-mid">운전면허정보 등록을 위한 이용자 동의 사항</h3>
 							</div>					
 							<div class="form-cont agree-area">
-								<div class="row">
-									<div class="agree-header">
-										<div class="chk-icon-box type-circle">
-											<input type="checkbox" id="test">	
-											<label for="test">											
-												전체동의
-											</label>										
-										</div>										
-									</div>
+								<div class="row">									
 									<ul class="agree-list agreeAccor">
 										<li>
 											<div class="accor-header box-type2">
@@ -308,6 +307,26 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
+
+	<script>
+		//운전면허정보 - 면허구분
+		if($('.driver-license-section .selection .radio-area').length) {
+			$('.selection .radio-area input[type=radio][name=driverLicense]').on('change', function(e){
+				// domestic :  국내, international : 국제
+				var domesticElem = $(".domesticLicense");
+				var internationalElem = $(".internationalLicense");
+
+ 				if(e.target.value === 'domestic'){
+					domesticElem.show();
+					internationalElem.hide();
+				}
+				else if(e.target.value === 'international'){
+					internationalElem.show();
+					domesticElem.hide();
+				}
+			});			
+		}
+	</script>
 
 </body>
 </html>

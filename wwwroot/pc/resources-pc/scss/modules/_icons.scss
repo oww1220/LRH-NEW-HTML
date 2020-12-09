@@ -581,6 +581,11 @@
         width: 19px;
 		height: 19px;
     }
+    &.del-black {
+        @include Background($sprite:'ico-del-black', $position:center center);
+        width: 19px;
+		height: 19px;
+    }
     &.registerCar01 {
         @include Background($sprite:'ico-registerCar01', $position:center center);
         width: 79px;
@@ -639,16 +644,29 @@
 }
 
 
-//카드 로고
-.card-logo {
+//차 제조사
+.symbol {
+    @include Align-middle;
     width:64px;
-    height: 64px;
+    height: 37px;
     
-    &.kebhana {
-        @include Background($sprite:'logo-kebhana', $position:center, $path:'logos', $size:contain);
+    &.chevrolet {
+        @include Background($sprite:'symbol-chevrolet-off', $position:center, $path:'logos', $size:contain);
+    }
+    &.etc {
+        @include Background($sprite:'symbol-etc-off', $position:center, $path:'logos', $size:contain);
     }
     &.hyundai {
-        @include Background($sprite:'logo-hyundai', $position:center, $path:'logos', $size:contain);
+        @include Background($sprite:'symbol-hyundai-off', $position:center, $path:'logos', $size:contain);
+    }
+    &.kia {
+        @include Background($sprite:'symbol-kia-off', $position:center, $path:'logos', $size:contain);
+    }
+    &.renault {
+        @include Background($sprite:'symbol-renault-off', $position:center, $path:'logos', $size:contain);
+    }
+    &.ssangyong {
+        @include Background($sprite:'symbol-ssangyong-off', $position:center, $path:'logos', $size:contain);
     }
 }
 

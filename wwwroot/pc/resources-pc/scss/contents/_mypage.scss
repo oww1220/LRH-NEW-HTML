@@ -182,6 +182,12 @@
                 align-items:center;
             }
         }
+
+        + .lst{
+            margin-top:50px;
+
+            + .list-section{margin-top:40px;}
+        }
     }
     .btn-box-between{
         @include Align-between;
@@ -271,19 +277,18 @@
             th, td{ padding:30px 20px; }
         }
     }
+    //내역 없음
+    .result-none{
+        font-size:20px;
+        //padding:90px 40px;
+        padding:150px 40px;
+        text-align:center;
+        border-bottom:1px solid $border-grey;
+    }
     .infos-section{
         margin-top:80px;        
               
         .infos-section-foot{padding:30px 0 0;}
-        
-        //내역 없음
-        .result-none{
-            font-size:20px;
-            //padding:90px 40px;
-            padding:150px 40px;
-            text-align:center;
-            border-bottom:1px solid $border-grey;
-        }
         .bar-type{
             color:#54585a;
             font-size:14px;
@@ -325,6 +330,9 @@
             align-items: center;
             max-width:510px;
             .icon{margin-right:10px;}
+        }
+        .box-between{
+            .lst{margin-top:0;}
         }
 
         &:first-child{margin-top:50px;}
@@ -545,7 +553,24 @@
             width: calc(100% + 10px);
             box-sizing: border-box;
 
-            li{margin-bottom:0;}
+            li{
+                position:relative;
+                margin-bottom:0;
+
+                > .chk-icon-box{
+                    @include Position($top:10px, $left:10px);
+
+                    label{
+                        padding:0;
+                        
+                        &:after{
+                            top:0;
+                            left:0;
+                            margin:0;
+                        }
+                    }
+                }
+            }
 
             .item{
                 display:block;
@@ -635,6 +660,26 @@
                 @include Bold;
                 margin-left:10px;
             }                    
+        }
+
+        &.type2{
+            .list-section-body{
+                padding-top:30px;
+                border-top:1px solid $border-grey;
+            }
+            .carInfo-list {
+                li{
+                    margin-bottom:60px;
+                }
+                .item {
+                    .descri-area {
+                        .price-box{
+                            padding:0;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
         }
     }
     .card-between-section{
@@ -1109,12 +1154,49 @@
                 }
             }
         }
-        .international-license{
+        .international-license{        
             .driver-license-cont{               
                 width:670px;
                 height:553px;
                 @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
-            }            
+            }   
+
+            .country-box, .number-box, .type-box{
+                position:relative;
+                display:block;
+
+                .numbering{
+                    @include Position($top:10px,$right:-26px);
+                }            
+            }
+
+            .country-box{
+                @include Position($top:240px, $left:108px);
+
+                .selectbox{
+                    width:240px;
+                    max-width: 240px;
+                }
+            }
+            .number-box{
+                @include Position($top:366px, $left:108px);
+
+                input{
+                    width:240px;
+                    max-width: 240px;
+                }
+            }
+            .type-box{
+                @include Position($top:182px, $left:410px);
+
+                li{
+                    + li{margin-top:10px;}
+                }
+
+                .numbering{
+                    top:4px;
+                }
+            }
         }
 
         .guide-cont{
@@ -1145,6 +1227,7 @@
     .section-form{
         margin-top:80px;
         .form-cont{
+            padding:0;
             .row {
                 padding:0 40px;
             }
@@ -1503,4 +1586,190 @@
         }
 
     }
+
+    .car-selection-view{
+        @include Align-middle;
+        padding:60px;
+        min-height:165px;
+        box-sizing: border-box;
+        border:2px dotted $border-grey;
+        margin-top:30px;
+
+        .capsule-style-list{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            li{
+                + li{margin-left:20px;}
+            }
+            
+            .item{
+                position:relative;
+                .txt{		
+                    @include Align-middle;
+                    min-width:84px;
+                    height:42px;
+                    padding:0 10px;
+                    color:#2f2f2f;
+                    border-radius: 20px;
+                    box-sizing: border-box;
+                    border:1px solid $border-grey;
+                }
+                .btn-del{
+                    @include Position($top:-6px, $right:-4px);
+                }
+            }
+        }
+        
+        + .infos-section{margin-top:60px;}
+    }
+    .car-brand-list{
+        @include Align-between;
+
+        input{display:none;}	
+        label{		
+            width:124px;
+            height:130px;
+            @include Align-middle-column;
+            @include roundBox();
+            color:#54585a;
+            border:1px solid $border-grey;
+            box-sizing: border-box;
+            
+            p{margin-top:25px; min-height:20px;}
+        }
+        input:checked + label{
+            @include Bold;
+            color:$txt-red;
+            border-color:$txt-red;
+            background-color:#fff9f9;
+
+            .symbol {
+                &.chevrolet {
+                    @include Background($sprite:'symbol-chevrolet', $position:center, $path:'logos', $size:contain);
+                }
+                &.etc {
+                    @include Background($sprite:'symbol-etc', $position:center, $path:'logos', $size:contain);
+                }
+                &.hyundai {
+                    @include Background($sprite:'symbol-hyundai', $position:center, $path:'logos', $size:contain);
+                }
+                &.kia {
+                    @include Background($sprite:'symbol-kia', $position:center, $path:'logos', $size:contain);
+                }
+                &.renault {
+                    @include Background($sprite:'symbol-renault', $position:center, $path:'logos', $size:contain);
+                }
+                &.ssangyong {
+                    @include Background($sprite:'symbol-ssangyong', $position:center, $path:'logos', $size:contain);
+                }
+            
+            }
+        }   
+    }
+    .car-type-box{
+        padding-top:30px;
+
+        .capsule-style-list{
+            li{
+                float: left;
+    
+                + li{margin-left:10px;}
+            }
+            
+            .item{
+                position:relative;
+
+                input{display:none;}	
+                label{		
+                    @include Align-middle;
+                    min-width:84px;
+                    height:42px;
+                    padding:0 10px;
+                    color:#8f9191;
+                    border-radius: 20px;
+                    box-sizing: border-box;
+                    background-color: #f5f5f5;
+                }
+                input:checked + label{
+                    @include Bold;
+                    color:$txt-red;
+                    border:1px solid $txt-red;
+                }  
+            }
+        }
+    }
+
+    .top-guide-section{
+        margin-top:50px;
+
+        + .infos-section{
+            margin-top:50px;
+            border-top:1px solid $border-grey;
+        }
+
+        .lst{margin-top:0;}
+    }
+
+    .branch-info-list{
+        > li{
+            padding:30px 0;
+            border-bottom:1px solid $border-grey;
+            
+            > .tit{font-size:18px;}
+            > .cont{
+                @include Align-between-top;
+                margin-top:30px;
+
+                .info-list{     
+                    flex:none;
+                    width:560px;
+                    flex-basis:560px;
+                    font-size:14px;
+                    color:#54585a;
+    
+                    li{
+                        display:flex;
+                        align-items: baseline;                        
+    
+                        .info-tit{
+                            position:relative;
+                            flex:none;
+                            width:100px;
+                            flex-basis: 100px;
+                            @include Regular;
+    
+                            &:after{
+                                @include Position($top:50%, $right:0px);
+                                content:"";
+                                display:block;
+                                width:1px;
+                                height:14px;
+                                margin-top:-7px;
+                                background-color:#e7e7e7;
+                            }
+                        }
+                        .info-cont{
+                            padding:0 20px;
+                        }
+                        .underline{color:#2f2f2f;}
+                        + li{ margin-top:20px; }
+                    }
+                }
+                .btns{
+                    display:flex;
+
+
+                    .btn-auto{
+                        @include Bold;
+                        letter-spacing: -1px;
+
+                        + .btn-auto{margin-left:10px}
+                    }
+                }
+            }
+        }
+    }
+    
 }
