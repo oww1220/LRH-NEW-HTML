@@ -229,6 +229,38 @@ html, body {
 	margin-left: 20px;
 }
 
+.form-cont .box-between .inputT.email {
+	position: relative;
+}
+
+.form-cont .box-between .inputT.email::after {
+	content: '@';
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-13px);
+	   -moz-transform: translateY(-13px);
+	    -ms-transform: translateY(-13px);
+	     -o-transform: translateY(-13px);
+	        transform: translateY(-13px);
+}
+
+.form-cont .box-between .inputT.email input {
+	border-right: 0;
+	-webkit-border-radius: 6px 0 0 6px;
+	   -moz-border-radius: 6px 0 0 6px;
+	        border-radius: 6px 0 0 6px;
+}
+
+.form-cont .box-between .inputT + select {
+	margin-left: 0 !important;
+	border-left: 0;
+	-webkit-border-radius: 0 6px 6px 0;
+	   -moz-border-radius: 0 6px 6px 0;
+	        border-radius: 0 6px 6px 0;
+}
+
 .section-headline {
 	text-align: center;
 	padding-bottom: 60px;
@@ -9520,6 +9552,37 @@ html, body {
 
 .short-container .realTime-cont .section-cont .section-form .form-header {
 	margin-bottom: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.short-container .realTime-cont .section-cont .section-form .form-header span {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	position: relative;
+	font-size: 18px;
+}
+
+.short-container .realTime-cont .section-cont .section-form .form-header span::before {
+	content: '*';
+	display: inline-block;
+	position: absolute;
+	top: 20%;
+	left: -12px;
 }
 
 .short-container .realTime-cont .section-cont .section-form .form-cont {
@@ -9528,9 +9591,56 @@ html, body {
 
 .short-container .realTime-cont .section-cont .section-form .form-cont .row {
 	padding: 0 40px;
+	margin-bottom: 0;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .selection {
+.short-container .realTime-cont .section-cont .section-form.form1 .form-cont .row + .row {
+	padding-top: 40px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form1 .form-cont div:last-child .input-tit {
+	font-size: 22px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form1 .form-cont div:last-child .txt {
+	font-size: 32px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont .row + .row {
+	padding-top: 20px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont .type-left {
+	position: relative;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont .type-left .left-txt {
+	position: absolute;
+	top: 35%;
+	left: 35px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between select {
+	max-width: 25%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between select + .inputT {
+	max-width: 45%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between select + .inputT + button {
+	width: 30%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between + .box-between .inputT {
+	max-width: 71%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between + .box-between .inputT + button {
+	width: 30%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .selection {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -9543,7 +9653,7 @@ html, body {
 	        align-items: center;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .selection .input-tit {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .selection .input-tit {
 	-webkit-box-flex: 0;
 	-webkit-flex: none;
 	   -moz-box-flex: 0;
@@ -9555,17 +9665,17 @@ html, body {
 	width: 170px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .driver-license-cont {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .driver-license-cont {
 	position: relative;
-	margin-top: 40px;
+	margin-top: 35px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .driver-license-cont input, .short-container .realTime-cont .section-cont .driver-license-section .driver-license-cont select {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .driver-license-cont input, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .driver-license-cont select {
 	max-width: 130px;
 	height: 40px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .driver-license-cont .box-align {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .driver-license-cont .box-align {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	   -moz-box-align: center;
@@ -9573,11 +9683,11 @@ html, body {
 	        align-items: center;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .driver-license-cont .box-align .symbol {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .driver-license-cont .box-align .symbol {
 	margin-right: 5px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont {
 	width: 670px;
 	height: 378px;
 	background-repeat: no-repeat;
@@ -9588,58 +9698,58 @@ html, body {
 	        background-size: contain;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .type-box, .short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .number-box, .short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .expiration-date-box, .short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .issue-date-box {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .type-box, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .number-box, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .expiration-date-box, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .issue-date-box {
 	position: relative;
 	display: block;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .type-box .numbering, .short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .number-box .numbering, .short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .expiration-date-box .numbering, .short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .issue-date-box .numbering {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .type-box .numbering, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .number-box .numbering, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .expiration-date-box .numbering, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .issue-date-box .numbering {
 	position: absolute;
 	top: 10px;
 	right: -26px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .type-box {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .type-box {
 	position: absolute;
 	top: 30px;
 	left: 55px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .type-box select {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .type-box select {
 	width: 130px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .number-box {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .number-box {
 	position: absolute;
 	top: 90px;
 	left: 202px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .number-box .box-between {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .number-box .box-between {
 	width: 430px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .number-box .box-between .inputT {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .number-box .box-between .inputT {
 	width: auto;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .number-box .box-between select, .short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .number-box .box-between input {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .number-box .box-between select, .short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .number-box .box-between input {
 	max-width: 102px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .expiration-date-box {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .expiration-date-box {
 	position: absolute;
 	top: 256px;
 	left: 270px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .domestic-license .driver-license-cont .issue-date-box {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .domestic-license .driver-license-cont .issue-date-box {
 	position: absolute;
 	bottom: 30px;
 	left: 202px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .international-license .driver-license-cont {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .international-license .driver-license-cont {
 	width: 670px;
 	height: 553px;
 	background-repeat: no-repeat;
@@ -9650,27 +9760,27 @@ html, body {
 	        background-size: contain;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .guide-cont {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .guide-cont {
 	margin-top: 30px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .guide-cont .tit {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .guide-cont .tit {
 	font-size: 18px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .guide-cont .lst {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .guide-cont .lst {
 	margin-top: 20px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .guide-cont .lst li {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .guide-cont .lst li {
 	padding-left: 28px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .guide-cont .lst li + li {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .guide-cont .lst li + li {
 	margin-top: 10px;
 }
 
-.short-container .realTime-cont .section-cont .driver-license-section .numbering {
+.short-container .realTime-cont .section-cont .section-form.form3 .driver-license-section .numbering {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -9694,6 +9804,256 @@ html, body {
 	   -moz-border-radius: 18px;
 	        border-radius: 18px;
 	background-color: #ff404b;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box label {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 0 30px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box label strong {
+	color: #8f9191;
+	font-size: 18px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box label strong:after {
+	content: '';
+	display: block;
+	width: 13px;
+	height: 12px;
+	margin-left: 10px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box label span {
+	font-size: 18px;
+	color: #8f9191;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box input:checked + label {
+	border-color: #ed1c24;
+	background-color: #fff9f9;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box input:checked + label:after {
+	display: none;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box input:checked + label strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	color: #ed1c24;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box input:checked + label strong:after {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box input:checked + label span {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	color: #2f2f2f;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form5 .form-cont .row + .row {
+	padding-top: 20px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form5 .form-cont .box-between {
+	position: relative;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form5 .form-cont .box-between::before {
+	content: '-';
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -2.5px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form5 .form-cont .box-between select {
+	max-width: 48%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form5 .form-cont .box-between select + .inputT {
+	max-width: 48%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li {
+	padding-bottom: 20px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li + li {
+	padding: 20px 0;
+	border-top: 1px solid #e7e7e7;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li + li > div > strong {
+	padding-top: 5px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div strong {
+	width: 30%;
+	font-size: 16px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div strong i {
+	margin-right: 10px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div {
+	width: 65%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div > div + div {
+	padding-top: 20px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box {
+	width: 50%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box label {
+	color: #8f9191;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box span {
+	padding-left: 32px;
+	margin-top: 5px;
+	display: block;
+	color: #8f9191;
+	font-size: 14px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box input:checked + label {
+	color: #2f2f2f;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase {
+	padding: 17px 20px;
+	border: 1px solid #d2d2d2;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: 50px;
+	   -moz-border-radius: 50px;
+	        border-radius: 50px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 30%;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase input {
+	width: 70px;
+	text-align: center;
+	color: #8f9191;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase button {
+	color: #d2d2d2;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase.active {
+	border-color: #2f2f2f;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase.active input {
+	color: #2f2f2f;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase.active button {
+	color: #2f2f2f;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form6 .form-cont li:last-child {
+	padding-bottom: 0;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form7 .form-cont .agree-header .lst {
+	padding-top: 20px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form7 .form-cont .agree-header .lst li + li {
+	margin-top: 10px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form7 .form-cont .agree-list {
+	border-bottom: 1px solid #e7e7e7;
+	padding: 30px 0;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form7 .form-cont .agree-list li {
+	border-bottom: 0;
+	padding: 0;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form7 .form-cont .agree-list li + li {
+	padding-top: 20px;
+}
+
+.short-container .realTime-cont .section-cont .section-form.form7 .form-cont .agree-list li button span {
+	border-bottom: 1px solid #2f2f2f;
 }
 
 .short-container .realTime-cont .section-sticky-lnb {
@@ -9894,6 +10254,15 @@ html, body {
 .short-container .realTime-cont .section-sticky-lnb .sticky-btn ul {
 	width: 100%;
 	margin: 0;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.short-container .realTime-cont .section-sticky-lnb .sticky-btn ul li {
+	width: 49%;
 }
 
 .carLife-container {
