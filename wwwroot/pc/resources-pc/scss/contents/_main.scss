@@ -3,7 +3,47 @@
     * {
         box-sizing: border-box;
     }
-
+    .inner-type3 {
+        padding: 0 90px;
+    }
+    // 메인 공통
+    .h-type {
+        p {
+            font-size: 36px;
+            color: #8f9191;
+            &.small {
+                font-size: 18px;
+            }
+        }
+        h2 {
+            @include Bold;
+            font-size: 46px;
+            color: #2f2f2f;
+        }
+    }
+    .btn-goLink {
+        font-size: 18px;
+        color: #2f2f2f;
+        &:after {
+            display: inline-block;
+            content: "";
+            width: 10px;
+            height: 14px;
+            background: url(../../resources-pc/images/icons/ico-main-arrow4.png) 0 0 no-repeat;
+            background-size: 100% auto;
+            margin-left: 5px;
+        }
+    }
+    .t-red {
+        margin-top: 10px;
+        color: #da291c;
+        strong {
+            @include Bold;
+            font-size: 28px;
+            color: #da291c;
+        }
+    }
+    // 상단 비쥬얼 영역
     .main-visual-wrap {
         @include Align-middle-right;
         max-width: 1680px;
@@ -400,6 +440,8 @@
         
          }
     }
+
+    //예약내역
     .booking-path-wrap {
         height: 80px;
         margin-bottom: 40px;
@@ -519,27 +561,14 @@
 
     //신차장 다이렉트 슬라이드
     .direct-section {
-        .inner-type2{@include Align-between;}
-        
+        .inner-type3{@include Align-between;}       
         .direct-slide-tit {
-            p {
-                font-size: 36px;
-                color: #8f9191;
-                &.small {
-                    font-size: 18px;
-                }
-            }
-            h2 {
-                @include Bold;
-                font-size: 46px;
-                color: #2f2f2f;
-            }
             .btn-red {
                 width: 124px;
                 height: 45px;
                 margin-top: 50px;
             }
-            .direct-slide-nav {
+            .direct-slide-paging {
                 margin-top: 70px;
                 ul {
                    @include Align-top-left; 
@@ -555,14 +584,179 @@
                     background: #ddd;
                     vertical-align: bottom;
                 }
+                .active {
+                    button {
+                        height: 2px;
+                        background: #2f2f2f;
+                    }
+                }
             }
         }
         .direct-slide-wrap {
             @include Align-between;
             width: 1010px;
+            height: 470px;
             overflow: hidden;
+            margin-top: 50px;
+            .img-wrap {
+                position: relative;
+                margin-left: 40px;
+                .img-box {
+                    @include Align-middle;
+                    background: #fafafa;
+                    width: 360px;
+                    height: 320px;
+                    
+                    .num {
+                        position: absolute;
+                        top: -30px;
+                        left: 40px;
+                        font-size: 42px;
+                        color: #8f9191;
+                    }
+                    img {
+                        width: 313px;
+                        height: 201px;
+                        background-size: 100% auto;
+                    }
+                }
+                .img-txt {
+                    margin-top: 30px;
+                    color: #8f9191;
+                    font-size: 18px;
+                    > strong {
+                        font-size: 22px;
+                        color: #2f2f2f;
+                    }
+                }
+            }
         }
     }
+
+    //중고차 장기렌터카
+    .secondhand-wrap {
+        margin-top: 90px;
+        background: url(../../resources-pc/images/common/bg-main-secondhand.png) top left repeat-x;
+        .tab-type {
+            @include Align-between-base;
+            margin-top: 60px;
+            ul {
+                @include Align-middle-right;
+                li {
+                    vertical-align: bottom;
+                    padding-right: 50px;
+                    button{
+                        font-size: 22px;
+                        color: #54585a;
+                    }
+                    &.active button {
+                        @include Bold;
+                        font-size: 28px;
+                        color: #2f2f2f;
+                    }
+                }
+            }
+        }
+        .secondhand-slide-wrap {
+            margin-top: 60px;
+            .secondhand-slide-cont {
+                @include Align-between;
+                .slide-type {
+                    width: 330px;
+                    height: 440px;
+                    background: #fff;
+                    box-shadow: 0px 10px 20px #f3f3f3;
+                    .img {
+                        width: 330px;
+                        height: 230px;
+                        background-size: 100% auto;
+                    }
+                    .txt-type {
+                        padding: 30px 20px;
+                        color: #8f9191;
+                        font-size: 16px;
+                        .tit > strong {
+                            font-size: 18px;
+                            color: #2f2f2f;
+                            line-height: 1.5;
+                        }
+                        .t-list {
+                            @include Align-top-left;
+                            li {
+                                color: #8f9191;
+                                font-size: 16px;
+                                line-height: 1.5;
+                                + li:before {
+                                    display: inline-block;
+                                    content: "";
+                                    width: 1px;
+                                    height: 14px;
+                                    background: #d2d2d2;
+                                    margin: 0 8px;
+                                }
+                            }
+                        }
+                        .t-spot {
+                            margin-top: 20px;
+                            span {
+                                padding: 6px 9px;
+                                background: #f4f4f4;
+                                border-radius: 5px;
+                                color: #2f2f2f;
+                                font-size: 13px;
+                                margin-right: 5px;
+                            }
+                        }
+                        .t-red {margin-top: 25px;}
+                    }
+                }
+            }
+            .pagination-wrap {
+                margin-top: 50px;
+            }
+        }
+    }
+    // 배너
+    .banner-wrap {
+        margin-top: 100px;
+        .banner-slide-wrap {
+            position: relative;
+            .m-banner {
+                img {
+                    width: 100%;
+                    height: 130px;
+                    background-size: 100% auto;
+                }
+            }
+        }
+        .banner-slide-paging {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+            ul {
+                @include Align-middle;
+                button {
+                    width: 7px;
+                    height: 7px;
+                    margin: 0 4px;
+                    background: #7b7673;
+                    border-radius: 100%;
+                    font-size: 1px;
+                    text-indent: -9999px;
+                }
+                .active > button {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    //핫딜 찬스
+    .hotdeal-wrap {
+        margin-top: 50px;
+        background: url(../../resources-pc/images/common/bg-main-hotdeal.png) bottom left repeat-x;
+    }
+
     .section {
         //@include Ellipsis($w:100px, $lines:2);
         //@include Position($top: 0, $right: 0);
