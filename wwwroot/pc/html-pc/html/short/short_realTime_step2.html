@@ -92,21 +92,44 @@
 									<div class="form-cont">
 										<div class="row type2">
 											<div class="radio-icon-box">
-												<input type="radio" name="radio1" id="radio1-1">
-												<label for="radio1-1">
-													<span>회원등급 할인 (일반회원 40%)</span>
+												<input type="radio" name="radio1" id="radio1">
+												<label for="radio1">
+													회원등급 할인 (일반회원 40%)
 												</label>
 											</div>
 											
 										</div>
-										<div>
-											<input type="radio" name="radio1" id="radio1-2">
-											<label for="radio1-2">
-												<span>지점 이벤트</span>
-											</label>
+										<div class="row type2">
+											<div class="radio-icon-box">
+												<input type="radio" name="radio1" id="radio2">
+												<label for="radio2">
+													지점이벤트
+												</label>
+											</div>
 											<div class="input-cont">
 												<div class="inputT">						
-													<input type="text" id="" placeholder="이름을 입력하세요">
+													<select class="selectbox" name="" id="">
+														<option value="">선택항목</option>
+														<option value="">선택1</option>
+														<option value="">선택2</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row type2">
+											<div class="radio-icon-box">
+												<input type="radio" name="radio1" id="radio3">
+												<label for="radio3">
+													할인권
+												</label>
+											</div>
+											<div class="input-cont">
+												<div class="inputT">						
+													<select class="selectbox" name="" id="">
+														<option value="">선택항목</option>
+														<option value="">선택1</option>
+														<option value="">선택2</option>
+													</select>
 												</div>
 											</div>
 										</div>
@@ -114,483 +137,232 @@
 								</section>
 								<section class="section-form form9">
 									<div class="form-header">
-										<h3 class="tit-size-mid">예약 정보입력</h3>
+										<h3 class="tit-size-mid">24시간 무료 이용권</h3>
+										<span>(사용매수:<em class="txt-color-red">N</em>매)</span>
 									</div>					
 									<div class="form-cont">
 										<div class="row type2">
-											<label for="" class="input-tit">이름</label>
-											<div class="input-cont">
-												<div class="inputT">						
-													<input type="text" id="" placeholder="이름을 입력하세요">
-												</div>
-											</div>
-										</div>
-										<div class="row type2">
-											<label for="" class="input-tit">생년월일</label>
+											<label for="" class="input-tit">지류 이용권 등록</label>
 											<div class="input-cont">
 												<div class="box-between">
 													<div class="inputT">						
-														<input type="text" id="" placeholder="입력하세요.">
-													</div>
-													<div class="inputT type-left">						
-														<input type="text" id="" placeholder="" maxlength="1">
-														<span class="left-txt">******</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="row type2">
-											<label for="" class="input-tit">이메일</label>
-											<div class="input-cont">
-												<div class="box-between">
-													<div class="inputT email">						
-														<input type="text" id="" placeholder="이메일 정보 입력하세요">
-													</div>
-													<select class="selectbox" name="" id="email_list" onchange="$('#chrgemail_ls').val($('#email_list').val());">
-														<option value="">직접입력</option>
-														<option value="lotte.net">lotte.net</option>
-														<option value="naver.com">naver.com</option>
-													</select>	
-												</div>
-											</div>
-										</div>
-										<div class="row type2">
-											<label for="" class="input-tit">인증번호</label>
-											<div class="input-cont">
-												<div class="box-between">
-													<select class="selectbox" name="" id="" onchange="">
-														<option value="">선택</option>
-														<option value=""></option>
-														<option value=""></option>
-													</select>
-													<div class="inputT">						
-														<input type="text" id="" placeholder="01021133454">
-													</div>
-													<button type="button" class="btn btn-black">인증번호 받기</button>
-												</div>
-												<div class="box-between">
-													<div class="inputT">						
-														<input type="text" id="">
+														<input type="text" id="" placeholder="이용권 번호를 입력하세요.">
 													</div>
 													<button type="button" class="btn btn-black">확인</button>
 												</div>
 											</div>
 										</div>
+										<div class="row type2">
+											<div class="input-cont">
+												<ul>
+													<li>
+														<div class="chk-icon-box type-square">
+															<input type="checkbox" id="chk01" checked="">
+															<label for="chk01">
+																ONE DAY FREE COUPON(20ONEDAYTEST0001) 2020-07-01~2021-01-01
+															</label>
+															<button>삭제</button>											
+														</div>
+													</li>
+													<li>
+														<div class="chk-icon-box type-square">
+															<input type="checkbox" id="chk01" checked="">
+															<label for="chk01">
+																ONE DAY FREE COUPON(20ONEDAYTEST0001) 2020-07-01~2021-01-01
+															</label>
+															<button>삭제</button>											
+														</div>
+													</li>
+												</ul>
+												<ul class="lst dot">
+													<li class="txt-color-red">
+														최대 사용가능매수는 4 매입니다. (이용시간 : 3일 12시간)
+													</li>
+													<li class="txt-color-red">
+														지류 이용권은 차량 대여 시 지점직원에게 실물을 꼭 제출해야 합니다.
+													</li>
+												</ul>
+											</div>
+										</div>
+										
 									</div>
 								</section>
 								<section class="section-form form10">
 									<div class="form-header">
-										<h3 class="tit-size-mid">예약자 운전면허 정보입력</h3>
+										<h3 class="tit-size-mid">추가할인 선택</h3>
 									</div>					
-									<div class="form-cont driver-license-section">
-										<div class="row">
-											<div class="selection">
-												<p class="input-tit">면허구분</p>
-												<div class="input-cont">
-													<ul class="radio-area">
-														<li>
-															<div class="radio-icon-box">
-																<input type="radio" id="radio01" name="radio" checked="">
-																<label for="radio01">국내면허증</label>
-															</div>
-														</li>
-														<li>
-															<div class="radio-icon-box">
-																<input type="radio" id="radio02" name="radio">
-																<label for="radio02">국제면허증</label>
-															</div>
-														</li>
-													</ul>
+									<div class="form-cont">
+										<div class="row type2">
+											<label for="radio3">할인권</label>
+											<div class="input-cont">
+												<div class="inputT">						
+													<select class="selectbox" name="" id="">
+														<option value="">선택항목</option>
+														<option value="">선택1</option>
+														<option value="">선택2</option>
+													</select>
 												</div>
 											</div>
-											<!-- 국내 면허증 -->
-											<div class="domestic-license">
-												<div class="driver-license-cont">
-																				
-													<div class="type-box">
-														<span class="numbering">1</span>
-														<select name="" id="" class="selectbox">
-															<option value="">선택</option>
-															<option value="">1종대형</option>
-															<option value="">1종보통</option>
-															<option value="">2종보통</option>
-															<option value="">2종오토</option>
-														</select>
-													</div>
-													
-													<div class="number-box">
-														<span class="numbering">2</span>
-														<div class="box-between">
-															<select name="" id="" class="selectbox">
-																<option value="">선택</option>
-																<option value="">선택 1</option>
-																<option value="">선택 2</option>
-															</select>
-															<div class="inputT">
-																<input type="text">
-															</div>
-															<div class="inputT">
-																<input type="password">
-															</div>										
-															<div class="inputT">
-																<input type="text">
-															</div>
-														</div>
-													</div>							
-													<div class="expiration-date-box">
-														<span class="numbering">2</span>	
-														<div class="box-align">
-															<span class="symbol">~</span>
-															<div class="inputT">
-																<input type="txt" placeholder="YYYY.MM.DD">
-															</div>
-														</div>
-													</div>
-													<div class="issue-date-box">
-														<span class="numbering">3</span>									
-														<div class="inputT">
-															<input type="txt" placeholder="YYYY.MM.DD">
-														</div>
-													</div>							
-												</div>
-												<div class="guide-cont">
-													<h5 class="tit">면허정보 입력항목 안내</h5>
-													<ul class="lst num">
-														<li>
-															<span class="bul numbering">1</span> 면허종류 : 10인승 이상 차량은 1종 보통 이상 면허가 있어야 운전이 가능합니다.
-														</li>
-														<li>
-															<span class="bul numbering">2</span> 면허번호 : 2014년 07월 02일 이후 발급 면허는 지역정보를 숫자코드로 입력합니다.
-														</li>
-														<li>
-															<span class="bul numbering">3</span> 만료일자 : 유효하지 않은 면허증은 대여가 불가하므로, 기간 내 갱신해주세요.
-														</li>
-														<li>
-															<span class="bul numbering">4</span> 발급일자 : 신규발급 또는 갱신, 재발급힌 면허증에 기입된 발급일자를 입력합니다.
-														</li>
-													</ul>
-												</div>
-											</div>
-											<!-- // 국내 면허증 -->
-											<!-- 국제 면허증 -->
-											<div class="international-license">
-												<div class="driver-license-cont">
-													<div class="type-box">
-														<span class="numbering">1</span>
-														<select name="" id="" class="selectbox">
-															<option value="">선택</option>
-															<option value="">1종대형</option>
-															<option value="">1종보통</option>
-															<option value="">2종보통</option>
-															<option value="">2종오토</option>
-														</select>
-													</div>
-													
-													<div class="number-box">
-														<span class="numbering">2</span>
-														<div class="box-between">
-															<select name="" id="" class="selectbox">
-																<option value="">선택</option>
-																<option value="">선택 1</option>
-																<option value="">선택 2</option>
-															</select>
-															<div class="inputT">
-																<input type="text">
-															</div>
-															<div class="inputT">
-																<input type="password">
-															</div>										
-															<div class="inputT">
-																<input type="text">
-															</div>
-														</div>
-													</div>							
-													<div class="expiration-date-box">
-														<span class="numbering">2</span>	
-														<div class="box-align">
-															<span class="symbol">~</span>
-															<div class="inputT">
-																<input type="txt" placeholder="YYYY.MM.DD">
-															</div>
-														</div>
-													</div>
-													<div class="issue-date-box">
-														<span class="numbering">3</span>									
-														<div class="inputT">
-															<input type="txt" placeholder="YYYY.MM.DD">
-														</div>
-													</div>							
-												</div>
-												<div class="guide-cont">
-													<h5 class="tit">면허정보 입력항목 안내</h5>
-													<ul class="lst num">
-														<li>
-															<span class="bul numbering">1</span> 발급국가 : 국제면허증을 발급한 국가를 선택합니다.
-														</li>
-														<li>
-															<span class="bul numbering">2</span> 면허번호 : 면허번호 12자리를 입력합니다.
-														</li>
-														<li>
-															<span class="bul numbering">3</span> 면허종류 : 10인승 이상 차량은 D 등급 면허가 있어야 운전이 가능합니다.
-														</li>
-													</ul>
-												</div>
-											</div>
-											<!-- // 국제 면허증 -->
+										</div>
+										<div class="row type2">
+											<ul class="lst dot">
+												<li class="txt-color-red">금액쿠폰은 다른 할인혜택과 중복 사용이 가능합니다.</li>
+												<li class="txt-color-red">차량 대여요금에 대해서만 할인이 적용되며, 차액은 환불되지 않습니다.</li>
+											</ul>
 										</div>
 									</div>
 								</section>
 								<section class="section-form form11">
 									<div class="form-header">
-										<h3 class="tit-size-mid">자차손해 면책제도 (CDW)</h3>
+										<h3 class="tit-size-mid">포인트</h3>
 									</div>					
 									<div class="form-cont">
-										<div class="row">
-											<ul class="choice-list list-type-col2">
-												<li>
-													<div class="chk-view-box">
-														<input type="radio" id="radio2-1" name="radi2" checked>
-														<label for="radio2-1">
-															<strong>보험 미적용</strong>
-															<span>0원</span>
-														</label>
+										<div class="row type2">
+											<label for="" class="input-tit">L.POINT<span class="txt-color-red">70,000P</span></label>
+											<div class="input-cont">
+												<div class="box-between">
+													<div class="inputT">						
+														<input type="text" id="" value="0원">
 													</div>
-													
+													<button type="button" class="btn btn-black">전액사용</button>
+												</div>
+											</div>
+										</div>
+										<div class="row type2">
+											<label for="" class="input-tit">롯데렌터카 포인트<span class="txt-color-red">70,000P</span></label>
+											<div class="input-cont">
+												<div class="box-between">
+													<div class="inputT">						
+														<input type="text" id="" value="0원">
+													</div>
+													<button type="button" class="btn btn-black">전액사용</button>
+												</div>
+											</div>
+										</div>
+										<div class="row type2">
+											<ul class="lst dot">
+												<li>포인트 사용 후 차량 대여료가 6천원 미만인 경우 결제카드 사용 할인을 받을 수 없습니다. 
 												</li>
-												<li>
-													<div class="chk-view-box">
-														<input type="radio" id="radio2-2" name="radi2">
-														<label for="radio2-2">
-															<strong>고객부담금 면제</strong>
-															<span>20,000원</span>
-														</label>
-													</div>
+												<li>등록된 결제 카드로 추가할인을 받으시려는 고객님은 포인트 사용 시 순수 차량 대여금액이 6천원 이상 남을 수 있도록 
+													해주시기 바랍니다.
 												</li>
-												<li>
-													<div class="chk-view-box">
-														<input type="radio" id="radio2-3" name="radi2">
-														<label for="radio2-3">
-															<strong>사고시 면책금 5만원</strong>
-															<span>12,000원</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="chk-view-box">
-														<input type="radio" id="radio2-4" name="radi2">
-														<label for="radio2-4">
-															<strong>사고시 면책금 30만원</strong>
-															<span>10,000원</span>
-														</label>
-													</div>
+												<li>계산법: 대여금액 – 할인금액 – 추가할인금액 – 포인트사용금액 = 6,000원 이상 (보험 및 기타옵션금액은 계산에서 제외)
 												</li>
 											</ul>
 										</div>
 									</div>
 								</section>
 								<section class="section-form form12">
-									<div class="form-header toggle-btn active"  data-target="cont-01" data-on="true" data-siblings="true">
-										<h3 class="tit-size-mid">항공편 정보</h3>
-										<button type="button" class="btn-toggle gray"></button>
+									<div class="form-header">
+										<h3 class="tit-size-mid">최종결제정보</h3>
 									</div>					
-									<div class="form-cont cont-01">
-										<div class="row type2">
-											<span class="input-tit">항공편</span>
-											<div class="input-cont">
-												<div class="chk-icon-box type-square">
-													<input type="checkbox" id="chk01" checked="">
-													<label for="chk01">이용안함</label>											
-												</div>
-												<ul class="lst dot">
-													<li>
-														비행기를 타고 대여지점으로 방문하시는 경우 이용하는  항공편명을 입력해주세요. 
-													</li>
-												</ul>
-											</div>
+									<div class="form-cont">
+										<div class="tbl-box">
+											<table>
+												<tbody>
+													<tr>
+														<th>대여금액</th>
+														<td>285,000 원</td>
+													</tr>
+													<tr>
+														<th>할인금액</th>
+														<td>-164,000 원
+															<b>
+																[서울전지점] (김포공항, 상봉제외) <br/>
+																여름 휴가 50% 할인이벤트 
+															</b>
+														</td>
+													</tr>
+													<tr>
+														<th>추가할인정보</th>
+														<td>0 원</td>
+													</tr>	
+													<tr>
+														<th>보험 및 기타옵션</th>
+														<td>20,000 원</td>
+													</tr>
+													<tr>
+														<th>결제금액</th>
+														<td>141,000 원</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>
-										<div class="row type2">
-											<label for="" class="input-tit">항공편명</label>
-											<div class="input-cont">
-												<div class="box-between">
-													<select class="selectbox" name="" id="" onchange="">
-														<option value="">항공사 선택</option>
-														<option value=""></option>
-														<option value=""></option>
-													</select>
-													<div class="inputT">						
-														<input type="text" id="" placeholder="항공편명">
-													</div>
-												</div>
-												<ul class="lst dot">
-													<li class="txt-color-red">
-														[항공편명 입력 방법 안내] 영문과 숫자의 조합 (예시: AB123)  
-													</li>
-													<li class="txt-color-red">
-														항공사를 선택하고 항공편명을 입력할 수 있으며, 직접입력시  모두 입력해주세요. 
-													</li>
-												</ul>
-											</div>
-										</div>
+										
 									</div>
 								</section>
 								<section class="section-form form13">
 									<div class="form-header">
-										<h3 class="tit-size-mid">기타옵션</h3>
-										<span class="txt-color-red">1일기준 요금</span>
+										<h3 class="tit-size-mid">나의 등록카드</h3>
 									</div>					
 									<div class="form-cont">
-										<div class="row">
-											<ul>
-												<li>
-													<div>
-														<strong><i class="icon etc-option01"></i>내비게이션(무료)</strong>
-														<div class="input-cont">
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk02">
-																	<label for="chk02">영문 내비게이션</label>									
-																</div>
+										<div class="row type2">
+											<div class="input-cont">
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk01" checked="">
+													<label for="chk01">이 결제 수단을 다음 번에도 사용</label>											
+												</div>
+												<div class="input-cont">
+													<ul class="choice-list list-type-col4">
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">간편결제</label>	
 															</div>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div>
-														<strong><i class="icon etc-option02"></i>전동킥보드</strong>
-														<div class="input-cont">
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk03" checked="">
-																	<label for="chk03">전동킥보드(10000원)</label>
-																	<span>2개선택가능</span>											
-																</div>
-																<div class="input-increase active">
-																	<button>-</button>						
-																	<input type="text" id="" value="1개" maxlength="1">
-																	<button>+</button>
-																</div>
+														</li>
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">등록카드</label>	
 															</div>
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk04">
-																	<label for="chk04">전용안장(10000원)</label>
-																	<span>2개선택가능</span>											
-																</div>
-																<div class="input-increase">
-																	<button>-</button>						
-																	<input type="text" id="" value="0개" maxlength="1">
-																	<button>+</button>
-																</div>
+														</li>
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">PAYCO간편결제</label>	
 															</div>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div>
-														<strong><i class="icon etc-option03"></i>카시트</strong>
-														<div class="input-cont">
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk05" checked="">
-																	<label for="chk05">신생아용(7,000원)</label>
-																	<span>3개선택가능</span>											
-																</div>
-																<div class="input-increase active">
-																	<button>-</button>						
-																	<input type="text" id="" value="1개" maxlength="1">
-																	<button>+</button>
-																</div>
+														</li>
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">신용카드</label>	
 															</div>
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk06">
-																	<label for="chk06">유아동용(7,000원)</label>
-																	<span>3개선택가능</span>											
-																</div>
-																<div class="input-increase">
-																	<button>-</button>						
-																	<input type="text" id="" value="0개" maxlength="1">
-																	<button>+</button>
-																</div>
+														</li>
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">네이버페이</label>	
 															</div>
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk07">
-																	<label for="chk07">주니어용(7,000원)</label>
-																	<span>3개선택가능</span>											
-																</div>
-																<div class="input-increase">
-																	<button>-</button>						
-																	<input type="text" id="" value="0개" maxlength="1">
-																	<button>+</button>
-																</div>
+														</li>
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">카카오페이</label>	
 															</div>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div>
-														<strong><i class="icon etc-option04"></i>유모차</strong>
-														<div class="input-cont">
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk08"  checked="">
-																	<label for="chk08">절충형(6,000원)</label>
-																	<span>2개선택가능</span>											
-																</div>
-																<div class="input-increase active">
-																	<button>-</button>						
-																	<input type="text" id="" value="1개" maxlength="1">
-																	<button>+</button>
-																</div>
+														</li>
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">삼성페이</label>	
 															</div>
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk09">
-																	<label for="chk09">휴대형(6,000원)</label>
-																	<span>2개선택가능</span>											
-																</div>
-																<div class="input-increase">
-																	<button>-</button>						
-																	<input type="text" id="" value="0개" maxlength="1">
-																	<button>+</button>
-																</div>
+														</li>
+														<li>
+															<div class="chk-view-box">
+																<i></i>
+																<input type="radio" id="chk01" checked="">
+																<label for="chk01">카드번호 직접입력</label>	
 															</div>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div>
-														<strong><i class="icon etc-option05"></i>펫카 전용 옵션</strong>
-														<div class="input-cont">
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk10" checked="">
-																	<label for="chk10">드라이빙 키트(7,000원)</label>
-																	<span>2개선택가능</span>											
-																</div>
-																<div class="input-increase active">
-																	<button>-</button>						
-																	<input type="text" id="" value="1개" maxlength="1">
-																	<button>+</button>
-																</div>
-															</div>
-															<div class="box-between">
-																<div class="chk-icon-box type-square">
-																	<input type="checkbox" id="chk11">
-																	<label for="chk11">개모차(7,000원)</label>
-																	<span>2개선택가능</span>											
-																</div>
-																<div class="input-increase">
-																	<button>-</button>						
-																	<input type="text" id="" value="0개" maxlength="1">
-																	<button>+</button>
-																</div>
-															</div>
-														</div>
-													</div>
-												</li>
-											</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</section>
@@ -599,66 +371,16 @@
 										<h3 class="tit-size-mid">약관동의</h3>
 									</div>					
 									<div class="form-cont agree-area">
-										<div class="row">
-											<div class="agree-header">
-												<div class="chk-icon-box type-circle">
-													<input type="checkbox" id="test">	
-													<label for="test">											
-														전체동의
-													</label>									
-												</div>
-												<ul class="lst dot">
-													<li>
-														전체동의는 필수 및 선택항목에 대한 동의도 포함되어 있으며,  
-														개별적으로도 동의를 선택하실 수 있습니다.
-													</li>
-													<li>
-														선택항목에 대한 동의를 거부하시는 경우에도 서비스는 이용이 가능합니다. 
-													</li>
-												</ul>
-											</div>									
-											<ul class="agree-list short-agree-accor">
+										<div class="row type2">
+											<ul class="lst dot">
 												<li>
-													<div class="accor-header box-type2">
-														<div class="chk-icon-box">
-															<input type="checkbox" id="test1">	
-															<label for="test1">											
-																예약 완료를 위한 이용동의 (필수)
-															</label>										
-														</div>
-														<button type="button" class="btn-short-agree-toggle right" data-target="short-agree-toggle-cont" data-on="true" data-siblings="true"><span>자세히</span></button>
-													</div>
-													<div class="toggle-cont terms-area short-agree-toggle-cont" style="display: none;">
-														내용없음
-													</div>
+													차량 수령 24시간 전 취소 : 전액 환불
 												</li>
 												<li>
-													<div class="accor-header box-type2">
-														<div class="chk-icon-box">
-															<input type="checkbox" id="test2">	
-															<label for="test2">											
-																차량대여를 위한 개인정보 수집/이용동의 (필수)
-															</label>										
-														</div>
-														<button type="button" class="btn-short-agree-toggle2 right" data-target="short-agree-toggle-cont2" data-on="true" data-siblings="true"><span>자세히</span></button>
-													</div>
-													<div class="toggle-cont terms-area short-agree-toggle-cont2" style="display: none;">
-														내용없음
-													</div>
+													차량 수령 24시간 이내 ~ 수령시간까지 취소 : 취소수수료 발생 (3,000원)
 												</li>
 												<li>
-													<div class="accor-header box-type2">
-														<div class="chk-icon-box">
-															<input type="checkbox" id="test3">	
-															<label for="test3">											
-																차량대여를 위한 개인정보 수집/이용동의 (필수)
-															</label>										
-														</div>
-														<button type="button" class="btn-short-agree-toggle3 right" data-target="short-agree-toggle-cont3" data-on="true" data-siblings="true"><span>자세히</span></button>
-													</div>
-													<div class="toggle-cont terms-area short-agree-toggle-cont3" style="display: none;">
-														내용없음
-													</div>
+													차량 수령시간 이후 : NO SHOW 수수료 발생 (차량대여요금의 10% )
 												</li>
 											</ul>
 										</div>
