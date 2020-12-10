@@ -40,6 +40,21 @@
 			@include Align-middle;
 			@include Position( $top: 1.5rem, $right: 5.1rem);
 		}
+		.btn-push {
+			width: 3.4rem;
+			height: 3.4rem;
+			@include Align-middle;
+			@include Position( $top: 1.5rem, $right: 8.5rem);
+			.push-alarm-on{
+				display:none;
+			}
+			&.on{
+				.push-alarm-on{
+					display:block;
+					@include Position( $top: .7rem, $right: .8rem);
+				}
+			}
+		}
 
 	}
 

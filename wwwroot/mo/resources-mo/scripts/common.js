@@ -39,7 +39,7 @@ $(function(){
 
     //drawer버튼 열기
     MUI.event.toggle('.btn-drawer', null, true, function(logic, layer) {
-        console.log(11);
+        //console.log(11);
         $BODY.addClass("fixed");
         $('.btn-drawer-close').addClass('active');
         logic();
@@ -100,28 +100,28 @@ $(function(){
         logic();
     });
 
-    //goQuick
-    if($('.fixedRight .btn-goQuick').length){
-        // MUI.layer.openClick('.btn-goQuick', LAYER_DIM, LAYER_PARENT, true, function(show){
-        //     $('.btn-goQuick').addClass('btn-goQuick-close');
-        //     $('.goQuick-menu-list').addClass('active');
-        //     show();
-        // });
-        // MUI.layer.closeClick('.btn-goQuick-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
-        //     $('.btn-goQuick').removeClass('btn-goQuick-close');
-        //     $('.goQuick-menu-list').removeClass('active');
-        //     console.log('close');
-        //     hide();
-        // });
+    //goQuick 딤드 닫기
+    MUI.event.toggle('.fixedRight ~ .bg-dimmed', null, true, function(logic, layer) {
+        $('.goQuick-menu-list').removeClass('active');
+        $('.btn-goQuick').removeClass('btn-goQuick-close');
+        logic();
+    });
 
-        MUI.event.toggle('.fixedRight .btn-goQuick', '.fixedRight .goQuick-menu-list', true, function(logic, layer) {
-            $('.bg-dimmed').on('click', function(){
-                $('.goQuick-menu-list').removeClass('active');
-                $('.btn-goQuick').removeClass('btn-goQuick-close');
-            });
-            logic();
-        });
-    }
+    //push버튼 열기
+    MUI.event.toggle('.btn-push', null, true, function(logic, layer) {
+        $BODY.addClass("fixed");
+        $('.bg-dimmed').show();
+        logic();
+    });
+
+    //push버튼 닫기
+    MUI.event.toggle('.push ~ .bg-dimmed', null, true, function(logic, layer) {
+        $BODY.removeClass("fixed");
+        $('.push').removeClass('active');
+        $('.btn-push').removeClass('active');
+        $('.bg-dimmed').hide();
+        logic();
+    });
 
     //차트그리기
     if($('.pie-chart').length){
@@ -1310,17 +1310,7 @@ if($('.layer-car-detail').length){
     });
 }
 
-//중고차 승계렌터카 등록 1단계 
-// if($('.secondhand-wrap').length) {
-//     $(".individual-tab .text-cont input").change(function(){
-//         if($(".text-cont input:radio[type=radio]:checked").val() == "1"){
-//             $(this).hasClass('active');
-//             $(".individual-tab button").removeClass('active');
-//         }else{
-//             $(".individual-tab button").addClass('active');
-//         }
-//     });
-// }
+
 
 //필터 슬라이드
 if($('.secondhand-wrap .item-step15 #slider-price').length) {

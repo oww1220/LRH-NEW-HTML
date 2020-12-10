@@ -881,4 +881,474 @@
         h4{margin:10px 0;}
         
     }
+
+    //실시간예약
+    .realTime-cont {
+        @include Align-between-top;
+        .section-cont {
+            width:750px;
+            .section-form {
+                .form-header {
+                    margin-bottom:0;
+                    @include Align-between;
+                    span {
+                        @include Bold;
+                        position: relative;
+                        font-size:18px;
+                        &::before {
+                            content:'*';
+                            display: inline-block;
+                            @include Position ($left:-12px, $top:20%);
+                        }
+                    }
+                }
+                .form-cont {
+                    padding:40px 0 80px;
+                    .row {
+                        padding:0 40px;
+                        margin-bottom:0;
+                    }
+                }
+                &.form1 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:40px;
+                        }
+                        div:last-child {
+                            .input-tit {
+                                font-size:22px;
+                            }
+                            .txt {
+                                font-size:32px;
+                            }
+                        }
+                    }
+                }
+                &.form2 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                        }
+                        .type-left {
+                            position: relative;
+                            .left-txt {
+                                @include Position($left:35px, $top:35%);
+                            }
+                        }
+                        > div:last-child {
+                            .box-between {
+                                select {
+                                    max-width: 25%;
+                                    & + .inputT {
+                                        max-width: 45%;
+                                        & + button {
+                                            width:30%;
+                                        }
+                                    }
+                                }
+                                & + .box-between {
+                                    .inputT {
+                                        max-width: 71%;
+                                        & + button {
+                                            width:30%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.form3 {
+                    .driver-license-section{
+                        .selection{
+                            display:flex;
+                            align-items: center;
+                
+                            .input-tit{
+                                flex:none;
+                                flex-basis: 170px;
+                                width:170px;
+                            }
+                        }
+                        
+                        .driver-license-cont{ 
+                            position: relative;
+                            margin-top:35px;
+                
+                            input, select{
+                                max-width:130px;
+                                height:40px;
+                            }
+                            .box-align{
+                                align-items: center;
+                
+                                .symbol{margin-right:5px;}
+                            }
+                        
+                        }
+                
+                        .domestic-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:378px;
+                                @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
+                
+                                .type-box, .number-box, .expiration-date-box, .issue-date-box{
+                                    position:relative;
+                                    display:block;
+                    
+                                    .numbering{
+                                        @include Position($top:10px,$right:-26px);
+                                    }            
+                                }
+                                .type-box{
+                                    @include Position($top:30px, $left:55px);
+                    
+                                    select{width: 130px;}
+                                }
+                                .number-box{
+                                    @include Position($top:90px, $left:202px);
+                    
+                                    .box-between{
+                                        width:430px;
+                    
+                                        .inputT{width:auto;}
+                                        select, input{max-width:102px;}
+                                    }
+                                }
+                                .expiration-date-box{
+                                    @include Position($top:256px, $left:270px);
+                                }
+                                .issue-date-box{
+                                    @include Position($bottom:30px, $left:202px);
+                                }
+                            }
+                        }
+                        .international-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:553px;
+                                @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
+                            }            
+                        }
+                
+                        .guide-cont{
+                            margin-top:30px;
+                
+                            .tit{
+                                font-size:18px;
+                            }
+                            .lst{
+                                margin-top:20px;
+                
+                                li{
+                                    padding-left:28px;
+                                    + li{margin-top:10px;}
+                                }
+                            }
+                        }
+                        .numbering{
+                            @include Align-middle;
+                            width:18px;
+                            height:18px;
+                            color:#fff;
+                            font-size:12px;
+                            border-radius:18px;
+                            background-color:#ff404b;
+                        }        
+                    }
+                }
+                &.form4 {
+                    .chk-view-box{	
+                        label{			
+                            @include Align-between;
+                            padding:0 30px;
+                            strong {
+                                color:#8f9191;
+                                font-size:18px;
+                                @include Align-middle-left;
+                                &:after {
+                                    content: '';
+                                    display: block;
+                                    width: 13px;
+                                    height: 12px;
+                                    margin-left:10px;
+                                }
+                            }
+                            span {
+                                font-size:18px;
+                                color:#8f9191;
+                            }
+                        }
+                        input:checked + label{
+                            border-color:$txt-red;
+                            background-color:#fff9f9;
+                        }
+                        input:checked + label:after	{
+                            display:none;
+                        }
+                        input:checked + label strong {
+                            @include Bold; 
+                            color:$txt-red;
+                        }
+                        input:checked + label strong:after{
+                            @include Background($sprite:'ico-chk-on2', $position:center center);
+                        }	
+                        input:checked + label span {
+                            @include Bold; 
+                            color:#2f2f2f;
+                        }
+                    }
+                }
+                &.form5 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                        }
+                        .box-between {
+                            position: relative;
+                            &::before {
+                                content:'-';
+                                display: inline-block;
+                                @include Position ($left:50%);
+                                margin-left: -2.5px;
+                            }
+                            select {
+                                max-width: 48%;
+                                & + .inputT {
+                                    max-width: 48%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.form6 {
+                    .form-cont {
+                        li {
+                            padding-bottom:20px;
+                            & + li {
+                                padding:20px 0;
+                                border-top:1px solid #e7e7e7;
+                                > div > strong {
+                                    padding-top:5px;
+                                }
+                            }
+                            > div {
+                                @include Align-top-left;
+                                strong {
+                                    width:30%;
+                                    font-size:16px;
+                                    i {
+                                        margin-right:10px;
+                                    }
+                                }
+                                > div {
+                                    width:65%;
+                                    > div + div {
+                                        padding-top:20px;
+                                    }
+                                    .chk-icon-box {
+                                        width:50%;
+                                        label {
+                                            color:#8f9191;
+                                        }
+                                        span {
+                                            padding-left:32px;
+                                            margin-top:5px;
+                                            display: block;
+                                            color:#8f9191;
+                                            font-size:14px;
+                                        }
+                                        input:checked + label {
+                                            color:#2f2f2f;
+                                        }
+                                    }
+                                    .input-increase {
+                                        padding:17px 20px;
+                                        border:1px solid #d2d2d2;
+                                        box-sizing: border-box;
+                                        border-radius:50px;
+                                        @include Align-middle;
+                                        width:30%;
+                                        input {
+                                            width:70px;
+                                            text-align: center;
+                                            color:#8f9191;
+                                        }
+                                        button {
+                                            color:#d2d2d2;
+                                        }
+                                        &.active {
+                                            border-color: #2f2f2f;
+                                            input {
+                                                color:#2f2f2f;
+                                            }
+                                            button {
+                                                color:#2f2f2f;
+                                            }
+                                        }
+                                    }
+                                }
+                            } 
+                            &:last-child {
+                                padding-bottom:0;
+                            }
+                        }
+                        
+                    }
+                }
+                &.form7 {
+                    .form-cont {
+                        .agree-header {
+                            .lst {
+                                padding-top:20px;
+                                li + li {
+                                   margin-top:10px;
+                                }
+                            }
+                        }
+                        .agree-list {
+                            border-bottom:1px solid #e7e7e7;
+                            padding:30px 0;
+                            li {
+                                border-bottom:0;
+                                padding:0;
+                                & + li {
+                                    padding-top:20px;
+                                }
+                                button {
+                                    span {
+                                        border-bottom:1px solid #2f2f2f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .section-sticky-lnb {
+            width:390px;
+            > div + div {
+                padding-top:15px;
+            }
+            .sticky-view-info {
+                border:1px solid #d2d2d2;
+                border-radius:10px;
+                .info-top {
+                    font-size:24px;
+                    background-color: #fafafa;
+                    padding:30px 0;
+                    border-radius:10px 10px 0 0;
+                    @include Bold;
+                }
+                .info-cover {
+                    padding-top:50px;
+                }
+                .lst {
+                    padding:30px;
+                    li {
+                        color:#8f9191;
+                        font-size:12px;
+                    }
+                }
+
+            }
+            .sticky-cont {
+                margin-top:20px;
+                .cont-result {
+                    > ul {
+                        > li {
+                            background-color: #4a4a4a;
+                            padding-bottom:20px;
+                            > div {
+                                @include Align-between;
+                                border-top: 1px solid #fff;
+                                margin:0 30px;
+                                padding-top:20px;
+                                strong {
+                                    padding-left:10px;
+                                    font-size:18px;
+                                    color:#fff;
+                                    @include Bold;
+                                }
+                                > div {
+                                    @include Align-top-right-column;
+                                    padding-right:10px;
+                                    span {
+                                        font-size:16px;
+                                        color:#fff;
+                                        @include Bold;
+                                        & + span {
+                                            @include Regular;
+                                            font-size:14px;
+                                            color:#bbb;
+                                            padding-top:10px;
+                                        }
+                                        &.price {
+                                            font-size:32px;
+                                            em {
+                                                font-size:18px;
+                                            }
+                                        }
+                                    }
+                                } 
+                            }
+                            > ul {
+                                li {
+                                    padding-top:10px;
+                                    > div {
+                                        @include Align-between;
+                                        margin:0 30px;
+                                        strong {
+                                            @include Regular;
+                                            font-size:14px;
+                                            color:#bbb;
+                                            padding-left:10px;
+                                        }
+                                        div {
+                                            padding-right:10px;
+                                            span {
+                                                @include Regular;
+                                                font-size:14px;
+                                                color:#bbb;
+                                            }
+                                        } 
+                                    }
+                                }
+                                
+                            }
+                            &:first-child {
+                                padding-top:20px;
+                                border-radius: 10px 10px 0 0;
+                                > div {
+                                    border-top:0;
+                                }
+                            } 
+                            &:last-child {
+                                background-color: #656565;
+                                border-radius: 0 0 10px 10px;
+                                > div {
+                                    border-top:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .sticky-btn {
+                padding:30px 0;
+                ul {
+                    width:100%;
+                    margin:0;
+                    justify-content: space-between;
+                    li {
+                        width:49%;
+                    }
+                }
+            }
+        }
+    }
 }

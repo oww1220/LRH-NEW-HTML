@@ -62,6 +62,11 @@ $extra-small-devices: 320px;
 	flex-flow: column;
 	align-items: flex-start;
 }
+@mixin Align-top-right-column {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-end;
+}
 @mixin Align-middle-left {
 	display: flex;
 	align-items: center;
@@ -414,6 +419,28 @@ $txt-darkblack: #2f2f2f;
 		}
 		+ .form-row{margin-top:20px;}
 		.inputT + .txt-exam{margin-left:20px;}
+	}
+
+	//email 한줄 인 경우
+	.box-between {
+		.inputT.email {
+			position: relative;
+			&::after {
+				content:'@';
+				display: inline-block;
+				@include Position($right:0, $top:50%);
+				transform: translateY(-13px);
+			}
+			input { 
+				border-right: 0;
+				border-radius: 6px 0 0 6px;
+			}
+		}
+		.inputT + select {
+			margin-left:0 !important;
+			border-left:0;
+			border-radius: 0 6px 6px 0;
+		}
 	}
 }
 .section{

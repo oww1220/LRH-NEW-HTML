@@ -1141,6 +1141,8 @@ if($('.mypage-container .pointTransitionTab').length){
             logic();
         });
     }
+
+
 /* 메인end-------------------------------------------------*/
 
     //푸터 슬라이더
