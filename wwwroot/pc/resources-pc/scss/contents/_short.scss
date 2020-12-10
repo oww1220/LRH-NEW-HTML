@@ -890,113 +890,343 @@
             .section-form {
                 .form-header {
                     margin-bottom:0;
+                    @include Align-between;
+                    span {
+                        @include Bold;
+                        position: relative;
+                        font-size:18px;
+                        &::before {
+                            content:'*';
+                            display: inline-block;
+                            @include Position ($left:-12px, $top:20%);
+                        }
+                    }
                 }
                 .form-cont {
                     padding:40px 0 80px;
                     .row {
                         padding:0 40px;
+                        margin-bottom:0;
                     }
                 }
-            }
-            //운전면허 정보입력
-            .driver-license-section{
-                .selection{
-                    display:flex;
-                    align-items: center;
-        
-                    .input-tit{
-                        flex:none;
-                        flex-basis: 170px;
-                        width:170px;
-                    }
-                }
-                
-                .driver-license-cont{ 
-                    position: relative;
-                    margin-top:40px;
-        
-                    input, select{
-                        max-width:130px;
-                        height:40px;
-                    }
-                    .box-align{
-                        align-items: center;
-        
-                        .symbol{margin-right:5px;}
-                    }
-                
-                }
-        
-                .domestic-license{
-                    .driver-license-cont{               
-                        width:670px;
-                        height:378px;
-                        @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
-        
-                        .type-box, .number-box, .expiration-date-box, .issue-date-box{
-                            position:relative;
-                            display:block;
-            
-                            .numbering{
-                                @include Position($top:10px,$right:-26px);
-                            }            
+                &.form1 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:40px;
                         }
-                        .type-box{
-                            @include Position($top:30px, $left:55px);
-            
-                            select{width: 130px;}
-                        }
-                        .number-box{
-                            @include Position($top:90px, $left:202px);
-            
-                            .box-between{
-                                width:430px;
-            
-                                .inputT{width:auto;}
-                                select, input{max-width:102px;}
+                        div:last-child {
+                            .input-tit {
+                                font-size:22px;
+                            }
+                            .txt {
+                                font-size:32px;
                             }
                         }
-                        .expiration-date-box{
-                            @include Position($top:256px, $left:270px);
+                    }
+                }
+                &.form2 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
                         }
-                        .issue-date-box{
-                            @include Position($bottom:30px, $left:202px);
+                        .type-left {
+                            position: relative;
+                            .left-txt {
+                                @include Position($left:35px, $top:35%);
+                            }
+                        }
+                        > div:last-child {
+                            .box-between {
+                                select {
+                                    max-width: 25%;
+                                    & + .inputT {
+                                        max-width: 45%;
+                                        & + button {
+                                            width:30%;
+                                        }
+                                    }
+                                }
+                                & + .box-between {
+                                    .inputT {
+                                        max-width: 71%;
+                                        & + button {
+                                            width:30%;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                .international-license{
-                    .driver-license-cont{               
-                        width:670px;
-                        height:553px;
-                        @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
-                    }            
-                }
-        
-                .guide-cont{
-                    margin-top:30px;
-        
-                    .tit{
-                        font-size:18px;
+                &.form3 {
+                    .driver-license-section{
+                        .selection{
+                            display:flex;
+                            align-items: center;
+                
+                            .input-tit{
+                                flex:none;
+                                flex-basis: 170px;
+                                width:170px;
+                            }
+                        }
+                        
+                        .driver-license-cont{ 
+                            position: relative;
+                            margin-top:35px;
+                
+                            input, select{
+                                max-width:130px;
+                                height:40px;
+                            }
+                            .box-align{
+                                align-items: center;
+                
+                                .symbol{margin-right:5px;}
+                            }
+                        
+                        }
+                
+                        .domestic-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:378px;
+                                @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
+                
+                                .type-box, .number-box, .expiration-date-box, .issue-date-box{
+                                    position:relative;
+                                    display:block;
+                    
+                                    .numbering{
+                                        @include Position($top:10px,$right:-26px);
+                                    }            
+                                }
+                                .type-box{
+                                    @include Position($top:30px, $left:55px);
+                    
+                                    select{width: 130px;}
+                                }
+                                .number-box{
+                                    @include Position($top:90px, $left:202px);
+                    
+                                    .box-between{
+                                        width:430px;
+                    
+                                        .inputT{width:auto;}
+                                        select, input{max-width:102px;}
+                                    }
+                                }
+                                .expiration-date-box{
+                                    @include Position($top:256px, $left:270px);
+                                }
+                                .issue-date-box{
+                                    @include Position($bottom:30px, $left:202px);
+                                }
+                            }
+                        }
+                        .international-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:553px;
+                                @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
+                            }            
+                        }
+                
+                        .guide-cont{
+                            margin-top:30px;
+                
+                            .tit{
+                                font-size:18px;
+                            }
+                            .lst{
+                                margin-top:20px;
+                
+                                li{
+                                    padding-left:28px;
+                                    + li{margin-top:10px;}
+                                }
+                            }
+                        }
+                        .numbering{
+                            @include Align-middle;
+                            width:18px;
+                            height:18px;
+                            color:#fff;
+                            font-size:12px;
+                            border-radius:18px;
+                            background-color:#ff404b;
+                        }        
                     }
-                    .lst{
-                        margin-top:20px;
-        
-                        li{
-                            padding-left:28px;
-                            + li{margin-top:10px;}
+                }
+                &.form4 {
+                    .chk-view-box{	
+                        label{			
+                            @include Align-between;
+                            padding:0 30px;
+                            strong {
+                                color:#8f9191;
+                                font-size:18px;
+                                @include Align-middle-left;
+                                &:after {
+                                    content: '';
+                                    display: block;
+                                    width: 13px;
+                                    height: 12px;
+                                    margin-left:10px;
+                                }
+                            }
+                            span {
+                                font-size:18px;
+                                color:#8f9191;
+                            }
+                        }
+                        input:checked + label{
+                            border-color:$txt-red;
+                            background-color:#fff9f9;
+                        }
+                        input:checked + label:after	{
+                            display:none;
+                        }
+                        input:checked + label strong {
+                            @include Bold; 
+                            color:$txt-red;
+                        }
+                        input:checked + label strong:after{
+                            @include Background($sprite:'ico-chk-on2', $position:center center);
+                        }	
+                        input:checked + label span {
+                            @include Bold; 
+                            color:#2f2f2f;
                         }
                     }
                 }
-                .numbering{
-                    @include Align-middle;
-                    width:18px;
-                    height:18px;
-                    color:#fff;
-                    font-size:12px;
-                    border-radius:18px;
-                    background-color:#ff404b;
-                }        
+                &.form5 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                        }
+                        .box-between {
+                            position: relative;
+                            &::before {
+                                content:'-';
+                                display: inline-block;
+                                @include Position ($left:50%);
+                                margin-left: -2.5px;
+                            }
+                            select {
+                                max-width: 48%;
+                                & + .inputT {
+                                    max-width: 48%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.form6 {
+                    .form-cont {
+                        li {
+                            padding-bottom:20px;
+                            & + li {
+                                padding:20px 0;
+                                border-top:1px solid #e7e7e7;
+                                > div > strong {
+                                    padding-top:5px;
+                                }
+                            }
+                            > div {
+                                @include Align-top-left;
+                                strong {
+                                    width:30%;
+                                    font-size:16px;
+                                    i {
+                                        margin-right:10px;
+                                    }
+                                }
+                                > div {
+                                    width:65%;
+                                    > div + div {
+                                        padding-top:20px;
+                                    }
+                                    .chk-icon-box {
+                                        width:50%;
+                                        label {
+                                            color:#8f9191;
+                                        }
+                                        span {
+                                            padding-left:32px;
+                                            margin-top:5px;
+                                            display: block;
+                                            color:#8f9191;
+                                            font-size:14px;
+                                        }
+                                        input:checked + label {
+                                            color:#2f2f2f;
+                                        }
+                                    }
+                                    .input-increase {
+                                        padding:17px 20px;
+                                        border:1px solid #d2d2d2;
+                                        box-sizing: border-box;
+                                        border-radius:50px;
+                                        @include Align-middle;
+                                        width:30%;
+                                        input {
+                                            width:70px;
+                                            text-align: center;
+                                            color:#8f9191;
+                                        }
+                                        button {
+                                            color:#d2d2d2;
+                                        }
+                                        &.active {
+                                            border-color: #2f2f2f;
+                                            input {
+                                                color:#2f2f2f;
+                                            }
+                                            button {
+                                                color:#2f2f2f;
+                                            }
+                                        }
+                                    }
+                                }
+                            } 
+                            &:last-child {
+                                padding-bottom:0;
+                            }
+                        }
+                        
+                    }
+                }
+                &.form7 {
+                    .form-cont {
+                        .agree-header {
+                            .lst {
+                                padding-top:20px;
+                                li + li {
+                                   margin-top:10px;
+                                }
+                            }
+                        }
+                        .agree-list {
+                            border-bottom:1px solid #e7e7e7;
+                            padding:30px 0;
+                            li {
+                                border-bottom:0;
+                                padding:0;
+                                & + li {
+                                    padding-top:20px;
+                                }
+                                button {
+                                    span {
+                                        border-bottom:1px solid #2f2f2f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
+            
         }
         .section-sticky-lnb {
             width:390px;
@@ -1113,6 +1343,10 @@
                 ul {
                     width:100%;
                     margin:0;
+                    justify-content: space-between;
+                    li {
+                        width:49%;
+                    }
                 }
             }
         }
