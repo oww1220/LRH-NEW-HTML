@@ -271,6 +271,18 @@ $main-border-radius: 6px;
 	align-items: baseline;
 	justify-content: left;
 }
+@mixin  Align-around {
+	display:flex;
+	justify-content:space-around;
+}
+
+@mixin Align-spacing-box($spacing){
+	width: calc(100% + #{$spacing});
+	display:flex;
+	flex-wrap: wrap;
+	align-items:stretch;
+	justify-content:center;
+}
 
 //@include box-shadow($top:0, $left:0px, $blur:15px, $color:rgba(50, 50, 50, 0.75));
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
