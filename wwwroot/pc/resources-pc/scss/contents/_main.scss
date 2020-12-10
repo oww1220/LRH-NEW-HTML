@@ -35,12 +35,12 @@
         }
     }
     .t-red {
+        @include Bold;
         margin-top: 10px;
+        font-size: 28px;
         color: #da291c;
-        strong {
-            @include Bold;
-            font-size: 28px;
-            color: #da291c;
+        sub {
+            font-size: 18px;
         }
     }
     // 상단 비쥬얼 영역
@@ -755,6 +755,131 @@
     .hotdeal-wrap {
         margin-top: 50px;
         background: url(../../resources-pc/images/common/bg-main-hotdeal.png) bottom left repeat-x;
+        .hotdeal-twrap {
+            @include Align-between-base;
+        }
+        .t-wrap {
+            @include Align-top-left;
+            .flag-wrap {
+                position: inherit;
+                @include Align-top;
+                margin: 57px 0 0 50px;
+                b, span {
+                    @include Bold;
+                    font-size: 30px;
+                    color: #54585a;
+                }
+                b{
+                    @include Align-top-column;
+                    &.texRed {
+                        color: #ed1c24;
+                    }
+                }
+                span {
+                    margin: -7px 20px 0;
+                    color: #999;
+                }
+                i {
+                    color: #8f9191;
+                    font-size: 13px;
+                    margin-top: 2px;
+                }
+            }
+        }
+        .btn-goLink {margin-bottom: 10px;}
+        .hotdeal-slide-wrap {margin-top: 120px;}
+        .secondhand-slide-cont {
+            @include Align-between;
+            .slide-type a {
+                @include Align-between-top;
+                .txt-type {
+                    width: 290px;
+                    margin-top: 10px;
+                    color: #8f9191;
+                    font-size: 22px;
+                    .tit > strong {
+                        @include Bold;
+                        font-size: 28px;
+                        color: #2f2f2f;
+                        line-height: 1.5;
+                    }
+                    del {
+                        @include Bold;
+                        display: block;
+                        margin-top: 30px;
+                        font-size: 22px;
+                        color: #ddd;
+                        sub {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .img {
+                    position: relative;
+                    width: 360px;
+                    height: 280px;
+                    background-size: 100% auto;
+                    .flag {
+                        @include Bold;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 74px;
+                        height: 77px;
+                        padding: 0 5px 10px;
+                        background: url(../../resources-pc/images/icons/ico-main-flag.png) 0 0 no-repeat;
+                        border-radius: inherit;
+                        color: #fff;
+                        font-size: 26px;
+                        sub{
+                            font-size: 16px;
+                            vertical-align: baseline;
+                        }
+                    }
+                }
+            }
+        }
+        .pagination-wrap {
+            padding: 50px 0;
+        }
+    }
+    //라이프
+    .life-wrap {
+        margin-top: 80px;
+        .t-wrap {
+            @include Align-top-left;
+            align-items: flex-end;
+            ul {
+                @include Align-top;
+                margin-left: 30px;
+                li {
+                    margin-right: 15px;
+                }
+            }
+        }
+        .life-list {
+            @include Align-between;
+            margin-top: 65px;
+            border-bottom: 1px solid #eee;
+            .life-type {
+                width: 220px;
+                height: 370px;
+                img {
+                    width: 220px;
+                    height: 220px;
+                    background-size: 100% auto;
+                }
+                h3 {
+                    margin-top: 30px;
+                    color: #54585a;
+                    font-size: 18px;
+                }
+                p {
+                    color: #8f9191;
+                    font-size: 14px;
+                }
+            }
+        }
     }
 
     .section {
