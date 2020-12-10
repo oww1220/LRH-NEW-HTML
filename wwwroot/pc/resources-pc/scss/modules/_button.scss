@@ -268,6 +268,33 @@
 			@include Align-middle;
 		}
 	}
+	&-auto{
+		@include Vertical-inline;
+		width:auto;
+		padding: 10px 20px;
+		box-sizing: border-box;
+		font-size:14px;
+		line-height: 1;
+		color:#2B2B2B;
+		@include roundBox;
+
+		&.black{
+			color:#fff;
+			border: 1px solid #54585a;
+			background-color: #54585a;
+			@include Align-middle;
+		}
+		&.line-red{
+			color:$txt-red;
+			border: 1px solid $txt-red;
+			@include Align-middle;
+		}
+		&.line-black{
+			color:#54585a;
+			border: 1px solid #54585a;
+			@include Align-middle;
+		}
+	}
 }
 
 //

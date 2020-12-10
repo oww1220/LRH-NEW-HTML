@@ -96,7 +96,7 @@
         .detail-view-info{
             background-color:#EFF2F7;
             padding:1.5rem 1.3rem;
-            border-radius: 1rem;
+            border-radius: .5rem;
             & > strong{
                 @include Bold;
                 display:block;
@@ -194,7 +194,7 @@
                 color:#54585a;
             }
             .btn{
-                border-radius: 1rem;
+                border-radius: .5rem;
             }
         }
         &.submit-normal{
@@ -296,7 +296,7 @@
                 .img {
                     position: relative;
                     overflow: hidden;
-                    border-radius: 1rem;
+                    border-radius: .5rem;
                     background-color: #fff;
                     img {
                         width: 100%;
@@ -354,14 +354,14 @@
                 .btn-group{
                     margin-top:1.3rem;
                     .btn-middle{
-                        border-radius: 1rem;
+                        border-radius: .5rem;
                         border:.2rem solid #d2d2d2;
                         padding: 0 1.8rem;
                         margin:0;
                         height:2.9rem;
                     }
                     .btn-default{
-                        border-radius: 1rem;
+                        border-radius: .5rem;
                         padding: 0 2.3rem;
                         margin:0;
                         width:auto;
@@ -548,8 +548,9 @@
                         }
                     }
                     .detail-layer-cont-pchase{
-                        justify-content: flex-end;
-                        padding-right:1.7rem;
+                        //justify-content: flex-end;
+                        //padding-right:1.7rem;
+                        padding:0 1.7rem;
                         b{
                             font-size:1.4rem;
                             @include Bold;
@@ -569,7 +570,7 @@
                     margin: 0 1.7rem;
                     background-color:#EFF2F7;
                     padding:1.5rem 1.3rem;
-                    border-radius: 1rem;
+                    border-radius: .5rem;
                     span {
                         display: block;
                         text-align: center;
@@ -653,7 +654,7 @@
                                     }
                                     & > input{
                                         border:1px solid #d2d2d2;
-                                        border-radius: 1rem;
+                                        border-radius: .5rem;
                                         background-color: #fff;
                                         height: 4.1rem;
                                         width:100%;
@@ -662,7 +663,7 @@
                                     & > button{
                                         width:100%;
                                         height: 4.1rem;
-                                        border-radius: 1rem; 
+                                        border-radius: .5rem; 
                                         background-color:#54585a;
                                         border-color:#54585a;
                                         color:#fff;
@@ -713,7 +714,7 @@
                                 }
                                 & > input{
                                     border:1px solid #d2d2d2;
-                                    border-radius: 1rem 0 0 1rem;
+                                    border-radius: .5rem 0 0 .5rem;
                                     background-color: #fff;
                                     height: 4.1rem;
                                     width:100%;
@@ -728,14 +729,14 @@
                                     transform: translateY(-50%);
                                 }
                                 &:last-child > input{
-                                    border-radius: 0 1rem 1rem 0;
+                                    border-radius: 0 .5rem .5rem 0;
                                     border:1px solid #d2d2d2;
                                     border-left:0;
                                 }
                                 & > .selectbox{
                                     width:100%;
                                     height: 4.1rem;
-                                    border-radius: 0 1rem 1rem 0; 
+                                    border-radius: 0 .5rem .5rem 0; 
                                     background-color: #fff;
                                     border-color:#d2d2d2;
                                     font-size:1.2rem;
@@ -822,7 +823,7 @@
                                 }
                                 & > input{
                                     border:1px solid #d2d2d2;
-                                    border-radius: 1rem 0 0 1rem;
+                                    border-radius: .5rem 0 0 .5rem;
                                     background-color: #fff;
                                     height: 4.1rem;
                                     width:100%;
@@ -837,14 +838,14 @@
                                     transform: translateY(-50%);
                                 }
                                 &:last-child > input{
-                                    border-radius: 0 1rem 1rem 0;
+                                    border-radius: 0 .5rem .5rem 0;
                                     border:1px solid #d2d2d2;
                                     border-left:0;
                                 }
                                 & > .selectbox{
                                     width:100%;
                                     height: 4.1rem;
-                                    border-radius: 0 1rem 1rem 0; 
+                                    border-radius: 0 .5rem .5rem 0; 
                                     background-color: #fff;
                                     border-color:#d2d2d2;
                                     font-size:1.2rem;
@@ -932,7 +933,7 @@
                                 & > button{
                                     width:100%;
                                     height: 4.1rem;
-                                    border-radius: 1rem; 
+                                    border-radius: .5rem; 
                                     background-color:#54585a;
                                     border-color:#54585a;
                                     color:#fff;
@@ -1085,7 +1086,7 @@
                                 }
                                 & > input{
                                     border:1px solid #d2d2d2;
-                                    border-radius: 1rem;
+                                    border-radius: .5rem;
                                     background-color: #fff;
                                     height: 4.1rem;
                                     width:100%;
@@ -1095,7 +1096,7 @@
                                 & > button{
                                     width:100%;
                                     height: 4.1rem;
-                                    border-radius: 1rem; 
+                                    border-radius: .5rem; 
                                     background-color:#54585a;
                                     border-color:#54585a;
                                     color:#fff;
@@ -1323,6 +1324,11 @@
                                     }
                                 }
                             }
+                            .chk-agree-all{
+                                .guide{
+                                    margin: 0 0 1.2rem;
+                                }
+                            }
                         }
                         .table{
                             margin-top:.9rem;
@@ -1347,8 +1353,8 @@
                                 }
                             }
                         }
-                        ul {
-                            label {
+                        .radioIconBox{
+                            label{
                                 height: 3.7rem;
                                 &::after {
                                     @include Position($top: 50%, $right: 1.2rem);
@@ -1356,6 +1362,15 @@
                                 }
                             }
                         }
+                        // ul {
+                        //     label {
+                        //         height: 3.7rem;
+                        //         &::after {
+                        //             @include Position($top: 50%, $right: 1.2rem);
+			            //             transform: translateY(-50%);
+                        //         }
+                        //     }
+                        // }
                         .info-box{
                             @include Align-between;
                             background-color:#877669;
@@ -1428,6 +1443,46 @@
                                 @include Regular;
                             }
                         }
+                        .radioIconBox{
+                            label{
+                                padding:1.3rem 0;
+                                span{
+                                    color:#54585a;
+                                    @include Regular;
+                                    padding-bottom:1rem;
+                                }
+                                em{
+                                    color:#54585a;
+                                    @include Regular;
+                                    padding-top:1rem;
+                                }
+                            }
+                            label:before{
+                                display:block;
+                                content: "";
+                                border-bottom:1px solid #e7e7e7;
+                                width:90%;
+                                height:1px;
+                                @include Position($top: 50%, $left: 5%);
+                                transform: translateY(-50%);
+                            }
+                            input:checked + label{
+                                span{
+                                    @include Bold;
+                                    color:#ed1c24;
+                                }
+                                em{
+                                    @include Bold;
+                                    color:#2f2f2f;
+                                }
+                            }
+                            input:checked + label:before{
+                                border-color: #ed1c24;
+                            }
+                            input:checked + label:after{
+                                display:none;
+                            }
+                        }
                     }
                 }
                 &.item-step7 {
@@ -1479,6 +1534,147 @@
                                 @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
                             }
                         }
+
+                        .detail-iconBox-type02{
+                            margin-left: -.6rem;
+                            label {
+                                @include Align-left-column;
+                                justify-content: center;
+                                align-items: flex-start;
+                                border:0 none;
+                                border-radius: 0;
+                                @include Regular;
+                                &:after {
+                                    width: 1.7rem;
+                                    height: 1.7rem;
+                                    margin-top: -.45rem;
+                                    left:.5rem;
+                                }
+                                b{
+                                    font-size:1.1rem;
+                                    color:#8f9191;
+                                    @include Regular;
+                                    line-height: 1.3;
+                                }
+                                em{
+                                    font-size:.8rem;
+                                    color:#8f9191;
+                                    @include Regular;
+                                }
+                            }
+                            input:checked + label {
+                                @include Regular;
+                                b{
+                                    color:#2f2f2f;
+                                }
+                            }
+                            input[type='checkbox'] + label:after{
+                                @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                                width: 1.2rem;
+                                height: .9rem;
+                            }
+                            input[type='checkbox']:checked + label:after{
+                                @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                            }
+                        }
+
+                        .detail-layer-number-wrap{
+                            padding:1.3rem;
+                            border:1px solid #d2d2d2;
+                            border-radius: .5rem;
+                            &.active{
+                                border:1px solid #2f2f2f;
+                            }
+                            .detail-layer-inputT-tit{
+                                margin-top:0;
+                                @include Align-between;
+                                border-bottom:1px solid #e7e7e7;
+                                padding-bottom: .9rem;
+                                margin-bottom: .9rem;
+                                b{
+                                    @include Bold;
+                                    @include Align-middle-left;
+                                    & > .icon{
+                                        margin-right:.7rem;
+                                    }
+                                    & > button{
+                                        margin-left: .4rem;
+                                    }
+                                }
+                                em{
+                                    @include Regular;
+                                    color:#ed1c24;
+                                    sup{
+                                        position: relative;
+                                        top: .3rem;
+                                    }
+                                }
+                            }
+                            .detail-layer-inputT{
+                                margin-top:0;
+                            }
+                            .input-number-box-wrap{
+                                @include Align-middle-right;
+                                height:100%;
+                                .input-number-box{
+                                    width:60%;
+                                    position: relative;
+                                    input[type='number']{
+                                        border: 1px solid #d2d2d2;
+                                        color:#8f9191;
+                                        border-radius: 2rem;
+                                        background-color: #fff;
+                                        height: 3.4rem;
+                                        width: 100%;
+                                        padding: 0 1.2rem;
+                                        text-align: center;
+                                        text-indent: -.9rem;
+                                    }
+                                    span{
+                                        color:#8f9191;
+                                        @include Position($top: 49%, $left: 50%);
+                                        transform: translateY(-50%);
+                                    }
+                                    .number-data-minus{
+                                        @include Position($top: 50%, $left: 15%);
+                                        transform: translateY(-50%);
+                                        @include Background($sprite:'ico-number-minus-off', $size:100% auto, $position:center center);
+                                        width: .7rem;
+                                        height: .3rem;
+                                    }
+                                    .number-data-plus{
+                                        @include Position($top: 50%, $right: 15%);
+                                        transform: translateY(-50%);
+                                        @include Background($sprite:'ico-number-plus-off', $size:100% auto, $position:center center);
+                                        width: .7rem;
+                                        height: .7rem;
+                                    }
+                                    &.active{
+                                        input[type='number']{
+                                            border-color: #2f2f2f;
+                                            color:#2f2f2f;
+                                        }
+                                        span{
+                                            color:#2f2f2f;
+                                        }
+                                        .number-data-minus{
+                                            @include Position($top: 50%, $left: 15%);
+                                            transform: translateY(-50%);
+                                            @include Background($sprite:'ico-number-minus-on', $size:100% auto, $position:center center);
+                                            width: .7rem;
+                                            height: .3rem;
+                                        }
+                                        .number-data-plus{
+                                            @include Position($top: 50%, $right: 15%);
+                                            transform: translateY(-50%);
+                                            @include Background($sprite:'ico-number-plus-on', $size:100% auto, $position:center center);
+                                            width: .7rem;
+                                            height: .7rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
                 &.item-step8 {
@@ -1491,7 +1687,7 @@
                         .info-box{
                             @include Align-between;
                             background-color:#877669;
-                            border-radius: 1rem;
+                            border-radius: .5rem;
                             height:4.3rem;
                             @include Bold;
                             padding:0 1.3rem;
@@ -1537,7 +1733,7 @@
                                     height: 12.6rem;
                                     width: 7.5rem;
                                     background-color: #f5f5f5;
-                                    border-radius: 1rem;
+                                    border-radius: .5rem;
                                     font-size:2.6rem;
                                     @include Regular;
                                 }
@@ -1831,7 +2027,7 @@
                                     }
                                     & > input{
                                         border:1px solid #d2d2d2;
-                                        border-radius: 1rem;
+                                        border-radius: .5rem;
                                         background-color: #fff;
                                         height: 4.1rem;
                                         width:100%;
@@ -1840,7 +2036,7 @@
                                     & > button{
                                         width:100%;
                                         height: 4.1rem;
-                                        border-radius: 1rem; 
+                                        border-radius: .5rem; 
                                         background-color:#54585a;
                                         border-color:#54585a;
                                         color:#fff;
@@ -3122,7 +3318,7 @@
                     background-color: #EFF2F7;
                     padding:1.5rem 1.3rem;
                     font-size: 1.4rem;
-                    border-radius: 1rem;
+                    border-radius: .5rem;
                     @include Bold;
                 }
                 .cont-in {
@@ -3461,7 +3657,7 @@
                 .cont-view-info {
                     background-color:#EFF2F7;
                     padding: 1.5rem 1.3rem;
-                    border-radius: 1rem;
+                    border-radius: .5rem;
                     @include Align-middle-column;
                     strong {
                         @include Bold;

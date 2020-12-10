@@ -1310,17 +1310,7 @@ if($('.layer-car-detail').length){
     });
 }
 
-//중고차 승계렌터카 등록 1단계 
-// if($('.secondhand-wrap').length) {
-//     $(".individual-tab .text-cont input").change(function(){
-//         if($(".text-cont input:radio[type=radio]:checked").val() == "1"){
-//             $(this).hasClass('active');
-//             $(".individual-tab button").removeClass('active');
-//         }else{
-//             $(".individual-tab button").addClass('active');
-//         }
-//     });
-// }
+
 
 //필터 슬라이드
 if($('.secondhand-wrap .item-step15 #slider-price').length) {
