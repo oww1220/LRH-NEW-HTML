@@ -315,4 +315,90 @@
             margin-right:20px;
         }
     }
+
+    .event-content{
+        img{max-width:100%; height:auto;}
+        .top-visual{
+            background-color: #f7f5f1;
+        }
+        .top-visual-foot{
+            @include Align-middle;
+            @include Bold;
+            padding:30px;
+            background-color:#f1ece6;
+
+            p{margin-right:20px; font-size:20px;}
+        }
+        .step-section{
+            padding:80px 0 0;
+
+            > .tit{
+                @include Bold;
+                font-size:40px;
+                text-align:center;
+                margin-bottom:60px;
+
+                span{color:$txt-red;}
+            }
+
+            .step-list{
+                display:flex;
+                justify-content: center;
+                padding:0 40px;
+
+                li{
+                    @include Align-middle;
+
+                    + li{
+                        position:relative;
+                        padding-left:50px;
+                        &:before{
+                            @include Position($top:50%, $left:0);
+                            content:"";
+                            display:block;
+                            width:50px;
+                            height:55px;
+                            margin-top:-27px;
+                            @include Background($sprite:'ico-arrow', $position:center);
+                        }
+                    }
+                }
+            }
+        }
+        .recom-section{
+            margin-top:60px;
+
+            &.lpoint-recom{
+                border-top:1px solid $border-grey;
+            }
+            &.lotte-recom{
+                @include roundBox;
+                padding-bottom:80px;
+                background-color:#fafafa;
+            }
+
+            .btn-box{
+                padding:0;
+
+                .btn{width:838px;}
+            }
+
+            + .recom-section{margin-top:80px;}
+        }
+        .guide-box{
+            padding:0 40px;
+            margin-top:60px;
+
+            .tit{
+                @include Bold;
+                font-size:18px;
+
+                + .lst{
+                    margin-top:20px;
+
+                    + .tit{margin-top:40px;}
+                }
+            }
+        }
+    }
 }

@@ -259,6 +259,14 @@ if($('.carLife-container .tab-normal').length){
     });
 }
 
+//회사소개 탭 메뉴
+if($('.footerMenu-container .contTab').length){
+    MUI.event.taps('.footerMenu-container .contTab', false, function(swap){
+        swap();
+    });
+}
+
+
 /* -------------------------------------------------탭 전환end*/
 
 
@@ -382,6 +390,13 @@ if($('.carLife-container .tab-normal').length){
         MUI.layer.openClick('.layer-address-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
             //console.log('open');
             //iscrollReset(show, layer);
+            show();
+        });
+    }
+
+    //친구추천 url 만들기 팝업
+    if($('.layer-makeUrl').length) {
+        MUI.layer.openClick('.layer-makeUrl-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
             show();
         });
     }

@@ -245,6 +245,36 @@ $(function(){
         </div>
         <!--//drawer 컴포넌트-->
 
+        <!--push 컴포넌트-->
+        <div class="push">
+
+            <div class="push-in">
+
+                <div class="push-top">
+                    <p>
+                        <b>알림</b>
+                    </p>
+                    <div class="setup-btn">
+                        <button type="button" class="btn btn-pannel"><i class="icon push-setup">설정</i></button>
+                    </div>
+                </div>
+
+                <div class="push-cont">
+                    <div class="push-list">
+                        <h5>총 <b>3</b>건</h5>
+                        <ul>
+                            <li><a href="#"><span>2020년 여름 올 뉴 아반떼 이벤트</span></a></li>
+                            <li><a href="#"><span>제주도 파도 바람소리를 느껴보세요</span></a></li>
+                            <li><a href="#"><span>퀴즈퀴즈 응모하고 엘포인트 타보자!<br>퀴즈퀴즈 응모하고 엘포인트 타보자!</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--//push 컴포넌트-->
+
         <!--fixedRight 컴포넌트-->
         <div class="fixedRight">
             <ul class="goQuick-menu-list">

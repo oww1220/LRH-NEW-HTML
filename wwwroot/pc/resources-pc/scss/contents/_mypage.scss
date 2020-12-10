@@ -516,7 +516,10 @@
             }                    
         }
     }
-    .lst{margin-top:30px;}
+    .lst{
+        margin-top:30px;
+        + .btn-box{margin-top:30px;}
+    }
     .banner-area{margin-top:60px;}
     .btn-box{                
         .btn-wide{
@@ -1669,13 +1672,16 @@
         }   
     }
     .car-type-box{
-        padding-top:30px;
+        padding-top:25px;
 
         .capsule-style-list{
+            width:calc(100% + 10px);
+            margin-left:-5px;
+
             li{
                 float: left;
-    
-                + li{margin-left:10px;}
+                margin:5px;
+                //+ li{margin-left:10px;}
             }
             
             .item{
@@ -1772,4 +1778,43 @@
         }
     }
     
+    .nodata-card{
+        @include roundBox;
+        text-align:center;
+        padding:60px 40px 40px;
+        box-sizing: border-box;
+        background-color:#f5f5f5;
+
+        .tit{
+            @include Bold;
+            font-size:28px;
+
+            + .txt{margin-top:20px;}
+        }
+        
+        .btn-box{
+            margin-top:20px;
+
+            .btn{min-width:250px;}
+        }
+        + .nodata-card{margin-top:20px;}
+        
+        &.bg-card{
+            @include Background($sprite:'@temp-mypage-nodata-bg', $type:'jpg', $path: '', $position:center center,  $size:contain);
+            background-color:transparent;
+        }
+    }
+    .nodata-card-between{
+        @include Align-spacing-box($spacing:20px);
+        margin-top:20px;
+
+        .nodata-card{
+            flex:1;
+            min-height: 304px;
+            margin-top: 0;
+            margin-right:20px;
+        }
+
+        + .nodata-card{margin-top:20px;}
+    }
 }

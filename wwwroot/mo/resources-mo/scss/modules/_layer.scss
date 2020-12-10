@@ -2609,6 +2609,78 @@ body.fixed {
 			}
 			
 		}
+		&.layer-each-branch {
+			.full-top {
+				.layer-full-close {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.cont-in {
+					padding:2.6rem 1.7rem;
+					.cont-info {
+						padding:2.6rem 0 3.4rem;
+						li {
+							@include Align-top-left;
+							> div {
+								padding-left:1rem;
+								strong {
+									@include Bold;
+									font-size:1.1rem;
+									vertical-align: top;
+									&.underline {
+										display: inline-block;
+										&::after {
+											content:'';
+											display: block;
+											padding-top:.1rem;
+											border-bottom:1px solid #000;
+										}
+									}
+								}
+								p {
+									padding-top:.8rem;
+									font-size:1.1rem;
+									line-height: 1.3;
+								}
+							}
+							
+							& + li {
+								margin-top:2.6rem;
+							}
+						}
+					}
+					.cont-slide {
+						.swiper-pagination-wrap{
+							@include Align-middle;
+							width: 100%;
+							z-index: 1;
+							.swiper-pagination {
+								margin-top:1rem;
+								position: static;
+								height: 2rem;
+								padding: 0 1.4rem;
+								.swiper-pagination-bullet {
+									margin:0 .4rem;
+									width:.7rem;
+									height: .7rem;
+									border-radius: .5rem;
+									background-color: #ddd;
+									opacity: 1;
+									&-active {
+										background-color: #ff404b;
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+			
+		}
+		
 		//중고차상세 - 할부계산기 팝업
 		&.layer-detail-monthl {
 			.full-top {

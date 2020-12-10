@@ -1198,6 +1198,54 @@ body.fixed {
 			}
 			
 		}
+
+		&.layer-popup-type2{
+			.popup-top{
+				background: #fff;
+				border-bottom:2px solid $border-darkgrey;
+
+				> h4{color:#2f2f2f; height:98px;}		
+				.layer-popup-close{
+					.pop-close{
+						@include Background($sprite:'ico-pop-close-black', $position:center center);
+					}
+				}		
+			}
+		}
+		&.layer-makeUrl{
+			.form-cont{	
+				&.between-type{
+					.form-row {	
+						@include Align-between;
+						
+
+						.input-tit{
+							flex:none;							
+							width:200px;
+							flex-basis: 200px;
+						}		
+						
+						+.form-row {margin-top:40px;}
+					}
+				}
+				.btn-auto{@include Inline-align-middle; margin:0 20px;}
+			}
+			.url-cont{
+				margin-top:40px;
+				padding-top:40px;
+				border-top:1px solid $border-grey;
+
+				.url-box{
+					padding:40px 30px;
+					margin-top:20px;				
+					@include roundBox;
+					background-color:#f5f5f5;
+					font-size:12px;
+					color:#54585a;
+					line-height: 2;
+				}
+			}
+		}
 	}
 
 	//슬라이드 형태
