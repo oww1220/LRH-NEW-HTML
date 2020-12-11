@@ -974,7 +974,37 @@ if($('.short-agree-accor').length){
         logic();
     });
 }
+// 단기렌터카 실시간 예약 스티키
+if($('.section-sticky-lnb').length) {
+    $(window).on('scroll', function(e) {
+        var scrollPos = window.scrollY || window.pageYOffset,
+            $target = $('.section-sticky-lnb'),
+            $parent = $('.realTime-cont'),
+            $targetScroll = $target.find('.detail-sticky-inscroll'),
+            parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
+            _navHeight = 0,
+            targetPos = $target.offset().top;
 
+        if(scrollPos >= targetPos) {
+            if(scrollPos >= parentBottomPos + _navHeight){
+                $target.find('.detail-sticky').scrollTop(0);
+                $target.removeClass('fixed');
+                $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
+                
+            }
+            else {
+                $target.addClass('fixed');
+                $target.find('.detail-sticky').css({top: _navHeight});
+            }
+            
+        }
+        else{
+            $target.find('.detail-sticky').scrollTop(0);
+            $target.removeClass('fixed');
+            $target.find('.detail-sticky').css({top: _navHeight});
+        }
+    });
+}
 //단기렌터카 안내 - 스티키
 if($('.short-container .detail-layer-nav').length) {
     MUI.event.goTarget('.menu-link', $('.short-container .detail-layer-nav').height());

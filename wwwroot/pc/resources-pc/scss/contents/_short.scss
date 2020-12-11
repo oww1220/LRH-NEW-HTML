@@ -884,9 +884,9 @@
 
     //실시간예약
     .realTime-cont {
-        @include Align-between-top;
+        position: relative;
+        padding-right: 450px;
         .section-cont {
-            width:750px;
             .section-form {
                 &:last-child {
                     .form-cont {
@@ -1368,7 +1368,24 @@
             
         }
         .section-sticky-lnb {
+            @include Position($top: 0, $right: 0);
             width:390px;
+            &.fixed {
+                .detail-sticky {
+                    position: fixed;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+            } 
+            .detail-sticky {
+                position: relative;
+                top:0;
+                background-color: #fff;
+                width:390px;
+                .detail-sticky-inscroll {
+                    width: 390px;
+                }
+            }
             > div + div {
                 padding-top:15px;
             }
