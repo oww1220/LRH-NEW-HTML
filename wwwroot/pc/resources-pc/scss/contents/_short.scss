@@ -1334,33 +1334,99 @@
                 }
                 &.form13 {
                     .form-cont {
-                        .row {
-                            & + .row {
-                                margin:40px 40px 0;
-                                padding:40px 0 0;
-                                border-top:1px solid #e7e7e7;
+                        .chk-icon-box {
+                            padding-bottom:20px;
+                            label {
+                                width:auto;
                             }
-                            .chk-icon-box {
+                        }
+                        .tab-nav {
+                            .choice-list {
                                 label {
-                                    width:auto;
+                                    color: #8f9191;
+                                    border: 1px solid #d2d2d2;
+                                    background-color: #fff;
+                                    &:after {
+                                        display: none;
+                                        content: '';
+                                        width: 13px;
+                                        height: 12px;
+                                        margin-top: -6px;
+                                        @include Position($top: 50%, $right: 30px);
+                                    }
+                                }
+                                li.active {
+                                    .chk-view-box {
+                                        input:checked + label {
+                                            color: #ed1c24;
+                                            border-color: #ed1c24;
+                                            background-color: #fff9f9;
+                                            &:after {
+                                                display: block;
+                                                @include Background($sprite:'ico-chk-on2', $type:'png', $position:right center);
+                                            }
+
+                                        } 
+                                    } 
                                 }
                             }
-                            .input-add {
-                                padding-top:20px;
-                                > div > div {
-                                    @include Align-middle-left;
+                        }
+                        .tab-cont {
+                            margin:40px 40px 0;
+                            padding:40px 0 0;
+                            border-top:1px solid #e7e7e7;
+                            .row {
+                                padding:0;
+                                & + .row {
+                                    display: none;
+                                }
+                            }
+                            .input-cont {
+                                padding-bottom: 20px;
+                            }
+                            .tab-lpay {
+                                margin: 0;
+                                border: 0;
+                                padding: 0;
+                                div:first-child {
+                                    button {
+                                        margin-top:20px;
+                                    }
+                                }
+                                > div + div {
+                                    display: none;
+                                }
+                                .input-add {
                                     padding-top:20px;
-                                    label {
-                                        width:170px;
-                                    }
-                                    .input-cont {
-                                        width:100%;
+                                    > div > div {
+                                        @include Align-middle-left;
+                                        & + div {
+                                            padding-top:20px;
+                                        }
+                                        .input-tit {
+                                            width:170px;
+                                        }
+                                        .input-cont {
+                                            width:100%;
+                                            padding-bottom:0;
+                                            &.radio-cont {
+                                                @include Align-middle-left;
+                                                > div + div {
+                                                    margin-left:15px;
+                                                }
+    
+                                            }
+                                            select {
+                                                color:#8f9191;
+                                            }
+                                        }
                                     }
                                 }
+                                .lst {
+                                    padding-top:30px;
+                                }
                             }
-                            .lst {
-                                padding-top:30px;
-                            }
+                            
                         }
                     }
                 }
