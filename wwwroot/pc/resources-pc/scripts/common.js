@@ -1172,6 +1172,36 @@ if($('.mypage-container .pointTransitionTab').length){
         });
     }
 
+    if($('.direct-section .direct-slide-wrap').length) {
+        MUI.slide.init($('.direct-section .direct-slide-wrap'), 'slick', {
+				slidesToScroll: 1, 
+				infinite: true,
+				autoplay: true,
+                arrows: false,
+                slidesToShow: 3,
+                centerMode: false,
+                variableWidth: true,
+                dots: true,
+                autoplaySpeed: 3000,
+        });
+    }
+
+    if($('.secondhand-wrap .secondhand-slide-cont').length) {
+        MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
+            loop: true,
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 30,
+            //spaceBetween: 30,
+            navigation: {
+                nextEl: '.btn-paging-next',
+                prevEl: '.btn-paging-prev',
+             },
+             autoplay: {
+                 delay: 3000,
+             },
+        });
+    }
 
 /* 메인end-------------------------------------------------*/
 
@@ -1195,6 +1225,7 @@ if($('.mypage-container .pointTransitionTab').length){
         //     slide.autoplay.play();
         // });
     }
+    
 
     //푸터 패밀리사이트 토글
     if($('.footer .family-btn').length) {
