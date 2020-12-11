@@ -265,6 +265,12 @@ if($('.footerMenu-container .contTab').length){
         swap();
     });
 }
+//탭 안의 탭
+if($('.footerMenu-container .tabContInnerTab').length){
+    MUI.event.taps('.footerMenu-container .tabContInnerTab', false, function(swap){
+        swap();
+    });
+}
 
 
 /* -------------------------------------------------탭 전환end*/
@@ -974,13 +980,14 @@ if($('.short-agree-accor').length){
         logic();
     });
 }
-// 단기렌터카 실시간 예약 스티키
+
+//단기렌터카 실시간 예약 - 약관,결제/lnb 
 if($('.section-sticky-lnb').length) {
     $(window).on('scroll', function(e) {
         var scrollPos = window.scrollY || window.pageYOffset,
-            $target = $('.section-sticky-lnb'),
+            $target = $('.detail-sticky-items'),
             $parent = $('.realTime-cont'),
-            $targetScroll = $target.find('.detail-sticky-inscroll'),
+            $targetScroll = $target.find('.detail-sticky-iscroll'),
             parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
             _navHeight = 0,
             targetPos = $target.offset().top;
@@ -990,21 +997,43 @@ if($('.section-sticky-lnb').length) {
                 $target.find('.detail-sticky').scrollTop(0);
                 $target.removeClass('fixed');
                 $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
-                
+                if(stickyScrollObj){
+                }
             }
             else {
                 $target.addClass('fixed');
                 $target.find('.detail-sticky').css({top: _navHeight});
+                if(stickyScrollObj){
+                }
+                if(!stickyScrollObj && $targetScroll.height() > $(window).height()) {
+                }
             }
-            
         }
         else{
             $target.find('.detail-sticky').scrollTop(0);
             $target.removeClass('fixed');
-            $target.find('.detail-sticky').css({top: _navHeight});
+            if(stickyScrollObj){
+            }
         }
     });
 }
+
+//단기렌터카 실시간 예약 - 결제/나의등록카드  L.pay
+if($('.short-container .tab-lpay').length){
+    MUI.event.taps('.short-container .tab-lpay', false, function(swap){
+        swap();
+    });
+}
+
+//단기렌터카 실시간 예약 - 결제/나의 등록카드 L.pay > 카드추가
+if($('.short-container').length){
+    $('.lpay-card div:first-child .input-add').hide();
+    $('.form13 .tab-lpay button').click(function(e){
+        $('.lpay-card div:first-child .input-add').show();
+        return false;
+    });
+}
+
 //단기렌터카 안내 - 스티키
 if($('.short-container .detail-layer-nav').length) {
     MUI.event.goTarget('.menu-link', $('.short-container .detail-layer-nav').height());
