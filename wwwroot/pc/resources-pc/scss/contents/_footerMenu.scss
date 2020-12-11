@@ -1,3 +1,246 @@
 .footerMenu-container {
+    .tab-cont-inner{
+        padding:60px 0;
+    }
+    .statement, .img-box{
+        text-align:center;
+    }
+    .statement{
+        .tit{
+            @include Bold;
+            font-size:30px;
 
+            span{color:$txt-red;}
+
+            + .txt{
+                margin-top:30px;
+                color:#54585a;
+            }
+        }
+        ~ .img-box{
+            margin-top:60px;
+        }
+    }
+    //테이블 세팅
+    .tbl-box{
+        margin-top:80px;
+        
+        .tbl-tit{
+            @include Bold;
+            font-size:16px;
+            margin-bottom:30px;
+        }
+        table{
+            width:100%;
+
+            th, td{
+                padding:30px 40px;
+                border-top:1px solid $border-grey;
+                border-bottom:1px solid $border-grey;
+                color:#54585a;  
+            }
+           
+            th{
+                @include Bold;
+                background-color:#fafafa;
+            }
+            td{
+                font-size:14px;
+            }
+        }
+
+        &.td-align-left{
+            table{
+                td{text-align:left;}
+            }
+        }
+    }
+    .about-lotte-tab{
+        .section-explain{
+            margin-top: 120px;
+        }
+        .tbl-box{
+            table{
+                td{
+                    padding-left:70px;
+                    padding-right:70px;
+                }
+            }
+        }
+    }
+    .pr-center-tab{
+        .promotion{
+            border-radius: 15px;
+            padding:80px 158px;
+            
+
+            > .tit{font-size:32px; text-align: center; margin-bottom:60px;}
+            
+            .segment-area{   
+                .segment-tit, .segment-video{
+                    display:flex;
+
+                    > p, .video-box{flex:1;}
+                }
+                .year, .video-list{
+                    flex:none;
+                    width: 210px;                        
+                    flex-basis: 210px;
+                    margin-right:20px;
+                }
+                .segment-tit{
+                    align-items: center;
+                    padding-bottom:30px;
+                    font-size:24px;
+                    box-sizing: border-box;
+
+                    strong{
+                        font-size:inherit;
+                        color:$txt-red;
+                    }
+                    
+
+                    .year{
+                        position:relative;
+                        @include Align-middle;
+                        height:50px;
+                        color:#fff;
+                        font-size:20px;
+                        text-align:center;
+
+                        &:after{
+                            content:"";
+                            @include Position($left:0, $right:0, $bottom:-10px);
+                            margin:0 auto;
+                            z-index: 5;
+                        }
+                    }
+                }
+                .segment-video{
+                    .video-list{
+                        li{
+                            a{
+                                position: relative;
+                                display:block;
+                                color:#fff;
+                                width:210px;
+                                height:132px;
+
+                                .cover{
+                                    @include Position($top:0, $right:0, $bottom:0, $left:0);
+                                    @include Align-middle;
+                                    width:100%;
+                                    height:100%;
+                                    font-size:14px;
+                                    text-align:center;
+                                    background-color:rgba(0,0,0,.2);
+                                    box-sizing:border-box;
+                                    z-index: 5;
+                                }
+                            }
+
+                            + li{margin-top:10px;}
+                        }
+                    }
+                    .video-box{
+                        min-height: 416px;
+
+                        iframe{border:0;}
+                    }
+                }
+
+                + .segment-area{margin-top:60px;}
+            }
+
+            &.bg-pink{
+                background-color:#fff9f9;
+                
+                .segment-area{    
+                    .year{
+                        background-color:#ff404b;
+
+                        &:after{
+                            @include arrow-bot($color:#ff404b);
+                        }
+                    }
+                    .video-list{
+                        .active{
+                            a{
+                                .cover{border:6px solid #ff404b;}
+                            }
+                        }
+                    }
+                        
+                }
+            }
+            &.bg-grey{
+                background-color:#f7f7f7;
+                
+                .segment-area{    
+                    .year{
+                        background-color:#54585a;
+
+                        &:after{
+                            @include arrow-bot($color:#54585a);
+                        }
+                    }
+                }
+
+                .video-list{
+                    .active{
+                        a{
+                            .cover{border:6px solid #54585a;}
+                        }
+                    }
+                }
+            }
+
+            + .promotion{margin-top:60px;}
+        }
+    }
+    .social-contribution-tab{
+        .frame-section{
+            margin-top:120px;
+            
+            .frame-header{                
+                @include roundBox;
+                padding:40px;
+                text-align:center;
+                background-color:#fafafa;
+
+                strong{
+                    @include Bold;
+                    font-size:20px;
+                    color:$txt-red;
+
+                    + p{margin-top:20px;}
+                }
+                p{font-size:24px;}
+            }
+            .frame-cont{
+                margin-top:40px;
+                
+                .segment{
+                    @include Align-middle;
+                    .img-box, .frame-cont-statement{flex:1;}
+                    .img-box{
+                        flex:none;
+                        width:540px;
+                        flex-basis: 540px;
+                        margin-right:60px;
+                    }
+                    .frame-cont-statement{
+                        .tit{
+                            @include Bold;
+                            font-size:20px;
+
+                            + .txt{margin-top:30px; color:#54585a;}
+                        }
+                    }
+
+                    + .segment{margin-top:40px;}
+                }
+            }
+        }
+    }
 }
