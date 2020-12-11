@@ -265,6 +265,12 @@ if($('.footerMenu-container .contTab').length){
         swap();
     });
 }
+//탭 안의 탭
+if($('.footerMenu-container .tabContInnerTab').length){
+    MUI.event.taps('.footerMenu-container .tabContInnerTab', false, function(swap){
+        swap();
+    });
+}
 
 
 /* -------------------------------------------------탭 전환end*/
