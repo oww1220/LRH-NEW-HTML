@@ -884,10 +884,15 @@
 
     //실시간예약
     .realTime-cont {
-        @include Align-between-top;
+        position: relative;
+        padding-right: 450px;
         .section-cont {
-            width:750px;
             .section-form {
+                &:last-child {
+                    .form-cont {
+                        padding-bottom:0;
+                    }
+                }
                 .form-header {
                     margin-bottom:0;
                     @include Align-between;
@@ -907,6 +912,11 @@
                     .row {
                         padding:0 40px;
                         margin-bottom:0;
+                        .lst {
+                            li + li {
+                                margin-top:10px;
+                            }
+                        }
                     }
                 }
                 &.form1 {
@@ -1225,11 +1235,157 @@
                         }
                     }
                 }
+                &.form8 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:40px;
+                        }
+                        .radio-icon-box {
+                            label {
+                                color:#8f9191;
+                            }
+                            input:checked + label {
+                                color: #2f2f2f;
+                            }
+                        }
+                        .input-cont {
+                            select {
+                                max-width: 100%;
+                                color:#8f9191;
+                            }
+                        }
+                    }
+                }
+                &.form9 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                            .input-cont {
+                                li + li {
+                                    margin-top:10px;
+                                }
+                            }
+                        }
+                        .box-between {
+                            .inputT {
+                                max-width: 70%;
+                            }
+                            button {
+                                width:30%;
+                            }
+                        }
+                        .chk-icon-box {
+                            label {
+                                display: inline-flex;
+                                color:#8f9191;
+                                @include Regular;
+                            }
+                            input:checked + label {
+                                color:#2f2f2f;
+                                @include Regular;
+                            }
+                            button {
+                                margin-left:5px;
+                                padding:3px 9px 3px 7px;
+                                border-radius:5px;
+                                border:1px solid #d2d2d2;
+                                box-sizing: border-box;
+                                font-size:14px;
+                            }
+                            
+                        }
+                    }
+                }
+                &.form10 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:30px;
+                        }
+                        .input-cont {
+                            select {
+                                max-width: 100%;
+                            }
+                        }
+                        
+                    }
+                }
+                &.form11 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                        }
+                        label {
+                            width:35%;
+                            flex-basis: 35%;
+                            span {
+                                margin-left:10px;
+                                @include Regular;
+                            }
+                        }
+                        .box-between {
+                            .inputT {
+                                max-width:70%;
+                            }
+                            button {
+                                width:30%;
+                            }
+                        }
+                    }
+                }
+                &.form13 {
+                    .form-cont {
+                        .row {
+                            & + .row {
+                                margin:40px 40px 0;
+                                padding:40px 0 0;
+                                border-top:1px solid #e7e7e7;
+                            }
+                            .chk-icon-box {
+                                label {
+                                    width:auto;
+                                }
+                            }
+                            .input-add {
+                                padding-top:20px;
+                                > div > div {
+                                    @include Align-middle-left;
+                                    padding-top:20px;
+                                    label {
+                                        width:170px;
+                                    }
+                                    .input-cont {
+                                        width:100%;
+                                    }
+                                }
+                            }
+                            .lst {
+                                padding-top:30px;
+                            }
+                        }
+                    }
+                }
             }
             
         }
         .section-sticky-lnb {
+            @include Position($top: 0, $right: 0);
             width:390px;
+            &.fixed {
+                .detail-sticky {
+                    position: fixed;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+            } 
+            .detail-sticky {
+                position: relative;
+                top:0;
+                background-color: #fff;
+                width:390px;
+                .detail-sticky-inscroll {
+                    width: 390px;
+                }
+            }
             > div + div {
                 padding-top:15px;
             }
