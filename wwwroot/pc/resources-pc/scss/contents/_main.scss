@@ -671,8 +671,9 @@
         .secondhand-slide-wrap {
             margin-top: 60px;
             overflow: hidden;
-            .secondhand-slide-cont {
-                @include Align-between;
+            .swiper-wrapper {
+                @include Align-top-left;
+                width: 1420px;
                 .slide-type {
                     width: 330px;
                     height: 440px;
@@ -726,6 +727,14 @@
             }
             .pagination-wrap {
                 margin-top: 50px;
+                .btn-paging-prev {
+                    margin-right: 20px;
+                    z-index: 15;
+                }
+                .btn-paging-next {
+                    margin-left: 20px;
+                    z-index: 15;
+                }
             }
         }
     }

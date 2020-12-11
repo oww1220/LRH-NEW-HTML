@@ -1220,7 +1220,7 @@ if($('.mypage-container .pointTransitionTab').length){
             loop: true,
             slidesPerView: 4,
             centeredSlides: true,
-            spaceBetween: 30,
+            spaceBetween: 32,
             //spaceBetween: 30,
             navigation: {
                 nextEl: '.btn-paging-next',
@@ -1229,6 +1229,10 @@ if($('.mypage-container .pointTransitionTab').length){
              autoplay: {
                  delay: 3000,
              },
+             pagination: {
+                el: '.secondhand-wrap .swiper-pagination',
+                type: 'fraction',
+              },
         });
     }
 
