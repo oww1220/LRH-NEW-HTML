@@ -1044,6 +1044,15 @@ if($('.specials-list .tab-normal').length){
             },
         });
     }
+
+    //신차장 톡톡 메인 슬라이드 팝업
+    if($('.layer-longTermTalk').length) {
+        MUI.layer.openClick('.layer-longTermTalk-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+            //console.log('open');
+            show();
+        });
+        
+    }
 /* -------------------------------------------------메인end*/
 
 

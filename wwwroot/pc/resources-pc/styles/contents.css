@@ -10159,25 +10159,8 @@ html, body {
 }
 
 .short-container .realTime-cont {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: start;
-	-webkit-align-items: flex-start;
-	   -moz-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	   -moz-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-}
-
-.short-container .realTime-cont .section-cont {
-	width: 750px;
+	position: relative;
+	padding-right: 450px;
 }
 
 .short-container .realTime-cont .section-cont .section-form:last-child .form-cont {
@@ -10834,6 +10817,26 @@ html, body {
 }
 
 .short-container .realTime-cont .section-sticky-lnb {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 390px;
+}
+
+.short-container .realTime-cont .section-sticky-lnb.fixed .detail-sticky {
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.short-container .realTime-cont .section-sticky-lnb .detail-sticky {
+	position: relative;
+	top: 0;
+	background-color: #fff;
+	width: 390px;
+}
+
+.short-container .realTime-cont .section-sticky-lnb .detail-sticky .detail-sticky-inscroll {
 	width: 390px;
 }
 
