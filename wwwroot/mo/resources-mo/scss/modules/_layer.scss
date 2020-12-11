@@ -48,20 +48,24 @@ body.fixed {
 		.slide-top {
 			background-color: #fff;
 			border-radius: 2rem 2rem 0 0;
+			position: relative;
+			padding:2.3rem 0 0 0;
 			.layer-slide-close {
-				cursor: pointer;
-				width: 100%;
-				height: 2.3rem;
-				text-align:center;
-				@include Hide_txt;
-				&:after {
-					content: '';
-					@include Vertical-inline;
-					width: 4.1rem;
-					height: .3rem;
-					background-color: #EBEBEB;
-					border-radius: .5rem;
-				}
+				// cursor: pointer;
+				// width: 100%;
+				// height: 2.3rem;
+				// text-align:center;
+				// @include Hide_txt;
+				// &:after {
+				// 	content: '';
+				// 	@include Vertical-inline;
+				// 	width: 4.1rem;
+				// 	height: .3rem;
+				// 	background-color: #EBEBEB;
+				// 	border-radius: .5rem;
+				// }
+				@include Position( $top: 50%, $right: 1.7rem);
+				margin-top: -1.3rem;
 			}
 			h4 {
 				font-size: 1.5rem;
@@ -435,11 +439,12 @@ body.fixed {
 					font-size:1.8rem;
 				}
 				.layer-slide-close {
-					width: auto;
-					height: 2.3rem;
-					&:after {
-						display: none;
-					}
+					// width: auto;
+					// height: 2.3rem;
+					// &:after {
+					// 	display: none;
+					// }
+					margin-top:.3rem;
 				}
 			}
 			.slide-cont {
@@ -476,11 +481,12 @@ body.fixed {
 					font-size:1.8rem;
 				}
 				.layer-slide-close {
-					width: auto;
-					height: 2.3rem;
-					&:after {
-						display: none;
-					}
+					// width: auto;
+					// height: 2.3rem;
+					// &:after {
+					// 	display: none;
+					// }
+					margin-top: .6rem;
 				}
 			}
 			.slide-cont {
@@ -497,6 +503,54 @@ body.fixed {
 					}
 					& + .item-cont {
 						margin-top:2.6rem;
+					}
+				}
+			}
+		}
+
+		//신차장 메인 톡톡
+		&.layer-longTermTalk{
+			.slide-top {
+				padding-bottom:3.4rem;
+				.layer-slide-close{
+					margin-top: -3.8rem;
+				}
+				h4{
+					border-bottom:0 none;
+				}
+				.evaluation{
+					@include Align-middle-left;
+					margin: 0 1.7rem;
+					.name{
+						@include Regular;
+						font-size:1rem;
+						color:#8f9191;
+						margin-left:2.6rem;
+						span{
+							color:#e7e7e7;
+							font-size:.6rem;
+							padding:0 .5rem;
+						}
+					}
+				}
+			}
+			.slide-inner {
+				max-height:calc(100vh - 25rem);
+			}
+			.slide-cont {
+				padding:0 1.7rem 3.4rem;
+				.longTermTalk-list{
+					.longTermTalk-txt{
+						@include Regular;
+						line-height:1.6;
+						color:#54585a;
+						margin-bottom:2.6rem;
+					}
+					li{
+						margin-top:.9rem;
+					}
+					li:first-child{
+						margin-top:0;
 					}
 				}
 			}
