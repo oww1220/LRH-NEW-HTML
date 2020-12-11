@@ -1005,6 +1005,22 @@ if($('.section-sticky-lnb').length) {
         }
     });
 }
+
+//단기렌터카 실시간 예약 - 결제/나의등록카드  L.pay
+if($('.short-container .tab-lpay').length){
+    MUI.event.taps('.short-container .tab-lpay', false, function(swap){
+        swap();
+    });
+}
+
+if($('.short-container').length){
+    $('.input-add').hide();
+    $('.form13 .tab-lpay button').click(function(e){
+        $('.input-add').show();
+        return false;
+    });
+}
+
 //단기렌터카 안내 - 스티키
 if($('.short-container .detail-layer-nav').length) {
     MUI.event.goTarget('.menu-link', $('.short-container .detail-layer-nav').height());
