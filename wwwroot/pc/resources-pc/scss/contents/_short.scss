@@ -882,7 +882,7 @@
         
     }
 
-    //실시간예약
+    //실시간예약 - 예약,결제
     .realTime-cont {
         position: relative;
         padding-right: 450px;
@@ -1340,6 +1340,17 @@
                                 width:auto;
                             }
                         }
+                        .tab-normal {
+                            width: 100%;
+                            ul {
+                                width:100%;
+                                margin:0;
+                                li {
+                                    padding:5px;
+                                }
+                            }
+                        }
+                        //나의 등록카드 - 결제 수단 선택
                         .tab-nav {
                             .choice-list {
                                 label {
@@ -1371,54 +1382,38 @@
                                 }
                             }
                         }
+                        //나의 등록카드 - 결제 수단 선택
                         .tab-cont {
-                            margin:40px 40px 0;
+                            margin:40px 0 0;
                             padding:40px 0 0;
                             border-top:1px solid #e7e7e7;
-                            .row {
+                            .tab-row {
                                 padding:0;
-                                & + .row {
+                                & + .tab-row {
                                     display: none;
                                 }
                             }
-                            .input-cont {
-                                padding-bottom: 20px;
-                            }
-                            .tab-lpay {
-                                margin: 0;
-                                border: 0;
-                                padding: 0;
-                                div:first-child {
-                                    button {
-                                        margin-top:20px;
+                            .input-add {
+                                padding-top:20px;
+                                > div {
+                                    @include Align-middle-left;
+                                    & + div {
+                                        padding-top:20px;
                                     }
-                                }
-                                > div + div {
-                                    display: none;
-                                }
-                                .input-add {
-                                    padding-top:20px;
-                                    > div > div {
-                                        @include Align-middle-left;
-                                        & + div {
-                                            padding-top:20px;
-                                        }
-                                        .input-tit {
-                                            width:170px;
-                                        }
-                                        .input-cont {
-                                            width:100%;
-                                            padding-bottom:0;
-                                            &.radio-cont {
-                                                @include Align-middle-left;
-                                                > div + div {
-                                                    margin-left:15px;
-                                                }
-    
+                                    .input-tit {
+                                        width:170px;
+                                    }
+                                    .input-cont {
+                                        width:100%;
+                                        padding-bottom:0;
+                                        &.radio-cont {
+                                            @include Align-middle-left;
+                                            > div + div {
+                                                margin-left:15px;
                                             }
-                                            select {
-                                                color:#8f9191;
-                                            }
+                                        }
+                                        select {
+                                            color:#8f9191;
                                         }
                                     }
                                 }
@@ -1426,38 +1421,46 @@
                                     padding-top:30px;
                                 }
                             }
-                            
+                            .lpay-card {
+                                .tab-lpay {
+                                    margin: 0;
+                                    border: 0;
+                                    padding: 0;
+                                    div:first-child {
+                                        button {
+                                            margin-top:20px;
+                                        }
+                                    }
+                                    > div + div {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .registration-card {
+                                .input-add {
+                                    padding-top:0;
+                                }
+                            }
+                            .direct-input {
+                                .input-add {
+                                    padding-top:0;
+                                }
+                            }
                         }
                     }
                 }
             }
-            
         }
         .section-sticky-lnb {
-            @include Position($top: 0, $right: 0);
             width:390px;
-            &.fixed {
-                .detail-sticky {
-                    position: fixed;
-                    overflow-x: hidden;
-                    overflow-y: auto;
-                }
-            } 
-            .detail-sticky {
+            @include Position($top: 0, $right: 0);
+            .lnb-wrap {
                 position: relative;
-                top:0;
-                background-color: #fff;
-                width:390px;
-                .detail-sticky-inscroll {
-                    width: 390px;
-                }
-            }
-            > div + div {
-                padding-top:15px;
             }
             .sticky-view-info {
                 border:1px solid #d2d2d2;
                 border-radius:10px;
+                margin-bottom:20px;
                 .info-top {
                     font-size:24px;
                     background-color: #fafafa;
@@ -1477,100 +1480,137 @@
                 }
 
             }
-            .sticky-cont {
-                margin-top:20px;
-                .cont-result {
-                    > ul {
-                        > li {
-                            background-color: #4a4a4a;
-                            padding-bottom:20px;
-                            > div {
-                                @include Align-between;
-                                border-top: 1px solid #fff;
-                                margin:0 30px;
-                                padding-top:20px;
-                                strong {
-                                    padding-left:10px;
-                                    font-size:18px;
-                                    color:#fff;
-                                    @include Bold;
-                                }
-                                > div {
-                                    @include Align-top-right-column;
-                                    padding-right:10px;
-                                    span {
-                                        font-size:16px;
-                                        color:#fff;
-                                        @include Bold;
-                                        & + span {
-                                            @include Regular;
-                                            font-size:14px;
-                                            color:#bbb;
-                                            padding-top:10px;
-                                        }
-                                        &.price {
-                                            font-size:32px;
-                                            em {
-                                                font-size:18px;
-                                            }
-                                        }
-                                    }
-                                } 
-                            }
+            .detail-sticky-items {
+                @include Position($top: 450px, $right: 0);
+                width: 390px;
+                &.fixed {
+                    .detail-sticky {
+                        position: fixed;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                    }
+                } 
+            }
+            .detail-sticky {
+                position: relative;
+                top:0;
+                z-index: 5;
+                background-color: #fff;
+                width:390px;
+                .detail-sticky-inscroll {
+                    width: 390px;
+                    .sticky-cont {
+                        .cont-result {
                             > ul {
-                                li {
-                                    padding-top:10px;
+                                > li {
+                                    background-color: #4a4a4a;
+                                    padding-bottom:20px;
                                     > div {
                                         @include Align-between;
+                                        border-top: 1px solid #fff;
                                         margin:0 30px;
+                                        padding-top:20px;
                                         strong {
-                                            @include Regular;
-                                            font-size:14px;
-                                            color:#bbb;
                                             padding-left:10px;
+                                            font-size:18px;
+                                            color:#fff;
+                                            @include Bold;
                                         }
-                                        div {
+                                        > div {
+                                            @include Align-top-right-column;
                                             padding-right:10px;
                                             span {
-                                                @include Regular;
-                                                font-size:14px;
-                                                color:#bbb;
+                                                font-size:16px;
+                                                color:#fff;
+                                                @include Bold;
+                                                & + span {
+                                                    @include Regular;
+                                                    font-size:14px;
+                                                    color:#bbb;
+                                                    padding-top:10px;
+                                                }
+                                                &.price {
+                                                    font-size:32px;
+                                                    em {
+                                                        font-size:18px;
+                                                    }
+                                                }
                                             }
                                         } 
                                     }
+                                    > ul {
+                                        li {
+                                            padding-top:10px;
+                                            > div {
+                                                @include Align-between;
+                                                margin:0 30px;
+                                                strong {
+                                                    @include Regular;
+                                                    font-size:14px;
+                                                    color:#bbb;
+                                                    padding-left:10px;
+                                                }
+                                                div {
+                                                    padding-right:10px;
+                                                    span {
+                                                        @include Regular;
+                                                        font-size:14px;
+                                                        color:#bbb;
+                                                    }
+                                                } 
+                                            }
+                                        }
+                                        
+                                    }
+                                    &:first-child {
+                                        padding-top:20px;
+                                        border-radius: 10px 10px 0 0;
+                                        > div {
+                                            border-top:0;
+                                        }
+                                    } 
+                                    &:last-child {
+                                        background-color: #656565;
+                                        border-radius: 0 0 10px 10px;
+                                        > div {
+                                            border-top:0;
+                                        }
+                                    }
                                 }
-                                
                             }
-                            &:first-child {
-                                padding-top:20px;
-                                border-radius: 10px 10px 0 0;
-                                > div {
-                                    border-top:0;
-                                }
-                            } 
-                            &:last-child {
-                                background-color: #656565;
-                                border-radius: 0 0 10px 10px;
-                                > div {
-                                    border-top:0;
-                                }
+                        }
+                        
+                    }
+                    .sticky-btn {
+                        padding:30px 0;
+                        ul {
+                            width:100%;
+                            margin:0;
+                            justify-content: space-between;
+                            li {
+                                width:49%;
                             }
                         }
                     }
                 }
-                
             }
-            .sticky-btn {
-                padding:30px 0;
-                ul {
-                    width:100%;
-                    margin:0;
-                    justify-content: space-between;
-                    li {
-                        width:49%;
-                    }
-                }
+            
+            
+        }
+    }
+    //실시간예약 - 완료
+    .realTime-comple {
+        .section-format {
+            justify-content: space-between;
+            padding:0 80px;
+            margin-bottom: 60px;
+            .img-box {
+                width:400px;
+                margin-left: 0;
             }
+        }
+        .btn-area {
+            padding:0
         }
     }
 }

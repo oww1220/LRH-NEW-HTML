@@ -975,12 +975,42 @@ if($('.short-agree-accor').length){
     });
 }
 // 단기렌터카 실시간 예약 스티키
+// if($('.section-sticky-lnb').length) {
+//     $(window).on('scroll', function(e) {
+//         var scrollPos = window.scrollY || window.pageYOffset,
+//             $target = $('.section-sticky-lnb'),
+//             $parent = $('.realTime-cont'),
+//             $targetScroll = $target.find('.detail-sticky-inscroll'),
+//             parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
+//             _navHeight = 0,
+//             targetPos = $target.offset().top;
+
+//         if(scrollPos >= targetPos) {
+//             if(scrollPos >= parentBottomPos + _navHeight){
+//                 $target.find('.detail-sticky').scrollTop(0);
+//                 $target.removeClass('fixed');
+//                 $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
+                
+//             }
+//             else {
+//                 $target.addClass('fixed');
+//                 $target.find('.detail-sticky').css({top: _navHeight});
+//             }
+            
+//         }
+//         else{
+//             $target.find('.detail-sticky').scrollTop(0);
+//             $target.removeClass('fixed');
+//             $target.find('.detail-sticky').css({top: _navHeight});
+//         }
+//     });
+// }
 if($('.section-sticky-lnb').length) {
     $(window).on('scroll', function(e) {
         var scrollPos = window.scrollY || window.pageYOffset,
-            $target = $('.section-sticky-lnb'),
+            $target = $('.detail-sticky-items'),
             $parent = $('.realTime-cont'),
-            $targetScroll = $target.find('.detail-sticky-inscroll'),
+            $targetScroll = $target.find('.detail-sticky-iscroll'),
             parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
             _navHeight = 0,
             targetPos = $target.offset().top;
@@ -990,18 +1020,26 @@ if($('.section-sticky-lnb').length) {
                 $target.find('.detail-sticky').scrollTop(0);
                 $target.removeClass('fixed');
                 $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
-                
+                if(stickyScrollObj){
+                }
             }
             else {
                 $target.addClass('fixed');
                 $target.find('.detail-sticky').css({top: _navHeight});
+                if(stickyScrollObj){
+                }
+                if(!stickyScrollObj && $targetScroll.height() > $(window).height()) {
+                }
+                
             }
             
         }
         else{
             $target.find('.detail-sticky').scrollTop(0);
             $target.removeClass('fixed');
-            $target.find('.detail-sticky').css({top: _navHeight});
+            if(stickyScrollObj){
+            }
+            
         }
     });
 }
@@ -1013,10 +1051,11 @@ if($('.short-container .tab-lpay').length){
     });
 }
 
+//단기렌터카 실시간 예약 - 결제/나의 등록카드 L.pay > 카드추가
 if($('.short-container').length){
-    $('.input-add').hide();
+    $('.lpay-card div:first-child .input-add').hide();
     $('.form13 .tab-lpay button').click(function(e){
-        $('.input-add').show();
+        $('.lpay-card div:first-child .input-add').show();
         return false;
     });
 }
