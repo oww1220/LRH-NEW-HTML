@@ -1188,12 +1188,15 @@ if($('.mypage-container .pointTransitionTab').length){
 
 /* 메인start-------------------------------------------------*/
     //메인예약 - 다른지점반납 열고 닫기
-    if($('.section-visual-booking').length){
-        MUI.event.toggle('.section-visual-booking .shor-branch-toggle-btn', '.section-visual-booking .shor-main-list-branch', false, function(logic, layer) {
+    //if($('.section-visual-booking').length){
+      //  MUI.event.toggle('.section-visual-booking .shor-branch-toggle-btn', '.section-visual-booking .//shor-main-list-branch', false, function(logic, layer) {
             //console.log('toggle');
-            logic();
-        });
-    }
+      //      logic();
+        //});
+    //}
+    $(".shor-branch-toggle-btn").click(function(){
+        $(".shor-main-list-branch").toggle();
+      });
 
     if($('.direct-section .direct-slide-wrap').length) {
         MUI.slide.init($('.direct-section .direct-slide-wrap'), 'slick', {
