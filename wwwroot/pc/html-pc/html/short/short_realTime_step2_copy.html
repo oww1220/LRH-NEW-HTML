@@ -432,13 +432,124 @@
 					</div>
 					<!-- 스틱키 lnb -->
 					<div class="section-sticky-lnb">
-						
-						<!-- 부모 : realtive target :  -->
-						<div class="parent">
-							<div class="target">
-								<div class="target-sticky-iscroll">
-									123
+						<div class="">
+							<div class="">
+								<div class="sticky-view-info">
+									<div class="info-top align-c">
+										올뉴 쏘렌토
+									</div>
+									<div class="info-cover">
+										<img src="../../../resources-pc/images/@temp-estimate-list06.png" alt="더미">
+									</div>
+									<ul class="lst dot">
+										<li>
+											실제 대여하는 차량과 외관, 색상, 옵션 등 차이가 있을 수 있으며 
+											사고 또는 고장 등 부득이한 경우 동급차종으로 변경될 수 있습니다.
+										</li>
+									</ul>
 								</div>
+								<style>
+									.car-detail-sticky-wrap{position:absolute;}
+								</style>
+								<div class="car-detail-info-section">
+									<div class="car-detail-sticky-wrap">
+										<div class="car-detail-sticky">
+											<div class="detail-sticky-iscroll">
+												<div class="sticky-cont">
+													<div class="cont-result">
+														<ul>
+															<li>
+																<div>
+																	<strong>대여지점</strong>
+																	<div>
+																		<span>강남</span>
+																		<span>2020.11.27 10시 00분</span>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div>
+																	<strong>반납지점</strong>
+																	<div>
+																		<span>인천국제공항(터미널)</span>
+																		<span>2020.11.27 10시 00분</span>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div>
+																	<strong>대여금액</strong>
+																	<div>
+																		<span class="price">150,000<em>원</em></span>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div>
+																	<strong>보험 및 기타옵션</strong>
+																	<div>
+																		<span>0원</span>
+																	</div>
+																</div>
+																<ul>
+																	<li>
+																		<div>
+																			<strong>보험 미적용</strong>
+																			<div>
+																				<span>0원</span>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</li>
+															<li>
+																<div>
+																	<strong>할인금액</strong>
+																	<div>
+																		<span class="price">-82,500<em>원</em></span>
+																	</div>
+																</div>
+																<ul>
+																	<li>
+																		<div>
+																			<strong>비회원 할인 50%</strong>
+																			<div>
+																				<span>44,000원</span>
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div>
+																			<strong>추가할인</strong>
+																			<div>
+																				<span>0원</span>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</li>
+															<li>
+																<div>
+																	<strong>총금액</strong>
+																	<div>
+																		<span class="price">44,000<em>원</em></span>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="sticky-btn">
+													<ul class="list-type-col2">
+														<li><a href="" class="btn btn-white">취소</a></li>
+														<li><button type="submit" class="btn btn-red">다음</button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -448,51 +559,46 @@
 		</div>
 		<!-- //단기렌터카 예약/약관 -->
 	</main>
-	<style>
-		
-	</style>
+
 	<script>
 		$(function(){
+			
 			//스티키
-			if($('.section-sticky-lnb').length) {
+			if($('.car-detail-sticky-wrap').length) {
 				$(window).on('scroll', function(e) {
 					var scrollPos = window.scrollY || window.pageYOffset,
-						$target = $('.parent'),
-						$parent = $('.target'),
-						$targetScroll = $target.find('.target-sticky-iscroll'),
+						$target = $('.car-detail-sticky-wrap'),
+						$parent = $('.car-detail-info-section'),
+						$targetScroll = $target.find('.detail-sticky-iscroll'),
 						parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
 						_navHeight = 0,
 						targetPos = $target.offset().top;
+					
+						console.log($parent.height());
 
-					if(scrollPos >= targetPos) { //ㅅ크롤 시
-						console.log('aaaa');
-						/*
+					if(scrollPos >= targetPos) {
 						if(scrollPos >= parentBottomPos + _navHeight){
-							$target.find('.detail-sticky > div').scrollTop(0);
+							$target.find('.car-detail-sticky').scrollTop(0);
 							$target.removeClass('fixed');
-							$target.find('.detail-sticky > div').css({top: $parent.height()-$targetScroll.height() + _navHeight});
+							$target.find('.car-detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
 							
 						}
 						else {
 							$target.addClass('fixed');
-							$target.find('.detail-sticky > div').css({top: _navHeight});
+							$target.find('.car-detail-sticky').css({top: _navHeight});
 						}
-						*/
+						
 					}
-					else{ //위로 올라갈 시 
-						console.log('bbb');
-						/*
-						$target.find('.detail-sticky > div').scrollTop(0);
+					else{
+						$target.find('.car-detail-sticky').scrollTop(0);
 						$target.removeClass('fixed');
-						$target.find('.detail-sticky > div').css({top: _navHeight});
-						*/
+						$target.find('.car-detail-sticky').css({top: _navHeight});
 					}
 				});
 			}
+	
 		});
-	</script>
-
-
+		</script>
 
 	<!--footer 컴포넌트-->
 	<footer class="footer">
