@@ -1214,12 +1214,12 @@ if($('.mypage-container .pointTransitionTab').length){
                 autoplaySpeed: 3000,
         });
     }
-
+    // 메인- 중고차 슬라이드
     if($('.secondhand-wrap .secondhand-slide-cont').length) {
         MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
             loop: true,
             slidesPerView: 4,
-            centeredSlides: true,
+            centeredSlides: false,
             spaceBetween: 32,
             //spaceBetween: 30,
             navigation: {
@@ -1235,6 +1235,41 @@ if($('.mypage-container .pointTransitionTab').length){
               },
         });
     }
+
+    // 메인- 핫딜 슬라이드
+    if($('.hotdeal-slide-wrap .hotdeal-slide-cont').length) {
+        MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
+            loop: true,
+            slidesPerView: 2,
+            centeredSlides: false,
+            spaceBetween: 100,
+            //spaceBetween: 30,
+            navigation: {
+                nextEl: '.btn-paging-next',
+                prevEl: '.btn-paging-prev',
+             },
+             autoplay: {
+                 delay: 3000,
+             },
+             pagination: {
+                el: '.hotdeal-slide-wrap .swiper-pagination',
+                type: 'fraction',
+              },
+        });
+    }
+
+    // scroll focus
+	$(".mCustomScrollbar").focusin(function(){$(this).addClass("focus");}).focusout(function(){$(this).removeClass("focus");});
+	
+	$(".mCustomScrollbar").each(function(){
+		$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
+	});
+	$(window).resize(function(){
+		$(".mCustomScrollbar").each(function(){
+			$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
+		});
+	});
+
 
 /* 메인end-------------------------------------------------*/
 

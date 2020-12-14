@@ -1532,6 +1532,20 @@ html, body {
 	font-size: 18px;
 }
 
+.main-wrap .pagination-wrap .swiper-pagination {
+	z-index: 0;
+	position: inherit;
+	width: 0;
+}
+
+.main-wrap .pagination-wrap .btn-paging-prev {
+	margin-right: 20px;
+}
+
+.main-wrap .pagination-wrap .btn-paging-next {
+	margin-left: 20px;
+}
+
 .main-wrap .main-visual-wrap {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1726,7 +1740,7 @@ html, body {
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.calendar {
-	padding: 50px 20px 35px 30px;
+	padding: 50px 0 35px 30px;
 	-webkit-border-radius: 50px 0 0 0;
 	   -moz-border-radius: 50px 0 0 0;
 	        border-radius: 50px 0 0 0;
@@ -1736,10 +1750,15 @@ html, body {
 	background: url(../../resources-pc/images/icons/ico-main-calendar.png) 0 0 no-repeat;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.calendar .main-detail-sticky {
+.main-wrap .main-visual-wrap .section-visual-booking.calendar .main-calender-wrap {
+	height: 585px;
+	overflow: hidden;
+}
+
+.main-wrap .main-visual-wrap .section-visual-booking.calendar .main-calender-wrap > div {
 	overflow-y: auto;
 	overflow-x: hidden;
-	height: 585px;
+	height: 570px;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.calendar .tbl-box .calendar-tit {
@@ -2023,7 +2042,7 @@ html, body {
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-lt {
 	overflow-y: auto;
 	height: 475px;
-	width: 55%;
+	width: 50%;
 	padding: 5px;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -2040,10 +2059,9 @@ html, body {
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-rt {
-	overflow-y: auto;
 	height: 475px;
-	width: 45%;
-	padding: 5px;
+	width: 50%;
+	padding: 5px 0 5px 5px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -2054,7 +2072,10 @@ html, body {
 	        flex-wrap: wrap;
 }
 
-.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-rt ul {
+.main-wrap .main-visual-wrap .section-visual-booking.branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-rt > div {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 475px;
 	width: 100%;
 }
 
@@ -2699,16 +2720,6 @@ html, body {
 	margin-top: 50px;
 }
 
-.main-wrap .secondhand-wrap .secondhand-slide-wrap .pagination-wrap .btn-paging-prev {
-	margin-right: 20px;
-	z-index: 15;
-}
-
-.main-wrap .secondhand-wrap .secondhand-slide-wrap .pagination-wrap .btn-paging-next {
-	margin-left: 20px;
-	z-index: 15;
-}
-
 .main-wrap .banner-wrap {
 	margin-top: 100px;
 }
@@ -2882,7 +2893,7 @@ html, body {
 	margin-top: 120px;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -2900,7 +2911,7 @@ html, body {
 	        justify-content: space-between;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -2918,14 +2929,14 @@ html, body {
 	        justify-content: space-between;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a .txt-type {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .txt-type {
 	width: 290px;
 	margin-top: 10px;
 	color: #8f9191;
 	font-size: 22px;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a .txt-type .tit > strong {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .txt-type .tit > strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -2934,7 +2945,7 @@ html, body {
 	line-height: 1.5;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a .txt-type del {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .txt-type del {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -2944,11 +2955,11 @@ html, body {
 	color: #ddd;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a .txt-type del sub {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .txt-type del sub {
 	font-size: 14px;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a .img {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .img {
 	position: relative;
 	width: 360px;
 	height: 280px;
@@ -2957,7 +2968,7 @@ html, body {
 	        background-size: 100% auto;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a .img .flag {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .img .flag {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -2975,7 +2986,7 @@ html, body {
 	font-size: 26px;
 }
 
-.main-wrap .hotdeal-wrap .secondhand-slide-cont .slide-type a .img .flag sub {
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .img .flag sub {
 	font-size: 16px;
 	vertical-align: baseline;
 }

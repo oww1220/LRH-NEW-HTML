@@ -43,6 +43,19 @@
             font-size: 18px;
         }
     }
+    .pagination-wrap {
+        .swiper-pagination {
+            z-index: 0;
+            position: inherit;
+            width: 0;
+        }
+        .btn-paging-prev {
+            margin-right: 20px;
+        }
+        .btn-paging-next {
+            margin-left: 20px;
+        }
+    }
     // 상단 비쥬얼 영역
     .main-visual-wrap {
         @include Align-middle-right;
@@ -170,15 +183,19 @@
                 }
             }
             &.calendar {
-                padding: 50px 20px 35px 30px;
+                padding: 50px 0 35px 30px;
                 border-radius: 50px 0 0 0;
                 h2:before {
                     background: url(../../resources-pc/images/icons/ico-main-calendar.png) 0 0 no-repeat;
                 }
-                .main-detail-sticky {
-                    overflow-y: auto;
-                    overflow-x: hidden;
+                .main-calender-wrap {
                     height: 585px;
+                    overflow: hidden;
+                    > div {
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        height: 570px;
+                    }
                 }
                 .tbl-box{
                     .calendar-tit {
@@ -375,7 +392,7 @@
                             overflow-y: auto;
                             height: 475px;
                             // width:40%;
-                            width:55%;
+                            width:50%;
                             padding:5px;
                             @include Align-box;
                             ul{
@@ -383,13 +400,15 @@
                             }
                         }
                         .shor-main-list-rt{
-                            overflow-y: auto;
                             height: 475px;
-                            width:45%;
-                            padding:5px;
+                            width:50%;
+                            padding:5px 0 5px 5px;
                             @include Align-box;
-                            ul{
-                                width:100%;
+                            > div {
+                                overflow-y: auto;
+                                overflow-x: hidden;
+                                height: 475px;
+                                width: 100%;
                             }
                         }
 
@@ -727,14 +746,6 @@
             }
             .pagination-wrap {
                 margin-top: 50px;
-                .btn-paging-prev {
-                    margin-right: 20px;
-                    z-index: 15;
-                }
-                .btn-paging-next {
-                    margin-left: 20px;
-                    z-index: 15;
-                }
             }
         }
     }
@@ -810,7 +821,7 @@
         }
         .btn-goLink {margin-bottom: 10px;}
         .hotdeal-slide-wrap {margin-top: 120px;}
-        .secondhand-slide-cont {
+        .hotdeal-slide-cont {
             @include Align-between;
             .slide-type a {
                 @include Align-between-top;
