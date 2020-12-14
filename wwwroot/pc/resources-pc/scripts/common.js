@@ -1188,12 +1188,6 @@ if($('.mypage-container .pointTransitionTab').length){
 
 /* 메인start-------------------------------------------------*/
     //메인예약 - 다른지점반납 열고 닫기
-    //if($('.section-visual-booking').length){
-      //  MUI.event.toggle('.section-visual-booking .shor-branch-toggle-btn', '.section-visual-booking .//shor-main-list-branch', false, function(logic, layer) {
-            //console.log('toggle');
-      //      logic();
-        //});
-    //}
     $(".shor-branch-toggle-btn").click(function(){
         $(".shor-main-list-branch").toggle();
       });
@@ -1269,6 +1263,10 @@ if($('.mypage-container .pointTransitionTab').length){
 
 
 /* 메인end-------------------------------------------------*/
+
+/* 실시간예약 메인start-------------------------------------------------*/
+    
+/* 실시간예약 메인end-------------------------------------------------*/
 
     //푸터 슬라이더
     if($('.footer .detail-view-list').length) {

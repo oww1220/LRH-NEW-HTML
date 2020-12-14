@@ -1653,5 +1653,359 @@
 
 // 단기렌터카 실시간 예약 메인
 .short-main-wrap {
-    
+    * {
+       box-sizing: border-box; 
+    } 
+    width: 100%;
+    height: 100%;
+    padding: 100px 0 170px;
+    background: url(../../resources-pc/images/@temp-short-mbg.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+
+    .short-main-cont {
+        @include Align-top-left;
+        position: relative;
+        width: 1280px;
+        min-width: 1280px;
+        height: 870px;
+        margin: 0 auto;
+    }
+    // 실시간예약 탭
+    .tab-menu {
+        width: 100px;
+        li {
+            @include Align-middle-column;
+            @include Bold;
+            height: 290px;
+            width: 100%;
+            button {
+                @include Align-middle-column;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                font-size: 22px;
+                &:before {
+                    content: "";
+                    display: block;
+                    margin-bottom: 20px;
+                    background-size: 100% auto;
+                }
+            }
+            &:nth-of-type(1) {
+                button {
+                    background: #ff404b;
+                    &:before {
+                        width: 25px;
+                        height: 24px;
+                        background: url(../../resources-pc/images/icons/ico-main-calendar.png) 0 0 no-repeat;
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                button {
+                    background: #333;
+                    &:before {
+                        width: 25px;
+                        height: 27px;
+                        background: url(../../resources-pc/images/icons/ico-main-branch.png) 0 0 no-repeat;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                button {
+                    background: #242424;
+                    &:before {
+                        width: 30px;
+                        height: 30px;
+                        background: url(../../resources-pc/images/icons/ico-main-car.png) 0 0 no-repeat;
+                    }
+                }
+            }
+        }
+        
+    }
+    .tab-cont-wrap {
+        width: 1180px;
+        background: #fff;
+    }
+    .tab-cont-section {
+        @include Align-top-left;
+        width: 100%;
+        height: 870px;
+        // 실시간 예약 캘린더
+        .short-calendar {
+            width: 360px;
+            padding: 0 20px;
+            h2 {
+                @include Bold;
+                padding: 40px 0 20px;
+                border-bottom: 1px solid #e7e7e7;
+                color: #2f2f2f;
+                font-size: 28px;
+                text-align: center;
+            }
+            > div {
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: 670px;
+            }
+            .tbl-box{
+                .calendar-tit {
+                    font-size: 20px;
+                    padding: 40px 10px 20px;
+                    text-align: center;
+                    color: #2f2f2f;
+                }  
+                table{
+                    width:100%;
+                    th, td{
+                        text-align:center;
+                        padding:2px 0;
+                        height: 40px;
+                        color: #54585a;
+                        font-size: 14px;
+                    }
+                    th{
+                        padding-top:0;
+                        color: #2f2f2f;
+                    }
+                    .btn {
+                        width:100%; 
+                        height:38px; 
+                        padding:0; 
+                        color: #aaa;
+                        font-size: 14px;
+                    }                                                
+                    .disabled, button[disabled]{
+                        color:#e8e8e8;
+                    }
+                    .today{
+                        .btn{
+                            position: relative;
+                            @include Bold; 
+                            color:#a02a3d;
+                            &:after{
+                                content:"";
+                                display:block;
+                                width: 20px;
+                                height:1px;
+                                margin: 0 auto;
+                                background-color:#a02a3d;
+                            }                                
+                        }                            
+                    }
+                    .today{
+                        &.on, &.start, &.end, &.during{
+                            .btn{
+                                &:after{background-color:#fff;}
+                            }
+                        }
+                    }
+                    .start, .end, .during{
+                        .btn{
+                            width: 100%;
+                            color:#fff;
+                            background-color: #ff404b;
+                        }
+                    }
+                    .start{
+                        .btn{                                
+                            border-top-left-radius: 38px;
+                            border-bottom-left-radius: 38px;
+                        }
+                    }
+                    .end{
+                        .btn{                               
+                            border-top-right-radius: 38px;
+                            border-bottom-right-radius: 38px;
+                        }
+                    }
+                    .on{    
+                        .btn{
+                            color:#fff;
+                            background-color:#ff404b;
+                            border-radius:100%;
+                        }         
+                    }
+                    .t-red {
+                        .btn {
+                            color: #ed1c24;
+                        }
+                    }                   
+                    
+                }
+            }
+        }
+
+        // 반납 지점
+        .short-branch {
+            width: 340px;
+            h2 {@include Hide_txt;}
+            .tab-nav {
+                background: #54585a;
+                .tab-col2 {
+                    li {
+                       button {
+                            line-height: 1;
+                            font-size:16px;
+                            height: 48px;
+                            color:#bbb;
+                            border: 0;
+                            @include Regular;
+                            &:before{
+                                content: "";
+                                display: inline-block;
+                                background: url(../../resources-pc/images/icons/ico-check3-off.png) 0 0 no-repeat;
+                                width: 14px;
+                                height: 11px;
+                                margin-right: 10px;
+                            }
+                        }
+                        &.active {
+                            button {
+                                border: 0;
+                                color: #fff;
+                                &:before{
+                                    background: url(../../resources-pc/images/icons/ico-check3-on.png) 0 0 no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            .short-branch-section {
+                width: 100%;
+                border-left: 1px solid #e7e7e7;
+                border-right: 1px solid #e7e7e7;
+                .short-branch-tab{
+                    width: 100%;
+                    @include Align-middle;
+                    li {
+                        @include Align-middle;
+                        width: 50%;
+                        height: 70px;
+                        label {
+                            @include Align-middle;
+                            text-align: center;
+                            font-size: 18px;
+                            color: #8f9191;
+                            width: 100%;
+                            height: 70px;
+                            border-bottom: 1px solid #e7e7e7;
+                        }
+                        input:checked + label {
+                            border-bottom: 2px solid #ff404b;
+                            @include Bold;
+                            color: #ff404b;
+                        }
+                    }
+                }
+
+                .shor-main-list-wrap{
+                    @include Align-box;
+                    // padding:1.7rem;
+                    .shor-main-list-lt{
+                        overflow-y: auto;
+                        height: 670px;
+                        width:50%;
+                        background: #fafafa;
+                        @include Align-box;
+                        ul{
+                            width:100%;
+                            margin-top: 20px;
+                        }
+                        .btn-link{
+                            border:0 none;
+                            color:#2f2f2f;
+                            height:43px;
+                            width: 100%;
+                            padding:0 15px;
+                            text-align: left;
+                            line-height:1;
+                            font-size: 14px;
+                            @include Regular;
+                                b{
+                                    color: #aaa;
+                                    font-size: 14px;
+                                }
+                            &.active{
+                                @include Bold;
+                                background: #fff;
+                                &:after {
+                                    display: inline-block;
+                                    content: "";
+                                    background: url(../../resources-pc/images/icons/ico-chk2-on.png) 0 0 no-repeat;
+                                    width: 13px;
+                                    height: 10px;
+                                    margin-left: 10px;
+                                    background-size: 100% auto;
+                                }
+                                b{
+                                    color:#2f2f2f;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .shor-main-list-rt{
+                        height: 670px;
+                        width:50%;
+                        @include Align-box;
+                        > div {
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            height: 670px;
+                            width: 100%;
+                        }
+                        ul{
+                            width:100%;
+                            margin-top: 20px;
+                            li {
+                                @include Align-between;
+                            }
+                        }
+                        .btn-link{
+                            @include Align-between;
+                            border:0 none;
+                            color:#2f2f2f;
+                            height:43px;
+                            width: 100%;
+                            padding:0 15px;
+                            text-align: left;
+                            line-height:1;
+                            font-size: 14px;
+                            @include Regular;
+                            &:after {
+                                display: flex;
+                                content: "";
+                                background: url(../../resources-pc/images/icons/ico-map-off.png) 0 0 no-repeat;
+                                width: 28px;
+                                height: 28px;
+                                margin-left: 5px;
+                                background-size: 100% auto;
+                            }
+                                b{
+                                    color: #aaa;
+                                    font-size: 14px;
+                                }
+                            &.active{
+                                @include Bold;
+                                background: #fff;
+                                &:after {
+                                    background: url(../../resources-pc/images/icons/ico-map-on.png) 0 0 no-repeat;
+                                }
+                                b{
+                                    color:#2f2f2f;
+                                    font-size: 14px;
+                                    border-bottom: 1px solid #2f2f2f;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
 }
