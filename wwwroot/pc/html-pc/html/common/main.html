@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="../../../resources-pc/styles/layout.css">
     <link rel="stylesheet" href="../../../resources-pc/styles/modules.css">
     <link rel="stylesheet" href="../../../resources-pc/styles/contents.css">
+    <link rel="stylesheet" href="../../../resources-pc/styles/jquery.mCustomScrollbar.css">
 
     <script src="../../../resources-pc/scripts/jquery/jquery-1.9.1.min.js"></script>
     <script src="../../../resources-pc/scripts/jquery/jquery-ui.min.js"></script>
     <script src="../../../resources-pc/scripts/jquery/plugins/slick.min.js"></script>
     <script src="../../../resources-pc/scripts/jquery/plugins/swiper.min.js"></script>
     <script src="../../../resources-pc/scripts/jquery/plugins/iscroll.min.js"></script>
+    <script src="../../../resources-pc/scripts/jquery/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../include_sub_header.js"></script>
     <!--인크루드용..-->
     <script src="../include_footer.js"></script>
@@ -71,20 +73,21 @@
                 <!-- 캘린더 선택 -->
                 <div class="section-visual-booking calendar">
                     <h2>언제</h2>
-                    <div class="main-detail-sticky">
-                        <div class="detail-sticky-iscroll">
+                    <div class="main-calender-wrap">
+                        <div class="mCustomScrollbar mCS-autoHide">
+
                             <div class="tbl-box">
                                 <div class="calendar-tit">2020.09</div>
                                 <table>
                                     <caption></caption>
                                     <colgroup>
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -153,13 +156,13 @@
                                 <table>
                                     <caption></caption>
                                     <colgroup>
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
-                                        <col style="width:14.2%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -222,8 +225,10 @@
                                     </tbody>
                                 </table>
                             </div>
+
                         </div>
                     </div>
+                        
 
                 </div>
                 <!-- //캘린더 선택 -->
@@ -232,6 +237,7 @@
                     <div class="m-tit">
                         <h2>어디서</h2>
                         <p class="inputC">
+                            <button type="button" class="btn btn-red">초기화</button>
                             <input type="checkbox" name="checkbox1" id="checkbox1-1" class="shor-branch-toggle-btn" data-target="shor-branch-main-cont-01" data-on="true" data-siblings="true">
                             <label for="checkbox1-1"><span>다른지점 반납</span></label>
                         </p>
@@ -319,56 +325,59 @@
                                     </ul>
                                 </div>
                                 <div class="shor-main-list-rt">
-                                    <ul>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link active"><b>강남</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>공덕</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>관악</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>구로</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link active"><b>강남</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>공덕</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>관악</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-link"><b>구로</b></button>
-                                        </li>
-                                    </ul>
+                                    <div class="mCustomScrollbar mCS-autoHide">
+                                        <ul>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link active"><b>강남</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>공덕</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>관악</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>구로</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link active"><b>강남</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>공덕</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>관악</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>구로</b></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <!-- //내륙/ 제주 -->
@@ -750,39 +759,70 @@
                     </diy>
 
                     <div class="hotdeal-slide-wrap">
-                        <div class="secondhand-slide-cont">
-                            <div class="slide-type">
-                                <a href="#">
-                                    <div class="txt-type">
-                                        <p class="tit"><strong>그랜저 IG</strong></p>
-                                        <p class="stit">2.4 EXCLUSIVE</p>
-                                        <del><sub>월</sub> 712,000원</del>
-                                        <p class="t-red"><sub>월</sub> 658,000원</p>
-                                    </div>
-                                    <div class="img">
-                                        <img src="../../../resources-pc/images/@temp-main-hotdeal01.png" alt="">
-                                        <p class="flag">50<sub>%</sub></p>
-                                    </div>
-                                </a>
+                        <div class="hotdeal-slide-cont swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide-type">
+                                    <a href="#">
+                                        <div class="txt-type">
+                                            <p class="tit"><strong>그랜저 IG</strong></p>
+                                            <p class="stit">2.4 EXCLUSIVE</p>
+                                            <del><sub>월</sub> 712,000원</del>
+                                            <p class="t-red"><sub>월</sub> 658,000원</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="../../../resources-pc/images/@temp-main-hotdeal01.png" alt="">
+                                            <p class="flag">50<sub>%</sub></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide-type">
+                                    <a href="#">
+                                        <div class="txt-type">
+                                            <p class="tit"><strong>더 모하비</strong></p>
+                                            <p class="stit">3.0 4WD 프레지던트</p>
+                                            <del><sub>월</sub> 712,000원</del>
+                                            <p class="t-red"><sub>월</sub> 658,000원</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="../../../resources-pc/images/@temp-main-hotdeal02.png" alt="">
+                                            <p class="flag">50<sub>%</sub></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide-type">
+                                    <a href="#">
+                                        <div class="txt-type">
+                                            <p class="tit"><strong>그랜저 IG</strong></p>
+                                            <p class="stit">2.4 EXCLUSIVE</p>
+                                            <del><sub>월</sub> 712,000원</del>
+                                            <p class="t-red"><sub>월</sub> 658,000원</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="../../../resources-pc/images/@temp-main-hotdeal01.png" alt="">
+                                            <p class="flag">30<sub>%</sub></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide-type">
+                                    <a href="#">
+                                        <div class="txt-type">
+                                            <p class="tit"><strong>더 모하비</strong></p>
+                                            <p class="stit">3.0 4WD 프레지던트</p>
+                                            <del><sub>월</sub> 712,000원</del>
+                                            <p class="t-red"><sub>월</sub> 658,000원</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="../../../resources-pc/images/@temp-main-hotdeal02.png" alt="">
+                                            <p class="flag">30<sub>%</sub></p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="slide-type">
-                                <a href="#">
-                                    <div class="txt-type">
-                                        <p class="tit"><strong>더 모하비</strong></p>
-                                        <p class="stit">3.0 4WD 프레지던트</p>
-                                        <del><sub>월</sub> 712,000원</del>
-                                        <p class="t-red"><sub>월</sub> 658,000원</p>
-                                    </div>
-                                    <div class="img">
-                                        <img src="../../../resources-pc/images/@temp-main-hotdeal02.png" alt="">
-                                        <p class="flag">50<sub>%</sub></p>
-                                    </div>
-                                </a>
-                            </div>
+                            
                         </div>
                         <div class="pagination-wrap">
                             <button type="button" class="btn btn-paging-prev">이전 페이지로 이동</button>
-                            <div class="pagination-list">
+                            <div class="pagination-list swiper-pagination">
                                 <strong title="현재 페이지">1</strong>/<em>3</em> 
                             </div>
                             <button type="button" class="btn btn-paging-next">이전 페이지로 이동</button>

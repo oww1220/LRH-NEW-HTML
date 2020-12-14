@@ -1020,10 +1020,24 @@ if($('.section-sticky-lnb').length) {
     });
 }
 
-//단기렌터카 실시간 예약 - 결제/나의등록카드  L.pay
-if($('.short-container .tab-lpay').length){
-    MUI.event.taps('.short-container .tab-lpay', false, function(swap){
-        swap();
+
+//단기렌터카 실시간 예약 - 결제/나의등록카드 결제수단 선택
+if($('.short-container .detail-radio').length) {
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'P'){
+            $('.short-container .detail-tab-wrap-P').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-P').removeClass('active');
+        }
+    });
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'L'){
+            $('.short-container .detail-tab-wrap-L').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-L').removeClass('active');
+        }
     });
 }
 
@@ -1188,12 +1202,15 @@ if($('.mypage-container .pointTransitionTab').length){
 
 /* 메인start-------------------------------------------------*/
     //메인예약 - 다른지점반납 열고 닫기
-    if($('.section-visual-booking').length){
-        MUI.event.toggle('.section-visual-booking .shor-branch-toggle-btn', '.section-visual-booking .shor-main-list-branch', false, function(logic, layer) {
+    //if($('.section-visual-booking').length){
+      //  MUI.event.toggle('.section-visual-booking .shor-branch-toggle-btn', '.section-visual-booking .//shor-main-list-branch', false, function(logic, layer) {
             //console.log('toggle');
-            logic();
-        });
-    }
+      //      logic();
+        //});
+    //}
+    $(".shor-branch-toggle-btn").click(function(){
+        $(".shor-main-list-branch").toggle();
+      });
 
     if($('.direct-section .direct-slide-wrap').length) {
         MUI.slide.init($('.direct-section .direct-slide-wrap'), 'slick', {
@@ -1208,12 +1225,12 @@ if($('.mypage-container .pointTransitionTab').length){
                 autoplaySpeed: 3000,
         });
     }
-
+    // 메인- 중고차 슬라이드
     if($('.secondhand-wrap .secondhand-slide-cont').length) {
         MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
             loop: true,
             slidesPerView: 4,
-            centeredSlides: true,
+            centeredSlides: false,
             spaceBetween: 32,
             //spaceBetween: 30,
             navigation: {
@@ -1229,6 +1246,41 @@ if($('.mypage-container .pointTransitionTab').length){
               },
         });
     }
+
+    // 메인- 핫딜 슬라이드
+    if($('.hotdeal-slide-wrap .hotdeal-slide-cont').length) {
+        MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
+            loop: true,
+            slidesPerView: 2,
+            centeredSlides: false,
+            spaceBetween: 100,
+            //spaceBetween: 30,
+            navigation: {
+                nextEl: '.btn-paging-next',
+                prevEl: '.btn-paging-prev',
+             },
+             autoplay: {
+                 delay: 3000,
+             },
+             pagination: {
+                el: '.hotdeal-slide-wrap .swiper-pagination',
+                type: 'fraction',
+              },
+        });
+    }
+
+    // scroll focus
+	$(".mCustomScrollbar").focusin(function(){$(this).addClass("focus");}).focusout(function(){$(this).removeClass("focus");});
+	
+	$(".mCustomScrollbar").each(function(){
+		$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
+	});
+	$(window).resize(function(){
+		$(".mCustomScrollbar").each(function(){
+			$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
+		});
+	});
+
 
 /* 메인end-------------------------------------------------*/
 
