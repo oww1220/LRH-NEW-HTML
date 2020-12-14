@@ -1025,14 +1025,6 @@ if($('.short-container .tab-lpay').length){
     });
 }
 
-//단기렌터카 실시간 예약 - 결제/나의 등록카드 L.pay > 카드추가
-if($('.short-container').length){
-    $('.lpay-card div:first-child .input-add').hide();
-    $('.form13 .tab-lpay button').click(function(e){
-        $('.lpay-card div:first-child .input-add').show();
-        return false;
-    });
-}
 
 //단기렌터카 안내 - 스티키
 if($('.short-container .detail-layer-nav').length) {
