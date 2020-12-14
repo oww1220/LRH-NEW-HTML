@@ -980,13 +980,14 @@ if($('.short-agree-accor').length){
         logic();
     });
 }
-// 단기렌터카 실시간 예약 스티키
+
+//단기렌터카 실시간 예약 - 약관,결제/lnb 
 if($('.section-sticky-lnb').length) {
     $(window).on('scroll', function(e) {
         var scrollPos = window.scrollY || window.pageYOffset,
-            $target = $('.section-sticky-lnb'),
+            $target = $('.detail-sticky-items'),
             $parent = $('.realTime-cont'),
-            $targetScroll = $target.find('.detail-sticky-inscroll'),
+            $targetScroll = $target.find('.detail-sticky-iscroll'),
             parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
             _navHeight = 0,
             targetPos = $target.offset().top;
@@ -996,18 +997,23 @@ if($('.section-sticky-lnb').length) {
                 $target.find('.detail-sticky').scrollTop(0);
                 $target.removeClass('fixed');
                 $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
-                
+                if(stickyScrollObj){
+                }
             }
             else {
                 $target.addClass('fixed');
                 $target.find('.detail-sticky').css({top: _navHeight});
+                if(stickyScrollObj){
+                }
+                if(!stickyScrollObj && $targetScroll.height() > $(window).height()) {
+                }
             }
-            
         }
         else{
             $target.find('.detail-sticky').scrollTop(0);
             $target.removeClass('fixed');
-            $target.find('.detail-sticky').css({top: _navHeight});
+            if(stickyScrollObj){
+            }
         }
     });
 }
@@ -1019,10 +1025,11 @@ if($('.short-container .tab-lpay').length){
     });
 }
 
+//단기렌터카 실시간 예약 - 결제/나의 등록카드 L.pay > 카드추가
 if($('.short-container').length){
-    $('.input-add').hide();
+    $('.lpay-card div:first-child .input-add').hide();
     $('.form13 .tab-lpay button').click(function(e){
-        $('.input-add').show();
+        $('.lpay-card div:first-child .input-add').show();
         return false;
     });
 }
@@ -1194,6 +1201,40 @@ if($('.mypage-container .pointTransitionTab').length){
         });
     }
 
+    if($('.direct-section .direct-slide-wrap').length) {
+        MUI.slide.init($('.direct-section .direct-slide-wrap'), 'slick', {
+				slidesToScroll: 1, 
+				infinite: true,
+				autoplay: true,
+                arrows: false,
+                slidesToShow: 3,
+                centerMode: false,
+                variableWidth: true,
+                dots: true,
+                autoplaySpeed: 3000,
+        });
+    }
+
+    if($('.secondhand-wrap .secondhand-slide-cont').length) {
+        MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
+            loop: true,
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 32,
+            //spaceBetween: 30,
+            navigation: {
+                nextEl: '.btn-paging-next',
+                prevEl: '.btn-paging-prev',
+             },
+             autoplay: {
+                 delay: 3000,
+             },
+             pagination: {
+                el: '.secondhand-wrap .swiper-pagination',
+                type: 'fraction',
+              },
+        });
+    }
 
 /* 메인end-------------------------------------------------*/
 
@@ -1217,6 +1258,7 @@ if($('.mypage-container .pointTransitionTab').length){
         //     slide.autoplay.play();
         // });
     }
+    
 
     //푸터 패밀리사이트 토글
     if($('.footer .family-btn').length) {

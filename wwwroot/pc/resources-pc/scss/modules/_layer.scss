@@ -1246,6 +1246,78 @@ body.fixed {
 				}
 			}
 		}
+		&.layer-shor-lpoint {
+			.popup-top{
+				background: #fff;
+				border-bottom:2px solid $border-darkgrey;
+
+				> h4{color:#2f2f2f; height:98px;}		
+				.layer-popup-close{
+					.pop-close{
+						@include Background($sprite:'ico-pop-close-black', $position:center center);
+					}
+				}		
+			}
+			.popup-cont {
+				.talk-section{
+					@include Regular;
+					@include Align-top-left;
+					color:#54585a;
+					line-height: 1.5;
+					font-size:18px;
+					.icon{
+						margin-right:15px;
+					}
+				}
+				.form-cont {
+					padding:40px 0;
+					margin:40px 0 30px;
+					border-top:1px solid #d2d2d2;
+					border-bottom:1px solid #d2d2d2;
+					.input-tit {
+						font-size:18px;
+					}
+					.input-cont {
+						ul {
+							justify-content: space-between;
+							width: 100%;
+							margin: 0;
+							li {
+								width:22%;
+								& + li {
+									position: relative;
+									&::before {
+										content: '-';
+										display: inline-block;
+										@include Position($top: 50%, $left: -10px);
+										transform: translateY(-10px);
+									}
+								}
+								
+							}
+						}
+						.inputT {
+							max-width: 100%;
+						}
+						
+					}
+				}
+				.lst {
+					li {
+						line-height: 1.5;
+						button {
+							padding:3px 5px;
+							border:1px solid #e7e7e7; 
+							border-radius: 5px;
+							margin-left:5px;
+						}
+					}
+					li + li {
+						margin-top:10px;
+					}
+				}
+			}
+		}
 	}
 
 	//슬라이드 형태
