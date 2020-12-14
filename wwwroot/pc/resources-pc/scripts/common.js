@@ -991,12 +991,14 @@ if($('.section-sticky-lnb').length) {
             parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
             _navHeight = 0,
             targetPos = $target.offset().top;
+            $noTarget = $('.sticky-view-info');
+
 
         if(scrollPos >= targetPos) {
             if(scrollPos >= parentBottomPos + _navHeight){
                 $target.find('.detail-sticky').scrollTop(0);
                 $target.removeClass('fixed');
-                $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
+                $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height()-$noTarget.height() + _navHeight});
                 if(stickyScrollObj){
                 }
             }
