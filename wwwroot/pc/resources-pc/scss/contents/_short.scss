@@ -1642,6 +1642,259 @@
             padding:0
         }
     }
+    //실시간예약 - 사전체크인
+    .preCheckin-cont {
+        .section-cont {
+            .section-form {
+                &:last-child {
+                    .form-cont {
+                        padding-bottom:0;
+                    }
+                }
+                .form-header {
+                    margin-bottom:0;
+                    @include Align-between;
+                    span {
+                        @include Bold;
+                        position: relative;
+                        font-size:18px;
+                        &::before {
+                            content:'*';
+                            display: inline-block;
+                            @include Position ($left:-12px, $top:20%);
+                        }
+                    }
+                }
+                
+                .form-cont {
+                    padding:40px 0 80px;
+                    .row {
+                        padding:0 40px;
+                        margin-bottom:0;
+                        & + .row {
+                            padding-top:20px;
+                        }
+                        .type-left {
+                            position: relative;
+                            .left-txt {
+                                @include Position($left:35px, $top:35%);
+                            }
+                        }
+                        .input-cont {
+                            .box-between {
+                                width:50%;
+                            }
+                        }
+                    }
+                    .lst {
+                        li + li {
+                            margin-top:10px;
+                        }
+                    }
+                    .driver-license-section{
+                        .selection{
+                            display:flex;
+                            align-items: center;
+                
+                            .input-tit{
+                                flex:none;
+                                flex-basis: 170px;
+                                width:170px;
+                            }
+                        }
+                        .driver-license-cont{ 
+                            position: relative;
+                            margin-top:35px;
+                
+                            input, select{
+                                max-width:130px;
+                                height:40px;
+                            }
+                            .box-align{
+                                align-items: center;
+                
+                                .symbol{margin-right:5px;}
+                            }
+                        
+                        }
+                        .domestic-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:378px;
+                                @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
+                
+                                .type-box, .number-box, .expiration-date-box, .issue-date-box{
+                                    position:relative;
+                                    display:block;
+                    
+                                    .numbering{
+                                        @include Position($top:10px,$right:-26px);
+                                    }            
+                                }
+                                .type-box{
+                                    @include Position($top:30px, $left:55px);
+                    
+                                    select{width: 130px;}
+                                }
+                                .number-box{
+                                    @include Position($top:90px, $left:202px);
+                    
+                                    .box-between{
+                                        width:430px;
+                    
+                                        .inputT{width:auto;}
+                                        select, input{max-width:102px;}
+                                    }
+                                }
+                                .expiration-date-box{
+                                    @include Position($top:256px, $left:270px);
+                                }
+                                .issue-date-box{
+                                    @include Position($bottom:30px, $left:202px);
+                                }
+                            }
+                        }
+                        .international-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:553px;
+                                @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
+                            }            
+                        }
+                        .guide-cont{
+                            margin-top:30px;
+                
+                            .tit{
+                                font-size:18px;
+                            }
+                            .lst{
+                                margin-top:20px;
+                
+                                li{
+                                    padding-left:28px;
+                                    + li{margin-top:10px;}
+                                }
+                            }
+                        }
+                        .numbering{
+                            @include Align-middle;
+                            width:18px;
+                            height:18px;
+                            color:#fff;
+                            font-size:12px;
+                            border-radius:18px;
+                            background-color:#ff404b;
+                        }        
+                    }
+                }
+                &.form2 {
+                    .form-cont {
+                        > ul {
+                            > li + li {
+                                padding-top:80px;
+                            }
+                            .row-header {
+                                @include Align-middle-left;
+                                margin:0 40px 20px;
+                                border-bottom: 1px solid #e7e7e7;
+                                padding-bottom: 20px;
+                                .chk-icon-box {
+                                    .input-tit {
+                                        width:180px;
+                                        a {
+                                            border-bottom: 1px solid #2f2f2f;
+                                        }
+                                        &::after {
+                                            left:0;
+                                        }
+                                    }
+                                    & + .input-cont {
+                                        margin-left:50px;
+                                    }
+                                }
+                            }
+                            .row {
+                                .input-cont {
+                                    .box-between {
+                                        width:50%;
+                                        select {
+                                            max-width: 25%;
+                                            & + .inputT {
+                                                max-width: 45%;
+                                                & + button {
+                                                    width: 30%;
+                                                }
+                                            }
+                                        }
+                                        .inputT {
+                                            max-width: 71%;
+                                            & + button {
+                                                width: 30%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            .btn-area {
+                                padding:60px 0 0;
+                            }
+                        }
+                    }
+                    
+                }
+                .agree-area {
+                    .agree-list {
+                        border-bottom:1px solid #e7e7e7;
+                        padding:20px 0;
+                        > li {
+                            border:0;
+                            padding:10px 0;
+                            margin:0;
+                            .accor-header {
+                                align-items: center;
+                                button {
+                                    border-bottom:1px solid #2f2f2f;
+                                    padding-bottom:3px;
+                                    min-width: auto;
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+        .section-certi {
+            padding:0 80px;
+            .certi-list {
+                @include Align-middle;
+                padding-bottom: 40px;
+                li {
+                    text-align: center;
+                    a {
+                        display: block;
+                        .circle {
+                            width: 230px;
+                            height: 230px;
+                            border: 1px solid #f1f1f1;
+                            border-radius: 100%;
+                        }
+                        .certi-tit {
+                            margin: 40px 0;
+                            font-size: 18px;
+                        }
+                    }
+                }
+                & + .lst {
+                    padding-top:20px;
+                    border-top:1px solid #e7e7e7;
+                    li {
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // 단기렌터카 실시간 예약 메인
