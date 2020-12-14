@@ -1359,22 +1359,15 @@
                                 color: #8f9191;
                                 border: 1px solid #d2d2d2;
                                 background-color: #fff;
-                                &:after {
-                                    display: none;
-                                    content: '';
-                                    width: 13px;
-                                    height: 12px;
-                                    margin-top: -6px;
-                                    @include Position($top: 50%, $right: 30px);
-                                }
+                                height: 100px;
+                                @include Align-middle-column;
                             }
                             input:checked + label {
                                 color: #ed1c24;
                                 border-color: #ed1c24;
                                 background-color: #fff9f9;
                                 &:after {
-                                    display: block;
-                                    @include Background($sprite:'ico-chk-on2', $type:'png', $position:right center);
+                                    display: none;
                                 }
                             } 
                         }
@@ -1524,7 +1517,6 @@
                 position: relative;
                 top:0;
                 z-index: 5;
-                background-color: #fff;
                 width:390px;
                 .detail-sticky-iscroll {
                     width: 390px;
@@ -1646,11 +1638,6 @@
     .preCheckin-cont {
         .section-cont {
             .section-form {
-                &:last-child {
-                    .form-cont {
-                        padding-bottom:0;
-                    }
-                }
                 .form-header {
                     margin-bottom:0;
                     @include Align-between;
@@ -1665,7 +1652,6 @@
                         }
                     }
                 }
-                
                 .form-cont {
                     padding:40px 0 80px;
                     .row {
@@ -1861,6 +1847,11 @@
                             }
                         }
                     } 
+                }
+                &:last-child {
+                    .form-cont {
+                        padding-bottom:0;
+                    }
                 }
             }
         }
