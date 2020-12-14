@@ -107,7 +107,12 @@
 											<th>예약일자</th>
 											<td>2020.12.12</td>
 											<th>예약번호</th>
-											<td>202012121212</td>
+											<td>
+												202012121212						
+												<div class="tbl-small-btns">
+													<button type="button" class="btn-auto line-red layer-mypage-open" data-layer="layer-qrcode">QR코드</button>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<th>대여일시</th>
@@ -560,7 +565,7 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
-	<!-- 아시아나클럽 적립몰 - 롯데렌터카이용안내 레이어 -->
+	<!-- 예약취소 레이어 -->
 	<div class="layer-wrap layer-popup layer-mypage layer-resevatCancel">
 		<div class="pop-inner">
 			<div class="popup-top">
@@ -639,9 +644,40 @@
 			</div>
 		</div>
 	</div>
-	<!-- //아시아나클럽 적립몰 - 롯데렌터카이용안내 레이어 -->
+	<!-- //예약취소 레이어 -->
 
+	<!-- 예약 QR코드 -->
+	<div class="layer-wrap layer-popup layer-mypage layer-qrcode">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>예약 QR코드</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-qrcode"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
 
+					<div class="qr-code">
+						<img src="./../../../resources-pc/images/@temp-mypage-qrcode-img.jpg" alt="qr코드 더미">
+					</div>
+					<div class="schedule-infos">
+						<div class="item">
+							<span>2021.01.20(수) 10:00</span>
+							<p>제주오토하우스</p>
+						</div>
+						<div class="item">
+							<span>2021.01.20(수) 10:00</span>
+							<p>제주오토하우스</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-qrcode">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- //예약 QR코드 -->
 </body>
 </html>
 
