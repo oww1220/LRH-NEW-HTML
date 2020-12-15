@@ -182,6 +182,15 @@ if($('.specials-list .tab-normal').length){
         swap();
     });
 }
+
+//푸터-회사소개
+if($('.footerMenu-wrap .tab-normal').length){
+
+    MUI.event.taps('.footerMenu-wrap .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
 /* -------------------------------------------------탭 전환end*/
     
 /* 레이어팝업start-------------------------------------------------*/
@@ -1426,6 +1435,10 @@ if($('.customer-wrap .tab-normal').length){
 }
 
 /* -------------------------------------------------지점안내 end*/
+
+/*FooterMenu start-------------------------------------------------*/
+
+/* -------------------------------------------------FooterMenu end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){
