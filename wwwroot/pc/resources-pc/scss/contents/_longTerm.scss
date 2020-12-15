@@ -1,6 +1,9 @@
 .longTerm-container{
     padding-bottom:100px;     
- 
+    
+    /*------------------------------------------------------------------
+    20201215 : 신차장장기렌터카 새로운 디자인 완료 후 아래 스타일 제거
+    ------------------------------------------------------------------*/
     .section-content{
 
         .tab-cont-inner{
@@ -315,7 +318,157 @@
             margin-right:20px;
         }
     }
+    /*------------------------------------------------------------------    
+    //20201215 : 신차장장기렌터카 새로운 디자인 완료 후 아래 스타일 제거
+    ------------------------------------------------------------------*/
 
+    //신차장 멤버십 & 신차장 혜택이란
+    .benefit-content{
+        .tab-cont-inner{
+            padding:30px 0;    
+
+            > .tit-size-big{margin-top:30px;}
+            .banner-box{
+                position:relative;
+                margin-top:100px;
+                
+                .banner-btns{
+                    @include Position($bottom:36px, $left:535px);
+                    @include Align-box;
+
+                    .btn-appStore, .btn-googlePlay{
+                        margin-right:10px;
+                    }
+                }                    
+            }
+        }
+        .tit-size-big{
+            + .lst{margin-top:30px;}
+        }
+        .life-benefit-box{
+            @include Align-between-top;
+            margin-top:110px;
+            
+            .box-item{
+                flex:1;
+                padding:0 40px;
+                text-align:center;
+
+                .tit{
+                    @include Bold;
+                    font-size:26px;
+                    text-transform:capitalize;
+                    
+                    + .txt{margin-top:20px;}
+                }
+                .straight-align{
+                    display:flex;
+                    justify-content: center;
+                    margin-top:30px;
+                    
+                    li{
+                        margin:0 10px;
+
+                        .icon{
+                            + p{margin-top:10px; font-size:14px; color:#54585a;}
+                        }                        
+                    }
+                }
+            }
+        }
+        
+        .detail-layer-nav-wrap{
+            height:160px;
+
+            .detail-layer-nav{
+                @include Align-between;            
+                height:160px;
+                .menu-link{
+                    width:175px;               
+                    height:120px;
+                    @include roundBox;
+                    border:1px solid $border-darkgrey;
+                    box-sizing: border-box;
+
+                    &.active{
+                        @include Bold;
+                        color:$txt-red;
+                        border:1px solid $border-red;
+                        background-color:#fff9f9;
+                    }
+
+                    .icon{
+                        height:55px;
+
+                        + .tit{margin-top:10px;}
+                    }
+                }
+            }
+            &.fixed{
+                .detail-layer-nav{
+                    @include innerType2Width;
+                    padding:20px 0;
+                    background-color:#fff;
+                    border-bottom:1px solid $border-darkgrey;
+                }
+            }
+        }
+
+        .explain-cont{
+            .statement{
+                .segment{
+                    margin-bottom:40px;
+
+                    .segment-tit{
+                        @include Bold;
+                        font-size:18px;
+                        color:#000;
+                    }
+                    .segment-cont{
+                        margin-top:20px;
+                        padding:40px;
+                        background-color:#fafafa;
+                        box-sizing:border-box;
+
+                        > p{
+                            display:flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            .icon{margin-right:10px;}
+                        }
+                        .lst{
+                            color:#54585a; 
+                            margin-top:20px; 
+                            margin-bottom:0;
+
+                            li{
+                                .lst{
+                                    margin-top:0;
+                                }
+                            }
+
+                            + .lst{
+                                padding-top:20px;
+                                border-top:1px solid $border-darkgrey;
+                            }
+                        }
+                    }
+                }
+
+                &.align-between{
+                    @include Align-spacing-box($spacing:40px);
+                    .segment{ 
+                        width:50%;
+                        padding-right:40px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+
+    //신차장친구추천
     .event-content{
         img{max-width:100%; height:auto;}
         .top-visual{

@@ -105,14 +105,14 @@
 											<span class="tit">대여일시/지점</span>
 											<div class="cont">
 												<span>2020.12.01(월) 10:10</span>
-												<a href="#" class="underline">강릉 KTX 예약소</a>
+												<button type="button" class="underline layer-sel-branch-open" data-layer="layer-sel-branch">강릉 KTX 예약소</button>
 											</div>
 										</li>
 										<li>
 											<span class="tit">예약일자</span>
 											<div class="cont">
 												<span>2020.12.01(월) 10:10</span>
-												<a href="#" class="underline">강릉 KTX 예약소</a>
+												<button type="button" class="underline layer-sel-branch-open" data-layer="layer-sel-branch">강릉 KTX 예약소</button>
 											</div>
 										</li>
 									</ul>
@@ -326,9 +326,6 @@
 											</div>
 										</a>								
 									</li>
-									
-									
-									
 								</ul>
 							</div>
 						</div>
@@ -405,7 +402,9 @@
 								<div class="card-header">
 									<p class="txt-box">
 										<span>12가4567</span>
-										<strong>LF SONATA NEWRISE 2.0</strong>
+										<!-- 20201215 : 상세페이지 이동 위한 링크 태그 -->
+										<a href="#" class="underline">LF SONATA NEWRISE 2.0</a>
+										<!-- //20201215 : 상세페이지 이동 위한 링크 태그 -->
 									</p>
 									<div>
 										<span class="info-flag waiting">승계중</span>
@@ -767,6 +766,74 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
+	<!-- 지점안내 레이어 -->
+	<div class="layer-wrap layer-popup layer-mypage layer-sel-branch">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>강남지점안내</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-sel-branch"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					
+					<div class="map">
+						<div class="detail-map-marker">
+							<div class="map-marker-box">
+								<i class="icon marker"></i>
+								<div class="map-marker-txt">강남지점</div>
+							</div>
+						</div>
+						<img src="../../../resources-pc/images/@temp-address-map01.png" alt="더미">
+					</div>
+					<dl class="infos">
+						<dt>영업시간</dt>
+						<dd>평일(월~목) 08:30 ~ 18:00 / 주말(금~일) 08:30 ~ 19:00</dd>
+						<dt>전화번호</dt>
+						<dd>02-3443-8000</dd>
+						<dt>주소</dt>
+						<dd>서울특별시 강남구 테헤란로 422</dd>
+						<dt>공지사항</dt>
+						<dd>※ 편도반납 장소는 기존 주차장과 동일(서울의료원 내)</dd>
+						<dt>이벤트</dt>
+						<dd>서울전지점(김포공항,마곡,상봉제외)]  코로나극복 함께해요 최대 55% 할인 이벤트</dd>
+					</dl>
+					<div class="swiper-container selBranchSwiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="./../../../resources-pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="./../../../resources-pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="./../../../resources-pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+						</ul>
+
+						<div class="selBranchSwiper-pagination"></div>
+						<!-- navigation buttons  -->
+						<div class="selBranchSwiper-button-prev">
+							<span class="icon swiper-prev"></span>
+						</div>
+						<div class="selBranchSwiper-button-next">
+							<span class="icon swiper-next"></span>
+						</div>
+						<!-- // navigation buttons  -->
+					</div>
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-sel-branch">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //지점안내 레이어 -->
 
 </body>
 </html>
