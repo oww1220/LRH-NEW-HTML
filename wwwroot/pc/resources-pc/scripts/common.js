@@ -265,6 +265,12 @@ if($('.footerMenu-container .contTab').length){
         swap();
     });
 }
+//탭 안의 탭
+if($('.footerMenu-container .tabContInnerTab').length){
+    MUI.event.taps('.footerMenu-container .tabContInnerTab', false, function(swap){
+        swap();
+    });
+}
 
 
 /* -------------------------------------------------탭 전환end*/
@@ -974,52 +980,67 @@ if($('.short-agree-accor').length){
         logic();
     });
 }
-// 단기렌터카 실시간 예약 스티키
+
+//단기렌터카 실시간 예약 - 약관,결제/lnb 
 if($('.section-sticky-lnb').length) {
     $(window).on('scroll', function(e) {
         var scrollPos = window.scrollY || window.pageYOffset,
-            $target = $('.section-sticky-lnb'),
+            $target = $('.detail-sticky-items'),
             $parent = $('.realTime-cont'),
-            $targetScroll = $target.find('.detail-sticky-inscroll'),
+            $targetScroll = $target.find('.detail-sticky-iscroll'),
             parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
             _navHeight = 0,
             targetPos = $target.offset().top;
+            $noTarget = $('.sticky-view-info');
+
 
         if(scrollPos >= targetPos) {
             if(scrollPos >= parentBottomPos + _navHeight){
                 $target.find('.detail-sticky').scrollTop(0);
                 $target.removeClass('fixed');
-                $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
-                
+                $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height()-$noTarget.height() + _navHeight});
+                if(stickyScrollObj){
+                }
             }
             else {
                 $target.addClass('fixed');
                 $target.find('.detail-sticky').css({top: _navHeight});
+                if(stickyScrollObj){
+                }
+                if(!stickyScrollObj && $targetScroll.height() > $(window).height()) {
+                }
             }
-            
         }
         else{
             $target.find('.detail-sticky').scrollTop(0);
             $target.removeClass('fixed');
-            $target.find('.detail-sticky').css({top: _navHeight});
+            if(stickyScrollObj){
+            }
         }
     });
 }
 
-//단기렌터카 실시간 예약 - 결제/나의등록카드  L.pay
-if($('.short-container .tab-lpay').length){
-    MUI.event.taps('.short-container .tab-lpay', false, function(swap){
-        swap();
+
+//단기렌터카 실시간 예약 - 결제/나의등록카드 결제수단 선택
+if($('.short-container .detail-radio').length) {
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'P'){
+            $('.short-container .detail-tab-wrap-P').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-P').removeClass('active');
+        }
+    });
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'L'){
+            $('.short-container .detail-tab-wrap-L').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-L').removeClass('active');
+        }
     });
 }
 
-if($('.short-container').length){
-    $('.input-add').hide();
-    $('.form13 .tab-lpay button').click(function(e){
-        $('.input-add').show();
-        return false;
-    });
-}
 
 //단기렌터카 안내 - 스티키
 if($('.short-container .detail-layer-nav').length) {
@@ -1181,15 +1202,85 @@ if($('.mypage-container .pointTransitionTab').length){
 
 /* 메인start-------------------------------------------------*/
     //메인예약 - 다른지점반납 열고 닫기
-    if($('.section-visual-booking').length){
-        MUI.event.toggle('.section-visual-booking .shor-branch-toggle-btn', '.section-visual-booking .shor-main-list-branch', false, function(logic, layer) {
-            //console.log('toggle');
-            logic();
+    $(".shor-branch-toggle-btn").click(function(){
+        $(".shor-main-list-branch").toggle();
+      });
+
+    if($('.direct-section .direct-slide-wrap').length) {
+        MUI.slide.init($('.direct-section .direct-slide-wrap'), 'slick', {
+				slidesToScroll: 1, 
+				infinite: true,
+				autoplay: true,
+                arrows: false,
+                slidesToShow: 3,
+                centerMode: false,
+                variableWidth: true,
+                dots: true,
+                autoplaySpeed: 3000,
+        });
+    }
+    // 메인- 중고차 슬라이드
+    if($('.secondhand-wrap .secondhand-slide-cont').length) {
+        MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
+            loop: true,
+            slidesPerView: 4,
+            centeredSlides: false,
+            spaceBetween: 32,
+            //spaceBetween: 30,
+            navigation: {
+                nextEl: '.btn-paging-next',
+                prevEl: '.btn-paging-prev',
+             },
+             autoplay: {
+                 delay: 3000,
+             },
+             pagination: {
+                el: '.secondhand-wrap .swiper-pagination',
+                type: 'fraction',
+              },
         });
     }
 
+    // 메인- 핫딜 슬라이드
+    if($('.hotdeal-slide-wrap .hotdeal-slide-cont').length) {
+        MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
+            loop: true,
+            slidesPerView: 2,
+            centeredSlides: false,
+            spaceBetween: 100,
+            //spaceBetween: 30,
+            navigation: {
+                nextEl: '.btn-paging-next',
+                prevEl: '.btn-paging-prev',
+             },
+             autoplay: {
+                 delay: 3000,
+             },
+             pagination: {
+                el: '.hotdeal-slide-wrap .swiper-pagination',
+                type: 'fraction',
+              },
+        });
+    }
+
+    // scroll focus
+	$(".mCustomScrollbar").focusin(function(){$(this).addClass("focus");}).focusout(function(){$(this).removeClass("focus");});
+	
+	$(".mCustomScrollbar").each(function(){
+		$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
+	});
+	$(window).resize(function(){
+		$(".mCustomScrollbar").each(function(){
+			$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
+		});
+	});
+
 
 /* 메인end-------------------------------------------------*/
+
+/* 실시간예약 메인start-------------------------------------------------*/
+    
+/* 실시간예약 메인end-------------------------------------------------*/
 
     //푸터 슬라이더
     if($('.footer .detail-view-list').length) {
@@ -1211,6 +1302,7 @@ if($('.mypage-container .pointTransitionTab').length){
         //     slide.autoplay.play();
         // });
     }
+    
 
     //푸터 패밀리사이트 토글
     if($('.footer .family-btn').length) {

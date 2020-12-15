@@ -74,7 +74,7 @@
 							<div class="indicator-area">
 								<div class="btn-box-between">
 									<div class="box-between-col01-btns">
-										<button type="button" class="btn-small">예약취소</button>
+										<button type="button" class="btn-small layer-mypage-open" data-layer="layer-resevatCancel">예약취소</button>
 										<button type="button" class="btn-small">예약수정</button>
 									</div>
 									<div class="box-between-col02-btns">
@@ -107,7 +107,12 @@
 											<th>예약일자</th>
 											<td>2020.12.12</td>
 											<th>예약번호</th>
-											<td>202012121212</td>
+											<td>
+												202012121212
+												<div class="tbl-small-btns">
+													<button type="button" class="btn-auto line-red layer-mypage-open" data-layer="layer-qrcode">QR코드</button>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<th>대여일시</th>
@@ -629,6 +634,120 @@
 	<footer class="footer">
 	</footer>
 	<!--//footer 컴포넌트-->
+
+	<!-- 예약취소 레이어 -->
+	<div class="layer-wrap layer-popup layer-mypage layer-resevatCancel">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>예약취소</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-resevatCancel"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+
+					<div class="icon-guide-area border-bot">
+						<p class="icon-guide"><span class="icon talk"></span> 예약취소 시 수수료 몇 환불규정을 안내 합니다.</p>
+					</div>				
+
+					<div class="cont-area">
+						<p class="tit">취소 사유를 선택해 주세요.</p>
+						<div class="cont">
+							<select name="" id="" class="selectbox">
+								<option value="">선택하세요.</option>
+								<option value="">이중계약</option>
+								<option value="">가격불만</option>
+								<option value="">여행일정 변경</option>
+								<option value="">기타사유</option>
+
+							</select>
+						</div>						
+					</div>					
+					<div class="cont-area">
+						<p class="tit">취소 수수료 및 노쇼(No Show) 수수료 환불 규정</p>
+						<div class="cont tbl-box">
+							<table>
+								<caption></caption>
+								<colgroup>
+									<col style="width:33.3%">
+									<col style="width:33.3%">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>
+											대여 예정일<br>
+											24시간 이전 
+										</th>
+										<th>
+											대여 예정일<br>
+											24시간 이내
+										</th>
+										<th>
+											예정일<br>
+											24시간 이후
+										</th>
+									</tr>
+								</thead>
+								<tbody>								
+									<tr>
+										<td>100% 환불 </td>
+										<td>
+											3,000원<br>
+											(취소 수수료)
+										</td>
+										<td>
+											차량대여<br>
+											요금의 10%<br>
+											(노쇼 수수료)
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>				
+					</div>					
+
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-resevatCancel">취소</button>		
+					<button type="button" class="btn btn-red layer-popup-close" data-layer="layer-resevatCancel">예약취소</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //예약취소 레이어 -->
+
+	<!-- 예약 QR코드 -->
+	<div class="layer-wrap layer-popup layer-mypage layer-qrcode">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>예약 QR코드</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-qrcode"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+
+					<div class="qr-code">
+						<img src="./../../../resources-pc/images/@temp-mypage-qrcode-img.jpg" alt="qr코드 더미">
+					</div>
+					<div class="schedule-infos">
+						<div class="item">
+							<span>2021.01.20(수) 10:00</span>
+							<p>제주오토하우스</p>
+						</div>
+						<div class="item">
+							<span>2021.01.20(수) 10:00</span>
+							<p>제주오토하우스</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-qrcode">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- //예약 QR코드 -->
 
 
 </body>

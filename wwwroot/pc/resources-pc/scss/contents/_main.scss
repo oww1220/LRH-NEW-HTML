@@ -43,6 +43,19 @@
             font-size: 18px;
         }
     }
+    .pagination-wrap {
+        .swiper-pagination {
+            z-index: 0;
+            position: inherit;
+            width: 0;
+        }
+        .btn-paging-prev {
+            margin-right: 20px;
+        }
+        .btn-paging-next {
+            margin-left: 20px;
+        }
+    }
     // 상단 비쥬얼 영역
     .main-visual-wrap {
         @include Align-middle-right;
@@ -170,15 +183,19 @@
                 }
             }
             &.calendar {
-                padding: 50px 20px 35px 30px;
+                padding: 50px 0 35px 30px;
                 border-radius: 50px 0 0 0;
                 h2:before {
                     background: url(../../resources-pc/images/icons/ico-main-calendar.png) 0 0 no-repeat;
                 }
-                .main-detail-sticky {
-                    overflow-y: auto;
-                    overflow-x: hidden;
+                .main-calender-wrap {
                     height: 585px;
+                    overflow: hidden;
+                    > div {
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        height: 570px;
+                    }
                 }
                 .tbl-box{
                     .calendar-tit {
@@ -263,9 +280,15 @@
                 background: #2a2a2a;
                 .m-tit {
                     @include Align-between;
+                    .btn-red {
+                        font-size: 12px;
+                        border-radius: 5px;
+                        height: 25px;
+                        width: 70px;
+                        margin-right: 5px;
+                    }
                     .inputC{
-                        position: relative;
-                        z-index: 11;
+                        @include Align-between;
                         label {
                             line-height: 1;
                             &:before{
@@ -296,7 +319,7 @@
                 .shor-main-toggle-cont {
                     position: relative;
                     overflow: hidden;
-                    height: 600px;
+                    height: 585px;
                     .shor-main-toggle-txt {
                         line-height: 1.4;
                         font-size:16px;
@@ -373,9 +396,9 @@
                         // padding:1.7rem;
                         .shor-main-list-lt{
                             overflow-y: auto;
-                            height: 495px;
+                            height: 475px;
                             // width:40%;
-                            width:55%;
+                            width:50%;
                             padding:5px;
                             @include Align-box;
                             ul{
@@ -383,13 +406,15 @@
                             }
                         }
                         .shor-main-list-rt{
-                            overflow-y: auto;
-                            height: 495px;
-                            width:45%;
-                            padding:5px;
+                            height: 475px;
+                            width:50%;
+                            padding:5px 0 5px 5px;
                             @include Align-box;
-                            ul{
-                                width:100%;
+                            > div {
+                                overflow-y: auto;
+                                overflow-x: hidden;
+                                height: 475px;
+                                width: 100%;
                             }
                         }
 
@@ -562,54 +587,29 @@
     //신차장 다이렉트 슬라이드
     .direct-section {
         .inner-type3{@include Align-between;}       
-        .direct-slide-tit {
+        .h-type {
             .btn-red {
                 width: 124px;
                 height: 45px;
                 margin-top: 50px;
             }
-            .direct-slide-paging {
-                margin-top: 70px;
-                ul {
-                   @include Align-top-left; 
-                }
-                li {
-                   padding-right: 5px;
-                }
-                button {
-                    width: 60px;
-                    height: 1px;
-                    font-size: 1px;
-                    text-indent: -9999px;
-                    background: #ddd;
-                    vertical-align: bottom;
-                }
-                .active {
-                    button {
-                        height: 2px;
-                        background: #2f2f2f;
-                    }
-                }
-            }
         }
         .direct-slide-wrap {
-            @include Align-between;
             width: 1010px;
-            height: 470px;
-            overflow: hidden;
+            height: 480px;
             margin-top: 50px;
             .img-wrap {
                 position: relative;
                 margin-left: 40px;
+                padding-top: 20px;
                 .img-box {
                     @include Align-middle;
                     background: #fafafa;
                     width: 360px;
-                    height: 320px;
-                    
+                    height: 320px;                  
                     .num {
                         position: absolute;
-                        top: -30px;
+                        top: -5px;
                         left: 40px;
                         font-size: 42px;
                         color: #8f9191;
@@ -627,6 +627,42 @@
                     > strong {
                         font-size: 22px;
                         color: #2f2f2f;
+                    }
+                }
+            }
+            
+        }
+        .slick-dots {
+            position: absolute;
+            left: -410px;
+            bottom: 100px;
+            border-radius: 0;
+            li {
+                margin: 0 5px 0 0;
+            }
+            button {
+                &:before {
+                    width: 60px;
+                    height: 15px;
+                    border: none;
+                    border-bottom: 1px solid #ddd;
+                    border-radius: 0;
+                    background: #fff;
+                }
+            }
+            .slick-active {
+                button {
+                    &:before {
+                        height: 15px;
+                        border: none;
+                        border-bottom: 2px solid #2f2f2f;
+                        background: #fff;
+                    }
+                    &:after {
+                        display: inline-block;
+                        content: '';
+                        width: 0;
+                        transition: width .6s;
                     }
                 }
             }
@@ -659,11 +695,14 @@
         }
         .secondhand-slide-wrap {
             margin-top: 60px;
-            .secondhand-slide-cont {
-                @include Align-between;
+            overflow: hidden;
+            .swiper-wrapper {
+                @include Align-top-left;
+                width: 1420px;
                 .slide-type {
                     width: 330px;
                     height: 440px;
+                    margin-right: 30px;
                     background: #fff;
                     box-shadow: 0px 10px 20px #f3f3f3;
                     .img {
@@ -788,7 +827,7 @@
         }
         .btn-goLink {margin-bottom: 10px;}
         .hotdeal-slide-wrap {margin-top: 120px;}
-        .secondhand-slide-cont {
+        .hotdeal-slide-cont {
             @include Align-between;
             .slide-type a {
                 @include Align-between-top;
@@ -843,19 +882,55 @@
             padding: 50px 0;
         }
     }
+
     //라이프
     .life-wrap {
         margin-top: 80px;
         .t-wrap {
-            @include Align-top-left;
-            align-items: flex-end;
-            ul {
-                @include Align-top;
-                margin-left: 30px;
-                li {
-                    margin-right: 15px;
+            @include Align-between-base;
+            .h-type {
+                @include Align-top-left;
+                align-items: flex-end;
+                ul {
+                    @include Align-top-left;
+                    margin:0 30px 15px 30px;
+                    li {
+                        margin-right: 15px;
+                        .btn-foot-sns {
+                            border: none;
+                            background: #8f9191;
+                        }
+                        .snsB {
+                            background-image: url(../../resources-pc/images/icons/ico-main-sns-blog.png);
+                            width: 10px;
+                            height: 14px;
+                        }
+                        .snsF {
+                            background-image: url(../../resources-pc/images/icons/ico-main-sns-fb.png);
+                            width: 10px;
+                            height: 18px;
+                        }
+                        .snsI {
+                            background-image: url(../../resources-pc/images/icons/ico-main-sns-insta.png);
+                            width: 16px;
+                            height: 16px;
+                        }
+                        .snsY {
+                            background-image: url(../../resources-pc/images/icons/ico-main-sns-yt.png);
+                            width: 16px;
+                            height: 11px;
+                        }
+                        .snsK {
+                            background-image: url(../../resources-pc/images/icons/ico-main-sns-kakao.png);
+                            width: 21px;
+                            height: 18px;
+                        }
+                    }
                 }
+
+                
             }
+            
         }
         .life-list {
             @include Align-between;
@@ -877,6 +952,57 @@
                 p {
                     color: #8f9191;
                     font-size: 14px;
+                }
+            }
+        }
+    }
+
+    //공지사항
+    .notice-wrap {
+        .notice-cont {
+            @include Align-between;
+            padding-right: 60px;
+            margin-top: 45px;
+        }
+        .h-type {
+            margin-top: -20px;
+            p:after {
+                display: inline-block;
+                content: "";
+                width: 56px;
+                height: 34px;
+                margin-left: 10px;
+                background: url(../../resources-pc/images/icons/ico-main-notice.png) 0 0 no-repeat;
+                background-size: 100% auto;
+            }
+            .btn-goLink {
+                display: block;
+                margin-top: 45px;
+            }
+        }
+        .notice-list {
+            display: flex;
+            flex-flow: row wrap;
+            width: 770px;
+            li {
+                @include Align-between;
+                @include Bold;
+                font-size: 22px;
+                width: 350px;
+                padding: 40px 0;
+                &:after {
+                    display: inline-block;
+                    content: "";
+                    width: 11px;
+                    height: 22px;
+                    background: url(../../resources-pc/images/icons/ico-main-arrow5.png) 0 0 no-repeat;
+                    background-size: 100% auto;
+                }
+                &:nth-of-type(1), &:nth-of-type(2) {
+                    border-bottom: 2px solid #2f2f2f;
+                }
+                &:nth-of-type(1), &:nth-of-type(3) {
+                    margin-right: 70px;
                 }
             }
         }

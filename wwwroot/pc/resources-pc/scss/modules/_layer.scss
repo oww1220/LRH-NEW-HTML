@@ -1199,6 +1199,8 @@ body.fixed {
 			
 		}
 
+
+		//마이페이지 레이어와 스타일 동일(흰색 배경 레이어)
 		&.layer-popup-type2{
 			.popup-top{
 				background: #fff;
@@ -1212,6 +1214,7 @@ body.fixed {
 				}		
 			}
 		}
+		
 		&.layer-makeUrl{
 			.form-cont{	
 				&.between-type{
@@ -1246,6 +1249,216 @@ body.fixed {
 				}
 			}
 		}
+
+		//마이페이지 > 단기렌터카예약 상세 > QR코드
+		&.layer-qrcode{
+			.qr-code{
+				@include Align-middle;
+				height:384px;
+				text-align:center;
+			}
+			.schedule-infos{
+				@include roundBox;
+				@include Align-middle;
+				text-align:center;
+				margin-top:50px;
+				background-color:#f5f5f5;				
+				
+				.item{
+					flex:1;
+					padding:40px 20px;
+					
+					span{color:#54585a;}
+					p{
+						@include Bold;
+						margin-top:15px;
+					}
+
+					+ .item{
+						position:relative;
+						
+						&:before{
+							@include Position($top:50%, $left:0);
+							@include Align-middle;
+							content:">";
+							font-family: "ManropeB", "NotoM", serif;
+							color:#8f9191;
+							font-size:26px;
+							width:36px;
+							height:36px;
+							border-radius: 36px;
+							margin-top:-18px;
+							margin-left:-18px;
+							border:1px solid $border-darkgrey;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+		}
+
+		//단기렌터카-예약 2단계 결제step/L.POINT 
+		&.layer-shor-lpoint {
+			.popup-top{
+				background: #fff;
+				border-bottom:2px solid $border-darkgrey;
+
+				> h4{color:#2f2f2f; height:98px;}		
+				.layer-popup-close{
+					.pop-close{
+						@include Background($sprite:'ico-pop-close-black', $position:center center);
+					}
+				}		
+			}
+			.popup-cont {
+				.talk-section{
+					@include Regular;
+					@include Align-top-left;
+					color:#54585a;
+					line-height: 1.5;
+					font-size:18px;
+					.icon{
+						margin-right:15px;
+					}
+				}
+				.form-cont {
+					padding:40px 0;
+					margin:40px 0 30px;
+					border-top:1px solid #d2d2d2;
+					border-bottom:1px solid #d2d2d2;
+					.input-tit {
+						font-size:18px;
+					}
+					.input-cont {
+						ul {
+							justify-content: space-between;
+							width: 100%;
+							margin: 0;
+							li {
+								width:22%;
+								& + li {
+									position: relative;
+									&::before {
+										content: '-';
+										display: inline-block;
+										@include Position($top: 50%, $left: -10px);
+										transform: translateY(-10px);
+									}
+								}
+								
+							}
+						}
+						.inputT {
+							max-width: 100%;
+						}
+						
+					}
+				}
+				.lst {
+					li {
+						line-height: 1.5;
+						button {
+							padding:3px 5px;
+							border:1px solid #e7e7e7; 
+							border-radius: 5px;
+							margin-left:5px;
+						}
+					}
+					li + li {
+						margin-top:10px;
+					}
+				}
+			}
+		}
+		//단기렌터카-예약 2단계 결제step/등록카드 정보입력
+		&.layer-registration-card {
+			.popup-top{
+				background: #fff;
+				border-bottom:2px solid $border-darkgrey;
+
+				> h4{color:#2f2f2f; height:98px;}		
+				.layer-popup-close{
+					.pop-close{
+						@include Background($sprite:'ico-pop-close-black', $position:center center);
+					}
+				}		
+			}
+			.popup-cont {
+				.form-cont .form-row .inputT, 
+				.form-cont .form-row .selectbox {
+					max-width: 100%;
+				}
+				.input-cont {
+					ul {
+						width: 100%;
+						margin:0;
+						justify-content: space-between;
+						&.list-type-col2 {
+							li {
+								width: 48%;
+								&::before {
+									display: none;
+								}
+							}
+						}
+						li {
+							width: 22%;
+							& + li {
+								position: relative;
+								&::before {
+									content: '-';
+									display: inline;
+									@include Position ($left:-10px, $top:50%);
+									transform: translateY(-10px);
+								}
+							}
+						}
+					}
+
+				}
+				.form-row {
+					.input-cont {
+
+					}
+				}
+				.agree-section {
+					margin-top:80px;
+					.form-header {
+						@include Align-between;
+						width: 100%;
+						height: 80px;
+						border-radius: 6px;
+						padding: 0 40px;
+						background-color: #f5f5f5;
+						box-sizing: border-box;
+					}
+					.agree-area{
+						padding-top:40px;
+						.agree-cont{
+							padding:0 0 45px;
+							border-bottom:1px solid #e7e7e7;
+							.agree-lst{
+								li{
+									@include Align-between-top;
+									margin-bottom:20px;
+									color:#54585a;
+									&:last-of-type{
+										margin-bottom:0;
+									}
+								}
+							}
+						}
+					}
+				}
+				.btn-area {
+					padding:35px 0 60px;
+					.btn {
+						min-width: 80px;
+					}
+				}
+			}
+		}
+
 	}
 
 	//슬라이드 형태

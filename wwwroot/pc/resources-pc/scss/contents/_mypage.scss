@@ -276,6 +276,18 @@
         &.type2{
             th, td{ padding:30px 20px; }
         }
+
+        .tbl-small-btns{
+            @include Inline-align-middle;
+            margin-left:10px;
+
+            .btn, .btn-auto{
+                width:auto; 
+                height:30px; 
+                font-size:12px;
+                padding:0 10px;
+            }
+        }
     }
     //내역 없음
     .result-none{
@@ -316,10 +328,11 @@
         .small-btns{            
             margin-left:20px;
 
-            .btn{
+            .btn, .btn-auto{
                 width:auto; 
                 height:30px; 
                 font-size:12px;
+                padding:0 10px;
 
                 + .btn{margin-left:10px;}
             }
@@ -338,6 +351,47 @@
         &:first-child{margin-top:50px;}
 
         + .indicator-area{margin-top:40px;}
+    }
+
+    $nodata-card-mt:80px;
+    .nodata-card{
+        @include roundBox;
+        text-align:center;
+        padding:60px 40px 40px;
+        box-sizing: border-box;
+        background-color:#f5f5f5;
+
+        .tit{
+            @include Bold;
+            font-size:28px;
+
+            + .txt{margin-top:20px;}
+        }
+        
+        .btn-box{
+            margin-top:20px;
+
+            .btn{min-width:250px;}
+        }
+        + .nodata-card{margin-top:$nodata-card-mt;}
+        
+        &.bg-card{
+            @include Background($sprite:'@temp-mypage-nodata-bg', $type:'jpg', $path: '', $position:center center,  $size:contain);
+            background-color:transparent;
+        }
+    }
+    .nodata-card-between{
+        @include Align-spacing-box($spacing:20px);
+        margin-top:$nodata-card-mt;
+
+        .nodata-card{
+            flex:1;
+            min-height: 304px;
+            margin-top: 0;
+            margin-right:20px;
+        }
+
+        + .nodata-card{margin-top:$nodata-card-mt;}
     }
     .card{
         @include roundBox;
@@ -685,20 +739,42 @@
             }
         }
     }
-    .card-between-section{
-        @include Align-between-top;
-        margin-top:80px;        
+    // .card-between-section{
+    //     @include Align-between-top;
+    //     margin-top:80px;        
 
-        .card{
-            width:410px;
+    //     .card{
+    //         width:410px;
+    //         min-height: 304px;
+    //         margin-top:0;
+
+    //         .card-cont{
+    //             padding:30px;
+    //         }
+    //     }
+    // }
+
+    //20201214 데이터 있고 없고의 따른 ui 변경
+    .card-between-section{
+        @include Align-spacing-box($spacing:20px);
+        margin-top:80px;
+        
+
+        .card, .nodata-card{
+            flex:1;
             min-height: 304px;
-            margin-top:0;
+            margin-top: 0;
+            margin-right:20px;
 
             .card-cont{
                 padding:30px;
             }
         }
+
+        + .nodata-card{margin-top:$nodata-card-mt;}
     }
+
+
     .count-section{
         font-size:26px;
         padding:60px 40px;
@@ -1776,45 +1852,5 @@
                 }
             }
         }
-    }
-    
-    .nodata-card{
-        @include roundBox;
-        text-align:center;
-        padding:60px 40px 40px;
-        box-sizing: border-box;
-        background-color:#f5f5f5;
-
-        .tit{
-            @include Bold;
-            font-size:28px;
-
-            + .txt{margin-top:20px;}
-        }
-        
-        .btn-box{
-            margin-top:20px;
-
-            .btn{min-width:250px;}
-        }
-        + .nodata-card{margin-top:20px;}
-        
-        &.bg-card{
-            @include Background($sprite:'@temp-mypage-nodata-bg', $type:'jpg', $path: '', $position:center center,  $size:contain);
-            background-color:transparent;
-        }
-    }
-    .nodata-card-between{
-        @include Align-spacing-box($spacing:20px);
-        margin-top:20px;
-
-        .nodata-card{
-            flex:1;
-            min-height: 304px;
-            margin-top: 0;
-            margin-right:20px;
-        }
-
-        + .nodata-card{margin-top:20px;}
     }
 }
