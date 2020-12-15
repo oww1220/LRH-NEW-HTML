@@ -1020,7 +1020,6 @@ if($('.section-sticky-lnb').length) {
     });
 }
 
-
 //단기렌터카 실시간 예약 - 결제/나의등록카드 결제수단 선택
 if($('.short-container .detail-radio').length) {
     $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
@@ -1279,7 +1278,9 @@ if($('.mypage-container .pointTransitionTab').length){
 /* 메인end-------------------------------------------------*/
 
 /* 실시간예약 메인start-------------------------------------------------*/
-    
+    (".shor-branch-toggle-btn").click(function(){
+        $(".shor-main-list-branch").toggle();
+    });
 /* 실시간예약 메인end-------------------------------------------------*/
 
     //푸터 슬라이더
