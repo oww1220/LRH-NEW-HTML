@@ -1205,9 +1205,24 @@ if($('.mypage-container .pointTransitionTab').length){
                 autoplaySpeed: 3000,
         });
     }
+    // 배너
+    if($('.banner-wrap .banner-slide-list').length) {
+        MUI.slide.init($('.banner-wrap .banner-slide-list'), 'slick', {
+				slidesToScroll: 1, 
+				infinite: true,
+				autoplay: true,
+                arrows: false,
+                slidesToShow: 1,
+                centerMode: false,
+                variableWidth: true,
+                dots: true,
+                autoplaySpeed: 3000,
+        });
+    }
     // 메인- 중고차 슬라이드
-    if($('.secondhand-wrap .secondhand-slide-cont').length) {
-        MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
+    if($('.secondhand-wrap .secondhand-slide-cont').length) { 
+        if($('.secondhand-wrap .secondhand-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 4) {
+            MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
             loop: true,
             slidesPerView: 4,
             centeredSlides: false,
@@ -1216,37 +1231,40 @@ if($('.mypage-container .pointTransitionTab').length){
             navigation: {
                 nextEl: '.btn-paging-next',
                 prevEl: '.btn-paging-prev',
-             },
-             autoplay: {
-                 delay: 3000,
-             },
-             pagination: {
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
                 el: '.secondhand-wrap .swiper-pagination',
                 type: 'fraction',
-              },
+            },
         });
+        }
     }
 
     // 메인- 핫딜 슬라이드
     if($('.hotdeal-slide-wrap .hotdeal-slide-cont').length) {
-        MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
-            loop: true,
-            slidesPerView: 2,
-            centeredSlides: false,
-            spaceBetween: 100,
-            //spaceBetween: 30,
-            navigation: {
-                nextEl: '.btn-paging-next',
-                prevEl: '.btn-paging-prev',
-             },
-             autoplay: {
-                 delay: 3000,
-             },
-             pagination: {
-                el: '.hotdeal-slide-wrap .swiper-pagination',
-                type: 'fraction',
-              },
-        });
+        if($('.hotdeal-slide-wrap .hotdeal-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 2) {
+            MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
+                loop: true,
+                slidesPerView: 2,
+                centeredSlides: false,
+                spaceBetween: 100,
+                //spaceBetween: 30,
+                navigation: {
+                    nextEl: '.btn-paging-next',
+                    prevEl: '.btn-paging-prev',
+                 },
+                 autoplay: {
+                     delay: 3000,
+                 },
+                 pagination: {
+                    el: '.hotdeal-slide-wrap .swiper-pagination',
+                    type: 'fraction',
+                  },
+            });
+        }
     }
 
     // scroll focus
@@ -1264,10 +1282,13 @@ if($('.mypage-container .pointTransitionTab').length){
 
 /* 실시간예약 메인start-------------------------------------------------*/
 
-    $(".shor-branch-toggle-btn").click(function(){
-        $(".shor-main-list-branch").toggle();
-    });
+    if($('.short-branch .tab-action').length){
 
+        MUI.event.taps('.short-branch .tab-action', false, function(swap){
+            swap();
+        });
+    }
+    
 
 /* 실시간예약 메인end-------------------------------------------------*/
 

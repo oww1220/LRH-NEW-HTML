@@ -768,7 +768,43 @@
                 }
             }
         }
-        .banner-slide-paging {
+        .slick-dots {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+            border-radius: 0;
+            background: none;
+            li {
+                margin: 0 5px 0 0;
+            }
+            button {
+                &:before {
+                    width: 7px;
+                    height: 7px;
+                    margin: 0 4px;
+                    background: #7b7673;
+                    border-radius: 100%;
+                    border: none;
+                }
+            }
+            .slick-active {
+                button {
+                    &:before {
+                        background: #fff;
+                        border: none;
+                    }
+                    &:after {
+                        display: inline-block;
+                        content: '';
+                        width: 0;
+                        transition: width .6s;
+                    }
+                }
+            }
+        }
+
+
+        .slick-dots {
             position: absolute;
             right: 20px;
             bottom: 15px;
@@ -783,7 +819,7 @@
                     font-size: 1px;
                     text-indent: -9999px;
                 }
-                .active > button {
+                .slick-active > button {
                     background: #fff;
                 }
             }
