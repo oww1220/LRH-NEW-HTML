@@ -1888,6 +1888,7 @@
     }
 }
 
+
 // 단기렌터카 실시간 예약 메인
 .short-main-wrap {
     * {
@@ -1972,19 +1973,23 @@
         // 실시간 예약 캘린더
         .short-calendar {
             width: 360px;
-            padding: 0 20px;
+            padding-left:20px;
             h2 {
                 @include Bold;
-                padding: 40px 0 20px;
+                padding: 40px 0;
                 border-bottom: 1px solid #e7e7e7;
                 color: #2f2f2f;
                 font-size: 28px;
                 text-align: center;
             }
-            > div {
-                overflow-y: auto;
-                overflow-x: hidden;
+            .calender-cont {
                 height: 670px;
+                overflow: hidden;
+                > div {
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    height: 670px;
+                }
             }
             .tbl-box{
                 .calendar-tit {
@@ -2085,7 +2090,7 @@
                        button {
                             line-height: 1;
                             font-size:16px;
-                            height: 48px;
+                            height: 50px;
                             color:#bbb;
                             border: 0;
                             @include Regular;
@@ -2188,7 +2193,7 @@
                     .shor-main-list-rt{
                         height: 670px;
                         width:50%;
-                        @include Align-box;
+                        
                         > div {
                             overflow-y: auto;
                             overflow-x: hidden;
@@ -2200,6 +2205,7 @@
                             margin-top: 20px;
                             li {
                                 @include Align-between;
+                                width: 100%;
                             }
                         }
                         .btn-link{
@@ -2208,7 +2214,7 @@
                             color:#2f2f2f;
                             height:43px;
                             width: 100%;
-                            padding:0 15px;
+                            padding-left:15px;
                             text-align: left;
                             line-height:1;
                             font-size: 14px;

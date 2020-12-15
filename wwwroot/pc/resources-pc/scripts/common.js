@@ -1020,23 +1020,10 @@ if($('.section-sticky-lnb').length) {
     });
 }
 
-//단기렌터카 실시간 예약 - 결제/나의등록카드 결제수단 선택
-if($('.short-container .detail-radio').length) {
-    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'P'){
-            $('.short-container .detail-tab-wrap-P').addClass('active');
-        }
-        else{
-            $('.short-container .detail-tab-wrap-P').removeClass('active');
-        }
-    });
-    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'L'){
-            $('.short-container .detail-tab-wrap-L').addClass('active');
-        }
-        else{
-            $('.short-container .detail-tab-wrap-L').removeClass('active');
-        }
+//단기렌터카 실시간 예약 - 결제/나의등록카드  L.pay
+if($('.short-container .tab-lpay').length){
+    MUI.event.taps('.short-container .tab-lpay', false, function(swap){
+        swap();
     });
 }
 
@@ -1273,14 +1260,15 @@ if($('.mypage-container .pointTransitionTab').length){
 			$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
 		});
 	});
-
-
 /* 메인end-------------------------------------------------*/
 
 /* 실시간예약 메인start-------------------------------------------------*/
-    (".shor-branch-toggle-btn").click(function(){
+
+    $(".shor-branch-toggle-btn").click(function(){
         $(".shor-main-list-branch").toggle();
     });
+
+
 /* 실시간예약 메인end-------------------------------------------------*/
 
     //푸터 슬라이더
