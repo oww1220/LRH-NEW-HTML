@@ -4,7 +4,6 @@
 	<title>LOTTE rental 롯데렌터카 HTML 목록</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
 	<style type="text/css">
 		/* CSS 리셋 설정 */
 		body,html,
@@ -44,7 +43,7 @@
 		#header .nav li.dev{float:left;width:100%;background:#222;color:#fff;height:50px;text-align:center;line-height:50px;display:block;font-size:16px;font-weight:bold;}
 		#header .nav li a{height:50px;color:#333;font-size:16px;font-weight:bold;text-align:center;line-height:50px;display:block}
 		#header .nav li.on a{color:#fff;background:#222}
-		.list_table{margin:40px 0;line-height:1.3;min-width: 1000px;}
+		.list_table{margin:40px 0;line-height:1.3}
 		.list_table tr.line td {border-top:2px solid #000}
 		.list_table th{padding:10px 0;border:1px solid #e5e5e5;text-align:center;vertical-align:top}
 		.list_table th[scope="col"]{background:#f7f7f7;}
@@ -67,8 +66,15 @@
 		.txt_fin {color:#0058EF !important;}
 		.txt_ing {color:#EF3100 !important;}
 		.txt_add {color:#00BE19 !important;}
+
+		.check-list-box ul{margin-left:15px; margin-bottom:10px;}
+		.check-list-box ul li{
+			list-style-type: disc;
+    		list-style-position: inside;
+		}
+		
 	</style>
-	<script type="text/javascript" src="../../resources-mo/scripts/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../resources-pc/scripts/jquery/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
 
@@ -103,7 +109,7 @@
 <body>
 	<div id="wrap">
 		<div id="header">
-			<h1><b style="color:#E60112">LOTTE rental</b> 롯데렌터카 <strong>MO</strong> HTML LIST [<span class="toDay"></span>]</h1>
+			<h1><b style="color:#E60112">LOTTE rental</b> 롯데렌터카 <strong>PC</strong> HTML LIST [<span class="toDay"></span>]</h1>
 		</div>
 		<div style="border: 1px solid #aaa; background:#f0f0f0; padding: 10px 20px; line-height: 1.5;">
 			<h2> Mark-up 수정 이력 </h2>
@@ -139,8 +145,8 @@
 		</ul>
 		-->
 
-		<table class="list_table" summary="롯데렌터카 모바일 HTML LIST 입니다.">
-			<caption class="hidden">롯데렌터카 모바일 HTML LIST</caption>
+		<table class="list_table" summary="롯데렌터카 PC HTML LIST 입니다.">
+			<caption class="hidden">롯데렌터카 PC HTML LIST</caption>
 			<colgroup>
 				<col style="width:8%"/>
 				<col style="width:12%"/>
@@ -212,78 +218,18 @@
 
 				<!-- 공통 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="12">공통</td>
+					<td rowspan="3">공통</td>
 					<td>메인</td>
 					<td></td>
 					<td></td>
 					<td><a href="common/main.html" target="_blank">main.html</a></td>
-					<td class="t_center txt_add">완료</td>
+					<td class="t_center ">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td>인덱스</td>
+					<td></td>
 				</tr>
 				<tr> 
-					<td>메인</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/main_short_map.html" target="_blank">main_short_map.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td>단기 - 위치선택 - 내륙</td>
-				</tr>
-				<tr> 
-					<td>메인</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/main_short_map_jeju.html" target="_blank">main_short_map_jeju.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td>단기 - 위치선택 - 제주</td>
-				</tr>
-				<tr> 
-					<td>메인</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/main_short_accordion.html" target="_blank">main_short_accordion.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing">2020-11-04 <br>2020-11-25</td>
-					<td>단기 - 예약</td>
-				</tr>
-				<tr> 
-					<td>메인</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/main_carLife.html" target="_blank">main_carLife.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td>카라이프</td>
-				</tr>
-				<tr> 
-					<td>메인</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/main_longTerm.html" target="_blank">main_longTerm.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td>신차장기</td>
-				</tr>
-				<tr> 
-					<td>메인</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/main_secondhand.html" target="_blank">main_secondhand.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td>중고차장기</td>
-				</tr>
-				<tr> 
-					<td>레이아웃-메인</td>
+					<td>레이아웃</td>
 					<td></td>
 					<td></td>
 					<td><a href="common/layout.html" target="_blank">layout.html</a></td>
@@ -297,66 +243,19 @@
 					<td></td>
 					<td></td>
 					<td><a href="common/layout_sub.html" target="_blank">layout_sub.html</a></td>
-					<td class="t_center txt_add">완료</td>
+					<td class="t_center ">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td>서브해더, 하단바</td>
-				</tr>
-				<tr> 
-					<td>레이아웃-서브 상세</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/layout_sub2.html" target="_blank">layout_sub2.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td>서브해더, 하단바</td>
-				</tr>
-				<tr> 
-					<td>우측패널 - 로그인 전</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/panel_beforeLogin.html" target="_blank">panel_beforeLogin.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr> 
-					<td>우측패널 - 로그인 후</td>
-					<td></td>
-					<td></td>
-					<td><a href="common/panel_afterLogin.html" target="_blank">panel_afterLogin.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
 				</tr>
 
 				<!-- 단기렌터카 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="30">단기렌터카</td>
-					<td rowspan="8">실시간예약</td>
-					<td></td>
-					<td></td>
-					<td><a href="short/short_realTime.html" target="_blank">short_realTime.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td rowspan="4">결제</td>
-					<td>예약/약관 - 비회원/제주</td>
-					<td><a href="short/short_realTime_step1-1.html" target="_blank">short_realTime_step1-1.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>예약/약관 - 회원/내륙</td>
-					<td><a href="short/short_realTime_step1-2.html" target="_blank">short_realTime_step1-2.html</a></td>
+					<td rowspan="35">단기렌터카</td>
+					<td rowspan="9">실시간예약</td>
+					<td rowspan="6">결제</td>
+					<td>예약/약관</td>
+					<td><a href="short/short_realTime_step1.html" target="_blank">short_realTime_step1.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
@@ -371,9 +270,33 @@
 					<td></td>
 				</tr>
 				<tr>
+					<td>LPOINT <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>등록카드정보입력 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>쿠폰등록 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
 					<td>예약완료</td>
 					<td><a href="short/short_realTime_step3.html" target="_blank">short_realTime_step3.html</a></td>
-					<td class="t_center txt_add">완료</td>
+					<td class="t_center">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
@@ -381,8 +304,8 @@
 				<tr>
 					<td rowspan="3">사전체크인</td>
 					<td></td>
-					<td><a href="short/short_precheckin1.html" target="_blank">short_precheckin1.html</a></td>
-					<td class="t_center txt_add">완료</td>
+					<td><a href="short/short_precheckin.html" target="_blank">short_precheckin.html</a></td>
+					<td class="t_center">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
@@ -390,7 +313,7 @@
 				<tr>
 					<td>sms 1/2</td>
 					<td><a href="short/short_precheckin_sms1.html" target="_blank">short_precheckin_sms1.html</a></td>
-					<td class="t_center txt_add">완료</td>
+					<td class="t_center">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
@@ -398,7 +321,7 @@
 				<tr>
 					<td>sms 2/2</td>
 					<td><a href="short/short_precheckin_sms2.html" target="_blank">short_precheckin_sms2.html</a></td>
-					<td class="t_center txt_add">완료</td>
+					<td class="t_center">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
@@ -459,9 +382,28 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="8">월간단기렌터카</td>
-					<td rowspan="2">렌터카 목록</td>
-					<td>리스트</td>
+					<td>해외렌터카</td>
+					<td></td>
+					<td></td>
+					<td><a href="short/short_reservationHertz.html" target="_blank">short_reservationHertz.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>2020-11-19 : 임시 페이지명</td>
+				</tr>
+				<tr>
+					<td rowspan="10">월간단기렌터카</td>
+					<td>안내 </td>
+					<td></td>
+					<td><a href="short/short_monthly_info.html" target="_blank">short_monthly_info.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">렌터카 목록</td>
+					<td></td>
 					<td><a href="short/short_monthly_list.html" target="_blank">short_monthly_list.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -476,7 +418,14 @@
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
-				
+				<tr>
+					<td>차량 상세(상담진행중)</td>
+					<td><a href="short/short_monthly_detail2.html" target="_blank">short_monthly_detail2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
 				<tr>
 					<td>상담하기 (1/2단계) </td>
 					<td></td>
@@ -487,35 +436,8 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>위치 설정<span class="txt_fin">(레이어 팝업)</span></td>
+					<td>상담하기 (2/2단계) </td>
 					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>개인정보 수집 및 이용 동의<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>마케팅 · 광고 · 홍보 등 활용을 위한<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td rowspan="2">상담하기 (2/2단계) </td>
-					<td>차량선택</td>
 					<td><a href="short/short_monthly_step2.html" target="_blank">short_monthly_step2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -523,7 +445,8 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>차량미선택</td>
+					<td>상담하기 (2/2단계 - 차량미선택)</td>
+					<td></td>
 					<td><a href="short/short_monthly_step2-2.html" target="_blank">short_monthly_step2-2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -531,11 +454,45 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="8">기사포함단기렌터카</td>
+					<td>위치 설정<span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>개인정보 수집 및 이용 동의<span class="txt_fin">(슬라이드)</span></td>
+					<td></td>
+					<td></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
+					</td>
+				</tr>
+				<tr>
+					<td>마케팅 · 광고 · 홍보 등 활용을 위한<span class="txt_fin">(슬라이드)</span></td>
+					<td></td>
+					<td></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
+					</td>
+				</tr>
+				
+				<tr>
+					<td rowspan="9">기사포함단기렌터카</td>
 					<td>안내 </td>
 					<td></td>
 					<td><a href="short/short_driver_info.html" target="_blank">short_driver_info.html</a></td>
-					<td class="t_center ">x</td>
+					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
@@ -546,57 +503,60 @@
 					<td><a href="short/short_driver_step1.html" target="_blank">short_driver_step1.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing">2020-11-23</td>
-					<td>
-						스크립트 지원 필요 - 커스텀 모바일 슬라이드 셀렉트<br/>
-						> 대여일시 클릭시 커스텀 모바일 슬라이드 셀렉트
-						<div class="txt_add">
-							스크립트 지원 완료 - 커스텀 모바일 슬라이드 셀렉트<br/>
-							> 대여일시 클릭시 커스텀 모바일 슬라이드 셀렉트
-						</div>
+					<td class="t_center txt_ing"></td>
+					<td>						
+						달력 UI 변경 예정(개발 이슈 등으로 디자인 변경 고려중) <br>
+						20201202 : 지금 디자인 그대로 진행						
 					</td>
 				</tr>
 				<tr>
-					<td>대여차량 상세<span class="txt_fin"> (레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>대여기간 선택<span class="txt_fin"> (레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>상담하기 (2/3단계)</td>
+					<td rowspan="4">상담하기 (2/3단계)</td>
 					<td></td>
 					<td><a href="short/short_driver_step2.html" target="_blank">short_driver_step2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing">2020-11-23</td>
+					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>위치 설정<span class="txt_fin">(레이어 팝업)</span></td>
+					<td>위치 설정<br><span class="txt_fin">(레이어 팝업 - 검색 결과)</span></td>
+					<td><a href="short/short_driver_step2-1.html" target="_blank">short_driver_step2-1.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>팝업 컨텐츠 화면 크롬 확인용</td>
+				</tr>
+				<tr>
+					<td>위치 설정<span class="txt_fin">(레이어 팝업 - 지도)</span></td>
+					<td><a href="short/short_driver_step2-2.html" target="_blank">short_driver_step2-2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>팝업 컨텐츠 화면 크롬 확인용</td>
+				</tr>
+				<tr>
+					<td>위치 설정<br><span class="txt_fin">(레이어 팝업 - 검색 결과 없음)</span></td>
+					<td><a href="short/short_driver_step2-3.html" target="_blank">short_driver_step2-3.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>팝업 컨텐츠 화면 크롬 확인용</td>
+				</tr>
+				<tr>
+					<td>개인정보 수집 및 이용 동의<span class="txt_fin">(슬라이드)</span></td>
 					<td></td>
 					<td></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td><span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)</td>
 				</tr>
 				<tr>
-					<td>약관 동의<span class="txt_fin">(레이어 팝업)</span></td>
+					<td>마케팅 · 광고 · 홍보 등 활용을 위한<span class="txt_fin">(슬라이드)</span></td>
 					<td></td>
 					<td></td>
-					<td class="t_center txt_add">완료</td>
+					<td class="t_center ">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
@@ -613,7 +573,7 @@
 
 				<!-- 신차장장기렌터카 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="13">신차장장기렌터카 <span class="txt_ing">(IA 미완료)</span></td>
+					<td rowspan="13">신차장장기렌터카</td>
 					<td>신차장 특가</td>
 					<td></td>
 					<td></td>
@@ -631,10 +591,11 @@
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td>						
+					</td>
 				</tr>
 				<tr>
-					<td rowspan="9">장기렌터카 안내</td>
+					<td rowspan="10">장기렌터카 안내</td>
 					<td rowspan="3">개인 장기렌터카</td>
 					<td></td>
 					<td><a href="longTerm/longTerm_individual.html" target="_blank">longTerm_individual.html</a></td>
@@ -649,7 +610,10 @@
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
+					</td>
 				</tr>
 				<tr>
 					<td>카플래너 상담신청 - (2/2단계)</td>
@@ -674,7 +638,10 @@
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
+					</td>
 				</tr>
 				<tr>
 					<td>카플래너 상담신청 - (2/2단계)</td>
@@ -699,7 +666,10 @@
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
+					</td>
 				</tr>
 				<tr>
 					<td>카플래너 상담신청 - (2/2단계)</td>
@@ -712,7 +682,6 @@
 				<tr>
 					<td>제휴카드 안내</td>
 					<td></td>
-					<td></td>
 					<td><a href="longTerm/longTerm_info.html" target="_blank">longTerm_info.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -720,11 +689,14 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>신차장 친구추천</td>
+					<td>
+						신차장 친구추천
+						<span class="txt_fin">(친구추천 url 만들기 레이어)</span>
+					</td>
 					<td></td>
 					<td></td>
 					<td><a href="longTerm/longTerm_recommend.html" target="_blank">longTerm_recommend.html</a></td>
-					<td class="t_center ">x</td>
+					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
@@ -732,8 +704,59 @@
 
 				<!-- 중고차장기렌터카 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="24">중고차장기렌터카 <span class="txt_ing">(IA 미완료)</span></td>
-					<td>중고차 장기렌터카</td>
+					<td rowspan="18">중고차장기렌터카 <span class="txt_ing">(IA 미완료)</span></td>
+					<td rowspan="8">중고차 장기렌터카</td>
+					<td>리스트</td>
+					<td></td>
+					<td><a href="secondhand/secondhand_list.html" target="_blank">secondhand_list.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>					
+					<td rowspan="3">상세</td>
+					<td></td>
+					<td><a href="secondhand/secondhand_detail.html" target="_blank">secondhand_detail.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>						
+						<p class="txt_ing">&lt;스크립트 체크 사항&gt;</p>
+						<div class="check-list-box">
+							<p>1. 상단 슬라이드</p>
+							<ul>
+								<li>이미지 갯수 카운팅</li>
+								<li>전체 보기</li>
+								<li>페이지네이션 영역 이미지 변경(디자인 및 정책 파악 필요)</li>
+							</ul>
+							<p>2. 하단 우측 스티키 영역</p>
+							<ul>
+								<li>세로 스크롤 시 스티키 처리(정책 파악 필요)</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>할부계산기 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						20201126 :<br>
+						웹 디자인 미완료 > 할부 계산기 버튼 임시로 생성 >  할부계산기 레이어 작업
+					</td>
+				</tr>
+				<tr>
+					<td>차량 성능 검사 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>					
 					<td>안내</td>
 					<td></td>
 					<td><a href="secondhand/secondhand_info.html" target="_blank">secondhand_info.html</a></td>
@@ -743,36 +766,19 @@
 					<td></td>
 				</tr>
 				<tr>
+					<td rowspan="2">상담신청(1/2단계)</td>
 					<td></td>
-					<td>리스트</td>
-					<td></td>
-					<td><a href="secondhand/secondhand_list.html" target="_blank">secondhand_list.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>상세</td>
-					<td></td>
-					<td><a href="secondhand/secondhand_detail.html" target="_blank">secondhand_detail.html</a></td>
+					<td><a href="secondhand/secondhand_step1.html" target="_blank">secondhand_step1.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td>
-						스크립트 지원 필요 - 상단 롤링<br/>
-						> 하단 작은 사진 클릭시, 상단 이미지 변경
-						<div class="txt_add">
-							스크립트 지원 완료 - 상단 롤링<br/>
-							> 하단 작은 사진 클릭시, 상단 이미지 변경
-						</div>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
 					</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td>상세검색<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
+					<td>가격 상세 정보 <span class="txt_fin">(레이어 팝업)</span></td>
 					<td></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -780,134 +786,69 @@
 					<td></td>
 				</tr>
 				<tr>
+					<td>상담신청(2/2단계)</td>
 					<td></td>
-					<td>차량 사진<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
+					<td><a href="secondhand/secondhand_step2.html" target="_blank">secondhand_step2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
+				</tr>				
 				<tr>
-					<td></td>
-					<td>차량 성능검사<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>정비이력<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>상세 - 타보고 구매하기</td>
-					<td></td>
-					<td><a href="secondhand/secondhand_detail_buy.html" target="_blank">secondhand_detail_buy.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>상담신청 (1/2단계)</td>
-					<td></td>
-					<td><a href="secondhand/secondhand_succession_step1.html" target="_blank">secondhand_succession_step1.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>상담신청 (2/2단계)</td>
-					<td></td>
-					<td><a href="secondhand/secondhand_succession_step2.html" target="_blank">secondhand_succession_step2.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td rowspan="10">승계게시판</td>
+					<td>승계게시판</td>
 					<td>리스트</td>
 					<td></td>
 					<td><a href="secondhand/secondhand_succession_list.html" target="_blank">secondhand_succession_list.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td>
-						스크립트 지원 필요 - 커스텀 모바일 슬라이드 셀렉트<br/>
-						상세검색 클릭 > 차량 등록일(연식)<br>
-						커스텀 모바일 슬라이드 셀렉트
-						<div class="txt_add">
-							스크립트 지원 완료 - 커스텀 모바일 슬라이드 셀렉트<br/>
-							상세검색 클릭 > 차량 등록일(연식)<br>
-						커스텀 모바일 슬라이드 셀렉트
-						</div>
-					</td>
+					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="4">상세</td>
+					<td></td>
+					<td>상세<span class="txt_fin">(정비이력, 옵션 정보 레이어)</span></td>
 					<td></td>
 					<td><a href="secondhand/secondhand_succession_detail.html" target="_blank">secondhand_succession_detail.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td>
-						스크립트 지원 필요 - 상단 롤링<br/>
-						> 하단 작은 사진 클릭시, 상단 이미지 변경
-						<div class="txt_add">
-							스크립트 지원 완료 - 상단 롤링<br/>
-							> 하단 작은 사진 클릭시, 상단 이미지 변경
+						<p class="txt_ing">&lt;스크립트 체크 사항&gt;</p>
+						<div class="check-list-box">
+							<p>1. 상단 슬라이드</p>
+							<ul>
+								<li>이미지 갯수 카운팅</li>
+								<li>전체 보기</li>
+								<li>페이지네이션 영역 이미지 변경(디자인 및 정책 파악 필요)</li>
+							</ul>
+							<p>2. 하단 우측 스티키 영역</p>
+							<ul>
+								<li>세로 스크롤 시 스티키 처리(정책 파악 필요)</li>
+							</ul>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>상세검색<span class="txt_fin"> (레이어 팝업)</span></td>
 					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
+					<td>승계차량 수정</td>
 					<td></td>
-				</tr>
-				<tr>
-					<td>승계차량 수정<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
+					<td><a href="secondhand/secondhand_succession_modify.html" target="_blank">secondhand_succession_modify.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td>
-						스크립트 지원 필요 - 사진 정보 리스트<br/>
-						> 이미지 순서 변경 가능한 드래그 기능 필요<br/>
-						> 사진 추가 버튼 클릭시 이미지가 6개>3개>1개 순서로 보여지도록 함<br/>
-						> 최종 10개까지 리스트가 나타 난 후 사진추가 버튼 사라지도록 구현
-						<div class="txt_add">
-							스크립트 지원 완료 - 사진 정보 리스트<br/>
-							> 이미지 순서 변경 가능한 드래그 기능
+						<p class="txt_ing">&lt;스크립트 체크 사항&gt;</p>
+						<div class="check-list-box">
+							<p>1. 사진 정보 > 사진추가 영역</p>
+							<ul>
+								<li>이미지 업로드(개발과 협의 필요할 듯 - 플러그인 등)</li>
+								<li>draggable 처리</li>
+							</ul>							
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>승계 진행<span class="txt_fin">(레이어 팝업)</span></td>
 					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
 					<td>안내</td>
 					<td></td>
 					<td><a href="secondhand/secondhand_succession_info.html" target="_blank">secondhand_succession_info.html</a></td>
@@ -917,52 +858,50 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>등록 차량선택 (1/3단계)</td>
+					<td></td>
+					<td>승계차량 등록(1/3단계 - 개인/법인)</td>
 					<td></td>
 					<td><a href="secondhand/secondhand_succession_register_step1.html" target="_blank">secondhand_succession_register_step1.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
+					</td>
 				</tr>
-				<tr>
-					<td>차량상세<span class="txt_fin">(레이어 팝업)</span></td>
-					<td></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>등록 정보입력 (2/3단계)</td>
+				<tr>			
+					<td></td>		
+					<td>승계차량 등록(2/3단계)</td>
 					<td></td>
 					<td><a href="secondhand/secondhand_succession_register_step2.html" target="_blank">secondhand_succession_register_step2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td>
-						스크립트 지원 필요 - 사진 정보 리스트<br/>
-						> 이미지 순서 변경 가능한 드래그 기능 필요<br/>
-						> 사진 추가 버튼 클릭시 이미지가 6개>3개>1개 순서로 보여지도록 함<br/>
-						> 최종 10개까지 리스트가 나타 난 후 사진추가 버튼 사라지도록 구현
-						<div class="txt_add">
-							스크립트 지원 완료 - 사진 정보 리스트<br/>
-							> 이미지 순서 변경 가능한 드래그 기능
+						20201130 : 사진 정보영역 UI 모바일 디자인 참고하여 변경(담당 디자이너님과 구두로 논의된 사항)<br><br>
+						<p class="txt_ing">&lt;스크립트 체크 사항&gt;</p>
+						<div class="check-list-box">
+							<p>1. 사진 정보 > 사진추가 영역</p>
+							<ul>
+								<li>이미지 업로드(개발과 협의 필요할 듯 - 플러그인 등)</li>
+								<li>draggable 처리</li>
+							</ul>							
 						</div>
 					</td>
 				</tr>
-				<tr>
-					<td>등록완료 (3/3단계)</td>
+				<tr>	
+					<td></td>				
+					<td>승계차량 등록(3/3단계)</td>
 					<td></td>
-					<td><a href="secondhand/secondhand_succession_register_step3.html" target="_blank">secondhand_succession_register_step2.html</a></td>
+					<td><a href="secondhand/secondhand_succession_register_step3.html" target="_blank">secondhand_succession_register_step3.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="4">내 차 팔기 서비스</td>
+					<td>내 차 팔기 서비스</td>
 					<td>안내</td>
 					<td></td>
 					<td><a href="secondhand/secondhand_sell_info.html" target="_blank">secondhand_sell_info.html</a></td>
@@ -972,24 +911,21 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="2">상담하기 (1/2단계)</td>
-					<td>로그인시</td>
-					<td><a href="secondhand/secondhand_sell_step1-1.html" target="_blank">secondhand_sell_step1-1.html</a></td>
+					<td></td>
+					<td>상담 신청(1/2단계 - 상담작성)</td>
+					<td></td>
+					<td><a href="secondhand/secondhand_sell_step1.html" target="_blank">secondhand_sell_step1.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td>
+						<span class="txt_add">공통</span>
+						약관동의 내용 및 공통화 필요(내용 미정)
+					</td>
 				</tr>
 				<tr>
-					<td>로그아웃시</td>
-					<td><a href="secondhand/secondhand_sell_step1-2.html" target="_blank">secondhand_sell_step1-2.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
-				<tr>
-					<td>상담하기 (2/2단계)</td>
+					<td>상담 신청(2/2단계 - 작성완료)</td>
 					<td></td>
 					<td><a href="secondhand/secondhand_sell_step2.html" target="_blank">secondhand_sell_step2.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1000,11 +936,11 @@
 
 				<!-- 카라이프 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="6">카라이프 <span class="txt_ing">(IA 미완료)</span></td>
+					<td rowspan="9">카라이프 <span class="txt_ing">(IA 미완료)</span></td>
 					<td rowspan="2">즐거움을 #타봥</td>
+					<td rowspan="2"></td>
 					<td>리스트</td>
-					<td></td>
-					<td><a href="carLife/carLife_tabwang.html" target="_blank">carLife_tabwang.html</a></td>
+					<td><a href="carLife/carLife_tabwang_list.html" target="_blank">carLife_tabwang_list.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
@@ -1012,27 +948,80 @@
 				</tr>
 				<tr>
 					<td>상세</td>
-					<td></td>
 					<td><a href="carLife/carLife_tabwang_detail.html" target="_blank">carLife_tabwang_detail.html</a></td>
 					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>				
+				<tr>
+					<td rowspan="6">안전운전 TIP</td>
+					<td rowspan="2">운전 정보</td>
+					<td>리스트</td>
+					<td><a href="carLife/carLife_tip_list.html" target="_blank">carLife_tip_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="carLife/carLife_tip_detail.html" target="_blank">carLife_tip_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">교통법규</td>
+					<td>리스트</td>
+					<td><a href="carLife/carLife_trafficRule_list.html" target="_blank">carLife_trafficRule_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="carLife/carLife_trafficRule_detail.html" target="_blank">carLife_trafficRule_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">셀프 정비</td>
+					<td>리스트</td>
+					<td><a href="carLife/carLife_self_list.html" target="_blank">carLife_self_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="carLife/carLife_self_detail.html" target="_blank">carLife_self_detail.html</a></td>
+					<td class="t_center ">x</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
 					<td>제주도 오토하우스</td>
-					<td></td>
-					<td></td>
+					<td>WHY 제주오토하우스</td>
+					<td>리스트</td>
 					<td><a href="carLife/carLife_auto.html" target="_blank">carLife_auto.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
+				</tr>				
+				
 				<tr>
 					<td rowspan="3">이벤트</td>
-					<td rowspan="3">진행중인이벤트 & 당첨자발표</td>
-					<td>리스트 <span class="txt_fin">(탭)</span></td>
+					<td rowspan="2">진행중인이벤트</td>
+					<td></td>
+					<td>리스트</td>
 					<td><a href="carLife/carLife_event_list.html" target="_blank">carLife_event_list.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -1040,7 +1029,8 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>진행중인이벤트 상세</td>
+					<td></td>
+					<td>상세</td>
 					<td><a href="carLife/carLife_event_detail.html" target="_blank">carLife_event_detail.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -1048,7 +1038,9 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>당첨자발표 상세</td>
+					<td>당첨자발표</td>
+					<td></td>
+					<td></td>
 					<td><a href="carLife/carLife_event_winning_detail.html" target="_blank">carLife_event_winning_detail.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
@@ -1058,7 +1050,7 @@
 
 				<!-- 고객지원 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="8">고객지원</td>
+					<td rowspan="7">고객지원</td>
 					<td rowspan="2">공지사항/뉴스</td>
 					<td>리스트</td>
 					<td></td>
@@ -1078,27 +1070,19 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="6">지점 안내</td>
-					<td>교통정보</td>
+					<td rowspan="4">지점 안내</td>
+					<td>전국지점안내</td>
 					<td></td>
-					<td><a href="customer/customer_traffic_info.html" target="_blank">customer_traffic_info.html</a></td>
-					<td class="t_center">x</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td rowspan="2">전국지점안내</td>
-					<td>리스트</td>
 					<td><a href="customer/customer_branch.html" target="_blank">customer_branch.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
-				<tr>
-					<td>상세 검색<span class="txt_fin"> (레이어 팝업)</span></td>
+				<tr>					
 					<td></td>
+					<td>프린트</td>
+					<td><a href="customer/customer_branch_printMap.html" target="_blank">customer_branch_printMap.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
@@ -1113,9 +1097,9 @@
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
-				<tr>
-					<td>지점위치<span class="txt_fin"> (레이어 팝업)</span></td>
-					<td></td>
+				<tr>					
+					<td>프린트</td>
+					<td><a href="customer/customer_branch_driver_printMap.html" target="_blank">customer_branch_driver_printMap.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
@@ -1123,6 +1107,7 @@
 				</tr>
 				<tr>
 					<td>해외지점안내</td>
+					<td></td>
 					<td></td>
 					<td><a href="customer/customer_branch_abroad.html" target="_blank">customer_branch_abroad.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1133,7 +1118,7 @@
 
 				<!-- 로그인_마이페이지 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="53">HEADER</td>
+					<td rowspan="68">HEADER</td>
 					<td rowspan="2">로그인</td>
 					<td>일반</td>
 					<td></td>
@@ -1160,62 +1145,68 @@
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
+					<td rowspan="7">		
+						
+						<p class="txt_add">공통</p>
+						<div class="check-box">
+							1. 약관동의 내용 및 공통화 필요(내용 미정)	<br>
+							2. 2020-12-01 : 페이지 타이틀 골드 색상 제거로 span class="txt-color-brown" 태그 삭제
+						</div>
+
+					
+					</td>
 				</tr>
 				<tr>
-					<td rowspan="2">약관동의</td>
+					<td>약관동의</td>
 					<td>엘포인트</td>
 					<td><a href="header/join_step2.html" target="_blank">join_step2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
 				</tr>
 				<tr>
+					<td></td>
 					<td>렌터카/이중사</td>
 					<td><a href="header/join_step2-2.html" target="_blank">join_step2-2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="2">정보입력</td>
+					<td>정보입력</td>
 					<td>엘포인트</td>
 					<td><a href="header/join_step3.html" target="_blank">join_step3.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
 				</tr>
 				<tr>
+					<td></td>
 					<td>렌터카/이중사</td>
 					<td><a href="header/join_step3-2.html" target="_blank">join_step3-2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="2">가입완료</td>
+					<td>가입완료</td>
 					<td>엘포인트</td>
 					<td><a href="header/join_step4.html" target="_blank">join_step4.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
 				</tr>
 				<tr>
+					<td></td>
 					<td>렌터카/이중사</td>
 					<td><a href="header/join_step4-2.html" target="_blank">join_step4-2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="2">아이디 찾기</td>
-					<td rowspan="2">아이디 찾기</td>
+					<td rowspan="6">아이디/비밀번호 찾기</td>
+					<td>아이디찾기</td>
 					<td></td>
 					<td><a href="header/id_search.html" target="_blank">id_search.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1223,17 +1214,17 @@
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
-				<tr>
-					<td>결과</td>
+				<tr>					
+					<td></td>
+					<td>아이디 정보</td>
 					<td><a href="header/id_search_result.html" target="_blank">id_search_result.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
-				<tr>
-					<td rowspan="4">비밀번호 찾기</td>
-					<td rowspan="4">비밀번호 찾기</td>
+				</tr>				
+				<tr>					
+					<td>비밀번호찾기</td>
 					<td></td>
 					<td><a href="header/password_search.html" target="_blank">password_search.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1242,109 +1233,102 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>로그인</td>
-					<td><a href="header/password_search_login.html" target="_blank">password_search_login.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
-				<tr>
 					<td>본인인증</td>
-					<td><a href="header/password_search_certification.html" target="_blank">password_search_certification.html</a></td>
+					<td><a href="header/password_search2.html" target="_blank">password_search2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>비밀번호입력</td>
-					<td><a href="header/password_search_join.html" target="_blank">password_search_join.html</a></td>
+					<td></td>
+					<td>새로운 비밀번호</td>
+					<td><a href="header/password_search3.html" target="_blank">password_search3.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="38">마이페이지</td>
+					<td></td>
+					<td>변경된 비밀번호로 로그인</td>
+					<td><a href="header/password_search4.html" target="_blank">password_search4.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="53">마이페이지</td>
+					<td></td>
 					<td>메인</td>
-					<td></td>
-					<td><a href="header/mypage_main.html" target="_blank">mypage_main.html</a></td>
+					<td><a href="header/mypage.html" target="_blank">mypage.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td>우측 상단 마이페이지 아이콘 클릭시 화면 구동<br/>
-					<span class="txt_fin">-> 페이지 따로 분리하여 수정 완료</span><br/>
-					<span class="txt_fin">-> 노데이터 화면 추가 완료</span></td>
+					<td></td>
 				</tr>
+				<tr>		
+					<td></td>			
+					<td>메인 - 노데이터</td>
+					<td><a href="header/mypage_nodata.html" target="_blank">mypage_nodata.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>	
 				<tr>
-					<td rowspan="5">단기렌터카</td>
+					<td rowspan="4">단기렌트카 예약</td>
 					<td>리스트</td>
-					<td><a href="header/mypage_short_list.html" target="_blank">mypage_short_list.html</a></td>
+					<td><a href="header/mypage_reservation_list.html" target="_blank">mypage_reservation_list.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						20201203 : 카드형태 리스트 5개 뿌려주고 페이지네이션 추가로 변경
+					</td>
+				</tr>
+				<tr>					
+					<td>리스트 - 내역 없음</td>
+					<td><a href="header/mypage_reservation_list2.html" target="_blank">mypage_reservation_list2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>			
+				<tr>
+					<td>상세-결제대기,예약완료,이용중,이용완료<span class="txt_fin">(예약취소 레이어 팝업)</span></td>
+					<td><a href="header/mypage_reservation_detail.html" target="_blank">mypage_reservation_detail.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>상세</td>
-					<td><a href="header/mypage_short_detail.html" target="_blank">mypage_short_detail.html</a></td>
+					<td>상세-취소,결제대기상태에서취소</td>
+					<td><a href="header/mypage_reservation_detail2.html" target="_blank">mypage_reservation_detail2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
+
 				<tr>
-					<td>예약취소<span class="txt_fin"> (레이어 팝업)</span></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>예약 선 결제및 수수료안내<span class="txt_fin"> (레이어 팝업)</span></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td>팝업 진입경로 확인 불가로 <br/><a href="header/mypage_short_detail.html" class="txt_fin"> 상세페이지</a>수정버튼에 팝업 임시 연결 </td>
-				</tr>
-				<tr>
-					<td>예약 QR코드<span class="txt_fin"> (레이어 팝업)</span></td>
-					<td></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td rowspan="3">월간단기렌터카</td>
+					<td>월간단기렌터카</td>
 					<td>리스트</td>
 					<td><a href="header/mypage_short_monthly_list.html" target="_blank">mypage_short_monthly_list.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
+					<td>
+						20201203 : <br>
+						1. 결제는 기존 월간단기페이지로 링크 이동(디자인 X)<br>
+						2. PMY-MEM-0105_예약 선결제 및 수수료 안내 >  팝업은 현재 기획 등 정해진 사항 없으므로 작업 홀드
+					</td>
+				</tr>				
 				<tr>
-					<td>결제</td>
-					<td><a href="header/mypage_short_monthly_payment.html" target="_blank">mypage_short_monthly_payment.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>결제완료</td>
-					<td><a href="header/mypage_short_monthly_payment_comple.html" target="_blank">mypage_short_monthly_payment_comple.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>기사포함단기렌터카</td>
+					<td rowspan="2">기사포함단기렌터카</td>
 					<td>리스트</td>
 					<td><a href="header/mypage_short_driver_list.html" target="_blank">mypage_short_driver_list.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1352,17 +1336,25 @@
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
-				<tr>
-					<td>장기렌터카</td>
-					<td>리스트</td>
-					<td><a href="header/mypage_secondhand_info_list.html" target="_blank">mypage_secondhand_info_list.html</a></td>
+				<tr>					
+					<td>리스트 - 내역 없음</td>
+					<td><a href="header/mypage_short_driver_list2.html" target="_blank">mypage_short_driver_list2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
+				</tr>	
 				<tr>
-					<td>렌터카상담</td>
+					<td>장기렌터카 계약</td>
+					<td>리스트</td>
+					<td><a href="header/mypage_longTerm_list.html" target="_blank">mypage_longTerm_list.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>	
+				<tr>
+					<td rowspan="2">렌터카상담</td>
 					<td>리스트</td>
 					<td><a href="header/mypage_rentcar_consulting.html" target="_blank">mypage_rentcar_consulting.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1371,7 +1363,15 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>내차팔기 상담</td>
+					<td>리스트 - 내역 없음</td>
+					<td><a href="header/mypage_rentcar_consulting2.html" target="_blank">mypage_rentcar_consulting2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">내 차 팔기 상담</td>
 					<td>리스트</td>
 					<td><a href="header/mypage_mycar_sell_consulting.html" target="_blank">mypage_mycar_sell_consulting.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1380,99 +1380,143 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="6">포인트</td>
-					<td>사용내역</td>
-					<td rowspan="6"><a href="header/mypage_point.html" target="_blank">mypage_point.html</a></td>
+					<td>리스트 - 내역 없음</td>
+					<td><a href="header/mypage_mycar_sell_consulting2.html" target="_blank">mypage_mycar_sell_consulting2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>포인트 전환 신청 <br/>(아시아나마일리지 전환탭)</td>
+					<td rowspan="3">포인트</td>
+					<td>사용 내역</td>
+					<td><a href="header/mypage_point.html" target="_blank">mypage_point.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>아시아나마일리지전환 신청<span class="txt_fin"> (레이어 팝업)</span></td>
+					<td>사용 내역 없음</td>
+					<td><a href="header/mypage_point2.html" target="_blank">mypage_point2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>					
+					<td>
+						포인트 전환 신청<br>
+						<span class="txt_fin">(아시아나 마일리지 전환신청, 아시아나클럽 적립몰 - 롯데렌터카 이용안내, 할인쿠폰 전환신청 레이어 팝업)</span>
+					</td>
+					<td><a href="header/mypage_point_transition.html" target="_blank">mypage_point_transition.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<!--
+				<tr>
+					<td rowspan="2">승계 목록</td>
+					<td>리스트</td>
+					<td><a href="header/mypage_succession_list.html" target="_blank">mypage_succession_list.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="header/mypage_succession_detail.html" target="_blank">mypage_succession_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>	
+				-->			
+				<tr>
+					<td rowspan="2">쿠폰</td>
+					<td></td>
+					<td><a href="header/mypage_coupon.html" target="_blank">mypage_coupon.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>롯데렌터카 이용안내<span class="txt_fin"> (레이어 팝업)</span></td>
+					<td>내역 없음</td>
+					<td><a href="header/mypage_coupon2.html" target="_blank">mypage_coupon2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>포인트 전환 신청 <br/>(할인쿠폰 전환 신청 탭)</td>
+					<td rowspan="2">무료이용권</td>
+					<td></td>
+					<td><a href="header/mypage_freePass.html" target="_blank">mypage_freePass.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>할인쿠폰 전환 신청<span class="txt_fin"> (레이어 팝업)</span></td>
+					<td>내역 없음</td>
+					<td><a href="header/mypage_freePass2.html" target="_blank">mypage_freePass2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="3">쿠폰 및 무료이용권</td>
-					<td>할인쿠폰</td>
-					<td rowspan="3"><a href="header/mypage_coupon.html" target="_blank">mypage_coupon.html</a></td>
+					<td rowspan="2">신차장 친구추천 활동</td>
+					<td></td>
+					<td><a href="header/mypage_recommend.html" target="_blank">mypage_recommend.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>할인쿠폰 등록<span class="txt_fin"> (레이어 팝업)</span></td>
+					<td>내역 없음</td>
+					<td><a href="header/mypage_recommend2.html" target="_blank">mypage_recommend2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>무료 이용권</td>
+					<td rowspan="2">결제카드</td>
+					<td></td>
+					<td><a href="header/mypage_paymentCard.html" target="_blank">mypage_paymentCard.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						20201207 :<br>
+						결제 카드 등록 레이어(디자인 x) -> 기획서에 이미지로 캡처되어 있는 부분은 제작 안하고 따로 불러와 쓴다고 함.
+					</td>
+				</tr>
+				<tr>
+					<td>내역 없음</td>
+					<td><a href="header/mypage_paymentCard2.html" target="_blank">mypage_paymentCard2.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>신차장 친구추천활동</td>
-					<td>목록</td>
-					<td><a href="header/mypage_referfriend.html" target="_blank">mypage_referfriend.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>결제카드</td>
-					<td></td>
-					<td><a href="header/mypage_card.html" target="_blank">mypage_card.html</a></td>
-					<td class="t_center txt_add">완료</td>
-					<td class="t_center txt_fin"></td>
-					<td class="t_center txt_ing"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>운전면허증</td>
+					<td>
+						운전면허정보
+						<span class="txt_fin">(국내/국제)</span>
+					</td>
 					<td></td>
 					<td><a href="header/mypage_license.html" target="_blank">mypage_license.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
+				</tr>	
 				<tr>
 					<td>나의 관심 차종</td>
 					<td></td>
@@ -1481,18 +1525,26 @@
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
-				</tr>
+				</tr>					
 				<tr>
-					<td>나의 찜 차량</td>
+					<td rowspan="2">나의 찜 차량</td>
 					<td></td>
-					<td><a href="header/mypage_car_mypick.html" target="_blank">mypage_car_mypick.html</a></td>
+					<td><a href="header/mypage_mypick_car.html" target="_blank">mypage_mypick_car.html</a></td>
 					<td class="t_center txt_add">완료</td>
 					<td class="t_center txt_fin"></td>
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>나의 단골 지점</td>
+					<td>내역 없음</td>
+					<td><a href="header/mypage_mypick_car2.html" target="_blank">mypage_mypick_car2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">나의 단골 지점</td>
 					<td></td>
 					<td><a href="header/mypage_branch.html" target="_blank">mypage_branch.html</a></td>
 					<td class="t_center txt_add">완료</td>
@@ -1500,6 +1552,27 @@
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
+				<tr>
+					<td>내역 없음</td>
+					<td><a href="header/mypage_branch2.html" target="_blank">mypage_branch2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1:1 문의</td>
+					<td></td>
+					<td></td>
+					<td class="t_center txt_add"></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						20201209 : <br>
+						- 기획서 내용 확인(기존 페이지로 링크이동 (디자인 X))
+					</td>
+				</tr>
+				
 				<tr>
 					<td rowspan="3">회원정보수정</td>
 					<td>렌터카 회원</td>
@@ -1576,6 +1649,15 @@
 					<td></td>
 				</tr>
 				<tr>
+					<td>고유식별정보 수집에 대한 동의 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
 					<td>롯데그룹사 임직원 인증</td>
 					<td></td>
 					<td><a href="header/mypage_lottefamily.html" target="_blank">mypage_lottefamily.html</a></td>
@@ -1584,6 +1666,95 @@
 					<td class="t_center txt_ing"></td>
 					<td></td>
 				</tr>
+				<tr>
+					<td>비회원 예약내역</td>
+					<td></td>
+					<td><a href="header/mypage_guest_reservation.html" target="_blank">mypage_guest_reservation.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						20201210 :<br>
+						- 기존 마이페이지의 테이블 스타일은 동일하게 작업하는걸로 디자인팀과 논의된 사항(디자인은 가운데 정렬 등등 변경되어있음)
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="6">등록카드 관리</td>
+					<td></td>
+					<td><a href="header/mypage_card.html" target="_blank">mypage_card.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>카드정보 등록</td>
+					<td></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>개인정보 수집 및 이용안내 동의 사항 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>개인정보 위탁 및 제공안내 이용자 동의 사항 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>전자금융 이용약관 이용자 동의 사항 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>정기과금 이용약관 이용자 동의 사항 <span class="txt_fin">(레이어 팝업)</span></td>
+					<td></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>계약서 조회</td>
+					<td></td>
+					<td><a href="header/mypage_contract.html" target="_blank">mypage_contract.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상담 문의 내역</td>
+					<td></td>
+					<td><a href="header/mypage_professional_history.html" target="_blank">mypage_professional_history.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>나의 지점 리스트</td>
+					<td></td>
+					<td><a href="header/mypage_branch.html" target="_blank">mypage_branch.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
 				<!-- ENGLISH ================================================================================ -->
 				<tr class="line">
 					<td>ENGLISH</td>
@@ -1599,7 +1770,25 @@
 
 				<!-- 푸터 ================================================================================ -->
 				<tr class="line">
-					<td rowspan="12">푸터</td>
+					<td rowspan="13">푸터</td>
+					<td>FAMILY SITE</td>
+					<td>
+						FAMILY SITE<br>
+						- 식품부문<br>
+						- 관광부문<br>
+						- 금융부문<br>
+						- 석유화학/건설/제조 부문<br>
+						- 유통부문<br>
+						- 서비스/연구/지원 부문
+					</td>
+					<td></td>
+					<td><a href="footerMenu/footerMenu_familySite.html" target="_blank">footerMenu_familySite.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
 					<td>회사소개</td>
 					<td></td>
 					<td></td>
@@ -1715,7 +1904,18 @@
 					<td></td>
 				</tr>
 
-
+				<!-- 제휴사 페이지 ================================================================================ -->
+				<tr class="line">
+					<td>제휴사 페이지</td>
+					<td>제휴사 단기 예약 페이지</td>
+					<td></td>
+					<td></td>
+					<td><a href="affiliate/affiliate_detail.html" target="_blank">affiliate_detail.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
 
 
 
