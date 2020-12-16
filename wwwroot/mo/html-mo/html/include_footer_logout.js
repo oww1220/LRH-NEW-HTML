@@ -73,10 +73,6 @@ $(function(){
         </footer>
         <!--//footer 컴포넌트-->
 
-        <!--bg-dimmed 컴포넌트-->
-        <div class="bg-dimmed">딤(Dim)처리 배경</div>
-        <!--//bg-dimmed 컴포넌트-->
-
         <!--drawer 컴포넌트-->
         <div class="drawer">
 
@@ -368,6 +364,10 @@ $(function(){
             <button type="button" class="btn btn-goTop">탑으로</button>
         </div>
         <!--//fixedRight 컴포넌트-->
+
+        <!--bg-dimmed 컴포넌트-->
+        <div class="bg-dimmed">딤(Dim)처리 배경</div>
+        <!--//bg-dimmed 컴포넌트-->
     `;
 
     $(".footer").html(footer);
