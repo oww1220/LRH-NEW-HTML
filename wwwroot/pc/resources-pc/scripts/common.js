@@ -1163,7 +1163,23 @@ if($('.fare-section .inlandFareTab').length){
     });
 }
 
-
+//신차장 다이렉트
+if($('.longTerm-container .estimateSwiper').length) {
+    
+    MUI.slide.LayerSwiper = MUI.slide.init('.estimateSwiper','swiper', {
+        loop: true,
+        autoHeight:true,
+        pagination: {
+            el: '.estimateSwiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.estimateSwiper-button-next',
+            prevEl: '.estimateSwiper-button-prev',
+        },
+    });
+    
+}
 
 //개인 장기 렌터카 QNA 아코디언
 if($('.longTerm-container .qnaAccor').length){
@@ -1247,7 +1263,7 @@ if($('.mypage-container .pointTransitionTab').length){
     }
     // 메인- 중고차 슬라이드
     if($('.secondhand-wrap .secondhand-slide-cont').length) { 
-        if($('.secondhand-wrap .secondhand-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length >= 4) {
+        if($('.secondhand-wrap .secondhand-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 4) {
             MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
             loop: true,
             slidesPerView: 4,
@@ -1271,7 +1287,7 @@ if($('.mypage-container .pointTransitionTab').length){
 
     // 메인- 핫딜 슬라이드
     if($('.hotdeal-slide-wrap .hotdeal-slide-cont').length) {
-        if($('.hotdeal-slide-wrap .hotdeal-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length >= 2) {
+        if($('.hotdeal-slide-wrap .hotdeal-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 2) {
             MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
                 loop: true,
                 slidesPerView: 2,
