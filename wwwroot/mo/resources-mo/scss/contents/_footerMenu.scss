@@ -1,9 +1,30 @@
 .footerMenu-wrap {
     //컨텐츠 구조
     .section-cont {
+        .tab-cont-inner {
+            padding:3.4rem 1.7rem 0;
+            & + .tab-cont-inner {
+                display: none;
+            }
+            &.about-rental {
+                > div + div {
+                    padding:3.4rem 0;
+                }
+                .cont-box {
+                    & + .cont-box {
+                        border-top:1px solid #f1f1f1;
+                    }
+                    &.box02 {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
         .cont-tit {
             strong {
                 font-size: 1.8rem;
+                line-height: 1.3;
+                @include Regular;
                 @include Align-middle-column;
             } 
             h3 {
@@ -15,34 +36,42 @@
         .cont-txt {
             font-size:1.1rem;
             color:#54585a;
+            padding-top:1.7rem;
+            word-break: keep-all;
         }
         .cont-section {
             .segment {
+                & + .segment {
+                    margin-top:1.7rem;
+                }
                 > div {
                     @include Align-middle-left;
                     > div {
                         @include Align-middle;
-                        @include Background($sprite:'bg-shape01', $size:7.4rem 7.4rem, $position:center center, $path:'bgs');
-                        width:35%;
+                        @include Background($sprite:'bg-shape01', $size:100%, $position:center center, $path:'bgs');
+                        width:7.4rem;
                         height:7.4rem;
                     }
                     p {
                         color:#54585a;
                         font-size:1.1rem;
                         width: 60%;
+                        margin-left: 1.7rem;
                     }
                 }
             }
         }
         .cont-lst {
             @include Background($sprite:'bg-shape01', $size:100% 100%, $position:center center, $path:'bgs');
-            min-height:24.8rem;
+            margin:2.6rem 0 10rem;
             .segment {
-                padding:1.7rem;
+                min-height: 8.6rem;
+                position: relative;
                 & + .segment {
                     border-top:2px solid #fff;
                 }
                 > div {
+                    padding:1.7rem 0;
                     @include Align-middle-column;
                     > i {
                         width: 7rem;
@@ -51,31 +80,93 @@
                         padding:0;
                         @include Bold;
                     }
+                    strong {
+                        padding:1.3rem 0 .8rem;
+                    }
                     ul.list-type-col3 {
                         align-items: flex-start;
                         width: 100%;
-                        margin: 0;
-                    }
-                    li {
-                        > div {
-                            @include Align-middle-column;
-                            b {
-                                @include Align-middle;
-                                background-color: #fff;
-                                height:4.5rem;
-                                width:4.5rem;
-                                border:1px solid #d2d2d2;
-                                border-radius: 100%;
+                        @include Position($top:60%);
+                        li {
+                            > div {
+                                @include Align-middle-column;
+                                b {
+                                    @include Align-middle;
+                                    background-color: #fff;
+                                    height:4.5rem;
+                                    width:4.5rem;
+                                    border:1px solid #d2d2d2;
+                                    border-radius: 100%;
+                                }
+                            }
+                            span {
+                                text-align: center;
+                                color:#54585a;
+                                font-size: 1rem;
+                                @include Regular;
                             }
                         }
+                    }
+                }
+            }
+        }
+        .cont-chart {
+            > a {
+                display: block;
+                padding:2.6rem 0 0;
+                width:12rem;
+                margin:0 auto
+            }
+            .list-type-col3 {
+                justify-content: space-between;
+                width:100%;
+                margin:4rem 0 0;
+                li {
+                    width: 30.3%;
+                    > div {
                         span {
-                            text-align: center;
+                            @include Align-middle;
+                            @include Bold;
+                            position: relative;
+                            color:#54585a;
+                            width:100%;
+                            padding:.6rem 0;
+                            border-radius:1.7rem;
+                            color:#8f9191;
+                            border:1px solid #d2d2d2;
+                            font-size:.9rem;
+                            &::before {
+                                content:'';
+                                display: block;
+                                height: 2.6rem;
+                                border:0.5px solid #d2d2d2;
+                                @include Position ($left:50%, $top:-110%);
+                            }
+                            &::after {
+                                content:'';
+                                display: block;
+                                width: 114%;
+                                border:0.5px solid #d2d2d2;
+                                @include Position ($left:50%, $top:-110%);
+                            }
+                        }
+                        div {
+                            a {
+                                margin-top:1.7rem;
+                                display: block;
+                            }
+                        }
+                    }
+                    &:last-child span {
+                        &::after {
+                            display: none;
                         }
                     }
                 }
             }
         }
         .cont-table {
+            padding-top:2.6rem;
             table {
                 width: 100%;
                 border-top:1px solid #d2d2d2;
@@ -155,17 +246,6 @@
                 }
             }
         }
-        .tab-cont-inner {
-            & + .tab-cont-inner {
-                display: none;
-            }
-            &.about-rental {
-                .cont-box {
-                    & + .cont-box {
-                        border-top:1px solid #f1f1f1;
-                    }
-                }
-            }
-        }
+        
     }
 }

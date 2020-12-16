@@ -407,7 +407,6 @@
             &.fixed{
                 .detail-layer-nav{
                     @include innerType2Width;
-                    padding:20px 0;
                     background-color:#fff;
                     border-bottom:1px solid $border-darkgrey;
                 }
@@ -423,11 +422,11 @@
                         @include Bold;
                         font-size:18px;
                         color:#000;
+                        padding-bottom:20px;
+                        background-color:#fff;
                     }
                     .segment-cont{
-                        margin-top:20px;
                         padding:40px;
-                        background-color:#fafafa;
                         box-sizing:border-box;
 
                         > p{
@@ -454,17 +453,28 @@
                             }
                         }
                     }
+
+                    .segment-inner{
+                        height:100%;
+                        margin-right:40px;  
+                        background-color:#fafafa;
+                    }
                 }
 
                 &.align-between{
                     @include Align-spacing-box($spacing:40px);
                     .segment{ 
                         width:50%;
-                        padding-right:40px;
-                        box-sizing: border-box;
                     }
                 }
             }
+        }
+    }
+
+    //신차장 특가
+    .longTerm-special-content{
+        .tab-cont-inner{
+            padding: 60px 0;
         }
     }
 

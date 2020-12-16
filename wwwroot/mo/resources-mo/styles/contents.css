@@ -11354,8 +11354,32 @@
 	padding-right: .3rem;
 }
 
+.footerMenu-wrap .section-cont .tab-cont-inner {
+	padding: 3.4rem 1.7rem 0;
+}
+
+.footerMenu-wrap .section-cont .tab-cont-inner + .tab-cont-inner {
+	display: none;
+}
+
+.footerMenu-wrap .section-cont .tab-cont-inner.about-rental > div + div {
+	padding: 3.4rem 0;
+}
+
+.footerMenu-wrap .section-cont .tab-cont-inner.about-rental .cont-box + .cont-box {
+	border-top: 1px solid #f1f1f1;
+}
+
+.footerMenu-wrap .section-cont .tab-cont-inner.about-rental .cont-box.box02 {
+	padding-bottom: 0;
+}
+
 .footerMenu-wrap .section-cont .cont-tit strong {
 	font-size: 1.8rem;
+	line-height: 1.3;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -11412,6 +11436,12 @@
 .footerMenu-wrap .section-cont .cont-txt {
 	font-size: 1.1rem;
 	color: #54585a;
+	padding-top: 1.7rem;
+	word-break: keep-all;
+}
+
+.footerMenu-wrap .section-cont .cont-section .segment + .segment {
+	margin-top: 1.7rem;
 }
 
 .footerMenu-wrap .section-cont .cont-section .segment > div {
@@ -11446,10 +11476,10 @@
 	background-repeat: no-repeat;
 	background-image: url("../../resources-mo/images/bgs/bg-shape01.png");
 	background-position: center center;
-	-webkit-background-size: 7.4rem 7.4rem;
-	   -moz-background-size: 7.4rem 7.4rem;
-	        background-size: 7.4rem 7.4rem;
-	width: 35%;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
+	width: 7.4rem;
 	height: 7.4rem;
 }
 
@@ -11457,6 +11487,7 @@
 	color: #54585a;
 	font-size: 1.1rem;
 	width: 60%;
+	margin-left: 1.7rem;
 }
 
 .footerMenu-wrap .section-cont .cont-lst {
@@ -11466,11 +11497,12 @@
 	-webkit-background-size: 100% 100%;
 	   -moz-background-size: 100% 100%;
 	        background-size: 100% 100%;
-	min-height: 24.8rem;
+	margin: 2.6rem 0 10rem;
 }
 
 .footerMenu-wrap .section-cont .cont-lst .segment {
-	padding: 1.7rem;
+	min-height: 8.6rem;
+	position: relative;
 }
 
 .footerMenu-wrap .section-cont .cont-lst .segment + .segment {
@@ -11478,6 +11510,7 @@
 }
 
 .footerMenu-wrap .section-cont .cont-lst .segment > div {
+	padding: 1.7rem 0;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -11512,6 +11545,10 @@
 	font-weight: normal;
 }
 
+.footerMenu-wrap .section-cont .cont-lst .segment > div strong {
+	padding: 1.3rem 0 .8rem;
+}
+
 .footerMenu-wrap .section-cont .cont-lst .segment > div ul.list-type-col3 {
 	-webkit-box-align: start;
 	-webkit-align-items: flex-start;
@@ -11519,10 +11556,11 @@
 	    -ms-flex-align: start;
 	        align-items: flex-start;
 	width: 100%;
-	margin: 0;
+	position: absolute;
+	top: 60%;
 }
 
-.footerMenu-wrap .section-cont .cont-lst .segment > div li > div {
+.footerMenu-wrap .section-cont .cont-lst .segment > div ul.list-type-col3 li > div {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -11547,7 +11585,7 @@
 	        flex-flow: column;
 }
 
-.footerMenu-wrap .section-cont .cont-lst .segment > div li > div b {
+.footerMenu-wrap .section-cont .cont-lst .segment > div ul.list-type-col3 li > div b {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -11572,8 +11610,98 @@
 	        border-radius: 100%;
 }
 
-.footerMenu-wrap .section-cont .cont-lst .segment > div li span {
+.footerMenu-wrap .section-cont .cont-lst .segment > div ul.list-type-col3 li span {
 	text-align: center;
+	color: #54585a;
+	font-size: 1rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+}
+
+.footerMenu-wrap .section-cont .cont-chart > a {
+	display: block;
+	padding: 2.6rem 0 0;
+	width: 12rem;
+	margin: 0 auto;
+}
+
+.footerMenu-wrap .section-cont .cont-chart .list-type-col3 {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width: 100%;
+	margin: 4rem 0 0;
+}
+
+.footerMenu-wrap .section-cont .cont-chart .list-type-col3 li {
+	width: 30.3%;
+}
+
+.footerMenu-wrap .section-cont .cont-chart .list-type-col3 li > div span {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	position: relative;
+	color: #54585a;
+	width: 100%;
+	padding: .6rem 0;
+	-webkit-border-radius: 1.7rem;
+	   -moz-border-radius: 1.7rem;
+	        border-radius: 1.7rem;
+	color: #8f9191;
+	border: 1px solid #d2d2d2;
+	font-size: .9rem;
+}
+
+.footerMenu-wrap .section-cont .cont-chart .list-type-col3 li > div span::before {
+	content: '';
+	display: block;
+	height: 2.6rem;
+	border: 0.5px solid #d2d2d2;
+	position: absolute;
+	top: -110%;
+	left: 50%;
+}
+
+.footerMenu-wrap .section-cont .cont-chart .list-type-col3 li > div span::after {
+	content: '';
+	display: block;
+	width: 114%;
+	border: 0.5px solid #d2d2d2;
+	position: absolute;
+	top: -110%;
+	left: 50%;
+}
+
+.footerMenu-wrap .section-cont .cont-chart .list-type-col3 li > div div a {
+	margin-top: 1.7rem;
+	display: block;
+}
+
+.footerMenu-wrap .section-cont .cont-chart .list-type-col3 li:last-child span::after {
+	display: none;
+}
+
+.footerMenu-wrap .section-cont .cont-table {
+	padding-top: 2.6rem;
 }
 
 .footerMenu-wrap .section-cont .cont-table table {
@@ -11675,14 +11803,6 @@
 
 .footerMenu-wrap .section-cont .cont-view-video .segment-video .video-list.list-type-col3 li a {
 	height: 4.7rem;
-}
-
-.footerMenu-wrap .section-cont .tab-cont-inner + .tab-cont-inner {
-	display: none;
-}
-
-.footerMenu-wrap .section-cont .tab-cont-inner.about-rental .cont-box + .cont-box {
-	border-top: 1px solid #f1f1f1;
 }
 
 .carLife-wrap {
@@ -25589,6 +25709,14 @@
 
 .longTerm-wrap .section-detail .detail-layout .longTerm-card-list .tab-nav ul li button {
 	padding: 0 1.3rem;
+}
+
+.longTerm-wrap .section-detail .detail-layout .longTerm-card-list .tab-nav ul.list-type-col2 {
+	padding-top: 1.7rem;
+}
+
+.longTerm-wrap .section-detail .detail-layout .longTerm-card-list .tab-nav ul.list-type-col2 li {
+	width: 50%;
 }
 
 .longTerm-wrap .section-detail .detail-layout .layer-item {
