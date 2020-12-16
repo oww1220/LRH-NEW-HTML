@@ -816,6 +816,67 @@
     }
 
 }
+//차 로고
+.carLogo{
+    @include Align-middle;
+    width:100%;
+    height: 40px;
+    
+    &.chevrolet {
+        @include Background($sprite:'carLogo-chevrolet', $position:center, $path:'logos', $size:auto);
+    }
+    &.etc {
+        @include Background($sprite:'carLogo-etc', $position:center, $path:'logos', $size:auto);
+    }
+    &.hyundai {
+        @include Background($sprite:'carLogo-hyundai', $position:center, $path:'logos', $size:auto);
+    }
+    &.kia {
+        @include Background($sprite:'carLogo-kia', $position:center, $path:'logos', $size:auto);
+    }
+    &.renault {
+        @include Background($sprite:'carLogo-renault', $position:center, $path:'logos', $size:auto);
+    }
+    &.benz {
+        @include Background($sprite:'carLogo-benz', $position:center, $path:'logos', $size:auto);
+    }
+    &.bmw {
+        @include Background($sprite:'carLogo-bmw', $position:center, $path:'logos', $size:auto);
+    }
+    &.ssangyong {
+        @include Background($sprite:'carLogo-ssangyong', $position:center, $path:'logos', $size:auto);
+    }
+}
+.chk-box{
+    input:checked + label{
+        .carLogo{
+            &.chevrolet {
+                @include Background($sprite:'carLogo-chevrolet-on', $position:center, $path:'logos', $size:auto);
+            }
+            &.etc {
+                @include Background($sprite:'carLogo-etc-on', $position:center, $path:'logos', $size:auto);
+            }
+            &.hyundai {
+                @include Background($sprite:'carLogo-hyundai-on', $position:center, $path:'logos', $size:auto);
+            }
+            &.kia {
+                @include Background($sprite:'carLogo-kia-on', $position:center, $path:'logos', $size:auto);
+            }
+            &.renault {
+                @include Background($sprite:'carLogo-renault-on', $position:center, $path:'logos', $size:auto);
+            }
+            &.benz {
+                @include Background($sprite:'carLogo-benz-on', $position:center, $path:'logos', $size:auto);
+            }
+            &.bmw {
+                @include Background($sprite:'carLogo-bmw-on', $position:center, $path:'logos', $size:auto);
+            }
+            &.ssangyong {
+                @include Background($sprite:'carLogo-ssangyong-on', $position:center, $path:'logos', $size:auto);
+            }
+        }
+    }
+}
 
 //캐스케이드
 button.active .filter{
@@ -1003,5 +1064,49 @@ button.active .filter{
         & + .flag {
             left: -10px;
         }
+    }
+}
+
+//차량 플래그
+.carFlag{
+    &.chevrolet {
+        width:47px;
+        height:15px;
+        @include Background($sprite:'carFlag-chevrolet', $position:center, $path:'logos', $size:auto);
+    }
+    &.hyundai {
+        width:36px;
+        height:19px;
+        @include Background($sprite:'carFlag-hyundai', $position:center, $path:'logos', $size:auto);
+    }
+    &.kia {
+        width:36px;
+        height:19px;
+        @include Background($sprite:'carFlag-kia', $position:center, $path:'logos', $size:auto);
+    }
+    &.renault {
+        width:36px;
+        height:22px;
+        @include Background($sprite:'carFlag-renault', $position:center, $path:'logos', $size:auto);
+    }
+    &.benz {
+        width:28px;
+        height:28px;
+        @include Background($sprite:'carFlag-benz', $position:center, $path:'logos', $size:auto);
+    }
+    &.bmw {
+        width:28px;
+        height:28px;
+        @include Background($sprite:'carFlag-bmw', $position:center, $path:'logos', $size:auto);
+    }
+    &.ssangyong {
+        width:36px;
+        height:29px;
+        @include Background($sprite:'carFlag-ssangyong', $position:center, $path:'logos', $size:auto);
+    }
+    &.etc {
+        width:26px;
+        height:26px;
+        @include Background($sprite:'carFlag-etc', $position:center, $path:'logos', $size:auto);
     }
 }

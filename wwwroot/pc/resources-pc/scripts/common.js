@@ -1169,6 +1169,8 @@ if($('.longTerm-container .estimateSwiper').length) {
     MUI.slide.LayerSwiper = MUI.slide.init('.estimateSwiper','swiper', {
         loop: true,
         autoHeight:true,
+        autoplay: true,
+        autoplaySpeed: 3000,
         pagination: {
             el: '.estimateSwiper-pagination',
             type: 'fraction',
