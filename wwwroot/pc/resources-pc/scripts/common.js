@@ -1106,6 +1106,11 @@ if($('.short-container .qnaAccor').length){
 
 /* 신차장장기렌터카 start-------------------------------------------------*/
 
+if($('.longTerm-container .longTermSpecialTab').length){
+    MUI.event.taps('.longTerm-container .longTermSpecialTab', false, function(swap){
+        swap();
+    });
+}
 //신차장 멤버십 탭 메뉴
 if($('.longTerm-container .longTermBenefitTab').length){
     MUI.event.taps('.longTerm-container .longTermBenefitTab', false, function(swap){
