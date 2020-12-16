@@ -1436,6 +1436,12 @@ if($('.customer-wrap .tab-normal').length){
 
 /*FooterMenu start-------------------------------------------------*/
 
+    //회사소개
+    if($('.FooterMenuTab').length){
+        MUI.event.taps('.FooterMenuTab', false, function(swap){
+            swap();
+        });
+    }
 /* -------------------------------------------------FooterMenu end*/
     
     //일반 레이어팝업 테스트 ---추후삭제
