@@ -1,3 +1,171 @@
 .footerMenu-wrap {
-
+    //컨텐츠 구조
+    .section-cont {
+        .cont-tit {
+            strong {
+                font-size: 1.8rem;
+                @include Align-middle-column;
+            } 
+            h3 {
+                font-size: 1.8rem;
+                @include Align-middle-column;
+                @include Bold;
+            }
+        }
+        .cont-txt {
+            font-size:1.1rem;
+            color:#54585a;
+        }
+        .cont-section {
+            .segment {
+                > div {
+                    @include Align-middle-left;
+                    > div {
+                        @include Align-middle;
+                        @include Background($sprite:'bg-shape01', $size:7.4rem 7.4rem, $position:center center, $path:'bgs');
+                        width:35%;
+                        height:7.4rem;
+                    }
+                    p {
+                        color:#54585a;
+                        font-size:1.1rem;
+                        width: 60%;
+                    }
+                }
+            }
+        }
+        .cont-lst {
+            @include Background($sprite:'bg-shape01', $size:100% 100%, $position:center center, $path:'bgs');
+            min-height:24.8rem;
+            .segment {
+                padding:1.7rem;
+                & + .segment {
+                    border-top:2px solid #fff;
+                }
+                > div {
+                    @include Align-middle-column;
+                    > i {
+                        width: 7rem;
+                        height: 2rem;
+                        font-size: 1rem;
+                        padding:0;
+                        @include Bold;
+                    }
+                    ul.list-type-col3 {
+                        align-items: flex-start;
+                        width: 100%;
+                        margin: 0;
+                    }
+                    li {
+                        > div {
+                            @include Align-middle-column;
+                            b {
+                                @include Align-middle;
+                                background-color: #fff;
+                                height:4.5rem;
+                                width:4.5rem;
+                                border:1px solid #d2d2d2;
+                                border-radius: 100%;
+                            }
+                        }
+                        span {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .cont-table {
+            table {
+                width: 100%;
+                border-top:1px solid #d2d2d2;
+                color:#54585a;
+                font-size:1.1rem;
+            }
+            tr {
+              border-bottom:1px solid #d2d2d2;
+            }
+            th {
+                background-color: #fafafa;
+                border-left:1px solid #d2d2d2;
+                padding:1.7rem;
+                vertical-align: middle;
+                @include Regular;
+            }
+            td {
+                padding:1.7rem;
+                border-left:1px solid #d2d2d2;
+                border-right:1px solid #d2d2d2;
+            }
+        }
+        .cont-view-video {
+            .segment-tit {
+                .year {
+                    background-color: #ff404b;
+                    color:#fff;
+                    padding:5px 10px;
+                    font-size:1.1rem;
+                    @include Bold;
+                }
+                p {
+                    font-size:1.4rem;
+                    @include Regular;
+                }
+            }
+            .segment-video {
+                .video-box {
+                    height: 14.3rem;
+                    iframe {
+                        border:0;
+                    }
+                }
+                .video-list {
+                    width:100%;
+                    margin:0;
+                    margin-top:.9rem;
+                    li {
+                        &.active a {
+                            border:.5rem solid #ff404b;
+                            box-sizing: border-box;
+                        }
+                        a {
+                            display: block;
+                            height: 7rem;
+                            position: relative;
+                            @include Align-middle;
+                            img {
+                                height:100%;
+                            }
+                            p {
+                                position: absolute;
+                                color:#fff;
+                                text-align: center;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                    &.list-type-col3 {
+                        li {
+                            a {
+                                height: 4.7rem;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .tab-cont-inner {
+            & + .tab-cont-inner {
+                display: none;
+            }
+            &.about-rental {
+                .cont-box {
+                    & + .cont-box {
+                        border-top:1px solid #f1f1f1;
+                    }
+                }
+            }
+        }
+    }
 }

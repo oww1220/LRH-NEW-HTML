@@ -1297,6 +1297,65 @@ body.fixed {
 			}
 		}
 
+		//마이페이지 > 
+		&.layer-sel-branch{
+			.map{
+				min-height:368px;
+				.detail-map-marker{
+					@include Position();
+					cursor: pointer;
+					.map-marker-box{
+						@include Align-between;
+						border:.2rem solid #ff404b;
+						background-color:#fff;
+						border-radius: 1.7rem;
+						padding:.4rem .9rem;
+						.map-marker-txt{
+							font-size:.9rem;
+							@include Bold;
+							padding-left:.9rem;
+						}
+					}
+				}
+			}
+			.infos{
+				margin-top:60px;
+
+				dt{
+					@include Bold;
+					font-size:18px;
+					
+					+ dd{margin-top:15px;}
+				}
+				dd{
+					color:#54585a;
+					
+					+ dt{margin-top:40px;}
+				}
+			}
+			.selBranchSwiper{
+				position:relative;
+				margin-top:50px;
+
+				.selBranchSwiper-button-prev, .selBranchSwiper-button-next{ 
+					cursor: pointer;
+					@include Position($top:50%, $left:0);
+					width: 66px; 
+					height:120px;
+					@include Align-middle;
+					margin-top:-(60px + 24px);
+					z-index:5;
+				}
+				.selBranchSwiper-button-next{
+					@include Position($left:auto, $right:0);
+				}
+				.selBranchSwiper-pagination{
+					@include Align-middle;
+					height:48px;
+				}
+			}
+		}
+
 		//단기렌터카-예약 2단계 결제step/L.POINT 
 		&.layer-shor-lpoint {
 			.popup-top{
