@@ -1042,13 +1042,26 @@ if($('.section-sticky-lnb').length) {
     });
 }
 
-//단기렌터카 실시간 예약 - 결제/나의등록카드  L.pay
-if($('.short-container .tab-lpay').length){
-    MUI.event.taps('.short-container .tab-lpay', false, function(swap){
-        swap();
+
+//단기렌터카 실시간 예약 - 결제/나의등록카드
+if($('.short-container .detail-radio').length) {
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'P'){
+            $('.short-container .detail-tab-wrap-P').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-P').removeClass('active');
+        }
+    });
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'L'){
+            $('.short-container .detail-tab-wrap-L').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-L').removeClass('active');
+        }
     });
 }
-
 
 //단기렌터카 안내 - 스티키
 if($('.short-container .detail-layer-nav').length) {
