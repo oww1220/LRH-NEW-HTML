@@ -1919,22 +1919,28 @@
             @include Bold;
             height: 290px;
             width: 100%;
-            button {
-                @include Align-middle-column;
+            div {
                 width: 100%;
                 height: 100%;
-                color: #fff;
-                font-size: 22px;
-                &:before {
-                    content: "";
-                    display: block;
-                    margin-bottom: 20px;
-                    background-size: 100% auto;
+                button {
+                    @include Align-middle-column;
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    font-size: 22px;
+                    border-bottom: 0 none;
+                    &:before {
+                        content: "";
+                        display: block;
+                        margin-bottom: 20px;
+                        background-size: 100% auto;
+                    }
                 }
             }
+            
             &:nth-of-type(1) {
                 button {
-                    background: #ff404b;
+                    background: #444;
                     &:before {
                         width: 25px;
                         height: 24px;
@@ -1962,17 +1968,30 @@
                     }
                 }
             }
+            &.active {
+                button {
+                    background: #ff404b;
+                    &:before {
+                        width: 25px;
+                        height: 24px;
+                        background: url(../../resources-pc/images/icons/ico-main-calendar.png) 0 0 no-repeat;
+                    }
+                }
+            }
         }
         
     }
     .tab-cont-wrap {
         width: 1180px;
         background: #fff;
+        .tab-step2, .tab-step3 {
+            display: none;
+        }
     }
     .tab-cont-section {
         @include Align-top-left;
         width: 100%;
-        height: 870px;
+        height: 790px;
         // 실시간 예약 캘린더
         .short-calendar {
             width: 360px;
@@ -2126,6 +2145,7 @@
                     @include Align-middle;
                     width: 50%;
                     height: 70px;
+                    background: #fff;
                     label {
                         @include Align-middle;
                         text-align: center;
@@ -2135,18 +2155,49 @@
                         height: 70px;
                         border-bottom: 1px solid #e7e7e7;
                     }
-                    input:checked + label {
-                        border-bottom: 2px solid #ff404b;
-                        @include Bold;
-                        color: #ff404b;
+                    &.active {
+                        label {
+                            border-bottom: 2px solid #ff404b;
+                            @include Bold;
+                            color: #ff404b;
+                        }
                     }
+                    
+                }
+            }
+            .short-branch-tab2 {
+                width: 100%;
+                @include Align-middle;
+                li {
+                    @include Align-middle;
+                    height: 80px;
+                    background: #fff;
+                    label {
+                        @include Align-middle;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #8f9191;
+                        width: 145px;
+                        height: 38px;
+                        border: 1px solid #d2d2d2;
+                        border-radius: 38px;
+                        margin: 0 5px;
+                    }
+                    &.active {
+                        label {
+                            border: 1px solid #ff404b;
+                            @include Bold;
+                            color: #ff404b;
+                            background: #fff9f9;
+                        }
+                    }
+                    
                 }
             }
             .short-branch-section {
                 width: 100%;
                 border-left: 1px solid #e7e7e7;
                 border-right: 1px solid #e7e7e7;
-
                 .shor-main-list-wrap{
                     @include Align-box;
                     // padding:1.7rem;
@@ -2203,6 +2254,9 @@
                             overflow-x: hidden;
                             height: 670px;
                             width: 100%;
+                        }
+                        &.tab2 > div {
+                            height: 590px;
                         }
                         ul{
                             width:100%;
@@ -2310,10 +2364,16 @@
             }
 
             .short-car-list {
-                height: 650px;
+                height: 645px;
                 width: 100%;
                 margin-top: 20px;
                 overflow-y: auto;
+                > div {
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    height: 645px;
+                    width: 100%;
+                }
                 .short-car-list-cont {
                     li + li {
                         border-top: 1px solid #ddd;
@@ -2355,6 +2415,80 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    // 결과값
+    .tab-cont-result {
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        .short-result {
+            @include Align-between-top;
+            height: 100%;
+            li {
+                @include Align-middle;
+                height: 100%;
+                border-top: 1px solid #e7e7e7;
+                &:nth-of-type(1) {
+                    width: 477px;
+                    padding-left: 10px;
+                    &::after {
+                        display: inline-block;
+                        content: "";
+                        width: 1px;
+                        height: 30px;
+                        background: #e7e7e7;
+                    }
+                }
+                &:nth-of-type(2) {
+                    width: 478px;
+                }
+                &:nth-of-type(3) {
+                    width: 225px;
+                    border-top: 0 none;
+                }
+                button {
+                    @include Bold;
+                    width: 100%;
+                    height: 100%;
+                    background: #54585a;
+                    color: #fff;
+                    font-size: 22px;
+                    &:before {
+                        display: inline-block;
+                        content: "";
+                        width: 19px;
+                        height: 18px;
+                        margin-right: 10px;
+                        background: url(../../resources-pc/images/icons/ico-refresh.png) 0 0 no-repeat;
+                        background-size: 100% auto;
+                    }
+                }
+            }
+            .result-time {
+                @include Align-middle;
+                height: 100%;
+                padding: 0 30px;
+                p {
+                    font-size: 16px;
+                    color: #54585a;
+                }
+                strong {
+                    @include Bold;
+                    font-size: 26px;
+                    color: #2f2f2f;
+                    padding: 0 20px;
+                }
+                input{
+                    border:1px solid #EBEBEB;
+                    border-radius: 6px;
+                    background-color: #fff;
+                    height: 50px;
+                    padding:0 20px;
+                    width: 76px;
+                    margin: 0 2px;
                 }
             }
         }

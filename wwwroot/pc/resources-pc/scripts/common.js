@@ -1293,28 +1293,31 @@ if($('.mypage-container .pointTransitionTab').length){
         }
     }
 
-    // scroll focus
-	$(".mCustomScrollbar").focusin(function(){$(this).addClass("focus");}).focusout(function(){$(this).removeClass("focus");});
-	
-	$(".mCustomScrollbar").each(function(){
-		$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
-	});
-	$(window).resize(function(){
-		$(".mCustomScrollbar").each(function(){
-			$("#mCSB_1_container, #mCSB_2_container").children("div").css("height","auto");
-		});
-	});
 /* 메인end-------------------------------------------------*/
 
 /* 실시간예약 메인start-------------------------------------------------*/
 
     if($('.short-branch .tab-action').length){
-
         MUI.event.taps('.short-branch .tab-action', false, function(swap){
             swap();
         });
     }
-    
+    if($('.short-branch .tab-action2').length){
+        MUI.event.taps('.short-branch .tab-action2', false, function(swap){
+            swap();
+        });
+    }
+    if($('.short-branch .tab-action3').length){
+        MUI.event.taps('.short-branch .tab-action3', false, function(swap){
+            swap();
+        });
+    }
+
+    if($('.short-main-wrap .shortAction').length){
+        MUI.event.taps('.short-main-wrap .shortAction', false, function(swap){
+            swap();
+        });
+    }
 
 /* 실시간예약 메인end-------------------------------------------------*/
 

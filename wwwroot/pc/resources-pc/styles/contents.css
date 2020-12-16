@@ -11944,7 +11944,12 @@ html, body {
 	width: 100%;
 }
 
-.short-main-wrap .tab-menu li button {
+.short-main-wrap .tab-menu li div {
+	width: 100%;
+	height: 100%;
+}
+
+.short-main-wrap .tab-menu li div button {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -11971,9 +11976,10 @@ html, body {
 	height: 100%;
 	color: #fff;
 	font-size: 22px;
+	border-bottom: 0 none;
 }
 
-.short-main-wrap .tab-menu li button:before {
+.short-main-wrap .tab-menu li div button:before {
 	content: "";
 	display: block;
 	margin-bottom: 20px;
@@ -11983,7 +11989,7 @@ html, body {
 }
 
 .short-main-wrap .tab-menu li:nth-of-type(1) button {
-	background: #ff404b;
+	background: #444;
 }
 
 .short-main-wrap .tab-menu li:nth-of-type(1) button:before {
@@ -12012,9 +12018,23 @@ html, body {
 	background: url(../../resources-pc/images/icons/ico-main-car.png) 0 0 no-repeat;
 }
 
+.short-main-wrap .tab-menu li.active button {
+	background: #ff404b;
+}
+
+.short-main-wrap .tab-menu li.active button:before {
+	width: 25px;
+	height: 24px;
+	background: url(../../resources-pc/images/icons/ico-main-calendar.png) 0 0 no-repeat;
+}
+
 .short-main-wrap .tab-cont-wrap {
 	width: 1180px;
 	background: #fff;
+}
+
+.short-main-wrap .tab-cont-wrap .tab-step2, .short-main-wrap .tab-cont-wrap .tab-step3 {
+	display: none;
 }
 
 .short-main-wrap .tab-cont-section {
@@ -12034,7 +12054,7 @@ html, body {
 	    -ms-flex-pack: left;
 	        justify-content: left;
 	width: 100%;
-	height: 870px;
+	height: 790px;
 }
 
 .short-main-wrap .tab-cont-section .short-calendar {
@@ -12235,6 +12255,7 @@ html, body {
 	        justify-content: center;
 	width: 50%;
 	height: 70px;
+	background: #fff;
 }
 
 .short-main-wrap .tab-cont-section .short-branch .short-branch-tab li label {
@@ -12261,12 +12282,88 @@ html, body {
 	border-bottom: 1px solid #e7e7e7;
 }
 
-.short-main-wrap .tab-cont-section .short-branch .short-branch-tab li input:checked + label {
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab li.active label {
 	border-bottom: 2px solid #ff404b;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
 	color: #ff404b;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 {
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: 80px;
+	background: #fff;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 li label {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	text-align: center;
+	font-size: 16px;
+	color: #8f9191;
+	width: 145px;
+	height: 38px;
+	border: 1px solid #d2d2d2;
+	-webkit-border-radius: 38px;
+	   -moz-border-radius: 38px;
+	        border-radius: 38px;
+	margin: 0 5px;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 li.active label {
+	border: 1px solid #ff404b;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	color: #ff404b;
+	background: #fff9f9;
 }
 
 .short-main-wrap .tab-cont-section .short-branch .short-branch-section {
@@ -12361,6 +12458,10 @@ html, body {
 	overflow-x: hidden;
 	height: 670px;
 	width: 100%;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-section .shor-main-list-wrap .shor-main-list-rt.tab2 > div {
+	height: 590px;
 }
 
 .short-main-wrap .tab-cont-section .short-branch .short-branch-section .shor-main-list-wrap .shor-main-list-rt ul {
@@ -12540,10 +12641,17 @@ html, body {
 }
 
 .short-main-wrap .tab-cont-section .short-car .short-car-list {
-	height: 650px;
+	height: 645px;
 	width: 100%;
 	margin-top: 20px;
 	overflow-y: auto;
+}
+
+.short-main-wrap .tab-cont-section .short-car .short-car-list > div {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 645px;
+	width: 100%;
 }
 
 .short-main-wrap .tab-cont-section .short-car .short-car-list .short-car-list-cont li + li {
@@ -12613,6 +12721,142 @@ html, body {
 	height: 35px;
 	font-size: 16px;
 	margin-top: 10px;
+}
+
+.short-main-wrap .tab-cont-result {
+	width: 100%;
+	height: 80px;
+	background: #fff;
+}
+
+.short-main-wrap .tab-cont-result .short-result {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	height: 100%;
+}
+
+.short-main-wrap .tab-cont-result .short-result li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: 100%;
+	border-top: 1px solid #e7e7e7;
+}
+
+.short-main-wrap .tab-cont-result .short-result li:nth-of-type(1) {
+	width: 477px;
+	padding-left: 10px;
+}
+
+.short-main-wrap .tab-cont-result .short-result li:nth-of-type(1)::after {
+	display: inline-block;
+	content: "";
+	width: 1px;
+	height: 30px;
+	background: #e7e7e7;
+}
+
+.short-main-wrap .tab-cont-result .short-result li:nth-of-type(2) {
+	width: 478px;
+}
+
+.short-main-wrap .tab-cont-result .short-result li:nth-of-type(3) {
+	width: 225px;
+	border-top: 0 none;
+}
+
+.short-main-wrap .tab-cont-result .short-result li button {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	width: 100%;
+	height: 100%;
+	background: #54585a;
+	color: #fff;
+	font-size: 22px;
+}
+
+.short-main-wrap .tab-cont-result .short-result li button:before {
+	display: inline-block;
+	content: "";
+	width: 19px;
+	height: 18px;
+	margin-right: 10px;
+	background: url(../../resources-pc/images/icons/ico-refresh.png) 0 0 no-repeat;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+}
+
+.short-main-wrap .tab-cont-result .short-result .result-time {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: 100%;
+	padding: 0 30px;
+}
+
+.short-main-wrap .tab-cont-result .short-result .result-time p {
+	font-size: 16px;
+	color: #54585a;
+}
+
+.short-main-wrap .tab-cont-result .short-result .result-time strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	font-size: 26px;
+	color: #2f2f2f;
+	padding: 0 20px;
+}
+
+.short-main-wrap .tab-cont-result .short-result .result-time input {
+	border: 1px solid #EBEBEB;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	background-color: #fff;
+	height: 50px;
+	padding: 0 20px;
+	width: 76px;
+	margin: 0 2px;
 }
 
 .carLife-container {
