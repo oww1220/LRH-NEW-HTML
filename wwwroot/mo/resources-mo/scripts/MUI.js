@@ -89,20 +89,78 @@ var MUI = MUI || {
 					return count;
 				}
 			};
+			var jqMap = new JqMap();
+			jqMapList.push(jqMap);
+			return jqMap;
 
-			return new JqMap();
-
-		}
+		},
+		jqMapList : []
 	},
 	slide: {
 		init: function(target, sort, option){
 			if(sort === 'slick') {
-				return target.slick(option);
+				var slick = target.slick(option);
+				this.slickList[target] = {
+					'obj' : slick,
+					'option' : option
+				};
+				this.slickList['option'] = option;
+				return slick;
 			}
 			if(sort === 'swiper') {
-				return new Swiper(target, option);
+				var swiper = null;
+				var limit = '';
+				
+				if(option && option.hasOwnProperty('limit')){
+					limit = option['limit'];
+				}
+				if(limit != ''){
+					var selector = option.childSelector ? option.childSelector : '.swiper-slide'; //자식셀렉터
+					if(limit > $(target).find(selector).length){ // 슬라이더 갯수 제한이 있을때 , 자식갯수 세기 - 제한에 걸림;
+						swiper = null;
+					}else{ //제한 ok
+						swiper = new Swiper(target, option);
+					}
+				}else{//제한없음;
+					swiper = new Swiper(target, option);
+				}
+				
+				this.swiperList[target] = {
+					'obj' : swiper,
+					'option' : option
+				};
+				return swiper;
 			}
 		},
+		slickList : {},
+		swiperList : {},
+		getSlickObject : function(target){
+			if(!this.slickList.hasOwnProperty(target)){
+				return null
+			}
+			return this.slickList[target]
+		},
+		getSwiperObject : function(target){
+			if(!this.swiperList.hasOwnProperty(target)){
+				return null
+			}
+			return this.swiperList[target]
+		},
+		resetSwiper : function(target, toOption){
+			if(this.swiperList.hasOwnProperty(target)){
+				var option = this.swiperList[target].option;
+				if(toOption){
+					option = toOption;
+				}
+				if(this.swiperList[target]['obj'] != null){
+					this.swiperList[target]['obj'].destroy(true, true);
+				}
+				delete this.swiperList[target];
+				this.init(target, 'swiper', option);
+			}else{
+			    this.init(target, 'swiper', toOption);
+			}
+		}
 	},
 	layer: {
 		TOUCH_CLICK: ('ontouchstart' in window) ? 'touchstart' : 'click',
