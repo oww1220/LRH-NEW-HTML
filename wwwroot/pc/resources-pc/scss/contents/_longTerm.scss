@@ -516,6 +516,7 @@
     }
     .estimate-filter-section{
         padding:50px 40px;
+        margin-top:40px;
         background-color:#fafafa;
 
         .estimate-filter-header{
@@ -532,21 +533,149 @@
 
                 + .tit{margin-top:60px;}
             }
-            .menu-list{
+
+            .menu-list, .menu-list2{   
+                .chk-box{
+                    input{display:none;}
+                    label{
+                        position:relative;
+                        box-sizing:border-box;
+                    }
+                    input:checked + label{
+                        @include Bold; 
+                        color:$txt-red;
+                        border:1px solid $txt-red;
+                        @include roundBox;
+                        background-color:#fff9f9;
+                        transition: all .25s ease-out;
+                        transform: scale(1.05);
+                        @include box-shadow($top:0, $left:10px, $blur:25px, $color:rgba(0, 0, 0, 0.15));
+                        z-index:5;
+                    }
+                }
+            }
+            .menu-list{                
                 @include Align-between;
                 @include roundBox;
                 border:1px solid $border-darkgrey; 
                 background-color:#fff;
+                box-sizing: border-box;
 
-                li{flex:1;}                
-                .chk-box{
-                    @include Align-middle;
-                    height:78px;
+                li{
+                    flex:1;
 
-                    input{display:none;}
+                    .chk-box{
+                        input{display:none;}
+                        label{
+                            @include Align-middle;
+                            height:78px;
+                        }
+                        input:checked + label{
+                            &::before{display:none;}
+                        }
+                    }
+
+                    + li{
+                        .chk-box{
+                            label{
+                                &:before{
+                                    @include Position($top:50%, $left:-1px);
+                                    content:"";
+                                    display:block;
+                                    width:1px; 
+                                    height:30px;
+                                    margin-top:-15px;
+                                    background-color:$border-grey;
+                                }
+                            }
+                        }
+                    }
+                }                
+            }
+            .menu-list2{                
+                @include Align-between;
+
+                li{
+                    flex:1;
+
+                    .chk-box{
+                        width:132px;
+                        
+                        label{
+                            @include Align-middle-column;
+                            @include roundBox;
+                            border:1px solid $border-darkgrey; 
+                            background-color:#fff;
+                            height:110px;
+
+                            p{
+                                margin-top:15px;
+                                font-size:14px;
+                            }
+                        }                        
+                    }
+                }                
+            }
+        }
+        .btn-box{
+            margin-top:50px;
+            padding:0;
+
+            .btn{width:146px;}
+        }
+    }
+    .estimate-search-result-section{
+        margin-top:60px;
+        
+        .estimate-search-result-header{
+            padding-bottom:25px;
+            border-bottom:1px solid $border-grey;
+
+            .count-area{
+                span{
+                    @include Bold;
+                    color:$txt-red;
                 }
             }
-            .menu-list2{}
+        }
+        .estimate-search-result-body{
+            padding:30px 0;
+
+            .car-list{
+                @include Align-box;
+                
+                li{
+                    position:relative;
+                    width:25%;                    
+                    text-align:center;
+                    box-sizing:border-box;
+                    margin-bottom:15px;
+
+                    > p{
+                        padding:0 20px;
+                        margin-top:10px;
+                    }
+                    .btn-box{
+                        padding:25px 20px;
+
+                        .btn{color:#54585a;}
+                    }
+
+                    .carFlag{
+                        @include Position($top:20px, $left:20px);
+                    }
+                }
+            }
+
+            .result-none{
+                padding:50px;
+                @include Bold;
+                color:#54585a;
+                font-size:20px;
+                text-align:center;
+
+                .icon{margin-right:20px;}
+            }
         }
     }
 
