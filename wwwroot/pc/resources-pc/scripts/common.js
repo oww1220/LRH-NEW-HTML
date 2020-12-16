@@ -1065,7 +1065,7 @@ if($('.short-container .detail-layer-nav').length) {
             parentBottomPos = $parent.offset().top + stickyPos;
             targetPos = $target.offset().top;
 
-            //console.log(targetPos);
+            
         if(scrollPos >= targetPos) {            
             if(scrollPos >= parentBottomPos){ 
                 $target.removeClass('fixed');
@@ -1075,6 +1075,8 @@ if($('.short-container .detail-layer-nav').length) {
                 $target.addClass('fixed');
                 $target.find('.detail-layer-nav').css({top: -20});
             }
+
+            
         }
         else{            
             $target.removeClass('fixed');
@@ -1105,7 +1107,7 @@ if($('.short-container .qnaAccor').length){
 /* -------------------------------------------------단기렌터카 end*/
 
 /* 신차장장기렌터카 start-------------------------------------------------*/
-
+//이달의 특가
 if($('.longTerm-container .longTermSpecialTab').length){
     MUI.event.taps('.longTerm-container .longTermSpecialTab', false, function(swap){
         swap();
@@ -1116,35 +1118,33 @@ if($('.longTerm-container .longTermBenefitTab').length){
     MUI.event.taps('.longTerm-container .longTermBenefitTab', false, function(swap){
         swap();
 
-        //신차장기렌터카 멤버십 - 스티키
-        var tabHeight = $('.longTerm-container .longTermBenefitTab').height();
+        //신차장기렌터카 멤버십 - 스티키    
+        MUI.event.goTarget('.menu-link', $('.longTerm-container .detail-layer-nav').height() + 20);
 
-        MUI.event.goTarget('.menu-link', $('.longTerm-container .detail-layer-nav').height());
-        //console.log($('.longTerm-container .detail-layer-nav').height());
-
-        $(window).on('scroll', function(){
+        $(window).on('scroll', function(e) {
             var scrollTop = $(this).scrollTop();
             MUI.event.scrollTaps(scrollTop, $('.longTerm-container .layer-item'), $('.longTerm-container .detail-layer-nav'));
 
             var scrollPos = window.scrollY || window.pageYOffset,
-                $target = $('.detail-layer-nav-wrap'), //상단네비
-                $parent = $('.detail-layer-items-wrap'), //컨텐츠
-                stickyPos = $parent.height() + tabHeight - $target.find('.detail-layer-nav').height() + 60; //컨텐츠 높이 + 탭 높이 - 네비 높이
-                parentBottomPos = $parent.offset().top + stickyPos; //컨텐츠 시작점 + (컨텐츠 높이 - 네비 높이)
+                $target = $('.detail-layer-nav-wrap'), 
+                $parent = $('.detail-layer-items-wrap'),
+                stickyPos = $parent.height() - $target.find('.detail-layer-nav').height(); 
+                parentBottomPos = $parent.offset().top + stickyPos;
                 targetPos = $target.offset().top;
 
-                console.log(stickyPos);
-            if(scrollPos >= targetPos) {            
+            if(scrollPos >= targetPos) {
+                //console.log(stickyPos);
+                
                 if(scrollPos >= parentBottomPos){ 
                     $target.removeClass('fixed');
                     $target.find('.detail-layer-nav').css({top: $parent.height()});
                 }
-                else{
+                else{                    
                     $target.addClass('fixed');
-                    //$target.find('.detail-layer-nav').css({top: -20});
+                    $target.find('.detail-layer-nav').css({top: 0});
                 }
             }
-            else{            
+            else{
                 $target.removeClass('fixed');
             }
         });
