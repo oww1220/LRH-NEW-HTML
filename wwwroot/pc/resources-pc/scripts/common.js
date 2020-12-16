@@ -1042,13 +1042,26 @@ if($('.section-sticky-lnb').length) {
     });
 }
 
-//단기렌터카 실시간 예약 - 결제/나의등록카드  L.pay
-if($('.short-container .tab-lpay').length){
-    MUI.event.taps('.short-container .tab-lpay', false, function(swap){
-        swap();
+
+//단기렌터카 실시간 예약 - 결제/나의등록카드
+if($('.short-container .detail-radio').length) {
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'P'){
+            $('.short-container .detail-tab-wrap-P').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-P').removeClass('active');
+        }
+    });
+    $('.short-container .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'L'){
+            $('.short-container .detail-tab-wrap-L').addClass('active');
+        }
+        else{
+            $('.short-container .detail-tab-wrap-L').removeClass('active');
+        }
     });
 }
-
 
 //단기렌터카 안내 - 스티키
 if($('.short-container .detail-layer-nav').length) {
@@ -1163,7 +1176,25 @@ if($('.fare-section .inlandFareTab').length){
     });
 }
 
-
+//신차장 다이렉트
+if($('.longTerm-container .estimateSwiper').length) {
+    
+    MUI.slide.LayerSwiper = MUI.slide.init('.estimateSwiper','swiper', {
+        loop: true,
+        autoHeight:true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pagination: {
+            el: '.estimateSwiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.estimateSwiper-button-next',
+            prevEl: '.estimateSwiper-button-prev',
+        },
+    });
+    
+}
 
 //개인 장기 렌터카 QNA 아코디언
 if($('.longTerm-container .qnaAccor').length){
@@ -1247,7 +1278,7 @@ if($('.mypage-container .pointTransitionTab').length){
     }
     // 메인- 중고차 슬라이드
     if($('.secondhand-wrap .secondhand-slide-cont').length) { 
-        if($('.secondhand-wrap .secondhand-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length >= 4) {
+        if($('.secondhand-wrap .secondhand-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 4) {
             MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
             loop: true,
             slidesPerView: 4,
@@ -1271,7 +1302,7 @@ if($('.mypage-container .pointTransitionTab').length){
 
     // 메인- 핫딜 슬라이드
     if($('.hotdeal-slide-wrap .hotdeal-slide-cont').length) {
-        if($('.hotdeal-slide-wrap .hotdeal-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length >= 2) {
+        if($('.hotdeal-slide-wrap .hotdeal-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 2) {
             MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
                 loop: true,
                 slidesPerView: 2,

@@ -1224,6 +1224,29 @@ if($('.secondhand-wrap').length){
 /* -------------------------------------------------중고차 내차팔기 end*/
 
 /* 신차장 start-------------------------------------------------*/
+
+//신차장 다이렉트 상단 롤링
+if($('.longTerm-wrap .direct-list').length) {
+    var mainTopSlide = MUI.slide.init('.longTerm-wrap .direct-list','swiper', {
+        loop: true,
+        //autoHeight: true,
+        autoplay: {
+            delay: 3000,
+        },
+    });
+    
+    $(".swiper-button-pause").on('click', function(){
+        mainTopSlide.autoplay.stop();
+        $(".swiper-button-play").show();
+        $(".swiper-button-pause").hide();
+    });
+    $(".swiper-button-play").on('click',function(){
+        mainTopSlide.autoplay.start();
+        $(".swiper-button-pause").show();
+        $(".swiper-button-play").hide();
+    });
+}
+
 //신차장 멤버십 탭전환
 if($('.longTerm-membership-list .tab-normal').length){
 
