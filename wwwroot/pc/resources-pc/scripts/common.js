@@ -1242,7 +1242,7 @@ if($('.mypage-container .pointTransitionTab').length){
     }
     // 메인- 중고차 슬라이드
     if($('.secondhand-wrap .secondhand-slide-cont').length) { 
-        if($('.secondhand-wrap .secondhand-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 4) {
+        if($('.secondhand-wrap .secondhand-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length >= 4) {
             MUI.slide.init('.secondhand-wrap .secondhand-slide-cont','swiper', {
             loop: true,
             slidesPerView: 4,
@@ -1266,7 +1266,7 @@ if($('.mypage-container .pointTransitionTab').length){
 
     // 메인- 핫딜 슬라이드
     if($('.hotdeal-slide-wrap .hotdeal-slide-cont').length) {
-        if($('.hotdeal-slide-wrap .hotdeal-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 2) {
+        if($('.hotdeal-slide-wrap .hotdeal-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length >= 2) {
             MUI.slide.init('.hotdeal-slide-wrap .hotdeal-slide-cont','swiper', {
                 loop: true,
                 slidesPerView: 2,

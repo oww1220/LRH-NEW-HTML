@@ -1011,18 +1011,16 @@ if($('.footerMenu-wrap .tab-normal').length){
         });
     }
 
-    //신차장 메인 중단 슬라이더
+    //신차장 메인 중단 슬라이더 
+    //개발 수정 - each 제거, 갯수제한 옵션으로 변경 
     if($('.longTerm-wrap .main-col5 .swiper-container').length) {
-        $('.longTerm-wrap .main-col5 .swiper-container').each(function(idx, item){
-            //console.log($(this).find('.swiper-slide').length);
-            if($(item).find('.swiper-slide').length < 2) return;
-            MUI.slide.init(item,'swiper', {
-                loop: true,
-                //speed:1200,
-                loopAdditionalSlides: 1,
-                slidesPerView: 2,
-                centeredSlides: true,
-            });
+        MUI.slide.init('.longTerm-wrap .main-col5 .swiper-container','swiper', {
+            loop: true,
+            //speed:1200,
+            loopAdditionalSlides: 1,
+            slidesPerView: 2,
+            centeredSlides: true,
+            limit : 2,	//제한갯수
         });
     }
 
