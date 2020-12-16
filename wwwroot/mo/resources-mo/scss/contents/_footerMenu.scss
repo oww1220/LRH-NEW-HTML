@@ -19,6 +19,58 @@
                     }
                 }
             }
+            &.pr-center {
+                padding:2.6rem 0 0;
+                .cont-box {
+                    background-color: #fff9f9;
+                    padding:3.4rem 2.8rem 2.1rem;
+                    margin-bottom:2.6rem;
+                    & + .cont-box {
+                        background-color: #f5f5f5;
+                        margin:0;
+                    }   
+                }
+                .segment-area {
+                    padding:1.3rem 0;
+                }
+            }
+            &.social-contribution {
+                padding:1.7rem 0 0;
+                > div {
+                    padding:1.7rem;
+                    &.cont-box {
+                        .cont-section {
+                            padding:0 1.7rem;
+                            .segment {
+                                margin-top:0;
+                                padding:1.7rem 0;
+                                h4 {
+                                    padding:1.3rem 0 1rem;
+                                    font-size:1.2rem;
+                                }
+                                .cont-txt {
+                                    padding-top: 0;
+                                }
+                            }
+                        }
+                        & + .cont-box {
+                            padding:1.7rem 0;
+                            .cont-tit {
+                                background-color: #fafafa;
+                                padding:2.6rem 0;
+                                strong {
+                                    font-size:1.6rem;
+                                    span {
+                                        font-size:1.4rem;
+                                        padding-bottom:.3rem;
+                                        @include Bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .cont-tit {
             strong {
@@ -38,18 +90,25 @@
             color:#54585a;
             padding-top:1.7rem;
             word-break: keep-all;
+            @include Regular;
         }
         .cont-section {
             .segment {
                 & + .segment {
                     margin-top:1.7rem;
                 }
+                .cover {
+                    height:13rem;
+                    img {
+                        height:100%;
+                    }
+                }
                 > div {
                     @include Align-middle-left;
                     > div {
                         @include Align-middle;
-                        @include Background($sprite:'bg-shape01', $size:100%, $position:center center, $path:'bgs');
-                        width:7.4rem;
+                        @include Background($sprite:'bg-shape01', $size:7.4rem 100%, $position:center center, $path:'bgs');
+                        width:30%;
                         height:7.4rem;
                     }
                     p {
@@ -67,6 +126,7 @@
             .segment {
                 min-height: 8.6rem;
                 position: relative;
+                box-sizing: border-box;
                 & + .segment {
                     border-top:2px solid #fff;
                 }
@@ -81,7 +141,12 @@
                         @include Bold;
                     }
                     strong {
-                        padding:1.3rem 0 .8rem;
+                        padding:1.3rem 0 .6rem;
+                    }
+                    span {
+                        font-size:1.1rem;
+                        color:#54585a;
+                        @include Regular;
                     }
                     ul.list-type-col3 {
                         align-items: flex-start;
@@ -172,6 +237,7 @@
                 border-top:1px solid #d2d2d2;
                 color:#54585a;
                 font-size:1.1rem;
+                @include Regular;
             }
             tr {
               border-bottom:1px solid #d2d2d2;
@@ -181,15 +247,49 @@
                 border-left:1px solid #d2d2d2;
                 padding:1.7rem;
                 vertical-align: middle;
-                @include Regular;
+               
             }
             td {
                 padding:1.7rem;
                 border-left:1px solid #d2d2d2;
                 border-right:1px solid #d2d2d2;
+                ul {
+                    width:100%;
+                    margin:0;
+                    justify-content: space-between;
+                    li {
+                        @include Align-middle;
+                        @include Background($sprite:'bg-shape01', $size:7.4rem 100%, $position:center center, $path:'bgs');
+                        width:47%;
+                        height:7.4rem;
+                        margin:.2rem 0;
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                > div {
+                    @include Align-middle-column;
+                    strong {
+                        font-size:1.1rem;
+                        padding:1.7rem 0 .6rem;
+                        @include Bold;
+                    }
+                    span {
+                        color:#54585a;
+                        font-size:1rem;
+                        @include Regular;
+                    }
+                    & + div {
+                        padding-top:2.8rem;
+                    }
+                }
             }
         }
         .cont-view-video {
+            .cont-tit {
+                padding-bottom:1.3rem;
+            }
             .segment-tit {
                 .year {
                     background-color: #ff404b;
@@ -200,26 +300,28 @@
                 }
                 p {
                     font-size:1.4rem;
+                    margin: 1.3rem 0 1.7rem;
                     @include Regular;
                 }
             }
             .segment-video {
                 .video-box {
                     height: 14.3rem;
+                    margin:0 .2rem;
                     iframe {
                         border:0;
                     }
                 }
                 .video-list {
                     width:100%;
-                    margin:0;
-                    margin-top:.9rem;
+                    margin:.6rem 0 0;
                     li {
                         &.active a {
                             border:.5rem solid #ff404b;
                             box-sizing: border-box;
                         }
                         a {
+                            margin:.2rem;
                             display: block;
                             height: 7rem;
                             position: relative;
@@ -232,6 +334,7 @@
                                 color:#fff;
                                 text-align: center;
                                 line-height: 1.5;
+                                font-size:1rem;
                             }
                         }
                     }
@@ -246,6 +349,5 @@
                 }
             }
         }
-        
     }
 }
