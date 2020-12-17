@@ -133,7 +133,7 @@ $(function(){
 					<a href="#">회원정보수정</a>
 				</li>
 				<li>
-					<a href="#">비밀번호 변경</a>
+					<button class="layer-mypage-open" data-layer="layer-password-reenter-info">비밀번호 변경</button>
 				</li>
 				<li>
 					<a href="#">회원탈퇴</a>
