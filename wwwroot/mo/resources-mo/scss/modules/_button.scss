@@ -398,7 +398,6 @@ a.btn {
 	@include Inline-align-middle;
 }
 
-
 .small-btns{
 	margin-left:.9rem;
 	.btn{
@@ -415,4 +414,44 @@ a.btn {
 			color:#ff404b;
 		}
 	}
+}
+
+.section-layer-submit {
+	padding:4.1rem 1.7rem 2.6rem;
+	.btn {
+		color:#54585a;
+	 	font-size:1.6rem;
+	 	border:1px solid #d2d2d2;
+		 border-radius:.5rem;
+		 &-gray {
+			 color:#fff;
+			 font-size:1.4rem;
+		 }
+		 &-red {
+			 color:#fff;
+			 font-size:1.4rem;
+			 border:0;
+		 }
+	}
+	//리스트 - 버튼 width:100% 인 경우
+	ul {
+		li {
+			& + li {
+				margin-top:.9rem;
+			}
+		}
+	}
+	//리스트 - 버튼 width:48% 인 경우
+	ul.list-type-col2 {
+		width:100%;
+		margin:0;
+		justify-content: space-between;
+		li {
+			width:48%;
+			& + li {
+				margin-top:0;
+			}
+		}
+	}
+	
 }

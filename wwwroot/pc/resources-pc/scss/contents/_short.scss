@@ -776,7 +776,7 @@
                                 background-color:#ff404b;
                                 border-radius:100%;
                             }         
-                        }                       
+                        }                      
                         
                     }
                 }                
@@ -2020,10 +2020,14 @@
         @include Align-top-left;
         width: 100%;
         height: 790px;
+        > div:nth-of-type(2) {
+            border-left: 1px solid #e7e7e7;
+            border-right: 1px solid #e7e7e7;
+        }
         // 실시간 예약 캘린더
         .short-calendar {
             width: 360px;
-            padding-left:20px;
+            padding: 0 20px;
             h2 {
                 @include Bold;
                 padding: 40px 0;
@@ -2124,7 +2128,15 @@
                             color: #ed1c24;
                         }
                     }                   
-                    
+                    .day{
+                        .btn{
+                            width:38px;
+                            background-color: #ff404b;
+                            border-radius: 1.7rem;
+                            @include Bold;
+                            color:#fff;   
+                        }
+                    }
                 }
             }
         }
@@ -2190,6 +2202,15 @@
                             color: #ff404b;
                         }
                     }
+                    input:disabled + label {
+                        color: #ddd;
+                    }
+                    &.active {
+                        input:disabled + label {
+                            border-bottom: 1px solid #e7e7e7;
+                            color: #ddd;
+                        }
+                    }
                     
                 }
             }
@@ -2200,7 +2221,7 @@
                     @include Align-middle;
                     height: 80px;
                     background: #fff;
-                    label {
+                    button {
                         @include Align-middle;
                         text-align: center;
                         font-size: 16px;
@@ -2212,7 +2233,7 @@
                         margin: 0 5px;
                     }
                     &.active {
-                        label {
+                        button {
                             border: 1px solid #ff404b;
                             @include Bold;
                             color: #ff404b;
@@ -2224,8 +2245,8 @@
             }
             .short-branch-section {
                 width: 100%;
-                border-left: 1px solid #e7e7e7;
-                border-right: 1px solid #e7e7e7;
+                //border-left: 1px solid #e7e7e7;
+                //border-right: 1px solid #e7e7e7;
                 .shor-main-list-wrap{
                     @include Align-box;
                     // padding:1.7rem;
@@ -2305,7 +2326,7 @@
                             line-height:1;
                             font-size: 14px;
                             @include Regular;
-                            &:after {
+                            /* &:after {
                                 display: flex;
                                 content: "";
                                 background: url(../../resources-pc/images/icons/ico-map-off.png) 0 0 no-repeat;
@@ -2313,7 +2334,7 @@
                                 height: 28px;
                                 margin-left: 5px;
                                 background-size: 100% auto;
-                            }
+                            } */
                                 b{
                                     color: #aaa;
                                     font-size: 14px;
@@ -2321,9 +2342,9 @@
                             &.active{
                                 @include Bold;
                                 background: #fff;
-                                &:after {
+                                /* &:after {
                                     background: url(../../resources-pc/images/icons/ico-map-on.png) 0 0 no-repeat;
-                                }
+                                } */
                                 b{
                                     color:#2f2f2f;
                                     font-size: 14px;
@@ -2334,13 +2355,23 @@
                     }
 
                 }
+                &.short-type2 {
+                    .shor-main-list-wrap{
+                        .shor-main-list-lt {
+                        height: 590px;
+                        }
+                        .shor-main-list-rt {
+                            height: 590px;
+                        }
+                    }  
+                }
             }
         }
 
         // 차량 선택
         .short-car {
             width: 480px;
-            padding: 40px 30px 0;
+            padding: 17px 30px 0;
             .select-grid{
                 display:flex;
                 flex-wrap: wrap;
@@ -2359,7 +2390,7 @@
                         }
                         label{
                             position: relative;
-                            height:40px;
+                            height:30px;
                             @include Align-middle;
                             box-sizing: border-box;
                             transition: all .4s;
@@ -2390,12 +2421,21 @@
                     }
                 }
             }
-
+            .no-data {
+                width: 100%;
+                height: 500px;
+                @include Align-middle;
+                p {
+                    @include Bold;
+                    font-size: 22px;
+                    color: #54585a;
+                }
+            }
             .short-car-list {
                 height: 645px;
                 width: 100%;
                 margin-top: 20px;
-                overflow-y: auto;
+                overflow-y: auto;         
                 > div {
                     overflow-y: auto;
                     overflow-x: hidden;
@@ -2408,7 +2448,8 @@
                     }
                     .short-car-type {
                         @include Align-middle;
-                        padding: 20px 25px;
+                        padding: 20px;
+                        height: 170px;
                         img {
                             width: 172px;
                             height: 92px;
@@ -2416,17 +2457,19 @@
                         }
                         .txt-type {
                             width: 50%;
-                            padding-left: 30px;
-                            line-height: 1.5;
+                            padding-left: 15px;
                             strong {
                                 @include Bold;
-                                font-size: 24px;
+                                font-size: 22px;
                                 color: #2f2f2f;
+                                line-height: 1.2;
                             }
                             .txt-red {
                                 @include Bold;
+                                margin-top: 10px;
                                 font-size: 24px;
                                 color: #da291c;
+                                line-height: 1;
                                 sub {
                                     font-size: 18px;
                                 }
@@ -2434,12 +2477,13 @@
                             del {
                                 font-size: 16px;
                                 color: #ddd;
+                                line-height: 1;
                             }
                             .btn-red {
                                 width: 93px;
                                 height: 35px;
                                 font-size: 16px;
-                                margin-top: 10px;
+                                margin-top: 15px;
                             }
                         }
                     }
@@ -2509,14 +2553,19 @@
                     color: #2f2f2f;
                     padding: 0 20px;
                 }
-                input{
+                select{
                     border:1px solid #EBEBEB;
                     border-radius: 6px;
                     background-color: #fff;
                     height: 50px;
-                    padding:0 20px;
+                    padding:0 10px;
                     width: 76px;
                     margin: 0 2px;
+                    background-position: center right 10px;
+                    &:disabled {
+                        background: url(../../resources-pc/images/icons/ico-arrow-down2.png) no-repeat center right 10px #f5f5f5;
+                        border-color: #d2d2d2;
+                    }
                 }
             }
         }
