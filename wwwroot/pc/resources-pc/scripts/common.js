@@ -1003,6 +1003,13 @@ if($('.short-agree-accor').length){
     });
 }
 
+if($('.short-agree-accor').length){
+    MUI.event.toggle('.btn-short-agree-toggle3', '.short-agree-toggle-cont3', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
 //단기렌터카 실시간 예약 - 약관,결제/lnb 
 if($('.section-sticky-lnb').length) {
     $(window).on('scroll', function(e) {
