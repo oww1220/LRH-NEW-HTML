@@ -776,7 +776,7 @@
                                 background-color:#ff404b;
                                 border-radius:100%;
                             }         
-                        }                       
+                        }                      
                         
                     }
                 }                
@@ -1803,65 +1803,56 @@
                 }
                 &.form2 {
                     .form-cont {
-                        .row-header {
-                            padding:0 40px 20px;
-                            ul {
-                                @include Align-middle-left; 
-                                li + li {
-                                    padding-left: 30px;
+                        > ul {
+                            > li + li {
+                                padding-top:80px;
+                            }
+                            .row-header {
+                                @include Align-middle-left;
+                                margin:0 40px 20px;
+                                border-bottom: 1px solid #e7e7e7;
+                                padding-bottom: 20px;
+                                .chk-icon-box {
+                                    .input-tit {
+                                        width:180px;
+                                        a {
+                                            border-bottom: 1px solid #2f2f2f;
+                                        }
+                                        &::after {
+                                            left:0;
+                                        }
+                                    }
+                                    & + .input-cont {
+                                        margin-left:50px;
+                                    }
                                 }
                             }
-                            .chk-icon-box {
-                                .input-tit {
-                                    width:180px;
-                                    button {
-                                        border-bottom: 1px solid #2f2f2f;
-                                        padding: 4px 0 2px;
-                                    }
-                                    &::after {
-                                        left:0;
-                                    }
-                                }
-                                & + .input-cont {
-                                    margin-left:50px;
-                                }
-                            }
-                        }
-                        .detail-radio {
-                            margin:0 40px;
-                            padding:20px 0;
-                            border-top:1px solid #e7e7e7;
-                        }
-                        .row {
-                            .input-cont {
-                                .box-between {
-                                    width:50%;
-                                    select {
-                                        max-width: 25%;
-                                        & + .inputT {
-                                            max-width: 45%;
+                            .row {
+                                .input-cont {
+                                    .box-between {
+                                        width:50%;
+                                        select {
+                                            max-width: 25%;
+                                            & + .inputT {
+                                                max-width: 45%;
+                                                & + button {
+                                                    width: 30%;
+                                                }
+                                            }
+                                        }
+                                        .inputT {
+                                            max-width: 71%;
                                             & + button {
                                                 width: 30%;
                                             }
                                         }
                                     }
-                                    .inputT {
-                                        max-width: 71%;
-                                        & + button {
-                                            width: 30%;
-                                        }
-                                    }
                                 }
                             }
-                            .detail-radio {
-                                margin:0;
-                                padding:0;
-                                border:0;
-                            } 
-                        }
-                        
-                        .btn-area {
-                            padding:60px 0 0;
+                            
+                            .btn-area {
+                                padding:60px 0 0;
+                            }
                         }
                     }
                     
@@ -2137,7 +2128,15 @@
                             color: #ed1c24;
                         }
                     }                   
-                    
+                    .day{
+                        .btn{
+                            width:38px;
+                            background-color: #ff404b;
+                            border-radius: 1.7rem;
+                            @include Bold;
+                            color:#fff;   
+                        }
+                    }
                 }
             }
         }
@@ -2327,7 +2326,7 @@
                             line-height:1;
                             font-size: 14px;
                             @include Regular;
-                            &:after {
+                            /* &:after {
                                 display: flex;
                                 content: "";
                                 background: url(../../resources-pc/images/icons/ico-map-off.png) 0 0 no-repeat;
@@ -2335,7 +2334,7 @@
                                 height: 28px;
                                 margin-left: 5px;
                                 background-size: 100% auto;
-                            }
+                            } */
                                 b{
                                     color: #aaa;
                                     font-size: 14px;
@@ -2343,9 +2342,9 @@
                             &.active{
                                 @include Bold;
                                 background: #fff;
-                                &:after {
+                                /* &:after {
                                     background: url(../../resources-pc/images/icons/ico-map-on.png) 0 0 no-repeat;
-                                }
+                                } */
                                 b{
                                     color:#2f2f2f;
                                     font-size: 14px;
@@ -2372,7 +2371,7 @@
         // 차량 선택
         .short-car {
             width: 480px;
-            padding: 40px 30px 0;
+            padding: 17px 30px 0;
             .select-grid{
                 display:flex;
                 flex-wrap: wrap;
@@ -2391,7 +2390,7 @@
                         }
                         label{
                             position: relative;
-                            height:40px;
+                            height:30px;
                             @include Align-middle;
                             box-sizing: border-box;
                             transition: all .4s;
@@ -2436,8 +2435,7 @@
                 height: 645px;
                 width: 100%;
                 margin-top: 20px;
-                overflow-y: auto;
-                
+                overflow-y: auto;         
                 > div {
                     overflow-y: auto;
                     overflow-x: hidden;
@@ -2450,7 +2448,8 @@
                     }
                     .short-car-type {
                         @include Align-middle;
-                        padding: 20px 25px;
+                        padding: 20px;
+                        height: 170px;
                         img {
                             width: 172px;
                             height: 92px;
@@ -2458,17 +2457,19 @@
                         }
                         .txt-type {
                             width: 50%;
-                            padding-left: 30px;
-                            line-height: 1.5;
+                            padding-left: 15px;
                             strong {
                                 @include Bold;
-                                font-size: 24px;
+                                font-size: 22px;
                                 color: #2f2f2f;
+                                line-height: 1.2;
                             }
                             .txt-red {
                                 @include Bold;
+                                margin-top: 10px;
                                 font-size: 24px;
                                 color: #da291c;
+                                line-height: 1;
                                 sub {
                                     font-size: 18px;
                                 }
@@ -2476,12 +2477,13 @@
                             del {
                                 font-size: 16px;
                                 color: #ddd;
+                                line-height: 1;
                             }
                             .btn-red {
                                 width: 93px;
                                 height: 35px;
                                 font-size: 16px;
-                                margin-top: 10px;
+                                margin-top: 15px;
                             }
                         }
                     }
