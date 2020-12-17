@@ -1089,8 +1089,9 @@
     }
     .section-cont {
         padding:3.4rem 1.7rem;
-        & + .section-cont {
+        & + .section-cont + .section-cont {
             border-top:.6rem solid #f5f5f5;
+            padding:3.4rem 1.7rem 2.1rem;
         }
         h3 {
             font-size:1.4rem;
@@ -1199,6 +1200,12 @@
                     border:1px solid #ed1c24;
                     @include Bold;
                 }
+            }
+        }
+        > div {
+            padding-top:1.7rem;
+            button {
+                border-radius: .6rem;
             }
         }
     }
