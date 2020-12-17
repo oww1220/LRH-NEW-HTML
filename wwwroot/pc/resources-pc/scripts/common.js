@@ -1335,21 +1335,7 @@ if($('.mypage-container .pointTransitionTab').length){
 
 /* 실시간예약 메인start-------------------------------------------------*/
 
-    if($('.short-branch .tab-action').length){
-        MUI.event.taps('.short-branch .tab-action', false, function(swap){
-            swap();
-        });
-    }
-    if($('.short-branch .tab-action2').length){
-        MUI.event.taps('.short-branch .tab-action2', false, function(swap){
-            swap();
-        });
-    }
-    if($('.short-branch .tab-action3').length){
-        MUI.event.taps('.short-branch .tab-action3', false, function(swap){
-            swap();
-        });
-    }
+
 
     if($('.short-main-wrap .shortAction').length){
         MUI.event.taps('.short-main-wrap .shortAction', false, function(swap){
