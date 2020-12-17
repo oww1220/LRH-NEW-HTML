@@ -172,6 +172,19 @@ $(function(){
         });
     }
 
+    //tooltip 토글
+    if($('.btn-tooltip-box-group').length){
+        MUI.event.toggle('.btn-tooltip-box', null, true, function(logic, layer) {
+            $('.tooltip-box').addClass('active');
+            $('.btn-tooltip-box').addClass('active');
+            logic();
+        });
+        $('.btn-tooltip-box-group').focusout(function(){
+            $('.tooltip-box').removeClass('active');
+            $('.btn-tooltip-box').removeClass('active');
+        });
+    }
+
 
 /* -------------------------------------------------유틸end*/
 

@@ -1089,7 +1089,10 @@
     }
     .section-cont {
         padding:3.4rem 1.7rem;
-        & + .section-cont + .section-cont {
+        > div + div {
+            padding-top:40px;
+        }
+        & + .section-cont {
             border-top:.6rem solid #f5f5f5;
             padding:3.4rem 1.7rem 2.1rem;
         }
