@@ -12396,6 +12396,15 @@ html, body {
 	color: #ff404b;
 }
 
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab li input:disabled + label {
+	color: #ddd;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab li.active input:disabled + label {
+	border-bottom: 1px solid #e7e7e7;
+	color: #ddd;
+}
+
 .short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 {
 	width: 100%;
 	display: -webkit-box;
@@ -12435,7 +12444,7 @@ html, body {
 	background: #fff;
 }
 
-.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 li label {
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 li button {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -12463,7 +12472,7 @@ html, body {
 	margin: 0 5px;
 }
 
-.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 li.active label {
+.short-main-wrap .tab-cont-section .short-branch .short-branch-tab2 li.active button {
 	border: 1px solid #ff404b;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
@@ -12474,8 +12483,6 @@ html, body {
 
 .short-main-wrap .tab-cont-section .short-branch .short-branch-section {
 	width: 100%;
-	border-left: 1px solid #e7e7e7;
-	border-right: 1px solid #e7e7e7;
 }
 
 .short-main-wrap .tab-cont-section .short-branch .short-branch-section .shor-main-list-wrap {
@@ -12644,6 +12651,14 @@ html, body {
 	color: #2f2f2f;
 	font-size: 14px;
 	border-bottom: 1px solid #2f2f2f;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-section.short-type2 .shor-main-list-wrap .shor-main-list-lt {
+	height: 590px;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .short-branch-section.short-type2 .shor-main-list-wrap .shor-main-list-rt {
+	height: 590px;
 }
 
 .short-main-wrap .tab-cont-section .short-car {
@@ -12953,16 +12968,22 @@ html, body {
 	padding: 0 20px;
 }
 
-.short-main-wrap .tab-cont-result .short-result .result-time input {
+.short-main-wrap .tab-cont-result .short-result .result-time select {
 	border: 1px solid #EBEBEB;
 	-webkit-border-radius: 6px;
 	   -moz-border-radius: 6px;
 	        border-radius: 6px;
 	background-color: #fff;
 	height: 50px;
-	padding: 0 20px;
+	padding: 0 10px;
 	width: 76px;
 	margin: 0 2px;
+	background-position: center right 10px;
+}
+
+.short-main-wrap .tab-cont-result .short-result .result-time select:disabled {
+	background: url(../../resources-pc/images/icons/ico-arrow-down2.png) no-repeat center right 10px #f5f5f5;
+	border-color: #d2d2d2;
 }
 
 .carLife-container {

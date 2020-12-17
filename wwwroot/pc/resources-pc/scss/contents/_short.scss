@@ -2190,6 +2190,15 @@
                             color: #ff404b;
                         }
                     }
+                    input:disabled + label {
+                        color: #ddd;
+                    }
+                    &.active {
+                        input:disabled + label {
+                            border-bottom: 1px solid #e7e7e7;
+                            color: #ddd;
+                        }
+                    }
                     
                 }
             }
@@ -2200,7 +2209,7 @@
                     @include Align-middle;
                     height: 80px;
                     background: #fff;
-                    label {
+                    button {
                         @include Align-middle;
                         text-align: center;
                         font-size: 16px;
@@ -2212,7 +2221,7 @@
                         margin: 0 5px;
                     }
                     &.active {
-                        label {
+                        button {
                             border: 1px solid #ff404b;
                             @include Bold;
                             color: #ff404b;
@@ -2224,8 +2233,8 @@
             }
             .short-branch-section {
                 width: 100%;
-                border-left: 1px solid #e7e7e7;
-                border-right: 1px solid #e7e7e7;
+                //border-left: 1px solid #e7e7e7;
+                //border-right: 1px solid #e7e7e7;
                 .shor-main-list-wrap{
                     @include Align-box;
                     // padding:1.7rem;
@@ -2333,6 +2342,16 @@
                         }
                     }
 
+                }
+                &.short-type2 {
+                    .shor-main-list-wrap{
+                        .shor-main-list-lt {
+                        height: 590px;
+                        }
+                        .shor-main-list-rt {
+                            height: 590px;
+                        }
+                    }  
                 }
             }
         }
@@ -2509,14 +2528,19 @@
                     color: #2f2f2f;
                     padding: 0 20px;
                 }
-                input{
+                select{
                     border:1px solid #EBEBEB;
                     border-radius: 6px;
                     background-color: #fff;
                     height: 50px;
-                    padding:0 20px;
+                    padding:0 10px;
                     width: 76px;
                     margin: 0 2px;
+                    background-position: center right 10px;
+                    &:disabled {
+                        background: url(../../resources-pc/images/icons/ico-arrow-down2.png) no-repeat center right 10px #f5f5f5;
+                        border-color: #d2d2d2;
+                    }
                 }
             }
         }
