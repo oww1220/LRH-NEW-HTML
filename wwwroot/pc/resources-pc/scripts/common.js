@@ -989,7 +989,7 @@ if($('.short-container .tab-normal').length){
     });
 }
 
-//
+/*
 if($('.short-agree-accor').length){
     MUI.event.toggle('.btn-short-agree-toggle', '.short-agree-toggle-cont', false, function(logic, layer) {
         //console.log('toggle');
@@ -1005,6 +1005,15 @@ if($('.short-agree-accor').length){
 
 if($('.short-agree-accor').length){
     MUI.event.toggle('.btn-short-agree-toggle3', '.short-agree-toggle-cont3', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+*/
+
+//(공통)약관 동의
+if($('.agreeAccor').length){
+    MUI.event.toggle('.agreeAccor .btnToggle', '.agreeAccor .toggleCont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
     });

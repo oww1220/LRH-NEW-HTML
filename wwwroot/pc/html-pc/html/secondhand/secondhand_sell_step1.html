@@ -58,7 +58,7 @@
 
 				<!-- 페이지 타이틀 -->
 				<section class="section-headline">
-					<h2 class="tit">상담 <span class="txt-color-brown">신청</span></h2>					
+					<h2 class="tit">상담 신청</h2>					
 				</section>
 				<!-- //페이지 타이틀 -->
 
@@ -465,46 +465,30 @@
 						<section class="section-form">
 							<div class="form-header">
 								<h3 class="tit-size-mid">약관동의</h3>
-							</div>					
-							<div class="form-cont">
-								<div class="row agreeAccor">									
-									<div class="accor-header box-type2">
-										<div class="iconBox simple">
-											<input type="checkbox" id="test">	
-											<label for="test">											
-												개인정보 수집 및 이용 동의(필수)
-											</label>										
+							</div>				
+							<!-- 20201217 : 마크업 변경(약관 공통화) -->	
+							<div class="form-cont agree-area agreeAccor">
+								<div class="row">
+									<div class="agree-body">
+										<div class="agree-body-header">
+											<div class="chk-icon-box">
+												<input type="checkbox" id="agreeTest02">	
+												<label for="agreeTest02">											
+													개인정보 수집 및 이용 동의(필수)
+												</label>										
+											</div>
+											<button type="button" class="btnToggle" data-target="toggleCont01" data-on="true" data-siblings="false">
+												자세히
+											</button>
 										</div>
-										<button type="button" class="btn-toggle agreeBtn right" data-target="agreeToggleCont" data-on="true" data-siblings="true"></button>
-									</div>
-									<div class="terms-area agreeToggleCont" style="display:none;">
-										<p>본인은 롯데렌터카가 아래의 내용과 같이 본인의 개인정보를 수집 ·이용하는데 동의합니다.</p>								
-										
-										<h4>개인정보의 수집 및 이용 목적</h4>
-										<ul class="lst hypen">
-											<li>
-												롯데렌터카는 다음과 같은 목적을 위하여 고객님의 개인정보를 수집하고 있습니다.
-											</li>
-											<li>
-												롯데렌터카 기사포함대여 대여신청 서비스 제공을 위함
-											</li>
-											<li>
-												롯데렌터카는 관계법령에 의한 경우나 이용자인 정보주체의 사전동의를 얻은 경우를 제외하고는 수집한 개인정보를 상기 목적 이외의 용도로 활용하지 않겠습니다.
-											</li>
-										</ul>	
-
-										<h4>수집하는 개인정보 항목</h4>
-										<ul class="lst hypen">
-											<li>
-												성명, 담당자명 : 본인 확인 및 기사포함 대여신청 서비스 이용을 위함
-											</li>
-											<li>
-												휴대전화, 이메일 : 고객 견적신청 사항에 대한 회신을 위함
-											</li>
-										</ul>
-									</div>
+										<div class="agree-body-cont toggleCont toggleCont01">
+											내용
+										</div>
+									</div>						
+									
 								</div>
 							</div>
+							<!-- //20201217 : 마크업 변경(약관 공통화) -->
 						</section>
 
 

@@ -364,15 +364,13 @@
 
 //
 .chk-icon-box, .radio-icon-box{	
-	min-height:23px;
-
 	input {
 		display: none;
 	}
-
 	label{
 		@include Align-between;
 		position: relative;
+		min-height:23px;
 		padding-left:40px;
 		box-sizing: border-box;
 		transition: all .4s;
@@ -380,11 +378,11 @@
 		&:after {
 			display: block;
 			content: '';
-			@include Position($top: 50%, $left: 0);
+			@include Position($top: 0, $left: 0);
 			@include Background($sprite:'ico-check2-off', $position:center center);
 			width: 13px;
 			height: 12px;
-			margin-top: -6px;
+			margin-top: 4px;
 		}
 	}
 	input[type='checkbox']:checked + label:after{
@@ -394,12 +392,14 @@
 
 	&.type-circle{
 		label{
+			min-height:26px;
+
 			&:after {
-				@include Position($top: 50%, $left: 6px);
+				@include Position($top: 0, $left: 0);
 				@include Background($sprite:'ico-check-off', $position:center center);
 				width: 26px;
 				height: 26px;
-				margin-top: -13px;
+				margin-top: 0;
 			}
 
 		}
@@ -447,7 +447,7 @@
 			@include Background($sprite:'ico-radio2-off', $position:center center);
 			width: 20px;
 			height: 20px;
-			margin-top: -10px;
+			margin-top: 2px;
 		}
 	}
 	input[type='radio']:checked + label:after{
