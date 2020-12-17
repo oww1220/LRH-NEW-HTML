@@ -303,150 +303,150 @@
             
         }
     }
-        .descri-tit{
-            position: absolute;
-            top:2.8rem;
-            left:50%;
-            transform: translateX(-50%);
-            font-weight: bold;
-            font-size:1.4rem;
-        }
-        .menu-radio-box{
-            .radio-box{
-                .radioIconBox{
-                    & > input:checked + label{
-                        background-color:#fff;
-                        color:#ed1c24;
-                        border-bottom:2px solid #ff404b;
-                        @include Bold;
-                    }
-                    & > label{
-                        height:4.1rem;
-                        border:0 none;
-                        border-bottom:1px solid #e7e7e7;
-                        color:#54585a;
-                        border-radius: 0;
-                        @include Regular;
-                    }
-                    & > label:after{
-                        display:none;
-                    }
-                }
-            }
-            .detail-normal{
-                display:none;
-                padding-top:2.6rem;
-                &.active{
-                    display:block;
-                }
-            }
-            .detail-integrated{
-                display:none;
-                padding-top:2.2rem;
-                &.active{
-                    display:block;
-                }
-                .detail-descri{
-                    color:#999;
-                    padding-top:0;
-                }
-                .detail-assent{
-                    margin-top:2.6rem;
-                }
-            }
-        }
-        .detail-inputT{
-            margin-top:.9rem;
-            & > input{
-                border-radius: .5rem;
-            }
-            &:first-child{
-                margin-top:0;
-            }
-        }
-        .detail-submit{
-            margin-top:4.5rem;
-            .btn-group{
-                margin:0 1.7rem;
-            }
-            .btn-white{
-                border:1px solid #d2d2d2;
-                color:#54585a;
-                border-radius: .5rem;
-            }
-        }
-        .detail-iconBox{
-            label {
-                &:after {
-                    width: 1.7rem;
-                    height: 1.7rem;
-                    margin-top: -.85rem;
-                    left:.5rem;
-                }
-            }
-            input:checked + label {
-                @include Regular;
-            }
-            input[type='checkbox'] + label:after{
-                @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
-            }
-            input[type='checkbox']:checked + label:after{
-                @include Background($sprite:'ico-chk-on03', $type:'png', $size:95% auto, $position:center center);
-            }
-        }
-        .detail-radio{
-            ul{
-                width:80%;
-                margin:0 auto;
-            }
-            // ul > li:first-child{
-            //     input + label {
-            //         justify-content:flex-end;
-            //         &:before {
-            //             left:4.2rem;
-            //         }
-            //     }
-            // }
-            // ul > li:last-child {
-            //     input + label {
-            //         justify-content:flex-start;
-            //         &:before {
-            //             left:.7rem;
-            //         }
-            //     }
-            // }
-            input + label {
-                border:0 none;
-            }
-            input:checked + label {
-                @include Regular;
-            }
-            &.detail-radio-search{
-                input + label {
-                    border-radius: 0;
-                    border:1px solid #d2d2d2;
-                    @include Regular;
-                    padding:0;
-                    height:9.8rem;
-                    @include Align-middle;
-                    b{
-                        color:#8f9191;
-                        font-size:1rem;
-                        padding:.9rem 0 0 0;
-                    }
-                }
-                input:checked + label {
-                    border:1px solid #ff404b;
+    .descri-tit{
+        position: absolute;
+        top:2.8rem;
+        left:50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        font-size:1.4rem;
+    }
+    .menu-radio-box{
+        .radio-box{
+            .radioIconBox{
+                & > input:checked + label{
+                    background-color:#fff;
+                    color:#ed1c24;
+                    border-bottom:2px solid #ff404b;
                     @include Bold;
-                    b{
-                        color:#ed1c24;
-                    }
                 }
-                input + label:after{
+                & > label{
+                    height:4.1rem;
+                    border:0 none;
+                    border-bottom:1px solid #e7e7e7;
+                    color:#54585a;
+                    border-radius: 0;
+                    @include Regular;
+                }
+                & > label:after{
                     display:none;
                 }
             }
         }
+        .detail-normal{
+            display:none;
+            padding-top:2.6rem;
+            &.active{
+                display:block;
+            }
+        }
+        .detail-integrated{
+            display:none;
+            padding-top:2.2rem;
+            &.active{
+                display:block;
+            }
+            .detail-descri{
+                color:#999;
+                padding-top:0;
+            }
+            .detail-assent{
+                margin-top:2.6rem;
+            }
+        }
+    }
+    .detail-inputT{
+        margin-top:.9rem;
+        & > input{
+            border-radius: .5rem;
+        }
+        &:first-child{
+            margin-top:0;
+        }
+    }
+    .detail-submit{
+        margin-top:4.5rem;
+        .btn-group{
+            margin:0 1.7rem;
+        }
+        .btn-white{
+            border:1px solid #d2d2d2;
+            color:#54585a;
+            border-radius: .5rem;
+        }
+    }
+    .detail-iconBox{
+        label {
+            &:after {
+                width: 1.7rem;
+                height: 1.7rem;
+                margin-top: -.85rem;
+                left:.5rem;
+            }
+        }
+        input:checked + label {
+            @include Regular;
+        }
+        input[type='checkbox'] + label:after{
+            @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+        }
+        input[type='checkbox']:checked + label:after{
+            @include Background($sprite:'ico-chk-on03', $type:'png', $size:95% auto, $position:center center);
+        }
+    }
+    .detail-radio{
+        ul{
+            width:80%;
+            margin:0 auto;
+        }
+        // ul > li:first-child{
+        //     input + label {
+        //         justify-content:flex-end;
+        //         &:before {
+        //             left:4.2rem;
+        //         }
+        //     }
+        // }
+        // ul > li:last-child {
+        //     input + label {
+        //         justify-content:flex-start;
+        //         &:before {
+        //             left:.7rem;
+        //         }
+        //     }
+        // }
+        input + label {
+            border:0 none;
+        }
+        input:checked + label {
+            @include Regular;
+        }
+        &.detail-radio-search{
+            input + label {
+                border-radius: 0;
+                border:1px solid #d2d2d2;
+                @include Regular;
+                padding:0;
+                height:9.8rem;
+                @include Align-middle;
+                b{
+                    color:#8f9191;
+                    font-size:1rem;
+                    padding:.9rem 0 0 0;
+                }
+            }
+            input:checked + label {
+                border:1px solid #ff404b;
+                @include Bold;
+                b{
+                    color:#ed1c24;
+                }
+            }
+            input + label:after{
+                display:none;
+            }
+        }
+    }
     
     .section-tit{
         padding:3.4rem 1.7rem 0;
