@@ -1869,5 +1869,496 @@
             .box-between-col02-btns{margin-left:10px;}
         }
     }
-}
 
+    //실시간예약 - 사전체크인
+    .useManagement-cont {
+        .section-cont {
+            width:auto;
+            .return_wrap {
+                position: relative;
+                // 캘린더
+                .schedule-wrap{
+                    width:100%;
+                    background-color: #fff;
+                    overflow:hidden;
+                    border:1px solid #d2d2d2;
+                    border-radius: 6px;
+                    z-index: 2;
+                    @include Position ($top:55%, $left:0);
+                    .calendar-wrap{
+                        position:relative;
+                        padding:60px;
+            
+                        .calendar{
+                            @include Align-between-top;
+                            
+                            .col{
+                                flex-basis: 33.333%;
+                                &:last-of-type{
+                                    .tbl-box{border-right:none;}
+                                }  
+                            }
+                            
+                            .tbl-box{
+                                border-right:1px solid #e7e7e7;
+                                padding:0 15px;
+                                table{
+                                    width:100%;
+                                    border:0;
+                                    th, td{
+                                        text-align:center;
+                                        height: 38px;
+                                        padding:0;
+                                        border:0;
+                                        vertical-align: middle;
+                                        background-color:#fff;
+                                    }
+                                    th{
+                                        padding-top:0;
+                                    }
+                                    .btn {
+                                        width:38px; 
+                                        height:100%; 
+                                        padding:0;
+                                    }                                                
+                                    .disabled, button[disabled]{
+                                        color:#ddd;
+                                    }
+                                    .today{
+                                        .btn{
+                                            position: relative;
+                                            @include Bold; 
+                                            color:#a02a3d; 
+                                            &:after{
+                                                content:"";
+                                                display:block;
+                                                width: 20px;
+                                                height:1px;
+                                                margin: 0 auto;
+                                                background-color:#a02a3d;
+                                            }                                
+                                        }                            
+                                    }
+                                    .today{
+                                        &.on, &.start, &.end, &.during{
+                                            .btn{
+                                                &:after{background-color:#fff;}
+                                            }
+                                        }
+                                    }
+                                    .start, .end, .during{
+                                        .btn{
+                                            width: 100%;
+                                            color:#fff;
+                                            background-color: #ff404b;
+                                        }
+                                    }
+                                    .start{
+                                        .btn{                                
+                                            border-top-left-radius: 38px;
+                                            border-bottom-left-radius: 38px;
+                                        }
+                                    }
+                                    .end{
+                                        .btn{                               
+                                            border-top-right-radius: 38px;
+                                            border-bottom-right-radius: 38px;
+                                        }
+                                    }
+                                    .on{    
+                                        .btn{
+                                            color:#fff;
+                                            background-color:#ff404b;
+                                            border-radius:100%;
+                                        }         
+                                    }                      
+                                    
+                                }
+                            }                
+                            .calendar-tit{@include Bold; text-align:center; margin-bottom:30px;}                
+                        }
+                        .btn-paging-prev, .btn-paging-next{
+                            @include Position($top:50px, $left:50px);
+                            border:none;            
+                        }
+                        .btn-paging-next{
+                            @include Position($top:50px, $left:auto, $right:50px);
+                        }
+                    }
+                    .schedule-bot{
+                        height:80px;
+                        @include Align-box;
+                        border-top:1px solid #e7e7e7;
+                        
+                        .date-info, .btn{
+                            @include Align-middle;
+                            height:80px;
+                        }
+                        .date-info{
+                            flex-grow:1;
+            
+                            > span{margin-right:20px;}
+                            .date{@include Bold; font-size:20px;}
+                        }
+                        .btn{
+                            width:175px; 
+                            margin-left:auto; 
+                            color:#fff; 
+                            background-color:#54585a; 
+                            @include Bold; 
+                        }
+                    }
+                    .schedule-bot-cont{
+                        height:inherit;
+                        @include Align-between;
+                        flex-grow:1;
+                        
+                        .schedule-bot-cont-col{
+                            height:inherit;
+                            @include Align-middle;
+                            flex-grow:1;
+                            border-right:1px solid #dedede;
+            
+                            .selectbox{
+                                height:100%;
+                                border:0 none;
+                                border-radius:0;
+            
+                                + .selectbox{border-left:1px solid #dedede;}
+                            }
+                        }
+                        .date-area{
+                            flex:none;
+                            width:290px;
+                            
+                            .date{
+                                @include Bold;
+                                font-size:20px;
+                                margin-left:20px;
+                            }
+                        }
+                    }
+                }
+                //지점선택
+                .section-indicator {
+                    width:100%;
+                    border:1px solid #d2d2d2;
+                    border-radius: 6px;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                    z-index: 2;
+                    @include Position ($top:60%, $left:0);
+                    .menu-list {
+                        @include Align-between;
+                        box-sizing: border-box;
+                        padding:20px 10px 0;
+                        border-bottom:1px solid #d2d2d2;
+                        li {
+                            padding:10px 20px;
+                            border-bottom:0;
+                            button {
+                                font-size:18px;
+                                height: auto;
+                                border-bottom:0;
+                            }
+                            &.active {
+                                border-bottom:3px solid #ff3f4c;
+                                button {
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                    .tab-cont-inner {
+                        padding:40px;
+                        .chk-view-box {
+                            label {
+                                height: 50px;
+                                &:after {
+                                    display: none;
+
+                                }
+                            }
+                        }
+                    }
+                    .btn-area {
+                        padding: 0 0 40px;
+                        button {
+                            width: 175px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+            .box-between {
+                .section-form {
+                    width:48%;
+                    .form-cont {
+                        .box-between {
+                            width: 100%;
+                            > div {
+                                width: 48%;
+                                @include Align-middle-left;
+
+                            }
+                        }
+                        .row {
+                            padding:0;
+                            label {
+                                width:auto;
+                                flex: none;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        .form-cont {
+                            padding-bottom:80px;
+                        }
+                    }
+                }
+            }
+            
+            .section-form {
+                margin-top:0;
+                .form-header {
+                    margin-bottom:0;
+                    @include Align-between;
+                    span {
+                        @include Bold;
+                        position: relative;
+                        font-size:18px;
+                        &::before {
+                            content:'*';
+                            display: inline-block;
+                            @include Position ($left:-12px, $top:20%);
+                        }
+                    }
+                }
+                .form-cont {
+                    padding:40px 0 80px;
+                    .row {
+                        padding:0 40px;
+                        margin-bottom:0;
+                        & + .row {
+                            padding-top:20px;
+                        }
+                        .type-left {
+                            position: relative;
+                            .left-txt {
+                                @include Position($left:35px, $top:35%);
+                            }
+                        }
+                        .input-cont {
+                            .box-between {
+                                width:50%;
+                            }
+                        }
+                    }
+                    .lst {
+                        li + li {
+                            margin-top:10px;
+                        }
+                    }
+                    .driver-license-section{
+                        .selection{
+                            display:flex;
+                            align-items: center;
+                
+                            .input-tit{
+                                flex:none;
+                                flex-basis: 170px;
+                                width:170px;
+                            }
+                        }
+                        .driver-license-cont{ 
+                            position: relative;
+                            margin-top:35px;
+                
+                            input, select{
+                                max-width:130px;
+                                height:40px;
+                            }
+                            .box-align{
+                                align-items: center;
+                
+                                .symbol{margin-right:5px;}
+                            }
+                        
+                        }
+                        .domestic-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:378px;
+                                @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
+                
+                                .type-box, .number-box, .expiration-date-box, .issue-date-box{
+                                    position:relative;
+                                    display:block;
+                    
+                                    .numbering{
+                                        @include Position($top:10px,$right:-26px);
+                                    }            
+                                }
+                                .type-box{
+                                    @include Position($top:30px, $left:55px);
+                    
+                                    select{width: 130px;}
+                                }
+                                .number-box{
+                                    @include Position($top:90px, $left:202px);
+                    
+                                    .box-between{
+                                        width:430px;
+                    
+                                        .inputT{width:auto;}
+                                        select, input{max-width:102px;}
+                                    }
+                                }
+                                .expiration-date-box{
+                                    @include Position($top:256px, $left:270px);
+                                }
+                                .issue-date-box{
+                                    @include Position($bottom:30px, $left:202px);
+                                }
+                            }
+                        }
+                        .international-license{
+                            .driver-license-cont{               
+                                width:670px;
+                                height:553px;
+                                @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
+                            }            
+                        }
+                        .guide-cont{
+                            margin-top:30px;
+                
+                            .tit{
+                                font-size:18px;
+                            }
+                            .lst{
+                                margin-top:20px;
+                
+                                li{
+                                    padding-left:28px;
+                                    + li{margin-top:10px;}
+                                }
+                            }
+                        }
+                        .numbering{
+                            @include Align-middle;
+                            width:18px;
+                            height:18px;
+                            color:#fff;
+                            font-size:12px;
+                            border-radius:18px;
+                            background-color:#ff404b;
+                        }        
+                    }
+                    &.agree-area {
+                        padding:0;
+                    }
+                }
+                &.form2 {
+                    .form-cont {
+                        .row-header {
+                            padding:0 40px 20px;
+                            ul {
+                                @include Align-middle-left; 
+                                li + li {
+                                    padding-left: 30px;
+                                }
+                            }
+                            .chk-icon-box {
+                                .input-tit {
+                                    width:180px;
+                                    button {
+                                        border-bottom: 1px solid #2f2f2f;
+                                        padding: 4px 0 2px;
+                                    }
+                                    &::after {
+                                        left:0;
+                                    }
+                                }
+                                & + .input-cont {
+                                    margin-left:50px;
+                                }
+                            }
+                        }
+                        .detail-radio {
+                            margin:0 40px;
+                            padding:20px 0;
+                            border-top:1px solid #e7e7e7;
+                        }
+
+                        .row {
+                            .input-cont {
+                                .box-between {
+                                    width:50%;
+                                    select {
+                                        max-width: 25%;
+                                        & + .inputT {
+                                            max-width: 45%;
+                                            & + button {
+                                                width: 30%;
+                                            }
+                                        }
+                                    }
+                                    .inputT {
+                                        max-width: 71%;
+                                        & + button {
+                                            width: 30%;
+                                        }
+                                    }
+                                }
+                            }
+                            .detail-radio {
+                                margin:0;
+                                padding:0;
+                                border:0;
+                            } 
+                        }
+
+                        .btn-area {
+                            padding:60px 0 0;
+                        }
+                    }
+                }
+                &:last-child {
+                    .form-cont {
+                        padding-bottom:0;
+                    }
+                }
+            }
+        }
+        .section-certi {
+            padding:0 80px;
+            .certi-list {
+                @include Align-middle;
+                padding-bottom: 40px;
+                li {
+                    text-align: center;
+                    a {
+                        display: block;
+                        .circle {
+                            width: 230px;
+                            height: 230px;
+                            border: 1px solid #f1f1f1;
+                            border-radius: 100%;
+                        }
+                        .certi-tit {
+                            margin: 40px 0;
+                            font-size: 18px;
+                        }
+                    }
+                }
+                & + .lst {
+                    padding-top:20px;
+                    border-top:1px solid #e7e7e7;
+                    li {
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+}

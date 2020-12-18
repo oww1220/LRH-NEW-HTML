@@ -1078,32 +1078,9 @@ if($('.short-container .detail-radio').length) {
         }
     });
 }
-//단기렌터카 실시간 예약 - 사전체크인/form2
-$('.preCheckin-cont .detail-tab-wrap-L').hide();
-if($('.preCheckin-cont .detail-radio').length) {
-    $('.preCheckin-cont .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'P'){
-            $('.preCheckin-cont .detail-tab-wrap-P').addClass('active');
-            $('.preCheckin-cont .detail-tab-wrap-L').hide();
-            $('.preCheckin-cont .detail-tab-wrap-P').show();
-        }
-        else{
-            $('.preCheckin-cont .detail-tab-wrap-P').removeClass('active');
-        }
-    });
-    $('.preCheckin-cont .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'L'){
-            $('.preCheckin-cont .detail-tab-wrap-L').addClass('active');
-            $('.preCheckin-cont .detail-tab-wrap-P').hide();
-            $('.preCheckin-cont .detail-tab-wrap-L').show();
-        }
-        else{
-            $('.preCheckin-cont .detail-tab-wrap-L').removeClass('active');
-        }
-    });
-}
 
-//단기렌터카 실시간 예약 - 예약자정보
+
+//단기렌터카 실시간 예약 - 사전체크인/예약자정보
 $('.form1 .driver-license-section .detail-tab-wrap-N').hide();
 if($('.form1 .driver-license-section .detail-radio').length) {
     $('.form1 .driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
@@ -1127,8 +1104,34 @@ if($('.form1 .driver-license-section .detail-radio').length) {
         }
     });
 }
+//단기렌터카 > 실시간 예약/사전체크인/추가운전자 등록, 
+//마이페이지 > 단기렌터카/이용중관리/추가운전자 등록
+$('.form2 .detail-tab-wrap-L').hide();
+if($('.form2 .detail-radio').length) {
+    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'P'){
+            $('.form2 .detail-tab-wrap-P').addClass('active');
+            $('.form2 .detail-tab-wrap-L').hide();
+            $('.form2 .detail-tab-wrap-P').show();
+        }
+        else{
+            $('.form2 .detail-tab-wrap-P').removeClass('active');
+        }
+    });
+    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'L'){
+            $('.form2 .detail-tab-wrap-L').addClass('active');
+            $('.form2 .detail-tab-wrap-P').hide();
+            $('.form2 .detail-tab-wrap-L').show();
+        }
+        else{
+            $('.form2 .detail-tab-wrap-L').removeClass('active');
+        }
+    });
+}
 
-//단기렌터카 실시간 예약 - 추가운전자 등록
+//단기렌터카 실시간 예약 - 사전체크인/추가운전자 등록/면허구분,
+//마이페이지 > 단기렌터카/이용중관리/추가운전자 등록/면허구분
 $('.form2 .driver-license-section .detail-tab-wrap-N').hide();
 if($('.form2 .driver-license-section .detail-radio').length) {
     $('.form2 .driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
@@ -1329,6 +1332,25 @@ if($('.longTerm-container .qnaAccor5').length){
 if($('.mypage-container .pointTransitionTab').length){
     MUI.event.taps('.mypage-container .pointTransitionTab', false, function(swap){
         swap();
+    });
+}
+
+//마이페이지 - 단기렌터카/이용중 관리
+if($('.mypage-container .tab-normal').length){
+
+    MUI.event.taps('.mypage-container .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
+if($('.mypage-container .schedule-toggle-cont').length) {
+    MUI.event.toggle('.mypage-container .btn-schedule-toggle', '.mypage-container .schedule-toggle-cont', true, function(logic, layer) {
+        logic();
+    });
+}
+if($('.mypage-container .indicator-toggle-cont').length) {
+    MUI.event.toggle('.mypage-container .btn-indicator-toggle', '.mypage-container .indicator-toggle-cont', true, function(logic, layer) {
+        logic();
     });
 }
 
