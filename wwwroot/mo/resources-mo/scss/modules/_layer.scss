@@ -3751,13 +3751,13 @@ body.fixed {
 //툴팁 레이어
 .tooltip-box {
 	position: relative;
+	@include Vertical-inline;
 	display: none;
 	cursor: pointer;
 	width:100%;
 	min-height:3.5rem;
 	margin-top:-.3rem;
-	@include Position($top:9rem, $left:0);
-	z-index: 60;
+	@include Position($top:100%, $left:0);
 	.layer-tooltip {
 		z-index: 10;
 		//display: none;
@@ -3788,6 +3788,7 @@ body.fixed {
 				@include Regular;
 				width:70%;
 				font-size:.8rem;
+				color:#54585a !important;
 			}
 		}
 
@@ -3801,7 +3802,7 @@ body.fixed {
 		@include Position($top:1px, $left:50%);
 		transform: translateX(100%);
 	}
-	&.active{
-		@include Vertical-inline;
-	}
+	// &.active{
+	// 	@include Vertical-inline;
+	// }
 }

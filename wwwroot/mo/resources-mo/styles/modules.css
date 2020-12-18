@@ -13799,15 +13799,16 @@ body.fixed {
 
 .tooltip-box {
 	position: relative;
+	display: inline-block;
+	vertical-align: middle;
 	display: none;
 	cursor: pointer;
 	width: 100%;
 	min-height: 3.5rem;
 	margin-top: -.3rem;
 	position: absolute;
-	top: 9rem;
+	top: 100%;
 	left: 0;
-	z-index: 60;
 }
 
 .tooltip-box .layer-tooltip {
@@ -13874,6 +13875,7 @@ body.fixed {
 	font-weight: normal;
 	width: 70%;
 	font-size: .8rem;
+	color: #54585a !important;
 }
 
 .tooltip-box .layer-tooltip:after {
@@ -13895,11 +13897,6 @@ body.fixed {
 	    -ms-transform: translateX(100%);
 	     -o-transform: translateX(100%);
 	        transform: translateX(100%);
-}
-
-.tooltip-box.active {
-	display: inline-block;
-	vertical-align: middle;
 }
 
 .selectbox {

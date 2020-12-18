@@ -25061,7 +25061,6 @@
 
 .secondhand-wrap .section-list ul.list-type-col2 li .img {
 	position: relative;
-	overflow: hidden;
 	height: 9rem;
 }
 
@@ -25138,7 +25137,6 @@
 
 .secondhand-wrap .section-list ul li .img {
 	position: relative;
-	overflow: hidden;
 	height: 14rem;
 }
 
@@ -25152,8 +25150,6 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: #2f2f2f;
-	opacity: .8;
 	-webkit-border-radius: 0;
 	   -moz-border-radius: 0;
 	        border-radius: 0;
@@ -25163,6 +25159,7 @@
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	z-index: 10;
 }
 
 .secondhand-wrap .section-list ul li .img .flag p {
@@ -25171,6 +25168,7 @@
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaB", serif;
 	font-weight: normal;
+	z-index: 10;
 }
 
 .secondhand-wrap .section-list ul li .img .flag .btn-small {
@@ -25184,6 +25182,20 @@
 	color: #fff;
 	font-size: 1rem;
 	margin: 0 .4rem 0 0;
+	z-index: 10;
+}
+
+.secondhand-wrap .section-list ul li .img .flag:after {
+	display: block;
+	content: "";
+	background-color: #2f2f2f;
+	width: 100%;
+	height: 1.5rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: .6;
+	z-index: 5;
 }
 
 .secondhand-wrap .section-list ul li .text strong {
