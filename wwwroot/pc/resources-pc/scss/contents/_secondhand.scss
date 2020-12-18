@@ -1295,12 +1295,16 @@
     
     .imgUpload-section{
         .imgUpload-exam-box, .imgUpload-list-box{        
+            position: relative;
+            overflow:hidden;
             ul{
+                position: relative;
                 display:flex;
                 flex-wrap: wrap;
                 align-items:stretch;
                 justify-content:space-between;
                 box-sizing: border-box;
+                overflow:hidden;
 
                 li{
                     //overflow:hidden;
@@ -1314,23 +1318,36 @@
                     color:#8f9191;
                     text-align:center;      
                     margin-bottom:10px;              
+                    top: 0 !important;
                     
                     span{display:block; font-size:14px;}
-                    
-                    .cover{
-                        @include Position($bottom:0, $left:0);
-                        padding:10px;
-                        background-color:rgba(47,47,47,.8);
-                        z-index: 5;
-                        color:#fff;
-                        border-top-right-radius: $main-border-radius;
-                    }
-                    .btn-img-del{
-                        @include Position($top:6px, $right:6px);
-                        z-index: 5;
 
-                        .icon{
-                            @include Hide_txt;
+                    .img-area {
+                        display: none;
+                    }
+
+                    &.active{
+                        .cover{
+                            @include Position($bottom:0, $left:0);
+                            padding:10px;
+                            background-color:rgba(47,47,47,.8);
+                            z-index: 5;
+                            color:#fff;
+                            border-top-right-radius: $main-border-radius;
+                        }
+                        .btn-img-del{
+                            @include Position($top:6px, $right:6px);
+                            z-index: 5;
+    
+                            .icon{
+                                @include Hide_txt;
+                            }
+                        }
+                        .img-area {
+                            @include Position($top: 0, $left: 0);
+                            @include Align-middle;
+                            width: 100%;
+                            height: 100%;
                         }
                     }
                 }
@@ -1365,12 +1382,23 @@
                 position:relative;
                 
                 input{display:none;}
+                label{
+                    @include Align-middle-column;
+                    width:100%;
+                    height:100%;
+                    .icon{
+                        + span{margin-top:20px;}
+                    }
+                }
                 .upload-btn{
                     @include Align-middle-column;
 
                     .icon{
                         + span{margin-top:20px;}
                     }
+                }
+                .img-area{
+                    position:relative;
                 }
             }
         }  
