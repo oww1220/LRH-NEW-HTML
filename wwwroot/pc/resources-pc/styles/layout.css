@@ -95,6 +95,11 @@ html, body {
 	display: inline-block;
 }
 
+.required-box {
+	color: #ed1c24;
+	text-align: right;
+}
+
 .tbl-type01 {
 	width: 100%;
 	border: 0;
@@ -142,6 +147,37 @@ html, body {
 
 .tbl-type01 td:first-of-type {
 	text-align: left;
+}
+
+.form-cont {
+	/*
+		20201218 : 
+		아래 스타일 추가 시 기존 이메일 폼에 영향이 가기때문에 주석처리하고, 이메일 폼 형식을 2가지 형태로 진행하기로 협의
+		1. 창이 넓을 경우 : 3가지 입력 창 제공
+		2. 창이 좁을 경우 : 2가지 입력 창 제공
+	
+		//email 한줄 인 경우
+		.box-between {
+			.inputT.email {
+				position: relative;
+				&::after {
+					content:'@';
+					display: inline-block;
+					@include Position($right:0, $top:50%);
+					transform: translateY(-13px);
+				}
+				input { 
+					border-right: 0;
+					border-radius: 6px 0 0 6px;
+				}
+			}
+			.inputT + select {
+				margin-left:0 !important;
+				border-left:0;
+				border-radius: 0 6px 6px 0;
+			}
+		}
+	*/
 }
 
 .form-cont .form-row {
@@ -227,38 +263,6 @@ html, body {
 
 .form-cont .form-row .inputT + .txt-exam {
 	margin-left: 20px;
-}
-
-.form-cont .box-between .inputT.email {
-	position: relative;
-}
-
-.form-cont .box-between .inputT.email::after {
-	content: '@';
-	display: inline-block;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	-webkit-transform: translateY(-13px);
-	   -moz-transform: translateY(-13px);
-	    -ms-transform: translateY(-13px);
-	     -o-transform: translateY(-13px);
-	        transform: translateY(-13px);
-}
-
-.form-cont .box-between .inputT.email input {
-	border-right: 0;
-	-webkit-border-radius: 6px 0 0 6px;
-	   -moz-border-radius: 6px 0 0 6px;
-	        border-radius: 6px 0 0 6px;
-}
-
-.form-cont .box-between .inputT + select {
-	margin-left: 0 !important;
-	border-left: 0;
-	-webkit-border-radius: 0 6px 6px 0;
-	   -moz-border-radius: 0 6px 6px 0;
-	        border-radius: 0 6px 6px 0;
 }
 
 .section-headline {

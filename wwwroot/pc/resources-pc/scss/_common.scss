@@ -385,6 +385,10 @@ $txt-darkblack: #2f2f2f;
 	border-bottom:1px solid #54585a;
 }
 .inline-block{display:inline-block;}
+.required-box{
+	color:$txt-red;
+	text-align:right;
+}
 
 .tbl-type01{
     width:100%;
@@ -429,27 +433,34 @@ $txt-darkblack: #2f2f2f;
 		.inputT + .txt-exam{margin-left:20px;}
 	}
 
-	//email 한줄 인 경우
-	.box-between {
-		.inputT.email {
-			position: relative;
-			&::after {
-				content:'@';
-				display: inline-block;
-				@include Position($right:0, $top:50%);
-				transform: translateY(-13px);
+	/*
+		20201218 : 
+		아래 스타일 추가 시 기존 이메일 폼에 영향이 가기때문에 주석처리하고, 이메일 폼 형식을 2가지 형태로 진행하기로 협의
+		1. 창이 넓을 경우 : 3가지 입력 창 제공
+		2. 창이 좁을 경우 : 2가지 입력 창 제공
+	
+		//email 한줄 인 경우
+		.box-between {
+			.inputT.email {
+				position: relative;
+				&::after {
+					content:'@';
+					display: inline-block;
+					@include Position($right:0, $top:50%);
+					transform: translateY(-13px);
+				}
+				input { 
+					border-right: 0;
+					border-radius: 6px 0 0 6px;
+				}
 			}
-			input { 
-				border-right: 0;
-				border-radius: 6px 0 0 6px;
+			.inputT + select {
+				margin-left:0 !important;
+				border-left:0;
+				border-radius: 0 6px 6px 0;
 			}
 		}
-		.inputT + select {
-			margin-left:0 !important;
-			border-left:0;
-			border-radius: 0 6px 6px 0;
-		}
-	}
+	*/
 }
 .section{
 	&-headline{ //페이지 타이틀
