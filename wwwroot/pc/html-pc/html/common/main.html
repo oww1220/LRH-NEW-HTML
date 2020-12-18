@@ -37,8 +37,7 @@
 
     <!--container 컴포넌트-->
     <main id="wrap">
-        <div class="main-wrap">
-
+        <div class="main-wrap">           
             <div class="main-visual-wrap">
                 <!-- main visual slide -->
                 <div class="main-visual-slide">
@@ -237,7 +236,6 @@
                     <div class="m-tit">
                         <h2>어디서</h2>
                         <p class="inputC">
-                            <button type="button" class="btn btn-red">초기화</button>
                             <input type="checkbox" name="checkbox1" id="checkbox1-1" class="shor-branch-toggle-btn">
                             <label for="checkbox1-1"><span>다른지점 반납</span></label>
                         </p>
@@ -252,45 +250,197 @@
                                         <label for="radio1-1">내륙</label>
                                     </li>
                                     <li>
-                                        <input type="radio" name="radio1" id="radio1-2">
+                                        <input type="radio" name="radio1" id="radio1-2" disabled>
                                         <label for="radio1-2">제주</label>
                                     </li>
                                 </ul>
                             </div>
                             
                             <!-- 다른지점 반납 -->
-                            <div class="shor-main-list-branch shor-branch-main-cont-01"> 
+                            <div class="shor-main-list-branch shor-branch-main-cont-01">
+                                <ul class="short-branch-tab2">
+                                    <li class="active">
+                                        <button type="button">대여지점</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">반납지점</button>
+                                    </li>
+                                </ul>
+                                <!-- 대여지점 -->
                                 <div class="shor-main-list-wrap">
                                     <div class="shor-main-list-lt">
                                         <ul>
-                                            <li class="radio-box">
-                                                <ul class="iconList col2">
-                                                    <li>
-                                                        <input type="radio" name="radio3" id="radio3-1" checked>
-                                                        <label for="radio3-1">대여지점</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="radio3" id="radio3-2">
-                                                        <label for="radio3-2">반납지점</label>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <button type="button" class="btn btn-link active"><b>서울</b></button>
                                             </li>
                                             <li>
-                                                <button type="button" class="btn btn-link active"><b>제주</b></button>
+                                                <button type="button" class="btn btn-link"><b>인천/경기/강원</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>충청/대전/세종</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>전라/광주</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>경상/대구/부산/울산</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>공항지점</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>역사지점</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>24시간지점</b></button>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="shor-main-list-rt">
+                                        <div class="mCustomScrollbar mCS-autoHide">
+                                            <ul>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link active"><b>강남</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>공덕</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>관악</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>구로</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link active"><b>강남</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>공덕</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>관악</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>구로</b></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- //대여지점 -->
+
+                                <!-- 반납지점 -->
+                                <div class="shor-main-list-wrap">
+                                    <div class="shor-main-list-lt">
                                         <ul>
                                             <li>
-                                                <button type="button" class="btn btn-link"><b>제주오토하우스</b></button>
+                                                <button type="button" class="btn btn-link active"><b>서울</b></button>
                                             </li>
                                             <li>
-                                                <button type="button" class="btn btn-link active"><b>롯데호텔</b></button>
+                                                <button type="button" class="btn btn-link"><b>인천/경기/강원</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>충청/대전/세종</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>전라/광주</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>경상/대구/부산/울산</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>공항지점</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>역사지점</b></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-link"><b>24시간지점</b></button>
                                             </li>
                                         </ul>
                                     </div>
+                                    <div class="shor-main-list-rt">
+                                        <div class="mCustomScrollbar mCS-autoHide">
+                                            <ul>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link active"><b>강남</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>공덕</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>관악</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>구로</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link active"><b>강남</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강남(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>강북(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>공덕</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>관악</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>광화문(장기)</b></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-link"><b>구로</b></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
+                                <!-- //반납지점 -->
                             </div>
                             <!-- //다른지점 반납 -->
 
@@ -473,13 +623,13 @@
                     <div class="q-list">
                         <ul>
                             <li><a href=""><span class="ico-quick1"></span>지점안내</a></li>
-                            <li><a href=""><span class="ico-quick2"></span>이벤트</a></li>
+                            <li><a href=""><span class="ico-quick2"></span>이달의 특가</a></li>
                             <li><a href=""><span class="ico-quick3"></span>다이렉트 견적</a></li>
                             <li><a href=""><span class="ico-quick4"></span>신차장 친구추천</a></li>
                             <li><a href=""><span class="ico-quick5"></span>월간렌터카</a></li>
                             <li><a href=""><span class="ico-quick6"></span>멤버쉽 혜택</a></li>
-                            <li><a href=""><span class="ico-quick7"></span>기사포함렌터카</a></li>
-                            <li><a href=""><span class="ico-quick8"></span>내차팔기 서비스</a></li>
+                            <li><a href=""><span class="ico-quick7"></span>기사포함렌터카</a></li> 
+                            <li><a href=""><span class="ico-quick8"></span>이벤트</a></li>
                         </ul>
                     </div>
                     

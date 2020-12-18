@@ -1335,6 +1335,7 @@ if($('.mypage-container .pointTransitionTab').length){
 /* 마이페이지end-------------------------------------------------*/
 
 /* 메인start-------------------------------------------------*/
+
     //메인예약 - 다른지점반납 열고 닫기
     $(".shor-branch-toggle-btn").click(function(){
         $(".shor-main-list-branch").toggle();

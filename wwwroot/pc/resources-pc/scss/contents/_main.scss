@@ -285,7 +285,7 @@
 
             &.branch {
                 padding: 50px 20px 35px 40px;
-                background: #2a2a2a;
+                background: #242424;
                 .m-tit {
                     @include Align-between;
                     .btn-red {
@@ -333,34 +333,7 @@
                         font-size:16px;
                         overflow: hidden;
                     }
-                    .short-branch-tab2 {
-                        width: 100%;
-                        @include Align-middle;
-                        li {
-                            @include Align-middle;
-                            height: 80px;
-                            button {
-                                @include Align-middle;
-                                text-align: center;
-                                font-size: 16px;
-                                color: #8f9191;
-                                width: 145px;
-                                height: 38px;
-                                border: 1px solid #d2d2d2;
-                                border-radius: 38px;
-                                margin: 0 5px;
-                            }
-                            &.active {
-                                button {
-                                    border: 1px solid #ff404b;
-                                    @include Bold;
-                                    color: #ff404b;
-                                    background: #fff9f9;
-                                }
-                            }
-                            
-                        }
-                    }
+                    // 내륙제주 버튼
                     .shor-main-list-tit{
                         padding:35px 0;
                         @include Align-between;
@@ -385,55 +358,68 @@
                                     @include Bold;
                                     color: #fff;
                                 }
+                                input:disabled + label {
+                                    background: #242424;
+                                    border-color: #444;
+                                    @include Bold;
+                                    color: #4d4e4e;
+                                }
                             }
                         }
                     }
+                    // 다른지점 반납 버튼
                     .shor-main-list-branch{
                         display:none;
-                        .shor-main-list-lt{
-                            .iconList{
-                                border:0 none;
-                                border-radius: 0;
-                                li{
-                                    width:auto;
-                                    margin-right:10px;
-                                    position: relative;
-                                    label {
-                                        border:0 none;
-                                        background: #242424;
-                                        font-size:16px;
-                                        @include Regular;
-                                        color:#aaa;
-                                        height:auto;
-                                        margin:0.9rem 0 .9rem 0;
-                                    }
-                                    input:checked + label {
+                        .short-branch-tab2{
+                            @include Align-box;
+                            li{
+                                @include Align-middle;
+                                height: 20px;
+                                button {
+                                    @include Align-middle;
+                                    text-align: center;
+                                    font-size: 16px;
+                                    color: #aaa;
+                                    margin: 0 5px;
+                                }
+                                &.active {
+                                    button {
                                         border-bottom:1px solid #ce8d57;
                                         @include Bold;
-                                        color:#ce8d57;
+                                        color: #ce8d57;
+                                        //background: #fff9f9;
                                     }
                                 }
-                                li:first-child{
-                                    margin:0 .9rem 0 0;
+                                label {
+                                    border:0 none;
+                                    background: #242424;
+                                    font-size:16px;
+                                    @include Regular;
+                                    color:#aaa;
+                                    height:auto;
+                                    margin:0.9rem 0 .9rem 0;
                                 }
-                                li:first-child:after{
-                                    display:inline-block;
-                                    content:"";
-                                    border-right:1px solid #aaa;
-                                    height:30%;
-                                    @include Position($top: 50%, $right: -15%);
-                                    transform: translateY(-50%);
+                                input:checked + label {
+                                    border-bottom:1px solid #ce8d57;
+                                    @include Bold;
+                                    color:#ce8d57;
                                 }
+                            }
+                            li:nth-of-type(2):before{
+                                display:inline-block;
+                                content:"";
+                                border-right:1px solid #aaa;
+                                height:50%;
+                                width: 1px;
+                                margin: 0 5px;
                             }
                         }
                     }
                     .shor-main-list-wrap{
                         @include Align-box;
-                        // padding:1.7rem;
                         .shor-main-list-lt{
                             overflow-y: auto;
                             height: 475px;
-                            // width:40%;
                             width:50%;
                             padding:5px;
                             @include Align-box;
@@ -591,7 +577,7 @@
             color: #2f2f2f;
         }
         .q-list {
-            padding-bottom: 55px;
+            padding: 0 70px 55px;
             border-bottom: 1px solid #eee;
             ul {
                 @include Align-between;
@@ -609,13 +595,13 @@
                    background-repeat: no-repeat;
                }
                .ico-quick1 {background-image: url(../../resources-pc/images/icons/ico-main-quick1.png);}
-               .ico-quick2 {background-image: url(../../resources-pc/images/icons/ico-main-quick2.png);}
+               .ico-quick2 {background-image: url(../../resources-pc/images/icons/ico-main-quick8.png);}
                .ico-quick3 {background-image: url(../../resources-pc/images/icons/ico-main-quick3.png);}
                .ico-quick4 {background-image: url(../../resources-pc/images/icons/ico-main-quick4.png);}
                .ico-quick5 {background-image: url(../../resources-pc/images/icons/ico-main-quick5.png);}
                .ico-quick6 {background-image: url(../../resources-pc/images/icons/ico-main-quick6.png);}
                .ico-quick7 {background-image: url(../../resources-pc/images/icons/ico-main-quick7.png);}
-               .ico-quick8 {background-image: url(../../resources-pc/images/icons/ico-main-quick8.png);}
+               .ico-quick8 {background-image: url(../../resources-pc/images/icons/ico-main-quick2.png);}
             }
         }
     }
