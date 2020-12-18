@@ -882,6 +882,9 @@
                             }
                         }
                     }
+                    &.agree-area {
+                        padding: 0;
+                    }
                 }
                 &.form1 {
                     .form-cont {
@@ -1171,36 +1174,6 @@
                         
                     }
                 }
-                // &.form7 {
-                //     .form-cont {
-
-                //         .agree-header {
-                //             .lst {
-                //                 padding-top:20px;
-                //                 li + li {
-                //                    margin-top:10px;
-                //                 }
-                //             }
-                //         }
-                //         .agree-list {
-                //             border-bottom:1px solid #e7e7e7;
-                //             padding:30px 0;
-                //             li {
-                //                 border-bottom:0;
-                //                 padding:0;
-                //                 & + li {
-                //                     padding-top:20px;
-                //                 }
-                //                 button {
-                //                     span {
-                //                         border-bottom:1px solid #2f2f2f;
-                //                     }
-                //                 }
-                //             }
-                //         }
-
-                //     }
-                // }
                 &.form8 {
                     .form-cont {
                         .row + .row {
@@ -1766,82 +1739,75 @@
                             background-color:#ff404b;
                         }        
                     }
+                    &.agree-area {
+                        padding:0;
+                    }
                 }
                 &.form2 {
                     .form-cont {
-                        > ul {
-                            > li + li {
-                                padding-top:80px;
-                            }
-                            .row-header {
-                                @include Align-middle-left;
-                                margin:0 40px 20px;
-                                border-bottom: 1px solid #e7e7e7;
-                                padding-bottom: 20px;
-                                .chk-icon-box {
-                                    .input-tit {
-                                        width:180px;
-                                        a {
-                                            border-bottom: 1px solid #2f2f2f;
-                                        }
-                                        &::after {
-                                            left:0;
-                                        }
-                                    }
-                                    & + .input-cont {
-                                        margin-left:50px;
-                                    }
+                        .row-header {
+                            padding:0 40px 20px;
+                            ul {
+                                @include Align-middle-left; 
+                                li + li {
+                                    padding-left: 30px;
                                 }
                             }
-                            .row {
-                                .input-cont {
-                                    .box-between {
-                                        width:50%;
-                                        select {
-                                            max-width: 25%;
-                                            & + .inputT {
-                                                max-width: 45%;
-                                                & + button {
-                                                    width: 30%;
-                                                }
-                                            }
-                                        }
-                                        .inputT {
-                                            max-width: 71%;
+                            .chk-icon-box {
+                                .input-tit {
+                                    width:180px;
+                                    button {
+                                        border-bottom: 1px solid #2f2f2f;
+                                        padding: 4px 0 2px;
+                                    }
+                                    &::after {
+                                        left:0;
+                                    }
+                                }
+                                & + .input-cont {
+                                    margin-left:50px;
+                                }
+                            }
+                        }
+                        .detail-radio {
+                            margin:0 40px;
+                            padding:20px 0;
+                            border-top:1px solid #e7e7e7;
+                        }
+
+                        .row {
+                            .input-cont {
+                                .box-between {
+                                    width:50%;
+                                    select {
+                                        max-width: 25%;
+                                        & + .inputT {
+                                            max-width: 45%;
                                             & + button {
                                                 width: 30%;
                                             }
                                         }
                                     }
+                                    .inputT {
+                                        max-width: 71%;
+                                        & + button {
+                                            width: 30%;
+                                        }
+                                    }
                                 }
                             }
-                            
-                            .btn-area {
-                                padding:60px 0 0;
-                            }
+                            .detail-radio {
+                                margin:0;
+                                padding:0;
+                                border:0;
+                            } 
+                        }
+
+                        .btn-area {
+                            padding:60px 0 0;
                         }
                     }
-                    
                 }
-                // .agree-area {
-                //     .agree-list {
-                //         border-bottom:1px solid #e7e7e7;
-                //         padding:20px 0;
-                //         > li {
-                //             border:0;
-                //             padding:10px 0;
-                //             margin:0;
-                //             .accor-header {
-                //                 align-items: center;
-                //                 button {
-                //                     border-bottom:1px solid #2f2f2f;
-                //                     padding-bottom:3px;
-                //                     min-width: auto;
-                //                 }
-                //             }
-                //         }
-                //     } 
-                // }
                 &:last-child {
                     .form-cont {
                         padding-bottom:0;
