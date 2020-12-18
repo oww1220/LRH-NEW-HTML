@@ -2854,6 +2854,30 @@
                                 }
                             }
                         }
+                        .shor-stit {
+                            @include Align-top-middle;
+                            margin: 0 1.7rem;
+                            li {
+                                width: 50%;
+                                padding: 1.3rem .9rem;
+                            }
+                            button {
+                                width: 100%;
+                                height: 2.6rem;
+                                border: 1px solid #d2d2d2;
+                                border-radius: 2.5rem;
+                                background: #fff9f9;
+                                color:#8f9191;
+                                font-size: 1.1rem;
+                                &.active {
+                                    @include Bold;
+                                    border: 1px solid #ff404b;
+                                    border-radius: 2.5rem;
+                                    background: #fff9f9;
+                                    color: #ed1c24;
+                                }
+                            }
+                        }
                         .shor-main-list-branch{
                             display:none;
                             @include Position($top: 0, $left: 0);
@@ -2862,7 +2886,7 @@
                             z-index: 10;
                             background-color: #fff;
                             .shor-main-list-rt{
-                                .iconList{
+                                /* .iconList{
                                     border:0 none;
                                     border-radius: 0;
                                     padding: 0 0 0 1.3rem;
@@ -2896,7 +2920,7 @@
                                         @include Position($top: 50%, $right: -20%);
                                         transform: translateY(-50%);
                                     }
-                                }
+                                } */
                             }
                         }
                         .shor-main-list-wrap{
@@ -2941,6 +2965,14 @@
                                         color:#a02a3d;
                                         padding-bottom:.2rem;
                                     }
+                                }
+                            }
+                            &.type2 {
+                                div {
+                                    height: 22rem;
+                                }
+                                .shor-main-list-lt {
+                                    border-top: 1px solid #e7e7e7;
                                 }
                             }
                         }
