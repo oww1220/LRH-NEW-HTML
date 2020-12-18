@@ -51,97 +51,43 @@ $(function(){
 	var mypageLnb = `
 	<ul>
 		<li>
-			<a href="#">단기렌터카 예약</a>
+			<a href="#">My Reservaiton</a>
 		</li>
 		<li>
-			<a href="#">월간단기렌터카 예약</a>
-		</li>
-		<li>
-			<a href="#">기사포함단기렌터카 예약 </a>
-
-		</li>
-		<li>
-			<a href="#">장기렌터카 계약 </a>
-
-		</li>
-		<li>
-			<a href="#">렌터카 상담 </a>
-
-		</li>
-		<li>
-			<a href="#">내차 팔기 상담 </a>
-
-		</li>
-		<li>
-			<a href="#">포인트</a>
+			<a href="#">
+				Additional Information <br>
+				Management
+			</a>
 			<ul>
 				<li>
-					<a href="#">사용내역 </a>
+					<a href="#">My Branch</a>
 				</li>
 				<li>
-					<a href="#">포인트 전환 신청 </a>
+					<a href="#">Driver’s License Info</a>
 				</li>
 			</ul>
 		</li>
 		<li>
-			<a href="#">할인쿠폰 및 무료이용권 </a>
+			<a href="#">Point</a>
 			<ul>
 				<li>
-					<a href="#">할인쿠폰 </a>
-				</li>
-				<li>
-					<a href="#">무료이용권 </a>
+					<a href="#">Check member point</a>
 				</li>
 			</ul>
 		</li>
 		<li>
-			<a href="#">신차장 친구추천 활동</a>
-		</li>
-		<li>
-			<a href="#">결제카드</a>
-		</li>
-		<li>
-			<a href="#">운전면허증</a>
+			<a href="#">Modify personal Information </a>
 			<ul>
 				<li>
-					<a href="#">국내</a>										
-				</li>
-				<li><a href="#">국제</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="#">내의 부과 정보</a>
-			<ul>
-				<li>
-					<a href="#">나의 관심 차종</a>
+					<a href="#">Personal infomaition</a>
 				</li>
 				<li>
-					<a href="#">나의 찜 차량</a>
-				</li>
-				<li>
-					<a href="#">나의 단골 지점</a>
+					<a href="#">Withdrawal of membership</a>
 				</li>
 			</ul>
 		</li>
 		<li>
-			<a href="#">고객센터</a>
-		</li>
-		<li>
-			<a href="#">회원</a>
-			<ul>
-				<li>
-					<a href="#">회원정보수정</a>
-				</li>
-				<li>
-					<a href="#">비밀번호 변경</a>
-				</li>
-				<li>
-					<a href="#">회원탈퇴</a>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<a href="#">롯데그룹사 임직원 인증</a>
+			<a href="#">Logout</a>
 		</li>
 	</ul>
     `;
