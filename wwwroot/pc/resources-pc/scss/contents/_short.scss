@@ -2356,10 +2356,11 @@
                         }
                         label{
                             position: relative;
-                            height:30px;
+                            height:33px;
                             @include Align-middle;
                             box-sizing: border-box;
                             transition: all .4s;
+                            color: #8f9191;
                         }
                         input:checked + label {
                             @include Bold;
@@ -2373,11 +2374,17 @@
                                 z-index: 5;
                             }
                         }
+                        input:disabled + label {
+                            color: #ddd;
+                        }
                     }
                     
                 }
-                li:nth-of-type(5n){
+                li:nth-of-type(5n), li:nth-of-type(13n){
                     border-right:0 none;
+                }
+                li:nth-of-type(12n), li:nth-of-type(13n){
+                    width: 40%;
                 }
                 li:nth-of-type(5n+1){
                     input:checked + label {
@@ -2409,50 +2416,88 @@
                     width: 100%;
                 }
                 .short-car-list-cont {
-                    li + li {
-                        border-top: 1px solid #ddd;
-                    }
-                    .short-car-type {
-                        @include Align-middle;
-                        padding: 20px;
+                    li {
                         height: 170px;
-                        img {
-                            width: 172px;
-                            height: 92px;
-                            background-size: 100% auto;
-                        }
-                        .txt-type {
-                            width: 50%;
-                            padding-left: 15px;
-                            strong {
-                                @include Bold;
-                                font-size: 22px;
-                                color: #2f2f2f;
-                                line-height: 1.2;
+                        .radioIconBox {
+                            > label {
+                            @include Align-between;
+                            flex-flow: nowrap;
+                            border-radius: 0;
+                            padding:20px 10px;
+                            height: 170px;
+                            position: relative;
+                            border: 1px solid #fff;
+                            border-bottom: 1px solid #ddd;
+                                .img {
+                                    width: 172px;
+                                    height: 92px;
+                                    background-size: 100% auto;
+                                }
+                                .txt-type {
+                                    width: calc(100% - 172px);
+                                    padding-left: 15px;
+                                    strong {
+                                        @include Ellipsis($w:100%, $lines:1);
+                                        @include Bold;
+                                        font-size: 22px;
+                                        color: #2f2f2f;
+                                        line-height: 1.2;
+                                    }
+                                    .txt-red {
+                                        @include Bold;
+                                        margin-top: 10px;
+                                        font-size: 24px;
+                                        color: #da291c;
+                                        line-height: 1;
+                                        sub {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    del {
+                                        font-size: 16px;
+                                        color: #ddd;
+                                        line-height: 1;
+                                    }
+                                    .btn-red {
+                                        width: 93px;
+                                        height: 35px;
+                                        font-size: 16px;
+                                        margin-top: 15px;
+                                    }
+                                } 
                             }
-                            .txt-red {
-                                @include Bold;
-                                margin-top: 10px;
-                                font-size: 24px;
-                                color: #da291c;
-                                line-height: 1;
-                                sub {
-                                    font-size: 18px;
+                            > input:checked + label:after{
+                                display:none;
+                            }
+                            > input:checked + label {
+                                border:1px solid #ff404b;
+                                background: #fff9f9;
+                            }
+                            > input + label{
+                                .img{
+                                    .radio-check{
+                                        display:block;
+                                    }
                                 }
                             }
-                            del {
-                                font-size: 16px;
-                                color: #ddd;
-                                line-height: 1;
-                            }
-                            .btn-red {
-                                width: 93px;
-                                height: 35px;
-                                font-size: 16px;
-                                margin-top: 15px;
+                            > input:checked + label{
+                                .img{
+                                    .radio-check{
+                                        display:inline-flex;
+                                        background: url(../../resources-pc/images/icons/ico-chk2-on.png) 0 0 no-repeat;
+                                        width: 13px;
+                                        height: 13px;
+                                        background-size: 100% auto;
+                                        position: absolute;
+                                        top: 20px;
+                                        left: 20px;
+                                    }
+                                }
                             }
                         }
+                        
                     }
+                    
                 }
             }
         }
@@ -2491,17 +2536,12 @@
                     @include Bold;
                     width: 100%;
                     height: 100%;
-                    background: #54585a;
+                    background: #ed1c24;
                     color: #fff;
                     font-size: 22px;
-                    &:before {
-                        display: inline-block;
-                        content: "";
-                        width: 19px;
-                        height: 18px;
-                        margin-right: 10px;
-                        background: url(../../resources-pc/images/icons/ico-refresh.png) 0 0 no-repeat;
-                        background-size: 100% auto;
+                    border-radius: 0;
+                    &:disabled {
+                        background: #8f9191;
                     }
                 }
             }

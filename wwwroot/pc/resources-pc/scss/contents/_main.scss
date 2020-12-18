@@ -270,7 +270,15 @@
                                 border-radius:100%;
                             }         
                         }                       
-                        
+                        .day{
+                            .btn{
+                                width:38px;
+                                background-color: #ff404b;
+                                border-radius: 1.7rem;
+                                @include Bold;
+                                color:#fff;   
+                            }
+                        }
                     }
                 }
             }
@@ -324,6 +332,34 @@
                         line-height: 1.4;
                         font-size:16px;
                         overflow: hidden;
+                    }
+                    .short-branch-tab2 {
+                        width: 100%;
+                        @include Align-middle;
+                        li {
+                            @include Align-middle;
+                            height: 80px;
+                            button {
+                                @include Align-middle;
+                                text-align: center;
+                                font-size: 16px;
+                                color: #8f9191;
+                                width: 145px;
+                                height: 38px;
+                                border: 1px solid #d2d2d2;
+                                border-radius: 38px;
+                                margin: 0 5px;
+                            }
+                            &.active {
+                                button {
+                                    border: 1px solid #ff404b;
+                                    @include Bold;
+                                    color: #ff404b;
+                                    background: #fff9f9;
+                                }
+                            }
+                            
+                        }
                     }
                     .shor-main-list-tit{
                         padding:35px 0;
