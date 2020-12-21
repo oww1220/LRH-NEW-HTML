@@ -199,4 +199,50 @@
         }
     }
     
+    //영문
+    &.eng-join-container{
+        //create account
+        .membership-benefits{
+            @include Align-between;
+            padding-bottom:30px;
+            border-bottom:1px solid $border-grey;
+
+            li{
+                flex:1;
+                @include Align-middle-left;
+
+                + li{                    
+                    &:before{
+                        content:"";
+                        width:1px;
+                        height:120px;
+                        background-color:$border-grey;
+                    }
+                }
+
+                .item{
+                    width:100%;
+                    @include Align-middle-column;
+                    color:#8f9191;
+                    font-size:12px;
+                    text-align:center;
+                    
+                    .icon{
+                        height:56px;
+                        margin-bottom:20px;
+                    }
+                    strong{
+                        display:block;
+                        font-size:16px;
+                        color:#54585a;
+                    }
+                }
+            }
+        }
+        .agree-body-form{
+            margin-top:30px;
+            padding:30px 40px;
+            border-top:1px solid $border-grey;
+        }        
+    }
 }
