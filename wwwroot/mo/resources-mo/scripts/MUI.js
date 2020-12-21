@@ -163,7 +163,8 @@ var MUI = MUI || {
 		}
 	},
 	layer: {
-		TOUCH_CLICK: ('ontouchstart' in window) ? 'touchstart' : 'click',
+		//TOUCH_CLICK: ('ontouchstart' in window) ? 'touchstart' : 'click',
+		TOUCH_CLICK: 'click',
 		scrollTop: 0,
 		calculate: function(layer){
 			var layer = $(layer),
@@ -307,7 +308,8 @@ var MUI = MUI || {
         },
 	},
 	event: {
-		TOUCH_CLICK: ('ontouchstart' in window) ? 'touchstart' : 'click',
+		//TOUCH_CLICK: ('ontouchstart' in window) ? 'touchstart' : 'click',
+		TOUCH_CLICK: 'click',
 		toggle: function(target, parent, touch, callback){
 			var EventType = touch ? this.TOUCH_CLICK : 'click';
 			$(document).on(EventType, target, function(e) {
