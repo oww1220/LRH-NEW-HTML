@@ -1219,6 +1219,14 @@ if($('.layer-rental').length) {
         }
     });
 }
+
+//중고차 상담신청 열고 닫기
+if($('.secondhand-wrap').length){
+    MUI.event.toggle('.item-step1 .secondhand_sell_toggle_btn', '.item-step1 .secondhand_sell_toggle_cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
 /* -------------------------------------------------중고차 end*/
 
 /* 중고차 내차팔기 start-------------------------------------------------*/
@@ -1481,6 +1489,14 @@ if($('.customer-wrap .tab-normal').length){
         });
     }
 /* -------------------------------------------------FooterMenu end*/
+
+    //fixed bottom이 있을시 하단 푸터 높이값 수정
+    if($('.fixed-btnBottom').length){
+        $('.fixed-btnBottom').siblings('.footer').find('.footer-app').css('padding-bottom', '8.2rem');
+        $('.fixed-btnBottom').siblings('.fixedRight').css('bottom', '5.7rem');
+        $('.fixed-btnBottom').parents('#wrap').siblings('.footer').find('.footer-app').css('padding-bottom', '12.2rem');
+        $('.fixed-btnBottom').parents('#wrap').siblings('.fixedRight').css('bottom', '9.7rem');
+    }
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){

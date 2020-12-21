@@ -12,6 +12,7 @@ $(function(){
 			<ul class="extra-menu">
 				<li><a href="#none">예약확인</a></li>
 				<li><a href="#none">자료제출</a></li>
+				<li><a href="#none">실시간예약</a></li>
 			</ul>
 		</div>
 	</div>
@@ -24,27 +25,32 @@ $(function(){
 				<h1><a href="#none"><img src="../../../resources-pc/images/common/logo-header.png" alt="LOTTE rental"/></a></h1>
 				<ul>
 					<li>
-						<a href="#">렌터카 예약</a>
+						<a href="#" class="draw-btn" data-target="draw-cont-01" data-on="true" data-siblings="true">단기렌터카</a>
 					</li>
 					<li>
-						<a href="#">신차장</a>
+						<a href="#" class="draw-btn" data-target="draw-cont-02" data-on="true" data-siblings="true">신차장기렌터카 </a>
 					</li>
 					<li>
-						<a href="#">중고차장기</a>
+						<a href="#" class="draw-btn" data-target="draw-cont-03" data-on="true" data-siblings="true">중고차 렌터카</a>
 					</li>
 					<li>
-						<a href="#">#카라이프</a>
+						<a href="#" class="draw-btn" data-target="draw-cont-04" data-on="true" data-siblings="true">#카라이프</a>
 					</li>
 					<li>
-						<a href="#">고객센터</a>
+						<a href="#" class="draw-btn" data-target="draw-cont-05" data-on="true" data-siblings="true">고객센터</a>
 					</li>
 				</ul>
 			</div>
 			<div class="nav-menu">
 				<ul>
-					<li><button type="button" class="btn"><i class="icon mypage">마이페이지</i></button></li>
 					<li>
-						<button type="button" class="btn draw-btn" data-target="draw-cont-01" data-on="true" data-siblings="true"><i class="icon draw">전체메뉴</i></button>
+						<button type="button" class="btn"><i class="icon mypage">마이페이지</i></button>
+						<div class="nav-menu-mypage-box">
+							<b>예약중</b>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn draw-btn" data-target="draw-cont-06" data-on="true" data-siblings="true"><i class="icon draw">전체메뉴</i></button>
 					</li>
 					<li><button type="button" class="btn"><i class="icon global">언어설정</i></button></li>
 				</ul>
