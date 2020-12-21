@@ -1380,6 +1380,32 @@
                                 }
                             }
                         }
+                        .secondhand_sell_toggle_btn{
+                            .icon{
+                                @include Background($sprite:'ico-pannel12', $size:100% auto, $position:center center);
+                                width: 1.6rem;
+                                height: 1.8rem;
+                            }
+                            &.active{
+                                border: 1px solid #54585a;
+                                background-color: #54585a;
+                                pointer-events: auto;
+                                color:#fff;
+                                .icon{
+                                    @include Background($sprite:'ico-pannel23', $size:100% auto, $position:center center);
+                                }
+                            }
+                        }
+                        .secondhand_sell_toggle_cont{
+                            display:none;
+                            padding:1.7rem 0 0;
+                            h3{
+                                margin:0 0 1.7rem;
+                            }
+                            .item-cont{
+                                padding:0;
+                            }
+                        }
                     }
                     &.item-step2 {
                         h3 {
