@@ -641,6 +641,14 @@
     
                 .img-box{                        
                     position:relative;
+                    @include Align-middle;
+                    overflow:hidden;
+                    height:200px;
+                    
+                    img{
+                        @include Position($top:0, $left:0, $right:0, $bottom:0);
+                        margin: auto;
+                    }
     
                     .cover{
                         @include Position($bottom:0, $left:0, $right:0);
