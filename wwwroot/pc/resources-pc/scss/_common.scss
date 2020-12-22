@@ -265,6 +265,14 @@ $main-border-radius: 6px;
 	border-color: $color transparent transparent transparent;
 }
 
+@mixin arrowR($color:#8f9191, $direction : 4px 0 4px 7px){
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: $direction;
+	border-color: transparent transparent transparent $color;
+}
+
 @mixin topSectMg { //상단 로케여션 영역까지 백그라운드 채우기 위한 마진 값
 	margin-top:-130px;
 }

@@ -807,8 +807,52 @@ if($('.customer-list').length){
 //전국지점안내
 if($('.branch-office-section').length){
     MUI.event.toggle('.accorSpotBtn', '.accorSpotCont', false, function(logic, layer) {
-        //console.log('toggle');
+        if(MUI.slide.LayerSwiper) MUI.slide.LayerSwiper.destroy();
+
         logic();
+
+        //영문 location - 아코디언 오픈 후 실행
+        if($('.branchesSwiper').length) {
+
+            var autoplayFlag = true;
+            var branchesSwiper = MUI.slide.init('.branchesSwiper','swiper', {
+                loop: true,				
+                autoplay: {
+                    delay: 3000,
+                },
+                pagination: {
+                    el: '.branchesSwiper .branchesSwiper-pagination',
+                    clickable: true,
+                },        
+            });
+            
+			$(".btnAutoplay").click(function () {						
+				if(autoplayFlag == true){
+					$(this).addClass('stop');
+                    branchesSwiper.autoplay.stop();                    
+                    //console.log(branchesSwiper.autoplay.running);                    
+					autoplayFlag = false;
+				}else{
+					$(this).removeClass('stop');
+                    branchesSwiper.autoplay.start();                    
+                    //console.log(branchesSwiper.autoplay.running);
+					autoplayFlag = true;
+				}
+            });
+
+            // console.log(branchesSwiper.autoplay);  
+            // $(".swiper-pagination-clickable .swiper-pagination-bullet").click(function () {	
+            //     //console.log(branchesSwiper.autoplay.running);  
+
+            //     // if(branchesSwiper.autoplay.running == true){
+            //     //     console.log('aa');                
+            //     // }else{
+            //     //     console.log('bb');                
+            //     // }
+            // });            
+            
+            
+        }        
     });
 }
 

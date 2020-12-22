@@ -152,17 +152,24 @@
     //전국지점안내 리스트
     .section-indicator{
         .menu-list{
-            @include Align-between-top;
-            padding:0 20px;
+            //@include Align-between;
+
+            display:flex;
             margin-bottom:60px;
             border-bottom: 1px solid #e7e7e7;
             
+            //@include Align-between-top;
+            //padding:0 20px;
+            
             li{                
+                flex: 1 1 auto;
+
                 input{display:none;}
                 label, button{
                     position:relative;
                     display:block;
                     padding:20px 20px 30px;
+                    border-bottom-color:transparent;
                 }
 
                 input:checked + label {
@@ -401,5 +408,64 @@
     }
 }
 
+//영문
 
+.eng-customer-wrap{
+    .customer-container{
+        .branches-region{
+            .top-area{
+                @include Align-between;
+                margin-bottom:30px;
 
+                p{color:#8f9191;}
+                .top-area-right{
+                    min-width:230px;
+
+                    .selectbox{width:100%;}
+                }
+            }
+
+            .branchesSwiper-controls{
+                @include Align-middle;
+                padding:20px 0;
+
+                .btnAutoplay{
+                    @include Align-middle;
+                    width:25px;
+                    height:25px;
+                    @include Hide_txt;
+                    border:1px solid $border-darkgrey;
+                    border-radius: 25px;
+                    box-sizing: border-box;
+                    
+                    &::before, &::after{
+                        content:"";
+                        width:2px;
+                        height:9px;
+                        background-color:#8f9191;
+                        margin:0 1.5px;
+                    }
+
+                    &.stop{                        
+                        &::before{
+                            display:none;
+                        }                        
+                        &::after{
+                            @include arrowR;
+                            background-color:transparent;
+                            margin:0;
+                        }
+                    }
+                }
+
+                .branchesSwiper-pagination{
+                    @include Align-middle;
+
+                    span{
+                        margin-left:10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1901,90 +1901,6 @@
         }
     }
 
-    /* eng */
-    &.eng-mypage-container {
-        .mypage-header{
-            .myInfos-area{
-                .box-between{
-                    .txt{
-                        font-size:30px;
-                        @include Regular;
-                        
-                        .greeting{                     
-                            @include Align-top-left;       
-                            @include Regular;
-                            font-size:24px;
-                            
-                            &:after{
-                                content:"";
-                                width:8px;
-                                height:8px;
-                                border-radius: 8px;
-                                background-color: #fff;
-                            }
-                        }
-                        .name{@include Bold; color:inherit; font-size:inherit;}
-                    }
-                    .item-list{
-                        @include Align-middle;
-                        text-align:center;
-                        margin-top:0;
-                        padding-top:0;
-                        border-top:none;
-        
-                        .icon{                    
-                            height:48px;
-                        }
-        
-                        li{     
-                            @include Align-middle;
-                            
-                            .icon{
-                                + .txt-box{margin-left:20px;}
-                            }
-                            .txt-box{                                
-                                p{font-size:14px;}
-                                span{
-                                    display:block;
-                                    @include Bold; 
-                                    font-size:18px;
-                                    margin-top:10px;
-                                }
-                            }
-
-                            + li{margin-left:60px;}
-                        }
-                    }
-                }
-            }
-        }
-        
-        .btn-box-between{
-            @include Inline-align-top;
-
-            .box-between-col02-btns{margin-left:10px;}
-        }
-        .infos-section-body{
-            .guide-txt{
-                padding:130px 40px;
-                text-align:center;
-                font-size:20px;
-                color:#54585a;
-                border-top:1px solid $border-grey;
-                border-bottom:1px solid $border-grey;
-            }
-        }
-        .point-infos-area{
-            padding:60px 40px;
-        }
-        
-        .required-box{
-            margin:30px 0 0;
-            
-            + .section-form{margin-top:30px;}
-        }
-    }
-
     //실시간예약 - 사전체크인
     .useManagement-cont {
         .section-cont {
@@ -2474,6 +2390,92 @@
                     }
                 }
             }
+        }
+    }
+}
+
+//영문
+.eng-mypage-wrap{
+    .mypage-container {
+        .mypage-header{
+            .myInfos-area{
+                .box-between{
+                    .txt{
+                        font-size:30px;
+                        @include Regular;
+                        
+                        .greeting{                     
+                            @include Align-top-left;       
+                            @include Regular;
+                            font-size:24px;
+                            
+                            &:after{
+                                content:"";
+                                width:8px;
+                                height:8px;
+                                border-radius: 8px;
+                                background-color: #fff;
+                            }
+                        }
+                        .name{@include Bold; color:inherit; font-size:inherit;}
+                    }
+                    .item-list{
+                        @include Align-middle;
+                        text-align:center;
+                        margin-top:0;
+                        padding-top:0;
+                        border-top:none;
+        
+                        .icon{                    
+                            height:48px;
+                        }
+        
+                        li{     
+                            @include Align-middle;
+                            
+                            .icon{
+                                + .txt-box{margin-left:20px;}
+                            }
+                            .txt-box{                                
+                                p{font-size:14px;}
+                                span{
+                                    display:block;
+                                    @include Bold; 
+                                    font-size:18px;
+                                    margin-top:10px;
+                                }
+                            }
+
+                            + li{margin-left:60px;}
+                        }
+                    }
+                }
+            }
+        }
+        
+        .btn-box-between{
+            @include Inline-align-top;
+
+            .box-between-col02-btns{margin-left:10px;}
+        }
+        .infos-section-body{
+            .guide-txt{
+                padding:130px 40px;
+                text-align:center;
+                font-size:20px;
+                color:#54585a;
+                border-top:1px solid $border-grey;
+                border-bottom:1px solid $border-grey;
+            }
+        }
+        .point-infos-area{
+            padding:60px 40px;
+        }
+        
+        .required-box{
+            margin:30px 0 0;
+            
+            + .section-form{margin-top:30px;}
         }
     }
 }
