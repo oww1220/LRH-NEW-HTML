@@ -852,6 +852,9 @@
         padding-right: 450px;
         .section-cont {
             .section-form {
+                & + .section-form {
+                    margin-top:0;
+                }
                 &:last-child {
                     .form-cont {
                         padding-bottom:0;
@@ -861,9 +864,9 @@
                     margin-bottom:0;
                     @include Align-between;
                     span {
-                        @include Bold;
+                        @include Regular;
                         position: relative;
-                        font-size:18px;
+                        font-size:14px;
                         &::before {
                             content:'*';
                             display: inline-block;
@@ -2545,5 +2548,97 @@
         width: 100px;
         height: 395px;
         background-size: 100% auto;
+    }
+}
+
+
+.eng-short-wrap {
+    .realTime-cont {
+        table {
+            width: 100%;
+            border:1px solid #e7e7e7;
+            border-bottom: 0;
+            tr {
+                border-bottom: 1px solid #e7e7e7;
+            }
+            th {
+                background-color: #fafafa;
+                padding:30px;
+                color:#54585a;
+                @include Regular;
+            }
+            td {
+                padding:30px;
+                border-left: 1px solid #e7e7e7;
+                color:#54585a;
+                text-align: right;
+                @include Regular;
+            }
+        }
+        .form1 {
+            .form-cont { 
+                div:last-child {
+                    .input-tit {
+                        font-size:16px !important;
+                    }
+                }
+            }
+        }
+        .form2 {
+            .form-cont {
+                .row {
+                    .input-cont {
+                        p {
+                            font-size:14px;
+                            &::before {
+                                content:"";
+                                display: inline-block;
+                                width:2px;
+                                height: 2px;
+                                
+                            }
+                        }
+                    }
+                    .box-between {
+                        justify-content: flex-start;
+                        > * {
+                            width:25%;
+                        }
+                    }
+                }
+            }
+        }
+        .form16 {
+            .form-cont {
+                .row + .row {
+                    padding-top:30px;
+                }
+            }
+            th {
+                padding:30px 20px;
+                & + th {
+                    border-left: 1px solid #e7e7e7;
+                }
+            }
+            td {
+                text-align: center;
+                padding:30px 20px;
+            }
+        }
+        .form17 {
+            .form-cont {
+                .row + .row {
+                    padding-top:40px;
+                }
+                .chk-icon-box {
+                    label {
+                        display: inline-flex;
+                        i {
+                            margin:2px 0 0 15px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

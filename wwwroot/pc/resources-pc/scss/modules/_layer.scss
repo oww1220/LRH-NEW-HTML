@@ -1518,6 +1518,66 @@ body.fixed {
 			}
 		}
 
+		//영문 reservation - step3 / cancel 레이어팝업 
+		&.layer-cancel-reservation {
+			.popup-top{
+				background: #fff;
+				border-bottom:2px solid $border-darkgrey;
+
+				> h4{color:#2f2f2f; height:98px;}		
+				.layer-popup-close{
+					.pop-close{
+						@include Background($sprite:'ico-pop-close-black', $position:center center);
+					}
+				}		
+			}
+			.popup-cont {
+				.iscroll-in {
+					> div + div {
+						padding-top:40px;
+					}
+					.talk-section{
+						@include Regular;
+						@include Align-top-left;
+						color:#54585a;
+						line-height: 1.5;
+						font-size:18px;
+						padding-bottom:40px;
+						border-bottom:1px solid #e7e7e7;
+						.icon{
+							margin-right:15px;
+						}
+					}
+					.input-tit {
+						font-size:18px;
+						margin-bottom:20px;
+						display: block;
+						@include Bold;
+					}
+					table {
+						width: 100%;
+						border-top:1px solid #d2d2d2;
+						border-right:1px solid #e7e7e7;
+						color:#54585a;
+						text-align: center;
+						@include Regular;
+						tr {
+							border-bottom: 1px solid #e7e7e7;
+						}
+						th {
+							background-color: #fafafa;
+							padding:20px;
+							border-left: 1px solid #e7e7e7;
+						}
+						td {
+							padding:20px;
+							vertical-align: middle;
+							border-left: 1px solid #e7e7e7;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	//슬라이드 형태
