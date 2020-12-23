@@ -1901,7 +1901,7 @@
         }
     }
 
-    //실시간예약 - 사전체크인
+    // 단기렌터카 - 이용중관리
     .useManagement-cont {
         .section-cont {
             width:auto;
@@ -1915,7 +1915,7 @@
                     border:1px solid #d2d2d2;
                     border-radius: 6px;
                     z-index: 2;
-                    @include Position ($top:55%, $left:0);
+                    @include Position ($top:60%, $left:0);
                     .calendar-wrap{
                         position:relative;
                         padding:60px;
@@ -2122,6 +2122,7 @@
                 }
             }
             .box-between {
+                align-items: flex-start;
                 .section-form {
                     width:48%;
                     .form-cont {
@@ -2129,6 +2130,8 @@
                             width: 100%;
                             > div {
                                 width: 48%;
+                                padding-bottom:10px;
+                                border-bottom:1px solid #e7e7e7;
                                 @include Align-middle-left;
 
                             }
@@ -2138,12 +2141,34 @@
                             label {
                                 width:auto;
                                 flex: none;
+                                font-size:22px;
+                                @include Bold;
+                            }
+                            .input-cont {
+                                input {
+                                    padding-left: 20px;
+                                    font-size:14px;
+                                    color:#8f9191;
+                                    &:disabled {
+                                        color:#ddd;
+                                        
+                                    }
+                                }
+                            }
+                            
+                            .lst {
+                                margin-top:0;
                             }
                         }
                     }
                     &:last-child {
                         .form-cont {
                             padding-bottom:80px;
+                            button {
+                                padding:5px 10px;
+                                border:1px solid #d2d2d2;
+                                border-radius: 6px;
+                            }
                         }
                     }
                 }
@@ -2157,11 +2182,9 @@
                     span {
                         @include Bold;
                         position: relative;
-                        font-size:18px;
-                        &::before {
-                            content:'*';
-                            display: inline-block;
-                            @include Position ($left:-12px, $top:20%);
+                        font-size:16px;
+                        em {
+                            padding-left:5px;
                         }
                     }
                 }
@@ -2222,34 +2245,51 @@
                                 height:378px;
                                 @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
                 
-                                .type-box, .number-box, .expiration-date-box, .issue-date-box{
+                                .type-box, .number-box, .name-box, .expiration-date-box, .issue-date-box{
                                     position:relative;
                                     display:block;
-                    
                                     .numbering{
                                         @include Position($top:10px,$right:-26px);
                                     }            
                                 }
                                 .type-box{
-                                    @include Position($top:30px, $left:55px);
-                    
+                                    @include Position($top:30px, $left:40px);
                                     select{width: 130px;}
                                 }
                                 .number-box{
-                                    @include Position($top:90px, $left:202px);
-                    
+                                    @include Position($top:85px, $left:180px);
                                     .box-between{
                                         width:430px;
-                    
-                                        .inputT{width:auto;}
-                                        select, input{max-width:102px;}
+                                        .inputT{
+                                            width:auto;
+                                        }
+                                        select, input{
+                                            max-width:102px;
+                                        }
+                                    }
+                                }
+                                .name-box {
+                                    @include Position($top:135px, $left:220px);
+                                    .inputT {
+                                        max-width: 100%;
                                     }
                                 }
                                 .expiration-date-box{
-                                    @include Position($top:256px, $left:270px);
+                                    @include Position($top:260px, $left:250px);
+                                    .box-align {
+                                        .symbol {
+                                            width:auto;
+                                        }
+                                        .inputT {
+                                            max-width: 100%;
+                                        }
+                                    }
                                 }
                                 .issue-date-box{
-                                    @include Position($bottom:30px, $left:202px);
+                                    @include Position($bottom:30px, $left:180px);
+                                    .inputT {
+                                        max-width: 100%;
+                                    }
                                 }
                             }
                         }
@@ -2287,6 +2327,38 @@
                     }
                     &.agree-area {
                         padding:0;
+                    }
+                }
+                &.form1 {
+                    .row-wrap {
+                        @include Align-between-top;
+                        .row {
+                            & + .row {
+                                padding-top:0;
+                            }
+                            .box-between {
+                                width: 100%;
+                            }
+                        }
+                        & + .row {
+                            padding:40px;
+                            border-bottom:1px solid #e7e7e7;
+                            .box-between {
+                                width:100%;
+                                .input-tit {
+                                    @include Bold;
+                                    font-size:22px;
+                                }
+                                .txt {
+                                    @include Bold;
+                                    font-size:32px;
+                                }
+                            }
+                        }
+                    }
+                    .lst {
+                        margin-top:20px;
+                        padding:0 40px;
                     }
                 }
                 &.form2 {
@@ -2352,6 +2424,11 @@
                         .btn-area {
                             padding:60px 0 0;
                         }
+                    }
+                }
+                &.form3 {
+                    .lst {
+                        margin-top:0;
                     }
                 }
                 &:last-child {
