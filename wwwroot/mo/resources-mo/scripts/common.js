@@ -1480,6 +1480,18 @@ if($('.customer-wrap .tab-normal').length){
 
 /* -------------------------------------------------지점안내 end*/
 
+
+//영문 모바일
+if($('.eng-shor-wrap').length){
+    $(".credit-card-chk").on('click', function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+        }else{
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        }
+    });
+}
 /*FooterMenu start-------------------------------------------------*/
 
     //회사소개
