@@ -1125,80 +1125,130 @@ if($('.short-container .detail-radio').length) {
 
 
 //단기렌터카 실시간 예약 - 사전체크인/예약자정보
-$('.form1 .driver-license-section .detail-tab-wrap-N').hide();
-if($('.form1 .driver-license-section .detail-radio').length) {
-    $('.form1 .driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'Y'){
-            $('.form1 .driver-license-section .detail-tab-wrap-Y').addClass('active');
-            $('.form1 .driver-license-section .detail-tab-wrap-N').hide();
-            $('.form1 .driver-license-section .detail-tab-wrap-Y').show();
+if($('.driver-license-section .detail-radio').length) {
+    $('.driver-license-section .detail-tab-wrap-I').hide();
+    $('.driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'D'){
+            $('.driver-license-section .detail-tab-wrap-D').addClass('active');
+            $('.driver-license-section .detail-tab-wrap-I').hide();
+            $('.driver-license-section .detail-tab-wrap-D').show();
         }
         else{
-            $('.form1 .driver-license-section .detail-tab-wrap-Y').removeClass('active');
+            $('.driver-license-section .detail-tab-wrap-Y').removeClass('active');
         }
     });
-    $('.form1 .driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'N'){
-            $('.form1 .driver-license-section .detail-tab-wrap-N').addClass('active');
-            $('.form1 .driver-license-section .detail-tab-wrap-Y').hide();
-            $('.form1 .driver-license-section .detail-tab-wrap-N').show();
+    $('.driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'I'){
+            $('.driver-license-section .detail-tab-wrap-I').addClass('active');
+            $('.driver-license-section .detail-tab-wrap-D').hide();
+            $('.driver-license-section .detail-tab-wrap-I').show();
         }
         else{
-            $('.form1 .driver-license-section .detail-tab-wrap-N').removeClass('active');
-        }
-    });
-}
-//단기렌터카 > 실시간 예약/사전체크인/추가운전자 등록, 
-//마이페이지 > 단기렌터카/이용중관리/추가운전자 등록
-$('.form2 .detail-tab-wrap-L').hide();
-if($('.form2 .detail-radio').length) {
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'P'){
-            $('.form2 .detail-tab-wrap-P').addClass('active');
-            $('.form2 .detail-tab-wrap-L').hide();
-            $('.form2 .detail-tab-wrap-P').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-P').removeClass('active');
-        }
-    });
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'L'){
-            $('.form2 .detail-tab-wrap-L').addClass('active');
-            $('.form2 .detail-tab-wrap-P').hide();
-            $('.form2 .detail-tab-wrap-L').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-L').removeClass('active');
+            $('.driver-license-section .detail-tab-wrap-I').removeClass('active');
         }
     });
 }
 
-//단기렌터카 실시간 예약 - 사전체크인/추가운전자 등록/면허구분,
-//마이페이지 > 단기렌터카/이용중관리/추가운전자 등록/면허구분
-$('.form2 .driver-license-section .detail-tab-wrap-N').hide();
-if($('.form2 .driver-license-section .detail-radio').length) {
-    $('.form2 .driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'Y'){
-            $('.form2 .driver-license-section .detail-tab-wrap-Y').addClass('active');
-            $('.form2 .driver-license-section .detail-tab-wrap-N').hide();
-            $('.form2 .driver-license-section .detail-tab-wrap-Y').show();
-        }
-        else{
-            $('.form2 .driver-license-section .detail-tab-wrap-Y').removeClass('active');
-        }
-    });
-    $('.form2 .driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === 'N'){
-            $('.form2 .driver-license-section .detail-tab-wrap-N').addClass('active');
-            $('.form2 .driver-license-section .detail-tab-wrap-Y').hide();
-            $('.form2 .driver-license-section .detail-tab-wrap-N').show();
-        }
-        else{
-            $('.form2 .driver-license-section .detail-tab-wrap-N').removeClass('active');
-        }
-    });
-}
+//단기렌터카 > 실시간 예약/사전체크인/추가운전자 등록, 
+//마이페이지 > 단기렌터카/이용중관리/추가운전자 등록
+
+    //추가 운전자 구분
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-2').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '1'){
+                $('.form2 .detail-tab-wrap-1').addClass('active');
+                $('.form2 .detail-tab-wrap-2').hide();
+                $('.form2 .detail-tab-wrap-1').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-1').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '2'){
+                $('.form2 .detail-tab-wrap-2').addClass('active');
+                $('.form2 .detail-tab-wrap-1').hide();
+                $('.form2 .detail-tab-wrap-2').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-2').removeClass('active');
+            }
+        });
+    }
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-4').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '3'){
+                $('.form2 .detail-tab-wrap-3').addClass('active');
+                $('.form2 .detail-tab-wrap-4').hide();
+                $('.form2 .detail-tab-wrap-3').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-3').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '4'){
+                $('.form2 .detail-tab-wrap-4').addClass('active');
+                $('.form2 .detail-tab-wrap-3').hide();
+                $('.form2 .detail-tab-wrap-4').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-4').removeClass('active');
+            }
+        });
+    }
+
+    //면허 국내,외 구분
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-2-2').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '2-1'){
+                $('.form2 .detail-tab-wrap-2-1').addClass('active');
+                $('.form2 .detail-tab-wrap-2-2').hide();
+                $('.form2 .detail-tab-wrap-2-1').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-2-1').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '2-2'){
+                $('.form2 .detail-tab-wrap-2-2').addClass('active');
+                $('.form2 .detail-tab-wrap-2-1').hide();
+                $('.form2 .detail-tab-wrap-2-2').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-2-2').removeClass('active');
+            }
+        });
+    }
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-4-2').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '4-1'){
+                $('.form2 .detail-tab-wrap-4-1').addClass('active');
+                $('.form2 .detail-tab-wrap-4-2').hide();
+                $('.form2 .detail-tab-wrap-4-1').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-4-1').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '4-2'){
+                $('.form2 .detail-tab-wrap-4-2').addClass('active');
+                $('.form2 .detail-tab-wrap-4-1').hide();
+                $('.form2 .detail-tab-wrap-4-2').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-4-2').removeClass('active');
+            }
+        });
+    }
+
+
 
 
 //단기렌터카 안내 - 스티키

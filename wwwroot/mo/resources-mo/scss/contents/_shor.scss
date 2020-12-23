@@ -430,7 +430,7 @@
                         padding-right:0;
                         padding:1rem 0;
                         & > b{
-                            @include Normal;
+                            @include Regular;
                             color:#54585a;
                             vertical-align: top;
                             word-break:break-all;
@@ -482,16 +482,26 @@
                 }
                 &.detail-layer-cont-conclude{
                     & > .table{
-                        & > table tr{
-                            @include Align-between-top;
-                        }
-                        & > table tr th{
-                            width:50%;
-                        }
+                        // & > table tr{
+                        //     @include Align-between-top;
+                        // }
+                        // & > table tr th{
+                        //     width:50%;
+                        // }
                         & > table tr td{
                             text-align: left;
-                            @include Align-between-top;
-                            width:100%;
+                            div{
+                                width:100%;
+                                @include Align-between-top;
+                            }
+                            b{
+                                @include Regular;
+                                color:#54585a;
+                                vertical-align: top;
+                                word-break:break-all;
+                            }
+                            //@include Align-between-top;
+                            //width:100%;
                         }
                     }
                 }
@@ -1733,17 +1743,69 @@
                             }
                             .btn-group{
                                 @include Align-between;
-                                .img{
-                                    width: 19.8rem;
-                                    height: 12.6rem;
+                                //@include Inline-scrolling;
+                                // .img{
+                                //     width: 11.6rem;
+                                //     height: 8.5rem;
+                                // }
+                                .lpay-card-list{
+                                    @include Align-box-left;
+                                    @include Inline-scrolling;
+                                    display: inline-flex;
+                                    flex-wrap: nowrap;
+                                    ul{
+                                        width:100%;
+                                        margin-left:0;
+                                        display: inline-flex;
+                                        flex-wrap: nowrap;
+                                        li{
+                                            width:auto;
+                                        }
+                                    }
+                                    .radioIconBox > label{
+                                        width: 11.6rem;
+                                        height: 8.5rem;
+                                        padding:0 1.3rem;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        b{
+                                            font-size:1.1rem;
+                                            padding-top:1.7rem;
+                                        }
+                                        em{
+                                            font-size:1.1rem;
+                                            color:#54585a;
+                                            @include Regular;
+                                            padding-top:.5rem;
+                                        }
+                                        div{
+                                            @include Align-between;
+                                            width:100%;
+                                            padding-top:.7rem;
+                                            span{
+                                                font-size:1rem;
+                                                color:#8f9191;
+                                                @include Regular;
+                                            }
+                                        }
+                                    }
+                                    .radioIconBox > input:checked + label:after{
+                                        top:2rem;
+                                        right:1.4rem;
+                                    }
                                 }
                                 .btn{
-                                    height: 12.6rem;
-                                    width: 7.5rem;
-                                    background-color: #f5f5f5;
+                                    width: 11.6rem;
+                                    height: 8.5rem;
+                                    // background-color: #f5f5f5;
                                     border-radius: .5rem;
-                                    font-size:2.6rem;
-                                    @include Regular;
+                                    border:1px solid #d2d2d2;
+                                    @include Align-middle-column;
+                                    // font-size:2.6rem;
+                                    // @include Regular;
+                                    em{
+                                        padding-top:.9rem;
+                                    }
                                 }
                             }
                         }
