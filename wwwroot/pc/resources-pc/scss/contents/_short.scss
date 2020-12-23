@@ -1649,6 +1649,7 @@
     .preCheckin-cont {
         .section-cont {
             .section-form {
+                margin-top:0;
                 .form-header {
                     margin-bottom:0;
                     @include Align-between;
@@ -1689,11 +1690,14 @@
                         }
                     }
                     &.agree-area {
-                        padding:0;
+                        padding:0 0 50px;
                     }
                 }
                 &.form2 {
                     .form-cont {
+                        & + .form-cont {
+                            padding-top:0;
+                        }
                         .row-header {
                             padding:0 40px 20px;
                             ul {

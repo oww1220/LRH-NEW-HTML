@@ -2272,8 +2272,13 @@
                 }
                 &.form2 {
                     .form-cont {
+                        & + .form-cont {
+                            padding-top:0;
+                        }
                         .row-header {
-                            padding:0 40px 20px;
+                            margin:0 40px 20px;
+                            padding-bottom:20px;
+                            border-bottom:1px solid #e7e7e7;
                             ul {
                                 @include Align-middle-left; 
                                 li + li {
