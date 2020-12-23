@@ -1197,7 +1197,6 @@
         .selection{
             display:flex;
             align-items: center;
-
             .input-tit{
                 flex:none;
                 flex-basis: 170px;
@@ -1208,7 +1207,6 @@
         .driver-license-cont{ 
             position: relative;
             margin-top:40px;
-
             input, select{
                 max-width:130px;
                 height:40px;
@@ -1226,35 +1224,42 @@
                 width:670px;
                 height:378px;
                 @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
-
-                .type-box, .number-box, .expiration-date-box, .issue-date-box{
-                    position:relative;
-                    display:block;
-    
+                .type-box, .number-box, .name-box, .expiration-date-box, .issue-date-box {
                     .numbering{
                         @include Position($top:10px,$right:-26px);
-                    }            
+                    }      
+                    .inputT, select {
+                        max-width: 100%;
+                    }      
                 }
                 .type-box{
-                    @include Position($top:30px, $left:55px);
-    
-                    select{width: 130px;}
-                }
-                .number-box{
-                    @include Position($top:90px, $left:202px);
-    
-                    .box-between{
-                        width:430px;
-    
-                        .inputT{width:auto;}
-                        select, input{max-width:102px;}
+                    @include Position($top:30px, $left:40px);
+                    select{
+                        max-width:125px;
                     }
                 }
+                .number-box{
+                    @include Position($top:85px, $left:180px);
+                    .box-between{
+                        width:430px;
+                        select{
+                            max-width:125px;
+                        }
+                    }
+                }
+                .name-box {
+                    @include Position($top:135px, $left:220px);
+                }
                 .expiration-date-box{
-                    @include Position($top:256px, $left:270px);
+                    @include Position($top:260px, $left:250px);
+                    .box-align {
+                        .symbol {
+                            width:auto;
+                        }
+                    }
                 }
                 .issue-date-box{
-                    @include Position($bottom:30px, $left:202px);
+                    @include Position($bottom:30px, $left:180px);
                 }
             }
         }
@@ -1302,7 +1307,6 @@
                 }
             }
         }
-
         .guide-cont{
             margin-top:30px;
 
@@ -1310,8 +1314,7 @@
                 font-size:18px;
             }
             .lst{
-                margin-top:20px;
-
+                margin-top:20px !important;
                 li{
                     padding-left:28px;
                     + li{margin-top:10px;}
@@ -2139,7 +2142,7 @@
                 }
             }
             .box-between {
-                align-items: flex-start;
+                //align-items: flex-start;
                 .section-form {
                     width:48%;
                     .form-cont {
@@ -2226,121 +2229,10 @@
                         }
                     }
                     .lst {
+                        margin-top:0;
                         li + li {
                             margin-top:10px;
                         }
-                    }
-                    .driver-license-section{
-                        .selection{
-                            display:flex;
-                            align-items: center;
-                
-                            .input-tit{
-                                flex:none;
-                                flex-basis: 170px;
-                                width:170px;
-                            }
-                        }
-                        .driver-license-cont{ 
-                            position: relative;
-                            margin-top:35px;
-                
-                            input, select{
-                                max-width:130px;
-                                height:40px;
-                            }
-                            .box-align{
-                                align-items: center;
-                
-                                .symbol{margin-right:5px;}
-                            }
-                        
-                        }
-                        .domestic-license{
-                            .driver-license-cont{               
-                                width:670px;
-                                height:378px;
-                                @include Background($sprite:'img-domestic-license', $position:top left, $path:'', $size:contain);
-                
-                                .type-box, .number-box, .name-box, .expiration-date-box, .issue-date-box{
-                                    position:relative;
-                                    display:block;
-                                    .numbering{
-                                        @include Position($top:10px,$right:-26px);
-                                    }            
-                                }
-                                .type-box{
-                                    @include Position($top:30px, $left:40px);
-                                    select{width: 130px;}
-                                }
-                                .number-box{
-                                    @include Position($top:85px, $left:180px);
-                                    .box-between{
-                                        width:430px;
-                                        .inputT{
-                                            width:auto;
-                                        }
-                                        select, input{
-                                            max-width:102px;
-                                        }
-                                    }
-                                }
-                                .name-box {
-                                    @include Position($top:135px, $left:220px);
-                                    .inputT {
-                                        max-width: 100%;
-                                    }
-                                }
-                                .expiration-date-box{
-                                    @include Position($top:260px, $left:250px);
-                                    .box-align {
-                                        .symbol {
-                                            width:auto;
-                                        }
-                                        .inputT {
-                                            max-width: 100%;
-                                        }
-                                    }
-                                }
-                                .issue-date-box{
-                                    @include Position($bottom:30px, $left:180px);
-                                    .inputT {
-                                        max-width: 100%;
-                                    }
-                                }
-                            }
-                        }
-                        .international-license{
-                            .driver-license-cont{               
-                                width:670px;
-                                height:553px;
-                                @include Background($sprite:'img-international-license', $position:top left, $path:'', $size:contain);
-                            }            
-                        }
-                        .guide-cont{
-                            margin-top:30px;
-                
-                            .tit{
-                                font-size:18px;
-                            }
-                            .lst{
-                                margin-top:20px;
-                
-                                li{
-                                    padding-left:28px;
-                                    + li{margin-top:10px;}
-                                }
-                            }
-                        }
-                        .numbering{
-                            @include Align-middle;
-                            width:18px;
-                            height:18px;
-                            color:#fff;
-                            font-size:12px;
-                            border-radius:18px;
-                            background-color:#ff404b;
-                        }        
                     }
                     &.agree-area {
                         padding:0;
@@ -2441,11 +2333,6 @@
                         .btn-area {
                             padding:60px 0 0;
                         }
-                    }
-                }
-                &.form3 {
-                    .lst {
-                        margin-top:0;
                     }
                 }
                 &:last-child {
