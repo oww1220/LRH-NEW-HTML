@@ -88,6 +88,7 @@ $(function(){
         $('.goQuick-menu-list').addClass('active');
         $('.bg-dimmed').show();
         $('.btn-goQuick').addClass('btn-goQuick-close');
+        $('.fixedRight').css('z-index', '51');
         logic();
     });
 
@@ -97,6 +98,7 @@ $(function(){
         $('.goQuick-menu-list').removeClass('active');
         $('.bg-dimmed').hide();
         $('.btn-goQuick').removeClass('btn-goQuick-close');
+        $('.fixedRight').css('z-index', '11');
         logic();
     });
 
@@ -104,6 +106,7 @@ $(function(){
     MUI.event.toggle('.fixedRight ~ .bg-dimmed', null, true, function(logic, layer) {
         $('.goQuick-menu-list').removeClass('active');
         $('.btn-goQuick').removeClass('btn-goQuick-close');
+        $('.fixedRight').css('z-index', '11');
         logic();
     });
 

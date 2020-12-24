@@ -1152,101 +1152,102 @@ if($('.driver-license-section .detail-radio').length) {
 //단기렌터카 > 실시간 예약/사전체크인/추가운전자 등록, 
 //마이페이지 > 단기렌터카/이용중관리/추가운전자 등록
 
-//추가 운전자 구분
-if($('.form2 .detail-radio').length) {
-    $('.form2 .detail-tab-wrap-2').hide();
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '1'){
-            $('.form2 .detail-tab-wrap-1').addClass('active');
-            $('.form2 .detail-tab-wrap-2').hide();
-            $('.form2 .detail-tab-wrap-1').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-1').removeClass('active');
-        }
-    });
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '2'){
-            $('.form2 .detail-tab-wrap-2').addClass('active');
-            $('.form2 .detail-tab-wrap-1').hide();
-            $('.form2 .detail-tab-wrap-2').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-2').removeClass('active');
-        }
-    });
-}
-if($('.form2 .detail-radio').length) {
-    $('.form2 .detail-tab-wrap-4').hide();
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '3'){
-            $('.form2 .detail-tab-wrap-3').addClass('active');
-            $('.form2 .detail-tab-wrap-4').hide();
-            $('.form2 .detail-tab-wrap-3').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-3').removeClass('active');
-        }
-    });
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '4'){
-            $('.form2 .detail-tab-wrap-4').addClass('active');
-            $('.form2 .detail-tab-wrap-3').hide();
-            $('.form2 .detail-tab-wrap-4').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-4').removeClass('active');
-        }
-    });
-}
+    //추가 운전자 구분
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-2').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '1'){
+                $('.form2 .detail-tab-wrap-1').addClass('active');
+                $('.form2 .detail-tab-wrap-2').hide();
+                $('.form2 .detail-tab-wrap-1').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-1').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '2'){
+                $('.form2 .detail-tab-wrap-2').addClass('active');
+                $('.form2 .detail-tab-wrap-1').hide();
+                $('.form2 .detail-tab-wrap-2').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-2').removeClass('active');
+            }
+        });
+    }
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-4').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '3'){
+                $('.form2 .detail-tab-wrap-3').addClass('active');
+                $('.form2 .detail-tab-wrap-4').hide();
+                $('.form2 .detail-tab-wrap-3').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-3').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '4'){
+                $('.form2 .detail-tab-wrap-4').addClass('active');
+                $('.form2 .detail-tab-wrap-3').hide();
+                $('.form2 .detail-tab-wrap-4').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-4').removeClass('active');
+            }
+        });
+    }
 
-//면허 국내,외 구분
-if($('.form2 .detail-radio').length) {
-    $('.form2 .detail-tab-wrap-2-2').hide();
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '2-1'){
-            $('.form2 .detail-tab-wrap-2-1').addClass('active');
-            $('.form2 .detail-tab-wrap-2-2').hide();
-            $('.form2 .detail-tab-wrap-2-1').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-2-1').removeClass('active');
-        }
-    });
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '2-2'){
-            $('.form2 .detail-tab-wrap-2-2').addClass('active');
-            $('.form2 .detail-tab-wrap-2-1').hide();
-            $('.form2 .detail-tab-wrap-2-2').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-2-2').removeClass('active');
-        }
-    });
-}
-if($('.form2 .detail-radio').length) {
-    $('.form2 .detail-tab-wrap-4-2').hide();
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '4-1'){
-            $('.form2 .detail-tab-wrap-4-1').addClass('active');
-            $('.form2 .detail-tab-wrap-4-2').hide();
-            $('.form2 .detail-tab-wrap-4-1').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-4-1').removeClass('active');
-        }
-    });
-    $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
-        if(e.target.value === '4-2'){
-            $('.form2 .detail-tab-wrap-4-2').addClass('active');
-            $('.form2 .detail-tab-wrap-4-1').hide();
-            $('.form2 .detail-tab-wrap-4-2').show();
-        }
-        else{
-            $('.form2 .detail-tab-wrap-4-2').removeClass('active');
-        }
-    });
-}
+    //면허 국내,외 구분
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-2-2').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '2-1'){
+                $('.form2 .detail-tab-wrap-2-1').addClass('active');
+                $('.form2 .detail-tab-wrap-2-2').hide();
+                $('.form2 .detail-tab-wrap-2-1').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-2-1').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '2-2'){
+                $('.form2 .detail-tab-wrap-2-2').addClass('active');
+                $('.form2 .detail-tab-wrap-2-1').hide();
+                $('.form2 .detail-tab-wrap-2-2').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-2-2').removeClass('active');
+            }
+        });
+    }
+    if($('.form2 .detail-radio').length) {
+        $('.form2 .detail-tab-wrap-4-2').hide();
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '4-1'){
+                $('.form2 .detail-tab-wrap-4-1').addClass('active');
+                $('.form2 .detail-tab-wrap-4-2').hide();
+                $('.form2 .detail-tab-wrap-4-1').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-4-1').removeClass('active');
+            }
+        });
+        $('.form2 .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === '4-2'){
+                $('.form2 .detail-tab-wrap-4-2').addClass('active');
+                $('.form2 .detail-tab-wrap-4-1').hide();
+                $('.form2 .detail-tab-wrap-4-2').show();
+            }
+            else{
+                $('.form2 .detail-tab-wrap-4-2').removeClass('active');
+            }
+        });
+    }
+
 
 
 
@@ -1606,12 +1607,12 @@ if($('.mypage-container .indicator-toggle-cont').length) {
     });
 
 
-    /*브라우저 리사이즈*/
-    if($(".layer-iscroll").length){
-        $(window).on("resize",function(){
-            MUI.IScrollSingle.iscrollRefresh(null);
-        });
-    }
+/*브라우저 리사이즈*/
+if($(".layer-iscroll").length){
+    $(window).on("resize",function(){
+        MUI.IScrollSingle.iscrollRefresh(null);
+    });
+}
 
 
 });
