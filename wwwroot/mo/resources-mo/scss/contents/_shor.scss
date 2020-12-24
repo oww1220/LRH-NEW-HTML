@@ -262,7 +262,7 @@
 						}
 					}
 				}
-			}
+            }
             
         }
     }
@@ -2895,7 +2895,7 @@
                                 }
                                 a.active{
                                     em{
-                                        @include Bold;
+                                        @include Bold;                                      
                                     }
                                 }
                                 em{
@@ -3071,6 +3071,7 @@
                                 text-align: left;
                                 line-height:1.4;
                                 @include Regular;
+                                word-break: break-all;
                                 &.active{
                                     @include Bold;
                                     b{
@@ -3416,7 +3417,7 @@
                                         height:4.2rem;
                                         font-size: 1.1rem;
                                         border-radius: .5rem;
-                                        padding: 0 1.1rem;
+                                        padding: 0;
                                         @include Regular;
                                         color:#8f9191;
                                         @include Align-middle-column;
@@ -3893,6 +3894,29 @@
                 &:before{
                     @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
                 } 
+            }
+        }
+    }
+    .section-detail .detail-main-list.detail-main-list1 .detail-main-accor .shor-main-toggle-cont .shor-main-list-tit .iconList {
+        width: 40%;
+        &.col2 {
+               li:nth-of-type(1) {
+                    width: 65%;
+                }
+                li:nth-of-type(2) {
+                    width: 35%;
+                }
+        }
+    }
+
+    //20201224 실시간예약 영문 추가
+    .eng-selection {
+        .selectbox {
+            &.selectbox-layer{
+                font-size:1.2rem;
+                color:#8f9191;
+                @include Regular;
+                @include Align-middle-left;
             }
         }
     }
