@@ -805,56 +805,59 @@ if($('.customer-list').length){
 }
 
 //전국지점안내
-if($('.branch-office-section').length){
+if($('.branch-office-section').length){        
     MUI.event.toggle('.accorSpotBtn', '.accorSpotCont', false, function(logic, layer) {
         if(MUI.slide.LayerSwiper) MUI.slide.LayerSwiper.destroy();
 
         logic();
+        
 
-        //영문 location - 아코디언 오픈 후 실행
-        if($('.branchesSwiper').length) {
+        //영문 Location 페이지
+        var activeDiv = layer[0];
+        var activeSlide = $(activeDiv).find($('.swiper-slide'));
+        
+        //console.log($(activeDiv).find($('.swiper-slide')).length);     
+        if(activeSlide.length > 1){
+         
+            var autoplayFlag = true;    
+            var activeSwiper = $(activeDiv).find($('.branchesSwiper'));
 
-            var autoplayFlag = true;
-            var branchesSwiper = MUI.slide.init('.branchesSwiper','swiper', {
+            $('.branchesSwiper-controls').show();   
+            MUI.slide.LayerSwiper = MUI.slide.init(activeSwiper,'swiper', {
                 loop: true,				
                 autoplay: {
-                    delay: 3000,
+                    delay: 2500,
+                    disableOnInteraction: false
                 },
                 pagination: {
                     el: '.branchesSwiper .branchesSwiper-pagination',
                     clickable: true,
-                },        
+                },                            
             });
-            
-			$(".btnAutoplay").click(function () {						
-				if(autoplayFlag == true){
-					$(this).addClass('stop');
-                    branchesSwiper.autoplay.stop();                    
-                    //console.log(branchesSwiper.autoplay.running);                    
-					autoplayFlag = false;
-				}else{
-					$(this).removeClass('stop');
-                    branchesSwiper.autoplay.start();                    
-                    //console.log(branchesSwiper.autoplay.running);
-					autoplayFlag = true;
-				}
+           
+            $('.branchesSwiper .btnAutoplay').removeClass('stop');            
+            $(activeDiv).find($('.branchesSwiper .btnAutoplay')).on('click',function(){                
+                if(autoplayFlag == true){
+                    $(this).addClass('stop');0                    
+                    MUI.slide.LayerSwiper.autoplay.stop();                                        
+                    autoplayFlag = false;
+                }else{
+                    $(this).removeClass('stop');                    
+                    MUI.slide.LayerSwiper.autoplay.start();                    
+                    autoplayFlag = true;
+                }
             });
-
-            // console.log(branchesSwiper.autoplay);  
-            // $(".swiper-pagination-clickable .swiper-pagination-bullet").click(function () {	
-            //     //console.log(branchesSwiper.autoplay.running);  
-
-            //     // if(branchesSwiper.autoplay.running == true){
-            //     //     console.log('aa');                
-            //     // }else{
-            //     //     console.log('bb');                
-            //     // }
-            // });            
-            
-            
-        }        
+        }else{
+            $('.branchesSwiper-controls').hide();
+        }
     });
 }
+if($('.branchOfferingTab').length){
+    MUI.event.taps('.branchOfferingTab', false, function(swap){
+        swap();
+    });
+}
+
 
 //기사포함지점안내 리스트
 if($('.branchDriverTab').length){

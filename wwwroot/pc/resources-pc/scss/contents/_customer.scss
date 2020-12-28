@@ -241,6 +241,7 @@
                     }
     
                     .btn{
+                        @include Regular;
                         height:34px; 
                         font-size:14px;
                         @include roundBox;
@@ -270,7 +271,8 @@
             }      
             
             .detail-cont{
-                @include Align-box;
+                //@include Align-box;
+                @include Align-top-left;
                 padding:50px 20px 50px 40px;
                 box-sizing: border-box;
                 border-bottom:1px solid #e7e7e7;
@@ -413,6 +415,8 @@
 .eng-customer-wrap{
     .customer-container{
         .branches-region{
+            word-break: break-word;
+
             .top-area{
                 @include Align-between;
                 margin-bottom:30px;
@@ -424,46 +428,118 @@
                     .selectbox{width:100%;}
                 }
             }
-
-            .branchesSwiper-controls{
-                @include Align-middle;
-                padding:20px 0;
-
-                .btnAutoplay{
+            .detail-cont{            
+                .branchesSwiper{width:430px;}
+                .branchesSwiper-controls{
                     @include Align-middle;
-                    width:25px;
-                    height:25px;
-                    @include Hide_txt;
-                    border:1px solid $border-darkgrey;
-                    border-radius: 25px;
-                    box-sizing: border-box;
-                    
-                    &::before, &::after{
-                        content:"";
-                        width:2px;
-                        height:9px;
-                        background-color:#8f9191;
-                        margin:0 1.5px;
+                    padding:20px 0;
+    
+                    .btnAutoplay{
+                        @include Align-middle;
+                        width:25px;
+                        height:25px;
+                        @include Hide_txt;
+                        border:1px solid $border-darkgrey;
+                        border-radius: 25px;
+                        box-sizing: border-box;
+                        
+                        &::before, &::after{
+                            content:"";
+                            width:2px;
+                            height:9px;
+                            background-color:#8f9191;
+                            margin:0 1.5px;
+                        }
+    
+                        &.stop{                        
+                            &::before{
+                                display:none;
+                            }                        
+                            &::after{
+                                @include arrowR;
+                                background-color:transparent;
+                                margin:0;
+                            }
+                        }
                     }
-
-                    &.stop{                        
-                        &::before{
-                            display:none;
-                        }                        
-                        &::after{
-                            @include arrowR;
-                            background-color:transparent;
-                            margin:0;
+    
+                    .branchesSwiper-pagination{
+                        @include Align-middle;
+    
+                        span{
+                            margin-left:10px;
                         }
                     }
                 }
 
-                .branchesSwiper-pagination{
-                    @include Align-middle;
-
-                    span{
-                        margin-left:10px;
+                .detail-cont-col{                    
+                    .detail-cont-row{
+                        .tit{@include Bold;}
+                        .txt{
+                            margin-top:10px; 
+                            font-size:14px;
+                            color:#54585a;
+                        }
+    
+                        + .detail-cont-row{margin-top:30px;}
                     }
+                    .detail-cont-btns{
+                        display:flex;
+                        margin-top:30px;
+                        
+                        .btn{
+                            width:auto; 
+                            height:40px;
+                            color:#54585a;
+                            @include Regular;
+
+                            .icon{margin-right:5px;}
+                            + .btn{margin-left:10px;}
+                        }
+                    }
+
+                    + .detail-cont-col{
+                        padding-left:50px;
+                    }
+                }
+            }
+        }
+        .branches-Offering{
+            .tab-nav{margin-bottom:60px;}
+            .indicator-area{
+                margin-bottom:60px;
+
+            
+                .menu-list{                
+                    @include Align-between;
+                    border-left:1px solid $border-darkgrey; 
+                    background-color:#fff;
+                    box-sizing: border-box;
+
+                    .chk-box{
+                        input{display:none;}
+                        label{
+                            position:relative;
+                            @include Align-middle;
+                            height:78px;
+                            text-align:center;
+                            box-sizing:border-box;
+                            border:1px solid $border-darkgrey; 
+                            border-left:none;
+                        }
+                        input:checked + label{
+                            @include Bold; 
+                            color:$txt-red;
+                            border:1px solid $txt-red;
+                            background-color:#fff9f9;
+                            transition: all .25s ease-out;
+                            z-index:5;
+                        }
+                    }
+
+                    li{
+                        flex:1;
+                    }                
                 }
             }
         }
