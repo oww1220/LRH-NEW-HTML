@@ -475,7 +475,7 @@
                 .selection-cont {
                     @include Align-between;
                     border-bottom: 1px solid #666;
-                    .selectbox {
+                    /* .selectbox {
                         border: none;
                         background: url(../../resources-pc/images/icons/ico-arrow-down2.png) center right no-repeat;
                         height: 35px;
@@ -483,7 +483,84 @@
                         padding:0 5px;
                         color: #aaa;
                         font-size: 16px;
+                    } */
+                    //커스텀
+                    .select-hidden {
+                        display: none;
+                        visibility: hidden;
+                        padding-right: 10px;
+                      }
+                    .select {
+                        cursor: pointer;
+                        display: inline-block;
+                        position: relative;
+                        font-size: 16px;
+                        color: #aaa;
+                        width: 40%;
+                        height: 35px;
                     }
+                    .select-styled {
+                        position: absolute; 
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        /* background-color: #da291c; */
+                        padding: 8px 15px;
+                        /* @include transition(all 0.2s ease-in); */
+                        &:after {
+                            content:"";
+                            width: 0;
+                            height: 0;
+                            border: 5px solid #e8e8e8;
+                            border-color: #e8e8e8 transparent transparent transparent;
+                            position: absolute;
+                            top: 18px;
+                            right: 0;
+                          }
+                          &:hover {
+                            /* background-color: darken(#c0392b, 2); */
+                            color: #fff;
+                          }
+                          &:active, &.active {
+                           /*  background-color: darken(#000, 5); */
+                           color: #fff;
+                            &:after {
+                              top: 11px;
+                              border-color: transparent transparent #e8e8e8 transparent;
+                            }
+                          }
+                    }
+
+                    .select-options {
+                        display: none; 
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        left: 0;
+                        z-index: 999;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        background-color: darken(#242424, 5);
+                        border: 1px solid #e8e8e8;
+                        border-radius: 10px;
+                        li {
+                          margin: 0;
+                          padding: 10px 0;
+                          text-indent: 15px;
+                          border-top: 1px solid darken(#000, 10);
+                          /* @include transition(all 0.15s ease-in); */
+                          &:hover {
+                            color: #fff;
+                            /* background: #000; */
+                          }
+                          &[rel="hide"] {
+                            display: none;
+                          }
+                        }
+                      }
+
                 }
             }
         
@@ -1068,10 +1145,8 @@
         }
     }
 
-    .section {
-        //@include Ellipsis($w:100px, $lines:2);
-        //@include Position($top: 0, $right: 0);
-    }
+    // select 커스텀
+
 }
 
 
