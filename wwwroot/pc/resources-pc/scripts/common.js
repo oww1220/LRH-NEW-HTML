@@ -1355,6 +1355,7 @@ if($('.longTerm-container .longTermBenefitTab').length){
     
     });
 }
+
 //대여 및 요금안내
 if($('.fare-section .fareTab').length){
     MUI.event.taps('.fare-section .fareTab', false, function(swap){
