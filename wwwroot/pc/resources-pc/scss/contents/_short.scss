@@ -2503,7 +2503,7 @@
     }
 }
 
-
+//영문
 .eng-wrap {
     .realTime-cont {
         table {
@@ -2593,4 +2593,41 @@
             }
         }
     }
+
+    //Rental information
+    .section-indicator{
+        .detail-layer-nav{
+            button{
+                padding: 40px 15px;
+            }
+        }
+    }
+    .explain-cont{
+        .statement{
+            .tit-size-mid{margin-bottom:60px;}
+            > .lst{
+                > li{
+                   + li{margin-top:60px;} 
+                }
+
+                &.bold{
+                    > li{@include Bold; font-size:16px;}
+                }
+
+                .details{
+                    margin-top:30px;
+                    @include Regular;
+                    font-size:14px;
+    
+                    .lst{
+                        li{@include Regular;}
+                    }                
+                }
+                .img-box, .tbl-box{
+                    margin-top:30px;
+                }
+            }            
+        }
+    }    
+    
 }

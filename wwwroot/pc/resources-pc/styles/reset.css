@@ -359,6 +359,7 @@ html, body {
 .section-explain .explain-cont .tbl-box table {
 	width: 100%;
 	border-top: 1px solid #e7e7e7;
+	word-break: break-word;
 }
 
 .section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td {
@@ -374,20 +375,34 @@ html, body {
 	border-right: none;
 }
 
-.section-explain .explain-cont .tbl-box table thead th {
+.section-explain .explain-cont .tbl-box table th {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
 	background-color: #fafafa;
 }
 
+.section-explain .explain-cont .tbl-box table td {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+}
+
 .section-explain .explain-cont .tbl-box table .align-l {
+	text-align: left;
+}
+
+.section-explain .explain-cont .tbl-box table .lst {
 	text-align: left;
 }
 
 .section-explain .explain-cont .tbl-box table + .lst {
 	margin-top: 20px;
 	margin-bottom: 0;
+}
+
+.section-explain .explain-cont .tbl-box table.td-align-l td {
+	text-align: left;
 }
 
 .section-form .form-header {

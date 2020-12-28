@@ -532,6 +532,7 @@ $txt-darkblack: #2f2f2f;
 				table{
 					width:100%;
 					border-top:1px solid #e7e7e7;
+					word-break: break-word;
 					
 					th, td{
 						padding:30px; 
@@ -544,13 +545,23 @@ $txt-darkblack: #2f2f2f;
 					thead th, td{
 						&:last-of-type{border-right:none;}
 					}
-					thead th{
+					th{
 						@include Bold;
 						background-color:#fafafa;
 					}
+					td{@include Regular;}
 					.align-l{text-align:left;}
+					.lst{text-align:left;}
 					
 					+ .lst{margin-top:20px; margin-bottom:0;}
+
+					&.td-align-l{
+						td{text-align:left;}
+					}
+				}
+
+				.btns{
+					
 				}
 			}	
 		}
