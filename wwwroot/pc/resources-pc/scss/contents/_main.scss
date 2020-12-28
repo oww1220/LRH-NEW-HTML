@@ -475,6 +475,15 @@
                 .selection-cont {
                     @include Align-between;
                     border-bottom: 1px solid #666;
+                    .selectbox {
+                        border: none;
+                        background: url(../../resources-pc/images/icons/ico-arrow-down2.png) center right no-repeat;
+                        height: 35px;
+                        width: 40%;
+                        padding:0 5px;
+                        color: #aaa;
+                        font-size: 16px;
+                    }
                 }
             }
         
@@ -1085,12 +1094,13 @@
         /* @include transition(all 0.2s ease-in); */
         &:after {
             content:"";
-            width: 0;
-            height: 0;
-            border: 5px solid #e8e8e8;
-            border-color: #e8e8e8 transparent transparent transparent;
+            width: 7px;
+            height: 7px;
+            border-left: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+            transform: rotate(-45deg);
             position: absolute;
-            top: 18px;
+            top: 12px;
             right: 0;
             }
             &:hover {
@@ -1101,8 +1111,10 @@
             /*  background-color: darken(#000, 5); */
             color: #fff;
             &:after {
-                top: 11px;
-                border-color: transparent transparent #e8e8e8 transparent;
+                top: 17px;
+                border-left: 1px solid #eaeaea;
+                border-bottom: 1px solid #eaeaea;
+                transform: rotate(135deg);
             }
         }
     }
@@ -1118,16 +1130,12 @@
         list-style: none;
         background-color: #242424;
         border: 1px solid #666;
-        //border-radius: 15px;
         li {
             margin: 0;
             padding: 2px 0;
             text-indent: 15px;
-            //border-top: 1px solid darken(#000, 10);
-            /* @include transition(all 0.15s ease-in); */
             &:hover {
             color: #fff;
-            /* background: #000; */
             }
             &[rel="hide"] {
             display: none;
@@ -1136,6 +1144,3 @@
     }
 
 }
-
-
-

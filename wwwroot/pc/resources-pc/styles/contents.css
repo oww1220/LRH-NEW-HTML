@@ -2503,6 +2503,16 @@ html, body {
 	border-bottom: 1px solid #666;
 }
 
+.main-wrap .main-visual-wrap .section-visual-booking.time .selection-cont .selectbox {
+	border: none;
+	background: url(../../resources-pc/images/icons/ico-arrow-down2.png) center right no-repeat;
+	height: 35px;
+	width: 40%;
+	padding: 0 5px;
+	color: #aaa;
+	font-size: 16px;
+}
+
 .main-wrap .booking-path-wrap {
 	height: 80px;
 	margin-bottom: 40px;
@@ -3663,12 +3673,17 @@ html, body {
 
 .main-wrap .select-styled:after {
 	content: "";
-	width: 0;
-	height: 0;
-	border: 5px solid #e8e8e8;
-	border-color: #e8e8e8 transparent transparent transparent;
+	width: 7px;
+	height: 7px;
+	border-left: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	     -o-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 	position: absolute;
-	top: 18px;
+	top: 12px;
 	right: 0;
 }
 
@@ -3683,8 +3698,14 @@ html, body {
 }
 
 .main-wrap .select-styled:active:after, .main-wrap .select-styled.active:after {
-	top: 11px;
-	border-color: transparent transparent #e8e8e8 transparent;
+	top: 17px;
+	border-left: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	-webkit-transform: rotate(135deg);
+	   -moz-transform: rotate(135deg);
+	    -ms-transform: rotate(135deg);
+	     -o-transform: rotate(135deg);
+	        transform: rotate(135deg);
 }
 
 .main-wrap .select-options {
@@ -3705,12 +3726,10 @@ html, body {
 	margin: 0;
 	padding: 2px 0;
 	text-indent: 15px;
-	/* @include transition(all 0.15s ease-in); */
 }
 
 .main-wrap .select-options li:hover {
 	color: #fff;
-	/* background: #000; */
 }
 
 .main-wrap .select-options li[rel="hide"] {
@@ -13332,7 +13351,7 @@ html, body {
 	height: 100%;
 }
 
-.short-main-wrap .tab-cont-result .short-result li {
+.short-main-wrap .tab-cont-result .short-result > li {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -13352,12 +13371,12 @@ html, body {
 	border-top: 1px solid #e7e7e7;
 }
 
-.short-main-wrap .tab-cont-result .short-result li:nth-of-type(1) {
+.short-main-wrap .tab-cont-result .short-result > li:nth-of-type(1) {
 	width: 477px;
 	padding-left: 10px;
 }
 
-.short-main-wrap .tab-cont-result .short-result li:nth-of-type(1)::after {
+.short-main-wrap .tab-cont-result .short-result > li:nth-of-type(1)::after {
 	display: inline-block;
 	content: "";
 	width: 1px;
@@ -13365,16 +13384,16 @@ html, body {
 	background: #e7e7e7;
 }
 
-.short-main-wrap .tab-cont-result .short-result li:nth-of-type(2) {
+.short-main-wrap .tab-cont-result .short-result > li:nth-of-type(2) {
 	width: 478px;
 }
 
-.short-main-wrap .tab-cont-result .short-result li:nth-of-type(3) {
+.short-main-wrap .tab-cont-result .short-result > li:nth-of-type(3) {
 	width: 225px;
 	border-top: 0 none;
 }
 
-.short-main-wrap .tab-cont-result .short-result li button {
+.short-main-wrap .tab-cont-result .short-result > li button {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
@@ -13388,7 +13407,7 @@ html, body {
 	        border-radius: 0;
 }
 
-.short-main-wrap .tab-cont-result .short-result li button:disabled {
+.short-main-wrap .tab-cont-result .short-result > li button:disabled {
 	background: #8f9191;
 }
 
@@ -13431,12 +13450,11 @@ html, body {
 	-webkit-border-radius: 6px;
 	   -moz-border-radius: 6px;
 	        border-radius: 6px;
-	background-color: #fff;
 	height: 50px;
 	padding: 0 10px;
 	width: 76px;
 	margin: 0 2px;
-	background-position: center right 10px;
+	background: url(../../resources-pc/images/icons/ico-arrow-down.png) no-repeat center right 10px #fff;
 }
 
 .short-main-wrap .tab-cont-result .short-result .result-time select:disabled {
