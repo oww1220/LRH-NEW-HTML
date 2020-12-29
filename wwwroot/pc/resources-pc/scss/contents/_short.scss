@@ -1399,6 +1399,12 @@
                                     display:block;
                                 }
                             }
+                            &.detail-tab-wrap-D{
+                                display:none;
+                                &.active{
+                                    display:block;
+                                }
+                            }
                             .input-add {
                                 padding:0;
                                 > div {
@@ -1425,14 +1431,28 @@
                                 }
                                 .lst {
                                     padding-top:30px;
+                                    .btn-box{
+                                        @include Position($top: -50%, $right: 0);
+                                        transform: translateY(-10%);
+                                    }
                                 }
                             }
                             .lpay-card {
                                 .card-add {
-                                    @include Align-between;
+                                    @include Align-middle-left;
+                                    width:670px;
+                                    ul{
+                                        @include Align-middle-left;
+                                        @include Inline-scrolling;
+                                        display: inline-flex;
+                                        flex-wrap: nowrap;
+                                        li{
+                                            width:auto;
+                                        }
+                                    }
                                     .chk-view-box {
-                                        width: 75%;
-                                        margin-left: 5px;
+                                        //width: 75%;
+                                        margin-left: 10px;
                                         input:checked + label {
                                              color: #ed1c24;
                                              border-color: #ed1c24;
@@ -1443,15 +1463,40 @@
                                              }
                                          }
                                          label {
-                                             border-radius: 6px;
-                                             height: 80px;
-                                             text-align: center;
-                                             box-sizing: border-box;
-                                             color: #8f9191;
-                                             border: 1px solid #d2d2d2;
-                                             background-color: #fff;
-                                             position: relative;
-                                             @include Align-middle;
+                                            border-radius: 6px;
+                                            width: 160px;
+                                            height: 140px;
+                                            text-align: center;
+                                            box-sizing: border-box;
+                                            color: #8f9191;
+                                            border: 1px solid #d2d2d2;
+                                            background-color: #fff;
+                                            position: relative;
+                                            @include Align-middle;
+                                            align-items: flex-start;
+                                            justify-content: flex-start;
+                                            padding:0 20px;
+                                            b{
+                                                font-size:18px;
+                                                @include Bold;
+                                                padding:30px 0 0 0;
+                                            }
+                                            em{
+                                                font-size:18px;
+                                                color:#54585a;
+                                                @include Regular;
+                                                padding:10px 0 0 0;
+                                            }
+                                            div{
+                                                @include Align-between;
+                                                width:100%;
+                                                padding:20px 0 0 0;
+                                                span{
+                                                    font-size:18px;
+                                                    color:#8f9191;
+                                                    @include Regular;
+                                                }
+                                            }
                                              &::after {
                                                  display: none;
                                                  content: '';
@@ -1465,12 +1510,24 @@
                                          }
                                      }
                                      .card-add-btn {
-                                         width:25%;
+                                         //width:25%;
                                          margin-left: 10px;
                                      }
                                      a {
-                                        width:100%;
-                                        height:80px;
+                                        width:160px;
+                                        height:140px;
+                                        background-color:#fff;
+                                        border:1px solid #d2d2d2;
+                                        color:#2f2f2f;
+                                        @include Align-middle-column;
+                                        i{
+                                            font-size:28px;
+                                            @include Bold;
+                                            line-height: 1;
+                                        }
+                                        em{
+                                            padding:15px 0 0 0;
+                                        }
                                      }
                                 }
                                 .input-add {
