@@ -470,7 +470,14 @@
                             height:auto;
                             padding: 0;
                             margin: 0;
-                            cursor: pointer;
+                            i{
+                                margin-right:5px;
+                            }
+                            span{
+                                font-size:16px;
+                                color:#fff;
+                                @include Bold;
+                            }
                         }
 
                         //툴팁 레이어
@@ -527,16 +534,51 @@
                                     }
                                 }                    
                             }
+
+                            //중고차 리스트 튤팁
+                            .tooltipCont-list{
+                                width: 270px;
+                                left: auto;
+                                right: auto;
+                                transform: translateX(-55%);
+                                text-align:center;
+                                margin-top:20px;
+                                &:before{
+                                    transform: translateX(30%);
+                                }
+                                .tooltipCont-inner{
+                                    padding:20px;
+                                    .layer-info{
+                                        @include Align-between;
+                                        .tooltip-tit-num{
+                                            @include Bold;
+                                            font-size:18px;
+                                            text-align: center;
+                                            color:#2f2f2f;
+                                        }
+                                        .tooltip-txt{
+                                            @include Regular;
+                                            font-size:14px;
+                                            color:#54585a;
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
                         }
 
                         
                         .cover{
                             @include Position($bottom:0, $left:0, $right:0);
                             @include Align-between;
+                            align-items: flex-end;
                             padding:10px 20px;
                             color:#fff;
                             background: rgba(29,29,29,.6);
                             z-index:5;
+                            .btn-box{
+                                margin-right:-10px;
+                            }
                         }
                         
                     }
