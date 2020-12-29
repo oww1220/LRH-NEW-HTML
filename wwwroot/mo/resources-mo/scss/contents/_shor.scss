@@ -3941,11 +3941,15 @@
         }
     }
 }
-.eng-carauto-wrap {
+.eng-carrental-wrap {
     background-color: #fff;
     .section-visual {
         @include Background($sprite:'bg-autohouse-visual', $size:cover, $position:center center, $path:'bgs');
         padding: 3.4rem 1.7rem;
+        &.non-back {
+            background: unset;
+            
+        }
         .visual-tit{
             color:#fff;
             font-size:1.9rem;
@@ -3966,6 +3970,9 @@
                 border-bottom:1px solid #fff;
                 @include Bold;
             }
+        }
+        .visual-txt {
+            color:#8f9191;
         }
     }
     .section-detail {
