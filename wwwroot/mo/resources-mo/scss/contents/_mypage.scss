@@ -942,17 +942,76 @@
                 font-size:1.1rem;
             }
         }
+        .detail-banner {
+            position: relative;
+            @include Align-middle-left;
+            margin-bottom: 1.7rem;
+            > div {
+                @include Position ($left:1.7rem);
+                @include Align-left-column;
+                color:#19615e;
+                font-size:1.4rem;
+                strong {
+                    @include Bold;
+                    color:#19615e;
+                    font-size:1.4rem;
+                }
+            }
+        }
         .detail-cont {
             padding:1.7rem 0;
             .item-wrap {
                 padding:0 1.7rem;
-                .cont-tit h4 {
+                .detail-iconBox{
+                    margin-left: -.6rem;
+                    label {
+                        border:0 none;
+                        border-radius: 0;
+                        @include Regular;
+                        &:after {
+                            width: 1.7rem;
+                            height: 1.7rem;
+                            margin-top: -.85rem;
+                            left:.5rem;
+                        }
+                        .flag{
+                            background-color: #009bfa;
+                            color:#fff;
+                            @include Bold;
+                            height:1.9rem;
+                            padding:0 .6rem;
+                            border-radius: .4rem;
+                            margin-right:0;
+                            i{
+                                margin-right:.2rem;
+                            }
+                        }
+                    }
+                    input:checked + label {
+                        @include Regular;
+                    }
+                    input[type='checkbox'] + label:after{
+                        @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+                    }
+                    input[type='checkbox']:checked + label:after{
+                        @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                    }
+                }
+                .cont-tit {
                     background-color: #EFF2F7;
-                    padding:1.5rem 1.3rem;
-                    font-size: 1.4rem;
                     border-radius: 1rem;
+                    padding:1.5rem 1.3rem;
                     @include Align-between;
-                    @include Bold;
+                    h4 {
+                        font-size: 1.4rem;
+                        width:100%;
+                        @include Bold;
+                        @include Align-between;
+                    }
+                    strong {
+                        @include Bold;
+                    }
+
                 }
                 .cont-in {
                     padding-top:.4rem;
@@ -1089,6 +1148,210 @@
                         color:#da291c;
                     }
                 }
+                .form-cont {
+                    padding-top:1.7rem;
+                    .box-between {
+                        @include Align-between;
+                        .border-box {
+                            width:70%;
+                        }
+                        .cont-btn {
+                            width: 28%;
+                        }
+                        
+                    }
+                    .border-box {
+                        border:1px solid #d2d2d2;
+                        padding:1.4rem 1.7rem;
+                        border-radius: .6rem;
+                        box-sizing: border-box;
+                        @include Align-middle-left;
+                        label {
+                            font-size:1.1rem;
+                            margin-right:1rem;
+                            @include Bold;
+                        }
+                        .btn-schedule {
+                            margin-left:auto;
+                        }
+                        &.disabled {
+                            border-color:#e7e7e7;
+                            margin-bottom:1rem;
+                            label {
+                                color:#ddd;
+                            }
+                            input {
+                                color:#ddd;
+                            }
+                        }
+                    }
+                    .row {
+                        & + .row {
+                            padding-top:1.7rem;
+                        }
+                    }
+                    .detail-iconBox {
+                        label {
+                            height: auto;
+                        }
+                    }
+                    .wrap02 {
+                        padding-top:.9rem;
+                    }
+                    .toggle-cont {
+                        padding-top:1.3rem;
+                        display: none;
+                        div:first-child{
+                            div + div {
+                                padding-top:.9rem;
+                                &.input-phonenum {
+                                    ul {
+                                        width:70%;
+                                        li {
+                                            width:40%;
+                                            & + li {
+                                                width: 57%;
+                                            }
+                                        }
+                                    }
+                                    > div {
+                                        width:28%;
+                                        height:4.1rem;
+                                        button {
+                                            height: 100%;
+                                            font-size:1.2rem;
+                                            
+                                        }
+                                    }
+                                }
+                                &.input-birth {
+                                    ul li {
+                                        width:49%;
+                                    }
+                                }
+                            }
+                        }
+                        .form + .form {
+                            padding-top:3.4rem;
+                        }
+                        h5 {
+                            font-size:1.2rem;
+                            padding-bottom:1.3rem;
+                            @include Bold;
+                            & + div {
+                                margin-bottom:2.6rem;
+                            }
+                            & + ul {
+                                margin-bottom:0.9rem;
+                            }
+                        }
+                        &.chk-toggle-detail01 {
+                            display: block;
+                        }
+                        .cont-btn {
+                            padding:1.7rem 0 0 ;
+                        }
+                    }
+                    .detail-box {
+                        padding-bottom :1.7rem;
+                        border-bottom:1px solid #e7e7e7;
+                        strong {
+                            font-size:1.1rem;
+                            @include Regular;
+                        }
+                        b {
+                            color:#54585a;
+                            @include Regular;
+                        }
+                    }
+                    .cont-guide {
+                        padding-bottom:0;
+                    }
+                }
+                .driver-license {
+                    .input-info {
+                        li {
+                            position: relative;
+                            padding-left:1.7rem;
+                            font-size:1rem;
+                            color:#8f9191;
+                        }
+                    }
+                    .numbering {
+                        @include Align-middle;
+                        @include Position($top: .2rem, $left: 0);
+                        font-size:.9rem;
+                        width:1.2rem;
+                        height:1.2rem;
+                        border-radius: 18px;
+                        color:#fff;
+                        background-color: #ff404b; 
+                    }
+                    .cont-guide {
+                        padding-bottom:1.7rem;
+                    }
+                    
+                }
+                .domestic-license {
+                    @include Background($sprite:'bg-domestic-license', $size:100% 100%, $position:center center, $path:'bgs');
+                    position: relative;
+                    height:20.6rem;
+                    > div {
+                        position: absolute;
+                        .numbering {
+                            right:-1.7rem;
+                            left:unset;
+                            top:.7rem;
+                        }
+                        .selectbox, input {
+                            height:2.6rem;
+                            width:5.8rem;
+                            padding: 0 .6rem;
+                            font-size:.9rem;
+                        }
+                        
+                        &.type-box {
+                            top:1.3rem;
+                            left:1.3rem;
+                        }
+                        &.number-box {
+                            top:20%;
+                            left:27%;
+                            .box-between {
+                                width:85%;
+                                .selectbox {
+                                    width:auto;
+                                    padding: 0 1.2rem 0 0.3rem;
+                                } 
+                                .inputT {
+                                    margin-left:.3rem;
+                                    input {
+                                        width:4.5rem;
+                                    }
+                                }
+                                
+                            } 
+                        }
+                        &.name-box {
+                            top:35%;
+                            left:35%;
+                        }
+                        &.expiration-date-box {
+                            bottom:19%;
+                            left:40%;
+                            .box-between {
+                                margin-left: .3rem;
+                                .inputT {
+                                    margin-left: .3rem;
+                                }
+                            }
+                        }
+                        &.issue-date-box {
+                            bottom:5%;
+                            left:27%;
+                        }
+                    }
+                }
             }
             &.cont-item2 {
                 .detail-layer-inputT:first-child{
@@ -1211,41 +1474,7 @@
                         margin-right: .5rem;
                     }
                 }
-                .detail-iconBox{
-                    margin-left: -.6rem;
-                    label {
-                        border:0 none;
-                        border-radius: 0;
-                        @include Regular;
-                        &:after {
-                            width: 1.7rem;
-                            height: 1.7rem;
-                            margin-top: -.85rem;
-                            left:.5rem;
-                        }
-                        .flag{
-                            background-color: #009bfa;
-                            color:#fff;
-                            @include Bold;
-                            height:1.9rem;
-                            padding:0 .6rem;
-                            border-radius: .4rem;
-                            margin-right:0;
-                            i{
-                                margin-right:.2rem;
-                            }
-                        }
-                    }
-                    input:checked + label {
-                        @include Regular;
-                    }
-                    input[type='checkbox'] + label:after{
-                        @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
-                    }
-                    input[type='checkbox']:checked + label:after{
-                        @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
-                    }
-                }
+                
                 .detail-layer-short-payment{
                     border-top:1px solid #e7e7e7;
                     & > .detail-iconBox{

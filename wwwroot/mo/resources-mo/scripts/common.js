@@ -1427,6 +1427,20 @@ if($('.mypage-wrap').length){
     });
 }
 
+//단기렌터카 이용중관리 - 추가운전자 등록 열고 닫기
+if($('.mypage-wrap').length){
+    MUI.event.toggle('.mypage-wrap .chk-toggle-btn01', '.mypage-wrap .toggle-cont01', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+if($('.mypage-wrap').length){
+    MUI.event.toggle('.mypage-wrap .chk-toggle-btn02', '.mypage-wrap .toggle-cont02', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
+
 //포인트 > 상단 메인 탭메뉴
 if($('.mypage-wrap .tab-normal').length){
     MUI.event.taps('.mypage-wrap .tab-normal', false, function(swap){
