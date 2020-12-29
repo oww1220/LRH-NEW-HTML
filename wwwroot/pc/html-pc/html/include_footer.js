@@ -26,6 +26,9 @@ $(function(){
 						<li>
 							<a href="https://lotterental.com/" onclick="ga('send', 'event', '풋터', '패밀리사이트', '일반랜탈랜딩');" target="_blank">일반렌탈</a>
 						</li>
+						<li>
+							<a href="/kor/recruit/main.do?mnCd=FN0905" target="_blank">인재채용</a>
+						</li>
 					</ul>
 					<div class="family">
 						<button type="button" class="btn btn-family family-btn" data-target="family-cont-01" data-on="true" data-siblings="true">FAMILY SITE</button>

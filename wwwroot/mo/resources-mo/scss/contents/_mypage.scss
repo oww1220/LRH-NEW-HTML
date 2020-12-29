@@ -1100,15 +1100,102 @@
                         width:100%;
                         margin-left:0;
                     }
+                    // .btn-group{
+                    //     @include Align-between;
+                    //     .btn{
+                    //         height: 12.6rem;
+                    //         width: 7.5rem;
+                    //         background-color: #f5f5f5;
+                    //         border-radius: 1rem;
+                    //         font-size:2.6rem;
+                    //         @include Regular;
+                    //     }
+                    // }
                     .btn-group{
                         @include Align-between;
+                        //@include Inline-scrolling;
+                        // .img{
+                        //     width: 11.6rem;
+                        //     height: 8.5rem;
+                        // }
+                        .lpay-card-list{
+                            @include Align-box-left;
+                            @include Inline-scrolling;
+                            display: inline-flex;
+                            flex-wrap: nowrap;
+                            ul{
+                                width:100%;
+                                margin-left:0;
+                                display: inline-flex;
+                                flex-wrap: nowrap;
+                                li{
+                                    width:auto;
+                                }
+                            }
+                            .radioIconBox > label{
+                                width: 11.6rem;
+                                height: 8.5rem;
+                                padding:0 1.3rem;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                b{
+                                    font-size:1.1rem;
+                                    padding-top:1.7rem;
+                                }
+                                em{
+                                    font-size:1.1rem;
+                                    color:#54585a;
+                                    @include Regular;
+                                    padding-top:.5rem;
+                                }
+                                div{
+                                    @include Align-between;
+                                    width:100%;
+                                    padding-top:.7rem;
+                                    span{
+                                        font-size:1rem;
+                                        color:#8f9191;
+                                        @include Regular;
+                                    }
+                                }
+                            }
+                            .radioIconBox > input:checked + label:after{
+                                top:2rem;
+                                right:1.4rem;
+                            }
+                        }
                         .btn{
-                            height: 12.6rem;
-                            width: 7.5rem;
-                            background-color: #f5f5f5;
-                            border-radius: 1rem;
-                            font-size:2.6rem;
-                            @include Regular;
+                            width: 11.6rem;
+                            height: 8.5rem;
+                            // background-color: #f5f5f5;
+                            border-radius: .5rem;
+                            border:1px solid #d2d2d2;
+                            @include Align-middle-column;
+                            // font-size:2.6rem;
+                            // @include Regular;
+                            em{
+                                padding-top:.9rem;
+                            }
+                        }
+                    }
+                    &.detail-layer-inputT-selectbox{
+                        .list-type-col2{
+                            @include Align-middle-left;
+                            .inputT{
+                                .inputR{
+                                    width:49%;
+                                    border-bottom:0 none;
+                                }
+                            }
+                            li:first-child{
+                                width:30%;
+                                .detail-layer-inputT-tit{
+                                    margin-top:0;
+                                }
+                            }
+                            li:last-child{
+                                width:70%;
+                            }
                         }
                     }
                 }
