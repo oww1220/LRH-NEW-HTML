@@ -804,23 +804,21 @@ if($('.customer-list').length){
     });
 }
 
-//전국지점안내
+//전국지점안내 + 영문 location 페이지
 if($('.branch-office-section').length){        
     MUI.event.toggle('.accorSpotBtn', '.accorSpotCont', false, function(logic, layer) {
         if(MUI.slide.LayerSwiper) MUI.slide.LayerSwiper.destroy();
 
         logic();
         
-
-        //영문 Location 페이지
-        var activeDiv = layer[0];
-        var activeSlide = $(activeDiv).find($('.swiper-slide'));
+        var activeDiv = layer.selector;
+        var activeSlide = $(activeDiv + ' .swiper-slide');
         
-        //console.log($(activeDiv).find($('.swiper-slide')).length);     
+        //슬라이드
         if(activeSlide.length > 1){
          
             var autoplayFlag = true;    
-            var activeSwiper = $(activeDiv).find($('.branchesSwiper'));
+            var activeSwiper = $(activeDiv + ' .branchesSwiper');
 
             $('.branchesSwiper-controls').show();   
             MUI.slide.LayerSwiper = MUI.slide.init(activeSwiper,'swiper', {
@@ -849,9 +847,17 @@ if($('.branch-office-section').length){
             });
         }else{
             $('.branchesSwiper-controls').hide();
+        }   
+
+        //탭
+        if($(activeDiv + ' .trafficTab .tabs > li').length > 1){                        
+            MUI.event.taps(activeDiv + ' .trafficTab', false, function(swap){
+                swap();                
+            });
         }
     });
 }
+
 if($('.branchOfferingTab').length){
     MUI.event.taps('.branchOfferingTab', false, function(swap){
         swap();

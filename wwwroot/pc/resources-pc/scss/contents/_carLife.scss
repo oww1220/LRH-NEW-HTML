@@ -599,6 +599,92 @@
             }
         }
     }
-
     
+}
+
+// 영문
+.eng-wrap{
+    .grey-box{
+        @include roundBox;
+        padding:30px 40px;
+        margin-bottom:80px;
+        color:#54585a;
+        background-color:#f5f5f5;
+
+        strong{@include Bold; margin-right:15px;}
+        .icon{margin-right:10px;}
+
+        &.between-type{
+            @include Align-between;
+        }
+    }
+
+    .img-list{
+        li{
+            .item{
+                position: relative;
+                .cover{
+                    @include Position($left:0, $right:0, $bottom:0);
+                    background-color:#54585a;
+
+                    .txt{                       
+                        @include Align-middle;
+                        min-height:70px;
+                        padding:15px;
+                        margin:0;
+                        color:#fff;
+                        text-align: center;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+
+    .location-section{
+        .box-align{
+            background-color:#fafafa;
+
+            .details{
+                padding:40px;
+                .details-header{
+                    @include Align-between;
+                    padding-bottom:20px;
+                    border-bottom:1px solid $border-grey;
+
+                    .tit{
+                        font-size: 14px;
+                        margin:0;
+                    }
+                }
+                .details-cont{
+                    margin-top:20px;
+
+                    strong{@include Bold;}
+                }
+                .lst{
+                    margin:0;
+
+                    li{
+                       + li{margin-top:20px;} 
+                    }
+                }
+            }
+        }
+    }
+
+    .explain-cont{
+        .multi-segment-list{
+            .lst{margin:0;}
+        }
+        .lst{
+            &.num-type3{
+                > li{
+                    + li{margin-top:60px;}
+                }
+
+                .lst{margin:0;}
+            }
+        }
+    }
 }

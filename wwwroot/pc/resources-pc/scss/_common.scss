@@ -525,9 +525,25 @@ $txt-darkblack: #2f2f2f;
 					margin-bottom:60px;
 				}
 			}
+			.define-area2{
+				margin-bottom:60px;
+		
+				.define-row{
+					display: flex;
+					dt{
+						@include Bold;
+						min-width:165px;
+						margin-right:10px;
+		
+						.icon{margin-right:10px;}
+					}
+		
+					+.define-row{margin-top:30px;}
+				}
+			}
 			.btn-box{padding:40px 0;}
 			.tbl-box{     
-				margin-bottom:60px;
+				//margin-bottom:60px;
 			
 				table{
 					width:100%;
@@ -541,6 +557,12 @@ $txt-darkblack: #2f2f2f;
 						border-right:1px solid #e7e7e7;
 						color:#54585a; 
 						vertical-align: middle;
+
+						.lst{margin:0;}
+						p{
+							strong{@include Bold;}	
+							+ .lst{margin-top:10px;}
+						}
 					}
 					thead th, td{
 						&:last-of-type{border-right:none;}
@@ -560,11 +582,12 @@ $txt-darkblack: #2f2f2f;
 					}
 				}
 
-				.btns{
-					
-				}
+				+ .tbl-box{margin-top:60px;}
 			}	
 		}
+
+		
+		+ .section-explain{margin-top:60px;}
 	}
 	&-form{
 		.form-header{
@@ -863,6 +886,34 @@ $txt-darkblack: #2f2f2f;
 	}
 }
 
+.multi-segment-list{
+	> li{
+		@include Align-middle-left;		
+	}
+	.circle{
+		@include Align-middle;
+		width:130px;
+		height:130px;
+		border-radius:130px;
+		border:1px solid #f2f2f2;
+		background-color:#fafafa;
+	}
+	.details{
+		margin-left:56px;
+	}
+
+	&.type-col2{	
+		@include Align-box;
+		width: calc(100% + 40px);
+
+		> li{
+			width:50%; 
+			padding:0 40px 60px 0;
+			box-sizing: border-box;
+		}
+	}
+}
+
 .lst {
 	
 	> li{
@@ -904,6 +955,40 @@ $txt-darkblack: #2f2f2f;
 			.bul{
 				@include Position($left:0, $top:0);
 				width:18px;
+			}
+		}
+
+		&-type2{
+			> li{
+				padding-left:25px;
+				.bul{
+					@include Position($left:0, $top:1px);
+					@include Align-middle;
+					width:20px;
+					height:20px;
+					@include Bold;
+					color:#2f2f2f;
+					border-radius:20px;
+					line-height:1;
+					border:1px solid $border-grey;
+					box-sizing:border-box;
+				}
+			}
+		}
+		&-type3{
+			> li{
+				padding-left:60px;
+				
+				.bul{
+					@include Position($left:0, $top:-5px);
+					@include Align-middle;
+					width:40px;
+					height:40px;
+					@include Bold;
+					color:#fff;
+					border-radius:40px;
+					background-color: #8f9191;
+				}
 			}
 		}
 	}
