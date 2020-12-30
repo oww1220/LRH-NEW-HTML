@@ -292,6 +292,57 @@
     }
 }
 
+//툴팁
+.tooltip-top-wrap{
+    position:relative;
+    width:100%;
+    z-index:5;
+    @include Align-between-base;
+    
+    .tooltipCont-top{
+        display:none;    
+        @include Position($top:100%, $right:0);
+        margin-top: 15px;
+        background-color:#fff;
+        border:1px solid $border-darkgrey;
+        @include roundBox;                    
+        @include box-shadow($top:0, $left:0px, $blur:15px, $color:rgba(100, 100, 100, 0.15));
+        box-sizing: border-box;
+        transform: translateX(44%);
+
+        &:before{
+            content: '';
+            @include Position($top:-16px);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 15px 16px 15px;
+            border-color: transparent transparent #fff transparent;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltipCont-inner{
+            padding:20px 15px;
+            .layer-list{
+                li{
+                    @include Align-middle;
+                }
+                .btn{
+                    height:auto;
+                }
+            }
+        }
+
+        &.arrow-type-right{
+            &:before{
+                left:auto;
+                right:15px;
+            }
+        }
+    }
+}
+
 #wrap {
     
 }

@@ -183,6 +183,13 @@ if($('.toast-message-login').length){
 if($('.toast-message-sale').length){
     MUI.event.toastMessage('', 'toast-message-sale', 5000);
 }
+
+//툴팁 공통
+if($('#wrap .tooltipToggle-top').length) {
+    MUI.event.toggle('#wrap .tooltipOpenBtn-top', '#wrap .tooltipCont-top', false, function(logic, layer) {
+        logic();
+    });
+}
 /* -------------------------------------------------유틸end*/
 
 /* 탭 전환start-------------------------------------------------*/
