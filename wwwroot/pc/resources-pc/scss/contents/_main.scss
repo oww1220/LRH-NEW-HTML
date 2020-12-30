@@ -163,6 +163,7 @@
                     b{
                         color: #aaa;
                         font-size: 16px;
+                        line-height: 1;
                     }
                 &.active{
                     @include Bold;
@@ -288,6 +289,7 @@
             &.branch {
                 padding: 50px 20px 35px 40px;
                 background: #242424;
+                .mCSB_inside > .mCSB_container {margin-right:0;}
                 .m-tit {
                     @include Align-between;
                     .btn-red {
@@ -729,7 +731,7 @@
                     margin-right: 30px;
                     background: #fff;
                     box-shadow: 0px 10px 20px #f3f3f3;
-                    .img {
+                    img {
                         width: 330px;
                         height: 230px;
                         background-size: 100% auto;
@@ -915,9 +917,11 @@
                 }
                 .img {
                     position: relative;
-                    width: 360px;
-                    height: 280px;
-                    background-size: 100% auto;
+                    img {
+                        width: 360px;
+                        height: 280px;
+                        background-size: 100% auto; 
+                    } 
                     .flag {
                         @include Bold;
                         position: absolute;
