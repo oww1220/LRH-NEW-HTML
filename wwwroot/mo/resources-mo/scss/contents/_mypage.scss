@@ -2747,7 +2747,71 @@
             margin-left:.2rem;
         }
     }
-    .section-list .point-apply .tab-cont .discount-coupon-tab {display: block;}
+    .section-list .point-apply .tab-cont .discount-coupon-tab {display: block;} 
+}
+.eng-mypage-main {
+    .mypage-top{
+        .customer-info {
+            strong {font-size: 1.8rem;
+                em {display: block;
+                    @include Bold;
+                    font-size: 1.6rem;
+                    &:after {
+                        display: inline-block;
+                        content: "";
+                        width: .4rem;
+                        height: .4rem;
+                        background: #fff;
+                        border-radius: 100%;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+        .customer-accumulate {
+            .list-type-col3 {
+                * {box-sizing: border-box;}
+                li + li {border-left: 1px solid #f14950;}
+            }
+        }
+    } 
+    .mypage-cont .my-reservation-list .list-item .list-wrap .cont-in li{
+        align-items: flex-start;
+        strong {width: 40%;}
+        b {line-height: 1.2;}
+    }
+    .eng-myinfo-link {
+        @include Align-middle;
+        margin-top: 1.3rem;
+        border-top: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; padding: 1.7rem 0;
+        li + li {
+            border-left: 1px solid #e7e7e7;
+        }
+        li {
+            width: 50%;
+            > a {
+                @include Align-middle-column;
+                @include Bold;
+                font-size: 1.1rem;
+                color: #54585a;
+                line-height: 1.5;
+                > i {
+                    margin-bottom: .5rem;
+                }
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-top: .5rem;
+                    border: 1px solid #d8d8d8;
+                    border-radius: 100%;
+                    @include Background($sprite:'ico-next04', $size:25%, $position:55% center);
+                }
+            }
+        }
+        
+    }
 }
 .eng-cont-top {
     padding: .5rem;
