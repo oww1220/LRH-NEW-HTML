@@ -31,6 +31,13 @@
                 @include Align-box;
                 width:380px;
             }
+            .img {
+                img {
+                    width: 380px;
+                    height: 220px;
+                    background-size: 100% auto;
+                }
+            }
             &:nth-of-type(3n+2){
                 > a, > .item{margin:auto;}
             }
@@ -234,7 +241,7 @@
 
         .img-box{text-align:center; margin-bottom:40px;}
         .ntc-view-cont{margin-bottom:40px;}        
-        img{max-width:100%; height:auto;}
+        img{max-width:100%; width: 100%;; height:auto; background-size: 100% auto;}
         .tag-area{            
             @include Align-box;
             //margin-bottom:40px;
@@ -333,6 +340,8 @@
                     transition: all .25s ease-out;
                     transform: scale(.92);
                     transform-origin: center;
+                    width: 800px;
+                    height: 495px;
                 }
                 .detail{
                     display:none;

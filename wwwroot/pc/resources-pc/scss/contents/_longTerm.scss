@@ -487,7 +487,13 @@
                 position:relative;
                 width:730px;
                 height:500px;
-
+                .swiper-slide {
+                    img {
+                        width: 730px;
+                        height: 500px;
+                        background-size: 100% auto;
+                    }
+                }
                 .estimateSwiper-button-prev, .estimateSwiper-button-next{ 
                     cursor: pointer;
                     @include Position($top:50%, $left:0);
@@ -510,6 +516,13 @@
                     color: #fff;
                     padding: 30px;
                     z-index:5;
+                }
+            }
+            .banner-box {
+                img {
+                    width: 450px;
+                    height: 500px;
+                    background-size: 100% auto;
                 }
             }
         }
