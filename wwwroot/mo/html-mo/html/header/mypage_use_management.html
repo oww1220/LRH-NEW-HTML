@@ -90,7 +90,9 @@
 									<label for="">반납</label>
 									<input type="text" id="" value="전략영업 1팀" disabled>
 								</div>
-								<div class="cont-btn"><button type="button" class="btn btn-default black">선택</button></div>
+								<div class="cont-btn">
+									<button type="button" class="btn btn-default black layer-infos-open" data-layer="layer-branch-info">선택</button>
+								</div>
 							</div>
 							<div class="cont-guide">
 								<ul>
@@ -462,6 +464,353 @@
 	</footer>
 	<!--//footer 컴포넌트-->
 
+	<!--layer-full 달력 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-schedule type-schedule" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="type-schedule">
+				<i class="icon layerclose">닫기 버튼</i>
+			</button>
+            <h4>
+                대여 기간 선택
+            </h4>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="layer-infos">
+					<div class="schedule-wrap">
+						<div class="schedule-opt">
+							<ul class="list-type-col2">
+								<li>
+									<strong>대여일시</strong>
+									<b>2020.09.21 (월)</b>
+									<div class="detail-layer-selectbox">
+										<!-- <ul class="list-type-col2">
+											<li>
+												<select class="selectbox" name="" id="">
+													<option value="">01시</option>
+													<option value="">02시</option>
+													<option value="">03시</option>
+													<option value="">04시</option>
+													<option value="">05시</option>
+													<option value="">06시</option>
+													<option value="">07시</option>
+													<option value="">08시</option>
+													<option value="">09시</option>
+													<option value="">10시</option>
+													<option value="">11시</option>
+													<option value="">12시</option>
+												</select>
+											</li>
+											<li>
+												<select class="selectbox" name="" id="">
+													<option value="">00분</option>
+													<option value="">10분</option>
+													<option value="">20분</option>
+													<option value="">30분</option>
+													<option value="">40분</option>
+													<option value="">50분</option>
+												</select>
+											</li>
+										</ul> -->
+										<div class="inner selection">
+											<div id="schedule-opt-lt" class="selectbox selectbox-layer">대여일시선택</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<strong>대여일시</strong>
+									<b>2020.09.23 (수)</b>
+									<div class="detail-layer-selectbox">
+										<!-- <ul class="list-type-col2">
+											<li>
+												<select class="selectbox" name="" id="">
+													<option value="">01시</option>
+													<option value="">02시</option>
+													<option value="">03시</option>
+													<option value="">04시</option>
+													<option value="">05시</option>
+													<option value="">06시</option>
+													<option value="">07시</option>
+													<option value="">08시</option>
+													<option value="">09시</option>
+													<option value="">10시</option>
+													<option value="">11시</option>
+													<option value="">12시</option>
+												</select>
+											</li>
+											<li>
+												<select class="selectbox" name="" id="">
+													<option value="">00분</option>
+													<option value="">10분</option>
+													<option value="">20분</option>
+													<option value="">30분</option>
+													<option value="">40분</option>
+													<option value="">50분</option>
+												</select>
+											</li>
+										</ul> -->
+										<div class="inner selection">
+											<div id="schedule-opt-rt" class="selectbox selectbox-layer">대여일시선택</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="calendar-wrap">
+							<div class="table">
+								<div class="calendar-tit">2020.09</div>
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>일</th>
+											<th>월</th>
+											<th>화</th>
+											<th>수</th>
+											<th>목</th>
+											<th>금</th>
+											<th>토</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td class="disabled"><button type="button" class="btn">1</button></td>
+										</tr>
+										<tr>
+											<td class="disabled"><button type="button" class="btn">2</button></td>
+											<td class="disabled"><button type="button" class="btn">3</button></td>
+											<td class="disabled"><button type="button" class="btn">4</button></td>
+											<td class="disabled"><button type="button" class="btn">5</button></td>
+											<td class="today"><button type="button" class="btn">6</button></td>
+											<td><button type="button" class="btn">7</button></td>
+											<td class="start"><button type="button" class="btn">8</button></td>
+										</tr>
+										<tr>
+											<td class="during"><button type="button" class="btn">9</button></td>
+											<td class="end"><button type="button" class="btn">10</button></td>
+											<td class="day"><button type="button" class="btn">11</button></td>
+											<td><button type="button" class="btn">12</button></td>
+											<td><button type="button" class="btn">13</button></td>
+											<td><button type="button" class="btn">14</button></td>
+											<td><button type="button" class="btn">15</button></td>
+										</tr>
+										<tr>
+											<td><button type="button" class="btn">16</button></td>
+											<td><button type="button" class="btn">17</button></td>
+											<td><button type="button" class="btn">18</button></td>
+											<td><button type="button" class="btn">19</button></td>
+											<td><button type="button" class="btn">20</button></td>
+											<td><button type="button" class="btn">21</button></td>
+											<td><button type="button" class="btn">22</button></td>
+										</tr>
+										<tr>
+											<td><button type="button" class="btn">23</button></td>
+											<td><button type="button" class="btn">24</button></td>
+											<td><button type="button" class="btn">25</button></td>
+											<td><button type="button" class="btn">26</button></td>
+											<td><button type="button" class="btn">27</button></td>
+											<td><button type="button" class="btn">28</button></td>
+											<td><button type="button" class="btn">29</button></td>
+										</tr>
+										<tr>
+											<td><button type="button" class="btn">30</button></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="table">
+								<div class="calendar-tit">2020.10</div>
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+										<col style="width:14.2%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>일</th>
+											<th>월</th>
+											<th>화</th>
+											<th>수</th>
+											<th>목</th>
+											<th>금</th>
+											<th>토</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td><button type="button" class="btn">1</button></td>
+											<td><button type="button" class="btn">2</button></td>
+											<td><button type="button" class="btn">3</button></td>
+										</tr>
+										<tr>
+											<td><button type="button" class="btn">4</button></td>
+											<td><button type="button" class="btn">5</button></td>
+											<td><button type="button" class="btn">6</button></td>
+											<td><button type="button" class="btn">7</button></td>
+											<td><button type="button" class="btn">8</button></td>
+											<td><button type="button" class="btn">9</button></td>
+											<td><button type="button" class="btn">10</button></td>
+										</tr>
+										<tr>
+											<td><button type="button" class="btn">11</button></td>
+											<td><button type="button" class="btn">12</button></td>
+											<td><button type="button" class="btn">13</button></td>
+											<td><button type="button" class="btn">14</button></td>
+											<td><button type="button" class="btn">15</button></td>
+											<td><button type="button" class="btn">16</button></td>
+											<td><button type="button" class="btn">17</button></td>
+										</tr>
+										<tr>
+											<td><button type="button" class="btn">18</button></td>
+											<td><button type="button" class="btn">19</button></td>
+											<td><button type="button" class="btn">20</button></td>
+											<td><button type="button" class="btn">21</button></td>
+											<td><button type="button" class="btn">22</button></td>
+											<td><button type="button" class="btn">23</button></td>
+											<td><button type="button" class="btn">24</button></td>
+										</tr>
+										<tr>
+											<td><button type="button" class="btn">25</button></td>
+											<td><button type="button" class="btn">26</button></td>
+											<td><button type="button" class="btn">27</button></td>
+											<td><button type="button" class="btn">28</button></td>
+											<td><button type="button" class="btn">29</button></td>
+											<td><button type="button" class="btn">30</button></td>
+											<td><button type="button" class="btn">31</button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="layer-schedule-foot">
+						<ul class="list-type-col2">
+							<li>
+								<button type="button" class="btn btn-default black noRadius layer-full-close" data-layer="type-schedule">취소</button>
+							</li>
+							<li>
+								<button type="button" class="btn btn-red noRadius">확인</button>	
+							</li>
+						</ul>
+					</div>
+				</div>
+            </div>
+        </div>
+        <!--//컨텐츠-->
+    </div>
+	<!--//layer-full 달력 컴포넌트-->
+
+
+	<!--layer-full 지점안내 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-branch-info" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="layer-branch-info">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+            <h4>
+                전국지점안내
+            </h4>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<!--전국지점안내-->
+				<div class="customer-wrap">
+					<div class="section-top">
+						<!-- 타이틀 -->
+						<div class="section-tit bg-block">
+							<em><i class="icon call"></i>1588-1230</em>
+							<strong>
+								평일08:30~20:00<br>
+								단,사고처리 문의는 24시간 가능
+							</strong>
+						</div>
+						<!-- //타이틀 -->
+					</div>
+					<!--매장검색-->
+					<div class="section-search">
+						<div class="sticky-search-wrap">
+							<div class="sticky-search">
+								<div class="inputT close">
+									<input type="text" id="" name="" title="name" placeholder="매장 또는 주소를 입력하세요." value="">
+								</div>
+								<button type="button" class="btn btn-search">검색</button>
+							</div>
+						</div>
+						
+						<div class="search-list">
+							<ul>
+								<li>
+									<a href="#none" class="layer-infos-open" data-layer="type-national-branch">
+										<strong>강남지점</strong>
+										<div>
+											<p><i class="icon address"></i>서울특별시 강남구 테헤란로 422</p>
+											<p><i class="icon time2"></i>평일 00:00~24:00 / 주말(휴일) 00:00~24:00</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<strong>공덕지점</strong>
+									<div>
+										<p><i class="icon address"></i>서울특별시 강남구 테헤란로 422</p>
+										<p><i class="icon time2"></i>평일 00:00~24:00 / 주말(휴일) 00:00~24:00</p>
+									</div>
+								</li>
+								<li>
+									<strong>관악지점</strong>
+									<div>
+										<p><i class="icon address"></i>서울특별시 강남구 테헤란로 422</p>
+										<p><i class="icon time2"></i>평일 00:00~24:00 / 주말(휴일) 00:00~24:00</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--//매장검색-->
+				</div>
+				<!--//전국지점안내-->
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 지점안내 컴포넌트-->
 
 	<!--상단 타이틀(추후삭제)-->
     <script>

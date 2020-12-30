@@ -9394,6 +9394,12 @@
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaB", serif;
 	font-weight: normal;
+	font-size: 1.1rem;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .cont-tit strong b {
+	font-size: 1.1rem;
+	padding-left: .5rem;
 }
 
 .mypage-wrap .section-detail .detail-cont .item-wrap .cont-in {
@@ -9710,16 +9716,49 @@
 	color: #ddd;
 }
 
-.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .row + .row {
+.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box {
+	padding-bottom: 1.7rem;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box .row + .row {
 	padding-top: 1.7rem;
 }
 
-.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-iconBox label {
-	height: auto;
+.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box .row strong {
+	font-size: 1.1rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box .row b {
+	color: #54585a;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box .row:last-child strong {
+	font-size: 1.4rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box .row:last-child b {
+	font-size: 1.4rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
 }
 
 .mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .wrap02 {
 	padding-top: .9rem;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-iconBox label {
+	height: auto;
 }
 
 .mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .toggle-cont {
@@ -9783,25 +9822,6 @@
 
 .mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .toggle-cont .cont-btn {
 	padding: 1.7rem 0 0;
-}
-
-.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box {
-	padding-bottom: 1.7rem;
-	border-bottom: 1px solid #e7e7e7;
-}
-
-.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box strong {
-	font-size: 1.1rem;
-	/*font-family:"ManropeB", "NotoM", serif;*/
-	font-family: "SpoqaR", serif;
-	font-weight: normal;
-}
-
-.mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .detail-box b {
-	color: #54585a;
-	/*font-family:"ManropeB", "NotoM", serif;*/
-	font-family: "SpoqaR", serif;
-	font-weight: normal;
 }
 
 .mypage-wrap .section-detail .detail-cont .item-wrap .form-cont .cont-guide {
@@ -9871,7 +9891,7 @@
 
 .mypage-wrap .section-detail .detail-cont .item-wrap .domestic-license > div .selectbox, .mypage-wrap .section-detail .detail-cont .item-wrap .domestic-license > div input {
 	height: 2.6rem;
-	width: 5.8rem;
+	width: 6.5rem;
 	padding: 0 .6rem;
 	font-size: .9rem;
 }
@@ -9924,6 +9944,65 @@
 .mypage-wrap .section-detail .detail-cont .item-wrap .domestic-license > div.issue-date-box {
 	bottom: 5%;
 	left: 27%;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li {
+	border-bottom: 0;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li .chk-agree-top {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li .chk-agree-top input[type='checkbox'] + label:before {
+	width: 1.2rem;
+	height: .9rem;
+	padding-top: .4rem;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-chk-off04.png");
+	background-position: center center;
+	-webkit-background-size: 92% auto;
+	   -moz-background-size: 92% auto;
+	        background-size: 92% auto;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li .chk-agree-top input[type='checkbox']:checked + label:before {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-chk-on04.png");
+	background-position: center center;
+	-webkit-background-size: 92% auto;
+	   -moz-background-size: 92% auto;
+	        background-size: 92% auto;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li .chk-agree-top input[type='checkbox']:checked + label span {
+	color: #2e2e2e;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li .chk-agree-top label {
+	color: #8f9191;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li .chk-agree-top label span {
+	font-size: 1.1rem;
+}
+
+.mypage-wrap .section-detail .detail-cont .item-wrap .chk-agree-list .chk-agree-cols li .chk-agree-top a {
+	padding: 1.4rem 0;
 }
 
 .mypage-wrap .section-detail .detail-cont.cont-item2 .detail-layer-inputT:first-child {
@@ -10647,6 +10726,16 @@
 
 .mypage-wrap .section-detail .detail-result .item-wrap .cont-in .list-type-value {
 	margin-top: 1.7rem;
+}
+
+.mypage-wrap .section-detail .detail-layer-submit {
+	padding: 1.7rem 1.7rem;
+}
+
+.mypage-wrap .section-detail .detail-layer-submit .btn {
+	-webkit-border-radius: .6rem;
+	   -moz-border-radius: .6rem;
+	        border-radius: .6rem;
 }
 
 .mypage-wrap .section-detail .detail-layout {

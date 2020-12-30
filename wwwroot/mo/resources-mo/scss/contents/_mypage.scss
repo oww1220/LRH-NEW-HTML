@@ -1010,6 +1010,11 @@
                     }
                     strong {
                         @include Bold;
+                        font-size:1.1rem;
+                        b {
+                            font-size:1.1rem;
+                            padding-left:.5rem;
+                        }
                     }
 
                 }
@@ -1185,18 +1190,40 @@
                             }
                         }
                     }
-                    .row {
-                        & + .row {
-                            padding-top:1.7rem;
+                    .detail-box {
+                        padding-bottom :1.7rem;
+                        border-bottom:1px solid #e7e7e7;
+                        .row {
+                            & + .row {
+                                padding-top:1.7rem;
+                            }
+                            strong {
+                                font-size:1.1rem;
+                                @include Regular;
+                            }
+                            b {
+                                color:#54585a;
+                                @include Regular;
+                            }
+                            &:last-child {
+                                strong {
+                                    font-size:1.4rem;
+                                    @include Bold;
+                                }
+                                b {
+                                    font-size:1.4rem;
+                                    @include Bold;
+                                }
+                            }
                         }
+                    }
+                    .wrap02 {
+                        padding-top:.9rem;
                     }
                     .detail-iconBox {
                         label {
                             height: auto;
                         }
-                    }
-                    .wrap02 {
-                        padding-top:.9rem;
                     }
                     .toggle-cont {
                         padding-top:1.3rem;
@@ -1252,18 +1279,6 @@
                             padding:1.7rem 0 0 ;
                         }
                     }
-                    .detail-box {
-                        padding-bottom :1.7rem;
-                        border-bottom:1px solid #e7e7e7;
-                        strong {
-                            font-size:1.1rem;
-                            @include Regular;
-                        }
-                        b {
-                            color:#54585a;
-                            @include Regular;
-                        }
-                    }
                     .cont-guide {
                         padding-bottom:0;
                     }
@@ -1305,7 +1320,7 @@
                         }
                         .selectbox, input {
                             height:2.6rem;
-                            width:5.8rem;
+                            width:6.5rem;
                             padding: 0 .6rem;
                             font-size:.9rem;
                         }
@@ -1349,6 +1364,39 @@
                         &.issue-date-box {
                             bottom:5%;
                             left:27%;
+                        }
+                    }
+                }
+                .chk-agree-list {
+                    .chk-agree-cols {
+                        li {
+                            border-bottom:0;
+                            .chk-agree-top {
+                                @include Align-between-top;
+                                input {
+                                    &[type='checkbox'] + label:before {
+                                        width:1.2rem;
+                                        height:.9rem;
+                                        padding-top:.4rem;
+                                        @include Background($sprite:'ico-chk-off04', $size:92% auto, $type:'png', $position:center center);
+                                    }
+                                    &[type='checkbox']:checked + label:before {
+                                        @include Background($sprite:'ico-chk-on04', $size:92% auto, $type:'png', $position:center center);
+                                    }
+                                    &[type='checkbox']:checked + label span {
+                                        color:#2e2e2e;
+                                    }
+                                }
+                                label {
+                                    color:#8f9191;
+                                    span {
+                                        font-size:1.1rem;
+                                    }
+                                }
+                                a {
+                                    padding:1.4rem 0;
+                                }
+                            }
                         }
                     }
                 }
@@ -1768,6 +1816,12 @@
                     }
 
                 }
+            }
+        }
+        .detail-layer-submit {
+            padding:1.7rem 1.7rem;
+            .btn {
+                border-radius: .6rem;
             }
         }
         .detail-layout {
