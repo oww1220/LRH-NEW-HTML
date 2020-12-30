@@ -1552,6 +1552,18 @@ if($('.eng-shor-wrap').length){
         $('.fixed-btnBottom').parents('#wrap').siblings('.footer').find('.footer-app').css('padding-bottom', '12.2rem');
         $('.fixed-btnBottom').parents('#wrap').siblings('.fixedRight').css('bottom', '9.7rem');
     }
+
+    //로딩효과
+    if($(".progress-container").length) {
+        var inputs = $(".progress-container").find($("label") );
+    
+        for(var i =0 ; i< inputs.length; i ++){ 
+            var index = i +1;
+            var time = ((inputs.length)-i ) * 100;
+            $(".progress-container label:nth-child("+ index+")").css( "-webkit-animation", "anim 5s "+time+"ms infinite ease-in-out" );
+            $(".progress-container label:nth-child("+index+")").css( "-animation", "anim 5s "+time+"ms infinite ease-in-out" );
+        }
+    }
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){
