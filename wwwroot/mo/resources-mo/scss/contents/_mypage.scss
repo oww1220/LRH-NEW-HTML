@@ -179,89 +179,6 @@
                 border-bottom:1px solid #e7e7e7;
             }
         }
-        .cont-guide {
-            margin:1rem 0;
-            padding:0 1.7rem;
-            //두줄이상 인 경우 가이드
-            li {
-                text-indent: -.7rem;
-                padding-left:1rem;
-                font-size:1rem;
-                color:#8f9191;
-                word-break: break-all;
-                & + li {
-                    padding-top:.3rem;
-                }
-                &::before {
-                    content:'';
-                    display: inline-block;
-                    width:.2rem;
-                    height:.2rem;
-                    background-color: #000;
-                    margin-right:.4rem;
-                    margin-top:-.2rem;
-                    border-radius:100%;
-                    vertical-align: middle;
-                }
-                &.red {
-                    color:#ff404b;
-                    &::before {
-                        background-color: #ff404b;
-                    }
-                }
-                b.underline {
-                    font-size:1.1rem;
-                    color:#8f9191;
-                    position: relative;
-                    &::before {
-                        content:'';
-                        display: inline-block;
-                        border-bottom:1px solid #8f9191;
-                        width:100%;
-                        @include Position($bottom: 0, $left: 0)
-                    }
-                   
-                }
-            }
-            //한줄 인 경우 가이드
-            p {
-                text-indent: -.7rem;
-                padding-left:1rem;
-                font-size:1.1rem;
-                color:#8f9191;
-                word-break: break-all;
-                &::before {
-                    content:'';
-                    display: inline-block;
-                    width:.2rem;
-                    height:.2rem;
-                    background-color: #000;
-                    margin-right:.4rem;
-                    margin-top:-.2rem;
-                    border-radius:100%;
-                    vertical-align: middle;
-                }
-                &.red {
-                    color:#ff404b;
-                    &::before {
-                        background-color: #ff404b;
-                    }
-                }
-                b.underline {
-                    font-size:1.1rem;
-                    color:#8f9191;
-                    position: relative;
-                    &::before {
-                        content:'';
-                        display: inline-block;
-                        border-bottom:1px solid #8f9191;
-                        width:100%;
-                        @include Position($bottom: 0, $left: 0)
-                    }
-                   
-                }
-            }
-        }
         .cont-tit {
             background-color: #EFF2F7;
             border-radius: 1rem;
@@ -538,7 +455,6 @@
                         }
                     }
                     .cont-guide {
-                        margin-top:1.3rem;
                         padding:0;
                     }
                     .section-layer-submit {
@@ -1631,46 +1547,6 @@
             }
             .cont-guide {
                 padding:1.7rem 0;
-                li {
-                    text-indent: -.7rem;
-                    padding-left:1rem;
-                    font-size:1.05rem;
-                    color:#8f9191;
-                    word-break: break-all;
-                    & + li {
-                        padding-top:.3rem;
-                    }
-                    &::before {
-                        content:'';
-                        display: inline-block;
-                        width:.2rem;
-                        height:.2rem;
-                        background-color: #000;
-                        margin-right:.4rem;
-                        margin-top:-.2rem;
-                        border-radius:100%;
-                        vertical-align: middle;
-                    }
-                    &.red {
-                        color:#ff404b;
-                        &::before {
-                            background-color: #ff404b;
-                        }
-                    }
-                    b.underline {
-                        font-size:1.1rem;
-                        color:#8f9191;
-                        position: relative;
-                        &::before {
-                            content:'';
-                            display: inline-block;
-                            border-bottom:1px solid #8f9191;
-                            width:100%;
-                            @include Position($bottom: 0, $left: 0)
-                        }
-                       
-                    }
-                }
             }
             .payinfo-box {
                 @include Align-between;
