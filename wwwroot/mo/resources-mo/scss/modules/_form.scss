@@ -374,3 +374,159 @@
 	color:#F04040;
 	padding-top:.4rem;
 }
+ //운전면허증정보
+ .driver-license {
+	.selection {
+		padding-bottom:1.7rem;
+		.detail-radio-box {
+			@include Align-box-left;
+			li + li {
+				margin-left:5%;
+			}
+		}
+	}
+	.detail-iconBox{
+		label {
+			height: auto;
+		}
+	}
+	.box-between {
+		@include Align-between;
+	}
+	.domestic-view {
+		.license {
+			@include Background($sprite:'bg-domestic-license', $size:100% 100%, $position:center center, $path:'bgs');
+			position: relative;
+			height:20.6rem;
+			> div {
+				position: absolute;
+				.numbering {
+					right:-1.7rem;
+					left:unset;
+					top:.7rem;
+				}
+				.selectbox, input {
+					height:2.6rem;
+					font-size:.9rem;
+				}
+				
+				&.type-box {
+					top:1.3rem;
+					left:1.4rem;
+					width:20%;
+				}
+				&.number-box {
+					top:20%;
+					left:27%;
+					width:65%;
+					.box-between {
+						width:100%;
+						.selectbox {
+							width:25%;
+							padding: 0 1.2rem 0 0.3rem;
+						} 
+						.inputT {
+							margin-left:.3rem;
+							width:25%;
+							input {
+								width:100%;
+							}
+						}
+						
+					} 
+				}
+				&.name-box {
+					top:35%;
+					left:35%;
+				}
+				&.expiration-date-box {
+					bottom:19%;
+					left:40%;
+					.box-between {
+						margin-left: .3rem;
+						.inputT {
+							margin-left: .3rem;
+						}
+					}
+				}
+				&.issue-date-box {
+					bottom:5%;
+					left:27%;
+				}
+			}
+		}
+	}
+	.global-view {
+		.license {
+			@include Background($sprite:'bg-global-license', $size:100% 100%, $position:center center, $path:'bgs');
+			position: relative;
+			min-height:28.3rem;
+			> div {
+				position: absolute;
+				.numbering {
+					right:-1.7rem;
+					left:unset;
+					top:.7rem;
+				}
+				.selectbox{
+					height:2.6rem;
+					padding: 0 .6rem;
+				}
+				
+				&.country-box {
+					left:15%;
+					top:36%;
+					width:33%;
+				}
+				&.number-box {
+					left:5%;
+					bottom:25%;
+					width:44%;
+					input {
+						height:2.6rem;
+						padding: 0 .6rem;
+						font-size:.9rem;
+					}
+				}
+				&.type-box {
+					right:30%;
+					top:30%;
+					.numbering {
+						right:-.8rem;
+						left:unset;
+						top:.4rem;
+					}
+				}
+			}
+		}
+	}
+	h4 {
+		padding:2.6rem 0 1rem;
+		font-size:1.1rem;
+		@include Bold;
+	}
+	.input-info {
+		li {
+			position: relative;
+			padding-left:1.7rem;
+			font-size:1rem;
+			color:#8f9191;
+		}
+	}
+	.numbering {
+		@include Align-middle;
+		@include Position($top: .2rem, $left: 0);
+		font-size:.9rem;
+		width:1.2rem;
+		height:1.2rem;
+		border-radius: 18px;
+		color:#fff;
+		background-color: #ff404b; 
+	}
+	.cont-guide {
+		padding:0 !important;
+		li {
+			font-size:1rem !important;
+		}
+	}
+}

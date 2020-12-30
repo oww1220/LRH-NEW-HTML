@@ -814,153 +814,6 @@
         //운전면허증정보
         .driver-license {
             padding:1.7rem 0 0;
-            .selection {
-                padding-bottom:1.7rem;
-                .detail-radio-box {
-                    @include Align-box-left;
-                    li + li {
-                        margin-left:5%;
-                    }
-                }
-            }
-            
-            .detail-iconBox{
-                label {
-                    height: auto;
-                }
-            }
-            .domestic-view {
-                .license {
-                    @include Background($sprite:'bg-domestic-license', $size:100% 100%, $position:center center, $path:'bgs');
-                    position: relative;
-                    height:20.6rem;
-                    > div {
-                        position: absolute;
-                        .numbering {
-                            right:-1.7rem;
-                            left:unset;
-                            top:.7rem;
-                        }
-                        .selectbox, input {
-                            height:2.6rem;
-                            width:6.5rem;
-                            padding: 0 .6rem;
-                            font-size:.9rem;
-                        }
-                        
-                        &.type-box {
-                            top:1.3rem;
-                            left:1.3rem;
-                        }
-                        &.number-box {
-                            top:20%;
-                            left:27%;
-                            .box-between {
-                                width:85%;
-                                .selectbox {
-                                    width:auto;
-                                    padding: 0 1.2rem 0 0.3rem;
-                                } 
-                                .inputT {
-                                    margin-left:.3rem;
-                                    input {
-                                        width:4.5rem;
-                                    }
-                                }
-                                
-                            } 
-                        }
-                        &.name-box {
-                            top:35%;
-                            left:35%;
-                        }
-                        &.expiration-date-box {
-                            bottom:19%;
-                            left:40%;
-                            .box-between {
-                                margin-left: .3rem;
-                                .inputT {
-                                    margin-left: .3rem;
-                                }
-                            }
-                        }
-                        &.issue-date-box {
-                            bottom:5%;
-                            left:27%;
-                        }
-                    }
-                }
-            }
-            .global-view {
-                .license {
-                    @include Background($sprite:'bg-global-license', $size:100% 100%, $position:center center, $path:'bgs');
-                    position: relative;
-                    min-height:28.3rem;
-                    > div {
-                        position: absolute;
-                        .numbering {
-                            right:-1.7rem;
-                            left:unset;
-                            top:.7rem;
-                        }
-                        .selectbox{
-                            height:2.6rem;
-                            padding: 0 .6rem;
-                            width:9.5rem;
-                        }
-                        
-                        &.country-box {
-                            left:15%;
-                            top:36%;
-                        }
-                        &.number-box {
-                            left:5%;
-                            bottom:25%;
-                            input {
-                                height:2.6rem;
-                                width:auto;
-                                padding: 0 .6rem;
-                                font-size:.9rem;
-                            }
-                        }
-                        &.type-box {
-                            right:30%;
-                            top:30%;
-                            .numbering {
-                                right:-.8rem;
-                                left:unset;
-                                top:.4rem;
-                            }
-                        }
-                    }
-                }
-            }
-            h4 {
-                padding:2.6rem 0 1rem;
-                font-size:1.1rem;
-                @include Bold;
-            }
-            .input-info {
-                li {
-                    position: relative;
-                    padding-left:1.7rem;
-                    font-size:1rem;
-                    color:#8f9191;
-                }
-            }
-            .numbering {
-                @include Align-middle;
-                @include Position($top: .2rem, $left: 0);
-                font-size:.9rem;
-                width:1.2rem;
-                height:1.2rem;
-                border-radius: 18px;
-                color:#fff;
-                background-color: #ff404b; 
-            }
-            .cont-guide {
-                padding:0;
-            }
         }
           
         .chk-agree-list {
@@ -1152,7 +1005,7 @@
                     border-radius: 1rem;
                     padding:1.5rem 1.3rem;
                     @include Align-between;
-                    h4 {
+                    h3 {
                         font-size: 1.4rem;
                         width:100%;
                         @include Bold;
@@ -1408,20 +1261,26 @@
                                 }
                             }
                         }
-                        .form + .form {
+                        .driver-license {
                             padding-top:3.4rem;
-                        }
-                        h5 {
-                            font-size:1.2rem;
-                            padding-bottom:1.3rem;
-                            @include Bold;
-                            & + div {
-                                margin-bottom:2.6rem;
+                            h4 {
+                                padding-top:0;
+                                font-size:1.2rem;
+                                @include Bold;
                             }
-                            & + ul {
-                                margin-bottom:0.9rem;
+                            .license {
+                                margin-bottom:1.7rem;
+                                > div {
+                                    padding-top:0
+                                }
+                                .number-box {
+                                    .inputT {
+                                        padding:0;
+                                    }
+                                }
                             }
                         }
+                        
                         &.chk-toggle-detail01 {
                             display: block;
                         }
@@ -1433,90 +1292,7 @@
                         padding-bottom:0;
                     }
                 }
-                .driver-license {
-                    .input-info {
-                        li {
-                            position: relative;
-                            padding-left:1.7rem;
-                            font-size:1rem;
-                            color:#8f9191;
-                        }
-                    }
-                    .numbering {
-                        @include Align-middle;
-                        @include Position($top: .2rem, $left: 0);
-                        font-size:.9rem;
-                        width:1.2rem;
-                        height:1.2rem;
-                        border-radius: 18px;
-                        color:#fff;
-                        background-color: #ff404b; 
-                    }
-                    .cont-guide {
-                        padding-bottom:1.7rem;
-                    }
-                    
-                }
-                .domestic-license {
-                    @include Background($sprite:'bg-domestic-license', $size:100% 100%, $position:center center, $path:'bgs');
-                    position: relative;
-                    height:20.6rem;
-                    > div {
-                        position: absolute;
-                        .numbering {
-                            right:-1.7rem;
-                            left:unset;
-                            top:.7rem;
-                        }
-                        .selectbox, input {
-                            height:2.6rem;
-                            width:6.5rem;
-                            padding: 0 .6rem;
-                            font-size:.9rem;
-                        }
-                        
-                        &.type-box {
-                            top:1.3rem;
-                            left:1.3rem;
-                        }
-                        &.number-box {
-                            top:20%;
-                            left:27%;
-                            .box-between {
-                                width:85%;
-                                .selectbox {
-                                    width:auto;
-                                    padding: 0 1.2rem 0 0.3rem;
-                                } 
-                                .inputT {
-                                    margin-left:.3rem;
-                                    input {
-                                        width:4.5rem;
-                                    }
-                                }
-                                
-                            } 
-                        }
-                        &.name-box {
-                            top:35%;
-                            left:35%;
-                        }
-                        &.expiration-date-box {
-                            bottom:19%;
-                            left:40%;
-                            .box-between {
-                                margin-left: .3rem;
-                                .inputT {
-                                    margin-left: .3rem;
-                                }
-                            }
-                        }
-                        &.issue-date-box {
-                            bottom:5%;
-                            left:27%;
-                        }
-                    }
-                }
+               
                 .chk-agree-list {
                     .chk-agree-cols {
                         li {
