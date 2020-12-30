@@ -836,7 +836,7 @@ if($('.branch-office-section').length){
             $('.branchesSwiper .btnAutoplay').removeClass('stop');            
             $(activeDiv).find($('.branchesSwiper .btnAutoplay')).on('click',function(){                
                 if(autoplayFlag == true){
-                    $(this).addClass('stop');0                    
+                    $(this).addClass('stop');
                     MUI.slide.LayerSwiper.autoplay.stop();                                        
                     autoplayFlag = false;
                 }else{

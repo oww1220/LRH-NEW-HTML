@@ -17897,6 +17897,18 @@ html, body {
 	padding-left: 50px;
 }
 
+.customer-container .tbl-section .tbl-type-list .detail-cont .detail-cont-col:first-child {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 430px;
+	-webkit-flex-basis: 430px;
+	    -ms-flex-preferred-size: 430px;
+	        flex-basis: 430px;
+}
+
 .customer-container .tbl-section .result-none {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
@@ -23494,67 +23506,65 @@ html, body {
 	font-weight: 400;
 }
 
-.customer-branch-printMap {
-	padding-top: 60px;
-}
-
-.customer-branch-printMap .tbl-type-list {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-.customer-branch-printMap .tbl-type-list .detail-cont {
+.printMap-header {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	padding: 50px 20px 50px 40px;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding-bottom: 40px;
 	border-bottom: 1px solid #e7e7e7;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont > .col {
-	width: 430px;
-	-webkit-flex-basis: 430px;
-	    -ms-flex-preferred-size: 430px;
-	        flex-basis: 430px;
-	padding-right: 40px;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+.printMap-header h1 {
+	font-size: 24px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont > .col .bot {
-	margin-top: 30px;
-	-webkit-box-align: start;
-	-webkit-align-items: flex-start;
-	   -moz-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
+.printMap-header .btns {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont > .col .right .icon {
-	margin-right: 7px;
+.printMap-header .btns .btn {
+	height: 40px;
+	font-size: 14px;
+	white-space: nowrap;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont > .col .right .btn {
-	margin-bottom: 7px;
+.printMap-header .btns .btn .icon {
+	margin-right: 10px;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont > .col2 {
-	width: 670px;
-	-webkit-flex-basis: 670px;
-	    -ms-flex-preferred-size: 670px;
-	        flex-basis: 670px;
+.printMap-header .btns .btn + .btn {
+	margin-left: 10px;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont .descri-box > .row {
+.printMap-header, .tbl-type-list, .branch-driver-section {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.customer-branch-printMap {
+	padding-top: 60px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -23570,33 +23580,219 @@ html, body {
 	   -moz-box-pack: left;
 	    -ms-flex-pack: left;
 	        justify-content: left;
-	margin-bottom: 30px;
+	padding: 50px 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-bottom: 1px solid #e7e7e7;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont .descri-box > .row dt {
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper {
+	width: 430px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding: 20px 0;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls .btnAutoplay {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 25px;
+	height: 25px;
+	font: 0/0 a;
+	border: 1px solid #d2d2d2;
+	-webkit-border-radius: 25px;
+	   -moz-border-radius: 25px;
+	        border-radius: 25px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls .btnAutoplay::before, .customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls .btnAutoplay::after {
+	content: "";
+	width: 2px;
+	height: 9px;
+	background-color: #8f9191;
+	margin: 0 1.5px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls .btnAutoplay.stop::before {
+	display: none;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls .btnAutoplay.stop::after {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 4px 0 4px 7px;
+	border-color: transparent transparent transparent #8f9191;
+	background-color: transparent;
+	margin: 0;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls .branchesSwiper-pagination {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .branchesSwiper-controls .branchesSwiper-pagination span {
+	margin-left: 10px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	   -moz-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row .tit {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	font-weight: normal;
-	width: 120px;
-	-webkit-flex-basis: 120px;
-	    -ms-flex-preferred-size: 120px;
-	        flex-basis: 120px;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont .descri-box > .row dd {
-	width: 560px;
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row .txt {
+	margin-top: 10px;
 	font-size: 14px;
-}
-
-.customer-branch-printMap .tbl-type-list .detail-cont .descri-box > .row .tit {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	font-weight: normal;
 	color: #54585a;
 }
 
-.customer-branch-printMap .tbl-type-list .detail-cont .descri-box .lst li {
-	margin-bottom: 20px;
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row + .detail-cont-row {
+	margin-top: 30px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row .txt-inner {
+	line-height: 1.4;
+	padding: 20px;
+	margin-top: 20px;
+	background: #f6f6f6;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row .txt-inner .tit {
+	margin-bottom: 10px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row .txt-inner .txt-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: baseline;
+	-webkit-align-items: baseline;
+	   -moz-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+	word-break: break-word;
+	margin-top: 10px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row .txt-inner .txt-row strong {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 70px;
+	-webkit-flex-basis: 70px;
+	    -ms-flex-preferred-size: 70px;
+	        flex-basis: 70px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-row .txt-inner li + li {
+	margin-top: 10px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-btns {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 30px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-btns .btn {
+	width: auto;
+	height: 40px;
+	color: #54585a;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	font-weight: normal;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-btns .btn .icon {
+	margin-right: 5px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col .detail-cont-btns .btn + .btn {
+	margin-left: 10px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col + .detail-cont-col {
+	padding-left: 50px;
+}
+
+.customer-branch-printMap .tbl-type-list .detail-cont .detail-cont-col:first-child {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 430px;
+	-webkit-flex-basis: 430px;
+	    -ms-flex-preferred-size: 430px;
+	        flex-basis: 430px;
 }
 
 .customer-branch-driver-printMap {
@@ -23663,8 +23859,7 @@ html, body {
 }
 
 .customer-branch-driver-printMap .branch-driver-section {
-	max-width: 1200px;
-	margin: 0 auto;
+	margin-top: 50px;
 }
 
 .customer-branch-driver-printMap .branch-driver-section .branch-driver-top-area > .right {
