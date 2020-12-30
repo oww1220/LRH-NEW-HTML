@@ -313,6 +313,47 @@ html, body {
 	border-bottom: 1px solid #e7e7e7;
 }
 
+.section-explain .explain-header.between-type {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.section-explain .explain-header.between-type .info-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.section-explain .explain-header.between-type .info-list p strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+.section-explain .explain-header.between-type .info-list p .icon {
+	margin-right: 10px;
+}
+
+.section-explain .explain-header.between-type .info-list p + p {
+	margin-left: 30px;
+}
+
 .section-explain .explain-cont .tit {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
@@ -331,6 +372,10 @@ html, body {
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
+}
+
+.section-explain .explain-cont .txt + .row {
+	margin-top: 80px;
 }
 
 .section-explain .explain-cont > .row + .row {
@@ -463,6 +508,10 @@ html, body {
 
 .section-explain .explain-cont .tbl-box + .tbl-box {
 	margin-top: 60px;
+}
+
+.section-explain .explain-cont .details .lst {
+	margin: 0;
 }
 
 .section-explain + .section-explain {
@@ -980,6 +1029,31 @@ html, body {
 	        align-items: center;
 }
 
+.grey-box {
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	background-color: #f5f5f5;
+}
+
+.grey-box.between-type {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
 .grid-row {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1175,6 +1249,7 @@ html, body {
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	margin-bottom: 60px;
 }
 
 .multi-segment-list .circle {
@@ -1222,7 +1297,7 @@ html, body {
 
 .multi-segment-list.type-col2 > li {
 	width: 50%;
-	padding: 0 40px 60px 0;
+	padding: 0 40px 0 0;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -14308,6 +14383,20 @@ html, body {
 	margin-top: 30px;
 }
 
+.eng-wrap .airline-section .grey-box {
+	padding: 40px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.eng-wrap .airline-section .lst {
+	margin-top: 60px;
+}
+
+.eng-wrap .airline-section .lst + .grey-box {
+	margin-top: 80px;
+}
+
 .eng-short-main-wrap {
 	padding: 70px 0 150px;
 	background: url(../../resources-pc/images/@temp-eng-short-mbg.png) 0 0 no-repeat;
@@ -16052,13 +16141,9 @@ html, body {
 }
 
 .eng-wrap .grey-box {
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
 	padding: 30px 40px;
 	margin-bottom: 80px;
 	color: #54585a;
-	background-color: #f5f5f5;
 }
 
 .eng-wrap .grey-box strong {
@@ -16071,24 +16156,6 @@ html, body {
 
 .eng-wrap .grey-box .icon {
 	margin-right: 10px;
-}
-
-.eng-wrap .grey-box.between-type {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	   -moz-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
 }
 
 .eng-wrap .img-list li .item {
@@ -22469,6 +22536,10 @@ html, body {
 	   -moz-box-flex: 0;
 	    -ms-flex: none;
 	        flex: none;
+	width: 560px;
+	-webkit-flex-basis: 560px;
+	    -ms-flex-preferred-size: 560px;
+	        flex-basis: 560px;
 	font-size: 14px;
 	color: #54585a;
 }
@@ -22541,6 +22612,7 @@ html, body {
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 	letter-spacing: -1px;
+	white-space: nowrap;
 }
 
 .mypage-container .branch-info-list > li > .cont .btns .btn-auto + .btn-auto {

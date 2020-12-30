@@ -492,7 +492,20 @@ $txt-darkblack: #2f2f2f;
 		.explain-header{ //제목
 			padding-bottom:30px;
             margin-bottom:60px;
-            border-bottom:1px solid #e7e7e7;
+			border-bottom:1px solid #e7e7e7;
+			
+			&.between-type{
+				@include Align-between;
+
+				.info-list{
+					display:flex;
+					p{
+						strong{@include Bold; font-size:1rem;}
+						.icon{margin-right:10px;}
+						+ p{margin-left:30px;}
+					}
+				}
+			}
 		}
 		.explain-cont{ //내용			
 			.tit{
@@ -503,6 +516,8 @@ $txt-darkblack: #2f2f2f;
 			.txt{
 				margin-bottom:30px; 
 				strong{@include Bold;}
+
+				+ .row{margin-top:80px;}
 			}
 				
 			> .row{
@@ -584,6 +599,9 @@ $txt-darkblack: #2f2f2f;
 
 				+ .tbl-box{margin-top:60px;}
 			}	
+			.details{
+				.lst{margin:0;}
+			}
 		}
 
 		
@@ -786,6 +804,15 @@ $txt-darkblack: #2f2f2f;
 	}
 }
 
+.grey-box{
+	@include roundBox;
+	background-color:#f5f5f5;
+
+	&.between-type{
+		@include Align-between;
+	}
+}
+
 .grid-row {
 	@include Align-top-left-column;
 
@@ -890,6 +917,7 @@ $txt-darkblack: #2f2f2f;
 .multi-segment-list{
 	> li{
 		@include Align-middle-left;		
+		margin-bottom:60px;
 	}
 	.circle{
 		@include Align-middle;
@@ -909,7 +937,7 @@ $txt-darkblack: #2f2f2f;
 
 		> li{
 			width:50%; 
-			padding:0 40px 60px 0;
+			padding:0 40px 0 0;
 			box-sizing: border-box;
 		}
 	}
