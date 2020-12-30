@@ -167,6 +167,21 @@
 	}
 	& + .iconBox {margin-top:.6rem;}
 }
+.detail-iconBox{
+	label {
+		border:0;
+		background-color: unset;
+	}
+	input:checked + label {
+		@include Regular;
+	}
+	input[type='checkbox'] + label:after{
+		@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+	}
+	input[type='checkbox']:checked + label:after{
+		@include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+	}
+}
 
 .iconList {
 	box-sizing: border-box;

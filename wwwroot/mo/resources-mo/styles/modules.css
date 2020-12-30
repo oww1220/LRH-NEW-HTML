@@ -14462,6 +14462,35 @@ body.fixed {
 	margin-top: .6rem;
 }
 
+.detail-iconBox label {
+	border: 0;
+	background-color: unset;
+}
+
+.detail-iconBox input:checked + label {
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+}
+
+.detail-iconBox input[type='checkbox'] + label:after {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-chk-off03.png");
+	background-position: center center;
+	-webkit-background-size: 92% auto;
+	   -moz-background-size: 92% auto;
+	        background-size: 92% auto;
+}
+
+.detail-iconBox input[type='checkbox']:checked + label:after {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-chk-on05.png");
+	background-position: center center;
+	-webkit-background-size: 92% auto;
+	   -moz-background-size: 92% auto;
+	        background-size: 92% auto;
+}
+
 .iconList {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;

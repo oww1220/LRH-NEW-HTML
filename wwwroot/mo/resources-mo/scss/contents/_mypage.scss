@@ -262,6 +262,33 @@
                 }
             }
         }
+        .cont-tit {
+            background-color: #EFF2F7;
+            border-radius: 1rem;
+            padding:1.5rem 1.3rem;
+            @include Align-between;
+            h3 {
+                font-size: 1.4rem;
+                width:100%;
+                @include Bold;
+                @include Align-between;
+            }
+            h4 {
+                font-size: 1.4rem;
+                width:100%;
+                @include Bold;
+                @include Align-between;
+            }
+            strong {
+                @include Bold;
+                font-size:1.1rem;
+                b {
+                    font-size:1.1rem;
+                    padding-left:.5rem;
+                }
+            }
+
+        }
         //포인트 사용내역
         .point-usage-history {
             .list-view-info {
@@ -781,87 +808,210 @@
                 }
             }
         }
-
+        .section-cont {
+            padding:1.7rem;
+        }
         //운전면허증정보
-        .license-list {
-            margin-top: 2.6rem;
-            padding: 0 1.7rem;
-            &.global {
-                display: none;
-            }
-            h3 {
-                margin-top:3.4rem;
-                padding: 1.5rem 1.3rem;
-                background-color: #eff2f7;
-                border-radius: 1rem;
-                strong{
-                    @include Bold;
-                    font-size: 1.4rem;
-                }
-            }
-            .t-notice {
-                @include Align-right-column;
-                color: #ed1c24;
-                font-size: 1rem;
-                margin-bottom: 1.3rem;
-                sub {
-                    display: inline-flex;
-
-                }
-            }
-            .item-cont {
-        
-                .detail-layer-inputT{
-                    margin-top:.9rem;
-                }
-            }
-            .chk-agree-list {
-                margin-top:0;
-                padding-bottom: 1.7rem;
-                border-bottom: 1px solid #e7e7e7;
-                .chk-agree-cols {
-                    .chk-agree-top {
-                        .inputC {
-                            label {
-                                @include Regular;
-                                span { 
-                                        font-size:1.1rem;
-                                }
-                            }
-                            label:before {
-                                @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
-                            }
-                            input:checked + label {
-                                &:before{
-                                    @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
-                                }
-                            }
-                        } 
+        .driver-license {
+            padding:1.7rem 0 0;
+            .selection {
+                padding-bottom:1.7rem;
+                .detail-radio-box {
+                    @include Align-box-left;
+                    li + li {
+                        margin-left:5%;
                     }
-                    .chk-agree-cont2 {
-                        @include Regular;
-                        background-color:#f5f5f5;
-                        border-radius:.6rem;
-                        padding:1.7rem .9rem;
-                        font-size: 1.1rem;
-                        color:#8f9191;
-                        .guide {
-                            line-height: 1.5;
-                            text-indent: -.8rem;
-                            padding-left:1rem;
-                            & > li{
-                                border: 0;
-                                & > i{
-                                    margin-right: .6rem;
+                }
+            }
+            
+            .detail-iconBox{
+                label {
+                    height: auto;
+                }
+            }
+            .domestic-view {
+                .license {
+                    @include Background($sprite:'bg-domestic-license', $size:100% 100%, $position:center center, $path:'bgs');
+                    position: relative;
+                    height:20.6rem;
+                    > div {
+                        position: absolute;
+                        .numbering {
+                            right:-1.7rem;
+                            left:unset;
+                            top:.7rem;
+                        }
+                        .selectbox, input {
+                            height:2.6rem;
+                            width:6.5rem;
+                            padding: 0 .6rem;
+                            font-size:.9rem;
+                        }
+                        
+                        &.type-box {
+                            top:1.3rem;
+                            left:1.3rem;
+                        }
+                        &.number-box {
+                            top:20%;
+                            left:27%;
+                            .box-between {
+                                width:85%;
+                                .selectbox {
+                                    width:auto;
+                                    padding: 0 1.2rem 0 0.3rem;
+                                } 
+                                .inputT {
+                                    margin-left:.3rem;
+                                    input {
+                                        width:4.5rem;
+                                    }
                                 }
-                                &.red_txt{
-                                    color:#ed1c24;
+                                
+                            } 
+                        }
+                        &.name-box {
+                            top:35%;
+                            left:35%;
+                        }
+                        &.expiration-date-box {
+                            bottom:19%;
+                            left:40%;
+                            .box-between {
+                                margin-left: .3rem;
+                                .inputT {
+                                    margin-left: .3rem;
                                 }
                             }
                         }
-                        > p {
-                            padding: 0 1rem;
+                        &.issue-date-box {
+                            bottom:5%;
+                            left:27%;
                         }
+                    }
+                }
+            }
+            .global-view {
+                .license {
+                    @include Background($sprite:'bg-global-license', $size:100% 100%, $position:center center, $path:'bgs');
+                    position: relative;
+                    min-height:28.3rem;
+                    > div {
+                        position: absolute;
+                        .numbering {
+                            right:-1.7rem;
+                            left:unset;
+                            top:.7rem;
+                        }
+                        .selectbox{
+                            height:2.6rem;
+                            padding: 0 .6rem;
+                            width:9.5rem;
+                        }
+                        
+                        &.country-box {
+                            left:15%;
+                            top:36%;
+                        }
+                        &.number-box {
+                            left:5%;
+                            bottom:25%;
+                            input {
+                                height:2.6rem;
+                                width:auto;
+                                padding: 0 .6rem;
+                                font-size:.9rem;
+                            }
+                        }
+                        &.type-box {
+                            right:30%;
+                            top:30%;
+                            .numbering {
+                                right:-.8rem;
+                                left:unset;
+                                top:.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            h4 {
+                padding:2.6rem 0 1rem;
+                font-size:1.1rem;
+                @include Bold;
+            }
+            .input-info {
+                li {
+                    position: relative;
+                    padding-left:1.7rem;
+                    font-size:1rem;
+                    color:#8f9191;
+                }
+            }
+            .numbering {
+                @include Align-middle;
+                @include Position($top: .2rem, $left: 0);
+                font-size:.9rem;
+                width:1.2rem;
+                height:1.2rem;
+                border-radius: 18px;
+                color:#fff;
+                background-color: #ff404b; 
+            }
+            .cont-guide {
+                padding:0;
+            }
+        }
+          
+        .chk-agree-list {
+            margin-top:0;
+            padding-bottom: 1.7rem;
+            border-bottom: 1px solid #e7e7e7;
+            .chk-agree-cols {
+                li {
+                    border-bottom: 0;
+                }
+                .chk-agree-top {
+                    .inputC {
+                        label {
+                            @include Regular;
+                            span { 
+                                    font-size:1.1rem;
+                            }
+                        }
+                        label:before {
+                            @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+                        }
+                        input:checked + label {
+                            &:before{
+                                @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                            }
+                        }
+                    } 
+                }
+                .chk-agree-cont2 {
+                    @include Regular;
+                    background-color:#f5f5f5;
+                    border-radius:.6rem;
+                    padding:1.7rem .9rem;
+                    font-size: 1.1rem;
+                    color:#8f9191;
+                    .guide {
+                        line-height: 1.5;
+                        text-indent: -.8rem;
+                        padding-left:1rem;
+                        & > li{
+                            border: 0;
+                            & > i{
+                                margin-right: .6rem;
+                            }
+                            &.red_txt{
+                                color:#ed1c24;
+                            }
+                        }
+                    }
+                    > p {
+                        padding: 0 1rem;
                     }
                 }
             }
@@ -2344,6 +2494,9 @@
             }
             
         }   
+    }
+    .box-between {
+        @include Align-between;
     }
 }
 

@@ -1472,6 +1472,32 @@ if($('.mypage-main .swiper-item').length) {
     });
 }
 
+//운전면허정보 - 국내,외
+//면허 국내,외 구분
+if($('.driver-license .detail-radio').length) {
+    $('.driver-license .view-N').hide();
+    $('.driver-license .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'Y'){
+            $('.driver-license .view-Y').addClass('active');
+            $('.driver-license .view-N').hide();
+            $('.driver-license .view-Y').show();
+        }
+        else{
+            $('.driver-license .view-Y').removeClass('active');
+        }
+    });
+    $('.driver-license .detail-radio').on('change', '.detail-radio-box input', function(e){
+        if(e.target.value === 'N'){
+            $('.driver-license .view-N').addClass('active');
+            $('.driver-license .view-Y').hide();
+            $('.driver-license .view-N').show();
+        }
+        else{
+            $('.driver-license .view-N').removeClass('active');
+        }
+    });
+}
+
 
 /* -------------------------------------------------마이페이지 end*/
 
