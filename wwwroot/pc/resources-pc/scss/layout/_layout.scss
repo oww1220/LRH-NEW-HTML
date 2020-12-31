@@ -308,7 +308,7 @@
         @include roundBox;                    
         @include box-shadow($top:0, $left:0px, $blur:15px, $color:rgba(100, 100, 100, 0.15));
         box-sizing: border-box;
-        transform: translateX(44%);
+        transform: translateX(42%);
 
         &:before{
             content: '';
@@ -327,6 +327,24 @@
             .layer-list{
                 li{
                     @include Align-middle;
+                    a{
+                        position: relative;
+                        &:before{
+                            display: block;
+                            content: '|';
+                            color: #e7e7e7;
+                            font-size: 13px;
+                            @include Position($top:50%, $left:0);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                li:first-child{
+                    a{
+                        &:before{
+                            display:none;
+                        }
+                    }
                 }
                 .btn{
                     height:auto;
@@ -339,6 +357,25 @@
                 left:auto;
                 right:15px;
             }
+        }
+    }
+    &.tooltip-site{
+        @include Position($top:0, $right:0);
+        .btn-share{
+            position: inherit !important;
+            top:0 !important;
+            right:0 !important;
+            @include Align-between-base;
+            align-items: center;
+        }
+        .tooltipCont-top{
+            top:40px;
+        }
+    }
+    &.tooltip-site-right{
+        justify-content: flex-end;
+        .tooltipCont-top{
+            margin-top: 5px;
         }
     }
 }

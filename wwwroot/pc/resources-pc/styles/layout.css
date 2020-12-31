@@ -4053,11 +4053,11 @@ html, body {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
-	-webkit-transform: translateX(44%);
-	   -moz-transform: translateX(44%);
-	    -ms-transform: translateX(44%);
-	     -o-transform: translateX(44%);
-	        transform: translateX(44%);
+	-webkit-transform: translateX(42%);
+	   -moz-transform: translateX(42%);
+	    -ms-transform: translateX(42%);
+	     -o-transform: translateX(42%);
+	        transform: translateX(42%);
 }
 
 .tooltip-top-wrap .tooltipCont-top:before {
@@ -4099,6 +4099,29 @@ html, body {
 	        justify-content: center;
 }
 
+.tooltip-top-wrap .tooltipCont-top .tooltipCont-inner .layer-list li a {
+	position: relative;
+}
+
+.tooltip-top-wrap .tooltipCont-top .tooltipCont-inner .layer-list li a:before {
+	display: block;
+	content: '|';
+	color: #e7e7e7;
+	font-size: 13px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.tooltip-top-wrap .tooltipCont-top .tooltipCont-inner .layer-list li:first-child a:before {
+	display: none;
+}
+
 .tooltip-top-wrap .tooltipCont-top .tooltipCont-inner .layer-list .btn {
 	height: auto;
 }
@@ -4106,6 +4129,54 @@ html, body {
 .tooltip-top-wrap .tooltipCont-top.arrow-type-right:before {
 	left: auto;
 	right: 15px;
+}
+
+.tooltip-top-wrap.tooltip-site {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.tooltip-top-wrap.tooltip-site .btn-share {
+	position: inherit !important;
+	top: 0 !important;
+	right: 0 !important;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.tooltip-top-wrap.tooltip-site .tooltipCont-top {
+	top: 40px;
+}
+
+.tooltip-top-wrap.tooltip-site-right {
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	   -moz-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.tooltip-top-wrap.tooltip-site-right .tooltipCont-top {
+	margin-top: 5px;
 }
 
 .estimateBottom {
