@@ -754,6 +754,41 @@
                                     }
                                 }
                             }
+                            &.detail-layer-inputT02 {
+                                @include Align-between;
+                                .detail-layer-inputT-number03 {
+                                    @include Align-between;
+                                    width:68%;
+                                    margin:0;
+                                    li {
+                                        width:31.3%;
+                                    }
+                                }
+                                button {
+                                    height: 4.1rem;
+                                    width:30%;
+                                    font-size:1.2rem;
+                                }
+                            }
+                            
+                            .detail-layer-inputT-address{
+                                @include Align-between;
+                                width:100%;
+                                margin-left:0;
+                                li{
+                                    position: relative;
+                                    &:first-child{
+                                        width:30%;
+                                        margin-right:.4rem;
+                                    }
+                                    &:last-child{
+                                        width:68%;
+                                    }
+                                    & > button{
+                                        height: 4.1rem;
+                                    }
+                                }
+                            }
                         }
                         .detail-layer-inputT-email{
                             display:flex;
@@ -3642,6 +3677,24 @@
                                     border-color:#54585a;
                                     color:#fff;
                                     font-size:1.2rem;
+                                }
+                            }
+                        }
+                        .detail-layer-inputT-address{
+                            @include Align-between;
+                            width:100%;
+                            margin-left:0;
+                            li{
+                                position: relative;
+                                &:first-child{
+                                    width:30%;
+                                    margin-right:.4rem;
+                                }
+                                &:last-child{
+                                    width:68%;
+                                }
+                                & > button{
+                                    height: 4.1rem;
                                 }
                             }
                         }

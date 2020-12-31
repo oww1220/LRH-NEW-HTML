@@ -108,6 +108,13 @@
 										</ul>
 									</div>
 									<div class="detail-layer-inputT inputT">
+										<select class="selectbox" name="" id="gender_list" onchange="$('#gender_ls').val($('#gender_list').val());">
+											<option value="">성별을 선택하세요</option>
+											<option value="men">남자</option>
+											<option value="women">여자</option>
+										</select>
+									</div>
+									<div class="detail-layer-inputT inputT">
 										<ul class="detail-layer-inputT-email list-type-col2">
 											<li>
 												<input type="text" id="chrgemail_fs" value="" name="email" title="이메일 정보 입력하세요." placeholder="이메일 정보 입력하세요.">
@@ -125,8 +132,8 @@
 											<option value="naver.com">naver.com</option>
 										</select>
 									</div>
-									<div class="detail-layer-inputT inputT">
-										<ul class="detail-layer-inputT-number list-type-col3">
+									<div class="detail-layer-inputT detail-layer-inputT02 inputT">
+										<ul class="detail-layer-inputT-number03 list-type-col3">
 											<li class="inputT">
 												<select class="selectbox" name="" id="">
 													<option value="">선택</option>
@@ -134,15 +141,30 @@
 													<option value="">011</option>
 												</select>
 											</li>
-											<li class="inputT"><input type="text" id="" name="" title="인증번호" placeholder="" value=""></li>
-											<li class="inputT"><button type="button" class="btn-default black">인증번호받기</button></li>
+											<li class="inputT"><input type="text" id="" name="" title="휴대폰번호 앞자리" placeholder="" value=""></li>
+											<li class="inputT"><input type="text" id="" name="" title="휴대폰번호 뒷자리" placeholder="" value=""></li>
 										</ul>
+										<button type="button" class="btn-default black">인증번호받기</button>
 									</div>
 									<div class="detail-layer-inputT inputT">
 										<ul class="detail-layer-inputT-number list-type-col2">
 											<li class="inputT"><input type="text" id="" name="" title="인증번호를 입력하세요" placeholder="인증번호를 입력하세요" value=""></li>
 											<li class="inputT"><button type="button" class="btn-default black">확인</button></li>
 										</ul>
+										<p class="texRed">유효시간 3분 26초</p>
+									</div>
+									<div class="detail-layer-inputT inputT">
+										<ul class="detail-layer-inputT-address list-type-col2">
+											<li class="inputT">
+												<button type="button" class="btn-default black">우편번호</button>
+											</li>
+											<li class="inputT">
+												<input type="text" id="" name="" title="" value="">
+											</li>
+										</ul>
+									</div>
+									<div class="detail-layer-inputT inputT">
+										<input type="text" id="" name="" title="상세주소 입력" placeholder="상세주소를 입력하세요" value="">
 									</div>
 								</div>
 							</div>
