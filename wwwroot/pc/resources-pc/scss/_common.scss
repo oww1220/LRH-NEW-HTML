@@ -359,6 +359,10 @@ $main-border-radius: 6px;
 
 		.lst{margin-top:0;}
 	}
+	.txt-temps{
+		margin-top:10px;
+		color:$txt-red;
+	}
 	.txt-exam{padding:0 5px; color:#8f9191;}
 	.at, .hypen{margin:0 5px;}
 }
@@ -644,6 +648,12 @@ $txt-darkblack: #2f2f2f;
 				
 				&.type2{
 					@include formRow;
+
+					//주소 폼 
+					.addr-area{
+						.inputT, .selectbox{max-width:100%;}
+					
+					}
 				}
 			}
 
@@ -691,10 +701,16 @@ $txt-darkblack: #2f2f2f;
 
 		.format-area{		
             > .row{
-                @include Align-top-left;
+				//@include Align-top-left;
+				@include Align-baseline;
                 margin-bottom:40px;
 
-                dt{@include Bold; width:170px;}
+                dt{
+					flex:none;
+					flex-basis: 170px;
+					width:170px;
+					@include Bold; 
+				}
                 
 			}
         }
@@ -716,7 +732,12 @@ $txt-darkblack: #2f2f2f;
 				@include Align-top-left;
 				margin-bottom:40px;
 
-				dt{@include Bold; width:170px;}
+				dt{
+					flex:none;
+					flex-basis: 170px;
+					width:170px;
+					@include Bold; 
+				}
 				
 			}
 		}

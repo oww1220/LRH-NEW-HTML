@@ -258,6 +258,11 @@ html, body {
 	margin-top: 0;
 }
 
+.form-cont .form-row .txt-temps {
+	margin-top: 10px;
+	color: #ed1c24;
+}
+
 .form-cont .form-row .txt-exam {
 	padding: 0 5px;
 	color: #8f9191;
@@ -638,6 +643,11 @@ html, body {
 	margin-top: 0;
 }
 
+.section-form .form-cont .row.type2 .txt-temps {
+	margin-top: 10px;
+	color: #ed1c24;
+}
+
 .section-form .form-cont .row.type2 .txt-exam {
 	padding: 0 5px;
 	color: #8f9191;
@@ -645,6 +655,10 @@ html, body {
 
 .section-form .form-cont .row.type2 .at, .section-form .form-cont .row.type2 .hypen {
 	margin: 0 5px;
+}
+
+.section-form .form-cont .row.type2 .addr-area .inputT, .section-form .form-cont .row.type2 .addr-area .selectbox {
+	max-width: 100%;
 }
 
 .section-form .form-cont .input-group {
@@ -742,11 +756,11 @@ html, body {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: start;
-	-webkit-align-items: flex-start;
-	   -moz-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
+	-webkit-box-align: baseline;
+	-webkit-align-items: baseline;
+	   -moz-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
 	-webkit-box-pack: left;
 	-webkit-justify-content: left;
 	   -moz-box-pack: left;
@@ -756,11 +770,19 @@ html, body {
 }
 
 .section-format .format-area > .row dt {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	-webkit-flex-basis: 170px;
+	    -ms-flex-preferred-size: 170px;
+	        flex-basis: 170px;
+	width: 170px;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
-	width: 170px;
 }
 
 .section-format-type2 .format-header {
@@ -808,11 +830,19 @@ html, body {
 }
 
 .section-format-type2 .format-area > .row dt {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	-webkit-flex-basis: 170px;
+	    -ms-flex-preferred-size: 170px;
+	        flex-basis: 170px;
+	width: 170px;
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
-	width: 170px;
 }
 
 .section-format-type2 .format-cont {
@@ -11825,24 +11855,12 @@ html, body {
 	left: 35px;
 }
 
-.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between select {
-	max-width: 25%;
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont .certify-area .inputT, .short-container .realTime-cont .section-cont .section-form.form2 .form-cont .certify-area .selectbox {
+	max-width: 100%;
 }
 
-.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between select + .inputT {
-	max-width: 45%;
-}
-
-.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between select + .inputT + button {
-	width: 30%;
-}
-
-.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between + .box-between .inputT {
-	max-width: 71%;
-}
-
-.short-container .realTime-cont .section-cont .section-form.form2 .form-cont > div:last-child .box-between + .box-between .inputT + button {
-	width: 30%;
+.short-container .realTime-cont .section-cont .section-form.form2 .form-cont .certify-area .btn {
+	min-width: 125px;
 }
 
 .short-container .realTime-cont .section-cont .section-form.form4 .chk-view-box label {
@@ -19351,6 +19369,10 @@ html, body {
 
 .join-container .section-form .form-cont > .row.type2 .email-cont .btn, .join-container .section-form .form-cont > .row.type2 .addr-area .btn {
 	width: 130px;
+}
+
+.join-container .section-form .form-cont > .row.type2 .addr-area {
+	max-width: 70%;
 }
 
 .join-container .section-form .form-cont > .row.type2 .addr-area .inputT {
