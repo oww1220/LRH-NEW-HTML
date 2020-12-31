@@ -1564,6 +1564,20 @@ if($('.eng-shor-wrap').length){
             $(".progress-container label:nth-child("+index+")").css( "-animation", "anim 5s "+time+"ms infinite ease-in-out" );
         }
     }
+
+    //SNS 공유하기 부모 포지션주기
+    if($('#wrap').length){
+        $('.btn-share.btn-sns').parent().css('position', 'relative');
+    }
+
+    //SNS 공유하기 슬라이드 팝업
+    if($('.layer-sns').length) {
+        MUI.layer.openClick('.layer-sns-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+            //console.log('open');
+            show();
+        });
+        
+    }
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){
