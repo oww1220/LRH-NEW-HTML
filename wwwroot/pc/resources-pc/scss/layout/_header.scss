@@ -1,5 +1,7 @@
 .header{
-
+	* {
+		box-sizing: border-box;
+	}
 	.header-top {
 		.inner{
 			@include Align-middle-right;
@@ -9,7 +11,7 @@
 				@include Align-middle-right;
 				> li{
 					@include Align-middle-right;
-					margin: 0 10px;
+					margin-left:20px;
 					> strong {
 						font-size: 13px;
 						color: #999;
@@ -63,6 +65,7 @@
 			.nav-menu{
 				@include Align-middle-right;
 				> ul{
+					margin-right: -15px;
 					@include Align-middle-right;
 					li{
 						position: relative;
@@ -74,17 +77,18 @@
 					}
 				}
 				.nav-menu-mypage-box{
-					border-radius: 5px;
+					border-radius: 20px;
 					background-color: #54585a;
 					@include Align-middle;
 					padding:6px 12px;
-					width:100%;
+					width:90px;
 					@include Position($top:43px, $left:50%);
 					transform: translateX(-50%);
 					z-index: 11;
 					b{
 						@include Bold;
 						color:#fff;
+						font-size: 14px;
 					}
 				}
 				.nav-menu-mypage-box:before{
