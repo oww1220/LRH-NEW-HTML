@@ -643,11 +643,14 @@
                     position:relative;
                     @include Align-middle;
                     overflow:hidden;
+                    width: 273px;
                     height:200px;
                     
                     img{
                         @include Position($top:0, $left:0, $right:0, $bottom:0);
                         margin: auto;
+                        width: 100%;
+                        height: auto;
                     }
     
                     .cover{
@@ -666,7 +669,8 @@
                     .tit{
                         @include Ellipsis($w:100%, $lines:2);
                         font-size:1rem;
-                        height:30px;
+                        height:32px;
+                        max-height: 32px;
                         margin-bottom:15px;
                     }
                     .bar-type{
