@@ -336,7 +336,7 @@ html, body {
 	        justify-content: space-between;
 }
 
-.section-explain .explain-header.between-type .info-list {
+.section-explain .explain-header.between-type .info-list, .section-explain .explain-header.between-type .infos {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -344,7 +344,7 @@ html, body {
 	display: flex;
 }
 
-.section-explain .explain-header.between-type .info-list p strong {
+.section-explain .explain-header.between-type .info-list p strong, .section-explain .explain-header.between-type .infos p strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -352,11 +352,11 @@ html, body {
 	font-size: 1rem;
 }
 
-.section-explain .explain-header.between-type .info-list p .icon {
+.section-explain .explain-header.between-type .info-list p .icon, .section-explain .explain-header.between-type .infos p .icon {
 	margin-right: 10px;
 }
 
-.section-explain .explain-header.between-type .info-list p + p {
+.section-explain .explain-header.between-type .info-list p + p, .section-explain .explain-header.between-type .infos p + p {
 	margin-left: 30px;
 }
 
@@ -493,6 +493,7 @@ html, body {
 	/*font-family: "SpoqaR", serif;*/
 	/*font-family: "SpoqaHanSansR", serif;*/
 	font-weight: normal;
+	font-size: 14px;
 }
 
 .section-explain .explain-cont .tbl-box table .align-l {
@@ -2055,6 +2056,78 @@ html, body {
 
 .agree-area .row > .agree-cont ~ .agree-cont {
 	margin-top: 30px;
+}
+
+.qna-list .accor-header {
+	position: relative;
+	padding-left: 40px;
+}
+
+.qna-list .accor-header .btn-toggle-wide {
+	display: block;
+	padding: 26px 40px 26px 0;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.qna-list .accor-header .btn-toggle-wide .ico-q {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	position: absolute;
+	top: -webkit-calc(26px - (30px - 26px));
+	top: -moz-calc(26px - (30px - 26px));
+	top: calc(26px - (30px - 26px));
+	left: -40px;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 30px;
+	   -moz-border-radius: 30px;
+	        border-radius: 30px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #fff;
+	background-color: #54585a;
+}
+
+.qna-list .accor-header .btn-toggle-wide.active {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	border-bottom: none;
+}
+
+.qna-list .accor-header .btn-toggle-wide.active .ico-q {
+	background-color: #ff404b;
+}
+
+.qna-list .accor-cont {
+	display: none;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	padding: 30px;
+	margin-left: 40px;
+	font-size: 14px;
+	background-color: #fafafa;
+}
+
+.qna-list .accor-cont .lst {
+	margin: 0;
 }
 
 /*
@@ -5723,6 +5796,83 @@ button[disabled] {
 	        background-size: auto;
 	width: 41px;
 	height: 11px;
+}
+
+.icon.pannel09 {
+	width: 66px;
+	height: 64px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel09.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel10 {
+	width: 66px;
+	height: 56px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel10.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel11 {
+	width: 50px;
+	height: 61px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel11.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel12 {
+	width: 72px;
+	height: 58px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel12.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel13 {
+	width: 50px;
+	height: 63px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel13.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel14 {
+	width: 50px;
+	height: 63px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel14.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel15 {
+	width: 77px;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel15.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
 }
 
 .icon.fee01 {

@@ -1411,31 +1411,31 @@ if($('.longTerm-container .estimateSwiper').length) {
 
 //개인 장기 렌터카 QNA 아코디언
 if($('.longTerm-container .qnaAccor').length){
-    MUI.event.toggle('.qnaAccor .btn-toggle', '.qnaAccor .qnaAccorCont', false, function(logic, layer) {
+    MUI.event.toggle('.qnaAccor .btn-toggle-wide', '.qnaAccor .accor-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
     });
 }
 if($('.longTerm-container .qnaAccor2').length){
-    MUI.event.toggle('.qnaAccor2 .btn-toggle', '.qnaAccor2 .qnaAccorCont', false, function(logic, layer) {
+    MUI.event.toggle('.qnaAccor2 .btn-toggle-wide', '.qnaAccor2 .accor-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
     });
 }
 if($('.longTerm-container .qnaAccor3').length){
-    MUI.event.toggle('.qnaAccor3 .btn-toggle', '.qnaAccor3 .qnaAccorCont', false, function(logic, layer) {
+    MUI.event.toggle('.qnaAccor3 .btn-toggle-wide', '.qnaAccor3 .accor-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
     });
 }
 if($('.longTerm-container .qnaAccor4').length){
-    MUI.event.toggle('.qnaAccor4 .btn-toggle', '.qnaAccor4 .qnaAccorCont', false, function(logic, layer) {
+    MUI.event.toggle('.qnaAccor4 .btn-toggle-wide', '.qnaAccor4 .accor-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
     });
 }
 if($('.longTerm-container .qnaAccor5').length){
-    MUI.event.toggle('.qnaAccor5 .btn-toggle', '.qnaAccor5 .qnaAccorCont', false, function(logic, layer) {
+    MUI.event.toggle('.qnaAccor5 .btn-toggle-wide', '.qnaAccor5 .accor-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
     });

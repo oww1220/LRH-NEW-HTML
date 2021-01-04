@@ -377,6 +377,7 @@ html, body{
 $border-grey:#e7e7e7;
 $border-darkgrey:#d2d2d2;
 $border-red:#ff404b;
+$bg-red:#ff404b;
 $txt-red: #ed1c24;
 $txt-darkblack: #2f2f2f;
 
@@ -502,7 +503,7 @@ $txt-darkblack: #2f2f2f;
 			&.between-type{
 				@include Align-between;
 
-				.info-list{
+				.info-list, .infos{
 					display:flex;
 					p{
 						strong{@include Bold; font-size:1rem;}
@@ -591,7 +592,7 @@ $txt-darkblack: #2f2f2f;
 						@include Bold;
 						background-color:#fafafa;
 					}
-					td{@include Regular;}
+					td{@include Regular; font-size:14px;}
 					.align-l{text-align:left;}
 					.lst{text-align:left;}
 					
@@ -1060,6 +1061,21 @@ $txt-darkblack: #2f2f2f;
 	}
 }
 
+//문장
+@mixin txtSpacing($w:25px){
+	position:relative;
+	padding-left:$w;	
+
+	.fix{
+		@include Position($left:0, $top:0);
+		display:block;
+		width:$w;
+	}
+}
+// .sentence{
+// 	@include txtSpacing;
+// }
+
 //상단 fixed 메뉴
 .detail-layer-nav-wrap{
 	height:176px;
@@ -1460,6 +1476,51 @@ $txt-darkblack: #2f2f2f;
 		}
 	}
 }
+
+//qna 아코디언
+.qna-list{	
+	$qna-spacing: 40px;
+	$icon-q-pos: calc(26px - (30px - 26px));
+	.accor-header{
+		position: relative;
+		padding-left:$qna-spacing; 
+
+		.btn-toggle-wide{
+			display:block;
+			padding:26px 40px 26px 0;
+			border-bottom:1px solid $border-grey;
+
+			.ico-q{
+				@include Align-middle;
+				@include Position($top:$icon-q-pos, $left:- #{$qna-spacing});
+				width:30px;
+				height:30px;
+				border-radius: 30px;
+				@include Bold;
+				color:#fff;
+				background-color:#54585a;
+			}
+
+			&.active{
+				@include Bold;
+				border-bottom:none;
+				.ico-q{
+					background-color:$bg-red;
+				}
+			}
+		}	
+	}
+	.accor-cont{
+		display:none;
+		@include roundBox;
+		padding:30px;
+		margin-left:$qna-spacing;
+		font-size:14px;
+		background-color:#fafafa;
+
+		.lst{margin:0;}
+	}
+}
 /*
 .agree-area{
 	.agree-header{
@@ -1646,3 +1707,4 @@ $txt-darkblack: #2f2f2f;
 		background-color:#ff404b;
 	}        
 }
+
