@@ -9378,17 +9378,13 @@ body.fixed {
 .layer-popup .popup-top {
 	position: relative;
 	padding: 0 50px;
-	background: #fb4457;
-	background: -webkit-gradient(linear, left top, right top, from(#fb4457), color-stop(50%, #f65147), to(#f15d37));
-	background: -webkit-linear-gradient(left, #fb4457 0%, #f65147 50%, #f15d37 100%);
-	background: -moz-linear-gradient(left, #fb4457 0%, #f65147 50%, #f15d37 100%);
-	background: -o-linear-gradient(left, #fb4457 0%, #f65147 50%, #f15d37 100%);
-	background: linear-gradient(90deg, #fb4457 0%, #f65147 50%, #f15d37 100%);
+	background: #fff;
+	border-bottom: 2px solid #d2d2d2;
 	z-index: 1;
 }
 
 .layer-popup .popup-top > h4 {
-	height: 100px;
+	height: 98px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -9404,7 +9400,7 @@ body.fixed {
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
-	color: #fff;
+	color: #2f2f2f;
 }
 
 .layer-popup .popup-top .layer-popup-close {
@@ -9415,6 +9411,15 @@ body.fixed {
 	width: 50px;
 	height: 50px;
 	z-index: 2;
+}
+
+.layer-popup .popup-top .layer-popup-close .pop-close {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pop-close-black.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
 }
 
 .layer-popup .popup-cont {
@@ -10794,6 +10799,28 @@ body.fixed {
 	padding-left: .9rem;
 }
 
+.layer-popup.layer-address .address-result-box .address-result-cont .map .detail-map-marker:before {
+	display: block;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-arrow-down8.png");
+	background-position: center center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
+	width: 12px;
+	height: 8px;
+	font: 0/0 a;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	position: absolute;
+	bottom: -5px;
+	left: 30%;
+}
+
 .layer-popup.layer-address .address-result-box .address-result-cont .address-result-list li {
 	padding: 20px 15px;
 	border-bottom: 1px solid #e7e7e7;
@@ -11606,6 +11633,28 @@ body.fixed {
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 	padding-left: .9rem;
+}
+
+.layer-popup.layer-sel-branch .map .detail-map-marker:before {
+	display: block;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-arrow-down8.png");
+	background-position: center center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
+	width: 12px;
+	height: 8px;
+	font: 0/0 a;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	position: absolute;
+	bottom: -5px;
+	left: 30%;
 }
 
 .layer-popup.layer-sel-branch .infos {
