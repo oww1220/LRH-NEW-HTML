@@ -1416,31 +1416,6 @@ if($('.longTerm-container .qnaAccor').length){
         logic();
     });
 }
-if($('.longTerm-container .qnaAccor2').length){
-    MUI.event.toggle('.qnaAccor2 .btn-toggle-wide', '.qnaAccor2 .accor-cont', false, function(logic, layer) {
-        //console.log('toggle');
-        logic();
-    });
-}
-if($('.longTerm-container .qnaAccor3').length){
-    MUI.event.toggle('.qnaAccor3 .btn-toggle-wide', '.qnaAccor3 .accor-cont', false, function(logic, layer) {
-        //console.log('toggle');
-        logic();
-    });
-}
-if($('.longTerm-container .qnaAccor4').length){
-    MUI.event.toggle('.qnaAccor4 .btn-toggle-wide', '.qnaAccor4 .accor-cont', false, function(logic, layer) {
-        //console.log('toggle');
-        logic();
-    });
-}
-if($('.longTerm-container .qnaAccor5').length){
-    MUI.event.toggle('.qnaAccor5 .btn-toggle-wide', '.qnaAccor5 .accor-cont', false, function(logic, layer) {
-        //console.log('toggle');
-        logic();
-    });
-}
-
 
 
 
