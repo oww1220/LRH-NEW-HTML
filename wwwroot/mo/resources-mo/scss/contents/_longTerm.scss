@@ -816,8 +816,9 @@
                 .inner{
                     @include Align-middle-left;
                     .img{
-                        width:30%;
-                        min-height: 6.5rem;
+                        width:8rem;
+                        height: 8rem;
+                        overflow: hidden;
                         @include Align-box-left;
                         img {
                             width: 100%;
@@ -840,7 +841,8 @@
                     }
                     .text-box{
                         padding:0 0 0 1.7rem;
-                        width:70%;
+                        width:calc(100% - 8rem);
+                        box-sizing: border-box;
                         .text{
                             padding:1.3rem 0 0 0;
                             span{
