@@ -2863,6 +2863,17 @@
                             @include Position($bottom: -.4rem, $left: 30%);
                         }
                     }
+                    .detail-map-location{
+                        @include Position();
+                        cursor: pointer;
+                        display:none;
+                        .map-location-box{
+                            @include Align-middle;
+                        }
+                        &.active{
+                            display:block;
+                        }
+                    }
                     .detail-map-tit-wrap{
                         @include Position($top: 4.7rem, $left: 0);
                         transform: translateX(15%);
@@ -2909,6 +2920,14 @@
                     }
                     .btn-map-location{
                         @include Position($bottom: 14.1rem, $right: 1.7rem);
+                        &.active{
+                            .btn-share{
+                                background-color: #ff404b;
+                                .location{
+                                    @include Background($sprite:'ico-location-on', $size:100% auto, $position:center center);
+                                }
+                            }
+                        }
                     }
                     .btn-map-speedy{
                         @include Position($bottom: 6.8rem);

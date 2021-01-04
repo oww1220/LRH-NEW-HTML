@@ -1087,6 +1087,35 @@ if($('.footerMenu-wrap .tab-normal').length){
         });
         
     }
+
+    //단기예약 맵 현재위치
+    if($('.shor-wrap').length) {
+        $(".btn-map-location").on('click', function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+                $(this).parents('.detail-main-map').find('.detail-map-location').removeClass('active');
+            }else{
+                $(this).addClass('active');
+                $(this).parents('.detail-main-map').find('.detail-map-location').addClass('active');
+            }
+        });
+        
+    }
+
+    //신차장 메인 롤링 03
+
+    if($('.main-wrap .main-event-lists').length) {
+        MUI.slide.init('.main-wrap .main-event-lists','swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.main-event-pagination',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
 /* -------------------------------------------------메인end*/
 
 
