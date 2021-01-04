@@ -68,16 +68,20 @@ body.fixed {
 		.popup-top {
 			position: relative;
 			padding:0 50px;
-			background: rgb(251,68,87);
-			background: linear-gradient(90deg, rgba(251,68,87,1) 0%, rgba(246,81,71,1) 50%, rgba(241,93,55,1) 100%);
+			// background: rgb(251,68,87);
+			// background: linear-gradient(90deg, rgba(251,68,87,1) 0%, rgba(246,81,71,1) 50%, rgba(241,93,55,1) 100%);
+			background: #fff;
+    		border-bottom: 2px solid #d2d2d2;
 			z-index: 1;
 
 			> h4 {
-				height: 100px;
+				// height: 100px;
+				height:98px;
 				@include Align-middle-left;
 				font-size: 24px;
 				@include Bold;
-				color:#fff;
+				// color:#fff;
+				color:#2f2f2f;
 			}
 
 			.layer-popup-close{
@@ -86,6 +90,9 @@ body.fixed {
 				width: 50px;
 				height: 50px;
 				z-index: 2;
+				.pop-close{
+					@include Background($sprite:'ico-pop-close-black', $position:center center);
+				}
 			}
 		}
 		.popup-cont {
@@ -841,6 +848,16 @@ body.fixed {
 									padding-left:.9rem;
 								}
 							}
+							&:before{
+								display:block;
+								content: "";
+								@include Background($sprite:'ico-arrow-down8', $size:100%, $position:center center);
+								width:12px;
+								height:8px;
+								@include Hide_txt;
+								flex: none;
+								@include Position($bottom: -5px, $left: 30%);
+							}
 						}
 					}
 					.address-result-list{
@@ -1315,6 +1332,16 @@ body.fixed {
 							@include Bold;
 							padding-left:.9rem;
 						}
+					}
+					&:before{
+						display:block;
+						content: "";
+						@include Background($sprite:'ico-arrow-down8', $size:100%, $position:center center);
+						width:12px;
+						height:8px;
+						@include Hide_txt;
+						flex: none;
+						@include Position($bottom: -5px, $left: 30%);
 					}
 				}
 			}

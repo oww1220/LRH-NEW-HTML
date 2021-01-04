@@ -2852,6 +2852,16 @@
                                 padding-left:.9rem;
                             }
                         }
+                        &:before{
+                            display:block;
+                            content: "";
+                            @include Background($sprite:'ico-arrow-down8', $size:100%, $position:center center);
+                            width:1rem;
+                            height:.6rem;
+                            @include Hide_txt;
+                            flex: none;
+                            @include Position($bottom: -.4rem, $left: 30%);
+                        }
                     }
                     .detail-map-tit-wrap{
                         @include Position($top: 4.7rem, $left: 0);

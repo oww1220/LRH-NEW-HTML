@@ -2194,17 +2194,56 @@ button.swiper-pagination-bullet {
 }
 
 .btn-share.btn-sns {
-	background-color: #fff;
+	background-color: transparent;
 	position: absolute;
 	top: 0;
 	right: 0;
 	padding-right: 0;
 }
 
+.btn-share.btn-sns-h-auto {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-right: 0;
+	height: auto;
+}
+
 .btn-share.btn-sns-site {
-	background-color: #fff;
+	background-color: transparent;
 	position: absolute;
 	top: 1.9rem;
+	right: 1.7rem;
+	padding-right: 0;
+}
+
+.btn-share.btn-sns-site-bt {
+	background-color: transparent;
+	position: absolute;
+	top: auto;
+	right: 0;
+	bottom: 1.9rem;
+	padding-right: 0;
+}
+
+.btn-share.btn-sns-site-ct {
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	right: 1.7rem;
+	padding-right: 0;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.btn-share.btn-sns-site-t {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
 	right: 1.7rem;
 	padding-right: 0;
 }
@@ -4759,6 +4798,72 @@ a.btn {
 .icon.share-naver {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-mo/images/icons/ico-share-naver.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.icon.share-blog {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-share-blog.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.icon.share-fb {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-share-fb.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.icon.share-fo {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-share-fo.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.icon.share-post {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-share-post.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.icon.share-tw {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-share-tw.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.icon.share-yt {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-share-yt.png");
 	background-position: center center;
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
@@ -9404,6 +9509,28 @@ body.fixed {
 	padding-left: .9rem;
 }
 
+.layer-full.layer-address .layer-address-result .address-result-list .detail-map-marker:before {
+	display: block;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-arrow-down8.png");
+	background-position: center center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
+	width: 1rem;
+	height: .6rem;
+	font: 0/0 a;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	position: absolute;
+	bottom: -0.4rem;
+	left: 30%;
+}
+
 .layer-full.layer-address .layer-address-result .address-result-list > ul > li {
 	border-top: 1px solid #EBEBEB;
 }
@@ -10900,7 +11027,7 @@ body.fixed {
 	color: #ddd;
 }
 
-.layer-full.layer-infos.layer-schedule .schedule-wrap .calendar-wrap .table tbody td.day .btn {
+.layer-full.layer-infos.layer-schedule .schedule-wrap .calendar-wrap .table tbody td.start.end .btn {
 	width: 50%;
 	background-color: #ff404b;
 	-webkit-border-radius: 1.7rem;
