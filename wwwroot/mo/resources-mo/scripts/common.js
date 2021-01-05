@@ -1107,7 +1107,7 @@ if($('.footerMenu-wrap .tab-normal').length){
     if($('.main-wrap .main-event-lists').length) {
         MUI.slide.init('.main-wrap .main-event-lists','swiper', {
             loop: true,
-            autoHeight: true,
+            //autoHeight: true,
             pagination: {
                 el: '.main-event-pagination',
             },
