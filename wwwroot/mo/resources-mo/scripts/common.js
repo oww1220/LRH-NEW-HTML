@@ -1102,8 +1102,7 @@ if($('.footerMenu-wrap .tab-normal').length){
         
     }
 
-    //신차장 메인 롤링 03
-
+    //메인 인덱스 롤링
     if($('.main-wrap .main-event-lists').length) {
         MUI.slide.init('.main-wrap .main-event-lists','swiper', {
             loop: true,
@@ -1285,21 +1284,24 @@ if($('.longTerm-wrap .direct-list').length) {
     var mainTopSlide = MUI.slide.init('.longTerm-wrap .direct-list','swiper', {
         loop: true,
         //autoHeight: true,
+        pagination: {
+            el: '.life-event-pagination03',
+        },
         autoplay: {
             delay: 3000,
         },
     });
     
-    $(".swiper-button-pause").on('click', function(){
-        mainTopSlide.autoplay.stop();
-        $(".swiper-button-play").show();
-        $(".swiper-button-pause").hide();
-    });
-    $(".swiper-button-play").on('click',function(){
-        mainTopSlide.autoplay.start();
-        $(".swiper-button-pause").show();
-        $(".swiper-button-play").hide();
-    });
+    // $(".swiper-button-pause").on('click', function(){
+    //     mainTopSlide.autoplay.stop();
+    //     $(".swiper-button-play").show();
+    //     $(".swiper-button-pause").hide();
+    // });
+    // $(".swiper-button-play").on('click',function(){
+    //     mainTopSlide.autoplay.start();
+    //     $(".swiper-button-pause").show();
+    //     $(".swiper-button-play").hide();
+    // });
 }
 
 //신차장 멤버십 탭전환
