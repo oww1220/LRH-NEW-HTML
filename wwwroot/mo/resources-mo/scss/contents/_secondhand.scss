@@ -711,13 +711,11 @@
             &.detail-main-list4{
                 .life-event-view{
                     .img{
-                        @include Position($position:relative, $top: 0, $left: 0);
-                        @include Background($sprite:'bg-main-slide-secondhand', $type:'png', $position:center center, $size:contain, $path:'bgs');
-                        height:17.1rem;
-                        img{
-                            @include Position($top: 60%, $left: 35%);
-                            transform: translate(-50%,-50%);
-                            width:65%;
+                        overflow: hidden;                        
+                        height:19.1rem;
+                        img{ 
+                            width:100%;
+                            height: 100%;
                         }
                     }
                     .text{
