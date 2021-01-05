@@ -305,6 +305,130 @@
                         width: 730px;
                         height: 500px;
                         background-size: 100% auto;
+                        position: relative;
+                    }
+                    .img{
+                        position: relative;
+                    }
+                    .cover{
+                        width: 730px;
+                        height: 500px;
+                        position: relative;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .flag-bottom-wrap {
+                        width: 100%;
+                        padding: 0 2px 0 40px;
+                        box-sizing: border-box;
+                        left: 0;
+                        bottom: 20%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-flow: wrap-reverse;
+                        position: absolute;
+                        font-size: 0;
+                        z-index: 3;
+                        .flag {
+                            margin-right: 5px;
+                            margin-top: 5px;
+                            position: static;
+                            box-sizing: border-box;
+                            line-height: 1;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            & > i {
+                                margin-right: 5px;
+                            }
+                            &.hotsale {
+                                top: 10px;
+                                left: 10px;
+                                font-size: 13px;
+                                color: #fff;
+                                height: 30px;
+                                border-radius: 15px;
+                                padding: 0 10px;
+                                background-color: #7C49FC;
+                                .icon.hotsale {
+                                    background-repeat: no-repeat;
+                                    background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-hotsale.png);
+                                    background-position: center center;
+                                    background-size: auto;
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                            &.fast {
+                                top: 10px;
+                                left: 10px;
+                                font-size: 13px;
+                                color: #fff;
+                                height: 30px;
+                                border-radius: 15px;
+                                padding: 0 10px;
+                                background-color: #406FF0;
+                                .icon.fast {
+                                    background-repeat: no-repeat;
+                                    background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-fast.png);
+                                    background-position: center center;
+                                    background-size: 15px auto;
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                            &.popular {
+                                top: 10px;
+                                left: 10px;
+                                font-size: 13px;
+                                color: #fff;
+                                height: 30px;
+                                border-radius: 15px;
+                                padding: 0 10px;
+                                background-color: #FF4C88;
+                                .icon.popular {
+                                    background-repeat: no-repeat;
+                                    background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-popular.png);
+                                    background-position: center center;
+                                    background-size: 15px auto;
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                        }
+                    }
+                    .conts {
+                        padding: 40px 40px 34px;
+                        @include Position ($bottom:0, $left:0, $right:0);
+                        .text{
+                            position: relative;
+                            z-index: 5;
+                            & > strong {
+                                font-size: 18px;
+                                display: block;
+                                line-height: 1.3;
+                                color: #fff;
+                            }
+                            & > span {
+                                font-size: 13px;
+                                margin-top: 6px;
+                                line-height: 1;
+                                color: #fff;
+                                display: block;
+                            }
+                        }
+                        &:before{
+                            display:block;
+                            content: "";
+                            background-color: #000;
+                            opacity: .6;
+                            width:100%;
+                            height:100%;
+                            @include Position ($bottom:0, $left:0);
+                            z-index: 2;
+                        }
                     }
                 }
                 .estimateSwiper-button-prev, .estimateSwiper-button-next{ 
