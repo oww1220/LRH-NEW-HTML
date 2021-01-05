@@ -1575,10 +1575,10 @@ if($('.mypage-container .indicator-toggle-cont').length) {
 
 
     //헤더 전체메뉴 토글
-    if($('.header .draw-btn').length) {
-        MUI.event.toggle('.header .draw-btn', '.header .draw-toggle-cont', true, function(logic, layer) {
-            logic();
-        });
+    //if($('.header .draw-btn').length) {
+        // MUI.event.toggle('.header .draw-btn', '.header .draw-toggle-cont', true, function(logic, layer) {
+        //    logic();
+        // });
         // $('.header .draw-btn').on('focusin mouseenter', function(){
         //     $('.draw-toggle-cont').show();
         //     $('.header .draw-btn').addClass('hover');
@@ -1587,9 +1587,26 @@ if($('.mypage-container .indicator-toggle-cont').length) {
         //     $('.draw-toggle-cont').hide(); 
         //     $('.header .draw-btn').removeClass('hover');
         // });
-    }
+   // }
 
     $('.header .draw-btn').click(function(e){
+        if($('.header .specials-view-list').length) {
+            MUI.slide.init($('.header .specials-view-list'), 'slick', {
+                infinite: true,
+                swipeToSlide: true,
+                speed: 300,
+                autoplay: true,
+                dots: true,
+                arrows: false,
+                customPagin:0,
+                adaptiveHeight: true,
+            });
+        }
+        $('.slick-track').width('4000px');
+        $('.slick-slide').width('1760px');
+    });
+
+    $('.header .draw-btn').mouseenter(function(e){
         if($('.header .specials-view-list').length) {
             MUI.slide.init($('.header .specials-view-list'), 'slick', {
                 infinite: true,
@@ -1633,3 +1650,43 @@ $(window).on('load', function(){
 
 
 });
+
+/*헤더*/
+$(function(){
+    var target = $('.header .draw-btn');
+
+    $('.header .draw-btn').each(function(i){
+		$(this).on({
+			mouseenter:	function(){
+                $('.draw-toggle-cont').eq(i).fadeIn(400);
+            },
+            focusin:	function(){
+                $('.draw-toggle-cont').eq(i).fadeIn(400);
+            },
+            click:	function(){
+                $('.draw-toggle-cont').eq(i).fadeIn(400);
+            },
+        });	
+        target.not($(this)).on({
+			mouseenter:	function(){
+                $('.draw-toggle-cont').eq(i).fadeOut(400);
+            },
+            focusin:	function(){
+                $('.draw-toggle-cont').eq(i).fadeOut(400);
+            },
+            click:	function(){
+                $('.draw-toggle-cont').eq(i).fadeOut(400);
+            },
+        });	
+    });
+
+    $('.draw-toggle-cont').each(function(i){
+        $(this).on({
+             mouseleave: function(){
+                $('.draw-toggle-cont').eq(i).fadeOut(400);
+            }
+        });	
+    });
+    
+});
+
