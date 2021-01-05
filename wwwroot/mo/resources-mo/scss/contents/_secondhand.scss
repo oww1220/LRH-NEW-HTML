@@ -544,6 +544,7 @@
                         display: block;
                         @include Bold;
                     }
+                    
                     em{
                         display: block;
                         color:#8f9191;
@@ -736,6 +737,14 @@
                         li{
                             width:48%;
                             padding:0 0 0 .4rem;
+                            .img {
+                                height: 14rem;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
                         }
                     }
                 }
@@ -765,9 +774,10 @@
                                 @include Align-box;
                                 padding:0 0 0 1rem;
                                 align-self: flex-end;
-                                width: 19rem;
+                                width: calc(100% - 9rem);
                                 .text{
                                     margin:1rem 0 0 0;
+                                    &:nth-of-type(1) {@include Ellipsis($w:100%, $lines:1); }
                                     span{
                                         font-size:1.3rem;
                                         em{
