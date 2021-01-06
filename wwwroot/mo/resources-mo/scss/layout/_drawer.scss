@@ -235,10 +235,11 @@
             .drawer-menu-tab{
                 padding:2.6rem 0;
                 width:40%;
+                z-index: 10;
                 ul{
                     @include Align-left-column;
                     .drawer-menu-tit{
-                        @include Position( $position:relative);
+                        @include Position( $position:relative, $top:0, $left:1.7rem);
                         margin:.4rem 0 0 0;
                         overflow: visible;
                         &.active{
@@ -249,7 +250,6 @@
                             }
                         }
                         button{
-                            @include Position( $position:absolute, $top:0, $left:1.7rem);
                             border-bottom:0;
                             justify-content: flex-start;
                             @include Regular;
