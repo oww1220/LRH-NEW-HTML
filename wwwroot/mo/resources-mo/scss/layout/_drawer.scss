@@ -239,8 +239,8 @@
                 ul{
                     @include Align-left-column;
                     .drawer-menu-tit{
-                        @include Position( $position:relative, $top:0, $left:1.7rem);
-                        //@include Position( $position:relative);
+                        //@include Position( $position:relative, $top:0, $left:1.7rem);
+                        position: relative;
                         margin:.4rem 0 0 0;
                         height: 3.9rem;
                         &.active{
@@ -260,7 +260,7 @@
                             color: #2f2f2f;
                             text-align: left;
                             display: block;
-                            //@include Position( $position:absolute, $top:0, $left:1.7rem);
+                            @include Position( $position:absolute, $top:0, $left:1.7rem);
                         }
                         &.drawer-menu-tit:first-child{
                             margin:0;
