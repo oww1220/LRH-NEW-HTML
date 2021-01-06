@@ -226,6 +226,7 @@
                 }
             }
             .guide {
+                width:auto;
                 font-size: 1.1rem;
                 line-height: 1.3;
                 text-indent: -.8rem;
@@ -365,6 +366,101 @@
                                 width:50%;
                             }
                         }
+                    }
+                }
+            }
+            .longTerm-recommend-list{
+                .top-visual-img{
+                    .img{
+                        padding:0 1.7rem;
+                    }
+                    .top-visual-foot{
+                        @include Align-between;
+                        background-color: #f5f5f5;
+                        padding:1.6rem 1.7rem;
+                        .guide{
+                            font-size:1rem;
+                            margin:0;
+                        }
+                        .btn{
+                            font-size:1rem;
+                        }
+                    }
+                }
+                .step-section{
+                    padding:3.4rem 1.7rem;
+                    h4{
+                        @include Bold;
+                        font-size: 2rem;
+                        @include Align-middle;
+                        b{
+                            color:#ed1c24;
+                            font-size: 2rem;
+                        }
+                    }
+                    .step-list{
+                        padding:1.7rem 0 1.4rem;
+                        margin: 0;
+                        width: 100%;
+                        & > li{
+                            width:36%;
+                        }
+                        & > li:nth-of-type(odd){
+                            padding:0 .9rem 1rem 3rem;
+                        }
+                        & > li:nth-of-type(even){
+                            padding:0 3rem 1rem .9rem;
+                        }
+                    }
+                }
+                .recom-section{
+                    &.lpoint-recom{
+                        margin:0 0 3.4rem 0;
+                        .btn-group{
+                            .btn{
+                                @include Align-middle-column;
+                                height:5.6rem;
+                                margin:0 1.7rem;
+                                span{
+                                    font-size:1.1rem;
+                                }
+                                b{
+                                    color:#fff;
+                                    font-size:1.6rem;
+                                    padding-top:.9rem;
+                                }
+                            }
+                        }
+                    }
+                    &.lotte-recom{
+                        background-color: #f5f5f5;
+                        padding:0 0 3.4rem 0;
+                        .btn-group{
+                            .btn{
+                                @include Align-middle-column;
+                                height:5.6rem;
+                                margin:0 1.7rem;
+                                span{
+                                    font-size:1.1rem;
+                                }
+                                b{
+                                    color:#fff;
+                                    font-size:1.6rem;
+                                    padding-top:.9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .guide-box{
+                    padding:0 1.7rem 4.3rem;
+                    h4{
+                        @include Bold;
+                        padding:2.6rem 0 0 0;
+                        font-size:1.4rem;
+                    }
+                    .guide{
+                        margin-bottom:0;
                     }
                 }
             }
@@ -1077,6 +1173,27 @@
                                 padding:0;
                             }
                         }
+                        .limit {
+                            top: .5rem;
+                            left: .5rem;
+                            @include Bold;
+                            font-size: 1rem;
+                            color: #fff;
+                            height: 1.7rem;
+                            border-radius: 1rem;
+                            padding: 0 .7rem;
+                            background-color: #00B2C9;
+                            z-index: 1;
+                            .icon.limit {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-mo/images/icons/ico-limit.png);
+                                background-position: center center;
+                                background-size: 100% auto;
+                                width: 0.9rem;
+                                height: 0.9rem;
+                                padding:0;
+                            }
+                        }
                     }
                     .conts {
                         padding: 1.7rem;
@@ -1468,8 +1585,7 @@
                 .hotsale{
                     top: .5rem;
                     left: .5rem;
-                    font-family: "SpoqaB", serif;
-                    font-weight: normal;
+                    @include Bold;
                     font-size: 1rem;
                     color: #fff;
                     height: 1.7rem;
@@ -1490,8 +1606,7 @@
                 .fast {
                     top: .5rem;
                     left: .5rem;
-                    font-family: "SpoqaB", serif;
-                    font-weight: normal;
+                    @include Bold;
                     font-size: 1rem;
                     color: #fff;
                     height: 1.7rem;
@@ -1512,8 +1627,7 @@
                 .popular {
                     top: .5rem;
                     left: .5rem;
-                    font-family: "SpoqaB", serif;
-                    font-weight: normal;
+                    @include Bold;
                     font-size: 1rem;
                     color: #fff;
                     height: 1.7rem;
@@ -1524,6 +1638,27 @@
                     .icon.popular {
                         background-repeat: no-repeat;
                         background-image: url(https://direct.lotterentacar.net/resources-mo/images/icons/ico-popular.png);
+                        background-position: center center;
+                        background-size: 100% auto;
+                        width: 0.9rem;
+                        height: 0.9rem;
+                        padding:0;
+                    }
+                }
+                .limit {
+                    top: .5rem;
+                    left: .5rem;
+                    @include Bold;
+                    font-size: 1rem;
+                    color: #fff;
+                    height: 1.7rem;
+                    border-radius: 1rem;
+                    padding: 0 .7rem;
+                    background-color: #00B2C9;
+                    z-index: 1;
+                    .icon.limit {
+                        background-repeat: no-repeat;
+                        background-image: url(https://direct.lotterentacar.net/resources-mo/images/icons/ico-limit.png);
                         background-position: center center;
                         background-size: 100% auto;
                         width: 0.9rem;
