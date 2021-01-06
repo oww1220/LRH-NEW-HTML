@@ -932,6 +932,12 @@
                         @include Bold;
                         @include Align-between;
                     }
+                    h4 {
+                        font-size: 1.4rem;
+                        width:100%;
+                        @include Bold;
+                        @include Align-between;
+                    }
                     strong {
                         @include Bold;
                         font-size:1.1rem;
@@ -958,6 +964,7 @@
                         color:#8f9191;
                         font-size:1.1rem;
                         margin:1.3rem 0;
+                        @include Regular;
                     }
                     .list-table {
                         border-top:1px solid #d5d5d5;
@@ -980,6 +987,7 @@
                                 border-left:1px solid #e7e7e7;
                                 border-right:1px solid #e7e7e7;
                                 color:#54585a;
+                                @include Regular;
                             }
                         }
                     }
@@ -996,10 +1004,12 @@
                         border:1px solid #e7e7e7;
                         padding:1.7rem 1.2rem;
                         strong {
+                            @include Regular;
                             font-size:1.1rem;
                             color:#54585a;
                         }
                         p {
+                            @include Regular;
                             font-size:1.1rem;
                             color:#54585a;
                         }
@@ -1041,6 +1051,7 @@
                                     border-left:1px solid #e7e7e7;
                                     border-right:1px solid #e7e7e7;
                                     color:#54585a;
+                                    @include Regular;
                                 }
                                 > ul {
                                     li {
@@ -1461,6 +1472,13 @@
                     padding:1.3rem 0 0;
                 }
             }
+            &.cont-item6 {
+                .cont-in{
+                    p{
+                        @include Regular;
+                    }
+                } 
+            }
             &.cont-item7 {
                 .cont-in { 
                     > div {
@@ -1470,6 +1488,9 @@
                         }
                         strong {
                             width:40%;
+                        }
+                        b{
+                            @include Regular;
                         }
                     }
                 }
@@ -1488,6 +1509,9 @@
                         }
                         strong {
                             width:40%;
+                        }
+                        b{
+                            @include Regular;
                         }
                     }
                 } 
@@ -1621,6 +1645,19 @@
                     }
                     .list-type-value {
                         margin-top: 1.7rem;
+                        b {
+                            @include Regular;
+                            &.underline {
+                                position: relative;
+                                &::before {
+                                    content:'';
+                                    display: inline-block;
+                                    border-bottom:1px solid #000;
+                                    width:100%;
+                                    @include Position($bottom: 0, $left: 0)
+                                }
+                            }
+                        }
                     }
 
                 }
