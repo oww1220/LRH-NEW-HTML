@@ -235,12 +235,12 @@
             .drawer-menu-tab{
                 padding:2.6rem 0;
                 width:40%;
-                overflow: visible;
+                //overflow: visible;
                 ul{
                     @include Align-left-column;
                     .drawer-menu-tit{
-                        //@include Position( $position:relative, $top:0, $left:1.7rem);
-                        @include Position( $position:relative);
+                        @include Position( $position:relative, $top:0, $left:1.7rem);
+                        //@include Position( $position:relative);
                         margin:.4rem 0 0 0;
                         height: 3.9rem;
                         &.active{
@@ -258,8 +258,9 @@
                             width: 12.8rem;
                             height: 3.9rem;
                             color: #2f2f2f;
-                            @include Position( $position:absolute, $top:0, $left:1.7rem);
-                            z-index: 10;
+                            text-align: left;
+                            display: block;
+                            //@include Position( $position:absolute, $top:0, $left:1.7rem);
                         }
                         &.drawer-menu-tit:first-child{
                             margin:0;
