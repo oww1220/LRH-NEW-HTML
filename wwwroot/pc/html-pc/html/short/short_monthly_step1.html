@@ -252,37 +252,181 @@
 
 						<section class="section-form">
 							<div class="form-header">
-								<h3 class="tit-size-mid">예약자 운전면허 정보입력</h3>
+								<h3 class="tit-size-mid">예약자 운전면허 정보입력 </h3>
 							</div>					
 							<div class="form-cont delivery-license-cont">
-
 								<div class="row type2">
-									<label for="" class="input-tit">면허종류 <span class="txt-red">*</span></label>
-									<select class="selectbox" name="" id="">
-										<option value="">선택하세요</option>
-										<option value="">선택1</option>
-										<option value="">선택2</option>
-									</select>
-								</div>
-								<div class="row type2">
-									<label for="" class="input-tit">면허번호 <span class="txt-red">*</span></label>
-									<div class="inputT">
-										<input type="text" id="" placeholder="입력하세요">
+									<div class="driver-license-section">
+										<div class="selection">
+											<p for="" class="input-tit">면허구분</p>
+											<div class="input-cont detail-radio">
+												<ul class="radio-area detail-radio-box">
+													<li>
+														<div class="radio-icon-box">
+															<input type="radio" id="radio03" name="radio2" checked="" value="D">
+															<label for="radio03">국내면허증</label>
+														</div>
+													</li>
+													<li>
+														<div class="radio-icon-box">
+															<input type="radio" id="radio04" name="radio2" value="I">
+															<label for="radio04">국제면허증</label>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- 국내 면허증 -->
+										<div class="domestic-license detail-tab-wrap-D active">
+											<div class="driver-license-cont">
+																			
+												<div class="type-box">
+													<span class="numbering">1</span>
+													<select name="" id="" class="selectbox">
+														<option value="">선택</option>
+														<option value="">1종대형</option>
+														<option value="">1종보통</option>
+														<option value="">2종보통</option>
+														<option value="">2종오토</option>
+													</select>
+												</div>
+												
+												<div class="number-box">
+													<span class="numbering">2</span>
+													<div class="box-between">
+														<select name="" id="" class="selectbox">
+															<option value="">선택</option>
+															<option value="">선택 1</option>
+															<option value="">선택 2</option>
+														</select>
+														<div class="inputT">
+															<input type="text">
+														</div>
+														<div class="inputT">
+															<input type="password">
+														</div>										
+														<div class="inputT">
+															<input type="text">
+														</div>
+													</div>
+												</div>
+												<div class="name-box">
+													<span class="numbering">3</span>
+													<div class="inputT">
+														<input type="text">
+													</div>
+												</div>							
+												<div class="expiration-date-box">
+													<span class="numbering">4</span>	
+													<div class="box-align">
+														<span class="symbol">~</span>
+														<div class="inputT">
+															<input type="txt" placeholder="YYYY.MM.DD">
+														</div>
+													</div>
+												</div>
+												<div class="issue-date-box">
+													<span class="numbering">5</span>									
+													<div class="inputT">
+														<input type="txt" placeholder="YYYY.MM.DD">
+													</div>
+												</div>							
+											</div>
+											<div class="guide-cont">
+												<h5 class="tit">면허정보 입력항목 안내</h5>
+												<ul class="lst num">
+													<li>
+														<span class="bul numbering">1</span> 면허종류 : 10인승 이상 차량은 1종 보통 이상 면허가 있어야 운전이 가능합니다.
+													</li>
+													<li>
+														<span class="bul numbering">2</span> 면허번호 : 2014년 07월 02일 이후 발급 면허는 지역정보를 숫자코드로 입력합니다.
+													</li>
+													<li>
+														<span class="bul numbering">3</span> 이름 : 면허증에 기재된 이름을 입력합니다.
+													</li>
+													<li>
+														<span class="bul numbering">4</span> 만료일자 : 유효하지 않은 면허증은 대여가 불가하므로, 기간 내 갱신해주세요.
+													</li>
+													<li>
+														<span class="bul numbering">5</span> 발급일자 : 신규발급 또는 갱신, 재발급힌 면허증에 기입된 발급일자를 입력합니다.
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- // 국내 면허증 -->
+										<!-- 국제 면허증 -->
+										<div class="international-license detail-tab-wrap-I">
+											<div class="driver-license-cont">
+												<div class="country-box">
+													<span class="numbering">1</span>
+													<select name="" id="" class="selectbox">
+														<option value="">선택</option>
+														<option value="">선택1</option>
+														<option value="">선택2</option>
+													</select>
+												</div>									
+												<div class="number-box">
+													<span class="numbering">2</span>
+													<div class="inputT">
+														<input type="text" maxlength="12">
+													</div>
+												</div>							
+												<div class="type-box">
+													<span class="numbering">3</span>	
+													<ul>
+														<li>
+															<div class="chk-icon-box type-square">
+																<input type="checkbox" id="chk01">
+																<label for="chk01">A</label>											
+															</div>	
+														</li>
+														<li>
+															<div class="chk-icon-box type-square">
+																<input type="checkbox" id="chk02" checked>
+																<label for="chk02">B</label>											
+															</div>
+														</li>
+														<li>
+															<div class="chk-icon-box type-square">
+																<input type="checkbox" id="chk03">
+																<label for="chk03">C</label>											
+															</div>
+														</li>
+														<li>
+															<div class="chk-icon-box type-square">
+																<input type="checkbox" id="chk04" checked>
+																<label for="chk04">D</label>											
+															</div>
+														</li>
+														<!-- 
+														<li>
+															<div class="chk-icon-box type-square">
+																<input type="checkbox" id="chk05">
+																<label for="chk05">E</label>											
+															</div>
+														</li>
+														 -->
+													</ul>									
+												</div>				
+											</div>
+											<div class="guide-cont">
+												<h5 class="tit">면허정보 입력항목 안내</h5>
+												<ul class="lst num">
+													<li>
+														<span class="bul numbering">1</span> 발급국가 : 국제면허증을 발급한 국가를 선택합니다.
+													</li>
+													<li>
+														<span class="bul numbering">2</span> 면허번호 : 면허번호 12자리를 입력합니다.
+													</li>
+													<li>
+														<span class="bul numbering">3</span> 면허종류 : 10인승 이상 차량은 D 등급 면허가 있어야 운전이 가능합니다.
+													 </li>
+												</ul>
+											</div>
+										</div>
+										<!-- // 국제 면허증 -->
 									</div>
 								</div>
-								<div class="row type2">
-									<label for="" class="input-tit">적성검사만료기간 <span class="txt-red">*</span></label>
-									<div class="inputT">
-										<input type="text" id="" placeholder="입력하세요">
-									</div>
-								</div>
-								<div class="row type2">
-									<label for="" class="input-tit">운전자면허 발급일자 <span class="txt-red">*</span></label>
-									<div class="inputT">
-										<input type="text" id="" placeholder="입력하세요">
-									</div>
-								</div>
-
 							</div>
 						</section>
 

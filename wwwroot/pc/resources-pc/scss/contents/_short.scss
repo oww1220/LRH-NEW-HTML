@@ -435,11 +435,23 @@
         }
     }
     .delivery-license-cont{
-        @include Background($sprite:'img-short-driver-license', $type:'png', $position:740px 0, $path:'');
+        //@include Background($sprite:'img-short-driver-license', $type:'png', $position:740px 0, $path:'');
 
-        .row.type2 {
+       /*  .row.type2 {
             .inputT, .selectbox{
                 max-width:40%;
+            }
+        } */
+        .driver-license-cont {
+            .type-box {
+                .selectbox {
+                    max-width: 125px;
+                }
+            }
+            .row.type2 {
+                .inputT > input {
+                    max-width:100%;
+                }
             }
         }
     }
