@@ -130,7 +130,7 @@ $(function(){
                         <h5><span>주요서비스</span></h5>
                         <ul>
                             <li><a href="#"><i class="icon pannel10"></i><span>실시간예약</span></a></li>
-                            <li><a href="#"><i class="icon pannel11"></i><span>신차장특가</span></a></li>	
+                            <li><a href="#"><i class="icon pannel11"></i><span>이달의특가</span></a></li>	
                             <li><a href="#"><i class="icon pannel12"></i><span>내차팔기</span></a></li>	
                             <li><a href="#"><i class="icon pannel13"></i><span>단기예약확인</span></a></li>			
                             <li><a href="#"><i class="icon pannel14"></i><span>중고차장기</span></a></li>

@@ -60,6 +60,9 @@ $(function(){
             logic();
         });
     }
+    $('.drawer .drawer-toggle-btn').click(function(){
+        $(this).children("h5").children("span").text($(this).children("h5").children("span").text() == '전체 서비스 보기' ? "전체 서비스 닫기" : "전체 서비스 보기");
+    });
 
 
     //햄버거 메뉴 상세메뉴 탭전환
