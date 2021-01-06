@@ -279,6 +279,12 @@ if($('.footerMenu-container .tabContInnerTab').length){
     });
 }
 
+//신차장기렌터카 - 제휴카드 안내 
+if($('.affiliateCard-container .tabControl').length){
+    MUI.event.taps('.affiliateCard-container .tabControl', false, function(swap){
+        swap();
+    });
+}
 
 /* -------------------------------------------------탭 전환end*/
 

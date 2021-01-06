@@ -135,6 +135,92 @@
         } 
     }
 
+    //제휴카드 안내
+    &.affiliateCard-container{       
+        .round-banner{
+            @include Background($sprite: 'bg-longTermInfo', $path:'');
+            margin:60px 0 0;
+
+            .infos{
+                .tit{
+                    display:block;
+                    color:#fff;
+                    font-size:16px;
+                    
+                    + .bar-type{margin-top:15px;}
+                }    
+                .bar-type{
+                    font-size:14px;
+    
+                    > span{ 
+                        position:relative; 
+    
+                        + span{                                    
+                            padding-left:10px;
+                            margin-left:10px;                            
+    
+                            &:before{
+                                content:"";
+                                @include Position($top:50%, $left:0);
+                                display:block;
+                                width:1px;
+                                height:14px;
+                                margin-top:-7px;
+                                background-color:#e7e7e7;
+                            }
+                        }
+                    }
+                }       
+            }
+            
+        }  
+        .tab-cont{
+            .tab-cont-inner{
+                display:none;
+                padding:40px 0;
+
+                &:first-child{display:block;}
+            }
+        }
+        .card-section{
+            @include Align-middle-left;
+            padding:40px 120px;
+            margin-bottom:80px;
+
+            .infos{
+                margin-right:250px;
+
+                .tit{font-size:32px; margin-top:40px;}
+                .txt{color:#54585a; margin-top:20px;}
+                .btn-box-align-left{margin-top:40px;}
+            }
+            .img-box{
+                @include Align-middle;
+
+                img{
+                    border-radius: 20px;
+                    @include box-shadow($top:10px, $left:10px, $blur:15px, $color:rgba(50, 50, 50, 0.35));
+                }
+            }
+
+            &.bg-blue{
+                background-color:#e2fdfe;
+            }
+            &.bg-purple{
+                background-color:#ede4f2;
+            }
+        }
+        .tbl-box{
+            .tit-size-big{margin-bottom:60px;}
+        }
+        .guide-section{
+            @include roundBox;
+            padding:50px 40px;
+            margin:40px 0;
+            background-color:#fafafa;
+        }
+    }
+
     //신차장 멤버십 & 신차장 혜택이란
     .benefit-content{
         .tab-cont-inner{

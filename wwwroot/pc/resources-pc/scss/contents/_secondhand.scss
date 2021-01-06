@@ -1154,13 +1154,16 @@
     // }
 
     .carSpec-section{
-        @include Align-box;
+        @include Align-between;
+        padding: 0 40px;
         margin-bottom:80px;
 
         .car-img{
             flex:none;
-            width:680px;
-            flex-basis: 680px;
+            //width:680px;
+            //flex-basis: 680px;
+            width:620px;
+            flex-basis:620px;
         }
         .carSpec-infos{
             .tit{
@@ -1534,18 +1537,15 @@
     }
 
     .carDetail-section{
-        display:flex;
-        justify-content: left;
-        align-items: center;
+        @include Align-between;
         padding:30px 80px;
         margin-bottom:50px;
 
         .car-img{
             flex:none;
-            width:680px;
-            flex-basis: 680px;
-            box-sizing: border-box;
-            padding-right: 100px;
+            width:620px;
+            flex-basis:620px;
+            
             img {
                 width: 580px;
                 height: 250px;

@@ -590,6 +590,147 @@
             }
         }
     }
+
+    //체크인 서비스
+    &.checkin-container{
+        .round-banner{
+            @include roundBox;
+            @include Align-box;
+            padding:50px 60px;
+            margin-bottom:80px;
+            min-height:140px;
+            box-sizing:border-box;
+            @include Background($sprite: 'bg-shortInfoChechin', $path:'');
+    
+            p{color:#fff;}
+        }
+
+        .step-list{
+            @include Align-between;
+            align-items: stretch;
+            border-top:1px solid $border-grey;
+            border-bottom:1px solid $border-grey;
+
+            > li{            
+                position:relative;    
+                flex:1;
+                padding:20px 5px;
+                text-align:center;
+
+                + li{
+                    border-left:1px solid $border-grey;
+
+                    &:before{
+                        content:"";
+                        display:block;
+                        @include Position($top:50%, $left:-1px);
+                        @include arrowR($color:$border-grey, $direction : 8px 0 8px 10px);
+                        margin-top:-8px;
+                        z-index:5;
+                    }
+                    &:after{
+                        content:"";
+                        display:block;
+                        @include Position($top:50%, $left:-1px);
+                        @include arrowR($color:#fff, $direction : 6px 0 6px 8px);
+                        margin-top:-6px;
+                        z-index:10;
+                    }
+                }
+
+                &.align-middle{                    
+                    @include Align-middle;
+                }
+            }
+            .num{
+                @include Align-middle;
+                width:40px;
+                height:40px;
+                color:#fff;
+                margin: auto;
+                border-radius: 40px;
+                background-color:#8f9191;
+            }
+            .tit{display:block; font-size:16px; margin-top:20px;}
+            .txt{font-size:14px; margin-top:15px; color:#54585a}
+            .lst.txt{
+                li{
+                    + li{margin-top:15px;}
+                }
+            }
+
+            + .lst{margin-top:30px;}
+        }
+
+        .location-area{
+            @include Align-between;
+            margin-top:60px;
+            background-color:#fafafa;
+
+            .location{
+                flex:none;
+                width:588px;
+                flex-basis: 588px;
+            }
+            .infos{
+                padding:40px;
+                .infos-header{
+                    padding-bottom:20px;
+                    border-bottom:1px solid $border-grey;
+
+                    .infos-header-row{
+                        @include Align-middle-left;
+
+                        dt, dd{flex:1;}
+                        dt{
+                            @include Bold;
+                            flex:none;
+                            width:200px;
+                            flex-basis: 200px;
+                        }
+                        dd{
+                            @include Align-between;
+                            color:#54585a;
+                        }
+                       
+                        + .infos-header-row{margin-top:20px;}
+                    }
+                    .lst{margin-top:20px;}
+                }
+                .infos-cont{
+                    margin-top:20px;
+
+                    strong{@include Bold;}
+                }
+                .lst{
+                    margin:0;
+
+                    li{
+                       + li{margin-top:20px;} 
+                    }
+                }
+            }
+        }
+    }
+
+    //부가 서비스
+    &.additional-container{
+        .around-box{
+            @include Align-around;
+            @include roundBox;
+            padding:50px;
+            text-align:center;
+            background-color:#fafafa;
+
+            .tit{
+                font-size:18px;
+                margin-bottom:0;
+                
+                + .txt{margin-top:20px;}
+            }
+            .txt{font-size:16px; color:#2f2f2f;}
+        }
+    }
     
     //해외렌터카
     .reservation-section{

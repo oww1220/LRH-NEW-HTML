@@ -308,17 +308,17 @@ html, body {
 	right: 0;
 }
 
-.section-explain {
+.section-explain, .section-explain-type2 {
 	padding-bottom: 60px;
 }
 
-.section-explain .explain-header {
+.section-explain .explain-header, .section-explain-type2 .explain-header {
 	padding-bottom: 30px;
 	margin-bottom: 60px;
 	border-bottom: 1px solid #e7e7e7;
 }
 
-.section-explain .explain-header.between-type {
+.section-explain .explain-header.between-type, .section-explain-type2 .explain-header.between-type {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -336,7 +336,7 @@ html, body {
 	        justify-content: space-between;
 }
 
-.section-explain .explain-header.between-type .info-list, .section-explain .explain-header.between-type .infos {
+.section-explain .explain-header.between-type .info-list, .section-explain .explain-header.between-type .infos, .section-explain-type2 .explain-header.between-type .info-list, .section-explain-type2 .explain-header.between-type .infos {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -344,7 +344,7 @@ html, body {
 	display: flex;
 }
 
-.section-explain .explain-header.between-type .info-list p strong, .section-explain .explain-header.between-type .infos p strong {
+.section-explain .explain-header.between-type .info-list p strong, .section-explain .explain-header.between-type .infos p strong, .section-explain-type2 .explain-header.between-type .info-list p strong, .section-explain-type2 .explain-header.between-type .infos p strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -352,15 +352,15 @@ html, body {
 	font-size: 1rem;
 }
 
-.section-explain .explain-header.between-type .info-list p .icon, .section-explain .explain-header.between-type .infos p .icon {
+.section-explain .explain-header.between-type .info-list p .icon, .section-explain .explain-header.between-type .infos p .icon, .section-explain-type2 .explain-header.between-type .info-list p .icon, .section-explain-type2 .explain-header.between-type .infos p .icon {
 	margin-right: 10px;
 }
 
-.section-explain .explain-header.between-type .info-list p + p, .section-explain .explain-header.between-type .infos p + p {
+.section-explain .explain-header.between-type .info-list p + p, .section-explain .explain-header.between-type .infos p + p, .section-explain-type2 .explain-header.between-type .info-list p + p, .section-explain-type2 .explain-header.between-type .infos p + p {
 	margin-left: 30px;
 }
 
-.section-explain .explain-cont .tit {
+.section-explain .explain-cont .tit, .section-explain-type2 .explain-cont .tit {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -369,38 +369,43 @@ html, body {
 	margin-bottom: 25px;
 }
 
-.section-explain .explain-cont .txt {
-	margin-bottom: 30px;
+.section-explain .explain-cont .txt, .section-explain-type2 .explain-cont .txt {
+	font-size: 14px;
+	color: #54585a;
 }
 
-.section-explain .explain-cont .txt strong {
+.section-explain .explain-cont .txt strong, .section-explain-type2 .explain-cont .txt strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 }
 
-.section-explain .explain-cont .txt + .row {
+.section-explain .explain-cont .txt + .tbl-box, .section-explain .explain-cont .txt + .define-area, .section-explain .explain-cont .txt + .define-area2, .section-explain .explain-cont .txt + .details, .section-explain-type2 .explain-cont .txt + .tbl-box, .section-explain-type2 .explain-cont .txt + .define-area, .section-explain-type2 .explain-cont .txt + .define-area2, .section-explain-type2 .explain-cont .txt + .details {
+	margin-top: 30px;
+}
+
+.section-explain .explain-cont .txt + .row, .section-explain-type2 .explain-cont .txt + .row {
 	margin-top: 80px;
 }
 
-.section-explain .explain-cont > .row + .row {
+.section-explain .explain-cont > .row + .row, .section-explain-type2 .explain-cont > .row + .row {
 	margin-top: 60px;
 }
 
-.section-explain .explain-cont > .row .tit-size-mid {
+.section-explain .explain-cont > .row .tit-size-mid, .section-explain-type2 .explain-cont > .row .tit-size-mid {
 	margin-bottom: 25px;
 }
 
-.section-explain .explain-cont .lst {
+.section-explain .explain-cont .lst, .section-explain-type2 .explain-cont .lst {
 	margin-bottom: 30px;
 }
 
-.section-explain .explain-cont .define-area {
+.section-explain .explain-cont .define-area, .section-explain-type2 .explain-cont .define-area {
 	margin: 60px 0 0;
 }
 
-.section-explain .explain-cont .define-area > dt {
+.section-explain .explain-cont .define-area > dt, .section-explain-type2 .explain-cont .define-area > dt {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -409,15 +414,17 @@ html, body {
 	margin-bottom: 25px;
 }
 
-.section-explain .explain-cont .define-area > dd {
+.section-explain .explain-cont .define-area > dd, .section-explain-type2 .explain-cont .define-area > dd {
+	font-size: 14px;
+	color: #54585a;
 	margin-bottom: 60px;
 }
 
-.section-explain .explain-cont .define-area2 {
+.section-explain .explain-cont .define-area2, .section-explain-type2 .explain-cont .define-area2 {
 	margin-bottom: 60px;
 }
 
-.section-explain .explain-cont .define-area2 .define-row {
+.section-explain .explain-cont .define-area2 .define-row, .section-explain-type2 .explain-cont .define-area2 .define-row {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -425,7 +432,7 @@ html, body {
 	display: flex;
 }
 
-.section-explain .explain-cont .define-area2 .define-row dt {
+.section-explain .explain-cont .define-area2 .define-row dt, .section-explain-type2 .explain-cont .define-area2 .define-row dt {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -434,25 +441,30 @@ html, body {
 	margin-right: 10px;
 }
 
-.section-explain .explain-cont .define-area2 .define-row dt .icon {
+.section-explain .explain-cont .define-area2 .define-row dt .icon, .section-explain-type2 .explain-cont .define-area2 .define-row dt .icon {
 	margin-right: 10px;
 }
 
-.section-explain .explain-cont .define-area2 .define-row + .define-row {
+.section-explain .explain-cont .define-area2 .define-row dd, .section-explain-type2 .explain-cont .define-area2 .define-row dd {
+	font-size: 14px;
+	color: #54585a;
+}
+
+.section-explain .explain-cont .define-area2 .define-row + .define-row, .section-explain-type2 .explain-cont .define-area2 .define-row + .define-row {
 	margin-top: 30px;
 }
 
-.section-explain .explain-cont .btn-box {
+.section-explain .explain-cont .btn-box, .section-explain-type2 .explain-cont .btn-box {
 	padding: 40px 0;
 }
 
-.section-explain .explain-cont .tbl-box table {
+.section-explain .explain-cont .tbl-box table, .section-explain-type2 .explain-cont .tbl-box table {
 	width: 100%;
 	border-top: 1px solid #e7e7e7;
 	word-break: break-word;
 }
 
-.section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td {
+.section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table td {
 	padding: 30px;
 	text-align: center;
 	border-bottom: 1px solid #e7e7e7;
@@ -461,26 +473,26 @@ html, body {
 	vertical-align: middle;
 }
 
-.section-explain .explain-cont .tbl-box table th .lst, .section-explain .explain-cont .tbl-box table td .lst {
+.section-explain .explain-cont .tbl-box table th .lst, .section-explain .explain-cont .tbl-box table td .lst, .section-explain-type2 .explain-cont .tbl-box table th .lst, .section-explain-type2 .explain-cont .tbl-box table td .lst {
 	margin: 0;
 }
 
-.section-explain .explain-cont .tbl-box table th p strong, .section-explain .explain-cont .tbl-box table td p strong {
+.section-explain .explain-cont .tbl-box table th p strong, .section-explain .explain-cont .tbl-box table td p strong, .section-explain-type2 .explain-cont .tbl-box table th p strong, .section-explain-type2 .explain-cont .tbl-box table td p strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 }
 
-.section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst {
+.section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst, .section-explain-type2 .explain-cont .tbl-box table th p + .lst, .section-explain-type2 .explain-cont .tbl-box table td p + .lst {
 	margin-top: 10px;
 }
 
-.section-explain .explain-cont .tbl-box table thead th:last-of-type, .section-explain .explain-cont .tbl-box table td:last-of-type {
+.section-explain .explain-cont .tbl-box table thead th:last-of-type, .section-explain .explain-cont .tbl-box table td:last-of-type, .section-explain-type2 .explain-cont .tbl-box table thead th:last-of-type, .section-explain-type2 .explain-cont .tbl-box table td:last-of-type {
 	border-right: none;
 }
 
-.section-explain .explain-cont .tbl-box table th {
+.section-explain .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table th {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -488,40 +500,47 @@ html, body {
 	background-color: #fafafa;
 }
 
-.section-explain .explain-cont .tbl-box table td {
+.section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table td {
 	font-family: "ManropeR", "NotoR", serif;
 	/*font-family: "SpoqaR", serif;*/
 	/*font-family: "SpoqaHanSansR", serif;*/
 	font-weight: normal;
 	font-size: 14px;
+	color: #54585a;
 }
 
-.section-explain .explain-cont .tbl-box table .align-l {
+.section-explain .explain-cont .tbl-box table .align-l, .section-explain-type2 .explain-cont .tbl-box table .align-l {
 	text-align: left;
 }
 
-.section-explain .explain-cont .tbl-box table .lst {
+.section-explain .explain-cont .tbl-box table .lst, .section-explain-type2 .explain-cont .tbl-box table .lst {
 	text-align: left;
 }
 
-.section-explain .explain-cont .tbl-box table + .lst {
+.section-explain .explain-cont .tbl-box table + .lst, .section-explain-type2 .explain-cont .tbl-box table + .lst {
 	margin-top: 20px;
 	margin-bottom: 0;
 }
 
-.section-explain .explain-cont .tbl-box table.td-align-l td {
+.section-explain .explain-cont .tbl-box table.td-align-l td, .section-explain-type2 .explain-cont .tbl-box table.td-align-l td {
 	text-align: left;
 }
 
-.section-explain .explain-cont .tbl-box + .tbl-box {
+.section-explain .explain-cont .tbl-box + .tbl-box, .section-explain-type2 .explain-cont .tbl-box + .tbl-box {
 	margin-top: 60px;
 }
 
-.section-explain .explain-cont .details .lst {
+.section-explain .explain-cont .details .lst, .section-explain-type2 .explain-cont .details .lst {
 	margin: 0;
 }
 
-.section-explain + .section-explain {
+.section-explain-type2 .explain-header, .section-explain-type2-type2 .explain-header {
+	padding-bottom: 30px;
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+.section-explain + .section-explain, .section-explain + .section-explain-type2, .section-explain-type2 + .section-explain, .section-explain-type2 + .section-explain-type2 {
 	margin-top: 60px;
 }
 
@@ -1193,6 +1212,11 @@ html, body {
 	margin-bottom: 25px;
 }
 
+.grid-row.type2 > li .descri-box dd {
+	font-size: 14px;
+	color: #54585a;
+}
+
 .grid-col {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1268,6 +1292,11 @@ html, body {
 	font-weight: normal;
 	font-size: 1.125rem;
 	margin-bottom: 24px;
+}
+
+.grid-col.type2 > li .descri-box dd {
+	font-size: 14px;
+	color: #54585a;
 }
 
 .grid-col-space-around {
@@ -1381,13 +1410,42 @@ html, body {
 	position: relative;
 	padding-left: 12px;
 	font-size: 14px;
+	color: #54585a;
 	line-height: 1.5;
+}
+
+.lst.txt-color-red {
+	color: #ed1c24;
+}
+
+.lst.txt-color-red li {
+	color: inherit;
+}
+
+.lst.simple > li {
+	padding: 0;
+}
+
+.lst.simple > li .marker {
+	display: inline-block;
+	width: 12px;
 }
 
 .lst.dot > li::before {
 	position: absolute;
 	top: -2px;
 	left: 0;
+	width: 12px;
+	font-size: 18px;
+	content: "·";
+}
+
+.lst.dot-type2 > li {
+	padding: 0;
+}
+
+.lst.dot-type2 > li:before {
+	display: inline-block;
 	width: 12px;
 	font-size: 18px;
 	content: "·";
@@ -9473,9 +9531,17 @@ html, body {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 0 40px;
 	margin-bottom: 80px;
 }
 
@@ -9485,10 +9551,10 @@ html, body {
 	   -moz-box-flex: 0;
 	    -ms-flex: none;
 	        flex: none;
-	width: 680px;
-	-webkit-flex-basis: 680px;
-	    -ms-flex-preferred-size: 680px;
-	        flex-basis: 680px;
+	width: 620px;
+	-webkit-flex-basis: 620px;
+	    -ms-flex-preferred-size: 620px;
+	        flex-basis: 620px;
 }
 
 .secondhand-container .carSpec-section .carSpec-infos .tit {
@@ -10160,16 +10226,16 @@ html, body {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: left;
-	-webkit-justify-content: left;
-	   -moz-box-pack: left;
-	    -ms-flex-pack: left;
-	        justify-content: left;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding: 30px 80px;
 	margin-bottom: 50px;
 }
@@ -10180,14 +10246,10 @@ html, body {
 	   -moz-box-flex: 0;
 	    -ms-flex: none;
 	        flex: none;
-	width: 680px;
-	-webkit-flex-basis: 680px;
-	    -ms-flex-preferred-size: 680px;
-	        flex-basis: 680px;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	padding-right: 100px;
+	width: 620px;
+	-webkit-flex-basis: 620px;
+	    -ms-flex-preferred-size: 620px;
+	        flex-basis: 620px;
 }
 
 .secondhand-container .carDetail-section .car-img img {
@@ -11407,6 +11469,325 @@ html, body {
 	font-weight: normal;
 	color: #2f2f2f;
 	border-bottom: 1px solid #2f2f2f;
+}
+
+.short-container.checkin-container .round-banner {
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	padding: 50px 60px;
+	margin-bottom: 80px;
+	min-height: 140px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images//bg-shortInfoChechin.png");
+	background-position: 0 0;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.short-container.checkin-container .round-banner p {
+	color: #fff;
+}
+
+.short-container.checkin-container .step-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	   -moz-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.short-container.checkin-container .step-list > li {
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	   -moz-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	padding: 20px 5px;
+	text-align: center;
+}
+
+.short-container.checkin-container .step-list > li + li {
+	border-left: 1px solid #e7e7e7;
+}
+
+.short-container.checkin-container .step-list > li + li:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: -1px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 0 8px 10px;
+	border-color: transparent transparent transparent #e7e7e7;
+	margin-top: -8px;
+	z-index: 5;
+}
+
+.short-container.checkin-container .step-list > li + li:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: -1px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 0 6px 8px;
+	border-color: transparent transparent transparent #fff;
+	margin-top: -6px;
+	z-index: 10;
+}
+
+.short-container.checkin-container .step-list > li.align-middle {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.short-container.checkin-container .step-list .num {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	margin: auto;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	        border-radius: 40px;
+	background-color: #8f9191;
+}
+
+.short-container.checkin-container .step-list .tit {
+	display: block;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.short-container.checkin-container .step-list .txt {
+	font-size: 14px;
+	margin-top: 15px;
+	color: #54585a;
+}
+
+.short-container.checkin-container .step-list .lst.txt li + li {
+	margin-top: 15px;
+}
+
+.short-container.checkin-container .step-list + .lst {
+	margin-top: 30px;
+}
+
+.short-container.checkin-container .location-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 60px;
+	background-color: #fafafa;
+}
+
+.short-container.checkin-container .location-area .location {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 588px;
+	-webkit-flex-basis: 588px;
+	    -ms-flex-preferred-size: 588px;
+	        flex-basis: 588px;
+}
+
+.short-container.checkin-container .location-area .infos {
+	padding: 40px;
+}
+
+.short-container.checkin-container .location-area .infos .infos-header {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.short-container.checkin-container .location-area .infos .infos-header .infos-header-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.short-container.checkin-container .location-area .infos .infos-header .infos-header-row dt, .short-container.checkin-container .location-area .infos .infos-header .infos-header-row dd {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	   -moz-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.short-container.checkin-container .location-area .infos .infos-header .infos-header-row dt {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 200px;
+	-webkit-flex-basis: 200px;
+	    -ms-flex-preferred-size: 200px;
+	        flex-basis: 200px;
+}
+
+.short-container.checkin-container .location-area .infos .infos-header .infos-header-row dd {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	color: #54585a;
+}
+
+.short-container.checkin-container .location-area .infos .infos-header .infos-header-row + .infos-header-row {
+	margin-top: 20px;
+}
+
+.short-container.checkin-container .location-area .infos .infos-header .lst {
+	margin-top: 20px;
+}
+
+.short-container.checkin-container .location-area .infos .infos-cont {
+	margin-top: 20px;
+}
+
+.short-container.checkin-container .location-area .infos .infos-cont strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.short-container.checkin-container .location-area .infos .lst {
+	margin: 0;
+}
+
+.short-container.checkin-container .location-area .infos .lst li + li {
+	margin-top: 20px;
+}
+
+.short-container.additional-container .around-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	padding: 50px;
+	text-align: center;
+	background-color: #fafafa;
+}
+
+.short-container.additional-container .around-box .tit {
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.short-container.additional-container .around-box .tit + .txt {
+	margin-top: 20px;
+}
+
+.short-container.additional-container .around-box .txt {
+	font-size: 16px;
+	color: #2f2f2f;
 }
 
 .short-container .reservation-section {
@@ -16692,6 +17073,141 @@ html, body {
 	-webkit-background-size: auto auto;
 	   -moz-background-size: auto;
 	        background-size: auto;
+}
+
+.longTerm-container.affiliateCard-container .round-banner {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images//bg-longTermInfo.png");
+	background-position: 0 0;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	margin: 60px 0 0;
+}
+
+.longTerm-container.affiliateCard-container .round-banner .infos .tit {
+	display: block;
+	color: #fff;
+	font-size: 16px;
+}
+
+.longTerm-container.affiliateCard-container .round-banner .infos .tit + .bar-type {
+	margin-top: 15px;
+}
+
+.longTerm-container.affiliateCard-container .round-banner .infos .bar-type {
+	font-size: 14px;
+}
+
+.longTerm-container.affiliateCard-container .round-banner .infos .bar-type > span {
+	position: relative;
+}
+
+.longTerm-container.affiliateCard-container .round-banner .infos .bar-type > span + span {
+	padding-left: 10px;
+	margin-left: 10px;
+}
+
+.longTerm-container.affiliateCard-container .round-banner .infos .bar-type > span + span:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 1px;
+	height: 14px;
+	margin-top: -7px;
+	background-color: #e7e7e7;
+}
+
+.longTerm-container.affiliateCard-container .tab-cont .tab-cont-inner {
+	display: none;
+	padding: 40px 0;
+}
+
+.longTerm-container.affiliateCard-container .tab-cont .tab-cont-inner:first-child {
+	display: block;
+}
+
+.longTerm-container.affiliateCard-container .card-section {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 40px 120px;
+	margin-bottom: 80px;
+}
+
+.longTerm-container.affiliateCard-container .card-section .infos {
+	margin-right: 250px;
+}
+
+.longTerm-container.affiliateCard-container .card-section .infos .tit {
+	font-size: 32px;
+	margin-top: 40px;
+}
+
+.longTerm-container.affiliateCard-container .card-section .infos .txt {
+	color: #54585a;
+	margin-top: 20px;
+}
+
+.longTerm-container.affiliateCard-container .card-section .infos .btn-box-align-left {
+	margin-top: 40px;
+}
+
+.longTerm-container.affiliateCard-container .card-section .img-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.longTerm-container.affiliateCard-container .card-section .img-box img {
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	        border-radius: 20px;
+	-webkit-box-shadow: 10px 10px 15px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow: 10px 10px 15px rgba(50, 50, 50, 0.35);
+	box-shadow: 10px 10px 15px rgba(50, 50, 50, 0.35);
+}
+
+.longTerm-container.affiliateCard-container .card-section.bg-blue {
+	background-color: #e2fdfe;
+}
+
+.longTerm-container.affiliateCard-container .card-section.bg-purple {
+	background-color: #ede4f2;
+}
+
+.longTerm-container.affiliateCard-container .tbl-box .tit-size-big {
+	margin-bottom: 60px;
+}
+
+.longTerm-container.affiliateCard-container .guide-section {
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	padding: 50px 40px;
+	margin: 40px 0;
+	background-color: #fafafa;
 }
 
 .longTerm-container .benefit-content .tab-cont-inner {

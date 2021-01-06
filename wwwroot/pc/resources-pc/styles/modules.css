@@ -308,17 +308,17 @@ html, body {
 	right: 0;
 }
 
-.section-explain {
+.section-explain, .section-explain-type2 {
 	padding-bottom: 60px;
 }
 
-.section-explain .explain-header {
+.section-explain .explain-header, .section-explain-type2 .explain-header {
 	padding-bottom: 30px;
 	margin-bottom: 60px;
 	border-bottom: 1px solid #e7e7e7;
 }
 
-.section-explain .explain-header.between-type {
+.section-explain .explain-header.between-type, .section-explain-type2 .explain-header.between-type {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -336,7 +336,7 @@ html, body {
 	        justify-content: space-between;
 }
 
-.section-explain .explain-header.between-type .info-list, .section-explain .explain-header.between-type .infos {
+.section-explain .explain-header.between-type .info-list, .section-explain .explain-header.between-type .infos, .section-explain-type2 .explain-header.between-type .info-list, .section-explain-type2 .explain-header.between-type .infos {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -344,7 +344,7 @@ html, body {
 	display: flex;
 }
 
-.section-explain .explain-header.between-type .info-list p strong, .section-explain .explain-header.between-type .infos p strong {
+.section-explain .explain-header.between-type .info-list p strong, .section-explain .explain-header.between-type .infos p strong, .section-explain-type2 .explain-header.between-type .info-list p strong, .section-explain-type2 .explain-header.between-type .infos p strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -352,15 +352,15 @@ html, body {
 	font-size: 1rem;
 }
 
-.section-explain .explain-header.between-type .info-list p .icon, .section-explain .explain-header.between-type .infos p .icon {
+.section-explain .explain-header.between-type .info-list p .icon, .section-explain .explain-header.between-type .infos p .icon, .section-explain-type2 .explain-header.between-type .info-list p .icon, .section-explain-type2 .explain-header.between-type .infos p .icon {
 	margin-right: 10px;
 }
 
-.section-explain .explain-header.between-type .info-list p + p, .section-explain .explain-header.between-type .infos p + p {
+.section-explain .explain-header.between-type .info-list p + p, .section-explain .explain-header.between-type .infos p + p, .section-explain-type2 .explain-header.between-type .info-list p + p, .section-explain-type2 .explain-header.between-type .infos p + p {
 	margin-left: 30px;
 }
 
-.section-explain .explain-cont .tit {
+.section-explain .explain-cont .tit, .section-explain-type2 .explain-cont .tit {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -369,38 +369,43 @@ html, body {
 	margin-bottom: 25px;
 }
 
-.section-explain .explain-cont .txt {
-	margin-bottom: 30px;
+.section-explain .explain-cont .txt, .section-explain-type2 .explain-cont .txt {
+	font-size: 14px;
+	color: #54585a;
 }
 
-.section-explain .explain-cont .txt strong {
+.section-explain .explain-cont .txt strong, .section-explain-type2 .explain-cont .txt strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 }
 
-.section-explain .explain-cont .txt + .row {
+.section-explain .explain-cont .txt + .tbl-box, .section-explain .explain-cont .txt + .define-area, .section-explain .explain-cont .txt + .define-area2, .section-explain .explain-cont .txt + .details, .section-explain-type2 .explain-cont .txt + .tbl-box, .section-explain-type2 .explain-cont .txt + .define-area, .section-explain-type2 .explain-cont .txt + .define-area2, .section-explain-type2 .explain-cont .txt + .details {
+	margin-top: 30px;
+}
+
+.section-explain .explain-cont .txt + .row, .section-explain-type2 .explain-cont .txt + .row {
 	margin-top: 80px;
 }
 
-.section-explain .explain-cont > .row + .row {
+.section-explain .explain-cont > .row + .row, .section-explain-type2 .explain-cont > .row + .row {
 	margin-top: 60px;
 }
 
-.section-explain .explain-cont > .row .tit-size-mid {
+.section-explain .explain-cont > .row .tit-size-mid, .section-explain-type2 .explain-cont > .row .tit-size-mid {
 	margin-bottom: 25px;
 }
 
-.section-explain .explain-cont .lst {
+.section-explain .explain-cont .lst, .section-explain-type2 .explain-cont .lst {
 	margin-bottom: 30px;
 }
 
-.section-explain .explain-cont .define-area {
+.section-explain .explain-cont .define-area, .section-explain-type2 .explain-cont .define-area {
 	margin: 60px 0 0;
 }
 
-.section-explain .explain-cont .define-area > dt {
+.section-explain .explain-cont .define-area > dt, .section-explain-type2 .explain-cont .define-area > dt {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -409,15 +414,17 @@ html, body {
 	margin-bottom: 25px;
 }
 
-.section-explain .explain-cont .define-area > dd {
+.section-explain .explain-cont .define-area > dd, .section-explain-type2 .explain-cont .define-area > dd {
+	font-size: 14px;
+	color: #54585a;
 	margin-bottom: 60px;
 }
 
-.section-explain .explain-cont .define-area2 {
+.section-explain .explain-cont .define-area2, .section-explain-type2 .explain-cont .define-area2 {
 	margin-bottom: 60px;
 }
 
-.section-explain .explain-cont .define-area2 .define-row {
+.section-explain .explain-cont .define-area2 .define-row, .section-explain-type2 .explain-cont .define-area2 .define-row {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -425,7 +432,7 @@ html, body {
 	display: flex;
 }
 
-.section-explain .explain-cont .define-area2 .define-row dt {
+.section-explain .explain-cont .define-area2 .define-row dt, .section-explain-type2 .explain-cont .define-area2 .define-row dt {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -434,25 +441,30 @@ html, body {
 	margin-right: 10px;
 }
 
-.section-explain .explain-cont .define-area2 .define-row dt .icon {
+.section-explain .explain-cont .define-area2 .define-row dt .icon, .section-explain-type2 .explain-cont .define-area2 .define-row dt .icon {
 	margin-right: 10px;
 }
 
-.section-explain .explain-cont .define-area2 .define-row + .define-row {
+.section-explain .explain-cont .define-area2 .define-row dd, .section-explain-type2 .explain-cont .define-area2 .define-row dd {
+	font-size: 14px;
+	color: #54585a;
+}
+
+.section-explain .explain-cont .define-area2 .define-row + .define-row, .section-explain-type2 .explain-cont .define-area2 .define-row + .define-row {
 	margin-top: 30px;
 }
 
-.section-explain .explain-cont .btn-box {
+.section-explain .explain-cont .btn-box, .section-explain-type2 .explain-cont .btn-box {
 	padding: 40px 0;
 }
 
-.section-explain .explain-cont .tbl-box table {
+.section-explain .explain-cont .tbl-box table, .section-explain-type2 .explain-cont .tbl-box table {
 	width: 100%;
 	border-top: 1px solid #e7e7e7;
 	word-break: break-word;
 }
 
-.section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td {
+.section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table td {
 	padding: 30px;
 	text-align: center;
 	border-bottom: 1px solid #e7e7e7;
@@ -461,26 +473,26 @@ html, body {
 	vertical-align: middle;
 }
 
-.section-explain .explain-cont .tbl-box table th .lst, .section-explain .explain-cont .tbl-box table td .lst {
+.section-explain .explain-cont .tbl-box table th .lst, .section-explain .explain-cont .tbl-box table td .lst, .section-explain-type2 .explain-cont .tbl-box table th .lst, .section-explain-type2 .explain-cont .tbl-box table td .lst {
 	margin: 0;
 }
 
-.section-explain .explain-cont .tbl-box table th p strong, .section-explain .explain-cont .tbl-box table td p strong {
+.section-explain .explain-cont .tbl-box table th p strong, .section-explain .explain-cont .tbl-box table td p strong, .section-explain-type2 .explain-cont .tbl-box table th p strong, .section-explain-type2 .explain-cont .tbl-box table td p strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 }
 
-.section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst {
+.section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst, .section-explain-type2 .explain-cont .tbl-box table th p + .lst, .section-explain-type2 .explain-cont .tbl-box table td p + .lst {
 	margin-top: 10px;
 }
 
-.section-explain .explain-cont .tbl-box table thead th:last-of-type, .section-explain .explain-cont .tbl-box table td:last-of-type {
+.section-explain .explain-cont .tbl-box table thead th:last-of-type, .section-explain .explain-cont .tbl-box table td:last-of-type, .section-explain-type2 .explain-cont .tbl-box table thead th:last-of-type, .section-explain-type2 .explain-cont .tbl-box table td:last-of-type {
 	border-right: none;
 }
 
-.section-explain .explain-cont .tbl-box table th {
+.section-explain .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table th {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -488,40 +500,47 @@ html, body {
 	background-color: #fafafa;
 }
 
-.section-explain .explain-cont .tbl-box table td {
+.section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table td {
 	font-family: "ManropeR", "NotoR", serif;
 	/*font-family: "SpoqaR", serif;*/
 	/*font-family: "SpoqaHanSansR", serif;*/
 	font-weight: normal;
 	font-size: 14px;
+	color: #54585a;
 }
 
-.section-explain .explain-cont .tbl-box table .align-l {
+.section-explain .explain-cont .tbl-box table .align-l, .section-explain-type2 .explain-cont .tbl-box table .align-l {
 	text-align: left;
 }
 
-.section-explain .explain-cont .tbl-box table .lst {
+.section-explain .explain-cont .tbl-box table .lst, .section-explain-type2 .explain-cont .tbl-box table .lst {
 	text-align: left;
 }
 
-.section-explain .explain-cont .tbl-box table + .lst {
+.section-explain .explain-cont .tbl-box table + .lst, .section-explain-type2 .explain-cont .tbl-box table + .lst {
 	margin-top: 20px;
 	margin-bottom: 0;
 }
 
-.section-explain .explain-cont .tbl-box table.td-align-l td {
+.section-explain .explain-cont .tbl-box table.td-align-l td, .section-explain-type2 .explain-cont .tbl-box table.td-align-l td {
 	text-align: left;
 }
 
-.section-explain .explain-cont .tbl-box + .tbl-box {
+.section-explain .explain-cont .tbl-box + .tbl-box, .section-explain-type2 .explain-cont .tbl-box + .tbl-box {
 	margin-top: 60px;
 }
 
-.section-explain .explain-cont .details .lst {
+.section-explain .explain-cont .details .lst, .section-explain-type2 .explain-cont .details .lst {
 	margin: 0;
 }
 
-.section-explain + .section-explain {
+.section-explain-type2 .explain-header, .section-explain-type2-type2 .explain-header {
+	padding-bottom: 30px;
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+.section-explain + .section-explain, .section-explain + .section-explain-type2, .section-explain-type2 + .section-explain, .section-explain-type2 + .section-explain-type2 {
 	margin-top: 60px;
 }
 
@@ -1193,6 +1212,11 @@ html, body {
 	margin-bottom: 25px;
 }
 
+.grid-row.type2 > li .descri-box dd {
+	font-size: 14px;
+	color: #54585a;
+}
+
 .grid-col {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1268,6 +1292,11 @@ html, body {
 	font-weight: normal;
 	font-size: 1.125rem;
 	margin-bottom: 24px;
+}
+
+.grid-col.type2 > li .descri-box dd {
+	font-size: 14px;
+	color: #54585a;
 }
 
 .grid-col-space-around {
@@ -1381,13 +1410,42 @@ html, body {
 	position: relative;
 	padding-left: 12px;
 	font-size: 14px;
+	color: #54585a;
 	line-height: 1.5;
+}
+
+.lst.txt-color-red {
+	color: #ed1c24;
+}
+
+.lst.txt-color-red li {
+	color: inherit;
+}
+
+.lst.simple > li {
+	padding: 0;
+}
+
+.lst.simple > li .marker {
+	display: inline-block;
+	width: 12px;
 }
 
 .lst.dot > li::before {
 	position: absolute;
 	top: -2px;
 	left: 0;
+	width: 12px;
+	font-size: 18px;
+	content: "·";
+}
+
+.lst.dot-type2 > li {
+	padding: 0;
+}
+
+.lst.dot-type2 > li:before {
+	display: inline-block;
 	width: 12px;
 	font-size: 18px;
 	content: "·";
@@ -5988,6 +6046,61 @@ button[disabled] {
 	height: 57px;
 	background-repeat: no-repeat;
 	background-image: url("../../resources-pc/images/icons/ico-pannel18.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel19 {
+	width: 66px;
+	height: 51px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel19.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel20 {
+	width: 66px;
+	height: 52px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel20.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel21 {
+	width: 49px;
+	height: 56px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel21.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel22 {
+	width: 42px;
+	height: 53px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel22.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.icon.pannel23 {
+	width: 62px;
+	height: 52px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-pannel23.png");
 	background-position: center;
 	-webkit-background-size: auto auto;
 	   -moz-background-size: auto;
