@@ -381,7 +381,7 @@ html, body{
 $border-grey:#e7e7e7;
 $border-darkgrey:#d2d2d2;
 $border-red:#ff404b;
-$bg-red:#ff404b;
+$bg-red:#161616;
 $txt-red: #ed1c24;
 $txt-darkblack: #2f2f2f;
 
@@ -501,7 +501,7 @@ $txt-darkblack: #2f2f2f;
 
 		.explain-header{ //제목
 			padding-bottom:30px;
-            margin-bottom:60px;
+            margin-bottom:40px;
 			border-bottom:1px solid #e7e7e7;
 			
 			&.between-type{
@@ -529,9 +529,10 @@ $txt-darkblack: #2f2f2f;
 				
 				+ .tbl-box, + .define-area, + .define-area2, + .details{margin-top:30px; }
 				+ .row{margin-top:80px;}
+				+ .multi-segment-list{margin-top:60px;}
 			}
 				
-			> .row{
+			> .row{				
 				+ .row{margin-top:60px;}
 				
 				.tit-size-mid{margin-bottom:25px;}
@@ -614,24 +615,38 @@ $txt-darkblack: #2f2f2f;
 					}
 				}
 
+				.box-between{
+					@include Align-spacing-box(20px);
+					justify-content: flex-start;
+					
+					.box-between-col{
+						width:50%;
+						padding-right:20px;
+						box-sizing: border-box;
+					}
+				}
+				
 				+ .tbl-box{margin-top:60px;}
+				+ .row{margin-top:60px;}
 			}	
 			.details{
 				.lst{margin:0;}
 			}
 		}
-
-		&-type2{
-			.explain-header{ //제목
-				padding-bottom:30px;
-				margin-bottom:0;
-				border-bottom:none;
-			}
-		}
-
-		
 		+ .section-explain, + .section-explain-type2{margin-top:60px;}
 	}
+
+	&-explain-type2{
+		.explain-header{ //제목
+			padding-bottom:30px;
+			margin-bottom:0;
+			border-bottom:none;
+		}
+		.explain-cont{ //내용			
+			
+		}
+	}
+
 	&-form{
 		.form-header{
 			position:relative;
@@ -985,10 +1000,12 @@ $txt-darkblack: #2f2f2f;
 		border-radius:130px;
 		border:1px solid #f2f2f2;
 		background-color:#fafafa;
+
+		+ .details{
+			margin-left:56px;
+		}
 	}
-	.details{
-		margin-left:56px;
-	}
+	
 
 	&.type-col2{	
 		@include Align-box;
@@ -1001,7 +1018,62 @@ $txt-darkblack: #2f2f2f;
 		}
 	}
 }
+.process-list{
+	@include Align-between;
+	align-items: stretch;
+	border-top:1px solid $border-grey;
+	border-bottom:1px solid $border-grey;
 
+	> li{            
+		position:relative;    
+		flex:1;
+		padding:20px 5px;
+		text-align:center;
+
+		+ li{
+			border-left:1px solid $border-grey;
+
+			&:before{
+				content:"";
+				display:block;
+				@include Position($top:50%, $left:-1px);
+				@include arrowR($color:$border-grey, $direction : 8px 0 8px 10px);
+				margin-top:-8px;
+				z-index:5;
+			}
+			&:after{
+				content:"";
+				display:block;
+				@include Position($top:50%, $left:-1px);
+				@include arrowR($color:#fff, $direction : 6px 0 6px 8px);
+				margin-top:-6px;
+				z-index:10;
+			}
+		}
+
+		&.align-middle{                    
+			@include Align-middle;
+		}
+	}
+	.num{
+		@include Align-middle;
+		width:40px;
+		height:40px;
+		color:#fff;
+		margin: auto;
+		border-radius: 40px;
+		background-color:#8f9191;
+	}
+	.tit{display:block; font-size:16px; margin-top:20px;}
+	.txt{font-size:14px; margin-top:15px; color:#54585a}
+	.lst.txt{
+		li{
+			+ li{margin-top:15px;}
+		}
+	}
+
+	+ .lst{margin-top:30px;}
+}
 .lst {	
 	> li{
 		position:relative;
@@ -1151,7 +1223,6 @@ $txt-darkblack: #2f2f2f;
 			top: 0;
 			z-index:10;
 			background-color:#fff;
-
 		}
 	}  
 }
@@ -1543,10 +1614,12 @@ $txt-darkblack: #2f2f2f;
 	.agree-area{padding:0 0 60px}
 }
 
-//qna 아코디언
+
 .qna-list{	
 	$qna-spacing: 40px;
 	$icon-q-pos: calc(26px - (30px - 26px));
+
+	//아코디언 적용
 	.accor-header{
 		position: relative;
 		padding-left:$qna-spacing; 
@@ -1585,7 +1658,6 @@ $txt-darkblack: #2f2f2f;
 		background-color:#fafafa;
 
 		.lst{margin:0;}
-
 		.txt{
 			+ .tbl-box{margin-top:30px;}	
 		}
@@ -1602,6 +1674,47 @@ $txt-darkblack: #2f2f2f;
 				}
 			}
 			+ .lst{margin-top:20px;}
+		}
+	}
+
+	//아코디언 미적용
+	&-type2{
+		> li{
+			+ li{margin-top:40px;}
+		}
+
+		.accor-question{
+			@include Align-baseline;
+			@include Bold;
+			padding:20px 20px 20px 0;
+
+			.ico-q{
+				flex:none;
+				@include Align-middle;
+				width:30px;
+				height:30px;
+				flex-basis: 30px;
+				border-radius: 30px;
+				margin-right:10px;
+				color:#fff;
+				background-color:$bg-red;
+			}
+		}
+		.accor-answer{
+			@include Align-baseline;
+			@include txtSetting;
+
+			.ico-a{
+				flex:none;
+				@include Align-middle;
+				width:30px;
+				height:30px;
+				flex-basis: 30px;
+				border-radius: 30px;
+				margin-right:10px;
+				color:#fff;
+				background-color:#54585a;
+			}
 		}
 	}
 }

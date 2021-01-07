@@ -285,6 +285,12 @@ if($('.affiliateCard-container .tabControl').length){
         swap();
     });
 }
+//단기렌터카 - 부가서비스 안내
+if($('.additional-container .tabControl').length){
+    MUI.event.taps('.additional-container .tabControl', false, function(swap){
+        swap();
+    });
+}
 
 /* -------------------------------------------------탭 전환end*/
 
@@ -1323,14 +1329,6 @@ if($('.short-container .rentalFeeTab').length){
 if($('.short-container .rentalFeeTab2').length){
     MUI.event.taps('.short-container .rentalFeeTab2', false, function(swap){
         swap();
-    });
-}
-
-//펫카 상품 안내 - QNA 아코디언
-if($('.short-container .qnaAccor').length){
-    MUI.event.toggle('.qnaAccor .btn-toggle', '.qnaAccor .qnaAccorCont', false, function(logic, layer) {
-        //console.log('toggle');
-        logic();
     });
 }
 
