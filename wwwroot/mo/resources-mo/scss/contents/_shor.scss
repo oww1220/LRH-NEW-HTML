@@ -1,7 +1,90 @@
 .shor-wrap {
     background-color: #fff;
     padding-bottom: 4rem;
-
+    // 유의사항 등 공통요소로 추가 정리필요
+    .guide-box{
+        padding:0 1.7rem 4.3rem;
+        h4{
+            @include Bold;
+            padding:2.6rem 0 0 0;
+            font-size:1.4rem;
+        }
+        // 리스트
+        .guide {
+            width:auto;
+            font-size: 1.1rem;
+            line-height: 1.3;
+            text-indent: -.8rem;
+            margin:1.1rem 0;
+            padding:0 0 0 1rem;
+            //padding-left:1rem;
+            & > li{
+                margin-top:.4rem;
+                color:#54585a;
+                @include Regular;
+                line-height: 1.4;
+                padding:0;
+                & > i{
+                    margin-right: .6rem;
+                    margin-top: -.4rem;
+                }
+                &.red_txt{
+                    color:#ed1c24;
+                }
+                &.gray_txt{
+                    color:#8f9191;
+                }
+            }
+            & > li:first-child{
+                margin-top:0;
+            }
+        }
+    }
+    // 디자인 현행화 신규 추가(공통 요소)
+    .info-step-list{
+        border-bottom:0 none;
+        padding: 1.7rem 0;
+        ol > li {
+            @include Align-top-left;
+            @include Background($sprite:'bg-line', $position:1.7rem center);
+            margin:.4rem 0;
+            padding-bottom: 2rem;
+            position: relative;
+            &:after {
+                display: block;
+                content: "";
+                @include Background($sprite:'long-arrow', $size:100% auto, $position:center center);
+                width: .7rem;
+                height: 1.7rem;
+                position: absolute;
+                left: 1.7rem;
+                bottom: 0;
+            }
+            .num{
+                .bg-gray {
+                    background: #8f9191;
+                    color:#fff;
+                    font-size:1.1rem;
+                    @include Bold;
+                    width: 3.4rem;
+                    height: 3.4rem;
+                    border-radius: 100%;
+                }   
+            }
+            .text {
+                padding-left: 2.2rem;
+                p {
+                    font-size:1.4rem;
+                    color:#2f2f2f;
+                    @include Bold;
+                }
+                b {
+                    font-size:1.1rem;
+                    color:#8f9191;
+                }
+            }  
+        }
+    }
     .section-tit{
         padding: 2.2rem 1.7rem 2.6rem;
         position: relative;
@@ -19,6 +102,55 @@
         .btn-share {
             @include Position( $top: 1.9rem, $right: 1.7rem);
         }
+        // 이미지성 tit 20210107 추가 - 공통요소로 정리
+        &.bg-block {
+            @include Background($sprite:'muc-suc-0001-topbg', $size:cover, $position:top center, $path:'bgs');
+            em{
+                color:#fff;
+            }
+            strong{
+                color:#fff;
+                span{
+                    color:#fff;
+                }
+            }
+            .btn-share {
+                @include Position( $top: 1.9rem, $right: 1.7rem);
+                background-color:transparent;
+            }
+            .guide {
+                padding-top:3.9rem;
+                strong {
+                    font-size:1.2rem;
+                    i {
+                        margin-right:.4rem;
+                    }
+                }
+                p {
+                    margin-top:1.3rem;
+                    color: #fff;
+                    font-size:1.1rem;
+                }
+            }
+            .btn-list {
+                margin-top:3.8rem;
+                button {
+                    height:auto;
+                    padding:0;
+                    b {
+                        color:#fff;
+                        vertical-align: middle;
+                        padding-left:.4rem;
+                        text-decoration: underline;
+                    }
+                    & + button {
+                        padding-left:1.7rem;
+                    }
+                }
+                
+            }
+        }
+
         &.section-tit-info{
             background-color: #fff;
             em{
@@ -2373,16 +2505,21 @@
             }
             .shor-notice-list{
                 .section-list{
-                    padding: 0 1.7rem;
+                    padding: 0;
                 }
+                
                 .shor-notice-toggle-cont{
                     border-bottom: 1px solid #f1f1f1;
+                    padding: 0 1.7rem;
                 }
                 .shor-notice-toggle-btn {
+                    &:nth-of-type(1) {
+                        border-top: 1px solid #f1f1f1;
+                    }
                     cursor: pointer;
                     @include Align-middle-left;
                     position: relative;
-                    padding:2.3rem 0;
+                    padding:2.3rem 1.7rem;
                     border-bottom: 1px solid #f1f1f1;
                     strong {
                         font-size: 1.4rem;
@@ -2395,6 +2532,9 @@
                     .btn-toggle{
                         @include Position($top: 50%, $right: 0);
                         transform: translateY(-50%);
+                        &:after {
+                            right: 100%;
+                        }
                     }
                     &.active {
                         .btn-toggle:after {
