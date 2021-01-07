@@ -1499,8 +1499,21 @@
         .imgUpload-list-box{
             padding:40px 0 10px;
 
-            > .tit{margin-bottom: 40px; text-align:center;}
+            //> .tit{margin-bottom: 40px; text-align:center;}
 
+            .list-btn-box{
+                @include Align-between;
+                margin-bottom: 40px;
+                .tit{
+                    //margin-bottom: 40px; 
+                    text-align:center;
+                }
+                .btn-file-wrap{
+                    input{
+                        display:none;
+                    }
+                }
+            }
             .imgUpload-item,.upload-btn{
                 display:block;
                 width:100%;
