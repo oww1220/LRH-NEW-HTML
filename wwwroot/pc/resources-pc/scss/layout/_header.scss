@@ -330,6 +330,43 @@
 		}
 	}
 }
+
+// 영문 header
+.eng-header {
+	.layer-gnb-info-top {
+		strong {
+			@include Bold;
+			font-size: 36px;
+			color: #2f2f2f;
+			&:after {
+				display: inline-block;
+				content: "";
+				width: 9px;
+				height: 9px;
+				background: #ff404b;
+				border-radius: 100%;
+				vertical-align: top;
+			}
+		}
+		p {
+			color: #8f9191;
+			font-size: 22px !important;
+		}
+		.btn-black {
+			width: 100px;
+			margin-top: 20px;
+		}
+	}
+	.header-nav {
+		.draw-toggle-cont {
+			.gnb-banner {
+				margin-right:195px;
+			}
+		}
+	}
+}
+
+// GNB 관련 dimm
 .bg-dimmed-h {
 	@include Hide_txt;
 	display: none;
