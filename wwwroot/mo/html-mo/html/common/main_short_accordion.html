@@ -20,6 +20,7 @@
 <script src="../../../resources-mo/scripts/jquery/plugins/swiper.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/iscroll.min.js"></script>
 <script src="../../../resources-mo/scripts/jquery/plugins/masonry.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/mobileSelect.js"></script>
 <script src="../include_main_header.js"></script><!--인크루드용..-->
 <script src="../include_footer.js"></script><!--인크루드용..-->
 <script src="../../../resources-mo/scripts/MUI.js"></script>
@@ -295,15 +296,23 @@
 													<ul class="list-type-col2">
 														<li>
 															<strong>대여시간</strong>
-															<a href="#none" class="layer-firstTime-open layer-time-open-link" data-layer="layer-firstTime">
+															<!-- <a href="#none" class="layer-firstTime-open layer-time-open-link" data-layer="layer-firstTime">
 																<b>10:00</b>
+																<i class="icon complete03"></i>
+															</a> -->
+															<a href="#none" id="schedule-opt-lt" class="layer-time-open-link">
+																대여시간선택
 																<i class="icon complete03"></i>
 															</a>
 														</li>
 														<li>
 															<strong>반납시간</strong>
-															<a href="#none" class="layer-lastTime-open layer-time-open-link" data-layer="layer-lastTime">
+															<!-- <a href="#none" class="layer-lastTime-open layer-time-open-link" data-layer="layer-lastTime">
 																<b>20:00</b>
+																<i class="icon complete04"></i>
+															</a> -->
+															<a href="#none" id="schedule-opt-rt" class="layer-time-open-link">
+																반납시간선택
 																<i class="icon complete04"></i>
 															</a>
 														</li>
@@ -1136,15 +1145,23 @@
 													<ul class="list-type-col2">
 														<li>
 															<strong>대여시간</strong>
-															<a href="#none" class="layer-firstTime-open layer-time-open-link" data-layer="layer-firstTime">
+															<!-- <a href="#none" class="layer-firstTime-open layer-time-open-link" data-layer="layer-firstTime">
 																<b>10:00</b>
+																<i class="icon complete03"></i>
+															</a> -->
+															<a href="#none" id="schedule-opt-lt-02" class="layer-time-open-link">
+																대여시간선택
 																<i class="icon complete03"></i>
 															</a>
 														</li>
 														<li>
 															<strong>반납시간</strong>
-															<a href="#none" class="layer-lastTime-open layer-time-open-link" data-layer="layer-lastTime">
+															<!-- <a href="#none" class="layer-lastTime-open layer-time-open-link" data-layer="layer-lastTime">
 																<b>20:00</b>
+																<i class="icon complete04"></i>
+															</a> -->
+															<a href="#none" id="schedule-opt-rt-02" class="layer-time-open-link">
+																반납시간선택
 																<i class="icon complete04"></i>
 															</a>
 														</li>
@@ -1984,15 +2001,23 @@
 													<ul class="list-type-col2">
 														<li>
 															<strong>대여시간</strong>
-															<a href="#none" class="layer-firstTime-open layer-time-open-link" data-layer="layer-firstTime">
+															<!-- <a href="#none" class="layer-firstTime-open layer-time-open-link" data-layer="layer-firstTime">
 																<b>10:00</b>
+																<i class="icon complete03"></i>
+															</a> -->
+															<a href="#none" id="schedule-opt-lt-03" class="layer-time-open-link">
+																대여시간선택
 																<i class="icon complete03"></i>
 															</a>
 														</li>
 														<li>
 															<strong>반납시간</strong>
-															<a href="#none" class="layer-lastTime-open layer-time-open-link" data-layer="layer-lastTime">
+															<!-- <a href="#none" class="layer-lastTime-open layer-time-open-link" data-layer="layer-lastTime">
 																<b>20:00</b>
+																<i class="icon complete04"></i>
+															</a> -->
+															<a href="#none" id="schedule-opt-rt-03" class="layer-time-open-link">
+																반납시간선택
 																<i class="icon complete04"></i>
 															</a>
 														</li>
@@ -2143,6 +2168,396 @@
 		<!--//컨텐츠-->	
 	</div>
 	<!--//layer-slide 반납시간 컴포넌트-->
+
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-lt', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
+
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-rt', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
+
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-lt-02', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
+
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-rt-02', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
+
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-lt-03', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
+
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
+
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
+
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+
+		// trigger 는 유니크해야됨
+
+		// 각 페이지에 스크립트 삽입
+		
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-rt-03', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
 
 	<!--bg-dimmed 컴포넌트-->
 	<div class="bg-dimmed">딤(Dim)처리 배경</div>
