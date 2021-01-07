@@ -3673,6 +3673,136 @@ body.fixed {
 				}
 			}
 		}
+
+		//마이페이지- 반납지점변경
+		&.layer-branch-change {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:1.7rem 0 0;
+			}
+			.section-top{
+				.tab-nav{
+					@include Inline-scrolling;
+					@include NoscrollBar;
+					display: inline-flex;
+					flex-wrap: nowrap;
+					ul{
+						width:100%;
+						margin-left:0;
+						display: inline-flex;
+						flex-wrap: nowrap;
+						li{
+							width:auto;
+							button{
+								padding:0 .9rem;
+							}
+						}
+					}
+				}
+			}
+			.section-list{
+				.section-filter {
+					padding:0 1.7rem;
+				}
+				.section-filter-list{
+					.result {
+						.filter-col {
+							padding:0 0 2rem 0;
+							.chk-list {
+								margin-top:0;
+								li {
+									.inner{
+										height: 3.9rem;
+									}
+									label {
+										height:8.6rem;
+										border-radius: .4rem;
+										color:#8f9191;
+										border:1px solid #d2d2d2;
+										@include Align-middle-column;
+										background-color: #fff;
+										font-size:1.1rem;
+										@include Regular;
+										span{
+											margin:1.7rem 0 0 0;
+										}
+									}
+									input:checked + label {
+										background-color:rgb(255,249,249);
+										background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+										color:#ff404b;
+										border:1px solid #ff404b;
+										.brand01{
+											@include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+										}
+										.brand02{
+											@include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+										}
+										.brand03{
+											@include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+										}
+										.brand04{
+											@include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+										}
+										.brand05{
+											@include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+										}
+										.brand06{
+											@include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+										}
+									}
+									input:checked + label:after{
+										display:none;
+									}
+								}
+							}
+						}
+					}
+					.result-type {
+						.filter-col {
+							padding:0;
+							.chk-list {
+								li {
+									label {
+										height:3.9rem;
+										font-size:1.1rem;
+									}
+								}
+							}
+						}
+					}
+					.detail-iconBox{
+						margin-left: -.6rem;
+						label {
+							border:0 none;
+							border-radius: 0;
+							@include Regular;
+							&:after {
+								width: 1.7rem;
+								height: 1.7rem;
+								margin-top: -.85rem;
+								left:.5rem;
+							}
+						}
+						input:checked + label {
+							@include Regular;
+						}
+						input[type='checkbox'] + label:after{
+							@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+						}
+						input[type='checkbox']:checked + label:after{
+							@include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+						}
+					}
+				}
+			}
+		}
+
+		//신차장 친구추천 레이어팝업
 		&.layer-makeUrl{
 			.full-top {
 				button {
@@ -3725,6 +3855,86 @@ body.fixed {
 					padding:1.5rem 2.2rem;
 					border-radius: .5rem;
 					word-break: break-all;
+				}
+			}
+		}
+
+		//대여 차량 상세 팝업
+		&.type-detail-info {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.pop-inner {
+				overflow-x: hidden;
+				background-color:#fff;
+				position: relative;
+				margin:0;
+				border-radius:0 0 1rem 1rem;
+			}
+			.pop-cont {
+				padding:3.4rem 2.1rem 2.6rem;
+				.detail-layout {
+					position: relative;
+					.detail-view-img{
+						margin:0 auto;
+						width: 21rem;
+						img{
+							width: 100%;
+						}
+					}
+					.detail-view-top {
+						background-color: #fff;
+						padding:2.6rem 0 1.7rem;
+						.normal{
+							color:#2B2B2B;
+							& > strong{
+								font-size:1.8rem;
+								@include Bold;
+							}
+						}
+					}
+					.detail-layer-cont-terms{
+						background-color: #fff;
+						padding-bottom:2.1rem;
+						& > .table{
+							border-top:1px solid #EBEBEB;
+							border-bottom:1px solid #EBEBEB;
+							padding-bottom:1.7rem;
+							& > table tr th{
+								border-top:0;
+								@include Bold;
+								@include Align-middle-left;
+								color:#2f2f2f;
+								padding:1.7rem 0 0;
+								& > i {
+									margin-right:.4rem;
+								}
+							}
+							& > table tr td{
+								border-top:0;
+								text-align: right;
+								padding-right:0;
+								padding:1.7rem 0 0;
+								& > b{
+									@include Normal;
+									color:#54585a;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+					.detail-layer-submit {
+						button {
+							margin:0 auto;
+							width:8rem;
+							height:3.9rem;
+							color:#54585a;
+							border-color: #d2d2d2;
+							border-radius: 1rem;
+						}
+					}
 				}
 			}
 		}

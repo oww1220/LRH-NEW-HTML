@@ -293,13 +293,21 @@
 	</footer>
 
 	<!--layer-full 대여차량 상세 컴포넌트-->
-	<div class="layer-wrap layer-popup layer-infos type-detail-info" data-type="popup">
+	<div class="layer-wrap layer-full layer-infos type-detail-info" data-type="full">
 		<!--상단-->
-        <div class="pop-top">
+        <!-- <div class="pop-top">
 			<h4>
                 대여 차량 상세
             </h4>
             <button type="button" class="layer-pop-close" data-layer="type-detail-info"><i class="icon layerclose02">닫기 버튼</i></button>  
+		</div> -->
+		<div class="full-top">
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="type-detail-info">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+            <h4>
+                대여 차량 상세
+            </h4>
         </div>
 		<!--//상단-->
 		<!--컨텐츠-->
@@ -347,7 +355,7 @@
 						
 					</div>
 					<div class="detail-layer-submit">
-						<button type="button" class="btn btn-white layer-pop-close" data-layer="type-detail-info">닫기</button>
+						<button type="button" class="btn btn-white layer-full-close" data-layer="type-detail-info">닫기</button>
 					</div>
 				</div>
 			</div>
@@ -690,70 +698,70 @@
 		});
 	</script>
 
-<script>
-	// 모바일 슬라이드 셀렉트 안내 : 
+	<script>
+		// 모바일 슬라이드 셀렉트 안내 : 
 
-	// 1개 일때는 position:[2]
-	// 2개 일때는 position:[2, 2]
+		// 1개 일때는 position:[2]
+		// 2개 일때는 position:[2, 2]
 
-	// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
+		// 콜백쪽은 개발자들이 데이터 핸들러 하는부분임
 
-	// trigger 는 유니크해야됨
+		// trigger 는 유니크해야됨
 
-	// 각 페이지에 스크립트 삽입
-	
-	$(function(){
-
-		MUI.event.setMobileSelect({
-			trigger: '#schedule-opt-rt', //유니크해야됨!
-			title: '대여일시', 
-			wheels: [
-						{data:[
-							{id:'', value:'시'}, 
-							{id:'01', value:'01시 '}, 
-							{id:'02', value:'02시 '}, 
-							{id:'03', value:'03시 '}, 
-							{id:'04', value:'04시 '}, 
-							{id:'05', value:'05시 '},
-							{id:'06', value:'06시 '},
-							{id:'07', value:'07시 '},
-							{id:'08', value:'08시 '},
-							{id:'09', value:'09시 '},
-							{id:'10', value:'10시 '},
-							{id:'11', value:'11시 '},
-							{id:'12', value:'12시 '}
-						]},
-						{data:[
-							{id:'', value:'분'}, 
-							{id:'0', value:'0분'}, 
-							{id:'10', value:'10분'}, 
-							{id:'20', value:'20분'}, 
-							{id:'30', value:'30분'}, 
-							{id:'40', value:'40분'},
-							{id:'50', value:'50분'}
-						]}
-					],
-			position:[2, 2], //Initialize positioning
-			cancelBtnText: '취소',
-			ensureBtnText: '확인',
-			callback:function(indexArr, data){
-				console.log(indexArr, data);
-			},
-			transitionEnd:function(indexArr, data){
-				console.log(indexArr, data);
-			},
-			cancel:function(indexArr, data){
-				console.log(indexArr, data);
-			},
-			onShow : function(e) {
-			},
-			onHide : function(e) {
-			}
-		});
-
+		// 각 페이지에 스크립트 삽입
 		
-	});
-</script>
+		$(function(){
+
+			MUI.event.setMobileSelect({
+				trigger: '#schedule-opt-rt', //유니크해야됨!
+				title: '대여일시', 
+				wheels: [
+							{data:[
+								{id:'', value:'시'}, 
+								{id:'01', value:'01시 '}, 
+								{id:'02', value:'02시 '}, 
+								{id:'03', value:'03시 '}, 
+								{id:'04', value:'04시 '}, 
+								{id:'05', value:'05시 '},
+								{id:'06', value:'06시 '},
+								{id:'07', value:'07시 '},
+								{id:'08', value:'08시 '},
+								{id:'09', value:'09시 '},
+								{id:'10', value:'10시 '},
+								{id:'11', value:'11시 '},
+								{id:'12', value:'12시 '}
+							]},
+							{data:[
+								{id:'', value:'분'}, 
+								{id:'0', value:'0분'}, 
+								{id:'10', value:'10분'}, 
+								{id:'20', value:'20분'}, 
+								{id:'30', value:'30분'}, 
+								{id:'40', value:'40분'},
+								{id:'50', value:'50분'}
+							]}
+						],
+				position:[2, 2], //Initialize positioning
+				cancelBtnText: '취소',
+				ensureBtnText: '확인',
+				callback:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				transitionEnd:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				cancel:function(indexArr, data){
+					console.log(indexArr, data);
+				},
+				onShow : function(e) {
+				},
+				onHide : function(e) {
+				}
+			});
+
+			
+		});
+	</script>
 
 	
 

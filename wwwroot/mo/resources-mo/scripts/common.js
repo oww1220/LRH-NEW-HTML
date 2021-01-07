@@ -1532,6 +1532,14 @@ if($('.driver-license .detail-radio').length) {
     });
 }
 
+//이용중관리 반납지점변경 탭전환
+if($('.layer-branch-change .tab-normal').length){
+
+    MUI.event.taps('.layer-branch-change .tab-normal', false, function(swap){
+        swap();
+    });
+}
+
 
 /* -------------------------------------------------마이페이지 end*/
 
