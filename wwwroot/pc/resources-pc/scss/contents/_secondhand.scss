@@ -1009,6 +1009,145 @@
                                 color:#999;
                                 margin-top:17px;
                             }
+
+                            .month_box_case {
+                                position: relative;
+                                &:before {
+                                    display: block;
+                                    content: '';
+                                    width: 100%;
+                                    width: calc(100% - 13px);
+                                    height: 3px;
+                                    background-color: #EBEBEB;
+                                    border-radius: 3px;
+                                    margin: 0 0 3px;
+                                }
+                                &:after {
+                                    content:'';
+                                    display: block;
+                                    width: 17px;
+                                    height: 17px;
+                                    background-color: #54585a;
+                                    border-radius: 100%;
+                                    border: 1px solid #000;
+                                    box-sizing: border-box;
+                                    box-shadow: 0 1px 5px rgba(96,97,112,0.3);
+                                    @include Position($top: -7px, $left: 0);
+                                    
+                                }
+                                .month-display {
+                                    @include Position($top: -50px, $left: 60%);
+                                    span {
+                                        font-size:14px;
+                                        display: block;
+                                        color:#ff404b;
+                                        padding:5px 16px;
+                                        border:1px solid #ff404b;
+                                        border-radius: 25px;
+                                    }
+                                    &:after {
+                                        content:'';
+                                        display: block;
+                                        margin:0 auto;
+                                        height: 20px;
+                                        width:1px;
+                                        background-color: #ff404b;
+                                    }
+
+                                    &.month-display-lt-0{
+                                        left:0%;
+                                    }
+                                    &.month-display-lt-25{
+                                        left:25%;   
+                                    }
+                                    &.month-display-lt-50{
+                                        left:50%;
+                                    }
+                                    &.month-display-lt-75{
+                                        left:65%;
+                                    }
+                                    &.month-display-lt-100{
+                                        left:80%;
+                                    }
+                                    
+                                }
+                                .month-box {
+                                    @include Position($top: 0, $right: 0);
+                                    width: 100%;
+                                    .ui-widget.ui-widget-content {
+                                        background-color: #EBEBEB;
+                                        border:0;
+                                        height: 3px;
+                                        margin: 0 8px 0 8px;
+                                        position: relative;
+                                        &:before {
+                                            display: block;
+                                            content: '';
+                                            @include Position($top:-1px, $left:0);
+                                            z-index: 2;
+                                            background-color: #fff;
+                                            width: 6px;
+                                            height: 6px;
+                                            border-radius: 100%;
+                                            margin-left: -2px;
+                                        }
+                                        &:after {
+                                            display: block;
+                                            content: '';
+                                            @include Position($top:-1px, $right:0);
+                                            z-index: 2;
+                                            background-color: #fff;
+                                            width: 6px;
+                                            height: 6px;
+                                            border-radius: 100%;
+                                            margin-left: -2px;
+                                        }
+                                    }
+                                    .ui-slider .ui-slider-range {
+                                        background-color: #f04040;
+                                        height: 3px;
+                                    }
+                                    .ui-slider-horizontal .ui-slider-handle {
+                                        width: 17px;
+                                        height: 17px;
+                                        background-color:rgba(255,64,75,.8);
+                                        border-radius: 100%;
+                                        top: -7px;
+                                        border: 1px solid #ff404b;
+                                        box-sizing: border-box;
+                                        box-shadow: 0 1px 5px rgba(96,97,112,0.3);
+                                        z-index: 3;
+                                        margin-left: -8px;
+                                        &:last-child {
+                                            background-color:#ff404b;
+                                        }
+                                        &::before {
+                                            content:'';
+                                            display: block;
+                                            width: 6px;
+                                            height: 6px;
+                                            background-color: #fff;
+                                            border-radius: 100%;
+                                            margin:35% auto;
+                                            border: 0;
+                                            box-shadow: 0 1px 5px rgba(96,97,112,0.3);
+                                            margin-left: 5px;
+                                        }
+                                    }
+                                }
+                                .month-txt {
+                                    @include Align-between;
+                                    margin-top: 17px;
+                                    span {
+                                        position: relative;
+                                        font-size:.95rem;
+                                        color:#999;
+                                        &.active {
+                                            @include Bold;
+                                        }
+                                    }
+                                }
+                            }
                         }			
                     }
 

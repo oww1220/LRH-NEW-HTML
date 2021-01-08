@@ -988,6 +988,35 @@ if($('.secondhand-container .tooltipToggle').length) {
     });
 }
 
+//필터 슬라이드
+if($('.secondhand-container .car-detail-sticky-wrap #slider-price').length) {
+
+    //필터 슬라이드 내 슬라이드
+    $('#slider-price').slider({
+        range: true,
+        min: 0,							// 최저
+        max: 60,						// 최고
+        orientation: 'horizontal',		// 바타입 수평
+        step: 12,						// 스텝
+        values: [12, 60],				// 디폴트 값
+        start: function(event, ui) {	// start
+        },
+        slide: function(event, ui) {	// mouse movement
+        },
+        stop: function(event, ui) {		// stop
+        },
+        change: function(event, ui) {
+            var min = ui.values[0],
+                max = ui.values[1];
+
+                console.log(ui, min, max);
+            // update form fields
+            $('#min_slider_price').val(min);
+            $('#max_slider_price').val(max);
+        }
+    });
+}
+
 //상담신청 - 차량 선택
 if($('.registerTab').length){
     MUI.event.taps('.registerTab', false, function(swap){

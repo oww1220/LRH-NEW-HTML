@@ -2996,12 +2996,17 @@
                     .detail-map-location{
                         @include Position();
                         cursor: pointer;
-                        display:none;
+                        //display:none;
                         .map-location-box{
                             @include Align-middle;
+                            width:1.7rem;
+                            height:1.7rem;
                         }
                         &.active{
-                            display:block;
+                            //display:block;
+                            i{
+                                @include Background($sprite:'ico-map-location-on', $size:100%, $position:center center);
+                            }
                         }
                     }
                     .detail-map-tit-wrap{
