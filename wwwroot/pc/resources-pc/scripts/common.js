@@ -1606,8 +1606,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
                 adaptiveHeight: true,
             });
         }
-        $('.slick-track').width('4000px');
-        $('.slick-slide').width('1760px');
+        //$('.slick-track').width('4000px');
+        //$('.slick-slide').width('1760px');
     });
 
     $('.header .draw-btn').mouseenter(function(e){
@@ -1623,8 +1623,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
                 adaptiveHeight: true,
             });
         }
-        $('.slick-track').width('4000px');
-        $('.slick-slide').width('1760px');
+        //$('.slick-track').width('4000px');
+        //$('.slick-slide').width('1760px');
     });
 
     //로딩효과
@@ -1645,6 +1645,59 @@ if($(".layer-iscroll").length){
         MUI.IScrollSingle.iscrollRefresh(null);
     });
 }
+
+//메인 슬라이드 수정
+if($('.main-visual-list .main-slide-wrap').length) {
+    MUI.slide.init($('.main-visual-list .main-slide-wrap'), 'slick', {
+            slidesToScroll: 1, 
+            infinite: true,
+            autoplay: true,
+            arrows: false,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: false,
+            dots: false,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+    });
+
+    var slideIdx = $(".main-img-wrap.slick-slide").length;  //슬라이드 갯수
+    var slideIdxR = $(".main-img-wrap.slick-slide").length - 2;  //실제 보여지는 슬라이드 갯수
+    var slideW = $('.main-img-wrap.slick-slide').outerWidth();  //슬라이드 한개의 넓이
+    var slideAllW = slideW * slideIdxR;  //실제 슬라이드 총 넓이
+    var result = slideW/slideAllW * 100;  //슬라이드 넓이 한개를 백분율로 환산
+    
+    $('.loading-ani').css('width',result);
+    
+    $('.main-visual-list .main-slide-wrap').on('afterChange',function(){
+        var curIdx = $(".slick-active").attr("data-slick-index"); //슬라이드 갯수
+       
+        curIdx = parseInt(curIdx);
+           $(".loading-ani").animate({
+              "width": (result * (curIdx+1))+"%"
+           },300);
+      });
+    
+    $('.main-visual-pager .play').click(function() {
+        $('.main-visual-list .main-slide-wrap').slick('slickPlay');
+    });
+    
+    $('.main-visual-pager .stop').click(function() {
+        $('.main-visual-list .main-slide-wrap').slick('slickPause');
+    });
+
+    /*
+    $('.header .draw-btn-s').each(function(i){
+		$(this).on({
+
+        });
+    });
+    */
+
+}
+
+
+
 
 });
 
@@ -1725,4 +1778,3 @@ $(function(){
     });
 
 });
-

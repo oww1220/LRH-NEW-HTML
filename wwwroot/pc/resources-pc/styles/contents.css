@@ -2911,6 +2911,7 @@ html, body {
 	   -moz-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
+	position: relative;
 	max-width: 1680px;
 	min-width: 1420px;
 	margin: 0 auto;
@@ -2921,13 +2922,17 @@ html, body {
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide {
-	width: 490px;
+	position: absolute;
+	left: 0;
+	width: 630px;
 	height: 100%;
-	padding: 100px 0 70px;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .swiper-pagination-wrap {
+	position: absolute;
 	height: 50px;
+	top: 100px;
+	left: 175px;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager {
@@ -2945,30 +2950,53 @@ html, body {
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
-	color: #fdb5bb;
+	color: #fff;
 	font-size: 14px;
 }
 
-.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .loadingbar {
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .loading-bar {
 	width: 128px;
 	height: 2px;
-	background: #fdb5bb;
 	margin: 0 40px 0 10px;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .loading-ani {
+	display: block;
+	height: 2px;
+	background: #fff;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager button {
 	width: 9px;
 	height: 9px;
-	background: url(../../resources-pc/images/icons/ico-main-stop.png) 0 0 no-repeat;
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
 	margin-left: 10px;
 }
 
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .stop {
+	background: url(../../resources-pc/images/icons/ico-main-stop.png) 0 0 no-repeat;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .play {
+	background: url(../../resources-pc/images/icons/ico-main-play.png) 0 0 no-repeat;
+}
+
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-list {
 	position: relative;
-	height: 500px;
+	width: 100%;
+	height: 100%;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-list .main-img-wrap {
+	width: 630px;
+	height: 720px;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-list .main-img-wrap img {
+	width: 100%;
+	height: auto;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-list .text-cont {
@@ -3028,6 +3056,7 @@ html, body {
 	width: 420px;
 	height: 100%;
 	background: #333;
+	z-index: 2;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking h2 {

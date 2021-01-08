@@ -59,6 +59,7 @@
     // 상단 비쥬얼 영역
     .main-visual-wrap {
         @include Align-middle-right;
+        position: relative;
         max-width: 1680px;
         min-width: 1420px;
         margin: 0 auto;
@@ -67,34 +68,57 @@
         background: #f94852;
         color: #fff;
         .main-visual-slide {
-            width: 490px;
+            position: absolute;
+            left: 0;
+            width: 630px;
             height: 100%;
-            padding: 100px 0 70px;
             .swiper-pagination-wrap {
+                position: absolute;
                 height: 50px;
+                top: 100px;
+                left: 175px;
             }
             .main-visual-pager {
                 @include Align-middle-left;
                 @include Bold;
-                color: #fdb5bb;
+                color: #fff;
                 font-size: 14px;
-                .loadingbar {
+                .loading-bar {
                     width: 128px;
                     height: 2px;
-                    background: #fdb5bb;
                     margin: 0 40px 0 10px;
+                }
+                .loading-ani{
+                    display: block;
+                    height: 2px;
+                    background: #fff;
                 }
                 button {
                     width: 9px;
                     height: 9px;
-                    background: url(../../resources-pc/images/icons/ico-main-stop.png) 0 0 no-repeat;
                     background-size: 100% auto;
                     margin-left: 10px;
+                }
+                .stop{
+                    background: url(../../resources-pc/images/icons/ico-main-stop.png) 0 0 no-repeat;
+                }
+                .play{
+                    background: url(../../resources-pc/images/icons/ico-main-play.png) 0 0 no-repeat;
                 }
             }
             .main-visual-list {
                 position: relative;
-                height: 500px;
+                width: 100%;
+                height: 100%;
+                .main-img-wrap{
+                    width: 630px;
+                    height: 720px;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                
                 .text-cont {
                     padding-top: 23px;
                     color: #fff;
@@ -137,6 +161,7 @@
             width: 420px;
             height: 100%;
             background: #333;
+            z-index: 2;
             h2 {
                 @include Bold;
                 font-size: 22px;
