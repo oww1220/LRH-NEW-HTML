@@ -1734,6 +1734,7 @@ $(function(){
                 if(i!=5){
                     $('.draw-toggle-cont').eq(i).fadeOut(400);
                     $('.draw-toggle-wrap-all').fadeOut(400);
+                    $('.draw-toggle-wrap-all').slideUp(400);
                 }else{
                     return false;
                 }
@@ -1741,7 +1742,8 @@ $(function(){
             focusin:	function(){
                 if(i!=5){
                     $('.draw-toggle-cont').eq(i).fadeOut(400);
-                    $('.draw-toggle-wrap-all').fadeOut(400);
+                    $('.draw-toggle-wrap-all').fadeOut(400)
+                    $('.draw-toggle-wrap-all').slideUp(400);;
                 }else{
                     return false;
                 }               
@@ -1767,14 +1769,48 @@ $(function(){
              mouseleave: function(){
                 $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
                 $('.draw-toggle-cont').eq(i).fadeOut(400);
+                $('.draw-toggle-wrap-all').fadeOut(400);
                 $('.bg-dimmed-h').css('display','none');
             },
             focusout: function(){
                 $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
                 $('.draw-toggle-cont').eq(i).fadeOut(400);
+                $('.draw-toggle-wrap-all').fadeOut(400);
                 $('.bg-dimmed-h').css('display','none');
             }
         });	
     });
+
+    /*영문 gnb 설정*/
+    $('.eng-header-nav .draw-btn-e').on({
+        mouseenter:	function(){
+            $('.draw-toggle-wrap-s').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-all').slideUp(400);
+        },
+        focusin:	function(){
+            $('.draw-toggle-wrap-s').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-all').slideUp(400);
+        },
+    });
+
+    $('.eng-header-nav .draw-btn-all-e').on({
+        mouseenter:	function(){
+            $('.draw-toggle-wrap-all').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-s').fadeOut(400);
+        },
+        focusin:	function(){
+            $('.draw-toggle-wrap-all').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-s').fadeOut(400);
+        },
+    });
+
 
 });
