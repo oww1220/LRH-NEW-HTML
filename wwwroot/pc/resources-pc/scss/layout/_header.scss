@@ -135,6 +135,9 @@
 			background-color: #fff;
 			border-bottom: 1px solid #EBEBEB;
 			z-index:99;
+			.draw-toggle-cont{
+				height: 955px;
+			}
 		}
 		.draw-toggle-cont {
 			display: none;
@@ -359,12 +362,50 @@
 	}
 	.header-nav {
 		.draw-toggle-cont {
+			.layer-gnb-s{
+				width:60% !important;
+				position: absolute;
+  				left: 360px;
+			}
 			.gnb-banner {
-				margin-right:195px;
+				margin-right:275px;
+			}
+		}
+		.nav-wrap{
+			>ul{
+				> li:nth-child(2){
+					margin-left:78px;
+				}
+				> li:nth-child(3){
+					margin-left:97px;
+				}
+				> li:nth-child(4){
+					margin-left:110px;
+				}
 			}
 		}
 	}
+	.draw-toggle-wrap-s{
+		.detail-layer-in:after{
+			@include Position($left:24% !important);
+		}
+		
+	}
+	.draw-toggle-wrap-all-e{
+		height: 400px !important;
+		.draw-toggle-cont{
+			height: 400px !important;
+			.detail-layer-in:after{
+				height: 270px;
+			}
+		}
+		
+	}
+	
+	
+	
 }
+
 
 // GNB 관련 dimm
 .bg-dimmed-h {

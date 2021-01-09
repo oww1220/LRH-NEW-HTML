@@ -988,6 +988,35 @@ if($('.secondhand-container .tooltipToggle').length) {
     });
 }
 
+//필터 슬라이드
+if($('.secondhand-container .car-detail-sticky-wrap #slider-price').length) {
+
+    //필터 슬라이드 내 슬라이드
+    $('#slider-price').slider({
+        range: true,
+        min: 0,							// 최저
+        max: 60,						// 최고
+        orientation: 'horizontal',		// 바타입 수평
+        step: 12,						// 스텝
+        values: [12, 60],				// 디폴트 값
+        start: function(event, ui) {	// start
+        },
+        slide: function(event, ui) {	// mouse movement
+        },
+        stop: function(event, ui) {		// stop
+        },
+        change: function(event, ui) {
+            var min = ui.values[0],
+                max = ui.values[1];
+
+                console.log(ui, min, max);
+            // update form fields
+            $('#min_slider_price').val(min);
+            $('#max_slider_price').val(max);
+        }
+    });
+}
+
 //상담신청 - 차량 선택
 if($('.registerTab').length){
     MUI.event.taps('.registerTab', false, function(swap){
@@ -1606,8 +1635,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
                 adaptiveHeight: true,
             });
         }
-        $('.slick-track').width('4000px');
-        $('.slick-slide').width('1760px');
+        //$('.slick-track').width('4000px');
+        //$('.slick-slide').width('1760px');
     });
 
     $('.header .draw-btn').mouseenter(function(e){
@@ -1623,8 +1652,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
                 adaptiveHeight: true,
             });
         }
-        $('.slick-track').width('4000px');
-        $('.slick-slide').width('1760px');
+        //$('.slick-track').width('4000px');
+        //$('.slick-slide').width('1760px');
     });
 
     //로딩효과
@@ -1634,8 +1663,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
         for(var i =0 ; i< inputs.length; i ++){ 
             var index = i +1;
             var time = ((inputs.length)-i ) * 100;
-            $(".progress-container label:nth-child("+ index+")").css( "-webkit-animation", "anim 5s "+time+"ms infinite ease-in-out" );
-            $(".progress-container label:nth-child("+index+")").css( "-animation", "anim 5s "+time+"ms infinite ease-in-out" );
+            $(".progress-container label:nth-child("+ index+")").css( "-webkit-animation", "anim 3.5s "+time+"ms infinite ease-in-out" );
+            $(".progress-container label:nth-child("+index+")").css( "-animation", "anim 3.5s "+time+"ms infinite ease-in-out" );
         }
     }
 
@@ -1645,6 +1674,59 @@ if($(".layer-iscroll").length){
         MUI.IScrollSingle.iscrollRefresh(null);
     });
 }
+
+//메인 슬라이드 수정
+if($('.main-visual-list .main-slide-wrap').length) {
+    MUI.slide.init($('.main-visual-list .main-slide-wrap'), 'slick', {
+            slidesToScroll: 1, 
+            infinite: true,
+            autoplay: true,
+            arrows: false,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: false,
+            dots: false,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+    });
+
+    var slideIdx = $(".main-img-wrap.slick-slide").length;  //슬라이드 갯수
+    var slideIdxR = $(".main-img-wrap.slick-slide").length - 2;  //실제 보여지는 슬라이드 갯수
+    var slideW = $('.main-img-wrap.slick-slide').outerWidth();  //슬라이드 한개의 넓이
+    var slideAllW = slideW * slideIdxR;  //실제 슬라이드 총 넓이
+    var result = slideW/slideAllW * 100;  //슬라이드 넓이 한개를 백분율로 환산
+    
+    $('.loading-ani').css('width',result);
+    
+    $('.main-visual-list .main-slide-wrap').on('afterChange',function(){
+        var curIdx = $(".slick-active").attr("data-slick-index"); //슬라이드 갯수
+       
+        curIdx = parseInt(curIdx);
+           $(".loading-ani").animate({
+              "width": (result * (curIdx+1))+"%"
+           },300);
+      });
+    
+    $('.main-visual-pager .play').click(function() {
+        $('.main-visual-list .main-slide-wrap').slick('slickPlay');
+    });
+    
+    $('.main-visual-pager .stop').click(function() {
+        $('.main-visual-list .main-slide-wrap').slick('slickPause');
+    });
+
+    /*
+    $('.header .draw-btn-s').each(function(i){
+		$(this).on({
+
+        });
+    });
+    */
+
+}
+
+
+
 
 });
 
@@ -1681,6 +1763,7 @@ $(function(){
                 if(i!=5){
                     $('.draw-toggle-cont').eq(i).fadeOut(400);
                     $('.draw-toggle-wrap-all').fadeOut(400);
+                    $('.draw-toggle-wrap-all').slideUp(400);
                 }else{
                     return false;
                 }
@@ -1688,7 +1771,8 @@ $(function(){
             focusin:	function(){
                 if(i!=5){
                     $('.draw-toggle-cont').eq(i).fadeOut(400);
-                    $('.draw-toggle-wrap-all').fadeOut(400);
+                    $('.draw-toggle-wrap-all').fadeOut(400)
+                    $('.draw-toggle-wrap-all').slideUp(400);;
                 }else{
                     return false;
                 }               
@@ -1714,15 +1798,48 @@ $(function(){
              mouseleave: function(){
                 $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
                 $('.draw-toggle-cont').eq(i).fadeOut(400);
+                $('.draw-toggle-wrap-all').fadeOut(400);
                 $('.bg-dimmed-h').css('display','none');
             },
             focusout: function(){
                 $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
                 $('.draw-toggle-cont').eq(i).fadeOut(400);
+                $('.draw-toggle-wrap-all').fadeOut(400);
                 $('.bg-dimmed-h').css('display','none');
             }
         });	
     });
 
-});
+    /*영문 gnb 설정*/
+    $('.eng-header-nav .draw-btn-e').on({
+        mouseenter:	function(){
+            $('.draw-toggle-wrap-s').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-all').slideUp(400);
+        },
+        focusin:	function(){
+            $('.draw-toggle-wrap-s').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-all').slideUp(400);
+        },
+    });
 
+    $('.eng-header-nav .draw-btn-all-e').on({
+        mouseenter:	function(){
+            $('.draw-toggle-wrap-all').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-s').fadeOut(400);
+        },
+        focusin:	function(){
+            $('.draw-toggle-wrap-all').slideDown(400);
+            $('.draw-toggle-cont').fadeIn(400);
+            $('.bg-dimmed-h').css('display','block');
+            $('.draw-toggle-wrap-s').fadeOut(400);
+        },
+    });
+
+
+});

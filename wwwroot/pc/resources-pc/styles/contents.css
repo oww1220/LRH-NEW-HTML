@@ -2915,6 +2915,7 @@ html, body {
 	   -moz-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
+	position: relative;
 	max-width: 1680px;
 	min-width: 1420px;
 	margin: 0 auto;
@@ -2925,13 +2926,17 @@ html, body {
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide {
-	width: 490px;
+	position: absolute;
+	left: 0;
+	width: 630px;
 	height: 100%;
-	padding: 100px 0 70px;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .swiper-pagination-wrap {
+	position: absolute;
 	height: 50px;
+	top: 100px;
+	left: 175px;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager {
@@ -2949,30 +2954,53 @@ html, body {
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
-	color: #fdb5bb;
+	color: #fff;
 	font-size: 14px;
 }
 
-.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .loadingbar {
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .loading-bar {
 	width: 128px;
 	height: 2px;
-	background: #fdb5bb;
 	margin: 0 40px 0 10px;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .loading-ani {
+	display: block;
+	height: 2px;
+	background: #fff;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager button {
 	width: 9px;
 	height: 9px;
-	background: url(../../resources-pc/images/icons/ico-main-stop.png) 0 0 no-repeat;
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
 	margin-left: 10px;
 }
 
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .stop {
+	background: url(../../resources-pc/images/icons/ico-main-stop.png) 0 0 no-repeat;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-pager .play {
+	background: url(../../resources-pc/images/icons/ico-main-play.png) 0 0 no-repeat;
+}
+
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-list {
 	position: relative;
-	height: 500px;
+	width: 100%;
+	height: 100%;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-list .main-img-wrap {
+	width: 630px;
+	height: 720px;
+}
+
+.main-wrap .main-visual-wrap .main-visual-slide .main-visual-list .main-img-wrap img {
+	width: 100%;
+	height: auto;
 }
 
 .main-wrap .main-visual-wrap .main-visual-slide .main-visual-list .text-cont {
@@ -3032,6 +3060,7 @@ html, body {
 	width: 420px;
 	height: 100%;
 	background: #333;
+	z-index: 2;
 }
 
 .main-wrap .main-visual-wrap .section-visual-booking h2 {
@@ -8677,6 +8706,8 @@ html, body {
 	bottom: 0;
 	left: 0;
 	margin: auto;
+	width: 100%;
+	height: 100%;
 }
 
 .secondhand-container .sort-section .result-area .result-cont .item .img-box .tooltipOpenBtn {
@@ -9647,6 +9678,216 @@ html, body {
 	margin-top: 17px;
 }
 
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case {
+	position: relative;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case:before {
+	display: block;
+	content: '';
+	width: 100%;
+	width: -webkit-calc(100% - 13px);
+	width: -moz-calc(100% - 13px);
+	width: calc(100% - 13px);
+	height: 3px;
+	background-color: #EBEBEB;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	margin: 0 0 3px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case:after {
+	content: '';
+	display: block;
+	width: 17px;
+	height: 17px;
+	background-color: #54585a;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	border: 1px solid #000;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	   -moz-box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	        box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	position: absolute;
+	top: -7px;
+	left: 0;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display {
+	position: absolute;
+	top: -50px;
+	left: 60%;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display span {
+	font-size: 14px;
+	display: block;
+	color: #ff404b;
+	padding: 5px 16px;
+	border: 1px solid #ff404b;
+	-webkit-border-radius: 25px;
+	   -moz-border-radius: 25px;
+	        border-radius: 25px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display:after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	height: 20px;
+	width: 1px;
+	background-color: #ff404b;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display.month-display-lt-0 {
+	left: 0%;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display.month-display-lt-25 {
+	left: 25%;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display.month-display-lt-50 {
+	left: 50%;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display.month-display-lt-75 {
+	left: 65%;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-display.month-display-lt-100 {
+	left: 80%;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box .ui-widget.ui-widget-content {
+	background-color: #EBEBEB;
+	border: 0;
+	height: 3px;
+	margin: 0 8px 0 8px;
+	position: relative;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box .ui-widget.ui-widget-content:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 0;
+	z-index: 2;
+	background-color: #fff;
+	width: 6px;
+	height: 6px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	margin-left: -2px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box .ui-widget.ui-widget-content:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: -1px;
+	right: 0;
+	z-index: 2;
+	background-color: #fff;
+	width: 6px;
+	height: 6px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	margin-left: -2px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box .ui-slider .ui-slider-range {
+	background-color: #f04040;
+	height: 3px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box .ui-slider-horizontal .ui-slider-handle {
+	width: 17px;
+	height: 17px;
+	background-color: rgba(255, 64, 75, 0.8);
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	top: -7px;
+	border: 1px solid #ff404b;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	   -moz-box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	        box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	z-index: 3;
+	margin-left: -8px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box .ui-slider-horizontal .ui-slider-handle:last-child {
+	background-color: #ff404b;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-box .ui-slider-horizontal .ui-slider-handle::before {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	margin: 35% auto;
+	border: 0;
+	-webkit-box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	   -moz-box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	        box-shadow: 0 1px 5px rgba(96, 97, 112, 0.3);
+	margin-left: 5px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-txt {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 17px;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-txt span {
+	position: relative;
+	font-size: .95rem;
+	color: #999;
+}
+
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .price-cont .gauge-wrap .month_box_case .month-txt span.active {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
 .secondhand-container .car-detail-info-section .car-detail-sticky-wrap .car-detail-sticky .contractArea .btn-box {
 	padding: 30px;
 	margin: 0 -20px;
@@ -10430,9 +10671,31 @@ html, body {
 	padding: 40px 0 10px;
 }
 
-.secondhand-container .imgUpload-section .imgUpload-list-box > .tit {
+.secondhand-container .imgUpload-section .imgUpload-list-box .list-btn-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-bottom: 40px;
+}
+
+.secondhand-container .imgUpload-section .imgUpload-list-box .list-btn-box .tit {
 	text-align: center;
+}
+
+.secondhand-container .imgUpload-section .imgUpload-list-box .list-btn-box .btn-file-wrap input {
+	display: none;
 }
 
 .secondhand-container .imgUpload-section .imgUpload-list-box .imgUpload-item, .secondhand-container .imgUpload-section .imgUpload-list-box .upload-btn {

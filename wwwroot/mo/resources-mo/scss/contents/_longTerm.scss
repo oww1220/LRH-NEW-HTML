@@ -33,9 +33,76 @@
                     padding: 0 1.7rem;
                 }
                 .longTerm-membership-tab{
-                    padding:1.5rem 0 4.2rem 0;
-                    .membership-txt-box:last-child{
+                    padding:1.5rem 0 0 0;
+                    //padding:1.5rem 0 4.2rem 0;
+                    // .membership-txt-box:last-child{
+                    //     border-bottom:0;
+                    // }
+                    .membership-txt-box{
                         border-bottom:0;
+                        padding: 2.6rem 0 0 0;
+                        .box-item{
+                            .box-item-tit-box{
+                                border-radius: .5rem;
+                                background-color: #fff9f9;
+                                @include Align-middle-column;
+                                padding:1.7rem 0 1.3rem 0;
+                            }
+                            .tit{
+                                @include Bold;
+                                font-size:1.9rem;
+                                color:#8f9191;
+                            }
+                            .txt{
+                                @include Regular;
+                                padding:.7rem 0 0 0;
+                            }
+                            .straight-align{
+                                padding:2.6rem 0 3.4rem 0;
+                                & > li{
+                                    @include Align-middle-column;
+                                    padding:0;
+                                    p{
+                                        padding: .9rem 0 0 0;
+                                    }
+                                }
+                            }
+                        }
+                        &.membership-store-box{
+                            background-color: #f8f8f8;
+                            padding:3.4rem 0;
+                            margin:0 -1.7rem;
+                            .tit-store{
+                                padding:0 1.7rem;
+                                @include Align-left-column;
+                                @include Regular;
+                                color:#8f9191;
+                                font-size:1.2rem;
+                                b{
+                                    @include Bold;
+                                    font-size: 1.6rem;
+                                    padding-top:.7rem;
+                                }
+                            }
+                            .list-type-col2{
+                                padding-top:1.1rem;
+                                & > li{
+                                    padding:0;
+                                }
+                                & > li:first-child{
+                                    .inner{
+                                        margin-left: 1.7rem;
+                                        align-items: flex-start;
+                                    }
+                                }
+                                & > li:last-child{
+                                    .inner{
+                                        margin-right: 1.7rem;
+                                        align-items: flex-end;
+                                    }
+                                }
+                            }
+                        }
                     }
                     &.longTerm-benefit-tab{
                         padding:0 0 4.3rem 0;

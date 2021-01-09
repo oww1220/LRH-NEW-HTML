@@ -1530,10 +1530,13 @@ body.fixed {
 			}
 			//달력 풀팝업
 			&.layer-schedule {
+				overflow:hidden;
 				.full-cont{
 					padding:0;
+					position: relative;
 					.layer-infos{
 						padding:0;
+						position: relative;
 					}
 				}
 				.schedule-wrap{
@@ -1693,6 +1696,9 @@ body.fixed {
 							}
 						}
 					}
+				}
+				.layer-schedule-foot{
+					@include Position($position:sticky, $bottom: 0, $left: 0, $right: 0);
 				}
 			}
 			.btn-group{
@@ -2613,6 +2619,21 @@ body.fixed {
 								border-radius: .5rem;
 								font-size:1.6rem;
 								@include Bold;
+							}
+						}
+						.btn-addphoto-wrap{
+							padding-top:1.3rem;
+							input{
+								display:none;
+							}
+							label{
+								width: 100%;
+								background-color: #54585a;
+								color:#fff;
+								border-radius: .5rem;
+								font-size:1.6rem;
+								@include Bold;
+								@include Align-middle;
 							}
 						}
 					}

@@ -1830,7 +1830,7 @@
                                                     color: #ddd;
                                                 }
                                             }
-                                            &.day{
+                                            &.start.end{
                                                 .btn{
                                                     width:50%;
                                                     background-color: #ff404b;
@@ -3426,12 +3426,17 @@
                     .detail-map-location{
                         @include Position();
                         cursor: pointer;
-                        display:none;
+                        //display:none;
                         .map-location-box{
                             @include Align-middle;
+                            width:1.7rem;
+                            height:1.7rem;
                         }
                         &.active{
-                            display:block;
+                            //display:block;
+                            i{
+                                @include Background($sprite:'ico-map-location-on', $size:100%, $position:center center);
+                            }
                         }
                     }
                     .detail-map-tit-wrap{
@@ -3836,7 +3841,7 @@
                                                 color: #ddd;
                                             }
                                         }
-                                        &.day{
+                                        &.start.end{
                                             .btn{
                                                 width:50%;
                                                 background-color: #ff404b;
@@ -3880,6 +3885,9 @@
                             .layer-time-open-link{
                                 @include Align-middle;
                                 align-items: baseline;
+                                font-size:1.6rem;
+                                @include Bold;
+                                margin-top:.9rem;
                                 i{
                                     margin-left:.7rem;
                                 }

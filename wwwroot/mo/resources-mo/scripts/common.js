@@ -1602,8 +1602,8 @@ if($('.eng-shor-wrap').length){
         for(var i =0 ; i< inputs.length; i ++){ 
             var index = i +1;
             var time = ((inputs.length)-i ) * 100;
-            $(".progress-container label:nth-child("+ index+")").css( "-webkit-animation", "anim 5s "+time+"ms infinite ease-in-out" );
-            $(".progress-container label:nth-child("+index+")").css( "-animation", "anim 5s "+time+"ms infinite ease-in-out" );
+            $(".progress-container label:nth-child("+ index+")").css( "-webkit-animation", "anim 3.5s "+time+"ms infinite ease-in-out" );
+            $(".progress-container label:nth-child("+index+")").css( "-animation", "anim 3.5s "+time+"ms infinite ease-in-out" );
         }
     }
 
