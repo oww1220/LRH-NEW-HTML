@@ -2187,21 +2187,19 @@ html, body {
 .agree-area .agree-body .agree-body-cont {
 	font-size: 14px;
 	color: #54585a;
-}
+	height: 150px;
+	overflow-y: scroll;
+	/* &.type2{
+				margin:0;
 
-.agree-area .agree-body .agree-body-cont.type2 {
-	margin: 0;
-	background-color: transparent;
-	border-bottom: 1px solid #e7e7e7;
-}
+				 background-color:transparent;
+				 border-bottom:1px solid $border-grey;
+			}
+			+ .lst{
+				margin-top:20px;
 
-.agree-area .agree-body .agree-body-cont + .lst {
-	margin-top: 20px;
-}
-
-.agree-area .agree-body .agree-body-cont + .lst + .agree-body-tit {
-	border: none;
-	margin-top: 30px;
+				+.agree-body-tit{border:none; margin-top:30px;}
+			} */
 }
 
 .agree-area .agree-body .btnToggle {
@@ -25061,6 +25059,7 @@ html, body {
 	margin: 0;
 	font-size: 14px;
 	line-height: 1.5;
+	color: #54585a;
 }
 
 .provisionWrap * {
@@ -25069,12 +25068,171 @@ html, body {
 	        box-sizing: border-box;
 }
 
-.provisionWrap h1 {
+.provisionWrap h1, .provisionWrap h2, .provisionWrap h3 {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
+	color: #2f2f2f;
+}
+
+.provisionWrap h1 {
 	font-size: 18px;
+	padding-bottom: 30px;
+}
+
+.provisionWrap h2, .provisionWrap h3 {
+	font-size: 18px;
+	padding: 30px 0 20px 0;
+}
+
+.provisionWrap p {
+	line-height: 1.5;
+}
+
+.provisionWrap p.tit {
+	padding-bottom: 20px;
+}
+
+.provisionWrap .mt20 {
+	margin-top: 20px;
+}
+
+.provisionWrap .t-notice {
+	margin-top: 20px;
+	margin-left: 18px;
+	text-indent: -15px;
+	word-break: break-all;
+	color: #ed1c24;
+}
+
+.provisionWrap .t-notice:before {
+	content: '';
+	display: inline-block;
+	width: 3px;
+	height: 3px;
+	background: #ed1c24;
+	margin-right: 10px;
+	margin-top: 10px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+.provisionWrap .agree-list-type1 li {
+	padding-bottom: 20px;
+}
+
+.provisionWrap .agree-list-type1 li .agree-list-type2 {
+	margin-top: 10px;
+}
+
+.provisionWrap .agree-list-type1 li .agree-list-type2 li {
+	padding-bottom: 10px;
+}
+
+.provisionWrap .agree-list-type1 li .agree-list-type2 li:last-child {
+	padding-bottom: 0;
+}
+
+.provisionWrap .agree-list-type2 {
+	margin-left: 18px;
+}
+
+.provisionWrap .agree-list-type2 li {
+	text-indent: -15px;
+	word-break: break-all;
+}
+
+.provisionWrap .agree-list-type2 li p {
+	text-indent: -2px;
+}
+
+.provisionWrap .agree-list-type2 li strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.provisionWrap .agree-list-type2 li:before {
+	content: '';
+	display: inline-block;
+	width: 3px;
+	height: 3px;
+	background: #929494;
+	margin-right: 10px;
+	margin-top: 10px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+.provisionWrap .agree-list-type2 li.texRed:before {
+	background: #ed1c24;
+}
+
+.provisionWrap .agree-form {
+	margin-top: 30px;
+}
+
+.provisionWrap .agree-form strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.provisionWrap .agree-form .agree-form-box {
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	padding: 0 0 20px 0;
+	margin-top: 20px;
+}
+
+.provisionWrap .agree-form .agree-form-box h4 {
+	background: #8f9191;
+	color: #fff;
+	font-size: 18px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	padding: 20px;
+}
+
+.provisionWrap .agree-form .agree-form-box + .agree-form-box {
+	margin-top: 30px;
+}
+
+.provisionWrap .form-cont .row {
+	padding: 20px 20px 0;
+	margin-bottom: 0;
+}
+
+.provisionWrap .form-cont .row.type2 .input-tit {
+	width: 100px;
+	-webkit-flex-basis: 100px;
+	    -ms-flex-preferred-size: 100px;
+	        flex-basis: 100px;
+}
+
+.provisionWrap .form-cont .row.type2 .type-left {
+	position: relative;
+}
+
+.provisionWrap .form-cont .row.type2 .type-left .left-txt {
+	position: absolute;
+	top: 28%;
+	right: 15px;
+	height: 35px;
+	color: #999;
 }
 
 .printMap-header {
