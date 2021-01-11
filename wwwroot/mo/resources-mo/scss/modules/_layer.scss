@@ -629,6 +629,9 @@ body.fixed {
 				padding: 1rem 1.7rem 2.6rem;
 			}
 		}
+		.fixed-btnBottom{
+			@include Position( $position:sticky, $bottom: 0, $left: 0);
+		}
 
 		//주소 풀팝업
 		&.layer-address {
@@ -4088,6 +4091,97 @@ body.fixed {
 				}
 			}
 		}
+
+
+		//중고차 상세 옵션 팝업
+		&.type-detail-option {
+			.pop-top {
+				@include Background($sprite:'pop-top-bg-rectangle', $size:100%, $position:center center, $path:'bgs');
+				@include Align-between;
+				height: 5.5rem;
+				padding:0 2.1rem;
+				border-radius:1rem 1rem 0 0;
+				h4 {
+					font-size: 1.6rem;
+					color:#fff;
+					@include Bold;
+				}
+				.layer-pop-close {
+					margin-top: 0;
+				}
+			}
+			.pop-inner {
+				overflow: hidden;
+				background-color:#fff;
+				position: relative;
+				margin:0;
+				border-radius:0 0 1rem 1rem;
+			}
+			.pop-cont {
+				padding:3.4rem 2.1rem 2.6rem;
+				.detail-layout {
+					position: relative;
+					.detail-view-img{
+						margin:0 auto;
+						width: 21rem;
+						img{
+							width: 100%;
+						}
+					}
+					.detail-view-top {
+						background-color: #fff;
+						padding:2.6rem 0 1.7rem;
+						.normal{
+							color:#2B2B2B;
+							& > strong{
+								font-size:1.8rem;
+								@include Bold;
+							}
+						}
+					}
+					.detail-layer-cont-terms{
+						background-color: #fff;
+						padding-bottom:2.1rem;
+						& > .table{
+							border-top:1px solid #EBEBEB;
+							border-bottom:1px solid #EBEBEB;
+							padding-bottom:1.7rem;
+							& > table tr th{
+								border-top:0;
+								@include Bold;
+								@include Align-middle-left;
+								color:#2f2f2f;
+								padding:1.7rem 0 0;
+								& > i {
+									margin-right:.4rem;
+								}
+							}
+							& > table tr td{
+								border-top:0;
+								text-align: right;
+								padding-right:0;
+								padding:1.7rem 0 0;
+								& > b{
+									@include Normal;
+									color:#54585a;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+					.detail-layer-submit {
+						button {
+							margin:0 auto;
+							width:8rem;
+							height:3.9rem;
+							color:#54585a;
+							border-color: #d2d2d2;
+							border-radius: 1rem;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -4113,6 +4207,7 @@ body.fixed {
 			position: relative;
 			background-color: #fff;
 			border: 1px solid #d2d2d2;
+			width:100%;
 		}
 		.tooltip-cont {
 			
@@ -4136,16 +4231,72 @@ body.fixed {
 		}
 
 	}
-	.layer-tooltip:after{
-		display:inline-block;
-		content: "";
-		@include Background($sprite:'ico-arrow-04', $size:100% auto, $position:center center);
-		width: 1.1rem;
-		height: .7rem;
-		@include Position($top:1px, $left:50%);
-		transform: translateX(100%);
-	}
+	// .layer-tooltip:after{
+	// 	display:inline-block;
+	// 	content: "";
+	// 	@include Background($sprite:'ico-arrow-04', $size:100% auto, $position:center center);
+	// 	width: 1.1rem;
+	// 	height: .7rem;
+	// 	@include Position($top:1px, $left:50%);
+	// 	transform: translateX(100%);
+	// }
 	// &.active{
 	// 	@include Vertical-inline;
 	// }
+	&.tooltip-box-option{
+		width:calc(18rem - 1.7rem);
+		transform: translateX(-50%);
+		z-index: 10;
+		.layer-tooltip{
+			padding-top:0;
+			.layer-info{
+				@include Align-left-column;
+				padding:.9rem;
+				.tooltip-txt{
+					width:100%;
+				}
+				.tooltip-tit{
+					font-size:1.1rem;
+					@include Regular;
+					text-align: left;
+				}
+				.tooltip-txt-list{
+					@include Align-box-left;
+					padding-top:.9rem;
+					b{
+						font-size:1rem;
+						@include Bold;
+						text-align: left;
+					}
+					.guide{
+						padding-left:0;
+						text-indent: 0;
+						margin: .4rem 0 0 0;
+						li{
+							font-size: 1rem;
+							text-align: left;
+						}
+						.red_txt{
+							font-size:.8rem;
+						}
+					}
+				}
+				.tooltip-txt + .tooltip-txt{
+					padding-top:.9rem;
+				}
+			}
+		}
+		.layer-tooltip:after{
+			display:none;
+		}
+		&.tooltip-box-option-lt{
+			transform: translateX(0);
+		}
+		&.tooltip-box-option-top{
+			transform: translate(20%,-115%);
+		}
+		&.tooltip-box-option-top-02{
+			transform: translate(20%,-130%);
+		}
+	}
 }

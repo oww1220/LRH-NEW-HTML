@@ -1849,6 +1849,10 @@
                                         color:#54585a;
                                         text-align:center;
                                         padding:1.4rem 0;
+                                        position: relative;
+                                        .btn-group{
+                                            @include Inline-align-top;
+                                        }
                                         button{
                                             padding-left:.5rem;
                                         }
@@ -2552,6 +2556,7 @@
                         .summary-table-wrap{
                             border:0 none;
                             border-radius: 0;
+                            overflow: visible;
                         }
                         h3{
                             margin:0;
@@ -2578,18 +2583,36 @@
                                 @include Bold;
                             }
                             ul{
+                                @include Align-top-left;
                                 li{
-                                    @include Align-middle-left;
+                                    @include Align-middle-column;
                                     padding:1.3rem 0;
+                                    position: relative;
+                                    button{
+                                        @include Align-middle-column;
+                                        line-height: 1.5;
+                                    }
                                     .inner{
                                         margin-top:0;
                                         @include Regular;
                                         font-size:1.1rem;
-                                        @include Align-middle;
+                                        @include Align-middle-column;
                                         color:#54585a;
+                                        text-align: center;
+                                        & > div{
+                                            height:2.6rem;
+                                            margin-bottom:.9rem;
+                                        }
+                                        &.off{
+                                            span{
+                                                color:#ddd;
+                                            }
+                                        }
                                     }
                                     .icon{
-                                        margin-right:.9rem;
+                                        //margin-right:.9rem;
+                                        width:2.6rem;
+                                        height:2.6rem;
                                     }
                                 }
                             }
