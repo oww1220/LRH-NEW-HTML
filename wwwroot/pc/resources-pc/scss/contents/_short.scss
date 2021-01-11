@@ -230,84 +230,88 @@
             }
         }
     }
-
-    //차량 상세 : 201116 디자인 변경으로 수정될 예정
-    .car-detail-section{     
-        @include topSectMg;        
-        background: rgb(245,245,245);
-        background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
-
-        .car-detail-inner{
-            padding-top:130px;
-            background: rgb(245,245,245);
-            background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 42%, rgba(255,255,255,1) 42%, rgba(255,255,255,1) 100%);
-            
-            .info-box{margin-top:160px;}
-        }
-    }
-    .car-detail-inner{
-        @include Align-box;
-
-        .col{
-            width:680px;
-            padding-top:80px;
-            .info-box{padding-right:120px; color:#54585a; font-size:14px;}
-        }
-        .col2{
+    
+    //차량 상세
+    .car-infos{
+        width:1200px;
+        .car-infos-row, .car-infos-row2{
+            @include Align-between-top;
+        }               
+        .car-infos-col2{
+            flex:none;
             width:520px;
-            padding-top:0;
+            flex-basis: 520px;
+        }
+        .img-box{
+            width:600px;
 
-            .name{
-                @include Bold;
-                font-size:36px;
-                height:80px;                    
+            + .lst{margin-top:40px;}
+        }
+
+        .car-infos-col2{            
+            .tit-header{
+                @include Align-between-top;
+
+                .tit{
+                    @include Bold;
+                    font-size:32px;
+                }
+
+                &.share-type{
+                    position:relative;
+                    padding-right:60px;
+                }
             }
             .spec-box{
-                min-height:232px;
-                padding-bottom:30px;
-                margin-bottom:10px;
-                border-bottom:1px solid #e7e7e7;
+                margin-top:50px;
+                padding-bottom:60px;
 
-                .row{
+                .spec-row{
                     @include Align-middle-left;
-                    margin-bottom:30px;
-                    padding:0;
-                }
-                dt{ 
-                    @include Align-middle;
-                    justify-content: flex-start;
-                    @include Bold;
-                    width:210px;
-                    box-sizing: border-box;
+                    font-size:14px;
 
-                    .icon{
-                        width:32px;                            
+                    dt{
+                        @include Bold;
+                        @include Align-middle-left;
+                        flex:none;
+                        width:214px;
+                        flex-basis: 214px;                        
+
+                        .icon{margin-right:10px;}
                     }
+                    dd{
+                        color:#54585a;
+                    }
+                    + .spec-row{margin-top:30px;}
                 }
             }
             .price-box{
-                @include Align-box;
-                @include Bold;
-                padding:40px 0;
-                font-size:20px;
+                padding:50px 0;
+                border-top:1px solid $border-grey;
+                
+                .price-row{
+                    @include Bold;
+                    @include Align-between-base;
 
-                .price{
-                    font-size:26px;
-                    color:#da291c;
-                    margin-left:auto;
+                    .price{
+                        color: $txt-red;
+                        font-size:26px;
+                    }
+
+                    + .price-row{margin-top:20px;}
                 }
             }
             .btn-box{
-                padding:20px 0;
-                .btn{width:100%;}
-                .desabled{
-                    color:#bbb;
-                    background-color:#f5f5f5;
+                button, a{
+                    @include Bold;
+                    height:80px; 
+                    font-size:26px;
+                    @include roundBox;
                 }
-            }                
+            }
         }
-        
     }
+    
 
     //상담 신청
     .section-top{
@@ -346,83 +350,37 @@
             }
         }
     }
-    .car-detail-area{
-        .row-type2{
-            @include Align-box;
-
-            > .col{
-                width:680px;
-                padding:40px;
-                box-sizing:border-box;
+    .section-form{
+        .car-infos{
+            .img-box{
+                width:420px;
             }
-            > .col2{
-                width:520px;
-                padding-right:20px;
-                box-sizing:border-box;
-            }
-
-            &.v2{border-top:1px solid #e7e7e7;}
-        }
-        
-        .img-box{
-            @include Align-middle
-        }
-        
-        .descri-box{
-
-            .top-tit{
-                @include Bold;
-                font-size:32px;
-                margin-bottom:50px;
-            }
-
-            .spec-box{
-                min-height:230px;
-                padding-bottom:30px;
-
-                .row{
-                    @include Align-middle-left;
-                    margin-bottom:30px;
+            .car-infos-col2 {
+                .price-box{
+                    border:none;
+                    padding:0;
                 }
-                dt{ 
+            }
+            .car-infos-row, .car-infos-row2{padding:40px 0;}
+            .car-infos-row{
+                .car-infos-col{
                     @include Align-middle;
-                    justify-content: flex-start;
-                    @include Bold;
-                    width:210px;
-                    box-sizing: border-box;
-
-                    .icon{
-                        width:32px;                            
-                    }
+                    align-items: top;
+                    flex:none;
+                    width:600px;
+                    flex-basis: 600px;
                 }
             }
-            
-        }
+            .car-infos-row2{
+                border-top:1px solid $border-grey;
 
-        .price-box{
-            padding:40px 0;
-
-            > .row{
-                @include Align-box;
-                @include Bold;
-                font-size:20px;
-                margin-bottom:20px;
-                align-items: baseline;
-
-                .price{
-                    color:#da291c;
-                    margin-left:auto;
-                    font-size:26px;
+                .car-infos-col{
+                    .lst{margin-left:40px;}
                 }
-
-                &:last-child{margin-bottom:0;}
             }
-        }
-
-        .info-box{
-            font-size:14px;
         }
     }
+    
     .delivery-cont{
         > .row{width:700px; margin:0 auto;}
         .delivery-box{
@@ -471,6 +429,10 @@
     }
     .section-format{
         .format-area{
+            flex:none;
+            width:540px;
+            flex-basis: 540px;
+
             .btn{
                 display: inline-block;
                 width: auto;
@@ -478,10 +440,11 @@
             }
         }
         .img-box{
-            width:520px;
-            margin-left:50px;
+            flex:none;
+            width:420px;
+            flex-basis: 420px;
+            margin-left:80px;
             box-sizing: border-box;
-            img {width: 520px; height: 220px;}
         }
     }
     .talk-section{

@@ -973,6 +973,15 @@ if($('.secondhand-container .carInfoAccor').length) {
         logic();
     });
 }
+if($('.secondhand-container .carInfoToggleCon').length) {
+    MUI.event.toggle('.secondhand-container .carInfoTooltipBtn', '.secondhand-container .carInfoTooltipCont', false, function(logic, layer) {
+        logic();
+
+        $('.tooltipClose').on('click', function(){
+            $(this).parents('.carInfoTooltipCont').fadeOut();            
+        });
+    });
+}
 
 //상담하기 - 월 대여료
 if($('.secondhand-container .carInfoAccor').length) {
