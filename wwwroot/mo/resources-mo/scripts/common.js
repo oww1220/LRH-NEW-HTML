@@ -1073,6 +1073,20 @@ if($('.footerMenu-wrap .tab-normal').length){
         });
     }
 
+    //신차장 메인 배너 롤링
+    if($('.longTerm-wrap .life-event-lists04').length) {
+        MUI.slide.init('.longTerm-wrap .life-event-lists04','swiper', {
+            loop: true,
+            //autoHeight: true,
+            // pagination: {
+            //     el: '.life-event-pagination03',
+            // },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    }
+
     //신차장 메인 롤링 슬라이드 팝업
     if($('.layer-galleryThumbs-longTerm').length) {
         MUI.layer.openClick('.layer-galleryThumbs-open', LAYER_DIM, LAYER_PARENT, false, function(show){
