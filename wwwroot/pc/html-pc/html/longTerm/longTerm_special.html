@@ -128,6 +128,9 @@
 					<div class="tab-cont longTermSpecialTab">
 						<div class="tab-cont-inner">							
 							개인장기렌터카
+							<div class="btn-box">
+								<button type="button" class="btn btn-black layer-infos-open" data-layer="layerCounsel-open">간편 견적 신청</button>
+							</div>
 						</div>
 						<div class="tab-cont-inner" style="display:none;">
 							법인장기렌터카
@@ -159,7 +162,170 @@
 	</aside>
 	<!--//floating_zone 컴포넌트-->
 
-
+	<!--  등록카드 정보 입력 레이어 -->
+	<div class="layer-wrap layer-popup layer-infos layerCounsel-open">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>간편 견적 신청</h4>
+				<button type="button" class="layer-popup-close" data-layer="layerCounsel-open">
+					<span class="icon pop-close">닫기 버튼</span>
+				</button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					<div class="form-cont between-type">
+						<div class="form-row">
+							<label for="" class="input-tit">이름<span class="txt-red">*</span></label>
+							<div class="input-cont">
+								<div class="inputT">
+									<input type="text" id="" placeholder="">
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="" class="input-tit">연락처<span class="txt-red">*</span></label>
+							<div class="input-cont">
+								<div class="inputT">
+									<input type="text" id="" placeholder="">
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="" class="input-tit">지역<span class="txt-red">*</span></label>
+							<div class="input-cont">
+								<select class="selectbox" id="" value="">
+									<option value="">지역(시/도) 선택</option>
+									<option value="">서울</option>
+									<option value="">경기/강원</option>
+									<option value="">충청/전라/경상</option>
+									<option value="">제주</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="" class="input-tit">차량정보<span class="txt-red">*</span></label>
+							<div class="input-cont">
+								<div class="inputT">
+									<input type="text" id="" placeholder="">
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="" class="input-tit">구분<span class="txt-red">*</span></label>
+							<div class="input-cont detail-radio">
+								<ul class="radio-area detail-radio-box">
+									<li>
+										<div class="radio-icon-box">
+											<input type="radio" id="radio03" name="radio2" checked="">
+											<label for="radio03">개인</label>
+										</div>
+									</li>
+									<li>
+										<div class="radio-icon-box">
+											<input type="radio" id="radio04" name="radio2">
+											<label for="radio04">법인</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="agree-section">
+						<div class="form-header">
+							<h3 class="tit-size-mid">약관동의</h3>
+						</div>
+						<div class="form-cont agree-area agreeAccor">
+							<div class="row">
+								<div class="agree-header">
+									<div class="agree-header-top">
+										<div class="chk-icon-box type-circle">
+											<input type="checkbox" id="agreeTest01">	
+											<label for="agreeTest01">											
+												전체동의
+											</label>										
+										</div>
+									</div>
+								</div>
+								<div class="agree-body">
+									<ul>
+										<li>
+											<div class="agree-body-header">
+												<div class="chk-icon-box">
+													<input type="checkbox" id="agreeTest02">	
+													<label for="agreeTest02">											
+														개인정보 수집 및 이용안내 동의사항 (필수)
+													</label>										
+												</div>
+												<button type="button" class="btnToggle" data-target="toggleCont01" data-on="true" data-siblings="false">
+													자세히
+												</button>
+											</div>
+											<div class="agree-body-cont toggleCont toggleCont01">
+												내용
+											</div>
+										</li>
+										<li>
+											<div class="agree-body-header">
+												<div class="chk-icon-box">
+													<input type="checkbox" id="agreeTest03">	
+													<label for="agreeTest03">											
+														개인정보 위탁 및 제공안내 이용자 동의 사항 (필수)
+													</label>										
+												</div>
+												<button type="button" class="btnToggle" data-target="toggleCont02" data-on="true" data-siblings="false">
+													자세히
+												</button>
+											</div>
+											<div class="agree-body-cont toggleCont toggleCont02">
+												내용
+											</div>
+										</li>
+										<li>
+											<div class="agree-body-header">
+												<div class="chk-icon-box">
+													<input type="checkbox" id="agreeTest04">	
+													<label for="agreeTest04">											
+														전자금융 이용약관 이용자 동의 (필수)
+													</label>										
+												</div>
+												<button type="button" class="btnToggle" data-target="toggleCont03" data-on="true" data-siblings="false">
+													자세히
+												</button>
+											</div>
+											<div class="agree-body-cont toggleCont toggleCont03">
+												내용
+											</div>
+										</li>
+										<li>
+											<div class="agree-body-header">
+												<div class="chk-icon-box">
+													<input type="checkbox" id="agreeTest05">	
+													<label for="agreeTest05">											
+														정기과금 이용약관 이용자 동의사항 (필수)
+													</label>										
+												</div>
+												<button type="button" class="btnToggle" data-target="toggleCont04" data-on="true" data-siblings="false">
+													자세히
+												</button>
+											</div>
+											<div class="agree-body-cont toggleCont toggleCont04">
+												내용
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-area">
+						<button type="submit" class="btn btn-white">확인</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- // 등록카드 정보 입력 레이어 -->
 
 </body>
 </html>
