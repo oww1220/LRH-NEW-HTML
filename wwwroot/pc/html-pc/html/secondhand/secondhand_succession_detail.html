@@ -1103,7 +1103,7 @@
 			}
 	
 	
-			//스티키
+			/*
 			if($('.car-detail-sticky-wrap').length) {
 				$(window).on('scroll', function(e) {
 					var scrollPos = window.scrollY || window.pageYOffset,
@@ -1133,6 +1133,28 @@
 
 				});
 				
+			}
+			*/
+			//스티키
+			if($('.car-detail-sticky-wrap').length) {
+				(function (){
+					var stickyFixObj = new MUI.stickyFix.init({
+						target: '.car-detail-sticky-wrap', 
+						parent: '.car-detail-info-section', 
+						targetScroll: '.detail-sticky-iscroll', 
+						targetItem: '.car-detail-sticky', 
+						navHeight: 0,
+					});
+					$(window).on('scroll', function(e) {		
+						stickyFixObj.calculate();
+					});
+
+					$('.secondhand-container .carInfoToggleBtn').on('click',function(){
+						setTimeout(function(){
+							stickyFixObj.calculate();
+						},500);
+					});
+				})();
 			}
 	
 		});
