@@ -2458,17 +2458,41 @@ body.fixed {
 								@include Bold;
 								font-size:1.2rem;
 							}
-							ul {
+							ul{
+								@include Align-top-left;
 								margin-left:0;
-								li {
+								li{
+									@include Align-middle-column;
 									padding:1.3rem 0;
-									@include Align-middle-left;
-									> div {
-										background-color: #ff404b;
-										color:#fff;
-										font-size:.6rem;
-										padding:.4rem .2rem;
-										margin-right:1rem;
+									position: relative;
+									.inner{
+										margin-top:0;
+										@include Regular;
+										font-size:1.1rem;
+										@include Align-middle-column;
+										color:#54585a;
+										text-align: center;
+										label > div{
+											height:2.6rem;
+											margin-bottom:.9rem;
+										}
+									}
+									.icon{
+										width:2.6rem;
+										height:2.6rem;
+									}
+									input {
+										display: none;
+									}
+									label {
+										position: relative;
+										border:0 none;
+										box-sizing: border-box;
+										//transition: all .4s;
+										color:#ddd;
+									}
+									input:checked + label {
+										color:#54585a;
 									}
 								}
 							}

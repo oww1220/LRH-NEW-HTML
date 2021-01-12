@@ -1275,6 +1275,17 @@ if($('.secondhand-wrap').length){
         logic();
     });
 }
+
+//중고차 등록/수정 옵션 라디오 
+if($('.secondhand-wrap').length){
+    $(".cont-item5 input").on('click', function(){
+        if($(this).siblings('label').find('.icon').hasClass('active')){
+            $(this).siblings('label').find('.icon').removeClass('active');
+        }else{
+            $(this).siblings('label').find('.icon').addClass('active');
+        }
+    });
+}
 /* -------------------------------------------------중고차 end*/
 
 /* 중고차 내차팔기 start-------------------------------------------------*/
