@@ -349,5 +349,75 @@
                 }
             }
         }
+        .detail-layout {
+            position: relative;
+            .layer-item {
+                padding: 2.3rem 0 0;
+                &.item-step1{
+                    padding:0 0 .8rem 0;
+                    .item-cont {
+                        margin:0 1.7rem;
+                        padding:2.3rem 0;
+                        border:1px solid #e7e7e7;
+                        border-right:0 none;
+                        border-left:0 none;
+                    }
+                }
+                .item-cont {
+                    padding: 0 1.7rem;
+                    .detail-layer-inputT:first-child{
+                        margin-top: 0;
+                    }
+                    .detail-layer-inputT{
+                        margin-top:.9rem;
+                    }
+                    .detail-layer-inputT-tit{
+                        @include Bold;
+                        margin-top:1.7rem;
+                        @include Align-middle;
+                        justify-content: left;
+                    }
+                    .list-type-col2{
+                        @include Align-middle-left;
+                        width:100%;
+                        margin-left:0;
+                        .inputT{
+                            .inputR{
+                                width:49%;
+                                border-bottom:0 none;
+                            }
+                        }
+                        li:first-child{
+                            width:30%;
+                            .detail-layer-inputT-tit{
+                                margin-top:0;
+                            }
+                        }
+                        li:last-child{
+                            width:70%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-tit{
+        padding: 2.2rem 1.7rem 2.6rem;
+        position: relative;
+        em{
+            display:block;
+            color:#8f9191;
+            font-size:1.9rem;
+            @include Regular;
+        }
+        strong{
+            display:block;
+            color:#2f2f2f;
+            @include Bold;
+            font-size:2.3rem;
+        }
+    }
+    .detail-layer-submit{
+        padding: 2.6rem 1.7rem;
     }
 }
