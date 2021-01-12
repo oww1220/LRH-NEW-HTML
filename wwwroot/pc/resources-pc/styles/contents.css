@@ -1472,7 +1472,6 @@ html, body {
 	   -moz-box-align: stretch;
 	    -ms-flex-align: stretch;
 	        align-items: stretch;
-	border-top: 1px solid #e7e7e7;
 	border-bottom: 1px solid #e7e7e7;
 }
 
@@ -1485,6 +1484,10 @@ html, body {
 	        flex: 1;
 	padding: 20px 5px;
 	text-align: center;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-top: 1px solid #e7e7e7;
 }
 
 .process-list > li + li {
@@ -1569,6 +1572,7 @@ html, body {
 	display: block;
 	font-size: 16px;
 	margin-top: 20px;
+	margin-bottom: 0;
 }
 
 .process-list .txt {
@@ -1583,6 +1587,39 @@ html, body {
 
 .process-list + .lst {
 	margin-top: 30px;
+}
+
+.process-list.type-col4 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.process-list.type-col4 > li {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 25%;
+	min-height: 160px;
+}
+
+.process-list.type-col4 > li:nth-of-type(5n) {
+	border-left: none;
+}
+
+.process-list.type-col4 > li:nth-of-type(5n)::before, .process-list.type-col4 > li:nth-of-type(5n)::after {
+	display: none;
+}
+
+.section-explain-type2 .explain-cont .process-list .tit {
+	margin-bottom: 0;
 }
 
 .lst > li {
@@ -2607,6 +2644,10 @@ html, body {
 	text-align: left;
 	background-color: #fff;
 	border: 1px solid #2f2f2f;
+}
+
+.tooltip-layer .tooltip .tooltip-inner p + p {
+	margin-top: 10px;
 }
 
 .tooltip-layer .tooltip .tooltip-inner.align-c-type {
@@ -9095,6 +9136,302 @@ html, body {
 	margin-left: 10px;
 }
 
+.secondhand-container .img-type-list .disabled {
+	background-color: transparent;
+}
+
+.secondhand-container .img-type-list .disabled .txt {
+	color: #ddd;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption01 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption01-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption02 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption02-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption03 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption03-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption04 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption04-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption05 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption05-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption06 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption06-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption07 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption07-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption08 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption08-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption09 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption09-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption10 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption10-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption11 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption11-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption12 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption12-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption13 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption13-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption14 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption14-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption15 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption15-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .disabled .icon.carOption16 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption16-off.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption01-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption01.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption02-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption02.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption03-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption03.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption04-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption04.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption05-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption05.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption06-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption06.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption07-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption07.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption08-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption08.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption09-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption09.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption10-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption10.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption11-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption11.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption12-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption12.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption13-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption13.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption14-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption14.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption15-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption15.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container .img-type-list .chk-box input:checked + label .icon.carOption16-off {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-carOption16.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
 .secondhand-container .car-detail-visual-section {
 	margin-bottom: 48px;
 }
@@ -9155,48 +9492,6 @@ html, body {
 	right: 0;
 }
 
-.secondhand-container .car-detail-visual-section .swipe-detail-wrap.zoomMode {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	/*height:100%;*/
-	background-color: #fff;
-	z-index: 10;
-	overflow-y: auto;
-	-ms-overflow-y: auto;
-}
-
-.secondhand-container .car-detail-visual-section .swipe-detail-wrap.zoomMode .car-details {
-	max-width: 1920px;
-	margin: 0 auto;
-}
-
-.secondhand-container .car-detail-visual-section .swipe-detail-wrap.zoomMode .detail-slide-gallery-top .swiper-slide img {
-	width: 100%;
-}
-
-.secondhand-container .car-detail-visual-section .swipe-detail-wrap .btn-zoom {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 30px;
-	z-index: 5;
-}
-
-.secondhand-container .car-detail-visual-section .swipe-detail-wrap .btn-zoom.zoomOut .zoom {
-	width: 76px;
-	height: 76px;
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-zoom-out.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
 .secondhand-container .car-detail-info-section {
 	position: relative;
 	padding-right: 360px;
@@ -9240,156 +9535,12 @@ html, body {
 	font-size: 14px;
 }
 
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] {
+.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .disabled {
 	background-color: transparent;
 }
 
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .txt {
+.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .disabled .txt {
 	color: #ddd;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption01 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption01-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption02 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption02-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption03 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption03-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption04 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption04-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption05 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption05-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption06 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption06-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption07 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption07-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption08 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption08-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption09 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption09-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption10 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption10-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption11 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption11-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption12 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption12-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption13 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption13-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption14 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption14-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption15 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption15-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] .icon.carOption16 {
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-carOption16-off.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
 }
 
 .secondhand-container .car-detail-info-section .car-detail-info-area .row .align-row {
@@ -10616,6 +10767,18 @@ html, body {
 	margin-bottom: 40px;
 }
 
+.secondhand-container .carOpt-section .row .img-type-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	padding-bottom: 40px;
+}
+
 .secondhand-container .carOpt-section .row .img-type-list li {
 	text-align: center;
 }
@@ -10623,12 +10786,11 @@ html, body {
 .secondhand-container .carOpt-section .row .img-type-list li .icon {
 	width: 110px;
 	height: 70px;
-	background-color: #ab8f7a;
 	margin: 0 auto 10px;
 }
 
 .secondhand-container .carOpt-section .row .img-type-list li .txt {
-	color: #54585a;
+	color: #ddd;
 	font-size: 14px;
 }
 
@@ -10641,7 +10803,7 @@ html, body {
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
-	color: #ed1c24;
+	color: #54585a;
 }
 
 .secondhand-container .imgUpload-section .imgUpload-exam-box, .secondhand-container .imgUpload-section .imgUpload-list-box {
@@ -10780,9 +10942,7 @@ html, body {
 }
 
 .secondhand-container .imgUpload-section .imgUpload-exam-box li .icon {
-	width: 81px;
-	height: 66px;
-	background-color: green;
+	height: 70px;
 }
 
 .secondhand-container .imgUpload-section .imgUpload-exam-box li .icon + span {
@@ -11014,6 +11174,15 @@ html, body {
 .secondhand-container.info-container .round-banner {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-pc/images//bg-secondhandInfo.png");
+	background-position: 0 0;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container.sellInfo-container .round-banner {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images//bg-secondhandSellInfo.png");
 	background-position: 0 0;
 	-webkit-background-size: auto auto;
 	   -moz-background-size: auto;
@@ -17058,341 +17227,13 @@ html, body {
 	right: 24px;
 }
 
-.carLife-container .top-section {
-	background-color: #f5f5f5;
-	margin: -130px 0 60px;
-	padding: 130px 0 80px;
-}
-
-.carLife-container .section-descri {
-	margin-bottom: 80px;
-}
-
-.carLife-container .section-descri .btn-view {
-	width: 98px;
-	font-size: 14px;
-	padding: 0;
-}
-
-.carLife-container .section-descri strong {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-}
-
-.carLife-container .section-descri .box-header {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	width: 100%;
-	padding-bottom: 32px;
-	margin-bottom: 60px;
-	border-bottom: 1px solid #e7e7e7;
-}
-
-.carLife-container .section-descri .box-header .tit {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	width: 100%;
-	display: block;
-	overflow: hidden;
-	-o-text-overflow: ellipsis;
-	   text-overflow: ellipsis;
-	white-space: nowrap;
-	font-size: 32px;
-}
-
-.carLife-container .section-descri.rsvd-section .box-header {
-	padding-bottom: 25px;
-	margin-bottom: 0;
-	border: none;
-}
-
-.carLife-container .section-descri.rsvd-section .box-header .tit {
-	font-size: 22px;
-}
-
-.carLife-container .section-descri.rsvd-section .box-content {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	padding: 30px 40px;
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	border: 1px solid #e7e7e7;
-	background-color: #fff;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-
-.carLife-container .section-descri.rsvd-section .box-content .icon {
-	margin-right: 10px;
-}
-
-.carLife-container .section-descri.rsvd-section .box-content .descri {
-	max-width: 80%;
-}
-
-.carLife-container .section-descri.rsvd-section .box-content .btn-link {
-	position: relative;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	   -moz-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	height: auto;
-	padding: 0;
-	margin-left: auto;
-}
-
-.carLife-container .section-descri.rsvd-section .box-content .btn-link .icon {
-	position: absolute;
-	left: -31px;
-}
-
-.carLife-container .section-descri.why-jejuauto-section .descri {
-	width: 100%;
-	padding: 40px;
-	text-align: center;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-
-.carLife-container .section-descri.jejuauto-reson-section .descri-box {
-	padding: 40px 0;
-}
-
-.carLife-container .section-descri.jejuauto-reson-section .descri-box .tit {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	font-size: 24px;
-	margin-bottom: 30px;
-}
-
-.carLife-container .section-descri.jejuauto-reson-section .descri-box .descri {
-	margin-bottom: 30px;
-}
-
-.carLife-container .section-descri.jejuauto-reson-section .descri-box .descri dt {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	margin-bottom: 20px;
-}
-
-.carLife-container .section-descri.jejuauto-reson-section .descri-box .descri dt ~ dt {
-	margin-top: 30px;
-}
-
-.carLife-container .section-descri.jejuauto-step-section .grid-col2 .video-box {
-	width: 765px;
-}
-
-.carLife-container .section-descri.jejuauto-step-section .grid-col2 .descri-box {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	   -moz-box-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-	padding-left: 60px;
-}
-
-.carLife-container .section-descri.jejuauto-step-section .grid-col2 .descri-box li {
-	margin-bottom: 40px;
-}
-
-.carLife-container .section-descri.jejuauto-step-section .grid-col2 .descri-box strong {
-	display: block;
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	margin-bottom: 20px;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .img-box {
-	width: 440px;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box {
-	-webkit-box-flex: 1;
-	-webkit-flex-grow: 1;
-	   -moz-box-flex: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
-	-webkit-flex-basis: 0;
-	    -ms-flex-preferred-size: 0;
-	        flex-basis: 0;
-	padding-left: 60px;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box .descri-lst {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-flow: column;
-	   -moz-box-orient: vertical;
-	   -moz-box-direction: normal;
-	    -ms-flex-flow: column;
-	        flex-flow: column;
-	-webkit-box-align: start;
-	-webkit-align-items: flex-start;
-	   -moz-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box .descri-lst > div {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	margin-bottom: 16px;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box .descri-lst dt {
-	width: 198px;
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box .num-lst {
-	padding: 40px;
-	margin-top: 60px;
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	background-color: #fafafa;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box .num-lst li {
-	margin-bottom: 16px;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box .num-lst li:last-of-type {
-	margin-bottom: 0;
-}
-
-.carLife-container .section-descri.jejuair-location-section .grid-col2 .descri-box .num-lst li .lst-one {
-	margin-top: 16px;
-}
-
-.carLife-container .section-descri.jejuauto-service-section .cont-tit {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	font-size: 22px;
-	margin-bottom: 30px;
-}
-
-.carLife-container .section-descri.jejuauto-service-section li {
-	margin-bottom: 40px;
-}
-
-.carLife-container .section-descri.jejuauto-service-section li > p {
-	margin-bottom: 20px;
-}
-
-.carLife-container .section-descri.jejuauto-location-section .descri-lst {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-flow: column;
-	   -moz-box-orient: vertical;
-	   -moz-box-direction: normal;
-	    -ms-flex-flow: column;
-	        flex-flow: column;
-	-webkit-box-align: start;
-	-webkit-align-items: flex-start;
-	   -moz-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
-	margin-bottom: 10px;
-}
-
-.carLife-container .section-descri.jejuauto-location-section .descri-lst > div {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	margin-bottom: 30px;
-}
-
-.carLife-container .section-descri.jejuauto-location-section .descri-lst dt {
-	width: 88px;
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-}
-
-.eng-wrap .grey-box {
+.carLife-container .grey-box {
 	padding: 30px 40px;
 	margin-bottom: 80px;
 	color: #54585a;
 }
 
-.eng-wrap .grey-box strong {
+.carLife-container .grey-box strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -17400,15 +17241,15 @@ html, body {
 	margin-right: 15px;
 }
 
-.eng-wrap .grey-box .icon {
+.carLife-container .grey-box .icon {
 	margin-right: 10px;
 }
 
-.eng-wrap .img-list li .item {
+.carLife-container .img-list li .item {
 	position: relative;
 }
 
-.eng-wrap .img-list li .item .cover {
+.carLife-container .img-list li .item .cover {
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -17416,7 +17257,7 @@ html, body {
 	background-color: #54585a;
 }
 
-.eng-wrap .img-list li .item .cover .txt {
+.carLife-container .img-list li .item .cover .txt {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -17432,7 +17273,7 @@ html, body {
 	   -moz-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	min-height: 70px;
+	min-height: 50px;
 	padding: 15px;
 	margin: 0;
 	color: #fff;
@@ -17440,6 +17281,10 @@ html, body {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+}
+
+.eng-wrap .img-list li .item .cover .txt {
+	min-height: 70px;
 }
 
 .eng-wrap .location-section .box-align {
