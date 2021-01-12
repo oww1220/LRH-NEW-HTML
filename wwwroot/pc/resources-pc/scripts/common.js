@@ -1061,6 +1061,77 @@ if($('.layer-registCarDetail-info').length){
     });
 }
 
+//중고차 상세 롤링 01
+if($('#secondhand-slide').length) {
+    (function(){
+        var subTopSlideThumbs = MUI.slide.init('#secondhand-slide .detail-slide-gallery-thumbs','swiper', {
+            spaceBetween: 10,
+            slidesPerView: 10,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            scrollbar: {
+                el: '#secondhand-slide .swiper-scrollbar',
+                hide: false,
+                dragSize: 50,
+                draggable: true,
+            },
+        });				
+        var subTopSlide = MUI.slide.init('#secondhand-slide .detail-slide-gallery-top', 'swiper', {
+            spaceBetween: 10,
+            autoHeight:true,
+            thumbs: {
+                swiper: subTopSlideThumbs,
+            },
+            pagination: {
+                el: '#secondhand-slide .swiper-pagination',
+                type: 'fraction',
+            },
+        });
+        $('#secondhand-slide .detail-slide-gallery-thumbs').on('click', '.swiper-slide', function() {
+            //console.log($(this).attr('data-link'));
+            var idx = $(this).attr('data-link') - 1;
+            subTopSlide.slideTo(idx);
+        });	
+    
+    
+        //20210111 : 차량 슬라이드 이미지 줌, 줌아웃
+        var zoomFlag = true;
+        function zoomSwiperDestroy(){
+            if(MUI.slide.LayerSwiper) {
+                subTopSlideThumbs.destroy();
+                subTopSlide.destroy();
+            }
+        }
+        function zoomSwiperUpdate(){
+            subTopSlideThumbs.update();
+            subTopSlide.update();
+        }
+        
+        $('.zoomBtn').on('click', function(){
+            if(zoomFlag == true){
+                $(this).addClass('zoomOut');
+                zoomSwiperDestroy();
+                
+                $('#secondhand-slide').addClass('zoomMode');
+                $('html, body').css('overflow','hidden');
+                zoomSwiperUpdate();
+                MUI.IScrollSingle.iscrollRefresh(500);
+                zoomFlag = false;
+            }else{
+                $(this).removeClass('zoomOut');
+                zoomSwiperDestroy()
+                
+                $('#secondhand-slide').removeClass('zoomMode');
+                $('html, body').css('overflow','auto');
+                zoomSwiperUpdate();
+                zoomFlag = true;
+            }
+        });
+        
+    })();
+}
+
 /* -------------------------------------------------중고차장기렌터카end*/
 
 
@@ -1861,82 +1932,6 @@ $(function(){
             $('.draw-toggle-wrap-s').fadeOut(400);
         },
     });
-
-
-});
-
-$(function(){
-
-    //중고차 상세 롤링 01
-	if($('#secondhand-slide').length) {
-		(function(){
-			var subTopSlideThumbs = MUI.slide.init('#secondhand-slide .detail-slide-gallery-thumbs','swiper', {
-				spaceBetween: 10,
-				slidesPerView: 10,
-				freeMode: true,
-				watchSlidesVisibility: true,
-				watchSlidesProgress: true,
-				scrollbar: {
-					el: '#secondhand-slide .swiper-scrollbar',
-					hide: false,
-					dragSize: 50,
-					draggable: true,
-				},
-			});				
-			var subTopSlide = MUI.slide.init('#secondhand-slide .detail-slide-gallery-top', 'swiper', {
-                spaceBetween: 10,
-                autoHeight:true,
-				thumbs: {
-					swiper: subTopSlideThumbs,
-				},
-				pagination: {
-					el: '#secondhand-slide .swiper-pagination',
-					type: 'fraction',
-				},
-			});
-			$('#secondhand-slide .detail-slide-gallery-thumbs').on('click', '.swiper-slide', function() {
-				//console.log($(this).attr('data-link'));
-				var idx = $(this).attr('data-link') - 1;
-				subTopSlide.slideTo(idx);
-			});	
-		
-		
-			//20210111 : 차량 슬라이드 이미지 줌, 줌아웃
-			var zoomFlag = true;
-			function zoomSwiperDestroy(){
-				if(MUI.slide.LayerSwiper) {
-					subTopSlideThumbs.destroy();
-					subTopSlide.destroy();
-				}
-			}
-			function zoomSwiperUpdate(){
-				subTopSlideThumbs.update();
-				subTopSlide.update();
-			}
-			
-			$('.zoomBtn').on('click', function(){
-				if(zoomFlag == true){
-					$(this).addClass('zoomOut');
-					zoomSwiperDestroy();
-					
-                    $('#secondhand-slide').addClass('zoomMode');
-                    $('html, body').css('overflow','hidden');
-					zoomSwiperUpdate();
-					MUI.IScrollSingle.iscrollRefresh(500);
-					zoomFlag = false;
-				}else{
-					$(this).removeClass('zoomOut');
-					zoomSwiperDestroy()
-					
-                    $('#secondhand-slide').removeClass('zoomMode');
-                    $('html, body').css('overflow','auto');
-					zoomSwiperUpdate();
-					zoomFlag = true;
-				}
-			});
-			
-		})();
-	}
 
 
 });
