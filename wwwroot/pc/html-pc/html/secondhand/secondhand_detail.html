@@ -1183,63 +1183,15 @@
 		//스티키
 		if($('.car-detail-sticky-wrap').length) {
 			(function (){
-				var stickyFixObj = new MUI.stickyFix.init({
+				var stickyFixObj = MUI.stickyFix.init({
 					target: '.car-detail-sticky-wrap', 
 					parent: '.car-detail-info-section', 
 					targetScroll: '.detail-sticky-iscroll', 
 					targetItem: '.car-detail-sticky', 
 					navHeight: 0,
 				});
-<<<<<<< Updated upstream
 				$(window).on('scroll', function(e) {		
 					stickyFixObj.calculate();
-=======
-
-				$('#secondhand-slide .detail-slide-gallery-thumbs').on('click', '.swiper-slide', function() {
-					//console.log($(this).attr('data-link'));
-					var idx = $(this).attr('data-link') - 1;
-					subTopSlide.slideTo(idx);
-				});	
-
-			
-			
-				//20210111 : 차량 슬라이드 이미지 줌, 줌아웃
-				var zoomFlag = true;
-
-				function zoomSwiperDestroy(){
-					if(MUI.slide.LayerSwiper) {
-						subTopSlideThumbs.destroy();
-						subTopSlide.destroy();
-					}
-				}
-				function zoomSwiperUpdate(){
-					subTopSlideThumbs.update();
-					subTopSlide.update();
-				}
-				
-				$('.zoomBtn').on('click', function(){
-					if(zoomFlag == true){						
-						MUI.layer.open();
-
-						$(this).addClass('zoomOut');
-						zoomSwiperDestroy();
-						
-						$('#secondhand-slide').addClass('zoomMode');
-						zoomSwiperUpdate();
-
-						zoomFlag = false;
-					}else{
-						MUI.layer.close();
-
-						$(this).removeClass('zoomOut');
-						zoomSwiperDestroy()
-						
-						$('#secondhand-slide').removeClass('zoomMode');
-						zoomSwiperUpdate();
-
-						zoomFlag = true;
-					}
->>>>>>> Stashed changes
 				});
 
 				$('.secondhand-container .carInfoToggleBtn').on('click',function(){
