@@ -989,13 +989,25 @@ if($('.secondhand-container .carInfoAccor').length) {
         logic();
     });
 }
+//승계 > 승계진행 툴팁
+if($('.secondhand-container .tooltip-layer').length) {
+    MUI.event.toggle('.tooltipOpenBtn', '.tooltipCont', false, function(logic, layer) {
+        logic();
 
-//승계 > 상담 툴팁, 승계진행 툴팁
+        $('.tooltipClose').on('click', function(){
+            $(this).parents('.tooltipCont').fadeOut();            
+        });
+    });
+}
+
+//승계 > 상담 툴팁
 if($('.secondhand-container .tooltipToggle').length) {
     MUI.event.toggle('.tooltipToggle .tooltipOpenBtn', '.tooltipToggle .tooltipCont', false, function(logic, layer) {
         logic();
     });
 }
+
+
 
 //필터 슬라이드
 if($('.secondhand-container .car-detail-sticky-wrap #slider-price').length) {

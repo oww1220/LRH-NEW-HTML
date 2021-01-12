@@ -1728,6 +1728,61 @@ $txt-darkblack: #2f2f2f;
 		}
 	}
 }
+
+//20210111 - 툴팁
+.tooltip-layer{
+	display:none;
+	position:relative;
+	z-index:5;
+
+	.tooltip{
+		@include Position($top:10px, $left:-50%, $right:-50%);
+		width:286px;
+		margin:0 auto;
+		
+		.btn-tooltip-close{
+			@include Position($top:-13px, $right:-13px);
+			flex:none;
+			@include Vertical-inline;
+			@include Hide_txt;
+			width:27px;
+			height:27px;
+			@include Background($sprite:'ico-tooltip-close', $position:center center);
+			z-index:5;
+		}
+		.tooltip-inner{
+			overflow:hidden;
+			padding:20px;
+			@include roundBox;
+			@include box-shadow($top:0, $left:0px, $blur:15px, $color:rgba(50, 50, 50, 0.35));
+			@include txtSetting;
+			text-align:left;
+			background-color:#fff;
+			border:1px solid #2f2f2f;
+
+			
+			&.align-c-type{
+				text-align:center;
+
+				.tit{
+					display:block;
+					@include Bold;
+					color:#2f2f2f;
+		
+					+ .txt{
+						margin-top:15px;
+						@include txtSetting;
+					}
+				} 
+			}
+		}
+	}
+
+	&.on{
+		z-index:10;
+	}
+}
+
 /*
 .agree-area{
 	.agree-header{

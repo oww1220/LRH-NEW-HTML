@@ -2555,6 +2555,83 @@ html, body {
 	background-color: #f5f5f5;
 }
 
+.tooltip-layer {
+	display: none;
+	position: relative;
+	z-index: 5;
+}
+
+.tooltip-layer .tooltip {
+	position: absolute;
+	top: 10px;
+	right: -50%;
+	left: -50%;
+	width: 286px;
+	margin: 0 auto;
+}
+
+.tooltip-layer .tooltip .btn-tooltip-close {
+	position: absolute;
+	top: -13px;
+	right: -13px;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	display: inline-block;
+	vertical-align: middle;
+	font: 0/0 a;
+	width: 27px;
+	height: 27px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-tooltip-close.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	z-index: 5;
+}
+
+.tooltip-layer .tooltip .tooltip-inner {
+	overflow: hidden;
+	padding: 20px;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	-webkit-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
+	box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
+	font-size: 14px;
+	color: #54585a;
+	text-align: left;
+	background-color: #fff;
+	border: 1px solid #2f2f2f;
+}
+
+.tooltip-layer .tooltip .tooltip-inner.align-c-type {
+	text-align: center;
+}
+
+.tooltip-layer .tooltip .tooltip-inner.align-c-type .tit {
+	display: block;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #2f2f2f;
+}
+
+.tooltip-layer .tooltip .tooltip-inner.align-c-type .tit + .txt {
+	margin-top: 15px;
+	font-size: 14px;
+	color: #54585a;
+}
+
+.tooltip-layer.on {
+	z-index: 10;
+}
+
 /*
 .agree-area{
 	.agree-header{
@@ -8708,6 +8785,41 @@ html, body {
 	height: 100%;
 }
 
+.secondhand-container .sort-section .result-area .result-cont .item .img-box .cover {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	padding: 10px 20px;
+	color: #fff;
+	background: rgba(29, 29, 29, 0.6);
+	z-index: 5;
+}
+
+.secondhand-container .sort-section .result-area .result-cont .item .img-box .cover .btn-box {
+	margin-right: -10px;
+}
+
 .secondhand-container .sort-section .result-area .result-cont .item .img-box .tooltipOpenBtn {
 	height: auto;
 	padding: 0;
@@ -8777,29 +8889,6 @@ html, body {
 	right: 15px;
 }
 
-.secondhand-container .sort-section .result-area .result-cont .item .img-box .tooltip-wrap .tooltipCont01 {
-	width: 346px;
-	left: auto;
-	right: -15px;
-	text-align: center;
-}
-
-.secondhand-container .sort-section .result-area .result-cont .item .img-box .tooltip-wrap .tooltipCont01 strong {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-}
-
-.secondhand-container .sort-section .result-area .result-cont .item .img-box .tooltip-wrap .tooltipCont01 strong + p {
-	margin-top: 20px;
-}
-
-.secondhand-container .sort-section .result-area .result-cont .item .img-box .tooltip-wrap .tooltipCont01 strong + p span {
-	font-size: 14px;
-	color: #54585a;
-}
-
 .secondhand-container .sort-section .result-area .result-cont .item .img-box .tooltip-wrap .tooltipCont-list {
 	width: 270px;
 	left: auto;
@@ -8861,41 +8950,6 @@ html, body {
 	font-size: 14px;
 	color: #54585a;
 	text-align: left;
-}
-
-.secondhand-container .sort-section .result-area .result-cont .item .img-box .cover {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	   -moz-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	-webkit-box-align: end;
-	-webkit-align-items: flex-end;
-	   -moz-box-align: end;
-	    -ms-flex-align: end;
-	        align-items: flex-end;
-	padding: 10px 20px;
-	color: #fff;
-	background: rgba(29, 29, 29, 0.6);
-	z-index: 5;
-}
-
-.secondhand-container .sort-section .result-area .result-cont .item .img-box .cover .btn-box {
-	margin-right: -10px;
 }
 
 .secondhand-container .sort-section .result-area .result-cont .item .descri-area {
@@ -9099,8 +9153,13 @@ html, body {
 	/*height:100%;*/
 	background-color: #fff;
 	z-index: 10;
+<<<<<<< Updated upstream
 	overflow-y: auto;
 	-ms-overflow-y: auto;
+=======
+	overflow-x: hidden;
+	overflow-y: auto;
+>>>>>>> Stashed changes
 }
 
 .secondhand-container .car-detail-visual-section .swipe-detail-wrap.zoomMode .car-details {
@@ -9172,63 +9231,6 @@ html, body {
 .secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .txt {
 	color: #54585a;
 	font-size: 14px;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .tooltip-wrap {
-	display: none;
-	position: relative;
-	z-index: 5;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .tooltip-wrap .tooltip {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 256px;
-	margin-left: -128px;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .tooltip-wrap .tooltip .btn-tooltip-close {
-	position: absolute;
-	top: -13px;
-	right: -13px;
-	-webkit-box-flex: 0;
-	-webkit-flex: none;
-	   -moz-box-flex: 0;
-	    -ms-flex: none;
-	        flex: none;
-	display: inline-block;
-	vertical-align: middle;
-	font: 0/0 a;
-	width: 27px;
-	height: 27px;
-	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-tooltip-close.png");
-	background-position: center center;
-	-webkit-background-size: auto auto;
-	   -moz-background-size: auto;
-	        background-size: auto;
-	z-index: 5;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .tooltip-wrap .tooltip .tooltip-inner {
-	overflow: hidden;
-	padding: 20px;
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	-webkit-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
-	-moz-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
-	box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
-	font-size: 14px;
-	color: #54585a;
-	text-align: left;
-	background-color: #fff;
-	border: 1px solid #2f2f2f;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list li .tooltip-wrap.on {
-	z-index: 10;
 }
 
 .secondhand-container .car-detail-info-section .car-detail-info-area .row .img-type-list button[disabled] {
@@ -10110,103 +10112,31 @@ html, body {
 	        border-radius: 15px;
 }
 
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap {
-	position: relative;
-	width: 100%;
-	z-index: 5;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont {
-	display: none;
-	position: absolute;
-	top: 100%;
-	margin-top: 6px;
-	background-color: #fff;
-	border: 1px solid #d2d2d2;
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	-webkit-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.75);
-	box-shadow: 0 0px 15px rgba(50, 50, 50, 0.75);
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont:before {
-	content: '';
-	position: absolute;
-	top: -16px;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 15px 16px 15px;
-	border-color: transparent transparent #fff transparent;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	   -moz-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	     -o-transform: translateX(-50%);
-	        transform: translateX(-50%);
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont .tooltipCont-inner {
-	padding: 40px;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont.arrow-type-right:before {
-	left: auto;
-	right: 15px;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont01 {
-	width: 346px;
-	left: auto;
-	right: -15px;
-	text-align: center;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont01 strong {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont01 strong + p {
-	margin-top: 20px;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont01 strong + p span {
-	font-size: 14px;
-	color: #54585a;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont02 {
-	width: 410px;
-	left: -150px;
-}
-
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont02 .branch-infos {
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .branch-infos {
+	padding: 10px;
 	border-bottom: 1px solid #e7e7e7;
 }
 
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont02 .branch-infos > p {
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .branch-infos > p {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: baseline;
-	-webkit-justify-content: baseline;
-	   -moz-box-pack: baseline;
-	    -ms-flex-pack: baseline;
-	        justify-content: baseline;
+	-webkit-box-align: baseline;
+	-webkit-align-items: baseline;
+	   -moz-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 	margin-bottom: 30px;
 }
 
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont02 .branch-infos > p .tit {
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .branch-infos > p .tit {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -10216,13 +10146,13 @@ html, body {
 	   -moz-box-flex: 0;
 	    -ms-flex: none;
 	        flex: none;
-	width: 140px;
-	-webkit-flex-basis: 140px;
-	    -ms-flex-preferred-size: 140px;
-	        flex-basis: 140px;
+	width: 84px;
+	-webkit-flex-basis: 84px;
+	    -ms-flex-preferred-size: 84px;
+	        flex-basis: 84px;
 }
 
-.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .tooltip-wrap .tooltipCont02 .branch-infos + .lst {
+.secondhand-container .car-detail-info-section .car-detail-sticky-wrap .branch-infos + .lst {
 	margin-top: 20px;
 }
 
@@ -11043,6 +10973,39 @@ html, body {
 
 .secondhand-container .carDetail-section .carDetail-infos .infos-box .infos-row + .infos-row {
 	margin-top: 25px;
+}
+
+.secondhand-container .round-banner {
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	padding: 50px 60px;
+	margin-bottom: 80px;
+	min-height: 140px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.secondhand-container .round-banner p {
+	color: #fff;
+}
+
+.secondhand-container.info-container .round-banner {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images//bg-secondhandInfo.png");
+	background-position: 0 0;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
 }
 
 .short-container .section-counsel {

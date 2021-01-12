@@ -2555,6 +2555,83 @@ html, body {
 	background-color: #f5f5f5;
 }
 
+.tooltip-layer {
+	display: none;
+	position: relative;
+	z-index: 5;
+}
+
+.tooltip-layer .tooltip {
+	position: absolute;
+	top: 10px;
+	right: -50%;
+	left: -50%;
+	width: 286px;
+	margin: 0 auto;
+}
+
+.tooltip-layer .tooltip .btn-tooltip-close {
+	position: absolute;
+	top: -13px;
+	right: -13px;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	display: inline-block;
+	vertical-align: middle;
+	font: 0/0 a;
+	width: 27px;
+	height: 27px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-tooltip-close.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	z-index: 5;
+}
+
+.tooltip-layer .tooltip .tooltip-inner {
+	overflow: hidden;
+	padding: 20px;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	-webkit-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
+	box-shadow: 0 0px 15px rgba(50, 50, 50, 0.35);
+	font-size: 14px;
+	color: #54585a;
+	text-align: left;
+	background-color: #fff;
+	border: 1px solid #2f2f2f;
+}
+
+.tooltip-layer .tooltip .tooltip-inner.align-c-type {
+	text-align: center;
+}
+
+.tooltip-layer .tooltip .tooltip-inner.align-c-type .tit {
+	display: block;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #2f2f2f;
+}
+
+.tooltip-layer .tooltip .tooltip-inner.align-c-type .tit + .txt {
+	margin-top: 15px;
+	font-size: 14px;
+	color: #54585a;
+}
+
+.tooltip-layer.on {
+	z-index: 10;
+}
+
 /*
 .agree-area{
 	.agree-header{
