@@ -643,6 +643,121 @@
         }                    
     }
     
+    //차량 옵션 정보 공통
+    .img-type-list{
+        //차 옵션 - button 선택 불가 시
+        .disabled{                        
+            background-color:transparent;
+            .txt{color:#ddd;}
+            .icon{
+                &.carOption01{
+                    @include Background($sprite:'ico-carOption01-off', $position:center center);
+                }
+                &.carOption02{
+                    @include Background($sprite:'ico-carOption02-off', $position:center center);
+                }
+                &.carOption03{
+                    @include Background($sprite:'ico-carOption03-off', $position:center center);
+                }
+                &.carOption04{
+                    @include Background($sprite:'ico-carOption04-off', $position:center center);
+                }
+                &.carOption05{
+                    @include Background($sprite:'ico-carOption05-off', $position:center center);
+                }
+                &.carOption06{
+                    @include Background($sprite:'ico-carOption06-off', $position:center center);
+                }
+                &.carOption07{
+                    @include Background($sprite:'ico-carOption07-off', $position:center center);
+                }
+                &.carOption08{
+                    @include Background($sprite:'ico-carOption08-off', $position:center center);
+                }
+                &.carOption09{
+                    @include Background($sprite:'ico-carOption09-off', $position:center center);
+                }
+                &.carOption10{
+                    @include Background($sprite:'ico-carOption10-off', $position:center center);
+                }
+                &.carOption11{
+                    @include Background($sprite:'ico-carOption11-off', $position:center center);
+                }
+                &.carOption12{
+                    @include Background($sprite:'ico-carOption12-off', $position:center center);
+                }
+                &.carOption13{
+                    @include Background($sprite:'ico-carOption13-off', $position:center center);
+                }
+                &.carOption14{
+                    @include Background($sprite:'ico-carOption14-off', $position:center center);
+                }
+                &.carOption15{
+                    @include Background($sprite:'ico-carOption15-off', $position:center center);
+                }
+                &.carOption16{
+                    @include Background($sprite:'ico-carOption16-off', $position:center center);
+                }
+            }
+        }
+
+        //차 옵션 - checked 선택 시
+        .chk-box{
+            input:checked + label{
+                .icon{
+                    &.carOption01-off{
+                        @include Background($sprite:'ico-carOption01', $position:center center);
+                    }
+                    &.carOption02-off{
+                        @include Background($sprite:'ico-carOption02', $position:center center);
+                    }
+                    &.carOption03-off{
+                        @include Background($sprite:'ico-carOption03', $position:center center);
+                    }
+                    &.carOption04-off{
+                        @include Background($sprite:'ico-carOption04', $position:center center);
+                    }
+                    &.carOption05-off{
+                        @include Background($sprite:'ico-carOption05', $position:center center);
+                    }
+                    &.carOption06-off{
+                        @include Background($sprite:'ico-carOption06', $position:center center);
+                    }
+                    &.carOption07-off{
+                        @include Background($sprite:'ico-carOption07', $position:center center);
+                    }
+                    &.carOption08-off{
+                        @include Background($sprite:'ico-carOption08', $position:center center);
+                    }
+                    &.carOption09-off{
+                        @include Background($sprite:'ico-carOption09', $position:center center);
+                    }
+                    &.carOption10-off{
+                        @include Background($sprite:'ico-carOption10', $position:center center);
+                    }
+                    &.carOption11-off{
+                        @include Background($sprite:'ico-carOption11', $position:center center);
+                    }
+                    &.carOption12-off{
+                        @include Background($sprite:'ico-carOption12', $position:center center);
+                    }
+                    &.carOption13-off{
+                        @include Background($sprite:'ico-carOption13', $position:center center);
+                    }
+                    &.carOption14-off{
+                        @include Background($sprite:'ico-carOption14', $position:center center);
+                    }
+                    &.carOption15-off{
+                        @include Background($sprite:'ico-carOption15', $position:center center);
+                    }
+                    &.carOption16-off{
+                        @include Background($sprite:'ico-carOption16', $position:center center);
+                    }
+                }
+            }
+        }
+
+    }
     //차량 상세
     .car-detail-visual-section{
         margin-bottom:48px;
@@ -685,49 +800,6 @@
                 @include Position($top:0, $right:0);
             }
         }
-
-        .swipe-detail-wrap{
-            &.zoomMode{
-                //display:none;
-                position:fixed;
-                top:0;
-                left:0;
-                right:0;
-                bottom:0;
-                width:100%;
-                /*height:100%;*/
-                background-color:#fff;
-                z-index:10;
-                overflow-y: auto;
-                -ms-overflow-y: auto;
-
-                .car-details{
-                    max-width: 1920px;
-                    margin:0 auto;
-                }
-
-                .detail-slide-gallery-top{
-                    .swiper-slide {
-                        img{width:100%;}
-                    }
-                }
-            }
-            .btn-zoom{
-                @include Position($bottom:0, $left:0);
-                margin:30px;
-                z-index: 5;
-
-                &.zoomOut{
-                    .zoom{
-                        width:76px;
-                        height:76px;
-                        @include Background($sprite:'ico-zoom-out', $position:center center);
-                    }
-                }
-            }
-            
-        }
-        
         
         // .car-detail-slide-container{
         //     .gallery-top{
@@ -800,62 +872,11 @@
                             height:70px;
                             margin:0 auto 10px; 
                         }
-                        .txt{color:#54585a; font-size:14px;}                        
-                    }
-
-                    //차 옵션 - off
-                    button[disabled]{                        
-                        background-color:transparent;
-                        .txt{color:#ddd;}
-                        .icon{
-                            &.carOption01{
-                                @include Background($sprite:'ico-carOption01-off', $position:center center);
-                            }
-                            &.carOption02{
-                                @include Background($sprite:'ico-carOption02-off', $position:center center);
-                            }
-                            &.carOption03{
-                                @include Background($sprite:'ico-carOption03-off', $position:center center);
-                            }
-                            &.carOption04{
-                                @include Background($sprite:'ico-carOption04-off', $position:center center);
-                            }
-                            &.carOption05{
-                                @include Background($sprite:'ico-carOption05-off', $position:center center);
-                            }
-                            &.carOption06{
-                                @include Background($sprite:'ico-carOption06-off', $position:center center);
-                            }
-                            &.carOption07{
-                                @include Background($sprite:'ico-carOption07-off', $position:center center);
-                            }
-                            &.carOption08{
-                                @include Background($sprite:'ico-carOption08-off', $position:center center);
-                            }
-                            &.carOption09{
-                                @include Background($sprite:'ico-carOption09-off', $position:center center);
-                            }
-                            &.carOption10{
-                                @include Background($sprite:'ico-carOption10-off', $position:center center);
-                            }
-                            &.carOption11{
-                                @include Background($sprite:'ico-carOption11-off', $position:center center);
-                            }
-                            &.carOption12{
-                                @include Background($sprite:'ico-carOption12-off', $position:center center);
-                            }
-                            &.carOption13{
-                                @include Background($sprite:'ico-carOption13-off', $position:center center);
-                            }
-                            &.carOption14{
-                                @include Background($sprite:'ico-carOption14-off', $position:center center);
-                            }
-                            &.carOption15{
-                                @include Background($sprite:'ico-carOption15-off', $position:center center);
-                            }
-                            &.carOption16{
-                                @include Background($sprite:'ico-carOption16-off', $position:center center);
-                            }
+                        .txt{color:#54585a; font-size:14px;}     
+                        
+                        .disabled{                        
+                            background-color:transparent;
+                            .txt{color:#ddd;}
                         }
                     }
                 }
@@ -1565,21 +1586,23 @@
 
             .tit-size-def{margin-bottom:40px;}
             .img-type-list{
+                @include Align-around;
+                padding-bottom:40px;
+
                 li{
                     text-align:center;
                     .icon {
                         width:110px;
-                        height:70px;
-                        background-color:#ab8f7a;                            
+                        height:70px;                        
                         margin:0 auto 10px; 
                     }
-                    .txt{color:#54585a; font-size:14px;}
+                    .txt{color:#ddd; font-size:14px;}
 
                     .chk-box{
                         input{display:none;}
                         input:checked + label .txt{
                             @include Bold;
-                            color:$txt-red;
+                            color:#54585a;
                         }
                     }
                 }
@@ -1657,9 +1680,7 @@
             margin:20px 0 50px;
             li{
                 .icon{
-                    width:81px;
-                    height:66px;
-                    background-color:green;
+                    height: 70px;
 
                     + span{margin-top:20px;}
                 }
@@ -1773,6 +1794,12 @@
     &.info-container{
         .round-banner{
             @include Background($sprite: 'bg-secondhandInfo', $path:'');
+        }
+    }
+
+    &.sellInfo-container{
+        .round-banner{
+            @include Background($sprite: 'bg-secondhandSellInfo', $path:'');
         }
     }
     

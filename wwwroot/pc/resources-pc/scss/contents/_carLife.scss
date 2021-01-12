@@ -450,174 +450,6 @@
 
 
     //제주오투하우스
-    .top-section{ background-color:#f5f5f5; margin:-130px 0 60px; padding:130px 0 80px;}
-    .section-descri{
-        margin-bottom:80px;
-
-        .btn-view {
-            width:98px;
-            font-size:14px;
-            padding:0;
-        }
-        strong{@include Bold;}
-        .box-header{            
-            @include Align-middle-left;
-            width: 100%;
-            padding-bottom:32px;
-            margin-bottom:60px;
-            border-bottom:1px solid #e7e7e7;
-
-            .tit{
-                @include Bold;
-                @include Ellipsis($w:100%, $lines:1); 
-                font-size:32px;
-            }
-        }
-
-        &.rsvd-section{            
-            .box-header{
-                padding-bottom:25px;
-                margin-bottom:0;
-                border:none;
-                
-                .tit{font-size:22px;}
-            }
-            .box-content{
-                @include Align-middle-left;
-                padding:30px 40px;
-                border-radius:6px;
-                border:1px solid #e7e7e7;
-                background-color:#fff;
-                box-sizing:border-box;
-                
-                .icon{margin-right:10px;}
-                .descri{max-width:80%;}
-                .btn-link{   
-                    position:relative; 
-                    @include Align-middle;
-                    @include Bold;
-                    height:auto;
-                    padding:0;
-                    margin-left:auto;
-
-                    .icon{
-                        @include Position($left:-31px);
-                    }
-                }
-            }
-        }
-
-        &.why-jejuauto-section{
-            .descri{
-                width:100%;
-                padding:40px;
-                text-align:center;
-                box-sizing: border-box;
-            }
-        }
-
-        &.jejuauto-reson-section{
-            .descri-box{
-                padding:40px 0;
-
-                .tit{@include Bold; font-size:24px; margin-bottom:30px;}
-                .descri{
-                    margin-bottom:30px;
-                    dt{
-                        @include Bold; 
-                        margin-bottom:20px;
-
-                        & ~ dt{margin-top:30px;}
-                    }
-                }
-            }
-        }
-
-        &.jejuauto-step-section{
-            .grid-col2{
-                .video-box{
-                    width:765px;                 
-                }
-                .descri-box{
-                    flex: 1;
-                    padding-left:60px;
-                    
-                    li{margin-bottom:40px;}                    
-                    strong{
-                        display:block; 
-                        @include Bold; 
-                        margin-bottom:20px;
-                    }
-                }
-            }
-        }
-
-        &.jejuair-location-section{
-            .grid-col2{
-                .img-box{width:440px;}
-                
-                .descri-box{
-                    flex-grow: 1;
-                    flex-basis: 0;
-                    padding-left:60px;
-                    
-                    .descri-lst{
-                        @include Align-top-left-column;
-
-                        > div{                    
-                            @include Align-middle-left;
-                            margin-bottom:16px;
-                        }
-                        dt{width:198px; @include Bold;}
-                    }
-
-                    .num-lst{
-                        padding:40px;
-                        margin-top:60px;
-                        border-radius: 6px;;
-                        background-color:#fafafa;
-
-                        li{
-                            margin-bottom:16px;
-                            &:last-of-type{margin-bottom:0;}
-                            .lst-one{margin-top:16px;}
-                        }
-                    }
-                    
-                }
-            }
-        }
-
-        &.jejuauto-service-section{
-            .cont-tit{
-                @include Bold;
-                font-size:22px;
-                margin-bottom:30px;
-            }
-            li{
-                margin-bottom:40px;
-                > p{margin-bottom:20px;}
-            }
-        }
-
-        &.jejuauto-location-section{
-            .descri-lst{
-                @include Align-top-left-column;
-                margin-bottom:10px;
-
-                > div{                    
-                    @include Align-middle-left;
-                    margin-bottom:30px;
-                }
-                dt{width:88px; @include Bold;}
-            }
-        }
-    }
-    
-}
-
-// 영문
-.eng-wrap{
     .grey-box{
         padding:30px 40px;
         margin-bottom:80px;
@@ -626,7 +458,6 @@
         strong{@include Bold; margin-right:15px;}
         .icon{margin-right:10px;}
     }
-
     .img-list{
         li{
             .item{
@@ -637,12 +468,28 @@
 
                     .txt{                       
                         @include Align-middle;
-                        min-height:70px;
+                        min-height:50px;
                         padding:15px;
                         margin:0;
                         color:#fff;
                         text-align: center;
                         box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// 영문
+.eng-wrap{
+    .img-list{
+        li{
+            .item{
+                .cover{
+                    .txt{                       
+                        min-height:70px;
                     }
                 }
             }

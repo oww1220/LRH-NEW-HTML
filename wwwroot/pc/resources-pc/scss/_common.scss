@@ -1021,7 +1021,6 @@ $txt-darkblack: #2f2f2f;
 .process-list{
 	@include Align-between;
 	align-items: stretch;
-	border-top:1px solid $border-grey;
 	border-bottom:1px solid $border-grey;
 
 	> li{            
@@ -1029,6 +1028,8 @@ $txt-darkblack: #2f2f2f;
 		flex:1;
 		padding:20px 5px;
 		text-align:center;
+		box-sizing: border-box;
+		border-top:1px solid $border-grey;
 
 		+ li{
 			border-left:1px solid $border-grey;
@@ -1064,7 +1065,7 @@ $txt-darkblack: #2f2f2f;
 		border-radius: 40px;
 		background-color:#8f9191;
 	}
-	.tit{display:block; font-size:16px; margin-top:20px;}
+	.tit{display:block; font-size:16px; margin-top:20px; margin-bottom:0;}
 	.txt{font-size:14px; margin-top:15px; color:#54585a}
 	.lst.txt{
 		li{
@@ -1073,7 +1074,31 @@ $txt-darkblack: #2f2f2f;
 	}
 
 	+ .lst{margin-top:30px;}
+
+
+	&.type-col4{
+		@include Align-box;
+
+		> li{
+			flex:none;
+			width:25%;
+			min-height: 160px;
+
+			&:nth-of-type(5n){
+				border-left:none;
+				&::before, &::after{display: none;}
+			}
+		}
+	}
 }
+.section-explain-type2 {
+	.explain-cont {
+		.process-list{
+			.tit{margin-bottom:0;}
+		}
+	}
+}
+
 .lst {	
 	> li{
 		position:relative;
@@ -1760,6 +1785,9 @@ $txt-darkblack: #2f2f2f;
 			background-color:#fff;
 			border:1px solid #2f2f2f;
 
+			p{
+				+ p{margin-top:10px;}
+			}
 			
 			&.align-c-type{
 				text-align:center;

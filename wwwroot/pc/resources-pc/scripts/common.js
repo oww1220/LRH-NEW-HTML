@@ -973,7 +973,9 @@ if($('.secondhand-container .carInfoAccor').length) {
         logic();
     });
 }
-if($('.secondhand-container .carInfoToggleCon').length) {
+
+//차량옵션 툴팁
+if($('.secondhand-container .carInfoTooltipCont').length) {
     MUI.event.toggle('.secondhand-container .carInfoTooltipBtn', '.secondhand-container .carInfoTooltipCont', false, function(logic, layer) {
         logic();
 
@@ -1080,6 +1082,10 @@ if($('#secondhand-slide').length) {
         var subTopSlide = MUI.slide.init('#secondhand-slide .detail-slide-gallery-top', 'swiper', {
             spaceBetween: 10,
             autoHeight:true,
+            navigation: {
+                nextEl: '.zoom-swiper-button-next',
+                prevEl: '.zoom-swiper-button-prev',
+             },
             thumbs: {
                 swiper: subTopSlideThumbs,
             },

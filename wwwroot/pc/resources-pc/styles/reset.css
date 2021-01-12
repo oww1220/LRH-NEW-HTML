@@ -1472,7 +1472,6 @@ html, body {
 	   -moz-box-align: stretch;
 	    -ms-flex-align: stretch;
 	        align-items: stretch;
-	border-top: 1px solid #e7e7e7;
 	border-bottom: 1px solid #e7e7e7;
 }
 
@@ -1485,6 +1484,10 @@ html, body {
 	        flex: 1;
 	padding: 20px 5px;
 	text-align: center;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-top: 1px solid #e7e7e7;
 }
 
 .process-list > li + li {
@@ -1569,6 +1572,7 @@ html, body {
 	display: block;
 	font-size: 16px;
 	margin-top: 20px;
+	margin-bottom: 0;
 }
 
 .process-list .txt {
@@ -1583,6 +1587,39 @@ html, body {
 
 .process-list + .lst {
 	margin-top: 30px;
+}
+
+.process-list.type-col4 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.process-list.type-col4 > li {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 25%;
+	min-height: 160px;
+}
+
+.process-list.type-col4 > li:nth-of-type(5n) {
+	border-left: none;
+}
+
+.process-list.type-col4 > li:nth-of-type(5n)::before, .process-list.type-col4 > li:nth-of-type(5n)::after {
+	display: none;
+}
+
+.section-explain-type2 .explain-cont .process-list .tit {
+	margin-bottom: 0;
 }
 
 .lst > li {
@@ -2607,6 +2644,10 @@ html, body {
 	text-align: left;
 	background-color: #fff;
 	border: 1px solid #2f2f2f;
+}
+
+.tooltip-layer .tooltip .tooltip-inner p + p {
+	margin-top: 10px;
 }
 
 .tooltip-layer .tooltip .tooltip-inner.align-c-type {
