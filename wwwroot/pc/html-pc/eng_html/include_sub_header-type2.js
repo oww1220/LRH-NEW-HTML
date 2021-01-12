@@ -9,7 +9,7 @@ $(function(){
 		<div class="header-top">
 			<div class="inner">
 				<a href="#container" class="skip_nav">본문 바로가기</a>
-				<h1><a href="#none"><img src="../../../resources-pc/images/common/logo-header.png" alt="LOTTE rental"/></a></h1>
+				<h1><a href="#none"><img src="../../../resources-pc/images/common/eng-logo-header.png" alt="LOTTE rental"/></a></h1>
 				<ul class="extra-menu">
 					<li class="layer-login-open" data-layer="layer-login"><a href="#none">로그인</a></li>
 					<li><a href="javascript:fnHpCallLpointScreen('JOIN_MEMBER')" class="lPointAutoChange">회원가입</a></li>							

@@ -5,7 +5,7 @@ $(function(){
         <!--header 컴포넌트-->
         <header class="header">
             <div class="header-top">
-                <h1 class="header-logo"><a href="#none"><i class="icon logo">롯데렌터카</i></a></h1>
+                <h1 class="header-logo"><a href="#none"><i class="icon eng-logo">LOTTE rental</i></a></h1>
                 <button type="button" class="btn-push on" data-target="push" data-on="true" data-sort="none">
                     <i class="icon push-alarm">마이페이지</i>
                     <i class="icon push-alarm-on">메세지가 있습니다</i>
