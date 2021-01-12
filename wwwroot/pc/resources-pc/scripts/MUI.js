@@ -557,7 +557,6 @@ var MUI = MUI || {
 			toast.classList.add('active');
 				if(message) toast.innerText = message;
 		},
-
 	},
 	IScrollSingle: {
 		/*아이스크롤 하나만 생성(레이어팝업용)*/
@@ -631,6 +630,49 @@ var MUI = MUI || {
 				return;
 			}
 		},
+	},
+	stickyFix: {
+		init: function(stickyOptions){
+			var StickyFix = function(){
+				this.option = stickyOptions;
+			};
+			StickyFix.prototype = {
+				option: null,
+				calculate: function() {
+					var scrollPos = window.scrollY || window.pageYOffset,
+						$target = $(this.option.target),
+						$parent = $(this.option.parent),
+						$targetScroll = $target.find(this.option.targetScroll),
+						_navHeight = this.option.navHeight,
+						targetPos = $target.offset().top,
+						parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height();
+		
+					//console.log(scrollPos, parentBottomPos, targetPos);
+		
+					if(scrollPos >= targetPos) {
+						if(scrollPos >= parentBottomPos + _navHeight){
+				
+							$target.find(this.option.targetItem).scrollTop(0);
+							$target.removeClass('fixed');
+							$target.find(this.option.targetItem).css({top: $parent.height()-$targetScroll.height() + _navHeight});
+							
+						}
+						else {
+							$target.addClass('fixed');
+							$target.find(this.option.targetItem).css({top: _navHeight});
+						}
+						
+					}
+					else{
+						$target.find(this.option.targetItem).scrollTop(0);
+						$target.removeClass('fixed');
+						$target.find(this.option.targetItem).css({top: _navHeight});
+					}
+				},
+			};
+			return new StickyFix();
+		},
+		
 	},
 	Masonry: {
 		init: function($target, option){

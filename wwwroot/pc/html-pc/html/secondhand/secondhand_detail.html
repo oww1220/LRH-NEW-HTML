@@ -683,7 +683,7 @@
 
 						<div class="section-form">
 							<div class="form-header">
-								<h3 type="button" class="tit-size-mid btn-toggle-wide carInfoToggleBtn active" data-target="carInfoToggleCont05" data-on="true" data-siblings="true">
+								<h3 type="button" class="tit-size-mid btn-toggle-wide carInfoToggleBtn active" data-target="carInfoToggleCont03" data-on="true" data-siblings="true">
 									정비이력
 								</h3>		
 								<button type="button" class="btn-link layer-carRepair-open" data-layer="layer-carRepair-info">전체보기</button>				
@@ -1256,35 +1256,26 @@
 
 		//스티키
 		if($('.car-detail-sticky-wrap').length) {
-			$(window).on('scroll', function(e) {
-				var scrollPos = window.scrollY || window.pageYOffset,
-					$target = $('.car-detail-sticky-wrap'),
-					$parent = $('.car-detail-info-section'),
-					$targetScroll = $target.find('.detail-sticky-iscroll'),
-					parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
-					_navHeight = 0,
-					targetPos = $target.offset().top;
+			(function (){
+				var stickyFixObj = new MUI.stickyFix.init({
+					target: '.car-detail-sticky-wrap', 
+					parent: '.car-detail-info-section', 
+					targetScroll: '.detail-sticky-iscroll', 
+					targetItem: '.car-detail-sticky', 
+					navHeight: 0,
+				});
+				$(window).on('scroll', function(e) {		
+					stickyFixObj.calculate();
+				});
 
-				if(scrollPos >= targetPos) {
-					if(scrollPos >= parentBottomPos + _navHeight){
-						$target.find('.car-detail-sticky').scrollTop(0);
-						$target.removeClass('fixed');
-						$target.find('.car-detail-sticky').css({top: $parent.height()-$targetScroll.height() + _navHeight});
-						
-					}
-					else {
-						$target.addClass('fixed');
-						$target.find('.car-detail-sticky').css({top: _navHeight});
-					}
-					
-				}
-				else{
-					$target.find('.car-detail-sticky').scrollTop(0);
-					$target.removeClass('fixed');
-					$target.find('.car-detail-sticky').css({top: _navHeight});
-				}
-			});
+				$('.secondhand-container .carInfoToggleBtn').on('click',function(){
+					setTimeout(function(){
+						stickyFixObj.calculate();
+					},500);
+				});
+			})();
 		}
+
 
 	});
 	</script>
