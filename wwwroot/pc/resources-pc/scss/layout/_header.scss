@@ -124,6 +124,9 @@
 			background-color: #fff;
 			border-bottom: 1px solid #EBEBEB;
 			z-index:99;
+			.draw-toggle-area{
+				position: relative;
+			}
 		}
 		.draw-toggle-wrap-all{
 			display: none;
@@ -143,8 +146,7 @@
 			display: none;
 			position: absolute;
 			width:100%;
-			/*height: 622px;*/
-			padding-bottom:90px;
+			/*padding-bottom:90px;*/
 			z-index:100;
 			.detail-layer-in {
 				@include Align-between-top;
@@ -287,40 +289,43 @@
 				background-color:#e7e7e7;
 				@include Position($top:50px, $left:20%);
 			}
-			.layer-gnb-bn{
-				width: 1420px;
-				margin: 0 auto;
-				position: relative;
-				@include Align-middle-right;
-				.view-slide {
-					margin-right:195px;
-					.specials-view-list {
+		}
+		.layer-gnb-bn{
+			width: 1420px;
+			height: 110px;
+			margin: 0 auto;
+			position: relative;
+			top: 420px;
+			@include Align-middle-right;
+			.view-slide {
+				margin-right:195px;
+				.specials-view-list {
+					width:880px;
+					height:110px;
+					.slick-slide {
+						display: inline-block;
 						width:880px;
 						height:110px;
-						.slick-slide {
-							display: inline-block;
-							width:880px;
-							height:110px;
-							vertical-align: top;
-							text-align: left;
-							a{
-								display: block;
-								position: relative;
-								.img {
-									width:100%;
-									height:110px;
-									img{
-										display:block;
-									}
+						vertical-align: top;
+						text-align: left;
+						a{
+							display: block;
+							position: relative;
+							.img {
+								width:880px;
+								height:110px;
+								img{
+									width: 100%;
+									display:block;
 								}
 							}
 						}
-						.slick-dots {
-							background-color: rgba(255, 255, 255, 0);
-							width:auto;
-							height:auto;
-							@include Position($bottom:20px, $right:20px);
-						}
+					}
+					.slick-dots {
+						background-color: rgba(255, 255, 255, 0);
+						width:auto;
+						height:auto;
+						@include Position($bottom:20px, $right:20px);
 					}
 				}
 			}
@@ -383,6 +388,11 @@
 					margin-left:110px;
 				}
 			}
+		}
+	}
+	.draw-toggle-wrap{
+		.layer-gnb-bn-e{
+			top: 0;
 		}
 	}
 	.draw-toggle-wrap-s{

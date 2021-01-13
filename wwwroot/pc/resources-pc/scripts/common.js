@@ -1459,6 +1459,18 @@ if($('.short-container .rentalFeeTab2').length){
     });
 }
 
+//대여및 요금 안내 - 요금안내의 차 종류(모바일)
+if($('.shor-wrap .rentalFeeTab').length){
+    MUI.event.taps('.shor-wrap .rentalFeeTab', false, function(swap){
+        swap();
+    });
+}
+if($('.shor-wrap .rentalFeeTab2').length){
+    MUI.event.taps('.shor-wrap .rentalFeeTab2', false, function(swap){
+        swap();
+    });
+}
+
 
 /* -------------------------------------------------단기렌터카 end*/
 
@@ -1720,6 +1732,7 @@ if($('.mypage-container .indicator-toggle-cont').length) {
         // });
    // }
 
+   /*
     $('.header .draw-btn').click(function(e){
         if($('.header .specials-view-list').length) {
             MUI.slide.init($('.header .specials-view-list'), 'slick', {
@@ -1753,6 +1766,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
         $('.layer-gnb-bn .slick-track').width('4000px');
         $('.layer-gnb-bn .slick-slide').width('1760px');
     });
+    */
+   
 
     //로딩효과
     if($(".progress-container").length) {
@@ -1835,22 +1850,60 @@ $(window).on('load', function(){
 
 });
 
-/*헤더*/
+/*헤더 GNB 마우스 오버시 메뉴 보이기, 슬라이드 작동*/
 $(function(){
     var target = $('.header .draw-btn');
+    t=0;
 
     $('.header .draw-btn-s').each(function(i){
 		$(this).on({
 			mouseenter:	function(){
+                if(t==0){
+                    $('.header .specials-view-list').slick({
+                        infinite: true,
+                        swipeToSlide: true,
+                        speed: 300,
+                        autoplay: true,
+                        dots: true,
+                        arrows: false,
+                        customPagin:0,
+                        adaptiveHeight: true,
+                    });
+                    $('.layer-gnb-bn .slick-track').width('4000px');
+                    $('.layer-gnb-bn .slick-slide').width('1760px');
+                    t=1;
+                }
                 $('.draw-toggle-wrap-s').slideDown(400);
                 $('.draw-toggle-cont').eq(i).fadeIn(400);
                 $('.bg-dimmed-h').css('display','block');
+               
             },
             focusin:	function(){
-                $('.draw-toggle-wrap-s').slideDown(400);
+                if(t==0){
+                    $('.header .specials-view-list').slick({
+                        infinite: true,
+                        swipeToSlide: true,
+                        speed: 300,
+                        autoplay: true,
+                        dots: true,
+                        arrows: false,
+                        customPagin:0,
+                        adaptiveHeight: true,
+                    });
+                    $('.layer-gnb-bn .slick-track').width('4000px');
+                    $('.layer-gnb-bn .slick-slide').width('1760px');
+                    t=1;
+                }
+                $('.draw-toggle-wrap-s').fadeIn(400);
                 $('.draw-toggle-cont').eq(i).fadeIn(400);
                 $('.bg-dimmed-h').css('display','block');
+                t=1;
             },
+            focusout: function(){
+                $('.draw-toggle-wrap-s').fadeOut(400);
+                $('.draw-toggle-cont').eq(i).fadeOut(400);
+                $('.bg-dimmed-h').css('display','none');
+            }
         });	
         
     });
@@ -1889,22 +1942,21 @@ $(function(){
             $('.draw-toggle-cont').fadeIn(400);
             $('.bg-dimmed-h').css('display','block');
         },
+        focusout:	function(){
+            $('.draw-toggle-wrap-all').slideUp(400);
+            $('.draw-toggle-cont').fadeOut(400);
+            $('.bg-dimmed-h').css('display','none');
+        }
     });
 
-    $('.draw-toggle-cont').each(function(i){
+    $('.draw-toggle-wrap, .draw-toggle-wrap-all').each(function(i){
         $(this).on({
              mouseleave: function(){
                 $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
-                $('.draw-toggle-cont').eq(i).fadeOut(400);
-                $('.draw-toggle-wrap-all').fadeOut(400);
+               // $('.draw-toggle-cont').eq(i).fadeOut(400);
+                $('.draw-toggle-wrap, .draw-toggle-wrap-all').fadeOut(400);
                 $('.bg-dimmed-h').css('display','none');
             },
-            focusout: function(){
-                $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
-                $('.draw-toggle-cont').eq(i).fadeOut(400);
-                $('.draw-toggle-wrap-all').fadeOut(400);
-                $('.bg-dimmed-h').css('display','none');
-            }
         });	
     });
 
