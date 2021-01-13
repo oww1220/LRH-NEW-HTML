@@ -180,17 +180,18 @@ $(function(){
 
     //tooltip 토글
     if($('.btn-tooltip-box-group').length){
-        MUI.event.toggle('.btn-tooltip-box', null, true, function(logic, layer) {
+        MUI.event.toggle('.btn-tooltip-box', '.btn-tooltip-box-group .tooltip-box', true, function(logic, layer) {
             //$('.btn-tooltip-box').next('.tooltip-box').addClass('active');
             //$('.btn-tooltip-box').next('.tooltip-box.active').prev('.btn-tooltip-box').addClass('active');
             logic();
         });
+        /*
         $('.btn-tooltip-box').focusout(function(){
             var $layer = $('.' + $(this).data('target'));
             $layer.hide();
             $('.tooltip-box').removeClass('active');
             $('.btn-tooltip-box').removeClass('active');
-        });
+        });*/
     }
 
 
