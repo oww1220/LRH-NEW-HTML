@@ -1611,6 +1611,14 @@ if($('.eng-shor-wrap').length){
             swap();
         });
     }
+
+    //약관 열고 닫기
+if($('.footerMenu-wrap').length){
+    MUI.event.toggle('.footerMenu-wrap .prov-toggle-btn', '.footerMenu-wrap .prov-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
 /* -------------------------------------------------FooterMenu end*/
 
     //fixed bottom이 있을시 하단 푸터 높이값 수정
