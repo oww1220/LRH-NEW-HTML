@@ -463,9 +463,33 @@ html, body {
 }
 
 .section-explain .explain-cont .tbl-box table, .section-explain-type2 .explain-cont .tbl-box table {
+	position: relative;
 	width: 100%;
 	border-top: 1px solid #e7e7e7;
 	word-break: break-word;
+}
+
+.section-explain .explain-cont .tbl-box table::before, .section-explain .explain-cont .tbl-box table::after, .section-explain-type2 .explain-cont .tbl-box table::before, .section-explain-type2 .explain-cont .tbl-box table::after {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 100%;
+	background-color: #fff;
+	z-index: 5;
+}
+
+.section-explain .explain-cont .tbl-box table::before, .section-explain-type2 .explain-cont .tbl-box table::before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.section-explain .explain-cont .tbl-box table::after, .section-explain-type2 .explain-cont .tbl-box table::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table td {
@@ -490,10 +514,6 @@ html, body {
 
 .section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst, .section-explain-type2 .explain-cont .tbl-box table th p + .lst, .section-explain-type2 .explain-cont .tbl-box table td p + .lst {
 	margin-top: 10px;
-}
-
-.section-explain .explain-cont .tbl-box table thead th:last-of-type, .section-explain .explain-cont .tbl-box table td:last-of-type, .section-explain-type2 .explain-cont .tbl-box table thead th:last-of-type, .section-explain-type2 .explain-cont .tbl-box table td:last-of-type {
-	border-right: none;
 }
 
 .section-explain .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table th {
@@ -1429,6 +1449,37 @@ html, body {
 	margin-left: 56px;
 }
 
+.multi-segment-list .details .tit {
+	margin-bottom: 0;
+}
+
+.multi-segment-list .details .tit + .lst, .multi-segment-list .details .tit + .txt {
+	margin-top: 25px;
+}
+
+.multi-segment-list .details .details-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-bottom: 25px;
+}
+
+.multi-segment-list .details .details-header .tit + .btns {
+	margin-left: 10px;
+}
+
 .multi-segment-list.type-col2 {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1449,6 +1500,24 @@ html, body {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+}
+
+.multi-segment-list.align-top > li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 }
 
 .process-list {
@@ -10779,13 +10848,16 @@ html, body {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-justify-content: space-around;
-	    -ms-flex-pack: distribute;
-	        justify-content: space-around;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
 	padding-bottom: 40px;
 }
 
 .secondhand-container .carOpt-section .row .img-type-list li {
+	width: -webkit-calc(100% / 8);
+	width: -moz-calc(100% / 8);
+	width: calc(100% / 8);
 	text-align: center;
 }
 
@@ -11193,6 +11265,112 @@ html, body {
 	-webkit-background-size: auto auto;
 	   -moz-background-size: auto;
 	        background-size: auto;
+}
+
+.secondhand-container.succession-info-container .round-banner {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images//bg-secondhandSuccessionInfo.png");
+	background-position: 0 0;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.secondhand-container.succession-info-container .check-statement-area {
+	padding-top: 28px;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement {
+	position: relative;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	text-align: center;
+	padding: 30px 120px;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement > .tit {
+	position: absolute;
+	top: -28px;
+	right: 0;
+	left: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	width: 560px;
+	height: 55px;
+	color: #fff;
+	-webkit-border-radius: 30px;
+	   -moz-border-radius: 30px;
+	        border-radius: 30px;
+	margin: 0 auto;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement > .tit .icon {
+	margin-left: 10px;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement > .tit + p {
+	margin-top: 30px;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement > div {
+	padding: 40px 0;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement > div strong + p {
+	margin-top: 20px;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement > div strong + p span {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement > div + div {
+	border-top: 1px solid #e7e7e7;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement.grey-type {
+	background-color: #fafafa;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement.grey-type > .tit {
+	background-color: #8f9191;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement.pink-type {
+	background-color: #fff9f9;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement.pink-type > .tit {
+	background-color: #ff404b;
+}
+
+.secondhand-container.succession-info-container .check-statement-area .statement + .statement {
+	margin-top: 110px;
+}
+
+.secondhand-container.succession-info-container .check-statement-area + .lst {
+	margin-top: 20px;
 }
 
 .short-container .section-counsel {
@@ -12125,67 +12303,6 @@ html, body {
 	padding: 40px 0;
 }
 
-.short-container .mileage-section .asiana-box, .short-container .mileage-section .koreanair-box {
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	   -moz-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	height: 160px;
-	border: 1px solid #e6e6e6;
-	margin-bottom: 40px;
-}
-
-.short-container .mileage-section .asiana-box .btn, .short-container .mileage-section .koreanair-box .btn {
-	width: auto;
-}
-
-.short-container .mileage-section .koreanair-box {
-	margin-top: 60px;
-}
-
-.short-container .smartpick-section .tel-box, .short-container .courtesyCar-section .tel-box {
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	   -moz-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	font-size: 18px;
-	padding: 40px;
-	margin-bottom: 30px;
-	background-color: #fafafa;
-}
-
 .short-container .qna-section .qna-lst .accor-header {
 	border-bottom: 1px solid #e7e7e7;
 }
@@ -12647,6 +12764,24 @@ html, body {
 	        background-size: auto;
 }
 
+.short-container.monthly-info-container .round-banner {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images//bg-shortMonthlyInfo.png");
+	background-position: 0 0;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.short-container.driver-info-container .round-banner {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images//bg-shortDriverInfo.png");
+	background-position: 0 0;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
 .short-container .hertz-section {
 	text-align: center;
 }
@@ -12737,25 +12872,6 @@ html, body {
 	font-weight: normal;
 	font-size: 16px;
 	color: #ed1c24;
-}
-
-.short-container .explain-cont .tel-item {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	margin-left: 30px;
-	color: #ed1c24;
-	font-size: 18px;
-}
-
-.short-container .explain-cont .tel-item .tel {
-	width: 23px;
-	height: 23px;
-	margin-right: 10px;
-	-webkit-background-size: contain;
-	   -moz-background-size: contain;
-	        background-size: contain;
 }
 
 .short-container .car-srch-area {
@@ -17233,13 +17349,13 @@ html, body {
 	right: 24px;
 }
 
-.carLife-container .grey-box {
+.carLife-container.auto-container .grey-box {
 	padding: 30px 40px;
 	margin-bottom: 80px;
 	color: #54585a;
 }
 
-.carLife-container .grey-box strong {
+.carLife-container.auto-container .grey-box strong {
 	font-family: "ManropeB", "NotoM", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -17247,15 +17363,15 @@ html, body {
 	margin-right: 15px;
 }
 
-.carLife-container .grey-box .icon {
+.carLife-container.auto-container .grey-box .icon {
 	margin-right: 10px;
 }
 
-.carLife-container .img-list li .item {
+.carLife-container.auto-container .img-list li .item {
 	position: relative;
 }
 
-.carLife-container .img-list li .item .cover {
+.carLife-container.auto-container .img-list li .item .cover {
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -17263,7 +17379,7 @@ html, body {
 	background-color: #54585a;
 }
 
-.carLife-container .img-list li .item .cover .txt {
+.carLife-container.auto-container .img-list li .item .cover .txt {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -17284,6 +17400,264 @@ html, body {
 	margin: 0;
 	color: #fff;
 	text-align: center;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.carLife-container.auto-container .location-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 60px;
+	background-color: #fafafa;
+}
+
+.carLife-container.auto-container .location-area .location {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 588px;
+	-webkit-flex-basis: 588px;
+	    -ms-flex-preferred-size: 588px;
+	        flex-basis: 588px;
+}
+
+.carLife-container.auto-container .location-area .infos {
+	padding: 40px;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-header {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-header .infos-header-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-header .infos-header-row dt, .carLife-container.auto-container .location-area .infos .infos-header .infos-header-row dd {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	   -moz-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-header .infos-header-row dt {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 200px;
+	-webkit-flex-basis: 200px;
+	    -ms-flex-preferred-size: 200px;
+	        flex-basis: 200px;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-header .infos-header-row dd {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	color: #54585a;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-header .infos-header-row + .infos-header-row {
+	margin-top: 20px;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-header .lst {
+	margin-top: 20px;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-cont {
+	margin-top: 20px;
+}
+
+.carLife-container.auto-container .location-area .infos .infos-cont strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.carLife-container.auto-container .location-area .infos .lst {
+	margin: 0;
+}
+
+.carLife-container.auto-container .location-area .infos .lst li + li {
+	margin-top: 20px;
+}
+
+.carLife-container.auto-container .box-align {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.carLife-container.auto-container .box-align .video-box {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	-webkit-flex-basis: 590px;
+	    -ms-flex-preferred-size: 590px;
+	        flex-basis: 590px;
+	width: 590px;
+	height: 440px;
+}
+
+.carLife-container.auto-container .box-align .video-box iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.carLife-container.auto-container .box-align .step-infos {
+	padding-left: 80px;
+}
+
+.carLife-container.auto-container .box-align .step-infos li .tit {
+	display: block;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.carLife-container.auto-container .box-align .step-infos li .tit .txt {
+	font-size: 14px;
+	color: #54585a;
+}
+
+.carLife-container.auto-container .box-align .step-infos li .tit + .txt {
+	margin-top: 20px;
+}
+
+.carLife-container.auto-container .box-align .step-infos li + li {
+	margin-top: 50px;
+}
+
+.carLife-container.auto-container .auto-between-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	width: -webkit-calc(100% + 20px);
+	width: -moz-calc(100% + 20px);
+	width: calc(100% + 20px);
+	margin-bottom: 120px;
+}
+
+.carLife-container.auto-container .auto-between-box .between-col {
+	width: 50%;
+	padding-right: 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.carLife-container.auto-container .auto-between-box .between-col > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 40px;
+	min-height: 206px;
+	background-color: #fbf6f1;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.carLife-container.auto-container .auto-between-box .between-col > div .statement {
+	padding-left: 40px;
+}
+
+.carLife-container.auto-container .auto-between-box .between-col > div .statement .tit {
+	font-size: 20px;
+}
+
+.carLife-container.auto-container .auto-between-box .between-col > div .statement .txt {
+	font-size: 14px;
+	color: #54585a;
+	margin-top: 20px;
+}
+
+.carLife-container.auto-container .multi-segment-list .details .tit-size-mid + .strong-tit, .carLife-container.auto-container .multi-segment-list .details .tit-size-mid + .box-between {
+	margin-top: 25px;
+}
+
+.carLife-container.auto-container .multi-segment-list .details .strong-tit {
+	display: block;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.carLife-container.auto-container .multi-segment-list .details .strong-tit + .lst, .carLife-container.auto-container .multi-segment-list .details .strong-tit + .txt {
+	margin-top: 15px;
+}
+
+.carLife-container.auto-container .multi-segment-list .details .box-between .box-between-col {
+	width: 424px;
+	padding-right: 60px;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;

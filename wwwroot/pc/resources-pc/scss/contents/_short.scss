@@ -481,29 +481,32 @@
             }
         }
     }    
-    .mileage-section{
-        .asiana-box, .koreanair-box{
-            @include roundBox;
-            @include Align-middle;
-            height:160px;
-            border:1px solid #e6e6e6;
-            margin-bottom:40px;
 
-            .btn{width:auto;}
-        }
-        .koreanair-box{margin-top:60px;}
-    }
-    .smartpick-section, .courtesyCar-section {
-        .tel-box{
-            @include roundBox;
-            @include Align-middle;
-            @include Bold;
-            font-size:18px;
-            padding:40px;
-            margin-bottom:30px;
-            background-color:#fafafa;
-        }
-    }
+    //20210113 : 디자인 현행화로 인해 사용 안하는 스타일 주석
+    // .mileage-section{
+    //     .asiana-box, .koreanair-box{
+    //         @include roundBox;
+    //         @include Align-middle;
+    //         height:160px;
+    //         border:1px solid #e6e6e6;
+    //         margin-bottom:40px;
+
+    //         .btn{width:auto;}
+    //     }
+    //     .koreanair-box{margin-top:60px;}
+    // }
+    // .smartpick-section, .courtesyCar-section {
+    //     .tel-box{
+    //         @include roundBox;
+    //         @include Align-middle;
+    //         @include Bold;
+    //         font-size:18px;
+    //         padding:40px;
+    //         margin-bottom:30px;
+    //         background-color:#fafafa;
+    //     }
+    // }
+    
     .qna-section{
         .qna-lst{
             .accor-header{                
@@ -736,6 +739,20 @@
             @include Background($sprite: 'bg-shortInfoCourtesyCar', $path:'');
         }
     }
+
+    //월간 단기렌터카 안내
+    &.monthly-info-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortMonthlyInfo', $path:'');
+        }
+    }
+
+    //기사포함 렌터카 안내
+    &.driver-info-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortDriverInfo', $path:'');
+        }
+    }
     
     //해외렌터카
     .hertz-section{
@@ -777,24 +794,7 @@
        }
     }
 
-    //기사포함 렌터카 안내
-    .explain-cont{
-        
-        .tel-item{
-            @include Bold;
-            margin-left:30px;
-            color: $txt-red;
-            font-size:18px;
-
-            .tel{
-                width:23px; 
-                height:23px; 
-                margin-right:10px; 
-                background-size:contain;
-            }
-        }
     
-    }
     //기사포함 - 상담신청
     .car-srch-area{
         max-width:730px;
