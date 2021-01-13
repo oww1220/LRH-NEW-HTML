@@ -282,10 +282,10 @@ var MUI = MUI || {
 			$(window).scrollTop(that.scrollTop);
 			//console.log(layer === '.layer-wrap');
 			if((layer === '.layer-wrap')) {
-				if(!$(dimmed).hasClass ('type-popup')) {
-					$('.layer-full').addClass('active');
-					$('.layer-full').css({opacity:1});
-				}
+				//if(!$(dimmed).hasClass ('type-popup')) {
+					//$('.layer-full').addClass('active');
+					//$('.layer-full').css({opacity:1});
+				//}
 				$('.layer-slide').removeClass('active');
 				setTimeout(function(){
 					$('.layer-slide').css({opacity:0});
