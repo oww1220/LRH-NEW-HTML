@@ -560,7 +560,7 @@ $(function(){
 										<p><a href="#"><b>#카라이프</b></a></p>
 									</li>
 									<li>
-										<p><a href="#">즐거움을 #타봥</a></p>
+										<p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p>
 									</li>
 									<li>
 										<p><a href="#">제주오토하우스</a></p>
