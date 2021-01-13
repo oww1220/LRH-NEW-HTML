@@ -47,6 +47,7 @@ $(function(){
                         <li><a href="#"><b>개인정보 처리방침</b></a></li>
                         <li><a href="#"><b>영상정보처리기기 운영관리방침</b></a></li>
                         <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이메일주소무단수집거부</a></li>
                     </ul>
                 </div>
                 <div class="footer-sns">
