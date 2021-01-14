@@ -463,9 +463,33 @@ html, body {
 }
 
 .section-explain .explain-cont .tbl-box table, .section-explain-type2 .explain-cont .tbl-box table {
+	position: relative;
 	width: 100%;
 	border-top: 1px solid #e7e7e7;
 	word-break: break-word;
+}
+
+.section-explain .explain-cont .tbl-box table::before, .section-explain .explain-cont .tbl-box table::after, .section-explain-type2 .explain-cont .tbl-box table::before, .section-explain-type2 .explain-cont .tbl-box table::after {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 100%;
+	background-color: #fff;
+	z-index: 5;
+}
+
+.section-explain .explain-cont .tbl-box table::before, .section-explain-type2 .explain-cont .tbl-box table::before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.section-explain .explain-cont .tbl-box table::after, .section-explain-type2 .explain-cont .tbl-box table::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table td {
@@ -490,10 +514,6 @@ html, body {
 
 .section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst, .section-explain-type2 .explain-cont .tbl-box table th p + .lst, .section-explain-type2 .explain-cont .tbl-box table td p + .lst {
 	margin-top: 10px;
-}
-
-.section-explain .explain-cont .tbl-box table thead th:last-of-type, .section-explain .explain-cont .tbl-box table td:last-of-type, .section-explain-type2 .explain-cont .tbl-box table thead th:last-of-type, .section-explain-type2 .explain-cont .tbl-box table td:last-of-type {
-	border-right: none;
 }
 
 .section-explain .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table th {
@@ -1429,6 +1449,37 @@ html, body {
 	margin-left: 56px;
 }
 
+.multi-segment-list .details .tit {
+	margin-bottom: 0;
+}
+
+.multi-segment-list .details .tit + .lst, .multi-segment-list .details .tit + .txt {
+	margin-top: 25px;
+}
+
+.multi-segment-list .details .details-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-bottom: 25px;
+}
+
+.multi-segment-list .details .details-header .tit + .btns {
+	margin-left: 10px;
+}
+
 .multi-segment-list.type-col2 {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1449,6 +1500,24 @@ html, body {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+}
+
+.multi-segment-list.align-top > li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 }
 
 .process-list {

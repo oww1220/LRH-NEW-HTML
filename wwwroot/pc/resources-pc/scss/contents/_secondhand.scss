@@ -1586,10 +1586,12 @@
 
             .tit-size-def{margin-bottom:40px;}
             .img-type-list{
-                @include Align-around;
+                //@include Align-around;
+                @include Align-box;
                 padding-bottom:40px;
 
                 li{
+                    width: calc(100% / 8);
                     text-align:center;
                     .icon {
                         width:110px;
@@ -1800,6 +1802,62 @@
     &.sellInfo-container{
         .round-banner{
             @include Background($sprite: 'bg-secondhandSellInfo', $path:'');
+        }
+    }
+
+    //중고차 승계렌터카
+    &.succession-info-container{
+        .round-banner{
+            @include Background($sprite: 'bg-secondhandSuccessionInfo', $path:'');
+        }
+        .check-statement-area{
+            padding-top:28px;
+
+            .statement{
+                position:relative;
+                @include roundBox;
+                text-align:center;
+                padding:30px 120px;
+    
+                > .tit{
+                    @include Position($top:-28px, $left:0, $right:0);
+                    @include Align-middle;
+                    @include Bold;
+                    width:560px;
+                    height:55px;
+                    color:#fff;
+                    border-radius:30px;
+                    margin:0 auto;
+    
+                    .icon{margin-left:10px;}
+                    + p{margin-top: 30px;}
+                }
+                > div{
+                    padding:40px 0;
+                    strong{
+                        + p{
+                            margin-top:20px; 
+                            span{@include Bold;}
+                        }
+                    }
+                    + div{border-top:1px solid $border-grey;}
+                }
+                &.grey-type{
+                    background-color:#fafafa;
+                    > .tit{
+                        background-color:#8f9191;
+                    }
+                }    
+                &.pink-type{
+                    background-color:#fff9f9;
+                    > .tit{
+                        background-color:#ff404b;
+                    }
+                }
+
+                + .statement{margin-top:110px;}
+            }
+            + .lst{margin-top:20px;}
         }
     }
     

@@ -645,16 +645,19 @@ var MUI = MUI || {
 						$targetScroll = $target.find(this.option.targetScroll),
 						_navHeight = this.option.navHeight,
 						targetPos = $target.offset().top,
+						noTargetHeight = this.option.noTargetHeight ? $(this.option.noTargetHeight).height() : 0;
 						parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height();
 		
 					//console.log(scrollPos, parentBottomPos, targetPos);
+
+					if(this.option.parentMinHeight) $parent.css({'min-height': this.option.parentMinHeight});
 		
 					if(scrollPos >= targetPos) {
 						if(scrollPos >= parentBottomPos + _navHeight){
 				
 							$target.find(this.option.targetItem).scrollTop(0);
 							$target.removeClass('fixed');
-							$target.find(this.option.targetItem).css({top: $parent.height()-$targetScroll.height() + _navHeight});
+							$target.find(this.option.targetItem).css({top: $parent.height()-$targetScroll.height()- noTargetHeight + _navHeight});
 							
 						}
 						else {

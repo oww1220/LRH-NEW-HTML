@@ -1219,6 +1219,7 @@ if($('.agreeAccor').length){
 }
 
 //단기렌터카 실시간 예약 - 약관,결제/lnb 
+/*
 if($('.section-sticky-lnb').length) {
     $(window).on('scroll', function(e) {
         var scrollPos = window.scrollY || window.pageYOffset,
@@ -1256,6 +1257,7 @@ if($('.section-sticky-lnb').length) {
         }
     });
 }
+*/
 
 
 //단기렌터카 실시간 예약 - 결제/나의등록카드

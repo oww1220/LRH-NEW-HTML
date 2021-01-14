@@ -450,29 +450,160 @@
 
 
     //제주오투하우스
-    .grey-box{
-        padding:30px 40px;
-        margin-bottom:80px;
-        color:#54585a;
 
-        strong{@include Bold; margin-right:15px;}
-        .icon{margin-right:10px;}
-    }
-    .img-list{
-        li{
-            .item{
-                position: relative;
-                .cover{
-                    @include Position($left:0, $right:0, $bottom:0);
-                    background-color:#54585a;
+    &.auto-container{
+        .grey-box{
+            padding:30px 40px;
+            margin-bottom:80px;
+            color:#54585a;
 
-                    .txt{                       
-                        @include Align-middle;
-                        min-height:50px;
-                        padding:15px;
-                        margin:0;
-                        color:#fff;
-                        text-align: center;
+            strong{@include Bold; margin-right:15px;}
+            .icon{margin-right:10px;}
+        }
+        .img-list{
+            li{
+                .item{
+                    position: relative;
+                    .cover{
+                        @include Position($left:0, $right:0, $bottom:0);
+                        background-color:#54585a;
+
+                        .txt{                       
+                            @include Align-middle;
+                            min-height:50px;
+                            padding:15px;
+                            margin:0;
+                            color:#fff;
+                            text-align: center;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+        .location-area{
+            @include Align-between;
+            margin-top:60px;
+            background-color:#fafafa;
+
+            .location{
+                flex:none;
+                width:588px;
+                flex-basis: 588px;
+            }
+            .infos{
+                padding:40px;
+                .infos-header{
+                    padding-bottom:20px;
+                    border-bottom:1px solid $border-grey;
+
+                    .infos-header-row{
+                        @include Align-middle-left;
+
+                        dt, dd{flex:1;}
+                        dt{
+                            @include Bold;
+                            flex:none;
+                            width:200px;
+                            flex-basis: 200px;
+                        }
+                        dd{
+                            @include Align-between;
+                            color:#54585a;
+                        }
+                    
+                        + .infos-header-row{margin-top:20px;}
+                    }
+                    .lst{margin-top:20px;}
+                }
+                .infos-cont{
+                    margin-top:20px;
+
+                    strong{@include Bold;}
+                }
+                .lst{
+                    margin:0;
+
+                    li{
+                    + li{margin-top:20px;} 
+                    }
+                }
+            }
+        }
+        .box-align{
+            display:flex;
+            .video-box{
+                flex:none;
+                flex-basis:590px;
+                width:590px;
+                height:440px;
+
+                iframe{width:100%; height:100%;}
+            }
+            .step-infos{
+                padding-left:80px;
+                li{
+                    .tit{
+                        display:block;
+                        @include Bold;
+                        font-size:16px;
+                        margin-bottom:0;
+
+                        .txt{@include txtSetting;}
+                        + .txt{
+                            margin-top:20px;
+                        }
+                    }
+
+                    +  li{margin-top:50px;}
+                }
+            }
+        }
+        .auto-between-box{
+            @include Align-box;
+            width: calc(100% + 20px);
+            margin-bottom:120px;
+            
+            .between-col{
+                width:50%; 
+                padding-right:20px;
+                box-sizing: border-box;
+
+                > div{
+                    @include Align-middle-left;
+                    padding:40px;
+                    min-height:206px;
+                    background-color:#fbf6f1;
+                    box-sizing: border-box;
+                    
+                    .statement{
+                        padding-left:40px;
+
+                        .tit{font-size:20px;}
+                        .txt{
+                            @include txtSetting;
+                            margin-top:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .multi-segment-list{
+            .details{
+                .tit-size-mid{
+                    + .strong-tit, + .box-between{margin-top:25px;}    
+                }
+                .strong-tit{
+                    display:block;
+                    @include Bold; 
+                    font-size:16px;
+
+                    + .lst, + .txt{margin-top:15px;}
+                }
+                .box-between{
+                    .box-between-col{
+                        width:424px;
+                        padding-right:60px;
                         box-sizing: border-box;
                     }
                 }

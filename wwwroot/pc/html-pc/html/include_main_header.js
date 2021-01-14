@@ -19,9 +19,9 @@ $(function(){
 		</div>
 		<!--//해더상단-->
 
-        <!--해더네비-->
-        <!-- 개발참조사항 - 메인 gnb 적용에서만 header-nav-line 삭제 해 주세요 -->
-		<nav class="header-nav">
+		<!--해더네비-->
+		<!-- 개발참조사항 - 메인 gnb 적용에서만 header-nav-line 삭제 해 주세요 -->
+		<nav class="header-nav header-nav-line">
 			<div class="inner">
 				<div class="nav-wrap">
 					<h1><a href="#none"><img src="../../../resources-pc/images/common/logo-header.png" alt="대한민국 No1.롯데렌터카"/></a></h1>
@@ -62,401 +62,296 @@ $(function(){
 			<!--- 드롭다운 메뉴 추가-->
 			<div class="draw-toggle-wrap draw-toggle-wrap-s">
 				<!-- 헤더 2뎁스 메뉴 - 렌터카 예약 - 로그인 했을때 -->
-				<div class="draw-toggle-cont draw-cont-01">
-					<div class="detail-layer-in">
-						<div class="layer-gnb-info">
-							<div class="layer-gnb-info-top">
-								<p><span>김롯데님</span></p>
-								<p><b>환영합니다.</b></p>
+				<div class="draw-toggle-area">
+					<div class="draw-toggle-cont draw-cont-01">
+						<div class="detail-layer-in">
+							<div class="layer-gnb-info">
+								<div class="layer-gnb-info-top">
+									<p><span>김롯데님</span></p>
+									<p><b>환영합니다.</b></p>
+								</div>
+								<ul class="layer-gnb-link">
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag point">P</i>포인트
+											</div>
+											<div class="link-btn-align-right">
+												<b>1,800</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag coupon">C</i>쿠폰
+											</div>
+											<div class="link-btn-align-right">
+												<b>12</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+								</ul>
 							</div>
-							<ul class="layer-gnb-link">
+							<ul class="layer-gnb list-type-col4">
 								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag point">P</i>포인트
-										</div>
-										<div class="link-btn-align-right">
-											<b>1,800</b><i class="icon next02"></i>
-										</div>
-									</button>
+									<p><a href="#">실시간예약</a></p>
 								</li>
 								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag coupon">C</i>쿠폰
-										</div>
-										<div class="link-btn-align-right">
-											<b>12</b><i class="icon next02"></i>
-										</div>
-									</button>
+									<p><a href="#">단기렌터카안내</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">대여 및 요금안내</a></li>
+											<li><a href="#">체크인서비스</a></li>
+											<li><a href="#">부가서비스안내</a></li>
+											<li><a href="#">펫카상품안내</a></li>
+											<li><a href="#">보험대차서비스</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">월간렌터카</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">월간렌터카란</a></li>
+											<li><a href="#">신청하기</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">기사포함렌터카</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">기사포함렌터카란</a></li>
+											<li><a href="#">신청하기</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">해외렌터카</a></p>
 								</li>
 							</ul>
 						</div>
-						<ul class="layer-gnb list-type-col4">
-							<li>
-								<p><a href="#">실시간예약</a></p>
-							</li>
-							<li>
-								<p><a href="#">단기렌터카안내</a></p>
-								<div class="layer-gnb-list">
-									<ul>
-										<li><a href="#">대여 및 요금안내</a></li>
-										<li><a href="#">체크인서비스</a></li>
-										<li><a href="#">부가서비스안내</a></li>
-										<li><a href="#">펫카상품안내</a></li>
-										<li><a href="#">보험대차서비스</a></li>
-									</ul>
+					</div>
+					<!-- //헤더 2뎁스 메뉴 - 렌터카 예약 - 로그인 했을때 -->
+	
+					<!-- 헤더 2뎁스 메뉴 - 신차장 - 로그인 안했을때 -->
+					<div class="draw-toggle-cont draw-cont-02">
+						<div class="detail-layer-in">
+							<div class="layer-gnb-info">
+								<div class="layer-gnb-info-top">
+									<p><span><a href="#">로그인</a></span></p>
+									<p><b>해주세요!</b></p>
 								</div>
-							</li>
-							<li>
-								<p><a href="#">월간렌터카</a></p>
-								<div class="layer-gnb-list">
-									<ul>
-										<li><a href="#">월간렌터카란</a></li>
-										<li><a href="#">신청하기</a></li>
-									</ul>
+							</div>
+							<ul class="layer-gnb list-type-col4">
+								<li>
+									<p><a href="#">다이렉트 견적</a></p>
+								</li>
+								<li>
+									<p><a href="#">신차장 특가</a></p>
+								</li>
+								<li>
+									<p><a href="#">신차장 멤버십</a></p>
+								</li>
+								<li>
+									<p><a href="#">장기렌터카 안내</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">개인 장기렌터카</a></li>
+											<li><a href="#">법인 장기렌터카</a></li>
+											<li><a href="#">전기차 장기렌터카</a></li>
+											<li><a href="#">제휴카드 안내</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">신차장 친구추천</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //헤더 2뎁스 메뉴 - 신차장 - 로그인 안했을때 -->
+	
+					<!-- 헤더 2뎁스 메뉴 - 중고차장기 - 로그인 했을때 -->
+					<div class="draw-toggle-cont draw-cont-03">
+						<div class="detail-layer-in">
+							<div class="layer-gnb-info">
+								<div class="layer-gnb-info-top">
+									<p><span>김롯데님</span></p>
+									<p><b>환영합니다.</b></p>
 								</div>
-							</li>
-							<li>
-								<p><a href="#">기사포함렌터카</a></p>
-								<div class="layer-gnb-list">
-									<ul>
-										<li><a href="#">기사포함렌터카란</a></li>
-										<li><a href="#">신청하기</a></li>
-									</ul>
+								<ul class="layer-gnb-link">
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag point">P</i>포인트
+											</div>
+											<div class="link-btn-align-right">
+												<b>1,800</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag coupon">C</i>쿠폰
+											</div>
+											<div class="link-btn-align-right">
+												<b>12</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+								</ul>
+							</div>
+							<ul class="layer-gnb list-type-col4">
+								<li>
+									<p><a href="#">중고차 장기렌터카</a></p>
+								</li>
+								<li>
+									<p><a href="#">중고차 승계렌터카</a></p>
+								</li>
+								<li>
+									<p><a href="#">내 차 팔기 서비스</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //헤더 2뎁스 메뉴 - 중고차장기 - 로그인 했을때 -->
+	
+					<!-- 헤더 2뎁스 메뉴 - #카라이프 - 로그인 했을때 -->
+					<div class="draw-toggle-cont draw-cont-04">
+						<div class="detail-layer-in">
+							<div class="layer-gnb-info">
+								<div class="layer-gnb-info-top">
+									<p><span>김롯데님</span></p>
+									<p><b>환영합니다.</b></p>
 								</div>
+								<ul class="layer-gnb-link">
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag point">P</i>포인트
+											</div>
+											<div class="link-btn-align-right">
+												<b>1,800</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag coupon">C</i>쿠폰
+											</div>
+											<div class="link-btn-align-right">
+												<b>12</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+								</ul>
+							</div>
+							<ul class="layer-gnb list-type-col4">
+								<li>
+									<p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p>
+								</li>
+								<li>
+									<p><a href="#">제주도 오토하우스</a></p>
+								</li>
+								<li>
+									<p><a href="#">이벤트</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">진행중인이벤트</a></li>
+											<li><a href="#">당첨자발표</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //헤더 2뎁스 메뉴 - #카라이프 - 로그인 했을때 -->
+	
+					<!-- 헤더 2뎁스 메뉴 - 고객지원 - 로그인 했을때 -->
+					<div class="draw-toggle-cont draw-cont-05">
+						<div class="detail-layer-in">
+							<div class="layer-gnb-info">
+								<div class="layer-gnb-info-top">
+									<p><span>김롯데님</span></p>
+									<p><b>환영합니다.</b></p>
+								</div>
+								<ul class="layer-gnb-link">
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag point">P</i>포인트
+											</div>
+											<div class="link-btn-align-right">
+												<b>1,800</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn">
+											<div class="link-btn-align-left">
+												<i class="flag coupon">C</i>쿠폰
+											</div>
+											<div class="link-btn-align-right">
+												<b>12</b><i class="icon next02"></i>
+											</div>
+										</button>
+									</li>
+								</ul>
+							</div>
+							<ul class="layer-gnb list-type-col4">
+								<li>
+									<p><a href="#">고객센터</a></p>
+								</li>
+								<li>
+									<p><a href="#">공지사항/뉴스</a></p>
+								</li>
+								<li>
+									<p><a href="#">지점 안내</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">전국지점안내</a></li>
+											<li><a href="#">기사포함지점안내</a></li>
+											<li><a href="#">해외지점안내</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //헤더 2뎁스 메뉴 - 고객지원 - 로그인 했을때 -->
+				</div>
+				
+				<div class="layer-gnb-bn">
+					<div class="view-slide">
+						<ul class="specials-view-list">
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="../../../resources-pc/images/testbn01.jpg" alt="더미1">
+									</div>
+								</a>
 							</li>
 							<li>
-								<p><a href="#">해외렌터카</a></p>
+								<a href="#">
+									<div class="img">
+										<img src="../../../resources-pc/images/testbn02.jpg" alt="더미1">
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="../../../resources-pc/images/testbn03.jpg" alt="더미1">
+									</div>
+								</a>
 							</li>
 						</ul>
 					</div>
-					<div class="layer-gnb-bn">
-						<div class="view-slide">
-							<ul class="specials-view-list">
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</div>
-				<!-- //헤더 2뎁스 메뉴 - 렌터카 예약 - 로그인 했을때 -->
-
-				<!-- 헤더 2뎁스 메뉴 - 신차장 - 로그인 안했을때 -->
-				<div class="draw-toggle-cont draw-cont-02">
-					<div class="detail-layer-in">
-						<div class="layer-gnb-info">
-							<div class="layer-gnb-info-top">
-								<p><span><a href="#">로그인</a></span></p>
-								<p><b>해주세요!</b></p>
-							</div>
-						</div>
-						<ul class="layer-gnb list-type-col4">
-							<li>
-								<p><a href="#">다이렉트 견적</a></p>
-							</li>
-							<li>
-								<p><a href="#">신차장 특가</a></p>
-							</li>
-							<li>
-								<p><a href="#">신차장 멤버십</a></p>
-							</li>
-							<li>
-								<p><a href="#">장기렌터카 안내</a></p>
-								<div class="layer-gnb-list">
-									<ul>
-										<li><a href="#">개인 장기렌터카</a></li>
-										<li><a href="#">법인 장기렌터카</a></li>
-										<li><a href="#">전기차 장기렌터카</a></li>
-										<li><a href="#">제휴카드 안내</a></li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<p><a href="#">신차장 친구추천</a></p>
-							</li>
-						</ul>
-					</div>
-					<div class="layer-gnb-bn">
-						<div class="view-slide">
-							<ul class="specials-view-list">
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- //헤더 2뎁스 메뉴 - 신차장 - 로그인 안했을때 -->
-
-				<!-- 헤더 2뎁스 메뉴 - 중고차장기 - 로그인 했을때 -->
-				<div class="draw-toggle-cont draw-cont-03">
-					<div class="detail-layer-in">
-						<div class="layer-gnb-info">
-							<div class="layer-gnb-info-top">
-								<p><span>김롯데님</span></p>
-								<p><b>환영합니다.</b></p>
-							</div>
-							<ul class="layer-gnb-link">
-								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag point">P</i>포인트
-										</div>
-										<div class="link-btn-align-right">
-											<b>1,800</b><i class="icon next02"></i>
-										</div>
-									</button>
-								</li>
-								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag coupon">C</i>쿠폰
-										</div>
-										<div class="link-btn-align-right">
-											<b>12</b><i class="icon next02"></i>
-										</div>
-									</button>
-								</li>
-							</ul>
-						</div>
-						<ul class="layer-gnb list-type-col4">
-							<li>
-								<p><a href="#">중고차 장기렌터카</a></p>
-							</li>
-							<li>
-								<p><a href="#">중고차 승계렌터카</a></p>
-							</li>
-							<li>
-								<p><a href="#">내 차 팔기 서비스</a></p>
-							</li>
-						</ul>
-					</div>
-					<div class="layer-gnb-bn">
-						<div class="view-slide">
-							<ul class="specials-view-list">
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- //헤더 2뎁스 메뉴 - 중고차장기 - 로그인 했을때 -->
-
-				<!-- 헤더 2뎁스 메뉴 - #카라이프 - 로그인 했을때 -->
-				<div class="draw-toggle-cont draw-cont-04">
-					<div class="detail-layer-in">
-						<div class="layer-gnb-info">
-							<div class="layer-gnb-info-top">
-								<p><span>김롯데님</span></p>
-								<p><b>환영합니다.</b></p>
-							</div>
-							<ul class="layer-gnb-link">
-								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag point">P</i>포인트
-										</div>
-										<div class="link-btn-align-right">
-											<b>1,800</b><i class="icon next02"></i>
-										</div>
-									</button>
-								</li>
-								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag coupon">C</i>쿠폰
-										</div>
-										<div class="link-btn-align-right">
-											<b>12</b><i class="icon next02"></i>
-										</div>
-									</button>
-								</li>
-							</ul>
-						</div>
-						<ul class="layer-gnb list-type-col4">
-							<li>
-								<p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p>
-							</li>
-							<li>
-								<p><a href="#">제주도 오토하우스</a></p>
-							</li>
-							<li>
-								<p><a href="#">이벤트</a></p>
-								<div class="layer-gnb-list">
-									<ul>
-										<li><a href="#">진행중인이벤트</a></li>
-										<li><a href="#">당첨자발표</a></li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="layer-gnb-bn">
-						<div class="view-slide">
-							<ul class="specials-view-list">
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- //헤더 2뎁스 메뉴 - #카라이프 - 로그인 했을때 -->
-
-				<!-- 헤더 2뎁스 메뉴 - 고객지원 - 로그인 했을때 -->
-				<div class="draw-toggle-cont draw-cont-05">
-					<div class="detail-layer-in">
-						<div class="layer-gnb-info">
-							<div class="layer-gnb-info-top">
-								<p><span>김롯데님</span></p>
-								<p><b>환영합니다.</b></p>
-							</div>
-							<ul class="layer-gnb-link">
-								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag point">P</i>포인트
-										</div>
-										<div class="link-btn-align-right">
-											<b>1,800</b><i class="icon next02"></i>
-										</div>
-									</button>
-								</li>
-								<li>
-									<button type="button" class="btn">
-										<div class="link-btn-align-left">
-											<i class="flag coupon">C</i>쿠폰
-										</div>
-										<div class="link-btn-align-right">
-											<b>12</b><i class="icon next02"></i>
-										</div>
-									</button>
-								</li>
-							</ul>
-						</div>
-						<ul class="layer-gnb list-type-col4">
-							<li>
-								<p><a href="#">고객센터</a></p>
-							</li>
-							<li>
-								<p><a href="#">공지사항/뉴스</a></p>
-							</li>
-							<li>
-								<p><a href="#">지점 안내</a></p>
-								<div class="layer-gnb-list">
-									<ul>
-										<li><a href="#">전국지점안내</a></li>
-										<li><a href="#">기사포함지점안내</a></li>
-										<li><a href="#">해외지점안내</a></li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="layer-gnb-bn">
-						<div class="view-slide">
-							<ul class="specials-view-list">
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="img">
-											<img src="../../../resources-pc/images/@temp-layout-bn01.png" alt="더미1">
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- //헤더 2뎁스 메뉴 - 고객지원 - 로그인 했을때 -->
 			</div>
 			<!--- 드롭다운 메뉴 추가-->
 			

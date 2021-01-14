@@ -2684,7 +2684,12 @@
     .mypage-cont .my-reservation-list .list-item .list-wrap .cont-in li{
         align-items: flex-start;
         strong {width: 40%;}
-        b {line-height: 1.2;}
+        b {
+            line-height: 1.2;
+            span{
+                @include Align-box-left;
+            }
+        }
     }
     .eng-myinfo-link {
         @include Align-middle;

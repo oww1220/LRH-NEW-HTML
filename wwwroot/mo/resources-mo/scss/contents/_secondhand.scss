@@ -27,7 +27,8 @@
             background-color: #fff;
         }
         &.bg-block {
-            @include Background($sprite:'muc-suc-0001-topbg', $size:cover, $position:top center, $path:'bgs');
+            &.secondhand-topbg-01 {@include Background($sprite:'bg-secondhand-topbg-01', $size:cover, $position:top center, $path:'bgs');}
+            &.secondhand-topbg-02 {@include Background($sprite:'bg-secondhand-topbg-02', $size:cover, $position:top center, $path:'bgs');}
             //min-height:19.7rem;
             em{
                 color:#fff;
@@ -44,6 +45,7 @@
             }
             .guide {
                 padding-top:3.9rem;
+                text-indent: 0;
                 strong {
                     font-size:1.2rem;
                     i {
@@ -1273,6 +1275,64 @@
                                     }
                                 }
                             }
+                            // 승계렌터카 안내
+                            .check-statement-area {
+                                padding-top: 2rem;
+                                .statement {
+                                    position:relative;
+                                    padding: 2.5rem .9rem 2.6rem;
+                                    text-align: center;
+                                    margin-top: 1.7rem;
+                                    & + .statement {
+                                        margin-top: 3.7rem
+                                    }
+                                    .tit {
+                                        @include Inline-align-middle;
+                                        width:20rem;
+                                        height:3rem;
+                                        padding: 0;
+                                        color:#fff;
+                                        border-radius:1.5rem;
+                                        @include Bold;
+                                        margin: 0 auto;
+                                        position: absolute;
+                                        top: -1.5rem;
+                                        left: 13vw;
+                                        .icon {
+                                            margin-left: .3rem;
+                                        }
+                                    }
+                                    &.grey-type{
+                                        //height: 7rem;
+                                        background: #fafafa;
+                                        border-radius: .5rem;
+                                        .tit {
+                                            background: #8f9191;
+                                        }   
+                                    }
+                                    &.pink-type {
+                                        //height: 7rem;
+                                        background: #fff9f9;
+                                        border-radius: .5rem;
+                                        .tit {
+                                            background: #ff404b;
+                                        }
+                                        strong {
+                                            @include Bold;
+                                            font-size: 1.1rem;
+                                            color: #2f2f2f;
+                                        }
+                                        div + div {
+                                            border-top: 1px solid #e7e7e7;
+                                            padding-top: 1rem;
+                                            margin-top: 1rem;
+                                        }
+                                        p {padding-top: .5rem;}
+                                        
+                                    }
+                                }
+                            }
+                            
                         }
                         
                     }
@@ -2878,6 +2938,10 @@
                             }
                         }
                     }
+                }
+                .guide-box {
+                    background: #fff;
+                    padding:1.7rem 0;
                 }
             }
             
