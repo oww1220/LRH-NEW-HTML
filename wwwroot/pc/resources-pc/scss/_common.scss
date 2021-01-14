@@ -576,42 +576,31 @@ $txt-darkblack: #2f2f2f;
 				table{
 					position:relative;
 					width:100%;
-					border-top:1px solid #e7e7e7;
 					word-break: break-word;
-
-					&::before, &::after{
-						content:"";
-						display:block;
-						width:1px;
-						height:100%;
-						background-color:#fff;
-						z-index:5;
-					}
-
-					&::before{
-						@include Position($top:0, $bottom:0, $left:0);
-					}
-					&::after{
-						@include Position($top:0, $right:0, $bottom:0);
-					}
+					border-top:1px solid $border-grey;
+					border-collapse: collapse;
+					z-index:5;
 					
 					th, td{
 						padding:30px; 
 						text-align:center; 
-						border-bottom:1px solid #e7e7e7; 
-						border-right:1px solid #e7e7e7;
 						color:#54585a; 
 						vertical-align: middle;
+						border-right:1px solid $border-grey;
+						border-bottom: 1px solid $border-grey;
+						
 
 						.lst{margin:0;}
 						p{
 							strong{@include Bold;}	
 							+ .lst{margin-top:10px;}
 						}
+
+						&:last-child{
+							border-right:none;
+							border-left:1px solid $border-grey;
+						}
 					}
-					// thead th, td{
-					// 	&:last-of-type{border-right:none;}
-					// }
 
 					th{
 						@include Bold;
@@ -1051,6 +1040,8 @@ $txt-darkblack: #2f2f2f;
 	&.align-top{
 		> li{@include Align-top-left;}
 	}
+
+	+ .row{margin-top:80px;}
 }
 .process-list{
 	@include Align-between;
@@ -1794,7 +1785,7 @@ $txt-darkblack: #2f2f2f;
 .tooltip-layer{
 	display:none;
 	position:relative;
-	z-index:5;
+	z-index:10;
 
 	.tooltip{
 		@include Position($top:10px, $left:-50%, $right:-50%);
@@ -1821,8 +1812,24 @@ $txt-darkblack: #2f2f2f;
 			background-color:#fff;
 			border:1px solid #2f2f2f;
 
+			.tooltip-tit{
+				@include Bold;
+				font-size:18px;
+				color:#2f2f2f;
+
+				+ p, + .tooltip-list{margin-top:10px;}
+			}
 			p{
-				+ p{margin-top:10px;}
+				+ p, + .tooltip-list{margin-top:10px;}
+			}
+			.tooltip-list{
+				padding:10px 0;
+
+				.tooltip-tit{
+					font-size:15px;
+					
+					+ .lst{margin-top:10px;}
+				}				
 			}
 			
 			&.align-c-type{
@@ -1844,6 +1851,13 @@ $txt-darkblack: #2f2f2f;
 
 	&.on{
 		z-index:10;
+	}
+
+	&.absolute-type{
+		position:absolute;
+		left:0;
+		right:0;
+		margin:0 auto;
 	}
 }
 

@@ -465,40 +465,19 @@ html, body {
 .section-explain .explain-cont .tbl-box table, .section-explain-type2 .explain-cont .tbl-box table {
 	position: relative;
 	width: 100%;
-	border-top: 1px solid #e7e7e7;
 	word-break: break-word;
-}
-
-.section-explain .explain-cont .tbl-box table::before, .section-explain .explain-cont .tbl-box table::after, .section-explain-type2 .explain-cont .tbl-box table::before, .section-explain-type2 .explain-cont .tbl-box table::after {
-	content: "";
-	display: block;
-	width: 1px;
-	height: 100%;
-	background-color: #fff;
+	border-top: 1px solid #e7e7e7;
+	border-collapse: collapse;
 	z-index: 5;
-}
-
-.section-explain .explain-cont .tbl-box table::before, .section-explain-type2 .explain-cont .tbl-box table::before {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.section-explain .explain-cont .tbl-box table::after, .section-explain-type2 .explain-cont .tbl-box table::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
 }
 
 .section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table td {
 	padding: 30px;
 	text-align: center;
-	border-bottom: 1px solid #e7e7e7;
-	border-right: 1px solid #e7e7e7;
 	color: #54585a;
 	vertical-align: middle;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
 }
 
 .section-explain .explain-cont .tbl-box table th .lst, .section-explain .explain-cont .tbl-box table td .lst, .section-explain-type2 .explain-cont .tbl-box table th .lst, .section-explain-type2 .explain-cont .tbl-box table td .lst {
@@ -514,6 +493,11 @@ html, body {
 
 .section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst, .section-explain-type2 .explain-cont .tbl-box table th p + .lst, .section-explain-type2 .explain-cont .tbl-box table td p + .lst {
 	margin-top: 10px;
+}
+
+.section-explain .explain-cont .tbl-box table th:last-child, .section-explain .explain-cont .tbl-box table td:last-child, .section-explain-type2 .explain-cont .tbl-box table th:last-child, .section-explain-type2 .explain-cont .tbl-box table td:last-child {
+	border-right: none;
+	border-left: 1px solid #e7e7e7;
 }
 
 .section-explain .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table th {
@@ -1518,6 +1502,10 @@ html, body {
 	   -moz-box-pack: left;
 	    -ms-flex-pack: left;
 	        justify-content: left;
+}
+
+.multi-segment-list + .row {
+	margin-top: 80px;
 }
 
 .process-list {
@@ -2670,7 +2658,7 @@ html, body {
 .tooltip-layer {
 	display: none;
 	position: relative;
-	z-index: 5;
+	z-index: 10;
 }
 
 .tooltip-layer .tooltip {
@@ -2721,7 +2709,32 @@ html, body {
 	border: 1px solid #2f2f2f;
 }
 
-.tooltip-layer .tooltip .tooltip-inner p + p {
+.tooltip-layer .tooltip .tooltip-inner .tooltip-tit {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 18px;
+	color: #2f2f2f;
+}
+
+.tooltip-layer .tooltip .tooltip-inner .tooltip-tit + p, .tooltip-layer .tooltip .tooltip-inner .tooltip-tit + .tooltip-list {
+	margin-top: 10px;
+}
+
+.tooltip-layer .tooltip .tooltip-inner p + p, .tooltip-layer .tooltip .tooltip-inner p + .tooltip-list {
+	margin-top: 10px;
+}
+
+.tooltip-layer .tooltip .tooltip-inner .tooltip-list {
+	padding: 10px 0;
+}
+
+.tooltip-layer .tooltip .tooltip-inner .tooltip-list .tooltip-tit {
+	font-size: 15px;
+}
+
+.tooltip-layer .tooltip .tooltip-inner .tooltip-list .tooltip-tit + .lst {
 	margin-top: 10px;
 }
 
@@ -2746,6 +2759,13 @@ html, body {
 
 .tooltip-layer.on {
 	z-index: 10;
+}
+
+.tooltip-layer.absolute-type {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 
 /*
