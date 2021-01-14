@@ -294,5 +294,69 @@
     }
     
 
-
+    &.eng-drawer{
+        overflow: hidden;
+        .drawer-top {
+            &.logout-state-box {
+                p{
+                    span{
+                        font-size:1.6rem;
+                    }
+                }
+            }
+            &.login-state {
+                p{
+                    span{
+                        @include Align-box-left;
+                        em{
+                            border-bottom:0 none;
+                            @include Regular;
+                            padding:0 0 0 .4rem;
+                        }
+                    }
+                }
+                .login-btns {
+                    padding: 3.9rem 0 0;
+                    ul > li{
+                        position: relative;
+                        * {box-sizing: border-box;}
+                        a{
+                            @include Align-middle-column;
+                            strong {
+                                color:#fff;
+                                font-size:1rem;
+                                margin-top:1.4rem;
+                            }
+                            b {
+                                color:#fff;
+                                margin-top:.9rem;
+                                border-bottom:1px solid #fff;
+                            }
+                        }
+                        &:first-child{
+                            b{
+                                border-bottom:0 none;
+                            }
+                        }
+                    }
+                    ul > li:after{
+                        border-left:1px solid #f14950;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .drawer-list {
+            padding:2.6rem 0 2.6rem 0;
+            margin-top: 0;
+            h5{
+                margin:0;
+                @include Align-between;
+            }
+        }
+        .drawer-toggle-cont{
+            display:block;
+        }
+        
+    }
 }
