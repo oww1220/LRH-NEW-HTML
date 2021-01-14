@@ -1230,7 +1230,11 @@ $txt-darkblack: #2f2f2f;
 			}
 		}
 	}
-
+	&.li-mt60-type{
+		> li{
+			+ li{margin-top:60px;}
+		}
+	}
 	.spacing{
 		position:relative;
 		padding-left:50px;	
@@ -1261,6 +1265,30 @@ $txt-darkblack: #2f2f2f;
 // .sentence{
 // 	@include txtSpacing;
 // }
+
+//페이지 상단 배너
+@mixin roundBanner($mb:80px){
+	@include roundBox;
+	@include Align-middle-left;
+	min-height:140px;
+	padding:30px 60px;
+	margin-bottom:$mb;
+	box-sizing:border-box;
+
+	p{color:#fff;}
+	
+	.infos{
+		.tit{
+			@include Bold;
+			font-size:16px;
+			
+			+ .txt{
+				@include txtSetting($color:#fff);
+				margin-top:15px;
+			}
+		}
+	}
+}
 
 //상단 fixed 메뉴
 .detail-layer-nav-wrap{

@@ -1554,8 +1554,8 @@ if($('.longTerm-container .estimateSwiper').length) {
     
 }
 
-//개인 장기 렌터카 QNA 아코디언
-if($('.longTerm-container .qnaAccor').length){
+//QNA 아코디언
+if($('.qnaAccor').length){
     MUI.event.toggle('.qnaAccor .btn-toggle-wide', '.qnaAccor .accor-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
