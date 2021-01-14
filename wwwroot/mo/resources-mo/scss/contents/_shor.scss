@@ -9,7 +9,7 @@
             padding:2.6rem 0 0 0;
             font-size:1.4rem;
         }
-
+        
     }
     
 
@@ -37,6 +37,7 @@
             &.short-topbg-01 {@include Background($sprite:'bg-short-topbg-01', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-02 {@include Background($sprite:'bg-short-topbg-02', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-03 {@include Background($sprite:'bg-short-topbg-03', $size:cover, $position:top center, $path:'bgs');}
+            &.short-topbg-04 {@include Background($sprite:'bg-short-topbg-04', $size:cover, $position:top center, $path:'bgs');}
             em{
                 color:#fff;
             }
@@ -2979,7 +2980,158 @@
                     }
                 }
             }
-//
+            
+        .cms-call{
+            h4{
+                @include Bold;
+                padding:2.6rem 0 0 0;
+                font-size:1.4rem;
+                strong{
+                    position: relative;
+                    top: -1px;
+                    color: #ed1c24;
+                    font-size:1.5rem;
+                    i{
+                        position: relative;
+                        width: 25px;
+                        top: -2px;
+                        margin: 0 .4rem 0 .9rem;
+                    }
+                }
+            }
+        }
+
+        .guide-box-courtesyCar{
+            padding:0 1.7rem 1rem;
+            h4{
+                @include Bold;
+                padding:2.6rem 0 0 0;
+                font-size:1.4rem;
+            }
+            .shor-notice-view-list{    
+                margin-top:1.7rem;
+                background: #fafafa;
+                border-radius: 1rem;
+                padding: 0 .7rem 0 .2rem;
+                box-sizing: border-box;
+                li{
+                    box-sizing: border-box;
+                    width:calc(100% / 2);
+                    padding: 1.7rem 0;
+                    margin-bottom: 0;
+                    @include Align-middle-column;
+                    &:nth-of-type(3){
+                        b {
+                            margin-top: 1.7rem;
+                        }
+                    }
+                    h4{
+                        padding: 0.5rem 0 0 0;
+                        color: #ba9a81;
+                    }
+                    b {
+                        margin-top: .5rem;
+                    }
+                }
+                i{
+                    display:block;
+                    margin: 0 auto;
+                }
+                b{
+                    display:block;
+                    text-align: center;
+                    margin-top:1.1rem;
+                    line-height:1.3;
+                    @include Regular;
+                } 
+            }
+            .info-list-box-type1{
+                h4{
+                    padding: 2.6rem 0 1.5rem 0;
+                }
+                .guide-list{
+                    > li:nth-child(1){
+                        border-top: 1px solid #e7e7e7;
+                    }
+                    li{
+                        h4{
+                            padding: 0; 
+                        }
+                    }
+                    .guide-wrap{
+                        > li{
+                            float: left;
+                            > i{
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                        > li:nth-child(1){
+                            width: 25%;                            
+                        }
+                        > li:nth-child(2){
+                            width: 75%;
+                        }
+                    }
+                    .guide-wrap:after{
+                        content:'';display:block;clear:both;
+                    }
+                    .ic02{
+                        i{
+                            width: 3rem;
+                        }
+                    }
+                    .ic03{
+                        i{
+                            width: 3rem;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .section-list-courtesyCar{
+            ul{
+                li{
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+            .shor-notice-txt-box{
+                .shor-notice-view-list{
+                    li{
+                        box-sizing: border-box;
+                        width:calc(100% / 1);
+                        padding: 1.7rem 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+           .list-type-col3{
+               h4{
+                    padding: 0.5rem 0 0 0;
+                    color: #ba9a81;
+               }
+           }
+           .shor-notice-view-list{
+               .guide{
+                   > li{
+                     padding: .2rem 0;
+                     i{
+                         display: inline-block;
+                     }
+                   }
+               }
+               .shor-notice29{
+                    width: 5rem;
+               }
+               .shor-notice30{
+                    width: 10rem;
+              }
+           }
+        }
+
+//      
         }
         .detail-main-list{
             &.detail-main-list1{
@@ -4433,4 +4585,6 @@
             }
         }
     }
+    
+    
 }
