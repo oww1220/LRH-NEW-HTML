@@ -1,4 +1,9 @@
 .footerMenu-container {
+    
+    .round-banner{
+        @include roundBanner;
+    }
+
     .tab-cont-inner{
         padding:60px 0;
     }
@@ -385,6 +390,13 @@
                     }
                 }
                 
+            }
+        }
+
+        //contact us
+        &.contactUs-container{
+            .round-banner{
+                @include Background($sprite: 'bg-footerMenuContactUs', $path:'');
             }
         }
     }

@@ -1554,8 +1554,8 @@ if($('.longTerm-container .estimateSwiper').length) {
     
 }
 
-//개인 장기 렌터카 QNA 아코디언
-if($('.longTerm-container .qnaAccor').length){
+//QNA 아코디언
+if($('.qnaAccor').length){
     MUI.event.toggle('.qnaAccor .btn-toggle-wide', '.qnaAccor .accor-cont', false, function(logic, layer) {
         //console.log('toggle');
         logic();
@@ -1715,6 +1715,14 @@ if($('.mypage-container .indicator-toggle-cont').length) {
     if($('.footer .family-btn').length) {
         MUI.event.toggle('.footer .family-btn', '.footer .family-toggle-cont', true, function(logic, layer) {
             logic();
+        });
+    }
+
+    //푸터 이메일수집동의 모달 팝업
+    if($('.layer-refuse-email').length) {
+        MUI.layer.openClick('.layer-refuse-email-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            //console.log('open');
+            show();
         });
     }
 

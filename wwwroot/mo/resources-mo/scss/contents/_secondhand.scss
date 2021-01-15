@@ -27,6 +27,7 @@
             background-color: #fff;
         }
         &.bg-block {
+            @include Background($sprite:'bg-secondhand-topbg-02', $size:cover, $position:top center, $path:'bgs');
             &.secondhand-topbg-01 {@include Background($sprite:'bg-secondhand-topbg-01', $size:cover, $position:top center, $path:'bgs');}
             &.secondhand-topbg-02 {@include Background($sprite:'bg-secondhand-topbg-02', $size:cover, $position:top center, $path:'bgs');}
             &.secondhand-topbg-03 {@include Background($sprite:'bg-secondhand-topbg-03', $size:cover, $position:top center, $path:'bgs'); padding-bottom: 6rem;}
@@ -1798,6 +1799,12 @@
                                                     font-size:1.6rem;
                                                     position: relative;
                                                     padding-right:1.3rem;
+                                                    &.no_arrow{
+                                                        padding-right:0;
+                                                        &:after{
+                                                            display:none;
+                                                        }
+                                                    }
                                                 }
                                                 strong:after{
                                                     display: block;

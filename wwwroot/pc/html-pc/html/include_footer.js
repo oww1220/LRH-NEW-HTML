@@ -149,7 +149,7 @@ $(function(){
 								<li><a href="/kor/footer/footerPolicyNew.do?mnCd=FN0901" class="txt_point">개인정보처리방침</a></li>
 								<li><a href="/kor/content/190/main.do?mnCd=FN0902" class="txt_point">영상정보처리기기 운영관리방침</a></li>
 								<li><a href="/kor/footer/footerTermsNew.do?mnCd=FN0903">이용약관</a></li>
-								<li><a href="#refuse_email" class="refuse_email btn_layer">이메일주소무단수집거부</a></li>
+								<li><a href="#" class="layer-refuse_email-open" data-layer="layer-refuse_email">이메일주소무단수집거부</a></li>
 								<li><a href="/kor/content/192/main.do?mnCd=FN0908">찾아오시는길</a></li>
 							</ul>
 						</div>
@@ -313,6 +313,29 @@ $(function(){
 		</div>
 	</div>
 	<!-- // 비밀번호 변경 레이어 -->
+
+	<!-- 무단이메일 수집 거부 레이어 -->
+	<div class="layer-wrap layer-popup layer-refuse_email">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>무단이메일 수집 거부</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-calculator"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					
+					<div class="guide-area">
+						<strong>이메일 주소 무단 수집을 거부합니다!</strong>
+						<p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며 이를 위반시 정보통신망법에 의해 형사상 처벌됨을 유의하시기 바랍니다.</p>
+					</div>
+				</div>
+				<div class="popup-cont-bot-btn">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-calculator">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //무단이메일 수집 거부 레이어 -->
     `;
 
     $(".footer").html(footer);
