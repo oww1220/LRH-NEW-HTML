@@ -1719,8 +1719,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
     }
 
     //푸터 이메일수집동의 모달 팝업
-    if($('.layer-refuse_email').length) {
-        MUI.layer.openClick('.layer-refuse_email-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+    if($('.layer-refuse-email').length) {
+        MUI.layer.openClick('.layer-refuse-email-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
             //console.log('open');
             show();
         });
