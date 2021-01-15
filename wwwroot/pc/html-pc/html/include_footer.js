@@ -149,7 +149,7 @@ $(function(){
 								<li><a href="/kor/footer/footerPolicyNew.do?mnCd=FN0901" class="txt_point">개인정보처리방침</a></li>
 								<li><a href="/kor/content/190/main.do?mnCd=FN0902" class="txt_point">영상정보처리기기 운영관리방침</a></li>
 								<li><a href="/kor/footer/footerTermsNew.do?mnCd=FN0903">이용약관</a></li>
-								<li><a href="#" class="layer-refuse_email-open" data-layer="layer-refuse_email">이메일주소무단수집거부</a></li>
+								<li><a href="#" class="layer-refuse-email-open" data-layer="layer-refuse-email">이메일주소무단수집거부</a></li>
 								<li><a href="/kor/content/192/main.do?mnCd=FN0908">찾아오시는길</a></li>
 							</ul>
 						</div>
@@ -315,7 +315,7 @@ $(function(){
 	<!-- // 비밀번호 변경 레이어 -->
 
 	<!-- 무단이메일 수집 거부 레이어 -->
-	<div class="layer-wrap layer-popup layer-refuse_email">
+	<div class="layer-wrap layer-popup layer-refuse-email">
 		<div class="pop-inner">
 			<div class="popup-top">
 				<h4>무단이메일 수집 거부</h4>

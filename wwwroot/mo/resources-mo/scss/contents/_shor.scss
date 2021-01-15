@@ -81,6 +81,7 @@
             &.short-topbg-03 {@include Background($sprite:'bg-short-topbg-03', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-04 {@include Background($sprite:'bg-short-topbg-04', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-05 {@include Background($sprite:'bg-short-topbg-05', $size:cover, $position:top center, $path:'bgs');}
+            &.short-topbg-06 {@include Background($sprite:'bg-short-topbg-06', $size:cover, $position:top center, $path:'bgs'); height: 11rem;}
             em{
                 color:#fff;
             }
@@ -107,6 +108,28 @@
                     margin-top:1.3rem;
                     color: #fff;
                     font-size:1.1rem;
+                }
+            }
+            .info-box {
+                @include Align-between;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: #2f2f2f80;
+                width: 100%;
+                padding: 1rem 1.7rem;
+                box-sizing: border-box;
+                p {
+                    @include Bold;
+                    color: #fff;
+                    font-size: 1.1rem;
+                }
+                button {
+                    @include Bold;
+                    color: #fff;
+                    font-size: 1.1rem;
+                    text-decoration: underline;
+                    align-self: flex-end;
                 }
             }
             /* .btn-list {
@@ -322,6 +345,7 @@
     
     .section-filter {
         padding:2rem 0 2.6rem;
+        border-bottom: .6rem solid #f5f5f5;
         .selection {
             padding: 0 1.7rem;
             margin:0 0 2.6rem 0;
@@ -350,8 +374,40 @@
             .filter-col {
 				position: relative;
 				.chk-list {
-					margin-top: .4rem;
-					li {
+                    margin-top: .4rem;
+                    ul {
+                        @include Inline-scrolling;
+                        padding-bottom:.5rem;
+                        li {
+                            display: inline-flex;
+                            width: 6rem;
+                            margin-left: 1rem;
+                            > div { 
+                                width:100%;
+                            }
+                            &:first-child {
+                                margin-left:0;
+                            }
+                            label {
+                                @include Align-middle-column;
+                                padding:0;
+                                height:3.9rem;
+                                border-radius: .4rem;
+                                color:#54585a;
+                                background-color: #fff;
+                                font-size:1rem;
+                                @include Regular;
+                                border:1px solid #d2d2d2;
+                            }
+                            input:checked + label {
+                                background-color:rgb(255,249,249);
+                                background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+                                color:#ed1c24;
+                                border:1px solid #ed1c24;
+                            }
+                        }
+                    }
+					/* li {
 						input {
 							display: none;
 						}
@@ -360,7 +416,7 @@
 							border:0 none;
                             height:4.9rem;
 							display: block;
-							@include Align-middle;
+							//@include Align-middle;
 							box-sizing: border-box;
 							font-size: 1.1rem;
 							border-radius: 2rem;
@@ -369,13 +425,32 @@
                             @include Bold;
                             color: #8f9191;
                             background-color: #fff;
-						}
+                        }
+                        
+                        label {
+                            @include Align-middle-column;
+                            padding:0;
+                            height:8.6rem;
+                            border-radius: .4rem;
+                            color:#54585a;
+                            background-color: #fff;
+                            font-size:1rem;
+                            @include Regular;
+                            border:1px solid #d2d2d2;
+                            span{
+                                margin:1.7rem 0 0 0;
+                            }
+                            i {
+                                min-height:2.6rem;
+                            }
+                        }
+
 						input:checked + label {
 							background: rgb(255,51,102);
                             background: linear-gradient(90deg, rgba(254,42,123,1) 0%, rgba(255,77,52,1) 100%);
                             color:#fff;
 						}
-					}
+					} */
 				}
             }
             
