@@ -125,7 +125,88 @@
 			border-bottom: 1px solid #EBEBEB;
 			z-index:99;
 			.draw-toggle-area{
+				@include Align-between-top;
+				min-width: 1280px;
+				max-width:1420px;
+				width: 1420px;
+				margin: 0 auto;
 				position: relative;
+				padding:50px 0 80px 0;
+				height: 422px;
+				.layer-gnb-info-wrap{
+					width: 300px;
+					float: left;
+					.layer-gnb-info{
+						@include Align-top-left-column;
+						.layer-gnb-info-top{
+							width:300px;
+							p{
+								font-size:36px;
+								@include Bold;
+								position: relative;
+								span{
+									position: relative;
+									z-index: 10;
+								}
+								span:after{
+									display:block;
+									content:"";
+									width:96%;
+									height:2px;
+									background-color:#2f2f2f;
+									@include Position($bottom:7px, $left:2px);
+									z-index: 1;
+								}
+								b{
+									font-size:36px;
+									color:#8f9191;
+									@include Normal;
+								}
+							}
+							// p:after{
+							// 	display:block;
+							// 	content:"";
+							// 	width:96%;
+							// 	height:2px;
+							// 	background-color:#2f2f2f;
+							// 	@include Position($bottom:7px, $left:2px);
+							// 	z-index: 1;
+							// }
+							// p + p:after{
+							// 	display:none;
+							// }
+						}
+						.layer-gnb-link{
+							width:300px;
+							& > li{
+								margin-top:20px;
+							}
+							& > li:first-child{
+								margin-top:60px;
+							}
+							.btn{
+								width:80%;
+								@include Bold;
+								font-size:18px;
+								padding:0;
+								height:26px;
+								@include Align-middle-left;
+								.flag{
+									margin-right:10px;
+								}
+								.link-btn-align-left{
+									width:113px;
+									@include Align-middle-left;
+								}
+								.link-btn-align-right{
+									width:90px;
+									@include Align-between;
+								}
+							}
+						}
+					}
+				}
+				
 			}
 		}
 		.draw-toggle-wrap-all{
@@ -138,103 +219,122 @@
 			background-color: #fff;
 			border-bottom: 1px solid #EBEBEB;
 			z-index:99;
-			.draw-toggle-cont{
+
+		
+
+			.draw-toggle-cont-all{
+				position: absolute;
+				@include Align-between-top;
+				min-width: 1280px;
+				max-width:1420px;
+				width: 1420px;
 				height: 955px;
+				margin: 0 auto;
+				position: relative;
+				padding:20px 0 80px 0;
+				z-index: 100;
+
+				.detail-layer-in {
+					width: 100%;
+					.layer-gnb-all{
+						padding:0 0 0 50px;
+						@include Align-top-left;
+						width: 100%;
+						> li{
+							p{
+								@include Bold;
+								font-size:18px;
+							}
+							.layer-gnb-list{
+								@include Align-top;
+								justify-content: flex-start;
+								ul > li{
+									font-size:16px;
+									color:#54585a;
+									margin-top:16px;
+								}
+								ul > li:first-child{
+									margin-top:26px;
+								}
+							}
+						}
+						> li:nth-child(1){
+							margin-bottom: 85px;
+						}
+						> li:nth-child(2){
+							margin-bottom: 85px;
+						}
+						> li:nth-child(3){
+							margin-bottom: 85px;
+						}
+						> li:nth-child(4){
+							margin-bottom: 85px;
+						}
+					}
+					&.detail-layer-all-in{
+						.layer-gnb-all{
+							padding:0;
+							> li{
+								width:16.6%;
+								p{
+									margin-top:40px;
+									a{
+										b{
+											font-size:26px;
+										}
+									}
+								}
+								.layer-gnb-list{
+									ul > li{
+										margin-top:16px;
+										p{
+											margin-top:0;
+										}
+									}
+								}
+								& > li:first-child{
+									margin-top:30px;
+								}
+							}
+						}
+					}
+					&.detail-layer-all-in:after{
+						@include Position($top:50px, $right:20%, $left:auto);
+					}
+				}
+				.detail-layer-in:after{
+					display:block;
+					content:"";
+					height:500px;
+					width:1px;
+					background-color:#e7e7e7;
+					@include Position($top:0, $left:0);
+				}
 			}
 		}
 		.draw-toggle-cont {
 			display: none;
 			position: absolute;
-			width:100%;
-			/*padding-bottom:90px;*/
+			width:1120px;
+			left: 300px;
 			z-index:100;
 			.detail-layer-in {
-				@include Align-between-top;
+				/*@include Align-between-top;
 				min-width: 1280px;
 				max-width:1420px;
 				width: 1420px;
 				margin: 0 auto;
 				position: relative;
 				padding:50px 0 80px 0;
-				height: 422px;
-				.layer-gnb-info{
-					@include Align-top-left-column;
-					.layer-gnb-info-top{
-						width:300px;
-						p{
-							font-size:36px;
-							@include Bold;
-							position: relative;
-							span{
-								position: relative;
-								z-index: 10;
-							}
-							span:after{
-								display:block;
-								content:"";
-								width:96%;
-								height:2px;
-								background-color:#2f2f2f;
-								@include Position($bottom:7px, $left:2px);
-								z-index: 1;
-							}
-							b{
-								font-size:36px;
-								color:#8f9191;
-								@include Normal;
-							}
-						}
-						// p:after{
-						// 	display:block;
-						// 	content:"";
-						// 	width:96%;
-						// 	height:2px;
-						// 	background-color:#2f2f2f;
-						// 	@include Position($bottom:7px, $left:2px);
-						// 	z-index: 1;
-						// }
-						// p + p:after{
-						// 	display:none;
-						// }
-					}
-					.layer-gnb-link{
-						width:300px;
-						& > li{
-							margin-top:20px;
-						}
-						& > li:first-child{
-							margin-top:60px;
-						}
-						.btn{
-							width:80%;
-							@include Bold;
-							font-size:18px;
-							padding:0;
-							height:26px;
-							@include Align-middle-left;
-							.flag{
-								margin-right:10px;
-							}
-							.link-btn-align-left{
-								width:113px;
-								@include Align-middle-left;
-							}
-							.link-btn-align-right{
-								width:90px;
-								@include Align-between;
-							}
-						}
-					}
-				}
+				height: 422px;*/
 				.layer-gnb{
 					padding:0 0 0 50px;
 					@include Align-top-left;
-					width:100%;
+					width: 900px;
 					> li{
 						p{
 							@include Bold;
 							font-size:18px;
-							margin-top:20px;
 						}
 						.layer-gnb-list{
 							@include Align-top;
@@ -248,6 +348,18 @@
 								margin-top:26px;
 							}
 						}
+					}
+					> li:nth-child(1){
+						margin-bottom: 85px;
+					}
+					> li:nth-child(2){
+						margin-bottom: 85px;
+					}
+					> li:nth-child(3){
+						margin-bottom: 85px;
+					}
+					> li:nth-child(4){
+						margin-bottom: 85px;
 					}
 				}
 				&.detail-layer-all-in{
@@ -287,7 +399,7 @@
 				height:500px;
 				width:1px;
 				background-color:#e7e7e7;
-				@include Position($top:50px, $left:20%);
+				@include Position($top:0, $left:0);
 			}
 		}
 		.layer-gnb-bn{
@@ -295,7 +407,7 @@
 			height: 110px;
 			margin: 0 auto;
 			position: relative;
-			top: 420px;
+			top: 0;
 			@include Align-middle-right;
 			.view-slide {
 				margin-right:195px;
@@ -367,10 +479,12 @@
 	}
 	.header-nav {
 		.draw-toggle-cont {
+			position: relative;
+			left: 0;
 			.layer-gnb-s{
-				width:60% !important;
+				width: 76% !important;
 				position: absolute;
-  				left: 360px;
+  				left: 60px;
 			}
 			.gnb-banner {
 				margin-right:275px;
@@ -393,20 +507,24 @@
 	.draw-toggle-wrap{
 		.layer-gnb-bn-e{
 			top: 0;
+			.gnb-banner{
+				position: relative;
+				left: -280px;
+			}
 		}
 	}
 	.draw-toggle-wrap-s{
 		.detail-layer-in:after{
-			@include Position($left:24% !important);
+			@include Position($left: 2% !important);
 		}
 		
 	}
 	.draw-toggle-wrap-all-e{
 		height: 400px !important;
-		.draw-toggle-cont{
+		.draw-toggle-cont-all{
 			height: 400px !important;
 			.detail-layer-in:after{
-				height: 270px;
+				height: 280px !important;
 			}
 		}
 		
