@@ -1959,15 +1959,12 @@ $(function(){
         }
     });
 
-    $('.draw-toggle-wrap, .draw-toggle-wrap-all').each(function(i){
-        $(this).on({
-             mouseleave: function(){
-                $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
-               // $('.draw-toggle-cont').eq(i).fadeOut(400);
-                $('.draw-toggle-wrap, .draw-toggle-wrap-all').fadeOut(400);
-                $('.bg-dimmed-h').css('display','none');
-            },
-        });	
+    $('.bg-dimmed-h').on({
+        mouseenter: function(){
+            $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
+            $('.draw-toggle-wrap, .draw-toggle-wrap-all').fadeOut(400);
+            $('.bg-dimmed-h').css('display','none');
+        },
     });
 
     //*영문 gnb 설정*/
