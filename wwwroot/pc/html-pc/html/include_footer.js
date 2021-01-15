@@ -279,6 +279,10 @@ $(function(){
 	<div class="bg-dimmed">딤(Dim)처리 배경</div>
 	<!--//bg-dimmed 컴포넌트-->
 
+	<div class="fixedRight noLauncher">
+        <button type="button" class="btn btn-goTop">탑으로</button>
+    </div>
+
 	<!-- 비밀번호 변경 레이어 -->
 	<div class="layer-wrap layer-popup layer-mypage layer-password-reenter-info">
 		<div class="pop-inner">
