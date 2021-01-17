@@ -31,7 +31,7 @@
 			}
 			.family-toggle-cont {
 				display: none;
-				@include Position($bottom:60px, $left:0);
+				@include Position($bottom:65px, $left:0);
 				width:100%;
 				background-color: #fff;
 				.detail-layer-in {
@@ -231,6 +231,23 @@
 					> a{
 						color: #A3A5AD;
 						font-size: 13px;
+					}
+					.address{
+						li{
+							> span{
+								position: relative;
+								color:#54585a;
+								@include Bold;
+								margin-left:5px;
+								&:after{
+									display:block;
+									content: "";
+									border-bottom:1px solid #54585a;
+									width:100%;
+									@include Position($bottom:2px, $left:0);
+								}
+							}
+						}
 					}
 					// & + li{
 					// 	&:before {

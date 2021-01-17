@@ -1001,7 +1001,7 @@ if($('.footerMenu-wrap .tab-normal').length){
     if($('.secondhand-wrap .life-event-lists05').length) {
         MUI.slide.init('.secondhand-wrap .life-event-lists05','swiper', {
             loop: true,
-            autoHeight: true,
+            autoHeight: false,
             pagination: {
                 el: '.life-event-pagination05',
             },

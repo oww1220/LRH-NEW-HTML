@@ -162,6 +162,127 @@ html, body {
 	text-align: left;
 }
 
+.tbl-box table {
+	position: relative;
+	width: 100%;
+	word-break: break-word;
+	border-top: 1px solid #e7e7e7;
+	border-collapse: collapse;
+	z-index: 5;
+}
+
+.tbl-box table th, .tbl-box table td {
+	padding: 30px;
+	text-align: center;
+	color: #54585a;
+	vertical-align: middle;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.tbl-box table th .lst, .tbl-box table td .lst {
+	margin: 0;
+}
+
+.tbl-box table th p strong, .tbl-box table td p strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.tbl-box table th p + .lst, .tbl-box table td p + .lst {
+	margin-top: 10px;
+}
+
+.tbl-box table th:last-child, .tbl-box table td:last-child {
+	border-right: none;
+	border-left: 1px solid #e7e7e7;
+}
+
+.tbl-box table th {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	background-color: #fafafa;
+}
+
+.tbl-box table td {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	font-size: 14px;
+	color: #54585a;
+}
+
+.tbl-box table .align-l {
+	text-align: left;
+}
+
+.tbl-box table .lst {
+	text-align: left;
+}
+
+.tbl-box table + .lst {
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.tbl-box table.td-align-l td {
+	text-align: left;
+}
+
+.tbl-box .box-between {
+	width: -webkit-calc(100% + 20px);
+	width: -moz-calc(100% + 20px);
+	width: calc(100% + 20px);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	   -moz-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	   -moz-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+.tbl-box .box-between .box-between-col {
+	width: 50%;
+	padding-right: 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.tbl-box + .tbl-box {
+	margin-top: 60px;
+}
+
+.tbl-box + .row {
+	margin-top: 60px;
+}
+
+.tbl-box + .lst {
+	margin-top: 20px;
+}
+
 .form-cont {
 	/*
 		20201218 : 
@@ -464,123 +585,6 @@ html, body {
 
 .section-explain .explain-cont .btn-box, .section-explain-type2 .explain-cont .btn-box {
 	padding: 40px 0;
-}
-
-.section-explain .explain-cont .tbl-box table, .section-explain-type2 .explain-cont .tbl-box table {
-	position: relative;
-	width: 100%;
-	word-break: break-word;
-	border-top: 1px solid #e7e7e7;
-	border-collapse: collapse;
-	z-index: 5;
-}
-
-.section-explain .explain-cont .tbl-box table th, .section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table td {
-	padding: 30px;
-	text-align: center;
-	color: #54585a;
-	vertical-align: middle;
-	border-right: 1px solid #e7e7e7;
-	border-bottom: 1px solid #e7e7e7;
-}
-
-.section-explain .explain-cont .tbl-box table th .lst, .section-explain .explain-cont .tbl-box table td .lst, .section-explain-type2 .explain-cont .tbl-box table th .lst, .section-explain-type2 .explain-cont .tbl-box table td .lst {
-	margin: 0;
-}
-
-.section-explain .explain-cont .tbl-box table th p strong, .section-explain .explain-cont .tbl-box table td p strong, .section-explain-type2 .explain-cont .tbl-box table th p strong, .section-explain-type2 .explain-cont .tbl-box table td p strong {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-}
-
-.section-explain .explain-cont .tbl-box table th p + .lst, .section-explain .explain-cont .tbl-box table td p + .lst, .section-explain-type2 .explain-cont .tbl-box table th p + .lst, .section-explain-type2 .explain-cont .tbl-box table td p + .lst {
-	margin-top: 10px;
-}
-
-.section-explain .explain-cont .tbl-box table th:last-child, .section-explain .explain-cont .tbl-box table td:last-child, .section-explain-type2 .explain-cont .tbl-box table th:last-child, .section-explain-type2 .explain-cont .tbl-box table td:last-child {
-	border-right: none;
-	border-left: 1px solid #e7e7e7;
-}
-
-.section-explain .explain-cont .tbl-box table th, .section-explain-type2 .explain-cont .tbl-box table th {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	background-color: #fafafa;
-}
-
-.section-explain .explain-cont .tbl-box table td, .section-explain-type2 .explain-cont .tbl-box table td {
-	font-family: "ManropeR", "NotoR", serif;
-	/*font-family: "SpoqaR", serif;*/
-	/*font-family: "SpoqaHanSansR", serif;*/
-	font-weight: normal;
-	font-size: 14px;
-	color: #54585a;
-}
-
-.section-explain .explain-cont .tbl-box table .align-l, .section-explain-type2 .explain-cont .tbl-box table .align-l {
-	text-align: left;
-}
-
-.section-explain .explain-cont .tbl-box table .lst, .section-explain-type2 .explain-cont .tbl-box table .lst {
-	text-align: left;
-}
-
-.section-explain .explain-cont .tbl-box table + .lst, .section-explain-type2 .explain-cont .tbl-box table + .lst {
-	margin-top: 20px;
-	margin-bottom: 0;
-}
-
-.section-explain .explain-cont .tbl-box table.td-align-l td, .section-explain-type2 .explain-cont .tbl-box table.td-align-l td {
-	text-align: left;
-}
-
-.section-explain .explain-cont .tbl-box .box-between, .section-explain-type2 .explain-cont .tbl-box .box-between {
-	width: -webkit-calc(100% + 20px);
-	width: -moz-calc(100% + 20px);
-	width: calc(100% + 20px);
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	-webkit-box-align: stretch;
-	-webkit-align-items: stretch;
-	   -moz-box-align: stretch;
-	    -ms-flex-align: stretch;
-	        align-items: stretch;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	   -moz-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-pack: start;
-	-webkit-justify-content: flex-start;
-	   -moz-box-pack: start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
-}
-
-.section-explain .explain-cont .tbl-box .box-between .box-between-col, .section-explain-type2 .explain-cont .tbl-box .box-between .box-between-col {
-	width: 50%;
-	padding-right: 20px;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-
-.section-explain .explain-cont .tbl-box + .tbl-box, .section-explain-type2 .explain-cont .tbl-box + .tbl-box {
-	margin-top: 60px;
-}
-
-.section-explain .explain-cont .tbl-box + .row, .section-explain-type2 .explain-cont .tbl-box + .row {
-	margin-top: 60px;
 }
 
 .section-explain .explain-cont .details .lst, .section-explain-type2 .explain-cont .details .lst {
@@ -1445,6 +1449,10 @@ html, body {
 	margin-top: 25px;
 }
 
+.multi-segment-list .details .txt + .lst, .multi-segment-list .details .txt + .txt {
+	margin-top: 25px;
+}
+
 .multi-segment-list .details .details-header {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1689,6 +1697,10 @@ html, body {
 	font-size: 14px;
 	color: #54585a;
 	line-height: 1.5;
+}
+
+.lst > li.txt-color-red {
+	color: #ed1c24;
 }
 
 .lst.txt-color-red {
@@ -2779,6 +2791,27 @@ html, body {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
+}
+
+.tabControl .tab-cont-inner, .tabContInnerTab .tab-cont-inner {
+	display: none;
+	padding: 40px 0;
+}
+
+.tabControl .tab-cont-inner .tab-cont-row .tit + .txt, .tabControl .tab-cont-inner .tab-cont-row .tit + .lst, .tabControl .tab-cont-inner .tab-cont-row .tit + .tab-nav, .tabContInnerTab .tab-cont-inner .tab-cont-row .tit + .txt, .tabContInnerTab .tab-cont-inner .tab-cont-row .tit + .lst, .tabContInnerTab .tab-cont-inner .tab-cont-row .tit + .tab-nav {
+	margin-top: 25px;
+}
+
+.tabControl .tab-cont-inner .tab-cont-row + .tab-cont-row, .tabContInnerTab .tab-cont-inner .tab-cont-row + .tab-cont-row {
+	margin-top: 60px;
+}
+
+.tabControl .tab-cont-inner:first-child, .tabContInnerTab .tab-cont-inner:first-child {
+	display: block;
+}
+
+.tabContInnerTab .tab-cont-inner {
+	padding: 60px 0;
 }
 
 /*
