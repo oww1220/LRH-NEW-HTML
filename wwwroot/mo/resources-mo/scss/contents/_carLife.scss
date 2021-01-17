@@ -22,6 +22,50 @@
                 color:#6e5d50;
             }
         }
+        // 이미지성 tit 20210107 추가 - 공통요소로 정리
+        &.bg-block {
+            &.carLife-topbg-01 {@include Background($sprite:'bg-autohouse-visual', $size:cover, $position:center center, $path:'bgs');}
+            em{
+                color:#fff;
+            }
+            strong{
+                color:#fff;
+                span{
+                    color:#fff;
+                }
+            }
+            .btn-share {
+                @include Position( $top: 1.9rem, $right: 1.7rem);
+                background-color:transparent;
+            }
+            .guide {
+                padding:3.9rem 0 0 0;
+                text-indent: 0;
+                strong {
+                    margin-top:1.3rem;
+                    font-size:1.2rem;
+                    i {
+                        margin-right:.4rem;
+                    }
+                }
+                p {
+                    margin-top:1.3rem;
+                    color: #fff;
+                    font-size:1.1rem;
+                }
+                b{
+                    @include Bold;
+                    font-size:1.2rem;
+                    color: #fff;
+                }
+                em{
+                    @include Regular;
+                    font-size:1.2rem;
+                    margin-top:.5rem;
+                }
+            }
+        }
+        
     }
 
     .detail-layer-top {
