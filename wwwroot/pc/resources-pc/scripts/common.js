@@ -1501,7 +1501,7 @@ if($('.longTerm-container .longTermBenefitTab').length){
 
         $(window).on('scroll', function(e) {
             var scrollTop = $(this).scrollTop();
-            MUI.event.scrollTaps(scrollTop, $('.longTerm-container .layer-item'), $('.longTerm-container .detail-layer-nav'));
+            MUI.event.scrollTaps(scrollTop, $('.longTerm-container .layer-item'), $('.longTerm-container .detail-layer-nav'), 20);
 
             var scrollPos = window.scrollY || window.pageYOffset,
                 $target = $('.detail-layer-nav-wrap'), 
