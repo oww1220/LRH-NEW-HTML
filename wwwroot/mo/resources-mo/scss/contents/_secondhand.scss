@@ -2684,6 +2684,20 @@
                                     }
                                 }
                             }
+                            .btn-tooltip-box-group {
+                                .tooltip-box.tooltip-box-option {
+                                    opacity: 0;
+                                    height: 0;
+                                    overflow: hidden;
+                                    min-height: 0;
+                                    &.active {
+                                        opacity: 1;
+                                        height: auto;
+                                        display: block;
+                                        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                                    }
+                                }
+                            }
                         }
                         .item-cont-option-box:last-child{
                             border-bottom:0 none;
