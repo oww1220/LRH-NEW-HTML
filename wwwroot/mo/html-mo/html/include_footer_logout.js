@@ -47,6 +47,8 @@ $(function(){
                         <li><a href="#"><b>개인정보 처리방침</b></a></li>
                         <li><a href="#"><b>영상정보처리기기 운영관리방침</b></a></li>
                         <li><a href="#">이용약관</a></li>
+                        <!-- <li><a href="#">이메일주소무단수집거부</a></li> -->
+                        <li><a href="#">계약서 조회</a></li>
                     </ul>
                 </div>
                 <div class="footer-sns">
@@ -55,9 +57,10 @@ $(function(){
                         <li><a href="#"><i class="icon foot-sns01">카카오</i></a></li>
                         <li><a href="#"><i class="icon foot-sns02">페이스북</i></a></li>
                         <li><a href="#"><i class="icon foot-sns03">인스타그램</i></a></li>
-                        <li><a href="#"><i class="icon foot-sns04">유튜브</i></a></li>
+                        <!-- <li><a href="#"><i class="icon foot-sns04">유튜브</i></a></li> -->
                         <li><a href="#"><i class="icon foot-sns05">네이버포스트</i></a></li>
                         <li><a href="#"><i class="icon foot-sns06">네이버블로그</i></a></li>
+                        <li><a href="#"><i class="icon foot-sns07">트위터</i></a></li>
                     </ul>
                 </div>
                 <div class="footer-app">

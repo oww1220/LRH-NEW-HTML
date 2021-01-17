@@ -142,12 +142,10 @@ $(function(){
 					<div class="footer-infos-wrap">
 						<div class="sitemap">
 							<ul>
-								<li><a href="/kor/content/183/main.do?mnCd=FN0801" target="_blank">회사소개</a></li>
-								<li><a href="/kor/footer/footerPolicyNew.do?mnCd=FN0901" class="txt_point">개인정보처리방침</a></li>
-								<li><a href="/kor/content/190/main.do?mnCd=FN0902" class="txt_point">영상정보처리기기 운영관리방침</a></li>
-								<li><a href="/kor/footer/footerTermsNew.do?mnCd=FN0903">이용약관</a></li>
-								<li><a href="#refuse_email" class="refuse_email btn_layer">이메일주소무단수집거부</a></li>
-								<li><a href="/kor/content/192/main.do?mnCd=FN0908">찾아오시는길</a></li>
+								<li><a href="#" target="_blank">COMPAY</a></li>
+								<li><a href="#" class="txt_point">USER AGREEMENT</a></li>
+								<li><a href="#" class="refuse_email btn_layer">CONTACT US</a></li>
+								<li><a href="#">SITE MAP</a></li>
 							</ul>
 						</div>
 			
@@ -155,12 +153,14 @@ $(function(){
 			
 							<div class="information">
 								<ul class="entrepreneur-info">
-									<li>롯데렌탈㈜ 대표이사 김현수</li>
 									<li>
 										<ul class="address">
-											<li>경기도 안양시 동안구 전파로 88 신원비젼타워 8층 / 서울본사: 서울시 강남구 테헤란로 422 KT타워 6~9층</li>
-											<li>사업자등록번호 : <a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2148779183" target="_blank" onclick="window.open(this.href, '', 'toolbar=no,scrollbars=yes,resizable=no,top=50,left=500,width=750,height=700'); return false;" class="btn_entrepreneur_info">214-87-79183</a> / 통신판매업신고번호 : 제2010-경기안양-420호</li>
-											<li>해외 82-2-797-8000 / 보험대차 1588-4920 / 일반상품렌탈 1577-5100+1</li>
+											<li>LOTTE rental co., ltd.</li>
+											<li>President : Kim, Hyun Soo</li>
+											<li>Business Registration # : 214-87-79183</li>
+											<li>Communication Service # : 2010-Gyunggi Anyang 420</li>
+											<li>Address : 8F Shinwonvision Tower 898. Hogye-dong, Dongan-Gu, Anyang</li>
+											<li>Main Contact 1588-1230 | Oversea 82-2-797-8000</li>
 										</ul>
 									</li>
 								</ul>
@@ -230,14 +230,20 @@ $(function(){
 									<li>
 										<a href="#" class="btn btn-foot-sns"><i class="icon snsI">인스타그램</i></a>
 									</li>
-									<li>
+									<!-- <li>
 										<a href="#" class="btn btn-foot-sns"><i class="icon snsY">유튜브</i></a>
-									</li>
+									</li> -->
 									<li>
 										<a href="#" class="btn btn-foot-sns"><i class="icon snsP">포스트</i></a>
 									</li>
 									<li>
 										<a href="#" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-foot-sns"><i class="icon snsT">트위터</i></a>
 									</li>
 								</ul>
 							</div>
