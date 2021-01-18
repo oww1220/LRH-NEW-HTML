@@ -190,6 +190,8 @@ if($('#wrap .tooltipToggle-top').length) {
         logic();
     });
 }
+
+
 /* -------------------------------------------------유틸end*/
 
 /* 탭 전환start-------------------------------------------------*/
@@ -274,15 +276,21 @@ if($('.footerMenu-container .contTab').length){
 }
 
 //탭 공통
-if($('.tabControl').length){
-    MUI.event.taps('.tabControl', false, function(swap){
+if($('#wrap .tabControl').length){
+    MUI.event.taps('#wrap .tabControl', false, function(swap){
         swap();
     });
 }
 //탭 안의 탭 공통
-if($('.tabContInnerTab').length){
-    MUI.event.taps('.tabContInnerTab', false, function(swap){
+if($('#wrap .tabContInnerTab').length){
+    MUI.event.taps('#wrap .tabContInnerTab', false, function(swap){
         swap();
+    });
+}
+//토글 공통
+if($('#wrap .toggleOpenBtn').length) {
+    MUI.event.toggle('#wrap .toggleOpenBtn', '#wrap .toggleContArea', false, function(logic, layer) {
+        logic();
     });
 }
 
