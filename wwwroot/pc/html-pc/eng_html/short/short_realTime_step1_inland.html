@@ -130,7 +130,7 @@
 								</section>
 								<section class="section-form form9">
 									<div class="form-header">
-										<h3 class="tit-size-mid">Event/Discount</h3>
+										<h3 class="tit-size-mid">Point</h3>
 									</div>					
 									<div class="form-cont">
 										<div class="row type2">
@@ -150,7 +150,9 @@
 								</section>
 								<section class="section-form form4">
 									<div class="form-header">
-										<h3 class="tit-size-mid">Collision Damage Waiver (CDW) <button><i class="icon info04"></i></h3>
+										<h3 class="tit-size-mid">Collision Damage Waiver (CDW) 
+											<button type="button" class="layer-details-open" data-layer="layer-cdw"><i class="icon info04"></i></button>
+										</h3>
 									</div>					
 									<div class="form-cont">
 										<div class="row">
@@ -206,8 +208,10 @@
 												<li>
 													<div>
 														<strong>
-															<i class="icon etc-option01"></i>
-															Navigation <button><i class="icon info04"></i></button><br/>
+															<i class="icon etc-option01"></i>Navigation 
+															<button type="button" class="layer-details-open" data-layer="layer-navigation">
+																<i class="icon info04"></i>
+															</button><br/>
 															<span class="txt-color-red">(Free)</span>
 														</strong>
 														<div class="input-cont">
@@ -229,8 +233,10 @@
 												<li>
 													<div>
 														<strong>
-															<i class="icon etc-option03"></i>
-															Baby Seat <button><i class="icon info04"></i></button><br/>
+															<i class="icon etc-option03"></i>Baby Seat
+															<button type="button" class="layer-details-open" data-layer="layer-babySeat">
+																<i class="icon info04"></i>
+															</button><br/>
 															<span class="txt-color-red">(2,000KRW per time)</span>
 														</strong>
 														<div class="input-cont">
@@ -382,12 +388,145 @@
 	<div class="bg-dimmed">딤(Dim)처리 배경</div>
 	<!--//bg-dimmed 컴포넌트-->
 
+	<!-- Collision Damage Waiver (CDW) 레이어 -->
+	<div class="layer-wrap layer-popup layer-details layer-cdw">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>Information of Insurance</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-cdw"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+				
+					<div class="statement">
+						<h5 class="tit">Mainland</h5>
+						<ul class="lst dot">
+							<li>
+								You only have to pay between 100,000 ~ 500,000 KRW have the car damage 
+								covered.
+							</li>
+							<li>
+								The option fee is different depending on the category of options for 
+								deductibles for CDW
+							</li>
+							<li>
+								Categories of deductibles
+								<ul class="lst hypen">
+									<li>Korea-made cars : Zero Excess, 50,000won, 300,000won​</li>
+									<li>Foreign made cars : 300,000 KRW (single deductible system adopted)​</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="statement">
+						<h5 class="tit">Jeju Island Categories of deductibles</h5>
+						<ul class="lst dot">
+							<li>Korea-made cars : full-waiver system, 300,000 KRW</li>
+							<li>
+								Under full-waiver system, no customer contribution regardless of the 
+								amount of car damage, and liability for car damage is covered
+							</li>
+							<li>
+								If the car repair cost is below the deductible as opted for relevant category 
+								of deductibles
+							</li>
+							<li>
+								settlement will be made on an actual-cost basis, Otherwise, you only have 
+								to pay the highest deductibles as opted.
+							</li>
+						</ul>
+					</div>
+					<div class="statement">
+						<h5 class="tit">Jeju Island Categories of deductibles</h5>
+						<ul class="lst dot">
+							<li>
+								Customers are liable to pay repair cost in connection with any damage
+								(loss or destruction)
+							</li>
+							<li>
+								Compensation for an Inactive Vehicle : Customers are responsible for 
+								operational loss even with CDW registration in case of the repair cost 
+								exceeds 50% of the vehicle’s residual value. The compensation is 50% of 
+								rental fare corresponding to the repairing period.
+							</li>
+							<li>
+								If you have selected an CDW, and option for customers, any own damage to 
+								the vehicle is covered
+							</li>
+						</ul>
+					</div>
+				
+				</div>
+				<div class="popup-cont-bot-btns">	
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-cdw">Comfirm</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Collision Damage Waiver (CDW) 레이어 -->
+	
+	<!-- Baby Seat Service 레이어 -->
+	<div class="layer-wrap layer-popup layer-details layer-babySeat">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>Baby Seat Service</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-babySeat"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					<div class="statement">
+						<h5 class="tit">Baby Seat</h5>
+						<ul class="lst dot">
+							<li>
+								Car seats are available through reservation for every locations of 
+								Lotte rent-a-car.
+							</li>
+							<li>
+								Cost is 2,000KRW (does not depend on the rental period), and maxumum 1 
+								carseat is available per rental.
+							</li>
+							<li>
+								Installing a car seat may be difficuld depends of vehicles.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup-cont-bot-btns">	
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-babySeat">Comfirm</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Baby Seat Service 레이어 -->
 
-	<!--floating_zone 컴포넌트-->
-	<aside class="floating_zone" style="display: none;">
-		플로팅 사이드 바영역
-	</aside>
-	<!--//floating_zone 컴포넌트-->
+	<!-- navigation 레이어 -->
+	<div class="layer-wrap layer-popup layer-details layer-navigation">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>Navigation Rental Service</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-navigation"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					<div class="statement">
+						<h5 class="tit">Navigation</h5>
+						<ul class="lst dot">
+							<li>
+								For customers’ convenience, we offer navigation rental service. <br>
+								With a navigation, you can find the Shortest route to your destination <br>
+								without carrying a map, saving fuel and time.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup-cont-bot-btns">	
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-navigation">Comfirm</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //navigation 레이어 -->
+	
 
 </body>
 </html>
