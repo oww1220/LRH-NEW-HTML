@@ -124,6 +124,7 @@
                     }
                 }
             }
+            &.short-topbg-08 {@include Background($sprite:'bg-short-topbg-08', $size:cover, $position:top center, $path:'bgs'); height: 13rem;}
             em{
                 color:#fff;
             }
@@ -4472,6 +4473,12 @@
 
 //영문
 .eng-shor-wrap {
+    .section-top {
+        .eng-user-tit {
+            padding: 1rem 1.7rem;
+            font-size: 1.1rem;
+        }
+    }
     .credit-card-chk {
         padding: 1rem 0;
         border-bottom: 1px solid #d2d2d2;
@@ -4548,6 +4555,86 @@
                 @include Regular;
                 @include Align-middle-left;
             }
+        }
+    }
+    //driving-tip
+    .eng-shor-driving {
+        .detail-item {
+            padding: 0;
+            .eng-detail-cont-type1 {
+                ul {
+                    li {
+                        box-sizing: border-box;
+                        padding:1.7rem .8rem;
+                        border-bottom:1px solid #d2d2d2;
+                        margin-bottom: 0;
+                        @include Align-top-left;
+                        &:last-child {border: 0 none;}
+                        i {
+                            margin-top:1rem;
+                        }
+                        .icobox {
+                            width: 5rem;
+                        }
+                        .txtbox {
+                            padding-left: 1.7rem;
+                            width: calc(100% - 5rem);
+                            strong {
+                                font-size:1.2rem;
+                                color: #2f2f2f;
+                                @include Bold;
+                            }
+                            p {
+                                color: #54585a;
+                                font-size: 1.1rem;
+                            }
+                            ul {
+                                li {
+                                    border:0;
+                                    display: block;
+                                    padding:0 0 0 1rem;
+                                    text-indent: -.8rem;
+                                    font-size: 1rem;
+                                    &::before {
+                                        content:''; 
+                                        vertical-align: middle;
+                                        width:.3rem;
+                                        height:.3rem;
+                                        background-color: #8f9191;
+                                        display: inline-block;
+                                        margin-right:.3rem;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .eng-detail-cont-type2 {
+                margin-top: 1.5rem;
+                li {
+                    padding: 1.7rem 0;
+                    border-top: 1px solid #e7e7e7;
+                    h4 {
+                       padding: 0; 
+                    }
+                    .img-box {
+                        height: 11rem;
+                        width: 100%;
+                        margin: 1.7rem 0 1rem;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    p {
+                        color: #54585a;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            
         }
     }
 }

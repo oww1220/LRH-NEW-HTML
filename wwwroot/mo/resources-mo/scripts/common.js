@@ -1639,6 +1639,12 @@ if($('.eng-shor-wrap').length){
         }
     });
 }
+//driving tip 탭전환
+if($('.eng-shor-wrap .tab-normal').length){
+    MUI.event.taps('.eng-shor-wrap .tab-normal', false, function(swap){
+        swap();
+    });
+}
 /*FooterMenu start-------------------------------------------------*/
 
     //회사소개
