@@ -493,6 +493,335 @@
                 border-radius: 1rem;
             }
         }
+
+        //제주오토하우스 추가
+        .detail-item {
+            padding:1.7rem;
+            .detail-tit {
+                h3 {
+                    @include Bold;
+                    font-size:1.4rem;
+                }
+            }
+            .detail-cont {
+                border-top:1px solid #f4f4f4;
+                margin-top:1.7rem;
+                &.cont1 {
+                    li {
+                        padding-top:1.7rem;
+                        .cover {
+                            position: relative;
+                            .txt {
+                                width:100%;
+                                background-color: #54585a;
+                                padding:1.3rem 0;
+                                @include Position($bottom:0, $left:0);
+                                strong {
+                                    color:#fff;
+                                    line-height: 1.3;
+                                    @include Align-middle;
+                                }
+                            }
+                        }
+                    }
+                } 
+                &.cont2 {
+                    border:0;
+                    table {
+                        font-size:1rem;
+                        color:#54585a;
+                        @include Regular;
+                        border-top:1px solid #d2d2d2;
+                        tr {
+                            border-bottom:1px solid #e7e7e7;
+                        }
+                        th {
+                            background-color: #fafafa;
+                            padding:1.7rem 1.3rem;
+                            vertical-align: middle;
+                            border-left:1px solid #e7e7e7;
+                            border-right:1px solid #e7e7e7;
+                        }
+                        td {
+                            padding:1.7rem 1.2rem;
+                            border-right:1px solid #e7e7e7;
+                            strong {
+                                @include Bold;
+                                display: block;
+                                font-size:1.1rem;
+                                line-height: 1.3;
+                                padding-bottom:.8rem;
+                            }
+                            p {
+                                padding-left:1rem;
+                                text-indent: -.8rem;
+                                &::before {
+                                    content:''; 
+                                    vertical-align: middle;
+                                    width:.3rem;
+                                    height:.3rem;
+                                    background-color: #8f9191;
+                                    display: inline-block;
+                                    margin-right:.3rem;
+                                }
+                            }
+                        }
+                    }
+                    > ul { 
+                        //border-top:1px solid #d2d2d2;
+                        li {
+                            padding:1.7rem .8rem;
+                            border-top:1px solid #d2d2d2;
+                            @include Align-top-left;
+                            i {
+                                width:3.4rem;
+                                height:3.4rem;
+                                margin-top:1rem;
+                            }
+                            > div {
+                                padding-left: 1.7rem;
+                                strong {
+                                    font-size:1.2rem;
+                                    color:#ba9a81;
+                                    @include Bold;
+                                }
+                                ul {
+                                    li {
+                                        border:0;
+                                        display: block;
+                                        padding:0 0 0 1rem;
+                                        text-indent: -.8rem;
+                                        &::before {
+                                            content:''; 
+                                            vertical-align: middle;
+                                            width:.3rem;
+                                            height:.3rem;
+                                            background-color: #8f9191;
+                                            display: inline-block;
+                                            margin-right:.3rem;
+                                        }
+                                        b{
+                                            @include Bold;
+                                            color:#54585a;
+                                        }
+                                        em{
+                                            display: block;
+                                            padding:0 0 0 1rem;
+                                            text-indent: -.8rem;
+                                            @include Regular;
+                                            color:#54585a;
+                                        }
+                                    }
+                                }
+                            }
+                            &.cont-type-info-box{
+                                background-color: #fbf6f1;
+                                border-top:0 none;
+                                > div {
+                                    strong {
+                                        color:#2e2e2e;
+                                        border-bottom: 1px solid #2e2e2e;
+                                    }
+                                    ul {
+                                        li {
+                                            padding:0;
+                                            text-indent: 0;
+                                            &::before{
+                                                display:none;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:last-child{
+                                    margin-top:1.7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.cont3 {
+                    .cover {
+                        padding-top:1.7rem;
+                    }
+                    .cont-in {
+                        padding:2.6rem 1.2rem 0;
+                        background-color: #fafafa;
+                        h4 {
+                            font-size:1.1rem;
+                            @include Bold;
+                        }
+                        ol {
+                            li {
+                                @include Align-top-left;
+                                padding-top:1.6rem;
+                                > span {
+                                    font-size:1.1rem;
+                                }
+                                div {
+                                    padding-left:.8rem;
+                                    p {
+                                        font-size:1.1rem;
+                                        strong {
+                                            @include Bold;
+                                            display: block;
+                                            line-height: 1.3;
+                                        }
+                                    }
+                                    span {
+                                        padding:1rem 0 0 1rem;
+                                        text-indent: -.8rem;
+                                        display: block;
+                                        &::before {
+                                            content:''; 
+                                            vertical-align: middle;
+                                            width:.2rem;
+                                            height:.2rem;
+                                            background-color: #ed1c24;
+                                            display: inline-block;
+                                            margin-right:.3rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .section-layer-submit {
+                            padding:3.4rem 0;
+                            button {
+                                width:100%;
+                                font-size: 1.6rem;
+                                background-color: #fff;
+                                @include Bold;
+                            }
+                        }
+                    }
+                    
+                }
+                &.cont4 {
+                    border:0;
+                    > ul { 
+                        border-top:1px solid #d2d2d2;
+                        li {
+                            padding:1.7rem .8rem;
+                            border-bottom:1px solid #d2d2d2;
+                            @include Align-top-left;
+                            i {
+                                width:3.4rem;
+                                height:3.4rem;
+                                margin-top:1rem;
+                            }
+                            > div {
+                                padding-left: 1.7rem;
+                                strong {
+                                    font-size:1.2rem;
+                                    color:#ba9a81;
+                                    @include Bold;
+                                }
+                                ul {
+                                    li {
+                                        border:0;
+                                        display: block;
+                                        padding:0 0 0 1rem;
+                                        text-indent: -.8rem;
+                                        &::before {
+                                            content:''; 
+                                            vertical-align: middle;
+                                            width:.3rem;
+                                            height:.3rem;
+                                            background-color: #8f9191;
+                                            display: inline-block;
+                                            margin-right:.3rem;
+                                        }
+                                        b{
+                                            @include Bold;
+                                            color:#54585a;
+                                        }
+                                        em{
+                                            display: block;
+                                            padding:0 0 0 1rem;
+                                            text-indent: -.8rem;
+                                            @include Regular;
+                                            color:#54585a;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.cont5 {
+                    > div {
+                        padding-top:1.7rem;
+                        > div {
+                            @include Align-top-left;
+                            margin-bottom:2.6rem;
+                            i {
+                                width: 1.3rem;
+                                height: 1.6rem;
+                                &.time2 {
+                                    height: 1.3rem;
+                                }
+                            }
+                            div {
+                                margin-left:1rem;
+                                strong {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .cover {
+                        padding:1.7rem;
+                        background-color: #fafafa;
+                    }
+                    .section-layer-submit {
+                        padding:2.6rem 0 0;
+                    }
+                }
+                &.cont6 {
+                    ol {
+                        padding-top:1.7rem;
+                        li {
+                            @include Align-top-left;
+                            position: relative;
+                            & + li {
+                                margin-top:.9rem;
+                            }
+                            b {
+                                @include Background($sprite:'bg-gray', $size:auto, $position:center center);
+                                padding:1rem 1.3rem;
+                                color:#fff;
+                                @include Bold;
+                            }
+                            div {
+                                padding:.9rem 0 0 1.3rem;
+                                strong {
+                                    @include Bold;
+                                    font-size:1.2rem;
+                                    display: block;
+                                    padding-bottom:.6rem;
+                                }
+                                p {
+                                    text-indent: -.8rem;
+                                    padding-left:1rem;
+                                    color:#8f9191;
+                                    font-size:1.1rem;
+                                    &::before {
+                                        content:'';
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        width: .2rem;
+                                        height: .2rem;
+                                        border-radius: 100%;
+                                        background-color: #8f9191;
+                                        margin-right:.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     
