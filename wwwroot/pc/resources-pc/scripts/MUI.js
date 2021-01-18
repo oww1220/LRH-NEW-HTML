@@ -524,10 +524,10 @@ var MUI = MUI || {
 				}
 			});
 		},
-		scrollTaps: function(scrollTop, $target, $nav){
+		scrollTaps: function(scrollTop, $target, $nav, fixHeightValue){
 			var navHeight = $nav.height(),
 				$link = $nav.find('.menu-link');
-				fixHeight = 0; //추후변동
+				fixHeight = fixHeightValue ? fixHeightValue : 0; //추후변동
 				//console.log($target);
 			$target.each(function(){
 				var top_of_element = $(this).offset().top;

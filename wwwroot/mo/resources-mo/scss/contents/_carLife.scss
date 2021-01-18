@@ -22,6 +22,50 @@
                 color:#6e5d50;
             }
         }
+        // 이미지성 tit 20210107 추가 - 공통요소로 정리
+        &.bg-block {
+            &.carLife-topbg-01 {@include Background($sprite:'bg-autohouse-visual', $size:cover, $position:center center, $path:'bgs');}
+            em{
+                color:#fff;
+            }
+            strong{
+                color:#fff;
+                span{
+                    color:#fff;
+                }
+            }
+            .btn-share {
+                @include Position( $top: 1.9rem, $right: 1.7rem);
+                background-color:transparent;
+            }
+            .guide {
+                padding:3.9rem 0 0 0;
+                text-indent: 0;
+                strong {
+                    margin-top:1.3rem;
+                    font-size:1.2rem;
+                    i {
+                        margin-right:.4rem;
+                    }
+                }
+                p {
+                    margin-top:1.3rem;
+                    color: #fff;
+                    font-size:1.1rem;
+                }
+                b{
+                    @include Bold;
+                    font-size:1.2rem;
+                    color: #fff;
+                }
+                em{
+                    @include Regular;
+                    font-size:1.2rem;
+                    margin-top:.5rem;
+                }
+            }
+        }
+        
     }
 
     .detail-layer-top {
@@ -121,7 +165,7 @@
                     border-radius: 1rem 0 0 1rem;
                 }
                 .inputT{
-                    width:60%;
+                    width:55%;
                     & > input[type="text"]{
                         border:0 none;
                         border-radius: 0;
@@ -137,7 +181,7 @@
                     border-radius: 0 1rem 1rem 0;
                 }
                 ul > li:first-child{
-                    width:20%;
+                    width:25%;
                 }
                 ul > li:last-child{
                     width:20%;
@@ -751,6 +795,9 @@
        
         .chk-list {
             li {
+                max-width:50%;
+                min-width:25%;
+                width:auto;
                 input {
                     display: none;
                 }
@@ -767,6 +814,10 @@
                     transition: all .4s; 
                     border:1px solid #d2d2d2;
                     background-color: #fff;
+                    padding:0 .5rem;
+                    @include Ellipsis($lines:1);
+                    line-height: 2;
+                    text-align: center;
                 }
                 input:checked + label {
                     border:1px solid #ff404b;

@@ -30,16 +30,16 @@ $(function(){
 							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-01" data-on="true" data-siblings="true">단기렌터카</a>
 						</li>
 						<li>
-							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-02" data-on="true" data-siblings="true">신차장기렌터카 </a>
+							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-02" data-on="true" data-siblings="true">신차 장기렌터카 </a>
 						</li>
 						<li>
 							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-03" data-on="true" data-siblings="true">중고차 렌터카</a>
 						</li>
 						<li>
-							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-04" data-on="true" data-siblings="true">#카라이프</a>
+							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-04" data-on="true" data-siblings="true">CAR뮤니티</a>
 						</li>
 						<li>
-							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-05" data-on="true" data-siblings="true">고객센터</a>
+							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-05" data-on="true" data-siblings="true">고객지원</a>
 						</li>
 					</ul>
 				</div>
@@ -63,49 +63,68 @@ $(function(){
 			<div class="draw-toggle-wrap draw-toggle-wrap-s">
 				<!-- 헤더 2뎁스 메뉴 - 렌터카 예약 - 로그인 했을때 -->
 				<div class="draw-toggle-area">
-					<div class="draw-toggle-cont draw-cont-01">
-						<div class="detail-layer-in">
-							<div class="layer-gnb-info">
-								<div class="layer-gnb-info-top">
-									<p><span>김롯데님</span></p>
-									<p><b>환영합니다.</b></p>
-								</div>
-								<ul class="layer-gnb-link">
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag point">P</i>포인트
-											</div>
-											<div class="link-btn-align-right">
-												<b>1,800</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag coupon">C</i>쿠폰
-											</div>
-											<div class="link-btn-align-right">
-												<b>12</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-								</ul>
+					<!-- 로그인 전/후-->
+					<div class="layer-gnb-info-wrap">
+						<!-- 로그인 했을때-->
+						<div class="layer-gnb-info">
+							<div class="layer-gnb-info-top">
+								<p><span>김롯데님</span></p>
+								<p><b>환영합니다.</b></p>
 							</div>
-							<ul class="layer-gnb list-type-col4">
+							<ul class="layer-gnb-link">
 								<li>
-									<p><a href="#">실시간예약</a></p>
+									<button type="button" class="btn">
+										<div class="link-btn-align-left">
+											<i class="flag point">P</i>포인트
+										</div>
+										<div class="link-btn-align-right">
+											<b>1,800</b><i class="icon next02"></i>
+										</div>
+									</button>
 								</li>
 								<li>
-									<p><a href="#">단기렌터카안내</a></p>
+									<button type="button" class="btn">
+										<div class="link-btn-align-left">
+											<i class="flag coupon">C</i>쿠폰
+										</div>
+										<div class="link-btn-align-right">
+											<b>12</b><i class="icon next02"></i>
+										</div>
+									</button>
+								</li>
+							</ul>
+						</div><!-- 로그인 했을때-->
+						<!-- 로그인 안했을때-->
+						<div class="layer-gnb-info">
+							<div class="layer-gnb-info-top">
+								<p><span><a href="#">로그인</a></span></p>
+								<p><b>해주세요!</b></p>
+							</div>
+						</div><!-- //로그인 안했을때-->
+					</div><!-- //로그인 전/후-->
+					
+
+					<!-- //헤더 2뎁스 메뉴 - 렌터카 예약 -->
+					<div class="draw-toggle-cont draw-cont-01">
+						<div class="detail-layer-in">
+							<ul class="layer-gnb list-type-col4">
+								<li>
+									<p><a href="#">빠른 예약</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">제주 렌트</a></li>
+											<li><a href="#">내륙 렌트</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">단기렌트 서비스 안내</a></p>
 									<div class="layer-gnb-list">
 										<ul>
 											<li><a href="#">대여 및 요금안내</a></li>
 											<li><a href="#">체크인서비스</a></li>
 											<li><a href="#">부가서비스안내</a></li>
 											<li><a href="#">펫카상품안내</a></li>
-											<li><a href="#">보험대차서비스</a></li>
 										</ul>
 									</div>
 								</li>
@@ -113,8 +132,8 @@ $(function(){
 									<p><a href="#">월간렌터카</a></p>
 									<div class="layer-gnb-list">
 										<ul>
-											<li><a href="#">월간렌터카란</a></li>
-											<li><a href="#">신청하기</a></li>
+											<li><a href="#">월간렌트 서비스 안내</a></li>
+											<li><a href="#">렌터카 검색</a></li>
 										</ul>
 									</div>
 								</li>
@@ -122,48 +141,47 @@ $(function(){
 									<p><a href="#">기사포함렌터카</a></p>
 									<div class="layer-gnb-list">
 										<ul>
-											<li><a href="#">기사포함렌터카란</a></li>
-											<li><a href="#">신청하기</a></li>
+											<li><a href="#">기사포함 서비스 안내</a></li>
+											<li><a href="#">렌터카 예약 접수</a></li>
 										</ul>
 									</div>
 								</li>
 								<li>
 									<p><a href="#">해외렌터카</a></p>
 								</li>
+								<li>
+									<p><a href="#">사고대차 서비스</a></p>
+								</li>
 							</ul>
 						</div>
 					</div>
-					<!-- //헤더 2뎁스 메뉴 - 렌터카 예약 - 로그인 했을때 -->
+					<!-- //헤더 2뎁스 메뉴 - 렌터카 예약 -->
 	
-					<!-- 헤더 2뎁스 메뉴 - 신차장 - 로그인 안했을때 -->
+					<!-- 헤더 2뎁스 메뉴 - 신차장 -->
 					<div class="draw-toggle-cont draw-cont-02">
 						<div class="detail-layer-in">
-							<div class="layer-gnb-info">
-								<div class="layer-gnb-info-top">
-									<p><span><a href="#">로그인</a></span></p>
-									<p><b>해주세요!</b></p>
-								</div>
-							</div>
 							<ul class="layer-gnb list-type-col4">
-								<li>
-									<p><a href="#">다이렉트 견적</a></p>
-								</li>
 								<li>
 									<p><a href="#">신차장 특가</a></p>
 								</li>
 								<li>
-									<p><a href="#">신차장 멤버십</a></p>
+									<p><a href="#">다이렉트 견적</a></p>
 								</li>
 								<li>
-									<p><a href="#">장기렌터카 안내</a></p>
+									<p><a href="#">장기렌트 서비스 안내</a></p>
 									<div class="layer-gnb-list">
 										<ul>
 											<li><a href="#">개인 장기렌터카</a></li>
 											<li><a href="#">법인 장기렌터카</a></li>
 											<li><a href="#">전기차 장기렌터카</a></li>
-											<li><a href="#">제휴카드 안내</a></li>
 										</ul>
 									</div>
+								</li>
+								<li>
+									<p><a href="#">제휴카드 혜택</a></p>
+								</li>
+								<li>
+									<p><a href="#">신차장 멤버십</a></p>
 								</li>
 								<li>
 									<p><a href="#">신차장 친구추천</a></p>
@@ -175,41 +193,25 @@ $(function(){
 	
 					<!-- 헤더 2뎁스 메뉴 - 중고차장기 - 로그인 했을때 -->
 					<div class="draw-toggle-cont draw-cont-03">
-						<div class="detail-layer-in">
-							<div class="layer-gnb-info">
-								<div class="layer-gnb-info-top">
-									<p><span>김롯데님</span></p>
-									<p><b>환영합니다.</b></p>
-								</div>
-								<ul class="layer-gnb-link">
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag point">P</i>포인트
-											</div>
-											<div class="link-btn-align-right">
-												<b>1,800</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag coupon">C</i>쿠폰
-											</div>
-											<div class="link-btn-align-right">
-												<b>12</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-								</ul>
-							</div>
+						<div class="detail-layer-in">							
 							<ul class="layer-gnb list-type-col4">
 								<li>
 									<p><a href="#">중고차 장기렌터카</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">중고차렌트 서비스 안내</a></li>
+											<li><a href="#">중고차 검색</a></li>
+										</ul>
+									</div>
 								</li>
 								<li>
-									<p><a href="#">중고차 승계렌터카</a></p>
+									<p><a href="#">중고차 승계 서비스</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">렌터카 승계 안내</a></li>
+											<li><a href="#">승계 차량 검색</a></li>
+										</ul>
+									</div>
 								</li>
 								<li>
 									<p><a href="#">내 차 팔기 서비스</a></p>
@@ -222,40 +224,10 @@ $(function(){
 					<!-- 헤더 2뎁스 메뉴 - #카라이프 - 로그인 했을때 -->
 					<div class="draw-toggle-cont draw-cont-04">
 						<div class="detail-layer-in">
-							<div class="layer-gnb-info">
-								<div class="layer-gnb-info-top">
-									<p><span>김롯데님</span></p>
-									<p><b>환영합니다.</b></p>
-								</div>
-								<ul class="layer-gnb-link">
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag point">P</i>포인트
-											</div>
-											<div class="link-btn-align-right">
-												<b>1,800</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag coupon">C</i>쿠폰
-											</div>
-											<div class="link-btn-align-right">
-												<b>12</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-								</ul>
-							</div>
 							<ul class="layer-gnb list-type-col4">
 								<li>
-									<p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p>
-								</li>
-								<li>
-									<p><a href="#">제주도 오토하우스</a></p>
+									<p><a href="#">매거진</a></p>
+									<!-- <p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p> -->
 								</li>
 								<li>
 									<p><a href="#">이벤트</a></p>
@@ -266,6 +238,9 @@ $(function(){
 										</ul>
 									</div>
 								</li>
+								<li>
+									<p><a href="#">제주오토하우스</a></p>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -274,50 +249,22 @@ $(function(){
 					<!-- 헤더 2뎁스 메뉴 - 고객지원 - 로그인 했을때 -->
 					<div class="draw-toggle-cont draw-cont-05">
 						<div class="detail-layer-in">
-							<div class="layer-gnb-info">
-								<div class="layer-gnb-info-top">
-									<p><span>김롯데님</span></p>
-									<p><b>환영합니다.</b></p>
-								</div>
-								<ul class="layer-gnb-link">
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag point">P</i>포인트
-											</div>
-											<div class="link-btn-align-right">
-												<b>1,800</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-									<li>
-										<button type="button" class="btn">
-											<div class="link-btn-align-left">
-												<i class="flag coupon">C</i>쿠폰
-											</div>
-											<div class="link-btn-align-right">
-												<b>12</b><i class="icon next02"></i>
-											</div>
-										</button>
-									</li>
-								</ul>
-							</div>
 							<ul class="layer-gnb list-type-col4">
 								<li>
-									<p><a href="#">고객센터</a></p>
-								</li>
-								<li>
-									<p><a href="#">공지사항/뉴스</a></p>
+									<p><a href="#">공지사항</a></p>
 								</li>
 								<li>
 									<p><a href="#">지점 안내</a></p>
 									<div class="layer-gnb-list">
 										<ul>
-											<li><a href="#">전국지점안내</a></li>
-											<li><a href="#">기사포함지점안내</a></li>
-											<li><a href="#">해외지점안내</a></li>
+											<li><a href="#">전국지점</a></li>
+											<li><a href="#">기사포함</a></li>
+											<li><a href="#">해외지점</a></li>
 										</ul>
 									</div>
+								</li>
+								<li>
+									<p><a href="#">고객센터</a></p>
 								</li>
 							</ul>
 						</div>
@@ -358,26 +305,31 @@ $(function(){
 			<!--- 드롭다운 메뉴 추가, 전체 메뉴는 높이가 다르기 때문에 따로 설정-->
 			<div class="draw-toggle-wrap-all">
 				<!-- 헤더 전체 메뉴 -->
-				<div class="draw-toggle-cont draw-cont-06">
+				<div class="draw-toggle-cont-all draw-cont-06">
 					<div class="detail-layer-in detail-layer-all-in">
-						<ul class="layer-gnb layer-gnb-all">
+						<ul class="layer-gnb-all">
 							<li>
 								<ul>
 									<li>
-										<p><a href="#"><b>단기렌트카</b></a></p>
+										<p><a href="#"><b>단기렌터카</b></a></p>
 									</li>
 									<li>
-										<p><a href="#">실시간예약</a></p>
+										<p><a href="#">빠른 예약</a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">제주 렌트</a></li>
+												<li><a href="#">내륙 렌트</a></li>
+											</ul>
+										</div>
 									</li>
 									<li>
-										<p><a href="#">단기렌터카안내</a></p>
+										<p><a href="#">단기렌트 서비스 안내</a></p>
 										<div class="layer-gnb-list">
 											<ul>
 												<li><a href="#">대여 및 요금안내</a></li>
 												<li><a href="#">체크인서비스</a></li>
 												<li><a href="#">부가서비스안내</a></li>
 												<li><a href="#">펫카상품안내</a></li>
-												<li><a href="#">보험대차서비스</a></li>
 											</ul>
 										</div>
 									</li>
@@ -385,8 +337,8 @@ $(function(){
 										<p><a href="#">월간렌터카</a></p>
 										<div class="layer-gnb-list">
 											<ul>
-												<li><a href="#">월간렌터카란</a></li>
-												<li><a href="#">신청하기</a></li>
+												<li><a href="#">월간렌트 서비스 안내</a></li>
+												<li><a href="#">렌터카 검색</a></li>
 											</ul>
 										</div>
 									</li>
@@ -394,40 +346,45 @@ $(function(){
 										<p><a href="#">기사포함렌터카</a></p>
 										<div class="layer-gnb-list">
 											<ul>
-												<li><a href="#">기사포함렌터카란</a></li>
-												<li><a href="#">신청하기</a></li>
+												<li><a href="#">기사포함 서비스 안내</a></li>
+												<li><a href="#">렌터카 예약 접수</a></li>
 											</ul>
 										</div>
 									</li>
 									<li>
 										<p><a href="#">해외렌터카</a></p>
 									</li>
+									<li>
+										<p><a href="#">사고대차 서비스</a></p>
+									</li>
 								</ul>
 							</li>
 							<li>
 								<ul>
 									<li>
-										<p><a href="#"><b>신차장기렌트카</b></a></p>
-									</li>
-									<li>
-										<p><a href="#">다이렉트 견적</a></p>
+										<p><a href="#"><b>신차 장기렌터카</b></a></p>
 									</li>
 									<li>
 										<p><a href="#">신차장 특가</a></p>
 									</li>
 									<li>
-										<p><a href="#">신차장 멤버쉽</a></p>
+										<p><a href="#">다이렉트 견적</a></p>
 									</li>
 									<li>
-										<p><a href="#">장기렌터카 안내</a></p>
+										<p><a href="#">장기렌트 서비스 안내</a></p>
 										<div class="layer-gnb-list">
 											<ul>
 												<li><a href="#">개인 장기렌터카</a></li>
 												<li><a href="#">법인 장기렌터카</a></li>
 												<li><a href="#">전기차 장기렌터카</a></li>
-												<li><a href="#">제휴카드 안내</a></li>
 											</ul>
 										</div>
+									</li>
+									<li>
+										<p><a href="#">제휴카드 혜택</a></p>
+									</li>
+									<li>
+										<p><a href="#">신차장 멤버십</a></p>
 									</li>
 									<li>
 										<p><a href="#">신차장 친구추천</a></p>
@@ -441,9 +398,21 @@ $(function(){
 									</li>
 									<li>
 										<p><a href="#">중고차 장기렌터카</a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">중고차렌트 서비스 안내</a></li>
+												<li><a href="#">중고차 검색</a></li>
+											</ul>
+										</div>
 									</li>
 									<li>
-										<p><a href="#">중고차 승계렌터카</a></p>
+										<p><a href="#">중고차 승계 서비스</a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">렌터카 승계 안내</a></li>
+												<li><a href="#">승계 차량 검색</a></li>
+											</ul>
+										</div>
 									</li>
 									<li>
 										<p><a href="#">내 차 팔기 서비스</a></p>
@@ -453,22 +422,23 @@ $(function(){
 							<li>
 								<ul>
 									<li>
-										<p><a href="#"><b>#카라이프</b></a></p>
+										<p><a href="#"><b>CAR뮤니티</b></a></p>
 									</li>
 									<li>
-										<p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p>
-									</li>
-									<li>
-										<p><a href="#">제주오토하우스</a></p>
+										<p><a href="#">매거진</a></p>
+										<!-- <p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p> -->
 									</li>
 									<li>
 										<p><a href="#">이벤트</a></p>
 										<div class="layer-gnb-list">
 											<ul>
-												<li><a href="#">진행중인 이벤트</a></li>
+												<li><a href="#">진행중인이벤트</a></li>
 												<li><a href="#">당첨자발표</a></li>
 											</ul>
 										</div>
+									</li>
+									<li>
+										<p><a href="#">제주오토하우스</a></p>
 									</li>
 								</ul>
 							</li>
@@ -478,20 +448,20 @@ $(function(){
 										<p><a href="#"><b>고객지원</b></a></p>
 									</li>
 									<li>
-										<p><a href="#">고객센터</a></p>
+										<p><a href="#">공지사항</a></p>
 									</li>
 									<li>
-										<p><a href="#">공지사항/뉴스</a></p>
-									</li>
-									<li>
-										<p><a href="#">지점안내</a></p>
+										<p><a href="#">지점 안내</a></p>
 										<div class="layer-gnb-list">
 											<ul>
-												<li><a href="#">전국지점안내</a></li>
-												<li><a href="#">기사포함지점안내</a></li>
-												<li><a href="#">해외지점안내</a></li>
+												<li><a href="#">전국지점</a></li>
+												<li><a href="#">기사포함</a></li>
+												<li><a href="#">해외지점</a></li>
 											</ul>
 										</div>
+									</li>
+									<li>
+										<p><a href="#">고객센터</a></p>
 									</li>
 								</ul>
 							</li>
@@ -511,7 +481,7 @@ $(function(){
 										<div class="layer-gnb-list">
 											<ul>
 												<li>
-													<p><a href="#">마인페이지</a></p>
+													<p><a href="#">마이페이지</a></p>
 												</li>
 												<li>
 													<p><a href="#">회원가입</a></p>

@@ -272,25 +272,33 @@ if($('.footerMenu-container .contTab').length){
         swap();
     });
 }
-//탭 안의 탭
-if($('.footerMenu-container .tabContInnerTab').length){
-    MUI.event.taps('.footerMenu-container .tabContInnerTab', false, function(swap){
+
+//탭 공통
+if($('.tabControl').length){
+    MUI.event.taps('.tabControl', false, function(swap){
+        swap();
+    });
+}
+//탭 안의 탭 공통
+if($('.tabContInnerTab').length){
+    MUI.event.taps('.tabContInnerTab', false, function(swap){
         swap();
     });
 }
 
-//신차장기렌터카 - 제휴카드 안내 
-if($('.affiliateCard-container .tabControl').length){
-    MUI.event.taps('.affiliateCard-container .tabControl', false, function(swap){
-        swap();
-    });
-}
-//단기렌터카 - 부가서비스 안내
-if($('.additional-container .tabControl').length){
-    MUI.event.taps('.additional-container .tabControl', false, function(swap){
-        swap();
-    });
-}
+//20210115 - 탭 공통으로 빼기위해 중복되는 소스 주석 처리
+// //신차장기렌터카 - 제휴카드 안내 
+// if($('.affiliateCard-container .tabControl').length){
+//     MUI.event.taps('.affiliateCard-container .tabControl', false, function(swap){
+//         swap();
+//     });
+// }
+// //단기렌터카 - 부가서비스 안내
+// if($('.additional-container .tabControl').length){
+//     MUI.event.taps('.additional-container .tabControl', false, function(swap){
+//         swap();
+//     });
+// }
 
 /* -------------------------------------------------탭 전환end*/
 
@@ -1493,7 +1501,7 @@ if($('.longTerm-container .longTermBenefitTab').length){
 
         $(window).on('scroll', function(e) {
             var scrollTop = $(this).scrollTop();
-            MUI.event.scrollTaps(scrollTop, $('.longTerm-container .layer-item'), $('.longTerm-container .detail-layer-nav'));
+            MUI.event.scrollTaps(scrollTop, $('.longTerm-container .layer-item'), $('.longTerm-container .detail-layer-nav'), 20);
 
             var scrollPos = window.scrollY || window.pageYOffset,
                 $target = $('.detail-layer-nav-wrap'), 
@@ -1791,6 +1799,15 @@ if($('.mypage-container .indicator-toggle-cont').length) {
         }
     }
 
+    //gotop
+    if($('.fixedRight .btn-goTop').length){
+        MUI.event.goTop($('.fixedRight .btn-goTop'));
+        MUI.event.topScrollCh($('.fixedRight'));
+        $(window).on('scroll', function(){
+            MUI.event.topScrollCh($('.fixedRight'));
+        });
+    }
+
 /*브라우저 리사이즈*/
 if($(".layer-iscroll").length){
     $(window).on("resize",function(){
@@ -1959,15 +1976,12 @@ $(function(){
         }
     });
 
-    $('.draw-toggle-wrap, .draw-toggle-wrap-all').each(function(i){
-        $(this).on({
-             mouseleave: function(){
-                $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
-               // $('.draw-toggle-cont').eq(i).fadeOut(400);
-                $('.draw-toggle-wrap, .draw-toggle-wrap-all').fadeOut(400);
-                $('.bg-dimmed-h').css('display','none');
-            },
-        });	
+    $('.bg-dimmed-h').on({
+        mouseenter: function(){
+            $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
+            $('.draw-toggle-wrap, .draw-toggle-wrap-all').fadeOut(400);
+            $('.bg-dimmed-h').css('display','none');
+        },
     });
 
     //*영문 gnb 설정*/
