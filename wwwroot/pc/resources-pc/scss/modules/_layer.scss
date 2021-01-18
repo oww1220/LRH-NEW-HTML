@@ -1087,7 +1087,7 @@ body.fixed {
 		}
 
 		//마이페이지 (공통)
-		&.layer-mypage{
+		&.layer-mypage, &.layer-infos{
 
 			.popup-top{
 				background: #fff;
@@ -1213,8 +1213,18 @@ body.fixed {
 					padding:0 0 30px;
 					border-bottom:1px solid $border-grey;
 				}
-			}
+			}			
 			
+			//payment(영문 - 단기실시간예약 1단계) - Collision Damage Waiver (CDW) 
+			&.layer-cdw{
+				.statement{
+					.tit{
+						+ .lst{margin-top:25px;}
+					}
+
+					+ .statement{margin-top:60px;}
+				}
+			}
 		}
 
 
@@ -1230,6 +1240,9 @@ body.fixed {
 						@include Background($sprite:'ico-pop-close-black', $position:center center);
 					}
 				}		
+			}
+			.statement-area{
+
 			}
 		}
 		

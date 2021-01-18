@@ -191,6 +191,15 @@ if($('#wrap .tooltipToggle-top').length) {
     });
 }
 
+//레이어 공통
+if($('.layer-infos').length) {
+    MUI.layer.openClick('.layer-infos-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+        //console.log('open');
+        //iscrollReset(show, layer);
+        show();
+    });
+}
+
 
 /* -------------------------------------------------유틸end*/
 
