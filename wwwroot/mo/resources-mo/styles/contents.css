@@ -16364,53 +16364,9 @@
 
 .shor-wrap .section-filter .result .filter-col .chk-list {
 	margin-top: .4rem;
-	/* li {
-						input {
-							display: none;
-						}
-						label {
-							position: relative;
-							border:0 none;
-                            height:4.9rem;
-							display: block;
-							//@include Align-middle;
-							box-sizing: border-box;
-							font-size: 1.1rem;
-							border-radius: 2rem;
-							padding: 0 1.2rem;
-                            transition: all .4s;
-                            @include Bold;
-                            color: #8f9191;
-                            background-color: #fff;
-                        }
-                        
-                        label {
-                            @include Align-middle-column;
-                            padding:0;
-                            height:8.6rem;
-                            border-radius: .4rem;
-                            color:#54585a;
-                            background-color: #fff;
-                            font-size:1rem;
-                            @include Regular;
-                            border:1px solid #d2d2d2;
-                            span{
-                                margin:1.7rem 0 0 0;
-                            }
-                            i {
-                                min-height:2.6rem;
-                            }
-                        }
-
-						input:checked + label {
-							background: rgb(255,51,102);
-                            background: linear-gradient(90deg, rgba(254,42,123,1) 0%, rgba(255,77,52,1) 100%);
-                            color:#fff;
-						}
-					} */
 }
 
-.shor-wrap .section-filter .result .filter-col .chk-list ul {
+.shor-wrap .section-filter .result .filter-col .chk-list ul.scroll-box {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -16424,7 +16380,7 @@
 	padding-bottom: .5rem;
 }
 
-.shor-wrap .section-filter .result .filter-col .chk-list ul li {
+.shor-wrap .section-filter .result .filter-col .chk-list ul.scroll-box li {
 	display: -webkit-inline-box;
 	display: -webkit-inline-flex;
 	display: -moz-inline-box;
@@ -16434,15 +16390,15 @@
 	margin-left: 1rem;
 }
 
-.shor-wrap .section-filter .result .filter-col .chk-list ul li > div {
+.shor-wrap .section-filter .result .filter-col .chk-list ul.scroll-box li > div {
 	width: 100%;
 }
 
-.shor-wrap .section-filter .result .filter-col .chk-list ul li:first-child {
+.shor-wrap .section-filter .result .filter-col .chk-list ul.scroll-box li:first-child {
 	margin-left: 0;
 }
 
-.shor-wrap .section-filter .result .filter-col .chk-list ul li label {
+.shor-wrap .section-filter .result .filter-col .chk-list ul.scroll-box li label {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -16479,7 +16435,7 @@
 	border: 1px solid #d2d2d2;
 }
 
-.shor-wrap .section-filter .result .filter-col .chk-list ul li input:checked + label {
+.shor-wrap .section-filter .result .filter-col .chk-list ul.scroll-box li input:checked + label {
 	background-color: #fff9f9;
 	background: -webkit-gradient(linear, left top, right top, from(#fff9f9), to(#fff9f9));
 	background: -webkit-linear-gradient(left, #fff9f9 0%, #fff9f9 100%);
@@ -16488,6 +16444,89 @@
 	background: linear-gradient(90deg, #fff9f9 0%, #fff9f9 100%);
 	color: #ed1c24;
 	border: 1px solid #ed1c24;
+}
+
+.shor-wrap .section-filter .result .filter-col .chk-list li input {
+	display: none;
+}
+
+.shor-wrap .section-filter .result .filter-col .chk-list li label {
+	position: relative;
+	border: 0 none;
+	height: 4.9rem;
+	display: block;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-size: 1.1rem;
+	-webkit-border-radius: 2rem;
+	   -moz-border-radius: 2rem;
+	        border-radius: 2rem;
+	padding: 0 1.2rem;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+	transition: all .4s;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	color: #8f9191;
+	background-color: #fff;
+}
+
+.shor-wrap .section-filter .result .filter-col .chk-list li label {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	padding: 0;
+	height: 8.6rem;
+	-webkit-border-radius: .4rem;
+	   -moz-border-radius: .4rem;
+	        border-radius: .4rem;
+	color: #54585a;
+	background-color: #fff;
+	font-size: 1rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+	border: 1px solid #d2d2d2;
+}
+
+.shor-wrap .section-filter .result .filter-col .chk-list li label span {
+	margin: 1.7rem 0 0 0;
+}
+
+.shor-wrap .section-filter .result .filter-col .chk-list li label i {
+	min-height: 2.6rem;
+}
+
+.shor-wrap .section-filter .result .filter-col .chk-list li input:checked + label {
+	background: #ff3366;
+	background: -webkit-gradient(linear, left top, right top, from(#fe2a7b), to(#ff4d34));
+	background: -webkit-linear-gradient(left, #fe2a7b 0%, #ff4d34 100%);
+	background: -moz-linear-gradient(left, #fe2a7b 0%, #ff4d34 100%);
+	background: -o-linear-gradient(left, #fe2a7b 0%, #ff4d34 100%);
+	background: linear-gradient(90deg, #fe2a7b 0%, #ff4d34 100%);
+	color: #fff;
 }
 
 .shor-wrap .section-list {
@@ -22297,6 +22336,7 @@
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaR", serif;
 	font-weight: normal;
+	border: 0 none;
 }
 
 .shor-wrap .section-detail .detail-main-list.detail-main-list1 .detail-main-accor .shor-main-toggle-cont .result .filter-col .chk-list li input:checked + label {
@@ -22392,14 +22432,6 @@
 
 .shor-wrap .section-detail .detail-main-list.detail-main-list1 .detail-main-accor .shor-main-toggle-cont .section-list ul > li .radioIconBox > label .text strong b {
 	font-size: 1.4rem;
-	width: auto;
-	display: -webkit-box;
-	overflow: hidden;
-	-o-text-overflow: ellipsis;
-	   text-overflow: ellipsis;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	word-break: break-all;
 	margin-right: .9rem;
 }
 
@@ -22488,7 +22520,7 @@
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	position: relative;
-	top: .4rem;
+	top: -.2rem;
 }
 
 .shor-wrap .section-detail .detail-main-list.detail-main-list1 .detail-main-accor .section-filter-accor {
