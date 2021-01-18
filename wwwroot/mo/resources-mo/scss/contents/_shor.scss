@@ -8,8 +8,29 @@
             @include Bold;
             padding:2.6rem 0 0 0;
             font-size:1.4rem;
+            &.tit-h4 {
+                padding: 0;
+            }
+            & + p {
+                margin-top: 1rem;
+            }
         }
-        
+        .scroll-box {
+            @include Inline-scrolling;
+            padding-bottom:.5rem;
+            &.table02 {
+                th, td {
+                    font-size: 1.2rem;
+                    padding: 1.4rem 1.7rem;
+                    word-break: keep-all;
+                }
+            }
+        }
+        .shor-notice-txt-box {
+            .table02 {
+                margin-top: 1rem;
+            }
+        }
     }
     
 
@@ -82,6 +103,7 @@
             &.short-topbg-04 {@include Background($sprite:'bg-short-topbg-04', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-05 {@include Background($sprite:'bg-short-topbg-05', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-06 {@include Background($sprite:'bg-short-topbg-06', $size:cover, $position:top center, $path:'bgs'); height: 11rem;}
+            &.short-topbg-07 {@include Background($sprite:'bg-short-topbg-07', $size:cover, $position:top center, $path:'bgs');}
             em{
                 color:#fff;
             }
