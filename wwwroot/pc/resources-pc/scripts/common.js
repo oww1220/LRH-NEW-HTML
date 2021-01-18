@@ -1837,15 +1837,22 @@ if($('.main-visual-list .main-slide-wrap').length) {
     var result = slideW/slideAllW * 100;  //슬라이드 넓이 한개를 백분율로 환산
     
     $('.loading-ani').css('width',result);
+    $('.main-visual-pager .num-2').text(slideIdxR);
     
     $('.main-visual-list .main-slide-wrap').on('afterChange',function(){
         var curIdx = $(".slick-active").attr("data-slick-index"); //슬라이드 갯수
+        var currentSlide = $('.main-visual-list .main-slide-wrap').slick('slickCurrentSlide');
        
         curIdx = parseInt(curIdx);
-           $(".loading-ani").animate({
-              "width": (result * (curIdx+1))+"%"
-           },300);
-      });
+        $(".loading-ani").animate({
+           "width": (result * (curIdx+1))+"%"
+        },300);
+
+        $('.main-visual-pager .num-1').text(currentSlide+1);
+        $('.main-visual-pager .num-2').text(slideIdxR);
+
+        console.log(currentSlide);
+    });
     
     $('.main-visual-pager .play').click(function() {
         $('.main-visual-list .main-slide-wrap').slick('slickPlay');
