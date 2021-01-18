@@ -2814,6 +2814,10 @@ html, body {
 	padding: 60px 0;
 }
 
+.toggleContArea {
+	display: none;
+}
+
 /*
 .agree-area{
 	.agree-header{
@@ -5129,6 +5133,49 @@ button.swiper-pagination-bullet {
 }
 
 .btn-toggle-wide.active:after {
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	     -o-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
+.btn-toggle-auto {
+	position: relative;
+	text-align: left;
+	font-size: inherit;
+	padding-right: 20px;
+}
+
+.btn-toggle-auto:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-arrow-down.png");
+	background-position: center center;
+	-webkit-background-size: 14px 14px;
+	   -moz-background-size: 14px;
+	        background-size: 14px;
+	width: 14px;
+	height: 14px;
+	margin: -7px 0 0 0;
+	-webkit-transition: -webkit-transform .5s;
+	transition: -webkit-transform .5s;
+	-o-transition: -o-transform .5s;
+	-moz-transition: transform .5s, -moz-transform .5s;
+	transition: transform .5s;
+	transition: transform .5s, -webkit-transform .5s, -moz-transform .5s, -o-transform .5s;
+	-webkit-transform: rotate(0deg);
+	   -moz-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	     -o-transform: rotate(0deg);
+	        transform: rotate(0deg);
+}
+
+.btn-toggle-auto.active:after {
 	-webkit-transform: rotate(180deg);
 	   -moz-transform: rotate(180deg);
 	    -ms-transform: rotate(180deg);
