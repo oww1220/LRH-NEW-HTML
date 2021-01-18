@@ -1,6 +1,8 @@
 //중고차 장기 렌터카
 .secondhand-container{
-
+    .inner-type2 {
+        position: static;
+    }
     //내 차 팔기 서비스 안내
     .section-counsel-type2{
         @include Align-middle-left;
@@ -1705,10 +1707,10 @@
     
     .imgUpload-section{
         .imgUpload-exam-box, .imgUpload-list-box{        
-            position: relative;
+            //position: relative;
             overflow:hidden;
             ul{
-                position: relative;
+                //position: relative;
                 display:flex;
                 flex-wrap: wrap;
                 align-items:stretch;
@@ -1728,8 +1730,10 @@
                     color:#8f9191;
                     text-align:center;      
                     margin-bottom:10px;              
-                    top: 0 !important;
-                    
+                    //top: 0 !important;
+                    &.ui-state-default {
+                        display: inline-block;
+                    }
                     span{display:block; font-size:14px;}
 
                     .img-area {
