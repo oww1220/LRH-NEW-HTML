@@ -1175,6 +1175,18 @@ if($('.detail-layer-short-payment').length){
         logic();
     });
 }
+
+//대여및 요금 안내 - 요금안내의 차 종류(모바일)
+if($('.shor-wrap .rentalFeeTab').length){
+    MUI.event.taps('.shor-wrap .rentalFeeTab', false, function(swap){
+        swap();
+    });
+}
+if($('.shor-wrap .rentalFeeTab2').length){
+    MUI.event.taps('.shor-wrap .rentalFeeTab2', false, function(swap){
+        swap();
+    });
+}
 /* -------------------------------------------------단기 실시간예약 end*/
 
 /* 중고차 start-------------------------------------------------*/
