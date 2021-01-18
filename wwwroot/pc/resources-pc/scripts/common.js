@@ -1841,7 +1841,7 @@ if($('.main-visual-list .main-slide-wrap').length) {
     
     $('.main-visual-list .main-slide-wrap').on('afterChange',function(){
         var curIdx = $(".slick-active").attr("data-slick-index"); //슬라이드 갯수
-        var currentSlide = $('.main-visual-list .main-slide-wrap').slick('slickCurrentSlide');
+        var currentSlide = $('.main-visual-list .main-slide-wrap').slick('slickCurrentSlide');//현재 슬라이드 번호
        
         curIdx = parseInt(curIdx);
         $(".loading-ani").animate({
@@ -1851,7 +1851,6 @@ if($('.main-visual-list .main-slide-wrap').length) {
         $('.main-visual-pager .num-1').text(currentSlide+1);
         $('.main-visual-pager .num-2').text(slideIdxR);
 
-        console.log(currentSlide);
     });
     
     $('.main-visual-pager .play').click(function() {
