@@ -103,7 +103,27 @@
             &.short-topbg-04 {@include Background($sprite:'bg-short-topbg-04', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-05 {@include Background($sprite:'bg-short-topbg-05', $size:cover, $position:top center, $path:'bgs');}
             &.short-topbg-06 {@include Background($sprite:'bg-short-topbg-06', $size:cover, $position:top center, $path:'bgs'); height: 11rem;}
-            &.short-topbg-07 {@include Background($sprite:'bg-short-topbg-07', $size:cover, $position:top center, $path:'bgs');}
+            &.short-topbg-07 {@include Background($sprite:'bg-short-topbg-07', $size:cover, $position:top center, $path:'bgs');
+                .list-type-col2 {
+                    color: #fff;
+                    text-indent: 0.2rem;
+                    margin-top: 1rem;
+                    li {
+                        text-indent: .5rem;
+                        &:first-of-type {width: 40%;}
+                        &:last-child {width: 60%;}
+                        &:before {
+                            display: inline-block;
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            background: #fff;
+                            vertical-align: middle;
+                            margin-right: .3rem;
+                        }
+                    }
+                }
+            }
             em{
                 color:#fff;
             }
