@@ -1465,7 +1465,12 @@ if($('.short-rental-option .tab-normal').length){
         swap();
     });
 }
-
+//옵션 - 카시트 탭전환
+if($('.short-rental-carseat .tab-normal').length){
+    MUI.event.taps('.short-rental-carseat .tab-normal', false, function(swap){
+        swap();
+    });
+}
 
 /* -------------------------------------------------단기렌터카 end*/
 

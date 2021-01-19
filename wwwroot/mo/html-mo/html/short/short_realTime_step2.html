@@ -237,7 +237,7 @@
 
 									<div class="detail-layer-inputT detail-layer-number-wrap">
 										<div class="detail-layer-inputT-tit">
-											<b><i class="icon number-notice02"></i>전동킥보드<button type="button"><i class="icon info3"></i></button></b>
+											<b><i class="icon number-notice02"></i>전동킥보드<button type="button" class="layer-infos-open" data-layer="type-kickboard"><i class="icon info3"></i></button></b>
 											<em><sup>*</sup> 1일기준 요금</em>
 										</div>
 										<ul class="detail-layer-inputT list-type-col2">
@@ -286,7 +286,7 @@
 
 									<div class="detail-layer-inputT detail-layer-number-wrap">
 										<div class="detail-layer-inputT-tit">
-											<b><i class="icon number-notice03"></i>카시트<button type="button"><i class="icon info3"></i></button></b>
+											<b><i class="icon number-notice03"></i>카시트<button type="button" class="layer-infos-open" data-layer="type-carseat"><i class="icon info3"></i></button></b>
 											<em><sup>*</sup> 1일기준 요금</em>
 										</div>
 										<ul class="detail-layer-inputT list-type-col2">
@@ -356,7 +356,7 @@
 
 									<div class="detail-layer-inputT detail-layer-number-wrap">
 										<div class="detail-layer-inputT-tit">
-											<b><i class="icon number-notice04"></i>유모차<button type="button" class="layer-infos-open" data-layer="layer-rental-stroller"><i class="icon info3"></i></button></b>
+											<b><i class="icon number-notice04"></i>유모차<button type="button" class="layer-infos-open" data-layer="type-stroller"><i class="icon info3"></i></button></b>
 											<em><sup>*</sup> 1일기준 요금</em>
 										</div>
 										<ul class="detail-layer-inputT list-type-col2">
@@ -890,20 +890,202 @@
 	<!--//layer-full 등록카드 정보 입력 컴포넌트-->
 
 	<!-- 옵션레이어 -->
-	<!--layer-full 유모차 컴포넌트-->
-    <div class="layer-wrap layer-full layer-infos layer-rental-stroller" data-type="full">
+	<!--layer-full 카시트 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-rental type-carseat" data-type="full">
 		<!--상단-->
         <div class="full-top">
-			<button type="button" class="btn btn-pannel layer-full-close" data-layer="type-shor-lpoint"><i class="icon layerclose">닫기 버튼</i></button>
-			<h4>
-				유모차 대여 서비스 안내
-			</h4>
+			<button type="button" class="btn btn-pannel layer-full-close" data-layer="type-carseat"><i class="icon layerclose">닫기 버튼</i></button>
+			<h4>카시트 대여 서비스 안내</h4>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+		<div class="full-inner">
+			<div class="full-cont-tab">
+				<div class="layer-infos short-rental-carseat">
+					<div class="tab-nav tab-normal">
+						<ul class="tab-col3">
+							<li class="active">
+								<button type="button">신생아용</button>
+							</li>
+							<li class="">
+								<button type="button">유아용</button>
+							</li>
+							<li class="">
+								<button type="button">주니어용</button>
+							</li>
+						</ul>
+					</div>
+					<div class="full-cont">
+						<div class="tab-cont tab-normal">
+							<div class="stroller-tab-cont">
+								<div class="option-img">
+									<img src="../../../resources-mo/images/@temp-shor-opt-carseat01.png" alt="다이치원픽스360">
+								</div>
+								<div class="option-info-list">
+									<dl>
+										<dt>제품</dt>
+										<dd>다이치 원픽스360 ISOFIX</dd>
+										<dt>사용연령</dt>
+										<dd>신생아~5세 (3개월~18KG)</dd>
+										<dt>특징</dt>
+										<dd>신생아~5세 / 360도회전형</dd>
+										<dt>대여요금</dt>
+										<dd>1일 7,000원 (VAT 포함)</dd>
+									</dl>
+								</div>
+								<ul class="guide">
+									<li><i class="icon listCircle03"></i>대여요금은 대여시간 기준 24시간 당 1일 요금이 발생하며 24시간 
+										미만에 대해서도 1일 요금이 부과됩니다. (예시: 30시간 대여인 
+										경우 총 2일 요금 부과)</li>
+									<li><i class="icon listCircle03"></i>카시트는 경우에 따라 수량 선택에 제한이 있을 수 있습니다.</li>
+									<li><i class="icon listCircle03"></i>카시트&유모차 관련 문의 또는 다른 제품을 원하시는 경우 
+										[명품카시트유모차 064-745-9700]로 문의하시기 바랍니다.</li>
+								</ul>
+							</div>
+							<div class="stroller-tab-cont" style="display: none;">
+								<div class="option-img">
+									<img src="../../../resources-mo/images/@temp-shor-opt-carseat02.png" alt="다이치 퍼스트세븐플러스">
+								</div>
+								<div class="option-info-list">
+									<dl>
+										<dt>제품</dt>
+										<dd>다이치 퍼스트세븐플러스 ISOFIX</dd>
+										<dt>사용연령</dt>
+										<dd>신생아~5세 (3개월~25KG)</dd>
+										<dt>특징</dt>
+										<dd>5세이전 유아동 추천 제품 (뒤보기장착기능)</dd>
+										<dt>대여요금</dt>
+										<dd>1일 7,000원 (VAT 포함)</dd>
+									</dl>
+								</div>
+								<ul class="guide">
+									<li><i class="icon listCircle03"></i>대여요금은 대여시간 기준 24시간 당 1일 요금이 발생하며 24시간 
+										미만에 대해서도 1일 요금이 부과됩니다. (예시: 30시간 대여인 
+										경우 총 2일 요금 부과)</li>
+									<li><i class="icon listCircle03"></i>카시트는 경우에 따라 수량 선택에 제한이 있을 수 있습니다.</li>
+									<li><i class="icon listCircle03"></i>카시트&유모차 관련 문의 또는 다른 제품을 원하시는 경우 
+										[명품카시트유모차 064-745-9700]로 문의하시기 바랍니다.</li>
+								</ul>
+							</div>
+							<div class="stroller-tab-cont" style="display: none;">
+								<div class="option-img">
+									<img src="../../../resources-mo/images/@temp-shor-opt-carseat03.png" alt="다이치 브이가드">
+								</div>
+								<div class="option-info-list">
+									<dl>
+										<dt>제품</dt>
+										<dd>다이치 브아가드 ISOFIX</dd>
+										<dt>사용연령</dt>
+										<dd>5세~12세 (15~25KG)</dd>
+										<dt>특징</dt>
+										<dd>5세이후 주니어 추천 제품 (등받이 조절가능)</dd>
+										<dt>대여요금</dt>
+										<dd>1일 7,000원 (VAT 포함)</dd>
+									</dl>
+								</div>
+								<ul class="guide">
+									<li><i class="icon listCircle03"></i>대여요금은 대여시간 기준 24시간 당 1일 요금이 발생하며 24시간 
+										미만에 대해서도 1일 요금이 부과됩니다. (예시: 30시간 대여인 
+										경우 총 2일 요금 부과)</li>
+									<li><i class="icon listCircle03"></i>카시트는 경우에 따라 수량 선택에 제한이 있을 수 있습니다.</li>
+									<li><i class="icon listCircle03"></i>카시트&유모차 관련 문의 또는 다른 제품을 원하시는 경우 
+										[명품카시트유모차 064-745-9700]로 문의하시기 바랍니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 카시트 컴포넌트-->
+
+	<!--layer-full 전동킥보드 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-rental type-kickboard" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+			<button type="button" class="btn btn-pannel layer-full-close" data-layer="type-kickboard"><i class="icon layerclose">닫기 버튼</i></button>
+			<h4>전동킥보드 대여 서비스 안내</h4>
         </div>
         <!--//상단-->
         <!--컨텐츠-->
 		<div class="full-inner">
 			<div class="full-cont">
 
+				<div class="layer-infos">
+					<div class="rental-cont">
+						<h4 class="txt-h4">전동킥보드 대여 안내 사항</h4>
+						<div class="table02">
+							<table>
+								<caption>킥보드 제품별 특징 대여요금 안내</caption>
+								<colgroup>
+									<col style="width:20%;">
+									<col style="width:auto;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제품</th>
+										<td><div class="board-img"><img src="../../../resources-mo/images/@temp-shor-opt-board.png" alt="이노김 퀵3프로"></div>
+											<p>이노김 퀵 3 프로</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">특징</th>
+										<td>제품무게 16.5kg <br>
+											접었을 때 25cm × 45cm × 115cm <br>
+											펼쳤을 때 25cm × 108cm × 1130cm <br>
+											배터리 48V, 최고속도 25km/h, <br>
+											최대주행거리 45km</td>
+									</tr>
+									<tr>
+										<th scope="row">대여요금</th>
+										<td>1일 15,000원 (VAT 포함)
+											<p class="texRed">* 킥보드 옵션 오픈기념 할인 이벤트 :<br>
+												2020년 12월 31일까지 1일 10,000원</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="guide">
+							<li><i class="icon listCircle03"></i>대여요금은 대여시간 기준 24시간 당 1일 요금이 발생하며 24시간 
+								미만에 대해서도 1일 요금이 부가됩니다. (예시 : 30시간 대여인 
+								경우 총 2일 요금 부과)</li>
+							<li><i class="icon listCircle03"></i>전동 킥보드 및 전용 안장의 경우 운영상황에 따라 수량에 제한이 
+								있거나 대여가 불가능 할 수 있습니다.</li>
+							<li><i class="icon listCircle03"></i>운전면허 (원동기장치자전거면허 포함)를 취득한 고객만 이용할 수 
+								있으며, 2인이 동시에 탑승할 수 없습니다. (운전면허 취득일로부터 
+								1년 이상, 만 21세 이상만 대여 가능)</li>
+							<li><i class="icon listCircle03"></i>사전 등록된 고객 외 제 3자의 전동킥보드 이용은 금지되어 있으며, 
+								이로 인해 발생되는 모든 책임은 고객 및 서비스를 이용한 
+								제 3자에게 있습니다.</li>
+							<li><i class="icon listCircle03"></i>고객이 서비스 이용 중 발생하는 모든 사고, 손해/상해, 범칙금은 
+								고객책임 및 부담입니다.</li>
+							<li><i class="icon listCircle03"></i>전동킥보드는 제주오토하우스에서만 대여, 반납이 가능합니다.</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--//컨텐츠-->
+	</div>
+	<!--//layer-full 전동킥보드 컴포넌트-->
+
+	<!--layer-full 유모차 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-rental type-stroller" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+			<button type="button" class="btn btn-pannel layer-full-close" data-layer="type-stroller"><i class="icon layerclose">닫기 버튼</i></button>
+			<h4>유모차 대여 서비스 안내</h4>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+		<div class="full-inner">
+			<div class="full-cont-tab">
 				<div class="layer-infos short-rental-option">
 					<div class="tab-nav tab-normal">
 						<ul class="tab-col2">
@@ -915,11 +1097,59 @@
 							</li>
 						</ul>
 					</div>
-
-					<div class="tab-cont tab-normal">
-						<div class="">1</div>
-						<div class="">2</div>
+					<div class="full-cont">
+						<div class="tab-cont tab-normal">
+							<div class="stroller-tab-cont">
+								<div class="option-img">
+									<img src="../../../resources-mo/images/@temp-shor-opt-stroller01.png" alt="절충형 유모차">
+								</div>
+								<div class="option-info-list">
+									<dl>
+										<dt>제품</dt>
+										<dd>아이쿠 아크로뱃</dd>
+										<dt>사용연령</dt>
+										<dd>신생아~ 4세 (15KG)</dd>
+										<dt>특징</dt>
+										<dd>제품무게 : 9.5KG </dd>
+										<dd>접었을때(CM) : 67*50*34CM 원터치 폴딩/ <p class="ml-dept">(동절기풋머프)</p></dd>
+										<dt>대여요금</dt>
+										<dd>1일 6,000원 (VAT 포함)</dd>
+									</dl>
+								</div>
+								<ul class="guide">
+									<li><i class="icon listCircle03"></i>대여요금은 대여시간 기준 24시간 당 1일 요금이 발생하며 24시간 미만에 대해서도 1일 요금이 부과됩니다. (예시: 30시간 대여인 경우 총 2일 요금 부과)</li>
+									<li><i class="icon listCircle03"></i>카시트는 경우에 따라 수량 선택에 제한이 있을 수 있습니다.</li>
+									<li><i class="icon listCircle03"></i>카시트&유모차 관련 문의 또는 다른 제품을 원하시는 경우 
+										[명품카시트유모차 064-745-9700]로 문의하시기 바랍니다.</li>
+								</ul>
+							</div>
+							<div class="stroller-tab-cont" style="display: none;">
+								<div class="option-img">
+									<img src="../../../resources-mo/images/@temp-shor-opt-stroller02.png" alt="절충형 유모차">
+								</div>
+								<div class="option-info-list">
+									<dl>
+										<dt>제품</dt>
+										<dd>잉글레시나 퀴드</dd>
+										<dt>사용연령</dt>
+										<dd>신생아~ 4세 (3KG ~ 15KG)</dd>
+										<dt>특징</dt>
+										<dd>제품무게 : 5.9KG </dd>
+										<dd>접었을때(CM) : 46.5*17.5*58CM 원터치 폴딩/ <p class="ml-dept">기내반입형</p></dd>
+										<dt>대여요금</dt>
+										<dd>1일 6,000원 (VAT 포함)</dd>
+									</dl>
+								</div>
+								<ul class="guide">
+									<li><i class="icon listCircle03"></i>대여요금은 대여시간 기준 24시간 당 1일 요금이 발생하며 24시간 미만에 대해서도 1일 요금이 부과됩니다. (예시: 30시간 대여인 경우 총 2일 요금 부과)</li>
+									<li><i class="icon listCircle03"></i>카시트는 경우에 따라 수량 선택에 제한이 있을 수 있습니다.</li>
+									<li><i class="icon listCircle03"></i>카시트&유모차 관련 문의 또는 다른 제품을 원하시는 경우 
+										[명품카시트유모차 064-745-9700]로 문의하시기 바랍니다.</li>
+								</ul>
+							</div>
+						</div>
 					</div>
+					
 				</div>
 
 			</div>
