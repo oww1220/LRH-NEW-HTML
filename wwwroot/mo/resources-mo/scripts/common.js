@@ -1471,6 +1471,12 @@ if($('.short-rental-carseat .tab-normal').length){
         swap();
     });
 }
+//옵션 - 펫카 탭전환
+if($('.short-rental-pet .tab-normal').length){
+    MUI.event.taps('.short-rental-pet .tab-normal', false, function(swap){
+        swap();
+    });
+}
 
 /* -------------------------------------------------단기렌터카 end*/
 
