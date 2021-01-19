@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>LOTTE rental 롯데렌터카 제휴사 모바일 HTML 목록</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css">
+		/* CSS 리셋 설정 */
+		body,html,
+		header,footer,aside,nav,section,article,details,figure,figcaption,menu,command,
+		div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td, /* 블럭 요소 */
+		h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,
+		img,embed,object,canvas,audio,video,meter,progress,keygen, /* 인라인 블럭 요소 */
+		a,label,output,dialog, /* 인라인 요소 */
+		address,blockquote, /* 텍스트 블럭 요소 */
+		p,pre,/* 텍스트 인라인 블럭 요소 */
+		span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,ruby,rp,rt,code,kbd,samp, /* 텍스트 인라인 요소 */
+		acronym,big,frame,frameset,noframes,tt, /* HTML5에서 사용하지 않는 요소 */
+		map,option,hr,*{border:0;padding:0;margin:0;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
+		header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block} /* HTML5 블럭 요소 */
+		applet,basefont,center,dir,font,strike{display:none} /* XHTML4, HTML5 이후 사용하지 않는 요소 제거 */
+		q,blockquote{quotes:none;content:none}
+		li,menu{list-style:none}
+		table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed} /* 테이블 보더 변경 (겹칩지 않음 separate) */
+		caption{text-align:left}
+		th,td{text-align:left;vertical-align:middle;}
+		address{font-style:normal}
+		label{display:inline-block;*zoom:1}
+		a{text-decoration:none;display:inline-block;*zoom:1} /* 접근성 포커싱을 위해 a요소 속성 변경 */
+		a:hover{text-decoration:underline;color:#1979CA}
+		/* 공통 설정 */
+		html{}
+		html,body{} /* 가로스크롤 시 배경이 잘리는 버그를 없애기 위해 최소사이즈 지정 */
+		body{color:#333;font:normal 12px/1 "Nanum Gothic",Sans-Serif} /* 기본 폰트 지정 */
+		.blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
+		.hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden} /* .blind를 적용할 수 없는 곳에 사용 (예, caption) */
+		/* 내용 */
+		#wrap{padding:0 10px;margin:0 auto}
+		#header h1{padding:20px 0;text-align:center;font-size:30px;letter-spacing: -1px;}
+		#header h1 strong {color:#0058EF;}
+		#header .nav{border-width:3px 0;border-style:solid;border-color:#222;overflow:hidden}
+		#header .nav li{float:left;width:50%;}
+		#header .nav li.dev{float:left;width:100%;background:#222;color:#fff;height:50px;text-align:center;line-height:50px;display:block;font-size:16px;font-weight:bold;}
+		#header .nav li a{height:50px;color:#333;font-size:16px;font-weight:bold;text-align:center;line-height:50px;display:block}
+		#header .nav li.on a{color:#fff;background:#222}
+		.list_table{margin:40px 0;line-height:1.3}
+		.list_table tr.line td {border-top:2px solid #000}
+		.list_table th{padding:10px 0;border:1px solid #e5e5e5;text-align:center;vertical-align:top}
+		.list_table th[scope="col"]{background:#f7f7f7;}
+		.list_table th[scope="row"]{color:#4c4c4c;font-weight:normal;}
+		.list_table td{height:15px; padding:5px 5px;border:1px solid #e5e5e5;color:#4c4c4c;word-break:break-word;vertical-align:top}
+		.list_table td.t_left{padding-left:10px;text-align:left}
+		.list_table td img{vertical-align:middle}
+		.list_table td a{font-size:11px;}
+		.list_table td a span{height:24px;padding:0 8px;color:#fff;line-height:24px;display:block}
+		.list_table td span.date{background-color:#4f4f4f}
+		.list_table td span.jpg{background-color:#ff8a23}
+		.list_table td span.kwah{background-color:#6f9fd1}
+		.list_table td.line{background:#dddddd;height:1px;padding:0;}
+		.today {background:#fcead7;font-weight:bold}
+		.today .on {}
+		.t_center {text-align:center;}
+		.remark {float:right;}
+		.remark span {margin-left:10px;}
+		.remark span:before {content:"-"}
+		.txt_fin {color:#0058EF !important;}
+		.txt_ing {color:#EF3100 !important;}
+		.txt_add {color:#00BE19 !important;}
+
+		.check-list-box ul{margin-left:15px; margin-bottom:10px;}
+		.check-list-box ul li{
+			list-style-type: disc;
+    		list-style-position: inside;
+		}
+		
+	</style>
+	<script type="text/javascript" src="../../resources-pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			function toDayCaculate(){
+				var date = new Date();
+				var yy = date.getFullYear();
+				var mm = '' + ((date.getMonth()+1)<10)?'0'+(date.getMonth()+1):(date.getMonth()+1);
+				var dd = (date.getDate()<10)?'0'+date.getDate():date.getDate();
+
+				return (yy + '-' + mm + '-' + dd);
+			}
+		
+			$('.list_table tbody th').each(function(i){
+				$(this).text(i+1);
+			});
+
+			//alert( '.' +today)
+			$('td').each(function(){
+				var vars=$(this).text();
+				if(vars==toDayCaculate()){
+					$(this).parent('tr').addClass('today');
+					$(this).addClass('on')
+				}
+			});
+
+			$('.toDay').html(toDayCaculate());
+
+
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1><b style="color:#E60112">LOTTE rental</b> 롯데렌터카 <strong>제휴사 모바일</strong> HTML LIST [<span class="toDay"></span>]</h1>
+		</div>
+	  <div style="border: 1px solid #aaa; background:#f0f0f0; padding: 10px 20px; line-height: 1.5;">
+			<h2> Mark-up 수정 이력 </h2>
+			<!--
+			<b>* v1.0</b> : 2019.09.19 (Design XD 기준)<br />
+			<b>* v2.0</b> : 2019.09.30 (Design XD 기준)<br />
+			<b>* v3.0</b> : 2019.10.01 (수정 날짜 기준)<br /><br />
+			-->
+			<h2> 수정 시, 아래 내용으로 주석 필 기입 </h2>
+			<p style="padding: 0 20px; font-family: Consolas, 'Noto Sans KR'; color:red;">
+				&lt;!-- 수정 20201018 : 설명 --&gt; <br />
+				<!-- 수정 v2.0 : (클래스 / 마크업) 수정 -->
+				(Mark-up Code)<br />
+				<!-- //수정 v2.0 : (클래스 / 마크업) 수정 -->
+				&lt;!-- //수정 20201018 : 설명 --&gt;
+			</p>
+		</div>
+
+		<!--
+		<div class="remark">
+			<span class="txt_fin">완료일 : 2020.12.15</span>
+			<span class="txt_ing">수정일 : 2020.12.15</span>
+		</div>
+		-->
+
+		<!--
+		<ul class="tab_menu">
+			<li><a href="#menu1">메인</a></li>
+			<li><a href="#menu2">예매</a></li>
+			<li><a href="#menu3">영화</a></li>
+			<li><a href="#menu4">영화관</a></li>
+			<li><a href="#menu5">스위트샵</a></li>
+		</ul>
+		-->
+
+		<table class="list_table" summary="롯데렌터카 제휴사 MO HTML LIST 입니다.">
+			<caption class="hidden">롯데렌터카 제휴사 MO HTML LIST</caption>
+			<colgroup>
+				<col style="width:8%"/>
+				<col style="width:12%"/>
+				<col style="width:12%"/>
+				<col style="width:12%"/>
+				<col style="width:18%"/>
+				<col style="width:70px"/>
+				<col style="width:90px"/>
+				<col style="width:110px"/>
+				<col style="width:auto"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">파일명</th>
+					<th scope="col">작업완료</th>
+					<th scope="col">작업완료일</th>
+					<th scope="col">수정일</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="line">
+					<td rowspan="22">단기렌터카예약</td>
+					<td rowspan="12">내륙</td>
+					<td>01. 예약설정</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_제휴사예약_01_1_제주,내륙.psd</td>
+                </tr>
+                <tr> 
+					<td></td>
+					<td>편도 이용료 안내 - 레이어팝업</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_편도안내 레이어팝업.psd</td>
+                </tr>
+                <tr> 
+					<td rowspan="6">02. 약관/정보 입력2-1</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_제휴사예약_02_1.psd</td>
+                </tr>
+                <tr> 
+					<td>자차손해 면책 제도 (CDW)-레이어팝업</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_자차면손해면책제도 레이어.psd</td>
+                </tr>
+                <tr> 
+					<td>내비게이션 옵션-레이어팝업</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_내비게이션 대여서비스 안내.psd</td>
+                </tr>
+                <tr> 
+					<td>유모차 대여 서비스 안내 - 레이어</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_유모차 대여 서비스 안내.psd</td>
+                </tr>
+                <tr> 
+					<td>전동킥보드 대여 서비스 안내 - 레이어</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_전동킥보드 대여 서비스 안내.psd</td>
+                </tr>
+                <tr> 
+					<td>카시트 대여 서비스 안내 - 레이어</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_카시트 대여 서비스 안내.psd</td>
+                </tr>
+                <tr> 
+					<td rowspan="3">02. 약관/정보입력2-2</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_제휴사예약_02_2.psd</td>
+                </tr>
+                <tr> 
+					<td>예약완료를 위한 이용 동의(필수)-약관</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td>차량 대여를 위한 개인정보 수집/이용 동의(필수)</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td>03. 예약완료</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_제휴사예약_04.psd</td>
+                </tr>
+				<tr> 
+					<td rowspan="7">제주</td>
+					<td>01. 예약설정</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td>02. 약관/정보입력2-1</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td>02. 약관/정보입력2-2</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td rowspan="3">03. 예약정보입력</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td>예약완료를 위한 이용 동의(필수)-약관</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td>차량 대여를 위한 개인정보 수집/이용 동의(필수)</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr> 
+					<td>03-1. 예약완료</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+				<tr> 
+					<td rowspan="3">예약확인</td>
+					<td>예약확인</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_제휴사예약_01_2_예약확인.psd</td>
+                </tr>
+                <tr> 
+					<td>예약내역</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_제휴사예약_01_3_예약내역.psd</td>
+                </tr>
+                <tr> 
+					<td>예약취소 레이어</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>롯데렌터카 공유폴더\01_PC\10_제휴사예약\PC_예약취소 팝업.psd</td>
+				</tr>
+				
+				<tr class="line">
+					<td rowspan="5">단기렌터카 안내</td>
+					<td>대여자격안내</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+                    <td rowspan="2">대여/반납절차</td>
+                    <td>내륙</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+                </tr>
+                <tr>
+                    <td>제주</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+                    <td>대여요금안내</td>
+                    <td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>보험 및 보상</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
