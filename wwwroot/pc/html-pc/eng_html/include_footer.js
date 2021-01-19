@@ -3,134 +3,24 @@ $(function(){
 
     var footer = `
 		<!--footer 컴포넌트-->
-		<footer class="footer">
-			
+		<footer class="footer eng-footer">
+
 			<div class="footer-link">
 				<div class="inner">
 					<ul>
 						<li>
-							<a href="#n" onclick="members.goWithNoAuth('https://direct.lotterentacar.net/main/main.do?utm_source=lotterentacar&utm_medium=footer&utm_campaign=FamilySite&utm_content=신차장다이렉트', 'Y');ga('send', 'event', '풋터', 'goToDirect', '신차장다이렉트');">신차장다이렉트</a>
+							<a href="#n" onclick="members.goWithNoAuth('https://direct.lotterentacar.net/main/main.do?utm_source=lotterentacar&amp;utm_medium=footer&amp;utm_campaign=FamilySite&amp;utm_content=신차장다이렉트', 'Y');ga('send', 'event', '풋터', 'goToDirect', '신차장다이렉트');">COMPAY</a>
 						</li>
 						<li>
-							<a href="#n" onclick="members.goWithNoAuth('https://manager.lotterentacar.net/main.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '신차장_멤버십랜딩');">신차장멤버십</a>
+							<a href="#n" onclick="members.goWithNoAuth('https://manager.lotterentacar.net/main.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '신차장_멤버십랜딩');">USER AGREEMENT</a>
 						</li>
 						<li>
-							<a href="#n" onclick="members.goWithNoAuth('https://www.lotteautoauction.net/hp/pub/cmm/viewMain.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '오토옥션랜딩');">롯데오토옥션</a>				
+							<a href="#n" onclick="members.goWithNoAuth('https://www.lotteautoauction.net/hp/pub/cmm/viewMain.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '오토옥션랜딩');">CONTACT US</a>				
 						</li>
 						<li>
-							<a href="https://www.lotte-autolease.net" onclick="ga('send', 'event', '풋터', '패밀리사이트', '오토리스랜딩');" target="_blank">롯데오토리스</a>
-						</li>
-						<li>
-							<a href="http://www.greencar.co.kr" onclick="ga('send', 'event', '풋터', '패밀리사이트', '그린카랜딩');" target="_blank">그린카</a>
-						</li>
-						<li>
-							<a href="https://lotterental.com/" onclick="ga('send', 'event', '풋터', '패밀리사이트', '일반랜탈랜딩');" target="_blank">일반렌탈</a>
+							<a href="#">SITE MAP</a>
 						</li>
 					</ul>
-					<div class="family">
-						<button type="button" class="btn btn-family family-btn" data-target="family-cont-01" data-on="true" data-siblings="true">FAMILY SITE</button>
-						<div class="family-toggle-cont family-cont-01">
-							<div class="detail-layer-in">
-								<ul class="detail-layer-list-wrap">
-									<li>
-										<p><a href="#">식품부문</a></p>
-										<div class="detail-layer-list">
-											<ul>
-												<li><a href="#">롯데제과</a></li>
-												<li><a href="#">롯데유통사업본부</a></li>
-												<li><a href="#">롯데칠성음료</a></li>
-												<li><a href="#">롯데칠성음료 주류부문</a></li>
-												<li><a href="#">롯데아시히주류</a></li>
-												<li><a href="#">롯데푸드</a></li>
-												<li><a href="#">롯데리아</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">관광부문</a></p>
-										<div class="detail-layer-list">
-											<ul>
-												<li><a href="#">롯데호텔</a></li>
-												<li><a href="#">부산롯데호텔</a></li>
-												<li><a href="#">롯데면세점</a></li>
-												<li><a href="#">롯데월드</a></li>
-												<li><a href="#">롯데물산</a></li>
-												<li><a href="#">롯데리조트</a></li>
-												<li><a href="#">롯데제이티비</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">금융부문</a></p>
-										<div class="detail-layer-list">
-											<ul>
-												<li><a href="#">롯데카드</a></li>
-												<li><a href="#">롯데손해보험</a></li>
-												<li><a href="#">롯데캐피탈</a></li>
-												<li><a href="#">롯데자이언츠</a></li>
-												<li><a href="#">롯데멤버스</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">석유화학/건설/제조 부문</a></p>
-										<div class="detail-layer-list">
-											<ul>
-												<li><a href="#">롯데케미칼</a></li>
-												<li><a href="#">케이피켐텍</a></li>
-												<li><a href="#">롯데엠알시</a></li>
-												<li><a href="#">롯데건설</a></li>
-												<li><a href="#">롯데건설 CM사업본부</a></li>
-												<li><a href="#">캐논 코리아비즈니스솔루션(주)</a></li>
-												<li><a href="#">한국후지필름</a></li>
-												<li><a href="#">롯데알미늄</a></li>
-												<li><a href="#">롯데기공</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">유통부문</a></p>
-										<div class="detail-layer-list">
-											<ul>
-												<li><a href="#">롯데백화점</a></li>
-												<li><a href="#">롯데마트</a></li>
-												<li><a href="#">롯데슈퍼</a></li>
-												<li><a href="#">롯데시네마</a></li>
-												<li><a href="#">롯데홈쇼핑</a></li>
-												<li><a href="#">코리아세븐</a></li>
-												<li><a href="#">FRL코리아</a></li>
-												<li><a href="#">롯데상사</a></li>
-												<li><a href="#">롯데닷컴</a></li>
-												<li><a href="#">롯데하이마트</a></li>
-												<li><a href="#">롭스</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#"></a>서비스/연구/지원 부문</p>
-										<div class="detail-layer-list">
-											<ul>
-												<li><a href="#">롯데정보통신</a></li>
-												<li><a href="#">현대정보기술</a></li>
-												<li><a href="#">롯데스카이힐C.C</a></li>
-												<li><a href="#">대홍기획</a></li>
-												<li><a href="#">롯데자산개발</a></li>
-												<li><a href="#">롯데로지스틱스</a></li>
-												<li><a href="#">롯데피에스넷</a></li>
-												<li><a href="#">마이비</a></li>
-												<li><a href="#">이비카드</a></li>
-												<li><a href="#">롯데중앙연구소</a></li>
-												<li><a href="#">롯데인재개발원</a></li>
-												<li><a href="#">롯데장학재단</a></li>
-												<li><a href="#">롯데복지재단</a></li>
-												<li><a href="#">롯데삼동복지재단</a></li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
 				</div>
 				
 			</div>
@@ -140,14 +30,6 @@ $(function(){
 				</div>
 				<div class="footer-bottom-menu">
 					<div class="footer-infos-wrap">
-						<div class="sitemap">
-							<ul>
-								<li><a href="#" target="_blank">COMPAY</a></li>
-								<li><a href="#" class="txt_point">USER AGREEMENT</a></li>
-								<li><a href="#" class="refuse_email btn_layer">CONTACT US</a></li>
-								<li><a href="#">SITE MAP</a></li>
-							</ul>
-						</div>
 			
 						<div class="site-infos">
 			
@@ -155,12 +37,10 @@ $(function(){
 								<ul class="entrepreneur-info">
 									<li>
 										<ul class="address">
-											<li>LOTTE rental co., ltd.</li>
-											<li>President : Kim, Hyun Soo</li>
-											<li>Business Registration # : 214-87-79183</li>
-											<li>Communication Service # : 2010-Gyunggi Anyang 420</li>
-											<li>Address : 8F Shinwonvision Tower 898. Hogye-dong, Dongan-Gu, Anyang</li>
-											<li>Main Contact 1588-1230 | Oversea 82-2-797-8000</li>
+											<li>LOTTE rental co., ltd. | President : Kim, Hyun Soo | Business Registration # : 214-87-79183</li>
+											<li>Communication Service # : 2010-Gyunggi Anyang 420 | Address : 8F Shinwonvision Tower 898. Hogye-dong, Dongan-Gu, Anyang</li>
+											<li>Main Contact 1588-12300 | Oversea 82-2-797-8000</li>
+											<li>copyright ⓒ 2021 LOTTE rental co., ltd.All Rights Reserved.</li>
 										</ul>
 									</li>
 								</ul>
@@ -168,9 +48,6 @@ $(function(){
 							
 						</div>
 						<div class="footer-infos-bn">
-							<div class="footer-infos-bn-box">
-								<img src="../../../resources-pc/images/icons/ico-foot-bn.png" alt="업계최초 국내3대 고객만족도 평가 3관왕">
-							</div>
 							<div class="footer-infos-list">
 								<div class="detail-view-list-wrap">
 									
@@ -211,15 +88,12 @@ $(function(){
 										<div class="swiper-pagination-wrap">
 											<div class="swiper-button-next"></div>
 											<div class="swiper-button-prev"></div>
-											<!-- <div class="swiper-button-play">play</div>
-											<div class="swiper-button-pause">stop</div> -->
 										</div>
 									</div>
 								</div>
 								
 							</div>
 							<div class="footer-infos-sns">
-								<p>롯데렌터카 공식 SNS 채널</p>
 								<ul>
 									<li>
 										<a href="#" class="btn btn-foot-sns"><i class="icon snsK">카카오톡</i></a>
@@ -240,9 +114,6 @@ $(function(){
 										<a href="#" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></a>
 									</li>
 									<li>
-										<a href="#" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></a>
-									</li>
-									<li>
 										<a href="#" class="btn btn-foot-sns"><i class="icon snsT">트위터</i></a>
 									</li>
 								</ul>
@@ -251,25 +122,11 @@ $(function(){
 					</div>
 					<div class="footer-center-wrap">
 						<div class="footer-center-top">
-							<p>고객센터</p>
+							<p>Customer Service</p>
 							<b>
 								<a href="tel:1588-1230">1588-1230</a>
 							</b>
 						</div>
-						<div class="footer-center-info">
-							평일 08:30 ~ 20:00<br>
-							단, 사고처리 문의는 24시간 가능
-						</div>
-						<div class="footer-center-btn">
-							<button type="button" class="btn btn-simple">1:1 고객센터</button>
-						</div>
-					</div>
-					<div class="footer-app-wrap">
-						<p>앱 다운로드</p>
-						<ul>
-							<li><a href="#" target="_blank"><i class="icon app01">Google Play</i></a></li>
-							<li><a href="#" target="_blank"><i class="icon app02">App Store</i></a></li>
-						</ul>
 					</div>
 				</div>
 

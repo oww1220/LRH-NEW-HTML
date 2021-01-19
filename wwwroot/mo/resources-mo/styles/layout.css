@@ -2492,8 +2492,7 @@
 	right: 0;
 	width: 100%;
 	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow: hidden;
 	z-index: 110;
 	background-color: #fff;
 	-webkit-transform: translateX(100%);
@@ -2577,7 +2576,7 @@
 }
 
 .drawer .drawer-top.logout-state .logout-state-box {
-	padding: 5.1rem 1.7rem 2.6rem;
+	padding: 3.2rem 1.7rem 2.6rem;
 }
 
 .drawer .drawer-top.logout-state .logout-state-box p {
@@ -2671,22 +2670,108 @@
 	        justify-content: left;
 }
 
-.drawer .drawer-top.logout-state .logout-state-box .login-btns {
-	padding: 2.8rem 0 0;
+.drawer .drawer-top.logout-state .logout-state-box .login-btns-ty2 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 0 2.8rem 1.3rem 0;
 }
 
-.drawer .drawer-top.logout-state .logout-state-box .login-btns button:first-child {
-	margin-right: 1.7rem;
+.drawer .drawer-top.logout-state .logout-state-box .login-btns-ty2 b {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+	font-size: 1.4rem;
 }
 
-.drawer .drawer-top.logout-state .logout-state-box .login-btns button {
+.drawer .drawer-top.logout-state .logout-state-box .login-btns-ty2 b button {
 	color: #fff;
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaB", serif;
 	font-weight: normal;
 	font-size: 1.4rem;
 	border-bottom-color: #fff;
-	padding: 0 0 .4rem;
+	margin-right: .2rem;
+}
+
+.drawer .drawer-top.logout-state .logout-state-box .login-btns-ty2 .setup-btn .btn {
+	width: 1.4rem;
+	height: 1.6rem;
+}
+
+.drawer .drawer-top.logout-state .logout-state-box .login-top-menu {
+	padding: 1.5rem .9rem 0;
+	border-top: 1px solid #f26166;
+}
+
+.drawer .drawer-top.logout-state .logout-state-box .login-top-menu ul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.drawer .drawer-top.logout-state .logout-state-box .login-top-menu ul li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.drawer .drawer-top.logout-state .logout-state-box .login-top-menu ul li .btn-group .btn-pannel {
+	width: auto;
+	height: 1.1rem;
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+}
+
+.drawer .drawer-top.logout-state .logout-state-box .login-top-menu ul li .btn-group .btn-pannel i {
+	margin-right: .7rem;
 }
 
 .drawer .drawer-top.logout-state .logout-state-box .close-btn {
@@ -2696,7 +2781,13 @@
 }
 
 .drawer .drawer-top.logout-state .logout-state-box .close-btn button {
-	padding: 0 1.3rem;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.drawer .drawer-top.logout-state .logout-state-box .close-btn button .pannelclose02 {
+	width: 1.2rem;
+	height: 1.2rem;
 }
 
 .drawer .drawer-top.logout-state .login-state-box {
@@ -2708,7 +2799,7 @@
 }
 
 .drawer .drawer-top.login-state .login-state-box {
-	padding: 5.1rem 1.7rem 3rem;
+	padding: 3.2rem 1.7rem 2.6rem;
 }
 
 .drawer .drawer-top.login-state .login-state-box p {
@@ -2810,15 +2901,7 @@
 	font-size: 1.6rem;
 }
 
-.drawer .drawer-top.login-state .login-state-box .login-btns {
-	padding: 3.9rem 0 0;
-}
-
-.drawer .drawer-top.login-state .login-state-box .login-btns ul > li {
-	position: relative;
-}
-
-.drawer .drawer-top.login-state .login-state-box .login-btns ul > li a {
+.drawer .drawer-top.login-state .login-state-box .login-btns-ty2 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -2829,61 +2912,79 @@
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	   -moz-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-flow: column;
-	   -moz-box-orient: vertical;
-	   -moz-box-direction: normal;
-	    -ms-flex-flow: column;
-	        flex-flow: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 0 2.8rem 1.3rem 0;
 }
 
-.drawer .drawer-top.login-state .login-state-box .login-btns ul > li a em {
-	height: 2.3rem;
+.drawer .drawer-top.login-state .login-state-box .login-btns-ty2 b {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	   -moz-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-}
-
-.drawer .drawer-top.login-state .login-state-box .login-btns ul > li a span {
-	padding: 1.1rem 0 0 0;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	color: #fff;
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaR", serif;
 	font-weight: normal;
+	font-size: 1.4rem;
+}
+
+.drawer .drawer-top.login-state .login-state-box .login-btns-ty2 b button {
 	color: #fff;
-	font-size: 1.1rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	font-size: 1.4rem;
+	border-bottom-color: #fff;
+	margin-right: .1rem;
 }
 
-.drawer .drawer-top.login-state .login-state-box .login-btns ul > li:after {
-	display: inline-block;
-	content: "";
-	border-left: 1px solid #fff;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: .3;
+.drawer .drawer-top.login-state .login-state-box .login-btns-ty2 .setup-btn .btn {
+	width: 1.4rem;
+	height: 1.6rem;
 }
 
-.drawer .drawer-top.login-state .login-state-box .login-btns ul > li:first-child:after {
-	display: none;
+.drawer .drawer-top.login-state .login-state-box .login-top-menu {
+	padding: 1.5rem .9rem 0;
+	border-top: 1px solid #f26166;
+}
+
+.drawer .drawer-top.login-state .login-state-box .login-top-menu ul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.drawer .drawer-top.login-state .login-state-box .login-top-menu ul li .btn-group .btn-pannel {
+	width: auto;
+	height: 1.1rem;
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+}
+
+.drawer .drawer-top.login-state .login-state-box .login-top-menu ul li .btn-group .btn-pannel i {
+	margin-right: .7rem;
 }
 
 .drawer .drawer-top.login-state .login-state-box .close-btn {
@@ -2893,7 +2994,13 @@
 }
 
 .drawer .drawer-top.login-state .login-state-box .close-btn button {
-	padding: 0 1.3rem;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.drawer .drawer-top.login-state .login-state-box .close-btn button .pannelclose02 {
+	width: 1.2rem;
+	height: 1.2rem;
 }
 
 .drawer .drawer-top.login-state .logout-state-box {
@@ -2905,13 +3012,27 @@
 }
 
 .drawer .drawer-list {
-	padding: 0 0 5.1rem 0;
 	background-color: #fff;
+	padding: 3rem 0;
+	margin-top: 1px;
 }
 
 .drawer .drawer-list h5 {
-	padding: 0 1.7rem;
-	margin: 5.1rem 0 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .drawer .drawer-list h5 span {
@@ -2966,7 +3087,21 @@
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
-	padding: 3rem 0 0 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 .drawer .drawer-list > ul > li a {
@@ -3000,6 +3135,10 @@
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaR", serif;
 	font-weight: normal;
+}
+
+.drawer .drawer-list > ul > li:nth-of-type(n+4) {
+	padding: 3rem 0 0 0;
 }
 
 .drawer .drawer-toggle-btn {
@@ -3040,10 +3179,6 @@
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-}
-
-.drawer .drawer-toggle-cont {
-	display: none;
 }
 
 .drawer .drawer-toggle-cont .drawer-menu-wrap {
@@ -3158,11 +3293,86 @@
 	overflow: hidden;
 }
 
-.drawer.eng-drawer .drawer-top.logout-state-box p span {
+.drawer.eng-drawer .drawer-top.logout-state {
+	background: #ed1c24;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box {
+	padding: 5.1rem 1.7rem 2.6rem;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box p {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box p b {
+	font-size: 2.2rem;
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-align: left;
+	-webkit-align-items: left;
+	   -moz-box-align: left;
+	    -ms-flex-align: left;
+	        align-items: left;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+	margin-bottom: 1.4rem;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box p span {
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-align: left;
+	-webkit-align-items: left;
+	   -moz-box-align: left;
+	    -ms-flex-align: left;
+	        align-items: left;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 	font-size: 1.6rem;
 }
 
-.drawer.eng-drawer .drawer-top.login-state p span {
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box p span em {
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -3183,7 +3393,144 @@
 	        justify-content: left;
 }
 
-.drawer.eng-drawer .drawer-top.login-state p span em {
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box .login-btns {
+	padding: 2.8rem 0 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box .login-btns button:first-child {
+	margin-right: 1.7rem;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box .login-btns button {
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	font-size: 1.4rem;
+	border-bottom-color: #fff;
+	padding: 0 0 .4rem;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box .close-btn {
+	position: absolute;
+	top: 3.4rem;
+	right: 1.7rem;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .logout-state-box .close-btn button {
+	padding: 0 1.3rem;
+}
+
+.drawer.eng-drawer .drawer-top.logout-state .login-state-box {
+	display: none;
+}
+
+.drawer.eng-drawer .drawer-top.login-state {
+	background-color: #ed1c24;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box {
+	padding: 5.1rem 1.7rem 3rem;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box p {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box p b {
+	font-size: 2.2rem;
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-align: left;
+	-webkit-align-items: left;
+	   -moz-box-align: left;
+	    -ms-flex-align: left;
+	        align-items: left;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+	margin-bottom: 1.4rem;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box p span {
+	color: #fff;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	font-size: 1.6rem;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box p span em {
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	font-size: 1.8rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-align: left;
+	-webkit-align-items: left;
+	   -moz-box-align: left;
+	    -ms-flex-align: left;
+	        align-items: left;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 	border-bottom: 0 none;
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaR", serif;
@@ -3191,21 +3538,38 @@
 	padding: 0 0 0 .4rem;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns {
-	padding: 3.9rem 0 0;
+.drawer.eng-drawer .drawer-top.login-state .login-state-box p span em span {
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	font-size: 1.6rem;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns ul > li {
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns {
+	padding: 3.9rem 0 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li {
 	position: relative;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns ul > li * {
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li * {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns ul > li a {
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li a {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -3230,25 +3594,77 @@
 	        flex-flow: column;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns ul > li a strong {
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li a em {
+	height: 2.3rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li a span {
+	padding: 1.1rem 0 0 0;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
+	color: #fff;
+	font-size: 1.1rem;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li a strong {
 	color: #fff;
 	font-size: 1rem;
 	margin-top: 1.4rem;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns ul > li a b {
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li a b {
 	color: #fff;
 	margin-top: .9rem;
 	border-bottom: 1px solid #fff;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns ul > li:first-child b {
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li:first-child b {
 	border-bottom: 0 none;
 }
 
-.drawer.eng-drawer .drawer-top.login-state .login-btns ul > li:after {
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li:after {
+	display: inline-block;
+	content: "";
 	border-left: 1px solid #f14950;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 	opacity: 1;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .login-btns ul > li:first-child:after {
+	display: none;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .close-btn {
+	position: absolute;
+	top: 3.4rem;
+	right: 1.7rem;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .login-state-box .close-btn button {
+	padding: 0 1.3rem;
+}
+
+.drawer.eng-drawer .drawer-top.login-state .logout-state-box {
+	display: none;
 }
 
 .drawer.eng-drawer .drawer-list {
