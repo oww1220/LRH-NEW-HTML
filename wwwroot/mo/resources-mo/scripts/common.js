@@ -1459,6 +1459,12 @@ if($('.shor-wrap').length){
     });
 }
 
+//옵션 - 유모차 탭전환
+if($('.short-rental-option .tab-normal').length){
+    MUI.event.taps('.short-rental-option .tab-normal', false, function(swap){
+        swap();
+    });
+}
 
 
 /* -------------------------------------------------단기렌터카 end*/
