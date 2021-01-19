@@ -175,6 +175,7 @@ html, body {
 	padding: 30px;
 	text-align: center;
 	color: #54585a;
+	line-height: 1.5;
 	vertical-align: middle;
 	border-right: 1px solid #e7e7e7;
 	border-bottom: 1px solid #e7e7e7;
@@ -1971,6 +1972,29 @@ html, body {
 	left: 0;
 	display: block;
 	width: 50px;
+}
+
+.lst.check-red > li {
+	padding-left: 20px;
+}
+
+.lst.check-red > li::before {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	content: "";
+	width: 14px;
+	height: 10px;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.lst.check-red > li + li {
+	margin-top: 30px;
 }
 
 .detail-layer-nav-wrap {

@@ -1213,24 +1213,23 @@ body.fixed {
 					padding:0 0 30px;
 					border-bottom:1px solid $border-grey;
 				}
-			}			
-			
-			//payment(영문 - 단기실시간예약 1단계) - Collision Damage Waiver (CDW), baby Seat, Baby Carriage
-			&.layer-details{
-				.statement{
-					word-break: break-word;
+			}		
+		}
+		
+		&.layer-details{
+			.statement{
+				word-break: break-word;
 
-					.tit{
-						+ .lst, + .tbl-box, + .tbl-type02{margin-top:25px;}
-					}
-					+ .statement{margin-top:60px;}
-					.tbl-box, .tbl-type02{
-						+ .lst{margin-top:20px;}
-					}
+				.tit{
+					+ .lst, + .tbl-box, + .tbl-type02{margin-top:25px;}
+				}
+				+ .statement{margin-top:60px;}
+				.tbl-box, .tbl-type02{
+					+ .lst{margin-top:20px;}
 				}
 			}
 
-			//Baby Carriage
+			//카시트
 			&.layer-carSeat {
 				width: 930px;
 				.img-box{
@@ -1249,8 +1248,52 @@ body.fixed {
 					@include Align-middle;
 					margin-top:50px;
 				}
+			}			
+			//전동킥보드
+			&.layer-scooter{
+				width: 930px;
+				.img-box{
+					@include Align-middle;
+
+					+ p{margin-top:25px;}
+				}
+				.tbl-type02{
+					th, td{padding:30px 10px;}
+				}
 			}
-			
+			//유모차
+			&.layer-babyCarriage {
+				width: 930px;
+				.img-box{
+					@include Align-middle;
+					height:182px;
+
+					+ p{margin-top:25px;}
+				}
+				.tbl-type02{
+					th, td{padding:30px 10px;}
+				}
+			}
+			&.layer-cdw{
+				width: 930px;
+			}
+			&.layer-howToUse{
+				.statement{
+					.tit{
+						padding:30px 40px;
+						font-size:22px;
+						@include roundBox;
+						background-color:#f5f5f5;
+
+						.icon{margin-right:20px;}
+
+						+ .lst{
+							padding:30px 40px;
+							margin:0;
+						}
+					}
+				}
+			}
 		}
 
 

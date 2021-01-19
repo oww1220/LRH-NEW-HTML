@@ -458,6 +458,7 @@ $txt-darkblack: #2f2f2f;
 			padding:30px; 
 			text-align:center; 
 			color:#54585a; 
+			line-height:1.5;
 			vertical-align: middle;
 			border-right:1px solid $border-grey;
 			border-bottom: 1px solid $border-grey;
@@ -1312,6 +1313,24 @@ $txt-darkblack: #2f2f2f;
 			@include Position($left:0, $top:0);
 			display:block;
 			width:50px;
+		}
+	}
+
+	&.check{
+		&-red{
+			> li{
+				padding-left:20px;
+
+				&::before{
+					@include Position($left:0, $top:5px);
+					content:"";
+					width:14px;
+					height:10px;
+					@include Background($sprite:'ico-chk-on2', $position:center center);
+				}
+
+				+ li{margin-top:30px;}
+			}
 		}
 	}
 
