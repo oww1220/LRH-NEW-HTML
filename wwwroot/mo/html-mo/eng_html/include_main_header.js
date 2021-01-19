@@ -17,11 +17,11 @@ $(function(){
                     <i class="icon draw">메뉴열기</i>
                 </button>
             </div>
-            <nav class="header-nav">
-                <a href="#" class="active">#카라이프</a>
-                <a href="#">단기예약</a>
-                <a href="#">신차장</a>
-                <a href="#">중고차</a>
+            <nav class="header-nav eng-header-nav">
+                <a href="#" class="active">Reservation</a>
+                <a href="#">Car rental</a>
+                <a href="#">Location</a>
+                <a href="#">FAQ</a>
             </nav>
         </header>
         <!--//header 컴포넌트-->

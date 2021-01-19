@@ -1347,6 +1347,34 @@
                             }
 
                             + .lst{margin-top:20px;}
+
+                            &.type2{
+                                .month_box_case {
+                                    &::before, &::after{display:none;}
+                                    .month-box {
+                                        .ui-widget.ui-widget-content {
+                                            &::before, &::after{
+                                                display: block;
+                                                content: '';
+                                                z-index: 2;
+                                                background-color: transparent;
+                                                width: 4px;
+                                                height: 16px;
+                                                border-radius: 0;
+                                                margin-left: 0;
+                                                background-color: #EBEBEB;
+                                            }
+                                            &::before{
+                                                @include Position($top:-7px, $left:0);
+                                            }
+                                            &::after{
+                                                @include Position($top:-7px, $right:0);
+                                            }
+                                        }
+                                    }
+                                    .month-txt{padding-top:15px;}
+                                }
+                            }
                         }			
                     }
 
@@ -1442,8 +1470,11 @@
             flex:none;
             //width:680px;
             //flex-basis: 680px;
-            width:620px;
-            flex-basis:620px;
+            // width:620px;
+            // flex-basis:620px;
+            width:560px;
+            flex-basis:560px;
+            padding-right:60px;
         }
         .carSpec-infos{
             .tit{

@@ -10,57 +10,59 @@ $(function(){
                 </div>
                 <div class="footer-center">
                     <ul class="list-type-col2">
-                        <li><em>고객센터</em><b><a href="tel:1588-1230">1588-1230</a></b></li>
+                        <li><em>Customer Service</em><b><a href="tel:1588-1230">1588-1230</a></b></li>
                         <li>
-                            평일 08:30 ~ 20:00<br>
-                            단, 사고처리 문의는 24시간 가능
+                            Weekdays 08:30~20:00<br>
+                            Accident handling inquiries<br>
+                            are available 24 hours
                         </li>
                     </ul>
                 </div>
                 <div class="footer-topMenu">
                     <ul class="list-type-col3">
-                        <li><a href="#none">로그인</a></li>
-                        <li><a href="#none">ENGLISH</a></li>
-                        <li><a href="#none">1:1 문의</a></li>
+                        <li><a href="#none">LOGIN</a></li>
+                        <li><a href="#none">KOREAN</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-companyInfo">
                     <div class="chk-agree-list">
                         <div class="chk-agree-top">
-                            <h2>롯데렌탈㈜</h2>
+                            <h2>LOTTE rental</h2>
                             <button type="button" class="btn-toggle gray agree-toggle-btn" data-target="toggle-cont-001" data-on="true" data-siblings="true"></button>
                         </div>
                         <div class="agree-toggle-cont toggle-cont-001">
                             <ul>
-                                <li> 대표이사 : <a href="#">김현수</a> <span>|</span> 사업자 등록번호 : <a href="#">214-87-79183</a></li>
-                                <li> 통신판매업 신고 : <a href="#">제2010-경기안양-420호</a></li>
-                                <li> 주소 : <a href="#">경기도 안양시 동안구 전파로 88 신원비젼타워 8층</a></li>
-                                <li> 서울본사 : <a href="#">서울시 강남구 테헤란로 422 KT타워 6~9층</a></li>
-                                <li> 해외 : <a href="#">82-2-797-8000</a> <span>|</span> 보험대차 : <a href="#">1588-4920</a></li>
-                                <li> 일반상품렌탈 : <a href="#">1577-5100+1</a></li>
+                                <li> Main Contact : <a href="#">1588-1230</a> <span>|</span> Oversea : <a href="#">82-2-797-8000</a></li>
+                                <li> LOTTE rental <span>|</span> President : <a href="#">Kim, Hyun Soo</a></li>
+                                <li> <a href="#">6~9F, kt Towe, 422, Teheran-ro Gangnam-gu, Seoul</a></li>
+                                <li> Business Registration # : <a href="#">214-87-79183</a></li>
+                                <li> Communication Service # : <a href="#">2010-Gyungi Anyang 420</a></li>
+                                <li> ⓒ LOTTE rental co., ltd.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottomMenu">
                     <ul class="list-type-col3">
-                        <li><a href="#"><b>개인정보 처리방침</b></a></li>
-                        <li><a href="#"><b>영상정보처리기기 운영관리방침</b></a></li>
-                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">USER AGREEMENT</a></li>
+                        <li><a href="#">CONTACT US</a></li>
                     </ul>
                 </div>
                 <div class="footer-sns">
-                    <p>롯데렌터카 공식 SNS 채널</p>
+                    <p>LOTTE rental SNS</p>
                     <ul class="list-type-col5">
                         <li><a href="#"><i class="icon foot-sns01">카카오</i></a></li>
                         <li><a href="#"><i class="icon foot-sns02">페이스북</i></a></li>
                         <li><a href="#"><i class="icon foot-sns03">인스타그램</i></a></li>
-                        <li><a href="#"><i class="icon foot-sns04">유튜브</i></a></li>
+                        <!-- <li><a href="#"><i class="icon foot-sns04">유튜브</i></a></li> -->
                         <li><a href="#"><i class="icon foot-sns05">네이버포스트</i></a></li>
                         <li><a href="#"><i class="icon foot-sns06">네이버블로그</i></a></li>
+                        <li><a href="#"><i class="icon foot-sns07">트위터</i></a></li>
                     </ul>
                 </div>
-                <div class="footer-app">
+                <!-- <div class="footer-app">
                     <p>추천APP서비스</p>
                     <ul class="list-type-col4">
                         <li><a href="#"><i class="icon app01">신차장 다이렉트</i></a></li>
@@ -68,7 +70,7 @@ $(function(){
                         <li><a href="#"><i class="icon app03">MYOMEE</i></a></li>
                         <li><a href="#"><i class="icon app04">그린카</i></a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </footer>
         <!--//footer 컴포넌트-->

@@ -1239,6 +1239,27 @@ if($('.agreeAccor').length){
         //console.log('toggle');
         logic();
     });
+    $('.btn-provision').on('click', function(){
+        if($(this).hasClass('active')){
+            $(this).parents('.agree-body-header').next('.agree-body-cont').css('height','150px');
+            $(this).text('상세약관보기').removeClass('active');
+            $(this).parents('.agree-body-header').find('.btnToggle').removeClass('active');
+        }else{
+            $(this).parents('.agree-body-header').next('.agree-body-cont').css('height','100vh');
+            $(this).text('상세약관닫기').addClass('active');
+            $(this).parents('.agree-body-header').find('.btnToggle').addClass('active');
+        }
+        $('.btn-provision').on('click',function(){
+            setTimeout(function(){
+                stickyFixObj.calculate();
+            },200);
+        });
+        $('.btnToggle').on('click',function(){
+            setTimeout(function(){
+                stickyFixObj.calculate();
+            },200);
+        });
+    });
 }
 
 //단기렌터카 실시간 예약 - 약관,결제/lnb 
