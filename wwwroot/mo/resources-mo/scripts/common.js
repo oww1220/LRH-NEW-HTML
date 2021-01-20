@@ -1662,6 +1662,19 @@ if($('.eng-shor-wrap .tab-normal').length){
         swap();
     });
 }
+
+//benefits 탭전환
+if($('.etc-wrap .tab-benefit').length){
+    MUI.event.taps('.etc-wrap .tab-benefit', false, function(swap){
+        swap();
+    });
+}
+if($('.etc-wrap .tab-Level').length){
+    MUI.event.taps('.etc-wrap .tab-Level', false, function(swap){
+        swap();
+    });
+}
+
 /*FooterMenu start-------------------------------------------------*/
 
     //회사소개

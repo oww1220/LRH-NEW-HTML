@@ -709,6 +709,115 @@
     }
 }
 
+// etc Members Benefits
+.etc-wrap {
+    .tab-wrap {
+        .tab-nav {
+            @include Inline-scrolling;
+            margin-top: 1.5rem;
+            padding-bottom: 0;
+            ul {
+                display:-webkit-box;
+                flex-wrap:nowrap;
+                li {
+                    width: auto;
+                    button{
+                        padding:0 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+    .tab-nav {
+        &.tab-Level {
+            margin-bottom: 1rem; 
+        }
+    }
+    .tab-cont {
+        &.tab-Level {
+            .table02 {
+                td {
+                    text-align: left;
+                }
+            }
+        }
+    }
+         
+    .section-detail {
+        padding: 0 1.7rem;
+        .benefits-layout {
+            .txt-h4 {
+                @include Bold;
+                color: #2f2f2f;
+                font-size: 1.2rem;
+                margin-bottom: .5rem;
+            }
+            .table02 > table {
+                th, td {
+                    word-break: keep-all;
+                    padding:1rem .5rem;
+                }
+            }
+        }
+    }
+    .benefits-summery {
+        @include Align-top-left;
+        box-sizing: border-box;
+        padding: 1.7rem 0;
+
+        .ico {
+            @include Align-middle;
+            width: 20%;
+        }
+        .summery-tit {
+            padding-left: 1.3rem;
+            width: 80%;
+            p {
+                font-size: 1.1rem;
+                color: #54585a;
+                line-height: 1.2;
+            }
+        }
+    }
+    .summery-box {
+        border-top: 1px solid #e7e7e7;
+        .guide {
+            li {
+                font-size: 1rem;
+            }
+        }
+    }
+    .benefits-tab-02 {
+       .table02 {
+           td {
+               .guide {
+                   li {
+                       color: #54585a;
+                   }
+               }
+               &.t-list {
+                   text-align: left;
+                   vertical-align: middle;
+                   .guide {
+                       li {
+                           @include Normal;
+                       }
+                   }
+               }
+           }
+       }
+       .section-layer-submit {
+           padding: 2.6rem 0;
+       } 
+    }
+    .benefits-tab-03 {
+        .shor-notice26 {
+            width: 3.2rem;
+            height: 4rem;
+        }
+    }
+}
+
 // 영문
 .eng-footerMenu-wrap {
     .segment{
