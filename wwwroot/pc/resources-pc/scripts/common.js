@@ -191,6 +191,17 @@ if($('#wrap .tooltipToggle-top').length) {
     });
 }
 
+//툴팁
+if($('#wrap .tooltip-layer').length) {
+    MUI.event.toggle('#wrap .tooltipOpenBtn', '#wrap .tooltipCont', false, function(logic, layer) {
+        logic();
+
+        $('.tooltipClose').on('click', function(){
+            $(this).parents('.tooltipCont').fadeOut();            
+        });
+    });
+}
+
 //레이어 공통
 if($('.layer-details').length) {
     MUI.layer.openClick('.layer-details-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
@@ -1014,16 +1025,16 @@ if($('.secondhand-container .carInfoAccor').length) {
         logic();
     });
 }
-//승계 > 승계진행 툴팁
-if($('.secondhand-container .tooltip-layer').length) {
-    MUI.event.toggle('.tooltipOpenBtn', '.tooltipCont', false, function(logic, layer) {
-        logic();
+// //승계 > 승계진행 툴팁
+// if($('.secondhand-container .tooltip-layer').length) {
+//     MUI.event.toggle('.tooltipOpenBtn', '.tooltipCont', false, function(logic, layer) {
+//         logic();
 
-        $('.tooltipClose').on('click', function(){
-            $(this).parents('.tooltipCont').fadeOut();            
-        });
-    });
-}
+//         $('.tooltipClose').on('click', function(){
+//             $(this).parents('.tooltipCont').fadeOut();            
+//         });
+//     });
+// }
 
 //승계 > 상담 툴팁
 if($('.secondhand-container .tooltipToggle').length) {

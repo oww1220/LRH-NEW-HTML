@@ -412,7 +412,7 @@
 			padding-left:32px;
 			
 			&:after {
-				@include Position($top: 50%, $left: 6px);
+				@include Position($top: 50%, $left: 0px);
 				@include Background($sprite:'ico-chk3-off', $position:center center);
 				width: 20px;
 				height: 20px;
@@ -467,5 +467,11 @@
 	li{
 		flex-basis: auto;
 		margin-right:40px;
+	}
+}
+
+.chk-list{
+	li{
+		+ li{margin-top:20px;}
 	}
 }
