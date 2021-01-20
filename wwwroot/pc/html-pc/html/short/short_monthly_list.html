@@ -43,10 +43,10 @@
 							</a>
 						</li>
 						<li>
-							<a href="">#카라이프</a>
+							<a href="">중고차</a>
 						</li>
 						<li>
-							<a href="">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_r"><i>#</i>타봥</span></a>
+							<a href="">월간렌터카</a>
 						</li>
 					</ul>			
 				</div>
@@ -114,8 +114,11 @@
 				</section>
 				<!-- //페이지 타이틀 -->				
 				
-
-				<div class="section-counsel round">					
+				<!-- 
+					20210120 pjh : 마크업 수정 
+					클래스 section-counsel 에서 round 클래스 제거
+				-->
+				<div class="section-counsel">					
 					<div class="col">
 						<a href="" class="btn btn-link">
 							<span class="icon note"></span>
@@ -137,14 +140,136 @@
 						</p>
 					</div>
 				</div>
+				
 
 				<div class="sort-section">
-					<div class="selection-area">
+					<!-- 
+						20210120 pjh : 마크업 수정 
+						: 클래스 selection-area에 클래스 filterAccor 추가
+					-->
+					<div class="selection-area filterAccor">
 						<!-- 차량 검색 -->
 						<div class="top-header">
 							<h3 class="tit">차량 검색</h3>
 							<button type="button" class="btn">검색조건초기화 <span class="icon reset2"></span></button>
 						</div>
+
+						<!-- 20210120 pjh : 마크업 수정 (수정된 소스 적용이 어려우면 말해주세요!) -->
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn active" data-target="filterToggleCont01" data-on="true" data-siblings="false">
+									이용지역
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont01 active" style="display: block;">
+								<ul class="select-list">
+									<li>
+										<div class="chk-icon-box type-chkOn-red">
+											<input type="radio" name="area" id="rdo1">
+											<label for="rdo1">서울</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-icon-box type-chkOn-red">
+											<input type="radio" name="area" id="rdo2">
+											<label for="rdo2">인천/경기/강원</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-icon-box type-chkOn-red">
+											<input type="radio" name="area" id="rdo3">
+											<label for="rdo3">대전/충청/세종</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-icon-box type-chkOn-red">
+											<input type="radio" name="area" id="rdo4">
+											<label for="rdo4">광주/전라</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-icon-box type-chkOn-red">
+											<input type="radio" name="area" id="rdo5">
+											<label for="rdo5">대구/부산/울산/경상</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn active" data-target="filterToggleCont02" data-on="true" data-siblings="false">
+									차량등급
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont02 active" style="display:block;">
+								<ul class="select-grid">
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk1">
+											<label for="chk1">경차</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk2">
+											<label for="chk2">소형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk12">
+											<label for="chk12">중형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk4">
+											<label for="chk4">준대형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk5">
+											<label for="chk5">대형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk6">
+											<label for="chk6">승합</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk7">
+											<label for="chk7">SUV&amp;RV</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk8">
+											<label for="chk8">전기차</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk9">
+											<label for="chk9">수입차</label>
+										</div>
+									</li>
+									<li class="wide-size">
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk10">
+											<label for="chk10">전체보기</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //20210120 pjh : 마크업 수정 -->
+						
+						<!-- 20210120 pjh : 마크업 수정 전 소스 주석 처리
 						<div class="selection-cont short-filter-accor">
 							<button type="button" class="btn-short-filter-toggle active" data-target="short-filter-toggle-cont" data-on="true" data-siblings="false">
 								이용지역 <span class="icon arrow-up"></span>
@@ -236,8 +361,9 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-						<!-- //차량 검색 -->
+						</div> 
+						-->
+						<!-- 차량 검색 -->
 					</div>
 					<div class="result-area">
 						<div class="top-header">
@@ -256,8 +382,8 @@
 							<ul class="grid-col col3 car-list">
 								<li>
 									<a href="#" class="item">
-										<div  class="img-box">
-											<img src="../../../resources-pc/images/@temp-short-list01.jpg" alt="더미 이미지">
+										<div class="img-box">
+											<img src="../../../resources-pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
 										</div>
 										<div class="descri-box">
 											<strong>더 뉴모닝</strong>
@@ -277,8 +403,8 @@
 								</li>
 								<li>
 									<a href="#" class="item">
-										<div  class="img-box">
-											<img src="../../../resources-pc/images/@temp-short-list02.jpg" alt="더미 이미지">
+										<div class="img-box">
+											<img src="../../../resources-pc/images/@temp-short-main-banner.png" alt="더미 이미지">
 										</div>
 										<div class="descri-box">
 											<strong>더 뉴모닝</strong>
@@ -299,7 +425,7 @@
 								<li>
 									<a href="#" class="item">
 										<div  class="img-box">
-											<img src="../../../resources-pc/images/@temp-short-list03.jpg" alt="더미 이미지">
+											<img src="../../../resources-pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
 										</div>
 										<div class="descri-box">
 											<strong>더 뉴모닝</strong>

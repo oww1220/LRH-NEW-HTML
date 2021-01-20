@@ -63,7 +63,7 @@
 					<p class="txt">대한민국 No.1 롯데렌터카를 중고차 장기렌터카로 만나보세요!</p>
 				
 					<div class="tooltip-top-wrap tooltipToggle-top tooltip-site">										
-						<button type="button" class="btn btn-share tooltipOpenBtn-top" data-target="tooltipCont-top" data-on="true" data-siblings="false"><span class="icon share">공유하기</span></button>
+						<button type="button" class="btn btn-share tooltipOpenBtn-top" data-target="tooltipCont-top" data-on="true" data-siblings="true"><span class="icon share">공유하기</span></button>
 						<div class="tooltip tooltipCont tooltipCont-top">
 							<div class="tooltipCont-inner">
 								<div class="layer-list">
@@ -135,11 +135,6 @@
 							<button type="button" class="btn">검색조건초기화 <span class="icon reset2"></span></button>
 						</div>
 
-						<!-- 
-							20201127 :  아코디언 메뉴 컨트롤 참고
-							아코디언 버튼 활성화, 아코디언 컨텐츠 활성화 : 클래스 active 추가	
-							아코디언 버튼 활성화, 아코디언 컨텐츠 비활성화 : 클래스 active 제거
-						-->
 						<div class="selection-cont">
 							<div class="selection-cont-header">
 								<button type="button" class="btn-toggle-grey filterToggleBtn active" data-target="filterToggleCont01" data-on="true" data-siblings="true">
@@ -147,13 +142,8 @@
 								</button>
 							</div>
 							<div class="selection-cont-body filterToggleCon filterToggleCont01 active" style="display:block;">
+								<!-- 20210120 pjh : 마크업 수정 -->
 								<ul class="select-grid">
-									<li>
-										<div class="chk-box">
-											<input type="checkbox" name="" id="chk10">
-											<label for="chk10">전체</label>
-										</div>
-									</li>
 									<li>
 										<div class="chk-box">
 											<input type="checkbox" name="" id="chk1">
@@ -164,6 +154,12 @@
 										<div class="chk-box">
 											<input type="checkbox" name="" id="chk2">
 											<label for="chk2">소형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk12">
+											<label for="chk12">중형</label>
 										</div>
 									</li>
 									<li>
@@ -202,13 +198,14 @@
 											<label for="chk9">수입차</label>
 										</div>
 									</li>
-									<li>
+									<li class="wide-size">
 										<div class="chk-box">
-											<input type="checkbox" name="" id="chk11">
-											<label for="chk11">알뜰카</label>
+											<input type="checkbox" name="" id="chk10">
+											<label for="chk10">전체보기</label>
 										</div>
 									</li>
 								</ul>
+								<!-- //20210120 pjh : 마크업 수정 -->
 							</div>
 						</div>
 						<div class="selection-cont">
@@ -284,13 +281,17 @@
 										
 									</li>						
 								</ul>
+								<!-- 20210120 pjh : 마크업 수정 -->
 								<div class="other-box">
-									<div class=" chk-icon-box type-chkOn-red">
+									<div class="chk-icon-box type-chkOn-red">
 										<input type="checkbox" name="chk" id="chk06">
 										<label for="chk06">관심차종만 보기</label>
 									</div>	
+									<div class="btns">
+										<button type="button" class="btn-auto white">설정</button>
+									</div>
 								</div>
-
+								<!-- //20210120 pjh : 마크업 수정 -->
 							</div>
 						</div>
 						<div class="selection-cont">
@@ -492,14 +493,17 @@
 								</div>
 							</div>
 						</div>
+						<!-- 20210120 pjh : 마크업 수정 -->
 						<div class="inputT-cont">
-							<div class="inputT">						
-								<input type="text" id="" placeholder="차량번호 검색">
-								<button type="button" class="btn"><i class="icon magnifier"></i></button>
+							<div class="box-between">
+								<div class="inputT">						
+									<input type="text" id="" placeholder="차량번호 검색">
+								</div>
+								<button type="button" class="btn btn-black">검색</button>
 							</div>
 							<p class="txt-exam txt-color-red"><span class="txt-color-red">*</span> 01가1234   형식으로 입력해주세요</p>
 						</div>
-						<!-- //차량 검색 -->
+						<!-- //20210120 pjh : 마크업 수정 -->
 					</div>
 					<div class="result-area listViewDefault">
 						<div class="top-header">
@@ -528,34 +532,47 @@
 												<img src="../../../resources-pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
 											</div>
 											<div class="cover">
-												<p>7명 상담 진행중</p>
-												<div class="btn-box">
-													<div class="tooltip-wrap tooltipToggle">										
-														<button type="button" class="btn btn-auto tooltipOpenBtn" data-target="tooltipCont-list-01" data-on="true" data-siblings="false"><i class="icon tooltip"></i><span>5</span></button>
-														<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-01">
-															<div class="tooltipCont-inner">
-																<div class="layer-info">
-																	<div class="tooltip-tit-num">5</div>
-																	<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state">상담 가능</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-01" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-01">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
 																</div>
 															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk21" checked>
+															<label for="chk21" class="icon heart2"></label>
+															<span>25</span>
 														</div>
 													</div>
 												</div>
-												<div class="heart-chk-box">
-													<input type="checkbox" id="chk11" checked>
-													<label for="chk11" class="icon heart2"></label>
-													<span>25</span>
-												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
 											</div>
 										</div>
 										<div class="descri-area">
 											<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
 											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">강남지점</p>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->											
 											<div class="price-box">
 												<p class="price-row">
 													<strong>인수 24개월</strong>
@@ -565,6 +582,137 @@
 												</p>
 												<p class="price-row">
 													<strong>반납 12개월</strong>
+													<span class="price">
+														610,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>타보고 구매</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>									
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="../../../resources-pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+											</div>
+
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-02" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-02">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
+																</div>
+															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk22" checked>
+															<label for="chk22" class="icon heart2"></label>
+															<span>25</span>
+														</div>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">광명중고차반납센터</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
+											<div class="price-box">
+												<p class="price-row">
+													<strong>인수 24개월</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>반납 12개월</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>								
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="../../../resources-pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+											</div>
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state">상담 가능</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-03" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-03">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
+																</div>
+															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk23">
+															<label for="chk23" class="icon heart2"></label>
+															<span>25</span>
+														</div>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">강남지점</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->											
+											<div class="price-box">
+												<p class="price-row">
+													<strong>인수 24개월</strong>
 													<span class="price">
 														450,000<small>원</small>
 													</span>
@@ -580,40 +728,54 @@
 									</a>									
 								</li>
 								<li>
-									<a href="#none" class="item">
+									<a href="javascript:void(0);" class="item">
 										<div  class="img-box">
 											<div class="img-wrap">
 												<img src="../../../resources-pc/images/@temp-short-main-banner.png" alt="더미 이미지">
 											</div>
+
 											<div class="cover">
-												<p>7명 상담 진행중</p>
-												<div class="btn-box">
-													<div class="tooltip-wrap tooltipToggle">										
-														<button type="button" class="btn btn-auto tooltipOpenBtn" data-target="tooltipCont-list-02" data-on="true" data-siblings="false"><i class="icon tooltip"></i><span>5</span></button>
-														<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-02">
-															<div class="tooltipCont-inner">
-																<div class="layer-info">
-																	<div class="tooltip-tit-num">5</div>
-																	<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-04" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-04">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
 																</div>
 															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk24" checked>
+															<label for="chk24" class="icon heart2"></label>
+															<span>25</span>
 														</div>
 													</div>
 												</div>
-												<div class="heart-chk-box">
-													<input type="checkbox" id="chk12">
-													<label for="chk12" class="icon heart2"></label>
-													<span>25</span>
-												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
 											</div>
 										</div>
 										<div class="descri-area">
 											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
 											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">광명중고차반납센터</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
 											<div class="price-box">
 												<p class="price-row">
 													<strong>인수 24개월</strong>
@@ -632,27 +794,53 @@
 									</a>								
 								</li>
 								<li>
-									<a href="#" class="item">
+									<a href="javascript:void(0);" class="item">
 										<div  class="img-box">
 											<div class="img-wrap">
-												<img src="../../../resources-pc/images/@temp-short-list03.jpg" alt="더미 이미지">
+												<img src="../../../resources-pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
 											</div>
 											<div class="cover">
-												<p>7명 상담 진행중</p>
-												<div class="heart-chk-box">
-													<input type="checkbox" id="chk13">
-													<label for="chk13" class="icon heart2"></label>
-													<span>25</span>
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state">상담 가능</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-05" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-05">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
+																</div>
+															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk25">
+															<label for="chk25" class="icon heart2"></label>
+															<span>25</span>
+														</div>
+													</div>
 												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
 											</div>
 										</div>
 										<div class="descri-area">
-											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
 											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">강남지점</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->											
 											<div class="price-box">
 												<p class="price-row">
 													<strong>인수 24개월</strong>
@@ -661,65 +849,7 @@
 													</span>
 												</p>
 												<p class="price-row">
-													<strong>반납 12개월</strong>
-													<span class="price">
-														450,000<small>원</small>
-													</span>
-												</p>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="item">
-										<div  class="img-box">
-											<div class="img-wrap">
-												<img src="../../../resources-pc/images/@temp-short-list04.jpg" alt="더미 이미지">
-											</div>
-											<div class="cover">
-												<p>7명 상담 진행중</p>
-												<div class="heart-chk-box">
-													<input type="checkbox" id="chk14">
-													<label for="chk14" class="icon heart2"></label>
-													<span>25</span>
-												</div>
-											</div>
-										</div>
-										<div class="descri-area">
-											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
-											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
-											<div class="price-box">
-												<p class="price-row">
-													<strong>인수 24개월</strong>
-													<span class="price">
-														450,000<small>원</small>
-													</span>
-												</p>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="item">
-										<div  class="img-box">
-											<div class="img-wrap">
-												<img src="../../../resources-pc/images/@temp-short-list05.jpg" alt="더미 이미지">
-											</div>
-										</div>
-										<div class="descri-area">
-											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
-											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
-											<div class="price-box">											
-												<p class="price-row">
-													<strong>반납 12개월</strong>
+													<strong>타보고 구매</strong>
 													<span class="price">
 														450,000<small>원</small>
 													</span>
@@ -729,81 +859,54 @@
 									</a>									
 								</li>
 								<li>
-									<a href="#" class="item">
+									<a href="javascript:void(0);" class="item">
 										<div  class="img-box">
 											<div class="img-wrap">
-												<img src="../../../resources-pc/images/@temp-short-list02.jpg" alt="더미 이미지">
+												<img src="../../../resources-pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+											</div>
+
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-06" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-06">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
+																</div>
+															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk26">
+															<label for="chk26" class="icon heart2"></label>
+															<span>25</span>
+														</div>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
 											</div>
 										</div>
 										<div class="descri-area">
 											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
 											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
-											<div class="price-box">
-												<p class="price-row">
-													<strong>인수 24개월</strong>
-													<span class="price">
-														450,000<small>원</small>
-													</span>
-												</p>
-												<p class="price-row">
-													<strong>반납 12개월</strong>
-													<span class="price">
-														450,000<small>원</small>
-													</span>
-												</p>
-											</div>
-										</div>
-									</a>									
-								</li>
-								<li>
-									<a href="#" class="item">
-										<div  class="img-box">
-											<div class="img-wrap">
-												<img src="../../../resources-pc/images/@temp-short-list05.jpg" alt="더미 이미지">
-											</div>
-										</div>
-										<div class="descri-area">
-											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
-											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
-											<div class="price-box">
-												<p class="price-row">
-													<strong>인수 24개월</strong>
-													<span class="price">
-														450,000<small>원</small>
-													</span>
-												</p>
-												<p class="price-row">
-													<strong>반납 12개월</strong>
-													<span class="price">
-														450,000<small>원</small>
-													</span>
-												</p>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="item">
-										<div  class="img-box">
-											<div class="img-wrap">
-												<img src="../../../resources-pc/images/@temp-short-list04.jpg" alt="더미 이미지">
-											</div>
-										</div>
-										<div class="descri-area">
-											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
-											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">광명중고차반납센터</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
 											<div class="price-box">
 												<p class="price-row">
 													<strong>인수 24개월</strong>
@@ -822,19 +925,119 @@
 									</a>								
 								</li>
 								<li>
-									<a href="#" class="item">
+									<a href="javascript:void(0);" class="item">
 										<div  class="img-box">
 											<div class="img-wrap">
-												<img src="../../../resources-pc/images/@temp-short-list05.jpg" alt="더미 이미지">
+												<img src="../../../resources-pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+											</div>
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state">상담 가능</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-07" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-07">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
+																</div>
+															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk27" checked>
+															<label for="chk27" class="icon heart2"></label>
+															<span>25</span>
+														</div>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">강남지점</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->											
+											<div class="price-box">
+												<p class="price-row">
+													<strong>인수 24개월</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>타보고 구매</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>									
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="../../../resources-pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+											</div>
+
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-08" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-08">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
+																</div>
+															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk28" checked>
+															<label for="chk28" class="icon heart2"></label>
+															<span>25</span>
+														</div>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
 											</div>
 										</div>
 										<div class="descri-area">
 											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
 											<div class="bar-type">
-												<span>2019년(3월) 연식</span>
-												<span>디젤</span>
-												<span>인천센터</span>
-											</div>											
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">광명중고차반납센터</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
 											<div class="price-box">
 												<p class="price-row">
 													<strong>인수 24개월</strong>
@@ -850,7 +1053,73 @@
 												</p>
 											</div>
 										</div>
-									</a>
+									</a>								
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="../../../resources-pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+											</div>
+
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div>
+														<div class="tooltip-wrap tooltipToggle">										
+															<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-09" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+															<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-09">
+																<div class="tooltipCont-inner">
+																	<div class="layer-info">
+																		<div class="tooltip-tit-num">5</div>
+																		<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																	</div>
+																</div>
+															</div>
+														</div>												
+													</div>
+													<div>
+														<div class="heart-chk-box">
+															<input type="checkbox" id="chk29" checked>
+															<label for="chk29" class="icon heart2"></label>
+															<span>25</span>
+														</div>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>하이브리드</span>
+												<span>154,974km</span>
+												<span class="branch">광명중고차반납센터</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
+											<div class="price-box">
+												<p class="price-row">
+													<strong>인수 24개월</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>반납 12개월</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>								
 								</li>
 							</ul>
 						</div>
