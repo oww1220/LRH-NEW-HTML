@@ -1672,12 +1672,20 @@ if($('.eng-shor-wrap .tab-normal').length){
     }
 
     //약관 열고 닫기
-if($('.footerMenu-wrap').length){
-    MUI.event.toggle('.footerMenu-wrap .prov-toggle-btn', '.footerMenu-wrap .prov-toggle-cont', false, function(logic, layer) {
-        //console.log('toggle');
-        logic();
-    });
-}
+    if($('.footerMenu-wrap').length){
+        MUI.event.toggle('.footerMenu-wrap .prov-toggle-btn', '.footerMenu-wrap .prov-toggle-cont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+    }
+
+    //etc qna 열고 닫기
+    if($('.footerMenu-wrap').length){
+        MUI.event.toggle('.footerMenu-wrap .longTerm-qna-toggle-btn', '.footerMenu-wrap .longTerm-qna-toggle-cont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+    }
 /* -------------------------------------------------FooterMenu end*/
 
     //fixed bottom이 있을시 하단 푸터 높이값 수정

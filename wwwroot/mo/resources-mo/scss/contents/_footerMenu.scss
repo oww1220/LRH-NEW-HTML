@@ -465,6 +465,60 @@
         padding: 2.6rem 1.7rem;
     }
 
+    .longTerm-qna-toggle-btn {
+        cursor: pointer;
+        @include Align-middle-left;
+        position: relative;
+        padding:2.3rem 0;
+        border-bottom: 1px solid #f1f1f1;
+        @include Regular;
+        .ico-q {
+            @include Align-middle;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 100%;
+            @include Bold;
+            color: #fff;
+            font-size: 1.2rem;
+            background: #54585a;
+            //margin-right: .9rem;
+        }
+        p {
+            width: calc(100% - 2.2rem);
+            box-sizing: border-box;
+            @include Bold;
+            color: #2f2f2f;
+            padding:0 .9rem 0 .9rem !important;
+        }
+        strong {
+            font-size: 1.4rem;
+            @include Bold;
+        }
+        .btn-toggle{
+            @include Position($top: 50%, $right: 0);
+            transform: translateY(-50%);
+        }
+        &.active {
+            @include Bold;
+            .ico-q {
+                background: #ff404b;
+            }
+            .btn-toggle:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .longTerm-qna-toggle-cont{
+        display:none;
+        background-color: #f5f5f5;
+        border-radius: .5rem;
+        padding:1.3rem;
+        margin:1.3rem;
+        .table{
+            background-color: #fff;
+        }
+    }
+
     //약관
     .prov-toggle-btn {
         &:nth-of-type(1) {
