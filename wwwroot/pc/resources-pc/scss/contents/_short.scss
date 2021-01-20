@@ -730,6 +730,17 @@
         .round-banner{
             @include Background($sprite: 'bg-shortInfoCourtesyCar', $path:'');
         }
+        .explain-cont{
+            .multi-segment-list{
+                &.type-col2{
+                    > li{
+                        .details + .details{
+                            padding: 0 0 0 40px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     //월간 단기렌터카 안내

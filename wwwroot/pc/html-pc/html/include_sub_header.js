@@ -134,6 +134,7 @@ $(function(){
 										<ul>
 											<li><a href="#">월간렌트 서비스 안내</a></li>
 											<li><a href="#">렌터카 검색</a></li>
+											<li><a href="#">상담 신청</a></li>
 										</ul>
 									</div>
 								</li>
@@ -339,6 +340,7 @@ $(function(){
 											<ul>
 												<li><a href="#">월간렌트 서비스 안내</a></li>
 												<li><a href="#">렌터카 검색</a></li>
+												<li><a href="#">상담 신청</a></li>
 											</ul>
 										</div>
 									</li>
