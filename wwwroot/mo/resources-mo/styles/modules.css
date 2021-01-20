@@ -7585,7 +7585,7 @@ a.btn {
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
 	width: 2.5rem;
-	height: 2.1rem;
+	height: 2.3rem;
 }
 
 .icon.login-pannel07 {
@@ -7635,7 +7635,7 @@ a.btn {
 .icon.login-pannel11 {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-mo/images/icons/ico-login-pannel11.png");
-	background-position: center center;
+	background-position: center 2px;
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
@@ -18956,6 +18956,116 @@ body.fixed {
 
 .driver-license .cont-guide li {
 	font-size: 1rem !important;
+}
+
+.toggle-wrapper {
+	position: relative;
+	height: 16px;
+	width: 34px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.toggle-wrapper .toggle {
+	position: relative;
+	display: inline-block;
+}
+
+.toggle-wrapper .toggle input {
+	height: 16px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+
+.toggle-wrapper .normal label {
+	background: #F04040;
+}
+
+.toggle-wrapper .normal label:before {
+	content: '';
+	position: absolute;
+	border: none;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	-webkit-transform: rotate(-25deg);
+	   -moz-transform: rotate(-25deg);
+	    -ms-transform: rotate(-25deg);
+	     -o-transform: rotate(-25deg);
+	        transform: rotate(-25deg);
+}
+
+.toggle-wrapper .normal label:after {
+	content: '';
+	position: absolute;
+	background: transparent;
+	height: 100%;
+	-webkit-border-radius: 30px;
+	   -moz-border-radius: 30px;
+	        border-radius: 30px;
+	top: 0px;
+	width: 100%;
+	left: 0px;
+	height: 16px;
+	z-index: 0;
+}
+
+.toggle-wrapper .normal input:checked + label:before {
+	left: 14px;
+	border-color: #F04040;
+}
+
+.toggle-wrapper .normal input:checked + label {
+	background: #F04040;
+}
+
+.toggle-wrapper .normal .toggle-item {
+	width: 34px;
+	background: #B4B8BF;
+	height: 16px;
+	display: inline-block;
+	-webkit-border-radius: 50px;
+	   -moz-border-radius: 50px;
+	        border-radius: 50px;
+	position: relative;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transform-origin: 20% center;
+	   -moz-transform-origin: 20% center;
+	    -ms-transform-origin: 20% center;
+	     -o-transform-origin: 20% center;
+	        transform-origin: 20% center;
+	cursor: pointer;
+}
+
+.toggle-wrapper .normal .toggle-item:before {
+	content: '';
+	position: absolute;
+	display: block;
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	transition: all .2s ease;
+	width: 20px;
+	height: 20px;
+	top: -2px;
+	left: 0px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+	-webkit-transition: .3s ease;
+	-o-transition: .3s ease;
+	-moz-transition: .3s ease;
+	transition: .3s ease;
+	border: 1px solid #B4B8BF;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /*! jQuery UI - v1.12.1 - 2017-11-05

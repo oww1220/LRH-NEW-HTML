@@ -346,6 +346,34 @@
             margin-bottom: 20px;
         }
     }
+
+    //contact us
+    &.contactUs-container{
+        .round-banner{
+            @include Background($sprite: 'bg-footerMenuContactUs', $path:'', $position:center, $size:cover);
+            background-color:#90969E;
+
+            .infos{
+                .txt{
+                    + .lst{
+                        margin-top:20px;
+                        li{font-size:14px;}
+                    }
+                }
+            }
+        }
+        .tbl-between{
+            @include Align-between-top;
+            width: calc(100% + 60px);
+
+            .tbl-between-col{
+                flex:1;
+                padding-right:60px;
+            }
+
+            + .tbl-between{margin-top:60px;}
+        }
+    }
 }
 
 //영문
@@ -390,13 +418,6 @@
                     }
                 }
                 
-            }
-        }
-
-        //contact us
-        &.contactUs-container{
-            .round-banner{
-                @include Background($sprite: 'bg-footerMenuContactUs', $path:'');
             }
         }
     }

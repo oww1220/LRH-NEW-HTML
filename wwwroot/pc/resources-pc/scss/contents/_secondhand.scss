@@ -220,9 +220,10 @@
     //중고차 목록    
     .section-counsel{
         @include Align-box;
-        border:1px solid #e7e7e7;
+        border-top:1px solid $border-grey;
+        border-bottom:1px solid $border-grey;
         margin-bottom:55px;
-        @include roundBox; 
+        
         
         .col{
             width: 50%;
@@ -298,14 +299,15 @@
                         display:flex;
                         flex-wrap: wrap;
                         align-items:stretch;
-                        justify-content:space-between;
+                        justify-content: flex-start;
+                        //justify-content:space-between;
 
                         border: 1px solid $border-darkgrey;
                         //border-width: 0 0 1px 1px;
                         box-sizing: border-box;
 
                         li{
-                            width:33.333%;
+                            width: calc(100% / 3);
                             border: 0 solid $border-darkgrey;
                             border-width: 0 1px 1px 0;
                             box-sizing: border-box;
@@ -316,8 +318,9 @@
                                 }
                                 label{
                                     position: relative;
-                                    height:40px;
                                     @include Align-middle;
+                                    height:40px;
+                                    color:#8f9191;
                                     box-sizing: border-box;
                                     transition: all .4s;
                                 }
@@ -329,14 +332,17 @@
                                     &:after{
                                         content:"";
                                         display:block;
-                                        @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-2px);
+                                        @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
                                         border:1px solid $border-red;
                                         z-index: 5;
                                     }
                                 }
                             }
                             
-
+                            &.wide-size{
+                                width:100%;
+                                border-right:0;
+                            }
                         }
                         li:last-child{
                             border-bottom:0 none;
@@ -345,13 +351,13 @@
                             border-right:0 none;
                             width:33.334%;
                         }
-                        li:nth-of-type(3n+1){
-                            input:checked + label {
-                                &:after{
-                                    @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
-                                }
-                            }
-                        }
+                        // li:nth-of-type(3n+1){
+                        //     input:checked + label {
+                        //         &:after{
+                        //             @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
+                        //         }
+                        //     }
+                        // }
                     }
                     .select-list{
                         li{
@@ -381,9 +387,17 @@
                         }
                     }
                     .other-box{
+                        @include Align-between;
                         border-top:1px solid $border-grey;
                         margin-top:20px;
-                        padding-top:30px;
+                        padding-top:20px;
+
+                        .btns{
+                            .btn-auto{
+                                @include Bold;
+                                padding:10px;
+                            }
+                        }
                     }
                 }
             }
@@ -393,16 +407,24 @@
                     input{
                         border-color: #d2d2d2;
                     }
+                    // .btn{
+                    //     @include Position($top:0, $right:0);
+                    //     padding:0 20px;
+                    // }
+                    // .icon{
+                    //     @include Position($top:50%, $right:15px);
+                    //     transform: translateY(-50%);
+                    //     width:18px;
+                    //     height:18px;
+                    //     background-size: 100%;
+                    // }
+                }
+                .box-between{
                     .btn{
-                        @include Position($top:0, $right:0);
-                        padding:0 20px;
-                    }
-                    .icon{
-                        @include Position($top:50%, $right:15px);
-                        transform: translateY(-50%);
-                        width:18px;
-                        height:18px;
-                        background-size: 100%;
+                        flex:none;
+                        flex-basis: 80px;
+                        width:80px;
+                        margin-left:5px;
                     }
                 }
                 .txt-exam{
@@ -438,6 +460,23 @@
                         @include Background($sprite:'ico-list2', $position:center);
                     }
                 }
+
+                .result-cont{
+                    .item{
+                        .descri-area{
+                            .bar-type{
+                                .branch{
+                                    display:inline;
+                                    padding-left:10px;
+                                    margin-left:10px;    
+    
+                                    &:before{display:block;}
+                                }
+                            }
+                        }
+                    }
+                }
+                
             }
             .result-cont{
                 .carInfo-list{
@@ -445,6 +484,15 @@
                     box-sizing: border-box;
 
                     li{margin-bottom:40px;}
+                    &.col2{
+                        .item{
+                            .cover{
+                                .btn-box{
+                                    margin-right:-165px;
+                                }
+                            }
+                        }
+                    }
                 }
                 .item{
                     display:block;
@@ -476,21 +524,43 @@
                         .cover{
                             @include Position($bottom:0, $left:0, $right:0);
                             @include Align-between;
-                            align-items: flex-end;
-                            padding:10px 20px;
                             color:#fff;
                             background: rgba(29,29,29,.6);
                             z-index:5;
+<<<<<<< Updated upstream
                             .btn-box{
-                                margin-right:-10px;
+                                margin-right:-25px;
+=======
+                            
+                            .state{
+                                padding:10px 20px;                                
+                                @include Bold;
+                                color:#fff;
+                                background-color:#ff404b;
+
+                                &.ing{
+                                    color:rgba(255,255,255,.5);
+                                    background-color:#8f9191;
+                                }
+                            }
+                            .right-area{
+                                display:flex;
+                                padding:0 20px;
+
+                                > div{
+                                    + div{margin-left:15px;}
+                                }
+>>>>>>> Stashed changes
                             }
                         }
                         
                         //툴팁 레이어
                         .tooltipOpenBtn{
+                            @include Align-middle;
                             height:auto;
                             padding: 0;
                             margin: 0;
+                            
                             i{
                                 margin-right:5px;
                             }
@@ -580,12 +650,13 @@
                             @include Ellipsis($w:100%, $lines:2);
                             font-size:1rem;
                             height:32px;
-                            margin-bottom:15px;
+                            
+                            + .bar-type{margin-top:15px;}
                         }
                         .bar-type{
-                            color:#54585a;
+                            color:#8f9191;
                             font-size:14px;
-                            margin-bottom:25px;
+                            margin-bottom:20px;
 
                             > span{ 
                                 position:relative; 
@@ -605,11 +676,25 @@
                                     }
                                 }
                             }
+                            .branch{
+                                display:block;
+                                padding-left:0;
+                                margin-left:0;    
+
+                                &:before{display:none;}
+                            }
                         }
-                        .price-box{                            
+                        .price-box{   
+                            @include roundBox;
+                            padding:20px;
+                            background-color:#f5f5f5;                    
+
                             .price-row{
                                 @include Align-between;
 
+                                strong{
+                                    @include Regular;
+                                }
                                 +.price-row{ margin-top:15px;}
                                 .price{
                                     @include Bold;

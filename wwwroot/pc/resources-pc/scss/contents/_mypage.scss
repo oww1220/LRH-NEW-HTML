@@ -61,7 +61,7 @@
             > ul{
                 padding:0 30px;
 
-                > li{
+                > li{ 
                     > a{@include Bold;}
                     
                     + li{margin-top:40px;}
@@ -2071,12 +2071,15 @@
                 .form-header {
                     margin-bottom:0;
                     @include Align-between;
-                    span {
-                        @include Bold;
-                        position: relative;
-                        font-size:16px;
-                        em {
-                            padding-left:5px;
+
+                    .tit-size-mid{
+                        + span {
+                            @include Bold;
+                            position: relative;
+                            font-size:16px;
+                            em {
+                                padding-left:5px;
+                            }
                         }
                     }
                 }
@@ -2144,22 +2147,24 @@
                 }
                 &.form2 {
                     .form-cont {
+                        padding-bottom:40px;
+
                         & + .form-cont {
                             padding-top:0;
                         }
                         .row-header {
                             margin:0 40px 20px;
-                            padding-bottom:20px;
-                            border-bottom:1px solid #e7e7e7;
-                            ul {
-                                @include Align-middle-left; 
-                                li + li {
-                                    padding-left: 30px;
-                                }
-                            }
+                            // ul {
+                            //     @include Align-middle-left; 
+                            //     li + li {
+                            //         padding-left: 30px;
+                            //     }
+                            // }
                             .chk-icon-box {
+                                @include Align-middle-left;
+                                
                                 .input-tit {
-                                    width:180px;
+                                    //width:180px;
                                     button {
                                         border-bottom: 1px solid #2f2f2f;
                                         padding: 4px 0 2px;
@@ -2171,6 +2176,18 @@
                                 & + .input-cont {
                                     margin-left:50px;
                                 }
+
+                                .tooltip-area{margin-left:10px;}                                
+                            }                            
+                        }
+                        .row-cont{
+                            margin:0 40px;
+                            padding-bottom:40px;
+                            border-bottom:1px solid $border-grey;
+
+                            .row{
+                                padding-left:0;
+                                padding-right:0;
                             }
                         }
                         .detail-radio {
@@ -2207,16 +2224,17 @@
                             } 
                         }
 
-                        .btn-area {
-                            padding:60px 0 0;
-                        }
+                        .agree-area{padding:40px;}
                     }
                 }
-                &:last-child {
-                    .form-cont {
-                        padding-bottom:0;
-                    }
+                &.form3{
+                    .form-header{margin-bottom: 40px;}
                 }
+                // &:last-child {
+                //     .form-cont {
+                //         padding-bottom:0;
+                //     }
+                // }
             }
         }
         .section-certi {
