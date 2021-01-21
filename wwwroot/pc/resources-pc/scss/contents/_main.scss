@@ -47,7 +47,7 @@
         .swiper-pagination {
             z-index: 0;
             position: inherit;
-            width: 0;
+            width: auto;
         }
         .btn-paging-prev {
             margin-right: 20px;
@@ -616,11 +616,11 @@
                font-size: 14px;
                color: #2f2f2f;
                > span {
-                   width: 50px;
+                   width: 65px;
                    height: 50px;
                    margin-bottom: 20px;
-                   background-size: 100% auto;
-                   background-position: center;
+                   //background-size: 100% auto;
+                   background-position: center center;
                    background-repeat: no-repeat;
                }
                .ico-quick1 {background-image: url(../../resources-pc/images/icons/ico-main-quick8.png);}
@@ -637,7 +637,12 @@
 
     //신차장 다이렉트 슬라이드
     .direct-section {
-        .inner-type3{@include Align-between;}       
+        .inner-type3{
+            @include Align-between-top;
+            width: 1680px;
+            max-width: 1680px;
+            padding: 100px 0 0 130px;
+        }       
         .h-type {
             .btn-red {
                 width: 124px;
@@ -646,9 +651,9 @@
             }
         }
         .direct-slide-wrap {
-            width: 1010px;
+            width: 1160px;
             height: 480px;
-            margin-top: 50px;
+            //margin-top: 50px;
             .img-wrap {
                 position: relative;
                 margin-left: 40px;
@@ -665,10 +670,14 @@
                         font-size: 42px;
                         color: #8f9191;
                     }
-                    img {
-                        width: 313px;
-                        height: 201px;
+                    .img {
+                        width: 315px;
+                        height: 200px;
                         background-size: 100% auto;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
                 .img-txt {
@@ -685,8 +694,8 @@
         }
         .slick-dots {
             position: absolute;
-            left: -410px;
-            bottom: 100px;
+            left: -390px;
+            bottom: 138px;
             border-radius: 0;
             li {
                 margin: 0 5px 0 0;
@@ -694,20 +703,22 @@
             button {
                 &:before {
                     width: 60px;
-                    height: 15px;
+                    height: 20px;
                     border: none;
                     border-bottom: 1px solid #ddd;
                     border-radius: 0;
                     background: #fff;
+                    box-sizing: border-box;
                 }
             }
             .slick-active {
                 button {
                     &:before {
-                        height: 15px;
+                        height: 20px;
                         border: none;
-                        border-bottom: 2px solid #2f2f2f;
+                        border-bottom: 4px solid #2f2f2f;
                         background: #fff;
+                        box-sizing: border-box;
                     }
                     &:after {
                         display: inline-block;
@@ -722,11 +733,11 @@
 
     //중고차 장기렌터카
     .secondhand-wrap {
-        margin-top: 90px;
-        background: url(../../resources-pc/images/common/bg-main-secondhand.png) top left repeat-x;
+        margin-top: 70px;
+        background: url(../../resources-pc/images/common/bg-main-secondhand.png) 100% 10% repeat-x;
         .tab-type {
             @include Align-between-base;
-            margin-top: 60px;
+            margin-top: 48px;
             ul {
                 @include Align-middle-right;
                 li {
@@ -746,7 +757,10 @@
         }
         .secondhand-slide-wrap {
             margin-top: 60px;
-            overflow: hidden;
+            //overflow: hidden;
+            .swiper-container {
+                height: 470px;
+            }
             .swiper-wrapper {
                 @include Align-top-left;
                 width: 1420px;
@@ -755,7 +769,7 @@
                     height: 440px;
                     margin-right: 30px;
                     background: #fff;
-                    box-shadow: 0px 10px 20px #f3f3f3;
+                    
                     img {
                         width: 330px;
                         height: 230px;
@@ -765,6 +779,8 @@
                         padding: 30px 20px;
                         color: #8f9191;
                         font-size: 16px;
+                        border: 1px solid #f1f1f1;
+                        border-top: 0 none;
                         .tit > strong {
                             font-size: 18px;
                             color: #2f2f2f;
@@ -879,10 +895,12 @@
 
     //핫딜 찬스
     .hotdeal-wrap {
-        margin-top: 50px;
+        margin-top: 100px;
         background: url(../../resources-pc/images/common/bg-main-hotdeal.png) bottom left repeat-x;
         .hotdeal-twrap {
             @include Align-between-base;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
         }
         .t-wrap {
             @include Align-top-left;
@@ -913,7 +931,7 @@
             }
         }
         .btn-goLink {margin-bottom: 10px;}
-        .hotdeal-slide-wrap {margin-top: 120px;}
+        .hotdeal-slide-wrap {margin-top: 80px;}
         .hotdeal-slide-cont {
             @include Align-between;
             .slide-type a {
@@ -1071,11 +1089,12 @@
             }
         }
         .notice-list {
-            display: flex;
-            flex-flow: row wrap;
+            /* display: flex;
+            flex-flow: row wrap; */
+            @include Align-box;
             width: 770px;
             li {
-                @include Align-between;
+                @include Align-between-top;
                 @include Bold;
                 font-size: 22px;
                 width: 350px;
@@ -1087,6 +1106,7 @@
                     height: 22px;
                     background: url(../../resources-pc/images/icons/ico-main-arrow5.png) 0 0 no-repeat;
                     background-size: 100% auto;
+                    margin-top: 5px;
                 }
                 &:nth-of-type(1), &:nth-of-type(2) {
                     border-bottom: 2px solid #2f2f2f;

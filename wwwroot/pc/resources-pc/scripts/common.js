@@ -1698,7 +1698,7 @@ if($('.mypage-container .indicator-toggle-cont').length) {
             loop: true,
             slidesPerView: 4,
             centeredSlides: false,
-            spaceBetween: 32,
+            spaceBetween: 40,
             //spaceBetween: 30,
             navigation: {
                 nextEl: '.btn-paging-next',
