@@ -18,7 +18,7 @@ $extra-small-devices: 320px;
 	font-weight: normal;
 }
 @mixin Bold {
-	font-family:"ManropeB", "NotoM", serif;/*font-family: "SpoqaB", serif;*//*font-family: "SpoqaHanSansB", serif;*/
+	font-family:"ManropeB", "NotoB", serif;/*font-family: "SpoqaB", serif;*//*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 }
 
@@ -375,6 +375,7 @@ $main-border-radius: 6px;
 html, body{
 	font-size:16px;
 	@include Regular;
+	line-height:1.5;
 }
 #wrap{padding-bottom:120px;}
 
@@ -399,7 +400,7 @@ $txt-darkblack: #2f2f2f;
 .tit{@include Bold;}
 .tit-size-def{@include Bold; font-size:18px;}
 .tit-size-mid{@include Bold; font-size:24px;}
-.tit-size-big{@include Bold; font-size:32px;}
+.tit-size-big{@include Bold; font-size:36px;}
 
 .underline{
 	@include Bold;
@@ -556,18 +557,25 @@ $txt-darkblack: #2f2f2f;
 		text-align:center;
 		padding-bottom:60px;
 
-		.tit{@include Bold; font-size:40px;}
-		.txt{margin-top:20px; color:#8f9191;}
-
+		.tit{
+			@include Bold; 
+			font-size:42px;
+			line-height:1.5;
+		}
+		.txt{
+			font-size:18px; 
+			color:#8f9191;
+			//margin-top:20px; 
+		}
 		.btn-share{
 			@include Position($top:0, $right:0);
 		}
 	}
 	&-explain, &-explain-type2{
-		padding-bottom:60px;
+		padding-bottom:40px;
 
 		.explain-header{ //제목
-			padding-bottom:30px;
+			padding-bottom:20px;
             margin-bottom:40px;
 			border-bottom:1px solid #e7e7e7;
 			
@@ -590,8 +598,8 @@ $txt-darkblack: #2f2f2f;
 				font-size:18px; 
 				margin-bottom:25px;
 			}
-			.txt{
-				@include txtSetting;		
+			.txt{				
+				color: #54585a;
 				strong{@include Bold;}
 				
 				+ .tbl-box, + .define-area, + .define-area2, + .details{margin-top:30px; }
@@ -604,9 +612,9 @@ $txt-darkblack: #2f2f2f;
 				
 				.tit-size-mid{margin-bottom:25px;}
 			}
-			.lst{
-				margin-bottom:30px;
-			}
+			// .lst{
+			// 	margin-bottom:30px;
+			// }
 			.tbl-box{
 				table{
 					position:relative;
@@ -705,7 +713,8 @@ $txt-darkblack: #2f2f2f;
 				.lst{margin:0;}
 			}
 		}
-		+ .section-explain, + .section-explain-type2{margin-top:60px;}
+		+ .section-explain, + .section-explain-type2{margin-top:40px;}
+		+ .btn-area{padding-top:20px;}
 	}
 
 	&-explain-type2{
@@ -1156,6 +1165,7 @@ $txt-darkblack: #2f2f2f;
 		@include Align-middle;
 		width:40px;
 		height:40px;
+		font-size:18px;
 		color:#fff;
 		margin: auto;
 		border-radius: 40px;
@@ -1163,13 +1173,13 @@ $txt-darkblack: #2f2f2f;
 	}
 	.tit{display:block; font-size:16px; margin-top:20px; margin-bottom:0;}
 	.txt{font-size:14px; margin-top:15px; color:#54585a}
-	.lst.txt{
-		li{
-			+ li{margin-top:15px;}
-		}
-	}
+	// .lst.txt{
+	// 	li{
+	// 		+ li{margin-top:15px;}
+	// 	}
+	// }
 
-	+ .lst{margin-top:30px;}
+	+ .lst{margin-top:20px;}
 
 
 	&.type-col4{
@@ -1200,9 +1210,10 @@ $txt-darkblack: #2f2f2f;
 		position:relative;
 		padding-left:12px;
 		@include txtSetting;
-		line-height:1.5;
-
+		
 		&.txt-color-red{color:$txt-red;}
+
+		+ li{margin-top:8px;}
 	}
 
 	&.txt-color-red{
@@ -1282,6 +1293,7 @@ $txt-darkblack: #2f2f2f;
 					border-radius:20px;
 					line-height:1;
 					border:1px solid $border-grey;
+					background-color:#fff;
 					box-sizing:border-box;
 				}
 			}
@@ -1358,17 +1370,26 @@ $txt-darkblack: #2f2f2f;
 // }
 
 //페이지 상단 배너
-@mixin roundBanner($mb:80px){
+@mixin roundBanner($mb:60px){
 	@include roundBox;
-	@include Align-middle-left;
+	// @include Align-middle-left;
+	// /*Center horizontaly ie */
+	// -ms-flex-pack: center;
+
+	display:flex;
+	align-items: center;
+
+
 	min-height:140px;
-	padding:30px 60px;
+	//padding:20px 60px;
+	padding:0 60px;
+	font-size:18px;
 	margin-bottom:$mb;
 	box-sizing:border-box;
 
-	p{color:#fff;}
-	
+	p{color:#fff; padding:20px 0;}	
 	.infos{
+		padding:20px 0;
 		.tit{
 			@include Bold;
 			font-size:16px;
@@ -1378,6 +1399,12 @@ $txt-darkblack: #2f2f2f;
 				margin-top:15px;
 			}
 		}
+	}
+
+	&::after{
+		content:'';
+		min-height:inherit;
+		font-size:0;
 	}
 }
 

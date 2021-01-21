@@ -234,18 +234,32 @@
         }
 
         .btn-link{   
-            position:relative; 
             @include Inline-align-middle;
             @include Bold;
-            font-size:1rem;
-            height:auto;           
+            height:auto;
+            font-size:16px;
             padding:0;
-            margin-left:30px;
             margin-bottom:15px;
-
+            
             .icon{
-                @include Position($left:-30px);
+                position: relative;
+                top: 1px;
+                padding:1px 10px 1px 0;                
+                background-position: top left;
+                background-color: #fff;
             }
+            // position:relative; 
+            // @include Inline-align-middle;
+            // @include Bold;
+            // font-size:1rem;
+            // height:auto;           
+            // padding:0;
+            // margin-left:30px;
+            // margin-bottom:15px;
+
+            // .icon{
+            //     @include Position($left:-30px);
+            // }
         }
     }
     .sort-section{
@@ -649,35 +663,36 @@
                             + .bar-type{margin-top:15px;}
                         }
                         .bar-type{
+                            @include Align-box;
+                            flex-wrap: wrap;
                             color:#8f9191;
                             font-size:14px;
                             margin-bottom:20px;
 
                             > span{ 
-                                position:relative; 
-    
-                                + span{                                    
-                                    padding-left:10px;
-                                    margin-left:10px;                            
-    
-                                    &:before{
+                                position:relative;                                
+                                flex:none;
+                                width:63%;
+                                flex-basis:63%;
+                                text-indent: 20px;
+                                box-sizing: border-box;
+
+                                &:nth-of-type(odd){
+                                    flex:none;
+                                    width:37%;                                    
+                                    flex-basis:37%;
+                                    text-indent: 0;
+
+                                    &::after{
+                                        @include Position($top:4px, $right:0);
                                         content:"";
-                                        @include Position($top:50%, $left:0);
                                         display:block;
                                         width:1px;
                                         height:14px;
-                                        margin-top:-7px;
-                                        background-color:#e7e7e7;
+                                        background-color:$border-grey;
                                     }
                                 }
-                            }
-                            .branch{
-                                display:block;
-                                padding-left:0;
-                                margin-left:0;    
-
-                                &:before{display:none;}
-                            }
+                            }                            
                         }
                         .price-box{   
                             @include roundBox;
@@ -686,10 +701,8 @@
 
                             .price-row{
                                 @include Align-between;
-
-                                strong{
-                                    @include Regular;
-                                }
+                                @include Bold;
+                                
                                 +.price-row{ margin-top:15px;}
                                 .price{
                                     @include Bold;
