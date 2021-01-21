@@ -139,7 +139,7 @@ $(function(){
 			</div>
 			<div class="inner">
 				<div class="footer-logo">
-					<img src="../../../resources-pc/images/common/logo-footer.png" alt="LOTTE rental"/>
+					<img src="../resources-pc/images/common/logo-footer.png" alt="LOTTE rental"/>
 				</div>
 				<div class="footer-bottom-menu">
 					<div class="footer-infos-wrap">

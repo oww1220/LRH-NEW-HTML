@@ -92,6 +92,16 @@ $(function(){
         });
     }
 
+    //예약 취소 안내
+    if($('.layer-cancel').length) {
+        MUI.layer.openClick('.layer-cancel-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+           
+           if(MUI.slide.LayerSwiper) MUI.slide.LayerSwiper.destroy();
+           show();
+
+        });
+    }
+
     // 제휴사 전용 예약 페이지 탭
     if($('.cooperation-container .cooperationTab').length){
         MUI.event.taps('.cooperation-container .cooperationTab', false, function(swap){
@@ -123,6 +133,87 @@ $(function(){
         });
         }
     }
+
+    //제휴사 예약 - 국내/국제 면허증 탭
+    if($('.driver-license-section .detail-radio').length) {
+        $('.driver-license-section .detail-tab-wrap-I').hide();
+        $('.driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === 'D'){
+                $('.driver-license-section .detail-tab-wrap-D').addClass('active');
+                $('.driver-license-section .detail-tab-wrap-I').hide();
+                $('.driver-license-section .detail-tab-wrap-D').show();
+            }
+            else{
+                $('.driver-license-section .detail-tab-wrap-Y').removeClass('active');
+            }
+        });
+        $('.driver-license-section .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === 'I'){
+                $('.driver-license-section .detail-tab-wrap-I').addClass('active');
+                $('.driver-license-section .detail-tab-wrap-D').hide();
+                $('.driver-license-section .detail-tab-wrap-I').show();
+            }
+            else{
+                $('.driver-license-section .detail-tab-wrap-I').removeClass('active');
+            }
+        });
+    }
+
+    //예약확인 탭
+    if($('.reserv-confirm-tab .detail-radio').length) {
+        $('.reserv-confirm-tab .detail-tab-wrap-I').hide();
+        $('.reserv-confirm-tab .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === 'D'){
+                $('.reserv-confirm-tab .detail-tab-wrap-D').addClass('active');
+                $('.reserv-confirm-tab .detail-tab-wrap-I').hide();
+                $('.reserv-confirm-tab .detail-tab-wrap-D').show();
+            }
+            else{
+                $('.reserv-confirm-tab .detail-tab-wrap-Y').removeClass('active');
+            }
+        });
+        $('.reserv-confirm-tab .detail-radio').on('change', '.detail-radio-box input', function(e){
+            if(e.target.value === 'I'){
+                $('.reserv-confirm-tab .detail-tab-wrap-I').addClass('active');
+                $('.reserv-confirm-tab .detail-tab-wrap-D').hide();
+                $('.reserv-confirm-tab .detail-tab-wrap-I').show();
+            }
+            else{
+                $('.driver-license-section .detail-tab-wrap-I').removeClass('active');
+            }
+        });
+    }
+
+    //(공통)약관 동의
+    if($('.agreeAccor').length){
+        MUI.event.toggle('.agreeAccor .btnToggle', '.agreeAccor .toggleCont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+        $('.btn-provision').on('click', function(){
+            if($(this).hasClass('active')){
+                $(this).parents('.agree-body-header').next('.agree-body-cont').css('height','150px');
+                $(this).text('상세약관보기').removeClass('active');
+                $(this).parents('.agree-body-header').find('.btnToggle').removeClass('active');
+            }else{
+                $(this).parents('.agree-body-header').next('.agree-body-cont').css('height','100vh');
+                $(this).text('상세약관닫기').addClass('active');
+                $(this).parents('.agree-body-header').find('.btnToggle').addClass('active');
+            }
+            $('.btn-provision').on('click',function(){
+                setTimeout(function(){
+                    stickyFixObj.calculate();
+                },200);
+            });
+            $('.btnToggle').on('click',function(){
+                setTimeout(function(){
+                    stickyFixObj.calculate();
+                },200);
+            });
+        });
+}
+
+    
 
 });
 
