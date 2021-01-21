@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/*제휴사 전용 css*/
+.cooperation-container .tab-nav{
+    padding-bottom: 50px;
+}
+
+.cooperation-container .section-top{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cooperation-container .section-top .step-list,
+.cooperation-container .cooperation-cont{
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.cooperation-container .section-top .step-list li{
+    padding:0 67px;
+}
+.cooperation-container .section-top .step-list li.active .txt{
+    color:#ed1c24;
+}
+
+.cooperation-container .section-top .step-list li .icon{
+    position:relative; 
+    z-index: 5;
+}
+.cooperation-container .section-top .step-list li .txt{
+    color:#8f9191;    margin-top:15px;
+}
+.cooperation-container .section-top .step-list li + li{
+    position:relative;
+}
+.cooperation-container .section-top .step-list li + li:after{ 
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -50%;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e7e7e7;
+}
+
+.cooperation-container .cooperation-cont{width: 100%; position:relative;}
+.cooperation-container .cooperation-cont .section-cont i{margin: 10px 15px 10px 0;}
+.cooperation-container .cooperation-cont .right,
+.cooperation-container .cooperation-cont .left{width: 50%;}
+.cooperation-container .cooperation-cont .right{padding-left: 20px;}
+.cooperation-container .cooperation-cont .left{padding-right: 20px;}
+.cooperation-container .calender-cont{height: 580px; overflow-y: auto; padding: 0 130px;}
+.cooperation-container .tbl-box .calendar-tit{font-size: 20px;  padding: 40px 10px 20px;  text-align: center;  color: #2f2f2f;}
+.cooperation-container .tbl-box table{width:100%;}
+.cooperation-container .tbl-box table th, td{text-align:center; padding:2px 0; height: 40px; color: #54585a;  font-size: 14px;}
+.cooperation-container .tbl-box table th{padding-top:0; color: #2f2f2f;}
+.cooperation-container .tbl-box table .btn{width:100%;  height:38px;  padding:0;  color: #aaa;  font-size: 14px;}                                              
+.cooperation-container .tbl-box table .disabled, 
+.cooperation-container .tbl-box table .disabled > button, 
+.cooperation-container .tbl-box table button[disabled]{color:#e8e8e8;}
+.cooperation-container .tbl-box table .today .btn{position: relative;}
+.cooperation-container .tbl-box table .today .btn:after{ content:""; display:block;  width: 20px;  height:1px; margin: 0 auto;  background-color:#a02a3d;}
+.cooperation-container .tbl-box table .today.on .btn:after,
+.cooperation-container .tbl-box table .today.start .btn:after,
+.cooperation-container .tbl-box table .today.end .btn:after,
+.cooperation-container .tbl-box table .today.during .btn:after{background-color:#fff;}
+.cooperation-container .tbl-box table .start .btn,
+.cooperation-container .tbl-box table .end .btn,
+.cooperation-container .tbl-box table .during .btn{ width: 100%;  color:#fff;  background-color: #ff404b;}
+.cooperation-container .tbl-box table .start .btn{border-top-left-radius: 38px;  border-bottom-left-radius: 38px;}
+.cooperation-container .tbl-box table .end .btn{ border-top-right-radius: 38px;  border-bottom-right-radius: 38px;}
+.cooperation-container .tbl-box table .on .btn{ color:#fff;  background-color:#ff404b;  border-radius:100%;}
+.cooperation-container .tbl-box table .t-red .btn{color: #ed1c24;}
+.cooperation-container .tbl-box table .day .btn{ width:38px; background-color: #ff404b; border-radius: 1.7rem; font-weight: normal;  color:#fff; }
+.cooperation-container .section-form .form-cont{padding:0 0 70px;}
+.cooperation-container .section-form .form-cont .row{padding:0 30px;}
+
+.cooperation-container .short-branch{}
+.cooperation-container .short-branch h2{}
+.cooperation-container .short-branch .tab-nav{background: #54585a;}
+.cooperation-container .short-branch .tab-nav .tab-col2 li button{line-height: 1; font-size:16px; height: 50px;  color:#bbb;  border: 0;}
+.cooperation-container .short-branch .tab-nav .tab-col2 li button:before{content: ""; display: inline-block; background: url(../../resources-pc/images/icons/ico-check3-off.png) 0 0 no-repeat; width: 14px; height: 11px; margin-right: 10px;}
+.cooperation-container .short-branch .tab-nav .tab-col2 li button.active button{ border: 0;  color: #fff;}
+.cooperation-container .short-branch .tab-nav .tab-col2 li button.active button:before{background: url(../../resources-pc/images/icons/ico-check3-on.png) 0 0 no-repeat;}
+.cooperation-container .short-branch .short-branch-tab{width: 100%;}
+.cooperation-container .short-branch .short-branch-tab li{width: 50%; height: 70px; background: #fff;}
+.cooperation-container .short-branch .short-branch-tab li label{text-align: center;  font-size: 18px;  color: #8f9191;  width: 100%;  height: 70px;  border-bottom: 1px solid #e7e7e7;}
+.cooperation-container .short-branch .short-branch-tab li.active label{border-bottom: 2px solid #ff404b; color: #ff404b;}
+.cooperation-container .short-branch .short-branch-tab li input:disabled + label{color: #ddd;}
+.cooperation-container .short-branch .short-branch-tab li.active input:disabled + label{ border-bottom: 1px solid #e7e7e7; color: #ddd;} 
+.cooperation-container .short-branch .short-branch-tab2{ width: 100%;} 
+.cooperation-container .short-branch .short-branch-tab2 li{ height: 80px; background: #fff;} 
+.cooperation-container .short-branch .short-branch-tab2 li button{ text-align: center; font-size: 16px; color: #8f9191; width: 145px;  height: 38px;  border: 1px solid #d2d2d2;  border-radius: 38px;   margin: 0 5px;} 
+.cooperation-container .short-branch .short-branch-tab2 li.active button{ border: 1px solid #ff404b;  color: #ff404b;  background: #fff9f9;} 
+
+
