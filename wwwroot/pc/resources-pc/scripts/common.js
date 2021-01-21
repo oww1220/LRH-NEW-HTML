@@ -1036,8 +1036,8 @@ if($('.secondhand-container .carInfoAccor').length) {
 //     });
 // }
 
-//승계 > 상담 툴팁
-if($('.secondhand-container .tooltipToggle').length) {
+//승계 > 상담 툴팁, 마이페이지 > 상담 툴팁
+if($('#wrap .tooltipToggle').length) {
     MUI.event.toggle('.tooltipToggle .tooltipOpenBtn', '.tooltipToggle .tooltipCont', false, function(logic, layer) {
         logic();
     });
@@ -1939,9 +1939,9 @@ $(window).on('load', function(){
 
 /*헤더 GNB 마우스 오버시 메뉴 보이기, 슬라이드 작동*/
 $(function(){
-    var target = $('.header .draw-btn');
-    t=0;
-
+    //var target = $('.header .draw-btn');
+    //t = 0;
+    /*
     $('.header .draw-btn-s').each(function(i){
 		$(this).on({
 			mouseenter:	function(){
@@ -1994,8 +1994,10 @@ $(function(){
         });	
         
     });
+    
 
-    $('.header .draw-btn').each(function(i){
+    
+    $('.header .nav-wrap .draw-btn').each(function(i){
         target.not($(this)).on({
 			mouseenter:	function(){
                 if(i!=5){
@@ -2017,63 +2019,131 @@ $(function(){
             },
         });
     });
+    */
 
-    $('.header .draw-btn-all').on({
-        mouseenter:	function(){
-            $('.draw-toggle-wrap-all').slideDown(400);
-            $('.draw-toggle-cont').fadeIn(400);
-            $('.bg-dimmed-h').css('display','block');
-        },
-        focusin:	function(){
-            $('.draw-toggle-wrap-all').slideDown(400);
-            $('.draw-toggle-cont').fadeIn(400);
-            $('.bg-dimmed-h').css('display','block');
-        },
-        focusout:	function(){
-            $('.draw-toggle-wrap-all').slideUp(400);
-            $('.draw-toggle-cont').fadeOut(400);
-            $('.bg-dimmed-h').css('display','none');
-        }
-    });
+    (function($) {
+        var slideUpFlag = true,
+            slideDownFlag = true,
+            idx = 0,
+            $slickTarget = $('.header .specials-view-list'),
+            $headerDrawBt = $('.header .nav-wrap .draw-btn'),
+            $headerDrawBtEn = $('.header .nav-wrap .draw-btn-e'),
+            $headerDrawBtAll = $('.header .draw-btn-all'),
+            $headerDrawBtAllEn = $('.header .draw-btn-all-e'),
+            $parent = $('.header-nav'),
+            $hoverTarget = $('.header .nav-wrap li'),
+            $contTarget = $('.draw-toggle-cont'),
+            $drawToggleNormal = $('.draw-toggle-wrap'),
+            $drawToggleAll = $('.draw-toggle-wrap-all'),
+            $bgDim = $('.bg-dimmed-h');
 
-    $('.bg-dimmed-h').on({
-        mouseenter: function(){
-            $('.draw-toggle-wrap, .draw-toggle-wrap-all').slideUp(400);
-            $('.draw-toggle-wrap, .draw-toggle-wrap-all').fadeOut(400);
-            $('.bg-dimmed-h').css('display','none');
-        },
-    });
+        $slickTarget.slick({
+            infinite: true,
+            swipeToSlide: true,
+            speed: 300,
+            autoplay: true,
+            dots: true,
+            arrows: false,
+            customPagin:0,
+            adaptiveHeight: true,
+        });
 
-    //*영문 gnb 설정*/
-    $('.eng-header-nav .draw-btn-e').on({
-        mouseenter:	function(){
-            $('.draw-toggle-wrap-s').slideDown(400);
-            $('.draw-toggle-cont').fadeIn(400);
-            $('.bg-dimmed-h').css('display','block');
-            $('.draw-toggle-wrap-all').slideUp(400);
-        },
-        focusin:	function(){
-            $('.draw-toggle-wrap-s').slideDown(400);
-            $('.draw-toggle-cont').fadeIn(400);
-            $('.bg-dimmed-h').css('display','block');
-            $('.draw-toggle-wrap-all').slideUp(400);
-        },
-    });
+        $headerDrawBt.on({
+            mouseenter:	function(){
+                idx = $headerDrawBt.index(this);
+                $contTarget.hide().eq(idx).show();
+                $hoverTarget.removeClass('hover');
+                $(this).parents('li').addClass('hover');
+                
+                if(slideDownFlag){
+                    $drawToggleNormal.slideDown(400, 'linear', function(){
+                        setTimeout(function(){
+                            slideDownFlag = true;
+                        },1000)
+                        $slickTarget.slick('setPosition');
+                    });
+                    $drawToggleAll.hide();
+                    $bgDim.show();
+                }
+            },
 
-    $('.eng-header-nav .draw-btn-all-e').on({
-        mouseenter:	function(){
-            $('.draw-toggle-wrap-all').slideDown(400);
-            $('.draw-toggle-cont').fadeIn(400);
-            $('.bg-dimmed-h').css('display','block');
-            $('.draw-toggle-wrap-s').fadeOut(400);
-        },
-        focusin:	function(){
-            $('.draw-toggle-wrap-all').slideDown(400);
-            $('.draw-toggle-cont').fadeIn(400);
-            $('.bg-dimmed-h').css('display','block');
-            $('.draw-toggle-wrap-s').fadeOut(400);
-        },
-    });
+        });
+        
+        $headerDrawBtAll.on({
+            mouseenter:	function(){
+                if(slideDownFlag){
+                    $drawToggleAll.slideDown(400, 'linear', function(){
+                        slideDownFlag = true;
+                    });
+                    $drawToggleNormal.hide();
+                    $hoverTarget.removeClass('hover');
+                    $bgDim.show();
+                }
+                //console.log('mouseenter');
+            },
+            
+        });
+
+        $parent.on({
+            mouseleave:	function(){
+                if(slideUpFlag) {
+                    slideUpFlag = false;
+                    $drawToggleNormal.slideUp(400, 'linear', function(){
+                        setTimeout(function(){
+                            slideUpFlag = true;
+                        },1000)
+                    });
+                    $drawToggleAll.slideUp(400, 'linear', function(){
+                        setTimeout(function(){
+                            slideUpFlag = true;
+                        },1000)
+                    });
+
+                    $hoverTarget.removeClass('hover');
+                    $bgDim.hide();
+                }
+                //console.log('mouseleave');
+            },
+        });
+
+        //*영문 gnb 설정*/
+        $headerDrawBtEn.on({
+            mouseenter:	function(){
+                //idx = $headerDrawBtEn.index(this);
+                $contTarget.show();
+                $hoverTarget.removeClass('hover');
+                $(this).parents('li').addClass('hover');
+                
+                if(slideDownFlag){
+                    $drawToggleNormal.slideDown(400, 'linear', function(){
+                        setTimeout(function(){
+                            slideDownFlag = true;
+                        },1000)
+                    });
+                    $drawToggleAll.hide();
+                    $bgDim.show();
+                }
+            },
+
+        });
+
+        $headerDrawBtAllEn.on({
+            mouseenter:	function(){
+                if(slideDownFlag){
+                    $drawToggleAll.slideDown(400, 'linear', function(){
+                        slideDownFlag = true;
+                        console.log(111);
+                    });
+                    $drawToggleNormal.hide();
+                    $hoverTarget.removeClass('hover');
+                    $bgDim.show();
+                }
+                //console.log('mouseenter');
+            },
+            
+        });
+
+    })($);
 
 
 });
