@@ -613,103 +613,222 @@
         margin-top:80px;
 
         .carInfo-list{
-            width: calc(100% + 10px);
+            width: calc(100% + 30px);
             box-sizing: border-box;
 
             li{
                 position:relative;
-                margin-bottom:0;
-
-                > .chk-icon-box{
-                    @include Position($top:10px, $left:10px);
-
-                    label{
-                        padding:0;
-                        
-                        &:after{
-                            top:0;
-                            left:0;
-                            margin:0;
+                margin-bottom:40px;
+            }
+            &.col2{
+                .item{
+                    .cover{
+                        .btn-box{
+                            margin-right:-165px;
                         }
                     }
                 }
             }
+        }
+        .item{
+            display:block;
+            padding-right:30px;
 
-            .item{
-                display:block;
-                padding-right:10px;
-    
-                .img-box{                        
+            .img-box{                        
+                position:relative;
+                @include Align-middle;
+                //overflow:hidden;
+                height:200px;
+                img {
+                    width: 270px; height: 185px; background-size: 100% auto;
+                }
+                
+                .img-wrap{
                     position:relative;
                     @include Align-middle;
                     overflow:hidden;
-                    width: 273px;
+                    width:100%;
                     height:200px;
-                    
                     img{
                         @include Position($top:0, $left:0, $right:0, $bottom:0);
                         margin: auto;
-                        width: 100%;
-                        height: auto;
+                        width:100%;
+                        height:100%;
                     }
-    
-                    .cover{
-                        @include Position($bottom:0, $left:0, $right:0);
-                        @include Align-between;
-                        padding:10px 20px;
+                }                        
+                
+                .cover{
+                    @include Position($bottom:0, $left:0, $right:0);
+                    @include Align-between;
+                    color:#fff;
+                    background: rgba(29,29,29,.6);
+                    z-index:5;
+                    
+                    .state{
+                        padding:10px 20px;                                
+                        @include Bold;
                         color:#fff;
-                        background: rgba(29,29,29,.6);
-                        z-index:5;
+                        background-color:#ff404b;
+
+                        &.ing{
+                            color:rgba(255,255,255,.5);
+                            background-color:#8f9191;
+                        }
+                    }
+                    .right-area{
+                        display:flex;
+                        padding:0 20px;
+
+                        > div{
+                            + div{margin-left:15px;}
+                        }
+                    }
+                }
+                
+                //툴팁 레이어
+                .tooltipOpenBtn{
+                    @include Align-middle;
+                    height:auto;
+                    padding: 0;
+                    margin: 0;
+                    
+                    i{
+                        margin-right:5px;
+                    }
+                    span{
+                        font-size:16px;
+                        color:#fff;
+                        @include Bold;
+                    }
+                }
+                .tooltip-wrap{
+                    position:relative;
+                    width:100%;
+                    z-index:5;
+                    
+                    .tooltipCont{
+                        display:none;    
+                        @include Position($top:100%);
+                        margin-top: 6px;
+                        background-color:#fff;
+                        border:1px solid $border-darkgrey;
+                        @include roundBox;                    
+                        @include box-shadow($top:0, $left:0px, $blur:15px, $color:rgba(50, 50, 50, 0.75));
+                        box-sizing: border-box;
+                        
+                
+                        &:before{
+                            content: '';
+                            @include Position($top:-16px);
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 0 15px 16px 15px;
+                            border-color: transparent transparent #fff transparent;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                
+                        .tooltipCont-inner{
+                            padding:40px;
+                        }
+                
+                        &.arrow-type-right{
+                            &:before{
+                                left:auto;
+                                right:15px;
+                            }
+                        }
                     }
                     
-                }
-                .descri-area{
-                    padding:20px 0 0;
-    
-                    .tit{
-                        @include Ellipsis($w:100%, $lines:2);
-                        font-size:1rem;
-                        height:32px;
-                        max-height: 32px;
-                        margin-bottom:15px;
-                    }
-                    .bar-type{
-                        color:#54585a;
-                        font-size:14px;
-                        margin-bottom:25px;
-    
-                        > span{ 
-                            position:relative; 
-    
-                            + span{                                    
-                                padding-left:10px;
-                                margin-left:10px;                            
-    
-                                &:before{
-                                    content:"";
-                                    @include Position($top:50%, $left:0);
-                                    display:block;
-                                    width:1px;
-                                    height:14px;
-                                    margin-top:-7px;
-                                    background-color:#e7e7e7;
+                
+                    //중고차 리스트 튤팁
+                    .tooltipCont-list{
+                        width: 270px;
+                        left: auto;
+                        right: auto;
+                        transform: translateX(-55%);
+                        text-align:center;
+                        margin-top:20px;
+                        &:before{
+                            transform: translateX(30%);
+                        }
+                        .tooltipCont-inner{
+                            padding:20px;
+                            .layer-info{
+                                @include Align-between;
+                                .tooltip-tit-num{
+                                    @include Bold;
+                                    font-size:18px;
+                                    text-align: center;
+                                    color:#2f2f2f;
+                                }
+                                .tooltip-txt{
+                                    @include Regular;
+                                    font-size:14px;
+                                    color:#54585a;
+                                    text-align: left;
                                 }
                             }
                         }
                     }
-                    .price-box{      
-                        @include roundBox;
-                        padding:20px;
-                        background-color: #f5f5f5;
-    
-                        .price-row{
-                            @include Align-between;
-    
-                            +.price-row{ margin-top:15px;}
-                            .price{
-                                @include Bold;
-                                color:$txt-red;
+                }
+            }
+            .descri-area{
+                padding:20px 0;
+
+                .tit{
+                    @include Ellipsis($w:100%, $lines:2);
+                    font-size:1rem;
+                    height:32px;
+                    
+                    + .bar-type{margin-top:15px;}
+                }
+                .bar-type{
+                    @include Align-box;
+                    flex-wrap: wrap;
+                    color:#8f9191;
+                    font-size:14px;
+                    margin-bottom:20px;
+
+                    > span{ 
+                        position:relative;                                
+                        flex:none;
+                        width:63%;
+                        flex-basis:63%;
+                        text-indent: 20px;
+                        box-sizing: border-box;
+
+                        &:nth-of-type(odd){
+                            flex:none;
+                            width:37%;                                    
+                            flex-basis:37%;
+                            text-indent: 0;
+
+                            &::after{
+                                @include Position($top:4px, $right:0);
+                                content:"";
+                                display:block;
+                                width:1px;
+                                height:14px;
+                                background-color:$border-grey;
                             }
+                        }
+                    }                            
+                }
+                .price-box{   
+                    @include roundBox;
+                    padding:20px;
+                    background-color:#f5f5f5;                    
+
+                    .price-row{
+                        @include Align-between;
+                        @include Bold;
+                        
+                        +.price-row{ margin-top:15px;}
+                        .price{
+                            @include Bold;
+                            color:$txt-red;
                         }
                     }
                 }
@@ -737,24 +856,49 @@
             }                    
         }
 
+        //나의 찜 차량
+        .chk-icon-box{
+            @include Position($top:10px, $left:10px);
+
+            label{
+                 padding-left:26px;
+                &:after{
+                     width:26px;
+                     height:26px;
+                     background-color:#fff;
+                     border-radius:100%;
+                 }
+            }
+             input[type='checkbox']:checked + label:after{
+                 @include Background($sprite:'ico-check-redOn', $position:center center);
+             }
+         }
+         .tit-area{
+             .chk-icon-box{
+                 position:static;
+                 label{
+                    padding-left:40px;
+                 }
+            }
+         }
         &.type2{
             .list-section-body{
                 padding-top:30px;
                 border-top:1px solid $border-grey;
             }
-            .carInfo-list {
-                li{
-                    margin-bottom:60px;
-                }
-                .item {
-                    .descri-area {
-                        .price-box{
-                            padding:0;
-                            background-color: transparent;
-                        }
-                    }
-                }
-            }
+            // .carInfo-list {
+            //     li{
+            //         margin-bottom:60px;
+            //     }
+            //     .item {
+            //         .descri-area {
+            //             .price-box{
+            //                 padding:0;
+            //                 background-color: transparent;
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
     // .card-between-section{

@@ -22780,9 +22780,9 @@ html, body {
 }
 
 .mypage-container .list-section .carInfo-list {
-	width: -webkit-calc(100% + 10px);
-	width: -moz-calc(100% + 10px);
-	width: calc(100% + 10px);
+	width: -webkit-calc(100% + 30px);
+	width: -moz-calc(100% + 30px);
+	width: calc(100% + 30px);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -22790,31 +22790,47 @@ html, body {
 
 .mypage-container .list-section .carInfo-list li {
 	position: relative;
-	margin-bottom: 0;
+	margin-bottom: 40px;
 }
 
-.mypage-container .list-section .carInfo-list li > .chk-icon-box {
-	position: absolute;
-	top: 10px;
-	left: 10px;
+.mypage-container .list-section .carInfo-list.col2 .item .cover .btn-box {
+	margin-right: -165px;
 }
 
-.mypage-container .list-section .carInfo-list li > .chk-icon-box label {
-	padding: 0;
-}
-
-.mypage-container .list-section .carInfo-list li > .chk-icon-box label:after {
-	top: 0;
-	left: 0;
-	margin: 0;
-}
-
-.mypage-container .list-section .carInfo-list .item {
+.mypage-container .list-section .item {
 	display: block;
-	padding-right: 10px;
+	padding-right: 30px;
 }
 
-.mypage-container .list-section .carInfo-list .item .img-box {
+.mypage-container .list-section .item .img-box {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: 200px;
+}
+
+.mypage-container .list-section .item .img-box img {
+	width: 270px;
+	height: 185px;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+}
+
+.mypage-container .list-section .item .img-box .img-wrap {
 	position: relative;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -22832,11 +22848,11 @@ html, body {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	overflow: hidden;
-	width: 273px;
+	width: 100%;
 	height: 200px;
 }
 
-.mypage-container .list-section .carInfo-list .item .img-box img {
+.mypage-container .list-section .item .img-box .img-wrap img {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -22844,10 +22860,10 @@ html, body {
 	left: 0;
 	margin: auto;
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
-.mypage-container .list-section .carInfo-list .item .img-box .cover {
+.mypage-container .list-section .item .img-box .cover {
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -22867,17 +22883,191 @@ html, body {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	padding: 10px 20px;
 	color: #fff;
 	background: rgba(29, 29, 29, 0.6);
 	z-index: 5;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area {
-	padding: 20px 0 0;
+.mypage-container .list-section .item .img-box .cover .state {
+	padding: 10px 20px;
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #fff;
+	background-color: #ff404b;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .tit {
+.mypage-container .list-section .item .img-box .cover .state.ing {
+	color: rgba(255, 255, 255, 0.5);
+	background-color: #8f9191;
+}
+
+.mypage-container .list-section .item .img-box .cover .right-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0 20px;
+}
+
+.mypage-container .list-section .item .img-box .cover .right-area > div + div {
+	margin-left: 15px;
+}
+
+.mypage-container .list-section .item .img-box .tooltipOpenBtn {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+.mypage-container .list-section .item .img-box .tooltipOpenBtn i {
+	margin-right: 5px;
+}
+
+.mypage-container .list-section .item .img-box .tooltipOpenBtn span {
+	font-size: 16px;
+	color: #fff;
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap {
+	position: relative;
+	width: 100%;
+	z-index: 5;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont {
+	display: none;
+	position: absolute;
+	top: 100%;
+	margin-top: 6px;
+	background-color: #fff;
+	border: 1px solid #d2d2d2;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	-webkit-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0 0px 15px rgba(50, 50, 50, 0.75);
+	box-shadow: 0 0px 15px rgba(50, 50, 50, 0.75);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont:before {
+	content: '';
+	position: absolute;
+	top: -16px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 15px 16px 15px;
+	border-color: transparent transparent #fff transparent;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont .tooltipCont-inner {
+	padding: 40px;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont.arrow-type-right:before {
+	left: auto;
+	right: 15px;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont-list {
+	width: 270px;
+	left: auto;
+	right: auto;
+	-webkit-transform: translateX(-55%);
+	   -moz-transform: translateX(-55%);
+	    -ms-transform: translateX(-55%);
+	     -o-transform: translateX(-55%);
+	        transform: translateX(-55%);
+	text-align: center;
+	margin-top: 20px;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont-list:before {
+	-webkit-transform: translateX(30%);
+	   -moz-transform: translateX(30%);
+	    -ms-transform: translateX(30%);
+	     -o-transform: translateX(30%);
+	        transform: translateX(30%);
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont-list .tooltipCont-inner {
+	padding: 20px;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont-list .tooltipCont-inner .layer-info {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont-list .tooltipCont-inner .layer-info .tooltip-tit-num {
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 18px;
+	text-align: center;
+	color: #2f2f2f;
+}
+
+.mypage-container .list-section .item .img-box .tooltip-wrap .tooltipCont-list .tooltipCont-inner .layer-info .tooltip-txt {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	font-size: 14px;
+	color: #54585a;
+	text-align: left;
+}
+
+.mypage-container .list-section .item .descri-area {
+	padding: 20px 0;
+}
+
+.mypage-container .list-section .item .descri-area .tit {
 	width: 100%;
 	display: block;
 	display: -webkit-box;
@@ -22889,38 +23079,69 @@ html, body {
 	word-break: break-all;
 	font-size: 1rem;
 	height: 32px;
-	max-height: 32px;
-	margin-bottom: 15px;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .bar-type {
-	color: #54585a;
+.mypage-container .list-section .item .descri-area .tit + .bar-type {
+	margin-top: 15px;
+}
+
+.mypage-container .list-section .item .descri-area .bar-type {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	flex-wrap: wrap;
+	color: #8f9191;
 	font-size: 14px;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .bar-type > span {
+.mypage-container .list-section .item .descri-area .bar-type > span {
 	position: relative;
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 63%;
+	-webkit-flex-basis: 63%;
+	    -ms-flex-preferred-size: 63%;
+	        flex-basis: 63%;
+	text-indent: 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .bar-type > span + span {
-	padding-left: 10px;
-	margin-left: 10px;
+.mypage-container .list-section .item .descri-area .bar-type > span:nth-of-type(odd) {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	   -moz-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	width: 37%;
+	-webkit-flex-basis: 37%;
+	    -ms-flex-preferred-size: 37%;
+	        flex-basis: 37%;
+	text-indent: 0;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .bar-type > span + span:before {
-	content: "";
+.mypage-container .list-section .item .descri-area .bar-type > span:nth-of-type(odd)::after {
 	position: absolute;
-	top: 50%;
-	left: 0;
+	top: 4px;
+	right: 0;
+	content: "";
 	display: block;
 	width: 1px;
 	height: 14px;
-	margin-top: -7px;
 	background-color: #e7e7e7;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .price-box {
+.mypage-container .list-section .item .descri-area .price-box {
 	-webkit-border-radius: 6px;
 	   -moz-border-radius: 6px;
 	        border-radius: 6px;
@@ -22928,7 +23149,7 @@ html, body {
 	background-color: #f5f5f5;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .price-box .price-row {
+.mypage-container .list-section .item .descri-area .price-box .price-row {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -22944,13 +23165,17 @@ html, body {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .price-box .price-row + .price-row {
+.mypage-container .list-section .item .descri-area .price-box .price-row + .price-row {
 	margin-top: 15px;
 }
 
-.mypage-container .list-section .carInfo-list .item .descri-area .price-box .price-row .price {
+.mypage-container .list-section .item .descri-area .price-box .price-row .price {
 	font-family: "ManropeB", "NotoB", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -23013,18 +23238,45 @@ html, body {
 	margin-left: 10px;
 }
 
+.mypage-container .list-section .chk-icon-box {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.mypage-container .list-section .chk-icon-box label {
+	padding-left: 26px;
+}
+
+.mypage-container .list-section .chk-icon-box label:after {
+	width: 26px;
+	height: 26px;
+	background-color: #fff;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+}
+
+.mypage-container .list-section .chk-icon-box input[type='checkbox']:checked + label:after {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-check-redOn.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.mypage-container .list-section .tit-area .chk-icon-box {
+	position: static;
+}
+
+.mypage-container .list-section .tit-area .chk-icon-box label {
+	padding-left: 40px;
+}
+
 .mypage-container .list-section.type2 .list-section-body {
 	padding-top: 30px;
 	border-top: 1px solid #e7e7e7;
-}
-
-.mypage-container .list-section.type2 .carInfo-list li {
-	margin-bottom: 60px;
-}
-
-.mypage-container .list-section.type2 .carInfo-list .item .descri-area .price-box {
-	padding: 0;
-	background-color: transparent;
 }
 
 .mypage-container .card-between-section {

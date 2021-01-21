@@ -1036,8 +1036,8 @@ if($('.secondhand-container .carInfoAccor').length) {
 //     });
 // }
 
-//승계 > 상담 툴팁
-if($('.secondhand-container .tooltipToggle').length) {
+//승계 > 상담 툴팁, 마이페이지 > 상담 툴팁
+if($('#wrap .tooltipToggle').length) {
     MUI.event.toggle('.tooltipToggle .tooltipOpenBtn', '.tooltipToggle .tooltipCont', false, function(logic, layer) {
         logic();
     });
