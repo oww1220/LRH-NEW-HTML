@@ -88,7 +88,7 @@ $(function(){
                         <div class="login-btns-ty2">
                             <b><button type="button" class="btn-link">로그인</button> 하고 다양한 혜택 받으세요.</b>
                             <div class="setup-btn">
-                                <button type="button" class="btn btn-pannel"><i class="icon login-pannel01">설정</i></button>
+                                <button type="button" class="btn btn-pannel layer-setup-open" data-layer="layer-setup"><i class="icon login-pannel01">설정</i></button>
                             </div>
                         </div>
                         <div class="login-top-menu">
@@ -126,7 +126,7 @@ $(function(){
                         <div class="login-btns-ty2">
                             <b><button type="button" class="btn-link">김*데</button>님 환영합니다.</b>
                             <div class="setup-btn">
-                                <button type="button" class="btn btn-pannel"><i class="icon login-pannel01">설정</i></button>
+                                <button type="button" class="btn btn-pannel layer-setup-open" data-layer="layer-setup"><i class="icon login-pannel01">설정</i></button>
                             </div>
                         </div>
                         <div class="login-top-menu">
@@ -364,7 +364,7 @@ $(function(){
                         <b>알림</b>
                     </p>
                     <div class="setup-btn">
-                        <button type="button" class="btn btn-pannel"><i class="icon push-setup">설정</i></button>
+                        <button type="button" class="btn btn-pannel layer-setup-open" data-layer="layer-setup"><i class="icon push-setup">설정</i></button>
                     </div>
                 </div>
 
@@ -422,6 +422,40 @@ $(function(){
             <button type="button" class="btn btn-goTop">탑으로</button>
         </div>
         <!--//fixedRight 컴포넌트-->
+
+        <!--layer-popup 푸시설정 컴포넌트-->
+        <div class="layer-wrap layer-popup layer-setup">
+            <div class="pop-top">
+                <button type="button" class="layer-pop-close layer-setup-close" data-layer="layer-setup"><i class="icon layerclose">닫기 버튼</i></button>  
+            </div>
+            <div class="pop-inner">
+                <div class="pop-scroll">
+                    <div class="pop-cont">
+                        <div class="pop-tit-wrap">
+                            <h4>광고성 알림(PUSH)</h4>
+                            <div class="toggle-wrapper">
+                                <div class="toggle normal">
+                                    <input id="push" type="checkbox">
+                                    <label class="toggle-item" for="push"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="pop-txt-wrap">
+                            롯데렌터카의 맞춤 혜택, 이벤트, 서비스안내 등에
+                            대한 알림을 받으실 수 있습니다. 알림 설정에 따라
+                            정보수신 동의 및 거부 처리됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-txt-bottom">
+                <p>
+                    알림이 오지 않을경우, <br>
+                    휴대폰 설정>알림에서 설정여부를 확인해주세요.
+                </p>
+            </div>
+        </div>
+        <!--//layer-popup 푸시설정 컴포넌트-->
 
         <!--bg-dimmed 컴포넌트-->
         <div class="bg-dimmed">딤(Dim)처리 배경</div>
