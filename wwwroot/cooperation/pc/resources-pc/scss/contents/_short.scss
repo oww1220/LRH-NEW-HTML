@@ -1,0 +1,2965 @@
+//월간 렌트카
+.short-container{
+   
+    .round-banner{
+        @include roundBanner;
+    }
+
+    //렌터카 목록
+    .section-counsel{
+        @include Align-box;
+        border:1px solid #e7e7e7;
+        margin-bottom:55px;
+        @include roundBox; 
+        
+        .col{
+            width:50%;
+            padding:40px;
+            box-sizing: border-box;
+        }
+
+        .btn-link{   
+            position:relative; 
+            @include Inline-align-middle;
+            @include Bold;
+            font-size:1rem;
+            height:auto;           
+            padding:0;
+            margin-left:30px;
+            margin-bottom:15px;
+
+            .icon{
+                @include Position($left:-30px);
+            }
+        }
+    }
+    .sort-section{
+        @include Align-top-left;
+        //flex-wrap: nowrap;
+
+        .selection-area, .result-area{
+            .top-header{
+                @include Align-middle-left;       
+                height:70px;
+            }
+        }
+        .selection-area{            
+            flex:none;
+            width:330px;
+            flex-basis: 330px;
+            padding-right:40px;
+            box-sizing: border-box;
+
+            .top-header{             
+                .tit{@include Bold; font-size:22px;}
+                .btn{
+                    @include Align-middle; 
+                    padding:0;
+                    margin-left:auto; 
+                    font-size:14px;
+                    
+                    .icon{margin-left:10px;}
+                }
+            }
+            .selection-cont{
+                padding:20px;                
+                border:1px solid #e7e7e7;
+                border-radius: 6px;
+                margin-bottom:15px;
+                box-sizing: border-box;
+
+                .btn-short-filter-toggle{
+                    @include Align-box;
+                    width:100%; 
+                    @include Bold;
+                    font-size:18px;                    
+                    text-align:left;
+                    padding-bottom:20px; 
+                    border-bottom: 1px solid #d2d2d2;
+                    margin-bottom:20px;
+
+                    .icon{
+                        @include Align-middle;
+                        margin-left:auto;
+                        height:18px;
+                        transition: transform .5s;
+                        transform: rotate(180deg);
+                    }
+                    &.active {
+                        .icon{
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+                .filter-zone, .filter-zone2{
+                    color:#8f9191;                    
+                }
+                .filter-zone2{
+                    position:relative;
+                    border:1px solid #d2d2d2;
+
+                    &:before, &:after{
+                        content:"";
+                        @include Position($top:40px, $left:0);
+                        width:100%;
+                        height:1px;
+                        background-color:#d2d2d2;
+                    }
+                    &:after{
+                        @include Position($top:80px);                        
+                    }
+                    
+                    .select-list{
+                        position:relative;
+                        @include Align-box;
+
+                        li{
+                            position:relative;
+                            @include Align-middle;
+                            width:33.333%;
+                            flex-basis: 33.333%;
+                            height:40px;     
+                            
+                            label{
+                                @include Align-middle;
+                                @include Position($top:0, $left:0, $right:0, $bottom:0);
+                                z-index:5;
+                           }
+                           input{display:none;}
+                           input:checked + label{
+                                @include Bold;
+                                color:#ff404b;
+                                border:1px solid #ff404b;
+                                background-color:#fff9f9;
+                           }      
+                            
+                           &:nth-of-type(3n){
+                              label{
+                                  width:100%;
+                              }
+                           }
+                        }
+
+                        &:before, &:after{
+                            content:"";
+                            @include Position($top:0, $left:33.3333%);
+                            width:1px;
+                            height:100%;
+                            background-color:#d2d2d2;
+                        }
+                        &:after{
+                            @include Position($left:auto, $right:33.3333%);                        
+                        }
+                    }
+                }
+            }
+        }
+        .result-area{
+            width:100%;
+            .top-header{               
+                margin-bottom:20px;
+                border-bottom:1px solid #e7e7e7;
+
+                .total-box{
+                    @include Align-middle;
+                    strong{@include Bold; font-size:16px;}
+                }
+                .selelct-box{@include Align-middle; margin-left:auto;}
+            }
+            .result-cont{
+                .car-list {
+                    box-sizing: border-box;
+                    width: calc(100% + 30px);
+                }
+                .item{
+                    display:block;
+                    width:100%;
+                    text-align:center;
+                    color:#54585a;
+                    padding-right: 30px;
+                    box-sizing: border-box;
+                    img {
+                        width: 270px; height: 185px; background-size: 100% auto;
+                    }
+                    .descri-box{
+                        > *{
+                            display:block;
+                            font-size:14px;
+                            margin-bottom:10px;
+                        }
+                        strong{@include Bold; font-size:1.08rem;}
+                        .bar-type{
+                            > span{ 
+                                position:relative; 
+    
+                                + span{
+                                    padding-left:10px;
+                                    margin-left:10px;                            
+    
+                                    &:before{
+                                        content:"";
+                                        @include Position($top:50%, $left:0);
+                                        display:block;
+                                        width:1px;
+                                        height:14px;
+                                        margin-top:-7px;
+                                        background-color:#e7e7e7;
+                                    }
+                                }
+                            }
+                        }
+                        .price{
+                            @include Bold;
+                            align-items: baseline;
+                            color:#da291c;
+                            font-size:22px;
+    
+                            small{font-size:14px; margin-right:10px;}
+                        }
+                    }                    
+                }       
+                .btn-box{
+                    width:100%;
+                    padding:5px;
+                    text-align:center;
+
+                    .btn{
+                        min-width:136px;
+                        padding:0 25px;
+                        height:40px;
+                        border:1px solid #d2d2d2;
+                    }
+                    button[disabled]{border:none;}
+                }        
+            }
+        }
+    }
+    
+    //차량 상세
+    .car-infos{
+        width:1200px;
+        .car-infos-row, .car-infos-row2{
+            @include Align-between-top;
+        }               
+        .car-infos-col2{
+            flex:none;
+            width:520px;
+            flex-basis: 520px;
+        }
+        .img-box{
+            width:600px;
+
+            + .lst{margin-top:40px;}
+        }
+
+        .car-infos-col2{            
+            .tit-header{
+                @include Align-between-top;
+
+                .tit{
+                    @include Bold;
+                    font-size:32px;
+                }
+
+                &.share-type{
+                    position:relative;
+                    padding-right:60px;
+                }
+            }
+            .spec-box{
+                margin-top:50px;
+                padding-bottom:60px;
+
+                .spec-row{
+                    @include Align-middle-left;
+                    font-size:14px;
+
+                    dt{
+                        @include Bold;
+                        @include Align-middle-left;
+                        flex:none;
+                        width:214px;
+                        flex-basis: 214px;                        
+
+                        .icon{margin-right:10px;}
+                    }
+                    dd{
+                        color:#54585a;
+                    }
+                    + .spec-row{margin-top:30px;}
+                }
+            }
+            .price-box{
+                padding:50px 0;
+                border-top:1px solid $border-grey;
+                
+                .price-row{
+                    @include Bold;
+                    @include Align-between-base;
+
+                    .price{
+                        color: $txt-red;
+                        font-size:26px;
+                    }
+
+                    + .price-row{margin-top:20px;}
+                }
+            }
+            .btn-box{
+                button, a{
+                    @include Bold;
+                    height:80px; 
+                    font-size:26px;
+                    @include roundBox;
+                }
+            }
+        }
+    }
+    
+
+    //상담 신청
+    .section-top{
+        text-align:center;
+        margin-bottom:60px;
+
+        .step-list{
+            @include Inline-align-top;
+
+            li{
+                padding:0 67px;
+
+                &.active{
+                    .txt{
+                        @include Bold;
+                        color:#ed1c24;
+                    }
+                }
+                .icon{position:relative; z-index: 5;}
+                .txt{
+                    color:#8f9191;
+                    margin-top:15px;
+                }
+                & + li{
+                    position:relative;
+                    
+                    &:after{
+                        content:"";
+                        @include Position($top: 16px, $left: -50%);
+                        display:block;
+                        width:100%;
+                        height:1px; 
+                        background-color:#e7e7e7;
+                    }
+                }
+            }
+        }
+    }
+    .section-form{
+        .car-infos{
+            .img-box{
+                width:420px;
+            }
+            .car-infos-col2 {
+                .price-box{
+                    border:none;
+                    padding:0;
+                }
+            }
+            .car-infos-row, .car-infos-row2{padding:40px 0;}
+            .car-infos-row{
+                .car-infos-col{
+                    @include Align-middle;
+                    align-items: top;
+                    flex:none;
+                    width:600px;
+                    flex-basis: 600px;
+                }
+            }
+            .car-infos-row2{
+                border-top:1px solid $border-grey;
+
+                .car-infos-col{
+                    .lst{margin-left:40px;}
+                }
+            }
+        }
+    }
+    
+    .delivery-cont{
+        > .row{width:700px; margin:0 auto;}
+        .delivery-box{
+            padding-top:50px;
+            margin-bottom:30px;
+            .right{width:80px; margin-left:5px;}
+        }
+        .info-box{
+            font-size:14px;
+        }
+    }
+    .delivery-license-cont{
+        //@include Background($sprite:'img-short-driver-license', $type:'png', $position:740px 0, $path:'');
+
+       /*  .row.type2 {
+            .inputT, .selectbox{
+                max-width:40%;
+            }
+        } */
+        .driver-license-cont {
+            .type-box {
+                .selectbox {
+                    max-width: 125px;
+                }
+            }
+            .row.type2 {
+                .inputT > input {
+                    max-width:100%;
+                }
+            }
+        }
+    }
+    
+    .gray-noti-section{
+        text-align:center;
+        padding:60px;
+        margin-bottom:60px;
+        background-color:#f5f5f5;
+        @include roundBox;
+
+        .tit{
+            display:block; 
+            font-size:26px;
+            margin-bottom:20px;
+        }
+    }
+    .section-format{
+        .format-area{
+            flex:none;
+            width:540px;
+            flex-basis: 540px;
+
+            .btn{
+                display: inline-block;
+                width: auto;
+                margin-left: 10px;
+            }
+        }
+        .img-box{
+            flex:none;
+            width:420px;
+            flex-basis: 420px;
+            margin-left:80px;
+            box-sizing: border-box;
+        }
+    }
+    .talk-section{
+        @include Bold;
+        @include Align-middle;
+        color:#54585a;
+        font-size:20px;
+        margin-bottom:60px;
+
+        .icon{margin-right:20px;}
+    }
+
+    //대여 및 요금안내  
+    .fee-info-section{
+        .explain-cont{padding:0 40px;}
+        .box-align{
+            .img-box{
+                flex:none;
+                @include Align-middle-left;
+                width:600px;
+                
+                img{max-width:auto;}
+            }
+            .descri-box{
+                .tit-size-big{margin-bottom:30px;}
+                .lst{                    
+                    li{
+                        margin-bottom:25px;
+
+                        &:last-of-type{margin-bottom:0;}
+                    }
+                }
+                .btn-box{display:block; padding:40px 0;}
+            }
+        }
+    }    
+
+    //20210113 : 디자인 현행화로 인해 사용 안하는 스타일 주석
+    // .mileage-section{
+    //     .asiana-box, .koreanair-box{
+    //         @include roundBox;
+    //         @include Align-middle;
+    //         height:160px;
+    //         border:1px solid #e6e6e6;
+    //         margin-bottom:40px;
+
+    //         .btn{width:auto;}
+    //     }
+    //     .koreanair-box{margin-top:60px;}
+    // }
+    // .smartpick-section, .courtesyCar-section {
+    //     .tel-box{
+    //         @include roundBox;
+    //         @include Align-middle;
+    //         @include Bold;
+    //         font-size:18px;
+    //         padding:40px;
+    //         margin-bottom:30px;
+    //         background-color:#fafafa;
+    //     }
+    // }
+    
+    .qna-section{
+        .qna-lst{
+            .accor-header{                
+                border-bottom:1px solid #e7e7e7;
+                
+                .btn-toggle{
+                    @include Bold;
+                    @include Align-baseline;
+                    width:100%;
+                    height:auto;
+                    padding:20px 0;
+                    .bul{
+                        @include Align-middle;
+                        @include Bold;
+                        flex:none;
+                        flex-basis: 40px;
+                        width:40px;
+                        height:40px;
+                        margin-right:20px;
+                        border-radius: 40px;
+                        background-color:#fafafa;
+                        border:1px solid #e7e7e7;
+                    }
+
+                    &:after{right:0}
+                }
+            }
+            .accor-cont{
+                padding:40px 20px 40px 60px;
+                border-bottom:1px solid #e7e7e7;
+            }
+        }
+    }
+    .tab-cont-inner{
+        padding:20px 0;
+    }
+    .car-type-tab{
+        .menu-list{
+            @include Inline-align-top;
+            margin:20px 0 40px;
+
+            li{
+                padding:0 15px;
+                button{
+                    height:auto;
+                    padding:5px;
+                    font-size:16px;
+                    color:#54585a;
+                    border-bottom:0;
+                }
+
+                &.active{
+                    button{
+                        @include Bold;
+                        color:#2f2f2f;
+                        border-bottom:1px solid #2f2f2f;
+                    }
+                }
+            }
+        }
+    }
+    .tab-cont{
+        .tab-cont-inner{
+            display:none;
+            padding:40px 0;
+
+            &:first-child{display:block;}
+
+            > .section-explain{margin-top:40px;}
+        }
+    }
+    .around-box{
+        @include Align-around;
+        @include roundBox;
+        padding:50px;
+        text-align:center;
+        background-color:#fafafa;
+
+        .item{flex:1;}
+        .icon{
+            height:100px;
+
+            + .tit, + .txt{margin-top:30px;}
+        }
+        .tit{
+            font-size:18px;
+            margin-bottom:0;
+            
+            + .txt{margin-top:20px;}
+        }
+        .txt{font-size:16px; color:#2f2f2f;}
+    }
+
+    //체크인 서비스
+    &.checkin-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortInfoChechin', $path:'');
+        }
+        
+        .location-area{
+            @include Align-between;
+            margin-top:60px;
+            background-color:#fafafa;
+
+            .location{
+                flex:none;
+                width:588px;
+                flex-basis: 588px;
+            }
+            .infos{
+                padding:40px;
+                .infos-header{
+                    padding-bottom:20px;
+                    border-bottom:1px solid $border-grey;
+
+                    .infos-header-row{
+                        @include Align-middle-left;
+
+                        dt, dd{flex:1;}
+                        dt{
+                            @include Bold;
+                            flex:none;
+                            width:200px;
+                            flex-basis: 200px;
+                        }
+                        dd{
+                            @include Align-between;
+                            color:#54585a;
+                        }
+                       
+                        + .infos-header-row{margin-top:20px;}
+                    }
+                    .lst{margin-top:20px;}
+                }
+                .infos-cont{
+                    margin-top:20px;
+
+                    strong{@include Bold;}
+                }
+                .lst{
+                    margin:0;
+
+                    li{
+                       + li{margin-top:20px;} 
+                    }
+                }
+            }
+        }
+    }
+
+    //부가 서비스
+    &.additional-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortInfoAdditional', $path:'');
+        }
+
+        .service-guide-list{
+            @include Align-spacing-box(60px);
+            justify-content: flex-start;
+
+            li{
+                width:50%; 
+                margin-bottom:60px;
+
+                .tit{margin-bottom:20px;}
+
+                &:last-child{margin-bottom:0;}
+            }
+        }
+
+        .explain-cont{
+            > .lst{
+                + .row{margin-top:80px;}
+            }
+        }
+    }
+    .airline-section{
+        .grey-box{
+            position:relative;
+            padding:40px; 
+            text-align: center;
+            margin-bottom:30px;
+
+            .btns{
+                @include Position($right:40px, $top:50%);
+                margin-top:-25px;
+                
+                .btn-auto{height:50px;}
+            }
+        }
+        .lst{
+            margin-top:60px;
+
+            + .grey-box{margin-top:80px;}
+        }
+    }
+
+    //펫카 상품 서비스
+    &.pet-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortInfoPet', $path:'');
+        }
+        .pet-option-box {
+            @include Align-box;
+            .pet-option-col{
+                flex:1;
+                padding:0 45px;
+                text-align:center;
+
+                .tbl-box{margin-top:30px;}
+            }
+        }
+    }
+    
+    //보험대차 서비스
+    &.courtesyCar-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortInfoCourtesyCar', $path:'');
+        }
+    }
+
+    //월간 단기렌터카 안내
+    &.monthly-info-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortMonthlyInfo', $path:'');
+        }
+    }
+
+    //기사포함 렌터카 안내
+    &.driver-info-container{
+        .round-banner{
+            @include Background($sprite: 'bg-shortDriverInfo', $path:'');
+        }
+    }
+    
+    //해외렌터카
+    .hertz-section{
+        text-align:center;
+
+       .contact-area{
+           @include Align-middle;
+           margin:80px 0;
+           @include Background($sprite:'img-convention', $path:'', $position:center 100px);
+
+            .contact-col{
+                padding:0 100px;
+
+                .tel-box{
+                    @include Align-baseline;
+                    justify-content: center;
+                    margin-top:40px;
+
+                    span{
+                        @include Align-middle;
+                        
+
+                        &::after{
+                            content:"";
+                            width:1px; 
+                            height:15px;
+                            background-color:$border-grey;
+                            margin:0 20px;
+                        }
+
+                        + strong{
+                            @include Bold;
+                            font-size:16px; 
+                            color:$txt-red;
+                        }
+                    }
+                }
+            }
+       }
+    }
+
+    
+    //기사포함 - 상담신청
+    .car-srch-area{
+        max-width:730px;
+        margin:0 auto;
+
+        .btn{
+            width:124px;
+            margin-left:5px;
+        }
+    }
+    .schedule-input-area{
+        width:890px;
+        margin:0 auto;
+        padding-bottom:10px;
+
+        .box-col{
+            @include Align-baseline;
+            @include Bold;
+            font-size:18px;
+
+            &:nth-child(2){
+                position:relative;
+                
+                
+                span{color:$txt-red; font-size:32px;}
+            }
+            
+            .box-col-inner{
+                @include Align-baseline;
+                border-bottom: 1px solid $border-grey;
+
+                .tit{flex:none; width:45px;}
+                .inputT{
+                    @include Regular;
+                    input{
+                        width:auto;
+                        height:40px;
+                        border:0; 
+                    }
+                }
+            }
+            
+        }
+    }
+    .schedule-wrap{
+        overflow:hidden;
+        border:1px solid #d2d2d2;
+        border-radius: 6px;;
+
+        .calendar-wrap{
+            position:relative;
+            padding:60px;
+
+            .calendar{
+                @include Align-between-top;
+                
+                .col{
+                    flex-basis: 33.333%;
+                    &:last-of-type{
+                        .tbl-box{border-right:none;}
+                    }  
+                }
+                .tbl-box{
+                    border-right:1px solid #e7e7e7;
+                    padding:0 15px;
+                    table{
+                        width:100%;
+                        th, td{text-align:center;padding:15px 0;}
+                        th{padding-top:0;}
+                        .btn {width:38px; height:38px; padding:0;}                                                
+                        .disabled, .disabled button, button[disabled]{
+                            color:#ddd;
+                            cursor: unset;
+                        }
+                        .today{
+                            .btn{
+                                position: relative;
+                                @include Bold; 
+                                color:#a02a3d; 
+                                &:after{
+                                    content:"";
+                                    display:block;
+                                    width: 20px;
+                                    height:1px;
+                                    margin: 0 auto;
+                                    background-color:#a02a3d;
+                                }                                
+                            }                            
+                        }
+                        .today{
+                            &.on, &.start, &.end, &.during{
+                                .btn{
+                                    &:after{background-color:#fff;}
+                                }
+                            }
+                        }
+                        .start, .end, .during{
+                            .btn{
+                                width: 100%;
+                                color:#fff;
+                                background-color: #ff404b;
+                            }
+                        }
+                        .start{
+                            .btn{                                
+                                border-top-left-radius: 38px;
+                                border-bottom-left-radius: 38px;
+                            }
+                        }
+                        .end{
+                            .btn{                               
+                                border-top-right-radius: 38px;
+                                border-bottom-right-radius: 38px;
+                            }
+                        }
+                        .on{    
+                            .btn{
+                                color:#fff;
+                                background-color:#ff404b;
+                                border-radius:100%;
+                            }         
+                        }                      
+                        
+                    }
+                }                
+                .calendar-tit{@include Bold; text-align:center; margin-bottom:30px;}                
+            }
+            .btn-paging-prev, .btn-paging-next{
+                @include Position($top:50px, $left:50px);
+                border:none;            
+            }
+            .btn-paging-next{
+                @include Position($top:50px, $left:auto, $right:50px);
+            }
+        }
+        .schedule-bot{
+            height:80px;
+            @include Align-box;
+            border-top:1px solid #e7e7e7;
+            
+            .date-info, .btn{
+                @include Align-middle;
+                height:80px;
+            }
+            .date-info{
+                flex-grow:1;
+
+                > span{margin-right:20px;}
+                .date{@include Bold; font-size:20px;}
+            }
+            .btn{
+                width:175px; 
+                margin-left:auto; 
+                color:#fff; 
+                background-color:#54585a; 
+                @include Bold; 
+            }
+        }
+        .schedule-bot-cont{
+            height:inherit;
+            @include Align-between;
+            flex-grow:1;
+            
+            .schedule-bot-cont-col{
+                height:inherit;
+                @include Align-middle;
+                flex-grow:1;
+                border-right:1px solid #dedede;
+
+                .selectbox{
+                    height:100%;
+                    border:0 none;
+                    border-radius:0;
+
+                    + .selectbox{border-left:1px solid #dedede;}
+                }
+            }
+            .date-area{
+                flex:none;
+                width:290px;
+                
+                .date{
+                    @include Bold;
+                    font-size:20px;
+                    margin-left:20px;
+                }
+            }
+        }
+    }
+    .section-notice{
+        border-top:1px solid $border-grey;                
+
+        .info-txt{
+            @include Bold;
+            font-size:22px;
+            margin:60px 0 0;
+            text-align:center;
+
+            strong{color:$txt-red; font-size:inherit;}
+            .price{font-size:28px;}
+        }
+
+        .gray-area{
+            width:935px; 
+            text-align:center;
+            padding:30px;
+            margin:60px auto 0;
+            background-color:#f5f5f5;
+            @include roundBox;
+
+            .lst{text-align:left;}
+        }
+    }
+    
+
+    //실시간예약 - 예약,결제
+    .realTime-cont {
+        position: relative;
+        padding-right: 450px;
+        .section-cont {
+            .section-form {
+                & + .section-form {
+                    margin-top:0;
+                }
+                &:last-child {
+                    .form-cont {
+                        padding-bottom:0;
+                    }
+                }
+                .form-header {
+                    margin-bottom:0;
+                    @include Align-between;
+                    span {
+                        @include Regular;
+                        position: relative;
+                        font-size:14px;
+                        &::before {
+                            content:'*';
+                            display: inline-block;
+                            @include Position ($left:-12px, $top:20%);
+                        }
+                    }
+                }
+                .form-cont {
+                    padding:40px 0 80px;
+                    .row {
+                        padding:0 40px;
+                        margin-bottom:0;
+                        .lst {
+                            li + li {
+                                margin-top:10px;
+                            }
+                        }
+                    }
+                    &.agree-area {
+                        padding: 0;
+                    }
+                }
+                &.form1 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:40px;
+                        }
+                        div:last-child {
+                            .input-tit {
+                                font-size:22px;
+                            }
+                            .txt {
+                                font-size:32px;
+                            }
+                        }
+                    }
+                }
+                &.form2 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                        }
+                        .addr-area{
+                            .inputT + .inputT{margin-left: 0;}
+                        }
+                        .type-left {
+                            position: relative;
+                            .left-txt {
+                                @include Position($left:35px, $top:35%);
+                            }
+                        }
+                        //인증번호 폼
+                        .certify-area{
+                            .inputT, .selectbox{max-width:100%;}
+                            .btn{min-width:125px;}
+                        }
+                        // > div:last-child {
+                        //     .box-between {
+                        //         select {
+                        //             max-width: 25%;
+                        //             & + .inputT {
+                        //                 max-width: 45%;
+                        //                 & + button {
+                        //                     width:30%;
+                        //                 }
+                        //             }
+                        //         }
+                        //         & + div{
+                        //             .inputT {
+                        //                 max-width: 71%;
+                                        
+                        //                 & + button {
+                        //                     width:30%;
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                    }
+                }
+                &.form3 {
+                    
+                }
+                &.form4 {
+                    .chk-view-box{	
+                        label{			
+                            @include Align-between;
+                            padding:0 30px;
+                            strong {
+                                color:#8f9191;
+                                font-size:18px;
+                                @include Align-middle-left;
+                                &:after {
+                                    content: '';
+                                    display: block;
+                                    width: 13px;
+                                    height: 12px;
+                                    margin-left:10px;
+                                }
+                            }
+                            span {
+                                font-size:18px;
+                                color:#8f9191;
+                            }
+                        }
+                        input:checked + label{
+                            border-color:$txt-red;
+                            background-color:#fff9f9;
+                        }
+                        input:checked + label:after	{
+                            display:none;
+                        }
+                        input:checked + label strong {
+                            @include Bold; 
+                            color:$txt-red;
+                        }
+                        input:checked + label strong:after{
+                            @include Background($sprite:'ico-chk-on2', $position:center center);
+                        }	
+                        input:checked + label span {
+                            @include Bold; 
+                            color:#2f2f2f;
+                        }
+                    }
+                }
+                &.form5 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                        }
+                        .box-between {
+                            position: relative;
+                            &::before {
+                                content:'-';
+                                display: inline-block;
+                                @include Position ($left:50%);
+                                margin-left: -2.5px;
+                            }
+                            select {
+                                max-width: 48%;
+                                & + .inputT {
+                                    max-width: 48%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.form6 {
+                    .form-cont {
+                        li {
+                            padding-bottom:20px;
+                            & + li {
+                                padding:20px 0;
+                                border-top:1px solid #e7e7e7;
+                                > div > strong {
+                                    padding-top:5px;
+                                }
+                            }
+                            > div {
+                                @include Align-top-left;
+                                strong {
+                                    width:30%;
+                                    font-size:16px;
+                                    i {
+                                        margin-right:10px;
+                                    }
+                                }
+                                > div {
+                                    width:65%;
+                                    > div + div {
+                                        padding-top:20px;
+                                    }
+                                    .chk-icon-box {
+                                        width:50%;
+                                        label {
+                                            color:#8f9191;
+                                        }
+                                        span {
+                                            padding-left:32px;
+                                            margin-top:5px;
+                                            display: block;
+                                            color:#8f9191;
+                                            font-size:14px;
+                                        }
+                                        input:checked + label {
+                                            color:#2f2f2f;
+                                        }
+                                    }
+                                    .input-increase {
+                                        padding:17px 20px;
+                                        border:1px solid #d2d2d2;
+                                        box-sizing: border-box;
+                                        border-radius:50px;
+                                        @include Align-middle;
+                                        width:30%;
+                                        input {
+                                            width:70px;
+                                            text-align: center;
+                                            color:#8f9191;
+                                        }
+                                        button {
+                                            color:#d2d2d2;
+                                        }
+                                        &.active {
+                                            border-color: #2f2f2f;
+                                            input {
+                                                color:#2f2f2f;
+                                            }
+                                            button {
+                                                color:#2f2f2f;
+                                            }
+                                        }
+                                    }
+                                }
+                            } 
+                            &:last-child {
+                                padding-bottom:0;
+                            }
+                        }
+                        
+                    }
+                }
+                &.form8 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:40px;
+                        }
+                        .radio-icon-box {
+                            label {
+                                color:#8f9191;
+                            }
+                            input:checked + label {
+                                color: #2f2f2f;
+                            }
+                        }
+                        .input-cont {
+                            select {
+                                max-width: 100%;
+                                color:#8f9191;
+                            }
+                        }
+                    }
+                }
+                &.form9 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                            .input-cont {
+                                li + li {
+                                    margin-top:10px;
+                                }
+                            }
+                        }
+                        .box-between {
+                            .inputT {
+                                max-width: 70%;
+                            }
+                            button {
+                                width:30%;
+                            }
+                        }
+                        .chk-icon-box {
+                            label {
+                                display: inline-flex;
+                                color:#8f9191;
+                                @include Regular;
+                            }
+                            input:checked + label {
+                                color:#2f2f2f;
+                                @include Regular;
+                            }
+                            button {
+                                margin-left:5px;
+                                padding:3px 9px 3px 7px;
+                                border-radius:5px;
+                                border:1px solid #d2d2d2;
+                                box-sizing: border-box;
+                                font-size:14px;
+                            }
+                            
+                        }
+                    }
+                }
+                &.form10 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:30px;
+                        }
+                        .input-cont {
+                            select {
+                                max-width: 100%;
+                            }
+                        }
+                        
+                    }
+                }
+                &.form11 {
+                    .form-cont {
+                        .row + .row {
+                            padding-top:20px;
+                        }
+                        label {
+                            width:35%;
+                            flex-basis: 35%;
+                            span {
+                                margin-left:10px;
+                                @include Regular;
+                            }
+                        }
+                        .box-between {
+                            .inputT {
+                                max-width:70%;
+                            }
+                            button {
+                                width:30%;
+                            }
+                        }
+                    }
+                }
+                &.form13 {
+                    .form-cont {
+                        .chk-icon-box {
+                            padding-bottom:20px;
+                            label {
+                                width:auto;
+                            }
+                        }
+                        //나의 등록카드 - 결제 수단 탭 
+                        .detail-radio {
+                            width: 100%;
+                            ul {
+                                width:100%;
+                                margin:0;
+                                li {
+                                    padding:5px;
+                                }
+                            }
+                        }
+                        .chk-view-box {
+                            input {
+                                display: none;
+                            }
+                            label {
+                                color: #8f9191;
+                                border: 1px solid #d2d2d2;
+                                background-color: #fff;
+                                height: 100px;
+                                @include Align-middle-column;
+                            }
+                            input:checked + label {
+                                color: #ed1c24;
+                                border-color: #ed1c24;
+                                background-color: #fff9f9;
+                                .enroll {
+                                    min-width:130px;
+                                    min-height:40px;
+                                    &01 {
+                                        @include Background($sprite:'ico-enroll01', $position:center -40px, $path:'logos');
+                                    }
+                                    &02 {
+                                        @include Background($sprite:'ico-enroll02', $position:center -40px, $path:'logos');
+                                    }
+                                    &03 {
+                                        @include Background($sprite:'ico-enroll03', $position:center -40px, $path:'logos');
+                                    }
+                                    &04 {
+                                        @include Background($sprite:'ico-enroll04', $position:center -40px, $path:'logos');
+                                    }
+                                    &05 {
+                                        @include Background($sprite:'ico-enroll05', $position:center -40px, $path:'logos');
+                                    }
+                                    &06 {
+                                        @include Background($sprite:'ico-enroll06', $position:center -40px, $path:'logos');
+                                    }
+                                    &07 {
+                                        @include Background($sprite:'ico-enroll07', $position:center -40px, $path:'logos');
+                                    }
+                                    &08 {
+                                        @include Background($sprite:'ico-enroll08', $position:center -40px, $path:'logos');
+                                    }
+                                }
+                                &:after {
+                                    display: none;
+                                }
+                            } 
+                        }
+                        //나의 등록카드 - 결제 수단 탭 컨텐츠
+                        .detail-radio-cont {
+                            margin:40px 0 0;
+                            padding:40px 0 0;
+                            border-top:1px solid #e7e7e7;
+                            &.detail-tab-wrap-P{
+                                display:none;
+                                &.active{
+                                    display:block;
+                                }
+                            }
+                            &.detail-tab-wrap-L{
+                                display:none;
+                                &.active{
+                                    display:block;
+                                }
+                            }
+                            &.detail-tab-wrap-D{
+                                display:none;
+                                &.active{
+                                    display:block;
+                                }
+                            }
+                            .input-add {
+                                padding:0;
+                                > div {
+                                    @include Align-middle-left;
+                                    & + div {
+                                        padding-top:20px;
+                                    }
+                                    .input-tit {
+                                        width:170px;
+                                    }
+                                    .input-cont {
+                                        width:100%;
+                                        padding-bottom:0;
+                                        &.radio-cont {
+                                            @include Align-middle-left;
+                                            > div + div {
+                                                margin-left:15px;
+                                            }
+                                        }
+                                        select {
+                                            color:#8f9191;
+                                        }
+                                    }
+                                }
+                                .lst {
+                                    padding-top:30px;
+                                    .btn-box{
+                                        @include Position($top: -50%, $right: 0);
+                                        transform: translateY(-10%);
+                                    }
+                                }
+                            }
+                            .lpay-card {
+                                .card-add {
+                                    @include Align-middle-left;
+                                    width:670px;
+                                    ul{
+                                        @include Align-middle-left;
+                                        @include Inline-scrolling;
+                                        display: inline-flex;
+                                        flex-wrap: nowrap;
+                                        li{
+                                            width:auto;
+                                        }
+                                    }
+                                    .chk-view-box {
+                                        //width: 75%;
+                                        margin-left: 10px;
+                                        input:checked + label {
+                                             color: #ed1c24;
+                                             border-color: #ed1c24;
+                                             background-color: #fff9f9;
+                                             &:after {
+                                                 display: block;
+                                                 @include Background($sprite:'ico-chk-on2', $type:'png', $position:right center);
+                                             }
+                                         }
+                                         label {
+                                            border-radius: 6px;
+                                            width: 160px;
+                                            height: 140px;
+                                            text-align: center;
+                                            box-sizing: border-box;
+                                            color: #8f9191;
+                                            border: 1px solid #d2d2d2;
+                                            background-color: #fff;
+                                            position: relative;
+                                            @include Align-middle;
+                                            align-items: flex-start;
+                                            justify-content: flex-start;
+                                            padding:0 20px;
+                                            b{
+                                                font-size:18px;
+                                                @include Bold;
+                                                padding:30px 0 0 0;
+                                            }
+                                            em{
+                                                font-size:18px;
+                                                color:#54585a;
+                                                @include Regular;
+                                                padding:10px 0 0 0;
+                                            }
+                                            div{
+                                                @include Align-between;
+                                                width:100%;
+                                                padding:20px 0 0 0;
+                                                span{
+                                                    font-size:18px;
+                                                    color:#8f9191;
+                                                    @include Regular;
+                                                }
+                                            }
+                                             &::after {
+                                                 display: none;
+                                                 content: '';
+                                                 width: 13px;
+                                                 height: 12px;
+                                                 margin-top: -6px;
+                                                 position: absolute;
+                                                 top: 50%;
+                                                 right: 30px;
+                                             }
+                                         }
+                                     }
+                                     .card-add-btn {
+                                         //width:25%;
+                                         margin-left: 10px;
+                                     }
+                                     a {
+                                        width:160px;
+                                        height:140px;
+                                        background-color:#fff;
+                                        border:1px solid #d2d2d2;
+                                        color:#2f2f2f;
+                                        @include Align-middle-column;
+                                        i{
+                                            font-size:28px;
+                                            @include Bold;
+                                            line-height: 1;
+                                        }
+                                        em{
+                                            padding:15px 0 0 0;
+                                        }
+                                     }
+                                }
+                                .input-add {
+                                    padding-top:20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section-sticky-lnb {
+            width:390px;
+            @include Position($top: 0, $right: 0);
+            .lnb-wrap {
+                position: relative;
+            }
+            .sticky-view-info {
+                border:1px solid #d2d2d2;
+                border-radius:10px;
+                margin-bottom:20px;
+                .info-top {
+                    font-size:24px;
+                    background-color: #fafafa;
+                    padding:30px 0;
+                    border-radius:10px 10px 0 0;
+                    @include Bold;
+                }
+                .info-cover {
+                    padding-top:50px;
+                    img {width: 380px;
+                        height: 190px;
+                        background-size: 100% auto;}
+                }
+                .lst {
+                    padding:30px;
+                    li {
+                        color:#8f9191;
+                        font-size:12px;
+                    }
+                }
+
+            }
+            .detail-sticky-items {
+                @include Position($top: 450px, $right: 0);
+                width: 390px;
+                &.fixed {
+                    .detail-sticky {
+                        position: fixed;
+                        height:100vh;
+                        //overflow-x: hidden;
+                        // overflow-y: auto;
+                        // @include CustumScroll($minus:5px);
+                    }
+                } 
+            }
+            .detail-sticky {
+                position: relative;
+                top:0;
+                z-index: 5;
+                width:390px;
+                .detail-sticky-iscroll {
+                    width: 390px;
+                    .sticky-cont {
+                        .cont-result {
+                            > ul {
+                                > li {
+                                    background-color: #4a4a4a;
+                                    padding-bottom:20px;
+                                    > div {
+                                        @include Align-between;
+                                        border-top: 1px solid #fff;
+                                        margin:0 30px;
+                                        padding-top:20px;
+                                        strong {
+                                            padding-left:10px;
+                                            font-size:18px;
+                                            color:#fff;
+                                            @include Bold;
+                                        }
+                                        > div {
+                                            @include Align-top-right-column;
+                                            padding-right:10px;
+                                            span {
+                                                font-size:16px;
+                                                color:#fff;
+                                                @include Bold;
+                                                & + span {
+                                                    @include Regular;
+                                                    font-size:14px;
+                                                    color:#bbb;
+                                                    padding-top:10px;
+                                                }
+                                                &.price {
+                                                    font-size:32px;
+                                                    em {
+                                                        font-size:18px;
+                                                    }
+                                                }
+                                            }
+                                        } 
+                                    }
+                                    > ul {
+                                        li {
+                                            padding-top:10px;
+                                            > div {
+                                                @include Align-between;
+                                                margin:0 30px;
+                                                strong {
+                                                    @include Regular;
+                                                    font-size:14px;
+                                                    color:#bbb;
+                                                    padding-left:10px;
+                                                }
+                                                div {
+                                                    padding-right:10px;
+                                                    span {
+                                                        @include Regular;
+                                                        font-size:14px;
+                                                        color:#bbb;
+                                                    }
+                                                } 
+                                            }
+                                        }
+                                        
+                                    }
+                                    &:first-child {
+                                        padding-top:20px;
+                                        border-radius: 10px 10px 0 0;
+                                        > div {
+                                            border-top:0;
+                                        }
+                                    } 
+                                    &:last-child {
+                                        background-color: #656565;
+                                        border-radius: 0 0 10px 10px;
+                                        > div {
+                                            border-top:0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    .sticky-btn {
+                        padding:30px 0;
+                        ul {
+                            width:100%;
+                            margin:0;
+                            justify-content: space-between;
+                            li {
+                                width:49%;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+    //실시간예약 - 완료
+    .realTime-comple {
+        .section-format {
+            justify-content: space-between;
+            padding:0 80px;
+            margin-bottom: 60px;
+            .img-box {
+                width:400px;
+                margin-left: 0;
+                img {
+                    width: 380px;
+                    height: 190px;
+                    background-size: 100% auto;
+                }
+            }
+        }
+        .btn-area {
+            padding:0
+        }
+    }
+    //실시간예약 - 사전체크인
+    .preCheckin-cont {
+        .section-cont {
+            .section-form {
+                margin-top:0;
+                .form-header {
+                    margin-bottom:0;
+                    @include Align-between;
+                    span {
+                        @include Bold;
+                        position: relative;
+                        font-size:18px;
+                        &::before {
+                            content:'*';
+                            display: inline-block;
+                            @include Position ($left:-12px, $top:20%);
+                        }
+                    }
+                }
+                .form-cont {
+                    padding:40px 0 80px;
+                    .row {
+                        padding:0 40px;
+                        margin-bottom:0;
+                        & + .row {
+                            padding-top:20px;
+                        }
+                        .type-left {
+                            position: relative;
+                            .left-txt {
+                                @include Position($left:35px, $top:35%);
+                            }
+                        }
+                        .input-cont {
+                            .box-between {
+                                width:50%;
+                            }
+                        }
+                    }
+                    .lst {
+                        li + li {
+                            margin-top:10px;
+                        }
+                    }
+                    &.agree-area {
+                        padding:0 0 50px;
+                    }
+                }
+                &.form2 {
+                    .form-cont {
+                        & + .form-cont {
+                            padding-top:0;
+                        }
+                        .row-header {
+                            padding:0 40px 20px;
+                            ul {
+                                @include Align-middle-left; 
+                                li + li {
+                                    padding-left: 30px;
+                                }
+                            }
+                            .chk-icon-box {
+                                .input-tit {
+                                    width:180px;
+                                    button {
+                                        border-bottom: 1px solid #2f2f2f;
+                                        padding: 4px 0 2px;
+                                    }
+                                    &::after {
+                                        left:0;
+                                    }
+                                }
+                                & + .input-cont {
+                                    margin-left:50px;
+                                }
+                            }
+                        }
+                        .detail-radio {
+                            margin:0 40px;
+                            padding:20px 0;
+                            border-top:1px solid #e7e7e7;
+                        }
+
+                        .row {
+                            .input-cont {
+                                .box-between {
+                                    width:50%;
+                                    select {
+                                        max-width: 25%;
+                                        & + .inputT {
+                                            max-width: 45%;
+                                            & + button {
+                                                width: 30%;
+                                            }
+                                        }
+                                    }
+                                    .inputT {
+                                        max-width: 71%;
+                                        & + button {
+                                            width: 30%;
+                                        }
+                                    }
+                                }
+                            }
+                            .detail-radio {
+                                margin:0;
+                                padding:0;
+                                border:0;
+                            } 
+                        }
+
+                        .btn-area {
+                            padding:60px 0 0;
+                        }
+                    }
+                }
+                &:last-child {
+                    .form-cont {
+                        padding-bottom:0;
+                    }
+                }
+            }
+        }
+        .section-certi {
+            padding:0 80px;
+            .certi-list {
+                @include Align-middle;
+                padding-bottom: 40px;
+                li {
+                    text-align: center;
+                    a {
+                        display: block;
+                        .circle {
+                            width: 230px;
+                            height: 230px;
+                            border: 1px solid #f1f1f1;
+                            border-radius: 100%;
+                        }
+                        .certi-tit {
+                            margin: 40px 0;
+                            font-size: 18px;
+                        }
+                    }
+                }
+                & + .lst {
+                    padding-top:20px;
+                    border-top:1px solid #e7e7e7;
+                    li {
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 단기렌터카 실시간 예약 메인
+.shortWrap {
+    padding-bottom: 0 !important;
+}
+.short-main-wrap {
+    * {
+       box-sizing: border-box; 
+    } 
+    width: 100%;
+    height: 100%;
+    padding: 100px 0 170px;
+    background: url(../../resources-pc/images/@temp-short-mbg.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+
+    .short-main-cont {
+        @include Align-top-left;
+        position: relative;
+        width: 1280px;
+        min-width: 1280px;
+        height: 870px;
+        margin: 0 auto;
+    }
+    // 실시간예약 탭
+    .tab-menu {
+        width: 100px;
+        li {
+            @include Align-middle-column;
+            @include Bold;
+            height: 290px;
+            width: 100%;
+            div {
+                width: 100%;
+                height: 100%;
+                button {
+                    @include Align-middle-column;
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    font-size: 22px;
+                    border-bottom: 0 none;
+                    word-break: break-word;
+                    &:before {
+                        content: "";
+                        display: block;
+                        margin-bottom: 20px;
+                        background-size: 100% auto;
+                    }
+                }
+            }
+            
+            &:nth-of-type(1) {
+                button {
+                    background: #444;
+                    &:before {
+                        width: 25px;
+                        height: 24px;
+                        background: url(../../resources-pc/images/icons/ico-main-calendar.png) 0 0 no-repeat;
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                button {
+                    background: #333;
+                    &:before {
+                        width: 25px;
+                        height: 27px;
+                        background: url(../../resources-pc/images/icons/ico-main-branch.png) 0 0 no-repeat;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                button {
+                    background: #242424;
+                    &:before {
+                        width: 30px;
+                        height: 30px;
+                        background: url(../../resources-pc/images/icons/ico-main-car.png) 0 0 no-repeat;
+                    }
+                }
+            }
+            &.active {
+                button {
+                    background-color: #ff404b;
+                }
+            }
+        }
+        
+    }
+    .tab-cont-wrap {
+        width: 1180px;
+        background: #fff;
+        .tab-step2, .tab-step3 {
+            display: none;
+        }
+    }
+    .tab-cont-section {
+        @include Align-top-left;
+        width: 100%;
+        height: 790px;
+        > div:nth-of-type(2) {
+            border-left: 1px solid #e7e7e7;
+            border-right: 1px solid #e7e7e7;
+        }
+        // 실시간 예약 캘린더
+        .short-calendar {
+            width: 360px;
+            padding: 0 20px;
+            h2 {
+                @include Bold;
+                padding: 40px 0;
+                border-bottom: 1px solid #e7e7e7;
+                color: #2f2f2f;
+                font-size: 28px;
+                text-align: center;
+            }
+            .calender-cont {
+                height: 670px;
+                overflow: hidden;
+                > div {
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    height: 670px;
+                }
+            }
+            .tbl-box{
+                .calendar-tit {
+                    font-size: 20px;
+                    padding: 40px 10px 20px;
+                    text-align: center;
+                    color: #2f2f2f;
+                }  
+                table{
+                    width:100%;
+                    th, td{
+                        text-align:center;
+                        padding:2px 0;
+                        height: 40px;
+                        color: #54585a;
+                        font-size: 14px;
+                    }
+                    th{
+                        padding-top:0;
+                        color: #2f2f2f;
+                    }
+                    .btn {
+                        width:100%; 
+                        height:38px; 
+                        padding:0; 
+                        color: #aaa;
+                        font-size: 14px;
+                    }                                                
+                    .disabled, 
+                        .disabled > button, 
+                        button[disabled]{
+                        color:#e8e8e8;
+                    }
+                    .today{
+                        .btn{
+                            position: relative;
+                            @include Bold; 
+                            color:#a02a3d;
+                            &:after{
+                                content:"";
+                                display:block;
+                                width: 20px;
+                                height:1px;
+                                margin: 0 auto;
+                                background-color:#a02a3d;
+                            }                                
+                        }                            
+                    }
+                    .today{
+                        &.on, &.start, &.end, &.during{
+                            .btn{
+                                &:after{background-color:#fff;}
+                            }
+                        }
+                    }
+                    .start, .end, .during{
+                        .btn{
+                            width: 100%;
+                            color:#fff;
+                            background-color: #ff404b;
+                        }
+                    }
+                    .start{
+                        .btn{                                
+                            border-top-left-radius: 38px;
+                            border-bottom-left-radius: 38px;
+                        }
+                    }
+                    .end{
+                        .btn{                               
+                            border-top-right-radius: 38px;
+                            border-bottom-right-radius: 38px;
+                        }
+                    }
+                    .on{    
+                        .btn{
+                            color:#fff;
+                            background-color:#ff404b;
+                            border-radius:100%;
+                        }         
+                    }
+                    .t-red {
+                        .btn {
+                            color: #ed1c24;
+                        }
+                    }                   
+                    .day{
+                        .btn{
+                            width:38px;
+                            background-color: #ff404b;
+                            border-radius: 1.7rem;
+                            @include Bold;
+                            color:#fff;   
+                        }
+                    }
+                }
+            }
+        }
+
+        // 반납 지점
+        .short-branch {
+            width: 340px;
+            h2 {@include Hide_txt;}
+            .tab-nav {
+                background: #54585a;
+                .tab-col2 {
+                    li {
+                       button {
+                            line-height: 1;
+                            font-size:16px;
+                            height: 50px;
+                            color:#bbb;
+                            border: 0;
+                            @include Regular;
+                            &:before{
+                                content: "";
+                                display: inline-block;
+                                background: url(../../resources-pc/images/icons/ico-check3-off.png) 0 0 no-repeat;
+                                width: 14px;
+                                height: 11px;
+                                margin-right: 10px;
+                            }
+                        }
+                        &.active {
+                            button {
+                                border: 0;
+                                color: #fff;
+                                &:before{
+                                    background: url(../../resources-pc/images/icons/ico-check3-on.png) 0 0 no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            .short-branch-tab{
+                width: 100%;
+                @include Align-middle;
+                li {
+                    @include Align-middle;
+                    width: 50%;
+                    height: 70px;
+                    background: #fff;
+                    label {
+                        @include Align-middle;
+                        text-align: center;
+                        font-size: 18px;
+                        color: #8f9191;
+                        width: 100%;
+                        height: 70px;
+                        border-bottom: 1px solid #e7e7e7;
+                    }
+                    &.active {
+                        label {
+                            border-bottom: 2px solid #ff404b;
+                            @include Bold;
+                            color: #ff404b;
+                        }
+                    }
+                    input:disabled + label {
+                        color: #ddd;
+                    }
+                    &.active {
+                        input:disabled + label {
+                            border-bottom: 1px solid #e7e7e7;
+                            color: #ddd;
+                        }
+                    }
+                    
+                }
+            }
+            .short-branch-tab2 {
+                width: 100%;
+                @include Align-middle;
+                li {
+                    @include Align-middle;
+                    height: 80px;
+                    background: #fff;
+                    button {
+                        @include Align-middle;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #8f9191;
+                        width: 145px;
+                        height: 38px;
+                        border: 1px solid #d2d2d2;
+                        border-radius: 38px;
+                        margin: 0 5px;
+                    }
+                    &.active {
+                        button {
+                            border: 1px solid #ff404b;
+                            @include Bold;
+                            color: #ff404b;
+                            background: #fff9f9;
+                        }
+                    }
+                    
+                }
+            }
+            .short-branch-section {
+                width: 100%;
+                //border-left: 1px solid #e7e7e7;
+                //border-right: 1px solid #e7e7e7;
+                .shor-main-list-wrap{
+                    @include Align-box;
+                    // padding:1.7rem;
+                    .shor-main-list-lt{
+                        overflow-y: auto;
+                        height: 670px;
+                        width:50%;
+                        background: #fafafa;
+                        @include Align-box;
+                        ul{
+                            width:100%;
+                            margin-top: 20px;
+                        }
+                        .btn-link{
+                            border:0 none;
+                            color:#2f2f2f;
+                            height:43px;
+                            width: 100%;
+                            padding:0 15px;
+                            text-align: left;
+                            line-height:1;
+                            font-size: 14px;
+                            word-break: break-word;
+                            @include Regular;
+                                b{
+                                    color: #aaa;
+                                    font-size: 14px;
+                                }
+                            &.active{
+                                @include Bold;
+                                background: #fff;
+                                &:after {
+                                    display: inline-block;
+                                    content: "";
+                                    background: url(../../resources-pc/images/icons/ico-chk2-on.png) 0 0 no-repeat;
+                                    width: 13px;
+                                    height: 10px;
+                                    margin-left: 10px;
+                                    background-size: 100% auto;
+                                }
+                                b{
+                                    color:#2f2f2f;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .shor-main-list-rt{
+                        height: 670px;
+                        width:50%;
+                        overflow: hidden;
+                        background: #fff;
+                        > div {
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            height: 670px;
+                            width: 100%;
+                        }
+                        &.tab2 > div {
+                            height: 590px;
+                        }
+                        ul{
+                            width:100%;
+                            margin-top: 20px;
+                            li {
+                                
+                                width: 100%;
+                            }
+                        }
+                        .btn-link{
+                            @include Align-between;
+                            border:0 none;
+                            color:#2f2f2f;
+                            height:43px;
+                            width: 100%;
+                            padding:0 10px 0 15px;
+                            text-align: left;
+                            line-height:1;
+                            font-size: 14px;
+                            @include Regular;
+                            word-break: break-word;
+                            /* &:after {
+                                display: flex;
+                                content: "";
+                                background: url(../../resources-pc/images/icons/ico-map-off.png) 0 0 no-repeat;
+                                width: 28px;
+                                height: 28px;
+                                margin-left: 5px;
+                                background-size: 100% auto;
+                            } */
+                                b{
+                                    color: #aaa;
+                                    font-size: 14px;
+                                }
+                            &.active{
+                                @include Bold;
+                                background: #fff;
+                                /* &:after {
+                                    background: url(../../resources-pc/images/icons/ico-map-on.png) 0 0 no-repeat;
+                                } */
+                                b{
+                                    color:#2f2f2f;
+                                    font-size: 14px;
+                                    border-bottom: 1px solid #2f2f2f;
+                                }
+                            }
+                        }
+                    }
+
+                }
+                &.short-type2 {
+                    .shor-main-list-wrap{
+                        .shor-main-list-lt {
+                        height: 590px;
+                        }
+                        .shor-main-list-rt {
+                            height: 590px;
+                        }
+                    }  
+                }
+            }
+        }
+
+        // 차량 선택
+        .short-car {
+            width: 480px;
+            padding: 17px 30px 0;
+            .select-grid{
+                display:flex;
+                flex-wrap: wrap;
+                align-items:stretch;
+                justify-content:space-between;
+                border: 1px solid $border-darkgrey;
+                border-bottom: 0 none;
+                li{
+                    width:20%;
+                    border: 0 solid $border-darkgrey;
+                    border-width: 0 1px 1px 0;
+                    box-sizing: border-box;
+                    .chk-box{
+                        input {
+                            display: none;
+                        }
+                        label{
+                            position: relative;
+                            height:33px;
+                            @include Align-middle;
+                            box-sizing: border-box;
+                            transition: all .4s;
+                            color: #8f9191;
+                        }
+                        input:checked + label {
+                            @include Bold;
+                            color:$txt-red;
+                            background-color:#fff9f9;
+                            &:after{
+                                content:"";
+                                display:block;
+                                @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-2px);
+                                border:1px solid $border-red;
+                                z-index: 5;
+                            }
+                        }
+                        input:disabled + label {
+                            color: #ddd;
+                        }
+                    }
+                    
+                }
+                li:nth-of-type(5n), li:nth-of-type(13n){
+                    border-right:0 none;
+                }
+                li:nth-of-type(12n), li:nth-of-type(13n){
+                    width: 40%;
+                }
+                li:nth-of-type(5n+1){
+                    input:checked + label {
+                        &:after{
+                            @include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
+                        }
+                    }
+                }
+            }
+            .no-data {
+                width: 100%;
+                height: 500px;
+                @include Align-middle;
+                p {
+                    @include Bold;
+                    font-size: 22px;
+                    color: #54585a;
+                }
+            }
+            .short-car-list {
+                height: 645px;
+                width: 100%;
+                margin-top: 20px;
+                overflow-y: auto;         
+                > div {
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    height: 645px;
+                    width: 100%;
+                }
+                .short-car-list-cont {
+                    li {
+                        height: 170px;
+                        .radioIconBox {
+                            > label {
+                            @include Align-between;
+                            flex-flow: nowrap;
+                            border-radius: 0;
+                            padding:20px 10px;
+                            height: 170px;
+                            position: relative;
+                            border: 1px solid #fff;
+                            border-bottom: 1px solid #ddd;
+                                .img {
+                                    width: 172px;
+                                    height: 92px;
+                                    background-size: 100% auto;
+                                    > img {
+                                        width: 172px;
+                                        height: 92px;
+                                        background-size: 100% auto;
+                                    }
+                                }
+                                .txt-type {
+                                    width: calc(100% - 172px);
+                                    padding-left: 15px;
+                                    strong {
+                                        @include Ellipsis($w:100%, $lines:1);
+                                        @include Bold;
+                                        font-size: 22px;
+                                        color: #2f2f2f;
+                                        line-height: 1.2;
+                                    }
+                                    .txt-red {
+                                        @include Bold;
+                                        margin-top: 10px;
+                                        font-size: 24px;
+                                        color: #da291c;
+                                        line-height: 1;
+                                        sub {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    del {
+                                        font-size: 16px;
+                                        color: #ddd;
+                                        line-height: 1;
+                                    }
+                                    .btn-red {
+                                        width: 93px;
+                                        height: 35px;
+                                        font-size: 16px;
+                                        margin-top: 15px;
+                                    }
+                                } 
+                            }
+                            > input:checked + label:after, > input + label:after{
+                                display:none;
+                            }
+                            > input:checked + label {
+                                border:1px solid #ff404b;
+                                background: #fff9f9;
+                            }
+                            > input + label{
+                                .img{
+                                    .radio-check{
+                                        display:block;
+                                    }
+                                }
+                            }
+                            > input:checked + label{
+                                .img{
+                                    .radio-check{
+                                        display:inline-flex;
+                                        background: url(../../resources-pc/images/icons/ico-chk2-on.png) 0 0 no-repeat;
+                                        width: 13px;
+                                        height: 13px;
+                                        background-size: 100% auto;
+                                        position: absolute;
+                                        top: 20px;
+                                        left: 20px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+    // 결과값
+    .tab-cont-result {
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        .short-result {
+            @include Align-between-top;
+            height: 100%;
+            > li {
+                @include Align-middle;
+                height: 100%;
+                border-top: 1px solid #e7e7e7;
+                &:nth-of-type(1) {
+                    width: calc(100% / 2 - 112px);
+                    padding-left: 10px;
+                    &::after {
+                        display: inline-block;
+                        content: "";
+                        width: 1px;
+                        height: 30px;
+                        margin-left: 5px;
+                        background: #e7e7e7;
+                    }
+                }
+                &:nth-of-type(2) {
+                    width: calc(100% / 2 - 113px);
+                }
+                &:nth-of-type(3) {
+                    width: 225px;
+                    border-top: 0 none;
+                }
+                button {
+                    @include Bold;
+                    width: 100%;
+                    height: 100%;
+                    background: #ed1c24;
+                    color: #fff;
+                    font-size: 22px;
+                    border-radius: 0;
+                    &:disabled {
+                        background: #8f9191;
+                    }
+                }
+            }
+            .result-time {
+                @include Align-middle;
+                height: 100%;
+                width: 100%;
+                padding: 0 15px;
+                p {
+                    font-size: 16px;
+                    color: #54585a;
+                }
+                strong {
+                    @include Bold;
+                    font-size: 26px;
+                    color: #2f2f2f;
+                    padding: 0 20px;
+                }
+                select{
+                    border:1px solid #EBEBEB;
+                    border-radius: 6px;
+                    height: 50px;
+                    padding:0 10px;
+                    width: 76px;
+                    margin: 0 2px;
+                    background: url(../../resources-pc/images/icons/ico-arrow-down.png) no-repeat center right 10px #fff;
+                    &:disabled {
+                        background: url(../../resources-pc/images/icons/ico-arrow-down2.png) no-repeat center right 10px #f5f5f5;
+                        border-color: #d2d2d2;
+                    }
+                }
+
+            }
+        }
+    }
+    //quick banner
+    .quick-banner {
+        position: absolute;
+        top: 0;
+        right: -110px;
+        width: 100px;
+        height: 395px;
+        background-size: 100% auto;
+    }
+}
+
+//영문
+.eng-wrap {
+    .realTime-cont {
+        table {
+            width: 100%;
+            border:1px solid #e7e7e7;
+            border-bottom: 0;
+            tr {
+                border-bottom: 1px solid #e7e7e7;
+            }
+            th {
+                background-color: #fafafa;
+                padding:30px;
+                color:#54585a;
+                @include Regular;
+            }
+            td {
+                padding:30px;
+                border-left: 1px solid #e7e7e7;
+                color:#54585a;
+                text-align: right;
+                @include Regular;
+            }
+        }
+        .form1 {
+            .form-cont { 
+                div:last-child {
+                    .input-tit {
+                        font-size:16px !important;
+                    }
+                }
+            }
+        }
+        .form2 {
+            .form-cont {
+                .row {
+                    .input-cont {
+                        p {
+                            font-size:14px;
+                            &::before {
+                                content:"";
+                                display: inline-block;
+                                width:2px;
+                                height: 2px;
+                                
+                            }
+                        }
+                    }
+                    .box-between {
+                        justify-content: flex-start;
+                        > * {
+                            width:25%;
+                        }
+                    }
+                }
+            }
+        }
+        .form16 {
+            .form-cont {
+                .row + .row {
+                    padding-top:30px;
+                }
+            }
+            th {
+                padding:30px 20px;
+                & + th {
+                    border-left: 1px solid #e7e7e7;
+                }
+            }
+            td {
+                text-align: center;
+                padding:30px 20px;
+            }
+        }
+        .form17 {
+            .form-cont {
+                .row + .row {
+                    padding-top:40px;
+                }
+                .chk-icon-box {
+                    label {
+                        display: inline-flex;
+                        i {
+                            margin:2px 0 0 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Rental information
+    .section-indicator{
+        .detail-layer-nav{
+            button{
+                padding: 40px 15px;
+            }
+        }
+    }
+    .explain-cont{
+        .statement{
+            .tit-size-mid{margin-bottom:60px;}
+            > .lst{
+                > li{
+                   + li{margin-top:60px;} 
+                }
+
+                &.bold{
+                    > li{@include Bold; font-size:16px;}
+                }
+
+                .details{
+                    margin-top:30px;
+                    @include Regular;
+                    font-size:14px;
+    
+                    .lst{
+                        li{@include Regular;}
+                    }                
+                }
+                .img-box, .tbl-box{
+                    margin-top:30px;
+                }
+            }            
+        }
+    }    
+    
+}
+
+// 영문 메인
+.eng-short-main-wrap {
+    padding: 70px 0 150px;
+    background: url(../../resources-pc/images/@temp-eng-short-mbg.png) 0 0 no-repeat;
+    .tab-menu {
+        li{
+            div {
+                button {font-size: 18px; line-height: 1.5;}
+            }
+        }
+    }
+    .tab-cont-section {
+        .short-calendar { 
+            h2 { font-size: 18px; word-break: keep-all; padding: 37px 0;}
+        }
+        .short-branch {
+            .short-branch-tab {
+                li {width: calc(100% / 3);
+                    a {
+                        @include Align-middle;
+                        text-align: center;
+                        border-bottom: 1px solid #e7e7e7; 
+                        height: 70px; 
+                        width: 100%;
+                        color: #8f9191;
+                    }
+                }
+            }
+        }
+    }
+    .tab-cont-result {
+        .short-result {
+            .result-time {
+                p {font-size: 14px;}
+            }
+        }
+    }
+    .tit-h3 {
+        @include Bold;
+        font-size: 18px;
+        color: #2f2f2f;
+        padding: 10px 0;
+    }
+
+    // 영문 메인 로그인영역
+    .eng-short-main-top {
+        width: 1280px;
+        min-width: 1280px;
+        padding-bottom: 45px;
+        margin: 0 auto;
+        @include Align-top-left;
+        h2 {
+            width: 320px;
+            font-size: 30px;
+            color: #fff;
+            line-height: 2;
+            strong {
+                display: block;
+                @include Bold;
+                font-size: 36px;
+                color: #fff;
+                &:after {
+                    display: inline-block;
+                    content: "";
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 100%;
+                    background: #ff404b;
+                    margin-left: 5px;
+                    vertical-align: top;
+                }
+            }
+        }
+        .short-log-wrap {
+            width: 435px;
+            margin-right: 70px;
+        }
+        .short-log {
+            @include Align-middle;
+            button {
+                width: 95px;
+                height: 85px;
+                margin-left: 10px;
+            }
+        }
+        .input-type {
+            width: 330px;
+            height: 40px;
+            padding: 8px 20px;
+            background: #2f2f2f;
+            border-radius: 7px;
+            font-size: 16px;
+            color: #fff;
+            label {
+                display: inline-block;
+                position: relative;
+                width: 50px;
+                font-size: 16px;
+                color: #fff;
+                &:after {
+                    position: absolute;
+                    top: 3px;
+                    right: 0;
+                    display: inline-block;
+                    content: "";
+                    width: 1px;
+                    height: 20px;
+                    vertical-align: middle;
+                    background: #595959;
+                }
+            }
+            input {
+                display: inline-block;
+                width: 80%;
+                height: 20px;
+                padding: 0 10px;
+            }
+            & + .input-type {
+                margin-top: 5px;
+            }
+        }
+        .short-sch-wrap {
+            @include Align-between-top;
+            .sch-list {
+                @include Align-middle-right;
+                height: 60px;
+                color: #fff;
+                font-size: 16px;
+                li {
+                    padding-left: 10px;
+                    &:before {
+                        display: inline-block;
+                        content: "";
+                        width: 1px;
+                        height: 12px;
+                        background: #bdbcb2;
+                        margin-right: 10px;
+                    }
+                    &:first-child:before {display: none;}
+                }
+            }
+        }
+        .detail-iconBox{
+            label {
+                padding-left:30px;
+                font-size:16px;
+                background: none;
+                border: 0 none;
+                color: #fff;
+                &:after {
+                    width: 20px;
+                    height: 20px;
+                    left:0;
+                }
+            }
+            input:checked + label {
+                @include Regular;
+            }
+            input[type='checkbox'] + label:after{
+                width: 20px;
+                height: 20px;
+                border: 1px solid #aaa;
+                border-radius: 3px;
+                @include Background($sprite:'ico-check3-off', $type:'png', $size:65% auto, $position:center center);
+            }
+            input[type='checkbox']:checked + label:after{
+                border: 1px solid #fff;
+                @include Background($sprite:'ico-check3-on', $type:'png', $size:65% auto, $position:center center);
+            }
+        }
+        .short-info-wrap {
+            .tel {
+                @include Bold;
+                font-size: 32px;
+                color: #fff;
+                &:before {
+                    display: inline-block;
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #afb0ad;
+                    border-radius: 100%;
+                    @include Background($sprite:'ico-eng-tel', $type:'png', $size:50% auto, $position:40% 60%);
+                    vertical-align: bottom;
+                    margin-right: 10px;
+                }
+            }
+            ul {
+                @include Align-top-left;
+                li {
+                    @include Bold;
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 25px 10px;
+                    &:before {
+                        display: inline-block;
+                        content: "";
+                        margin-right: 10px;
+                        vertical-align: bottom;
+                    }
+                    &:after {
+                        display: inline-block;
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+                        border-top: 1px solid #fff;
+                        border-right: 1px solid #fff;
+                        transform: rotate(45deg);
+                        margin-left: 10px;
+                        vertical-align: middle;
+                    }
+                    &.ico-info:before {
+                        width: 19px;
+                        height: 22px;
+                        @include Background($sprite:'ico-eng-info', $type:'png', $size:95% auto, $position:center center);
+                    }
+                    &.ico-use:before {
+                        width: 21px;
+                        height: 22px;
+                        @include Background($sprite:'ico-eng-use', $type:'png', $size:95% auto, $position:center center);
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

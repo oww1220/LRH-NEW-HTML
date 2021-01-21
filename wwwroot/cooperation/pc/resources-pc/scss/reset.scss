@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import "./_common.scss";
+
+/// reset PC
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, strong, em, img, sub, sup, address, cite, pre, code, del, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {line-height: 1;margin:0; padding:0; border:0; font:inherit; font-size:100%; vertical-align:baseline;}
+article, aside, figcaption, figure, footer, header, nav, section {display:block;}
+ol, ul {list-style:none;}
+table {border-collapse:collapse; border-spacing:0;}
+button, html input[type='button'], input[type='reset'], input[type='submit'] {overflow:visible; appearance:button; cursor:pointer;}
+button::-moz-focus-inner, input::-moz-focus-inner {padding:0; border:0;}
+input[data-type=number] {ime-mode:disabled;}
+input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button {height:auto;}
+input[type='search'] {appearance:textfield; box-sizing:content-box;}
+input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration {appearance:none;}
+input::-ms-clear, input::-ms-reveal {display: none;}
+select::-ms-expand {display:none;}
+[disabled] {cursor:default;}
+
+html {overflow-y:scroll; font-size:62.5%;}
+body {width: 100%;font-size: 15px;font-family:"ManropeL", "NotoL", serif;letter-spacing:-.5px; word-break:break-all; color:#111; background-color:#fff;
+display: flex;flex-flow: column; min-height: 100vh;color: #2f2f2f;font-size: 15px;}
+input, button, select, textarea {line-height: 1;margin:0; padding:0; border:0; color: #2f2f2f;font-size: 15px;font-family:inherit; color:inherit; 
+box-sizing:border-box; appearance:none; vertical-align:middle; border-radius:0; background-color:transparent;outline: none;}
+caption, legend, hr {display:none;}
+em, address, i {font-style:normal;}
+img {max-width:100%; vertical-align:middle;}
+a {color:inherit; text-decoration:none; cursor: pointer;}
+strong, b {font-weight:normal;color: #2f2f2f;font-size: 15px;line-height: 1;}
+label {cursor: pointer;}
+
+input::placeholder {
+	color: #C1C1C1;
+	line-height: normal;
+}
+textarea::placeholder {
+	color: #C1C1C1;
+}
+
+//Spoqa
+@font-face {
+	font-family:"SpoqaL";
+	src:url('../fonts/Spoqa/Spoqa-Light.woff') format('woff'), url('../fonts/Spoqa/Spoqa-Light.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"SpoqaB";
+	src:url('../fonts/Spoqa/Spoqa-Bold.woff') format('woff'), url('../fonts/Spoqa/Spoqa-Bold.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"SpoqaR";
+	src:url('../fonts/Spoqa/Spoqa-Regular.woff') format('woff'), url('../fonts/Spoqa/Spoqa-Regular.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"SpoqaT";
+	src:url('../fonts/Spoqa/Spoqa-Thin.woff') format('woff'), url('../fonts/Spoqa/Spoqa-Thin.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+
+//Noto
+@font-face {
+	font-family:"NotoL";
+	src:url('../fonts/Noto/notokr-light.woff') format('woff'), url('../fonts/Noto/notokr-light.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"NotoR";
+	src:url('../fonts/Noto/notokr-regular.woff') format('woff'), url('../fonts/Noto/notokr-regular.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"NotoM";
+	src:url('../fonts/Noto/notokr-medium.woff') format('woff'), url('../fonts/Noto/notokr-medium.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"NotoB";
+	src:url('../fonts/Noto/notokr-bold.woff') format('woff'), url('../fonts/Noto/notokr-bold.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+
+//Manrope
+@font-face {
+	font-family:"ManropeL";
+	src:url('../fonts/Manrope/Manrope-Light.woff') format('woff'), url('../fonts/Manrope/Manrope-Light.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"ManropeB";
+	src:url('../fonts/Manrope/Manrope-Bold.woff') format('woff'), url('../fonts/Manrope/Manrope-Bold.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+
+//Spoqa
+@font-face {
+	font-family:"SpoqaHanSansL";
+	src:url('../fonts/Spoqa/SpoqaHanSans-Light.woff') format('woff'), url('../fonts/Spoqa/SpoqaHanSans-Light.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"SpoqaHanSansB";
+	src:url('../fonts/Spoqa/SpoqaHanSans-Bold.woff') format('woff'), url('../fonts/Spoqa/SpoqaHanSans-Bold.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"SpoqaHanSansR";
+	src:url('../fonts/Spoqa/SpoqaHanSans-Regular.woff') format('woff'), url('../fonts/Spoqa/SpoqaHanSans-Regular.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"SpoqaHanSansT";
+	src:url('../fonts/Spoqa/SpoqaHanSans-Thin.woff') format('woff'), url('../fonts/Spoqa/SpoqaHanSans-Thin.woff2') format('woff2');
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+.clear {
+	content: '';
+	display: block;
+	clear: both;
+}
+.hidden{
+	position:absolute;
+	font:0/0 a;
+	visibility:hidden;
+}
+.align-c {
+	text-align: center;
+}
+.align-l {
+	text-align: left;
+}
+.align-r {
+	text-align: right;
+}
+.valign-b{
+	vertical-align: bottom;
+}
+.valign-t{
+	vertical-align: top;
+}
+.valign-m{
+	vertical-align: middle;
+}
+.margin-a{
+	margin-left: auto;
+	margin-right: auto;
+}
+.txtBold {
+	@include Bold;
+}
+.texRed {
+	color: #F04040;
+}
+.texGreen {
+	color: #20BBC4;
+}
+
+//iScroll
+.iScrollVerticalScrollbar.iScrollLoneScrollbar {right:8px !important;width: 4px !important;}
+.iScrollVerticalScrollbar.iScrollLoneScrollbar .iScrollIndicator {background-color: #E1E1E1 !important;border:0 !important;}
+
+@for $i from 0 through 50 {
+
+	.pd-#{$i * 5}{
+		padding: #{$i * 5}px;
+	}
+	.mg-#{$i * 5}{
+		margin: #{$i * 5}px;
+	}
+	.mt-#{$i * 5}{
+		margin-top: #{$i * 5}px;
+	}
+	.mb-#{$i * 5}{
+		margin-bottom: #{$i * 5}px;
+	}
+	.ml-#{$i * 5}{
+		margin-left: #{$i * 5}px;
+	}
+	.mr-#{$i * 5}{
+		margin-right: #{$i * 5}px;
+	}
+	.pt-#{$i * 5}{
+		padding-top: #{$i * 5}px;
+	}
+	.pb-#{$i * 5}{
+		padding-bottom: #{$i * 5}px;
+	}
+	.pl-#{$i * 5}{
+		padding-left: #{$i * 5}px;
+	}
+	.pr-#{$i * 5}{
+		padding-right: #{$i * 5}px;
+	}
+}

@@ -1,0 +1,471 @@
+.selectbox {
+	box-sizing: border-box;
+	border: 1px solid #EBEBEB;
+	border-radius: 6px;
+	position: relative;
+	background-color: #fff;
+	height: 50px;
+	padding: 0 45px 0 20px;
+	width: 100%;
+	@include Background($sprite:'ico-arrow-down', $size:14px, $position: center right 20px); 
+}
+.select-normal {
+	font-size: 1rem;
+	padding-right: .8rem;
+	@include Background($sprite:'ico-select2', $size:.5rem, $position: center right); 
+
+}
+.textarea {
+	border:1px solid #EBEBEB;
+	border-radius: 6px;
+	background-color: #fff;
+	padding:0 1.2rem;
+	position: relative;
+	textarea {
+		padding:1.5rem 0;
+		overflow: auto;
+		width: 100%;
+		resize: none;
+		line-height: 12px;
+		line-height: 1.3;
+	}
+	&-length {
+		text-align: right;
+		color: #999;
+		font-size: 1rem;
+		margin-top: 1rem;
+	}
+}
+
+.inputR {
+	@include Vertical-inline;
+	font-size: 0;
+	input {display: none;}
+	label {
+		@include Align-top-left;
+		line-height: 1.3;
+		&:before{
+			@include Vertical-inline;
+			@include Background($sprite:'ico-radio-off', $type:'png', $size:92% auto, $position:center center);
+			content: '';
+			width: 1.5rem;
+			height: 1.5rem;
+			flex: none;
+		}
+		span {
+			@include Vertical-inline;
+			font-size: 1.2rem;
+			margin-left: .4rem;
+		}
+	}
+	input:checked + label {
+		&:before{
+			@include Background($sprite:'ico-radio-on', $type:'png', $size:92% auto, $position:center center);
+		}
+	}
+}
+
+.inputC {
+	@include Vertical-inline;
+	font-size: 0;
+	input {display: none;}
+	label {
+		@include Align-top-left;
+		line-height: 1.3;
+		&:before{
+			@include Vertical-inline;
+			@include Background($sprite:'ico-chk-off', $position:center center);
+			content: '';
+			width: 20px;
+			height: 20px;
+			flex: none;
+		}
+		span {
+			@include Vertical-inline;
+			font-size: 15px;
+			margin-left: 5px;
+		}
+	}
+	input:checked + label {
+		&:before{
+			@include Background($sprite:'ico-chk-on', $type:'png', $size:92% auto, $position:center center);
+		}
+	}
+}
+
+.inputT{
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	& > input{
+		border:1px solid #EBEBEB;
+		border-radius: 6px;
+		background-color: #fff;
+		height: 50px;
+		padding:0 20px;
+		width: 100%;
+	}
+	
+	&.type-right{
+		position:relative;
+
+		input{padding-right:60px;}
+		.right-txt{
+			@include Bold;
+			@include Position($top:0, $right:20px);
+			@include Align-middle;
+			height:50px;
+		}
+	}
+}
+
+.radioIconBox {
+	> label {
+		@include Align-middle;
+		transition: all .4s;
+		box-sizing: border-box;
+		border: 1px solid #EBEBEB;
+		flex-flow: column;
+		border-radius: 6px;
+		position: relative;
+		&::after {
+			display: block;
+			content: '';
+			@include Position($top: 10px, $right: 10px);
+			@include Background($sprite:'ico-radio-off', $position:center center);
+			width: 20px;
+			height: 20px;
+		}
+	}
+	> input:checked + label {
+		border-color: #2B2B2B;
+		@include Bold;
+		&:after {
+			@include Background($sprite:'ico-radio-on', $position:center center);
+		}
+	}
+	> input {
+		display: none;
+	}
+}
+.iconBox {
+	label {
+		@include Align-between;
+		transition: all .4s;
+		box-sizing: border-box;
+		border: 1px solid #EBEBEB;
+		border-radius: 6px;
+		position: relative;
+		background-color: #fff;
+		height: 60px;
+		padding: 0 20px 0 50px;
+		> span {
+			@include Align-middle;
+		}
+		&:after {
+			display: block;
+			content: '';
+			@include Position($top: 50%, $left: 20px);
+			@include Background($sprite:'ico-radio-off', $position:center center);
+			width: 20px;
+			height: 20px;
+			margin-top: -10px;
+		}
+	}
+	input[type='checkbox'] + label:after{
+		@include Background($sprite:'ico-chk-off', $position:center center);
+	}
+	input:checked + label {
+		border-color: #2B2B2B;
+		@include Bold;
+		&:after {
+			@include Background($sprite:'ico-radio-on', $position:center center);
+		}
+	}
+	input[type='checkbox']:checked + label:after{
+		@include Background($sprite:'ico-chk-on', $position:center center);
+	}
+	input {
+		display: none;
+	}
+	& + .iconBox {margin-top:10px;}
+
+	&.simple{
+		label{
+			border: none;
+			height:23px;
+			padding-left:40px;
+
+			&:after{
+				@include Position($top: 50%, $left: 0);
+			}
+		}
+	}
+	&.type-chk{
+		label{
+			border:none;
+			height:20px;
+			padding-left:22px;
+			
+			&:after {				
+				@include Position($top: 50%, $left: 0);
+				@include Background($sprite:'ico-chk2', $position:left center);
+				width: 20px;
+				height: 20px;
+			}
+		}
+		input:checked + label{@include Bold; color:#ed1c24;}
+		input:checked + label:after{
+			@include Background($sprite:'ico-chk-on2', $position:left center);
+		}
+	}
+}
+
+.iconList {
+	box-sizing: border-box;
+	border: 1px solid #EBEBEB;
+	border-radius: 6px;
+	@include Align-box;
+	overflow: hidden;
+	li {
+		width: 100%;
+		input {
+			display: none;
+		}
+		label {
+			cursor: pointer;
+			background-color: #F9FAFC;
+			height: 60px;
+			display: block;
+			box-sizing: border-box;
+			@include Align-middle;
+		}
+		input:checked + label {
+			background-color: #fff;
+			color: #F04040;
+			@include Bold;
+		}
+		& + li label{border-left: 1px solid #EBEBEB;}
+	}
+	&.col2 li {width: 50%;}
+	&.col3 li {width: 33.333%;}
+	&.col4 li {width: 25%;}
+	&.col5 li {width: 20%;}
+}
+
+.chk-agree-list {
+	margin-top: 30px;
+	label {
+		padding: 20px 0;
+	}
+	.chk-agree-all {
+		border: 1px solid #EBEBEB;
+		padding:0 20px;
+		border-radius: 6px;
+	}
+	.chk-agree-cols {
+		
+		li {
+			border-bottom: 1px solid #EBEBEB;
+		}
+		.chk-agree-top {
+			@include Align-between;
+			padding: 0 15px 0 20px;
+			position: relative;
+		}
+		.agree-toggle-cont {
+			display: none;
+			position: relative;
+			.toggle-cont-in {
+				background-color: #FAFAFA;
+				overflow-y: auto;
+				overflow-x: hidden;
+				max-height: 165px;
+				padding: 25px 30px;
+				box-sizing: border-box;
+				.tit {
+					line-height: 1.3;
+					@include Bold;
+					font-size:14px;
+				}
+				.txt {
+					line-height: 1.3;
+					font-size:14px;
+					margin-top: 8px;
+    				margin-bottom: 20px;
+				}
+				.txt ~ .txt {
+					margin-bottom:0;
+				}
+			}
+		}
+	}
+}
+
+.radio-depth {
+	background-color: #F9FAFC;
+	border-top:1px solid #EBEBEB;
+	border-bottom:1px solid #EBEBEB;
+	padding: 1.7rem;
+	margin: 1.4rem 0;
+	position: relative;
+	display: none;
+	&:after {
+		display: block;
+		content: '';
+		@include Position($top: -1rem, $left: 50%);
+		@include Background($sprite:'ico-arrow', $type:'png', $size:100% auto, $position:center center);
+		width: 1.3rem;
+		height: 1.3rem;
+		margin-left: -.75rem
+	}
+	.radio-depth-top {
+		@include Align-between;
+		> strong {
+			@include Bold;
+		}
+	}
+	.radio-depth-cont {
+		margin-top: 1.2rem;
+	}
+}
+
+.form-list {
+	> ul {
+		> li {
+			& + li {
+				margin-top: 35px;
+			}
+			.form-tit {
+				> strong {
+					display: block;
+					line-height: 1.3;
+					@include Bold;
+				}
+
+			}
+			.form-cont {
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+
+.error-txt {
+    display: block;
+	font-size: 13px;
+	line-height: 1.3;
+    color: #F04040;
+	padding-top: 7px;
+}
+
+//
+.chk-icon-box, .radio-icon-box{	
+	input {
+		display: none;
+	}
+	label{
+		@include Align-between;
+		position: relative;
+		min-height:23px;
+		padding-left:40px;
+		box-sizing: border-box;
+		transition: all .4s;
+
+		&:after {
+			display: block;
+			content: '';
+			@include Position($top: 0, $left: 0);
+			@include Background($sprite:'ico-check2-off', $position:center center);
+			width: 13px;
+			height: 12px;
+			margin-top: 4px;
+		}
+	}
+	input[type='checkbox']:checked + label:after{
+		@include Background($sprite:'ico-check2-on', $position:center center);
+	}
+	input:checked + label{@include Bold; color:#2f2f2f;}
+
+	&.type-circle{
+		label{
+			min-height:26px;
+
+			&:after {
+				@include Position($top: 0, $left: 0);
+				@include Background($sprite:'ico-check-off', $position:center center);
+				width: 26px;
+				height: 26px;
+				margin-top: 0;
+			}
+
+		}
+		input[type='checkbox']:checked + label:after{
+			@include Background($sprite:'ico-check-on', $position:center center);
+		}
+	}
+	&.type-square{
+		label{
+			padding-left:32px;
+			
+			&:after {
+				@include Position($top: 50%, $left: 6px);
+				@include Background($sprite:'ico-chk3-off', $position:center center);
+				width: 20px;
+				height: 20px;
+				margin-top: -10px;
+			}
+
+		}
+		input[type='checkbox']:checked + label:after{
+			@include Background($sprite:'ico-chk3-on', $position:center center);
+		}
+	}	
+	
+	&.type-chkOn-red{
+		label{padding-left:24px;}
+		input[type='checkbox']:checked + label{
+			color:$txt-red;
+		}
+		input[type='checkbox']:checked + label:after{
+			@include Background($sprite:'ico-chk2-on', $position:center center);
+		}
+	}
+
+	&.type-inline{
+		display:inline-block;
+	}
+}
+
+.radio-icon-box{
+	label{
+		padding-left:30px;
+		&:after {			
+			@include Background($sprite:'ico-radio2-off', $position:center center);
+			width: 20px;
+			height: 20px;
+			margin-top: 2px;
+		}
+	}
+	input[type='radio']:checked + label:after{
+		@include Background($sprite:'ico-radio2-on', $position:center center);
+	}
+}
+
+.select-area{
+	//@include Align-between-top;
+	@include Align-between;
+	
+	.dash{margin:0 5px;}
+}
+.radio-area, .chk-area{
+	@include Align-box;
+
+	li{
+		flex-basis: auto;
+		margin-right:40px;
+	}
+}

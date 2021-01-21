@@ -1,0 +1,132 @@
+.estimateBottom {
+    @include Position( $position:fixed, $bottom: 0, $left: 0);
+    z-index: 41;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    background-color: #F9FAFC;
+    border-top:1px solid #EBEBEB;
+    .inner {
+        @include Align-between;
+        height: 120px;
+    }
+    .estimateBottom-infos {
+        > ul {
+            @include Align-middle-left;
+            > li {
+                padding:7px 0;
+                .info-in {
+
+                }
+                .info-top {
+                    @include Align-middle-left;
+                    line-height: 20px;
+                    > span {
+                        color: #999;
+                        font-size: 13px;
+                        margin-left: 5px;
+                    }
+                    > i {
+                        margin-left: 5px;
+                    }
+                }
+                .info-price {
+                    font-size: 22px;
+                    @include Bold;
+                    line-height: 1;
+                    margin-top:10px;
+                }
+                & + li {
+                    border-left:1px solid #EBEBEB;
+                    padding-left: 30px;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    .estimateBottom-btns {
+        @include Align-middle;
+        .btn {
+            height: 60px;
+            border-radius: 15px;
+            margin-left:10px;
+        }
+        .btn-white {
+            flex-flow: column;
+            font-size:15px;
+            width: 100px;
+            color: #2B2B2B;
+            span {
+                font-size:13px;
+                margin-bottom: 5px;
+                @include Normal;
+            }
+        }
+        .btn-orange {
+            flex-flow: column;
+            font-size:15px;
+            width: 100px;
+            span {
+                font-size:13px;
+                margin-bottom: 5px;
+                @include Normal;
+            }
+        }
+        .btn-red {
+            flex-flow: column;
+            width: 260px;
+            font-size:18px;
+            span {
+                font-size:13px;
+                margin-bottom: 5px;
+                @include Normal;
+            }
+        }
+        .btn-default.black {
+            width: 300px;
+        }
+
+    }
+    
+
+}
+
+.estimateBottom-toast-wrap {
+    @include Position($top:0, $left:0);
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+    &:before {
+        display: block;
+        content: '';
+        @include Background($sprite:'ico-arr-toast02', $position:center center);
+        width: 11px;
+        height: 7px;
+        @include Position($top: -6px, $left: 35px);
+    }
+    .estimateBottom-toast {
+        @include Align-between;
+        padding :0 15px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid #EBEBEB;
+        border-radius: 10px;
+        height: 56px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        > strong {
+            i {
+                margin-right: 5px;
+            }
+            @include Align-middle;
+            @include Bold;
+        }
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
