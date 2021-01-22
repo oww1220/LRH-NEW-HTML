@@ -14,6 +14,7 @@ html, body {
 	/*font-family: "SpoqaHanSansR", serif;*/
 	font-weight: normal;
 	line-height: 1.5;
+	word-break: break-word;
 }
 
 #wrap {
@@ -724,6 +725,10 @@ html, body {
 	border-bottom: none;
 }
 
+.section-form {
+	padding-bottom: 40px;
+}
+
 .section-form .form-header {
 	position: relative;
 	display: -webkit-box;
@@ -795,29 +800,11 @@ html, body {
 	margin-left: 10px;
 }
 
-.section-form .form-cont {
-	padding: 40px 0 60px;
-}
-
 .section-form .form-cont .row {
 	padding: 0 80px;
-	margin-bottom: 20px;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
-	/*
-				&.type2{
-					@include Align-top-left;
-
-					.input-tit{width:170px; padding-top:18px;}
-					.inputT, .selectbox{width:300px; margin-right:5px;}
-					.selectbox{width:210px;}
-					.txt{padding-top:18px;}
-					.txt-exam{padding:0 5px; color:#8f9191;}
-					.at{margin-right:5px;}
-					.textarea{width:700px; height:160px;}
-				}
-				*/
 }
 
 .section-form .form-cont .row.type2 {
@@ -907,6 +894,10 @@ html, body {
 	max-width: 100%;
 }
 
+.section-form .form-cont .row + .row, .section-form .form-cont .row + .lst {
+	margin-top: 20px;
+}
+
 .section-form .form-cont .input-group {
 	border-top: 1px solid #e7e7e7;
 	border-bottom: 1px solid #e7e7e7;
@@ -932,7 +923,7 @@ html, body {
 }
 
 .section-form + .section-form {
-	margin-top: 60px;
+	margin-top: 40px;
 }
 
 .section-form-align-c .form-cont {
@@ -991,44 +982,39 @@ html, body {
 	   -moz-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	padding-bottom: 40px;
-	margin-bottom: 50px;
+	padding: 0 80px 40px;
+	margin-bottom: 40px;
 	border-bottom: 1px solid #e7e7e7;
 }
 
+.section-format .format-area {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 auto;
+	   -moz-box-flex: 0;
+	    -ms-flex: 0 1 auto;
+	        flex: 0 1 auto;
+	max-width: 100%;
+}
+
 .section-format .format-area > .row {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: baseline;
-	-webkit-align-items: baseline;
-	   -moz-box-align: baseline;
-	    -ms-flex-align: baseline;
-	        align-items: baseline;
-	-webkit-box-pack: left;
-	-webkit-justify-content: left;
-	   -moz-box-pack: left;
-	    -ms-flex-pack: left;
-	        justify-content: left;
-	margin-bottom: 40px;
+	display: table;
+	table-layout: fixed;
+}
+
+.section-format .format-area > .row dt, .section-format .format-area > .row dd {
+	display: table-cell;
 }
 
 .section-format .format-area > .row dt {
-	-webkit-box-flex: 0;
-	-webkit-flex: none;
-	   -moz-box-flex: 0;
-	    -ms-flex: none;
-	        flex: none;
-	-webkit-flex-basis: 170px;
-	    -ms-flex-preferred-size: 170px;
-	        flex-basis: 170px;
 	width: 170px;
 	font-family: "ManropeB", "NotoB", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
+}
+
+.section-format .format-area > .row + .row {
+	margin-top: 40px;
 }
 
 .section-format-type2 .format-header {
@@ -1072,7 +1058,6 @@ html, body {
 	   -moz-box-pack: left;
 	    -ms-flex-pack: left;
 	        justify-content: left;
-	margin-bottom: 40px;
 }
 
 .section-format-type2 .format-area > .row dt {
@@ -1089,6 +1074,10 @@ html, body {
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
+}
+
+.section-format-type2 .format-area > .row + .row {
+	margin-top: 40px;
 }
 
 .section-format-type2 .format-cont {
@@ -1108,7 +1097,7 @@ html, body {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	padding: 40px 0;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	border-bottom: 1px solid #e7e7e7;
 }
 
@@ -1129,7 +1118,7 @@ html, body {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	padding: 40px 80px;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 }
 
 .section-format-type2 .format-cont-type2 .format-area {
@@ -1771,6 +1760,7 @@ html, body {
 	font-size: 16px;
 	margin-top: 20px;
 	margin-bottom: 0;
+	line-height: inherit;
 }
 
 .process-list .txt {
@@ -2354,7 +2344,7 @@ html, body {
 	width: -webkit-calc(100% + 30px);
 	width: -moz-calc(100% + 30px);
 	width: calc(100% + 30px);
-	margin-left: -30px;
+	margin-left: -10px;
 }
 
 .choice-list.type-col3 > li {
@@ -2626,10 +2616,6 @@ html, body {
 
 .agree-area .row > .agree-cont ~ .agree-cont {
 	margin-top: 30px;
-}
-
-.section-form .agree-area {
-	padding: 0 0 60px;
 }
 
 .qna-list .accor-header {
