@@ -24,7 +24,7 @@ $(function(){
 		<nav class="header-nav header-nav-line">
 			<div class="inner">
 				<div class="nav-wrap">
-					<h1><a href="#none"><img src="../../../resources-pc/images/common/logo-header.png" alt="대한민국 No1.롯데렌터카"/></a></h1>
+					<h1><a href="#none"><img src="../../resources-pc/images/common/logo-header.png" alt="대한민국 No1.롯데렌터카"/></a></h1>
 					<ul>
 						<li>
 							<a href="#" class="draw-btn draw-btn-s" data-target="draw-cont-01" data-on="true" data-siblings="true">단기렌터카</a>
@@ -134,6 +134,7 @@ $(function(){
 										<ul>
 											<li><a href="#">월간렌트 서비스 안내</a></li>
 											<li><a href="#">렌터카 검색</a></li>
+											<li><a href="#">상담 신청</a></li>
 										</ul>
 									</div>
 								</li>
@@ -339,6 +340,7 @@ $(function(){
 											<ul>
 												<li><a href="#">월간렌트 서비스 안내</a></li>
 												<li><a href="#">렌터카 검색</a></li>
+												<li><a href="#">상담 신청</a></li>
 											</ul>
 										</div>
 									</li>

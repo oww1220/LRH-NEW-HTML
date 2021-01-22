@@ -139,7 +139,7 @@ $(function(){
 			</div>
 			<div class="inner">
 				<div class="footer-logo">
-					<img src="../resources-pc/images/common/logo-footer.png" alt="LOTTE rental"/>
+					<img src="../../resources-pc/images/common/logo-footer.png" alt="LOTTE rental"/>
 				</div>
 				<div class="footer-bottom-menu">
 					<div class="footer-infos-wrap">
@@ -174,7 +174,7 @@ $(function(){
 						</div>
 						<div class="footer-infos-bn">
 							<div class="footer-infos-bn-box">
-								<img src="../../../resources-pc/images/icons/ico-foot-bn.png" alt="업계최초 국내3대 고객만족도 평가 3관왕">
+								<img src="../../resources-pc/images/icons/ico-foot-bn.png" alt="업계최초 국내3대 고객만족도 평가 3관왕">
 							</div>
 							<div class="footer-infos-list">
 								<div class="detail-view-list-wrap">
@@ -183,7 +183,7 @@ $(function(){
 										<p class="detail-view-list-tit">롯데렌터카 수상 내역</p>
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<img src="../../../resources-pc/images/icons/ico-awarded01.png" alt="한국서비스대상 명예의 전당 2015년 명예의 전당 헌정">
+												<img src="../../resources-pc/images/icons/ico-awarded01.png" alt="한국서비스대상 명예의 전당 2015년 명예의 전당 헌정">
 											</div>
 											<div class="swiper-slide">
 												<img src="../../../resources-pc/images/icons/ico-awarded02.png" alt="2019 국가고객만족도  렌터카부문1위 (5년 연속)">

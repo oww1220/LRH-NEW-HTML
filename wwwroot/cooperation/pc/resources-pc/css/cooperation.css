@@ -7,6 +7,7 @@
 .cooperation-container .cooperation-wrap .car-select.radio-check .choice-list li:last-child{width: 33.3%;}
 .cooperation-container .cooperation-wrap .car-select-slide-wrap{width: 1040px; margin: 0 auto; overflow: hidden;}
 .cooperation-container .cooperation-wrap .car-select-slide-wrap .car-select-slide-cont{width: 100%; margin: 0 auto; padding-top: 40px;}
+.cooperation-container .section-form .form-cont{padding: 0;}
 
 /*라디오 버튼 설정*/
 .choice-list,
@@ -1196,19 +1197,13 @@
 .layer-wrap .tbl-box table td ul li{font-size: 15px; line-height: 1.7;}
 
 
-.cooperation-container .section-form .form-cont{padding:0;}
-.cooperation-container .section-form .form-cont .row{padding:0 30px;}
-.cooperation-container .section-form .form-cont.reserv-form .row{padding: 0 450px 0 0;}
-.cooperation-container .section-form .form-cont.reserv-form .row + .row .input-cont li + li { margin-top: 0;}
-.cooperation-container .section-form .form-cont.reserv-form li {padding-bottom: 0;}
-.cooperation-container .section-form .form-cont.reserv-form li + li {padding: 0; border-top: 0;}
-.cooperation-container .section-form + .section-form {margin-top:0;}
+
 
 
 /*제휴사 메인*/
 .cooperation-wrap .main-tit{font-size: 36px; padding-bottom: 30px; border-bottom: 1px solid #e7e7e7;}
 .cooperation-wrap .input-cont{padding: 50px 160px;}
-.cooperation-wrap .input-cont .btn-black{width: 80px; margin-left: 10px;}
+.cooperation-wrap .input-cont .coop-btn{width: 80px; margin-left: 10px;}
 .cooperation-container .coop-main-wrap .sub-tit{padding-bottom: 50px;}
 .cooperation-container .coop-main-wrap .icon{margin-right: 10px;}
 .cooperation-container .coop-main-wrap .icon.coop-grade01 {
@@ -1884,6 +1879,8 @@
 	padding-bottom: 0;
 }
 
+.cooperation-container .reserv-select-wrap .section-form .form-cont .row {padding: 0;}
+
 .cooperation-container .reserv-confirm-wrap{ position: relative; border-radius: 6px; width: 100%; margin: 120px 0 40px;  background-color: #fafafa;}
 .cooperation-container .reserv-confirm-wrap .reserv-confirm-ul{margin: 0 auto; width: 1040px;}
 .cooperation-container .reserv-confirm-wrap .reserv-confirm-ul > li{padding: 30px;}
@@ -1938,6 +1935,16 @@
 	background-image: none;
 }
 
+/*예약자 정보 폼*/
+.cooperation-container .coop-form-wrap .section-form .form-cont{padding:0;}
+.cooperation-container .coop-form-wrap .section-form .form-cont .row{padding:0 30px;}
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .row{padding: 0 450px 0 0;}
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .row + .row .input-cont li + li { margin-top: 0;}
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form li {padding-bottom: 0;}
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form li + li {padding: 0; border-top: 0;}
+.cooperation-container .coop-form-wrap .section-form + .section-form {margin-top:0;}
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .input-cont,
+.cooperation-container .coop-form-wrap .section-form .form-cont.driver-license-section .input-cont{padding:0;}
 
 
 /* 운전면허증 탭*/
@@ -2180,8 +2187,8 @@
 .cooperation-container .cooperation-wrap .form-cont.driver-license-section li + li {padding-left: 12px;}
 .cooperation-container .cooperation-wrap .lst.dot li + li {padding-left: 12px;}
 .cooperation-container .cooperation-wrap .form-cont.agreeAccor li {padding-bottom:0;}
-.cooperation-container .cooperation-wrap .textarea{height: 200px;}
-.cooperation-container .cooperation-wrap .textarea .textarea{border: 0;}
+.cooperation-container .cooperation-wrap .textarea{height: 200px;  width: auto;}
+.cooperation-container .cooperation-wrap .textarea .textarea{border: 0; width: auto;}
 .cooperation-container .cooperation-wrap .agree-area .agree-header .agree-header-top {padding: 0;}
 .cooperation-container .cooperation-wrap .form-cont.agreeAccor li > div > div {	width: 100%;}
 .cooperation-container .cooperation-wrap .form-cont .lst li + li {margin-top: 10px;}
@@ -3392,8 +3399,12 @@
 .layer-wrap.layer-carseat,
 .layer-wrap.layer-stroller{width: 930px;}
 
-.layer-cancel .cancel-info{font-size: 18px; padding: 0 0 40px 0; margin-bottom: 40px; border-bottom: 1px solid #f5f5f5;}
+.layer-cancel .cancel-info,
+.layer-business .cancel-info{display: flex; flex-wrap: nowrap; font-size: 18px; padding: 0 0 40px 0; margin-bottom: 40px; border-bottom: 1px solid #ddd;}
+.layer-cancel .cancel-info p,
+.layer-business .cancel-info p{padding-top: 5px;}
 .layer-cancel .tbl-box table td{text-align: center;}
+.layer-business .icon.coop-dialogue,
 .layer-cancel .icon.coop-dialogue {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-pc/images/icons/ico-coop-dialogue.png");
@@ -3404,3 +3415,6 @@
 	width: 35px;
 	height: 35px;
 }
+
+.layer-business .btn-wrap{padding: 0 50px 0;}
+.layer-business .btn-wrap button{margin-bottom: 20px;}

@@ -82,7 +82,7 @@
 							<div class="inputT">						
 								<input type="text" id="" placeholder="‘-’ 제외한 사업자번호 입력">
 							</div>
-							<button type="button" class="btn btn-black">확인</button>
+							<button type="button" class="btn btn-black coop-btn layer-business-open" data-layer="layer-business">확인</button>
 						</div>
 					</div>
 
@@ -171,67 +171,28 @@
 	<!--//floating_zone 컴포넌트-->
 
 	<!-- 예약취소 레이어 -->
-	<div class="layer-wrap layer-popup layer-cancel">
+	<div class="layer-wrap layer-popup layer-business">
 		<div class="pop-inner">
 			<div class="popup-top">
-				<h4>예약취소</h4>
-				<button type="button" class="layer-popup-close" data-layer="layer-one-way"><span class="icon pop-close">닫기 버튼</span></button>
+				<h4>알림</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-business"><span class="icon pop-close">닫기 버튼</span></button>
 			</div>
 			<div class="popup-cont layer-iscroll">
 				<div class="iscroll-in">
 					<div class="cancel-info">
-						<i class="icon coop-dialogue mr-10"></i>예약취소 시 수수료 몇 환불규정을 안내 합니다. 
+						<div><i class="icon coop-dialogue mr-10"></i></div>
+						<p>롯데렌터카 장기렌터카 고객이 아니거나, 사업자 번호를 잘못입력하셨습니다.</p>
 					</div>
 
-					<div class="tbl-box pb-60">
-						<p class="tit">취소 사유를 선택해 주세요.</p>
-						<select class="selectbox" name="" id="" onchange="">
-							<option value="">선택하세요</option>
-							<option value=""></option>
-							<option value=""></option>
-						</select>
+					<div class="btn-wrap">
+						<button type="button" class="btn btn-red">법인장기렌터카 알아보기</button>	
+						<button type="button" class="btn btn-red">신차장기렌터카 빠른 상담신청</button>	
+						<button type="button" class="btn btn-red">개인회원 단기렌터카 예약하기</button>	
 					</div>
+					
 
-					<div class="tbl-box">
-						<p class="tit">취소 수수료 및 노쇼(No Show) 수수료 환불 규정</p>
-						<table>
-							<caption></caption>	
-							<colgroup>
-								<col width="33.333%">
-								<col width="33.333%">
-								<col width="33.333%">
-							</colgroup>
-							<thead>
-								<tr>
-									<th>대여 예정일<br>
-										24시간 이전
-									</th>
-									<th>대여 예정일<br>
-										24시간 이내
-									</th>
-									<th>예정일<br>
-										24시간 이후
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>100% 환불</td>
-									<td>3,000원<br>
-										(취소 수수료)
-									</td>
-									<td>차량대여<br>
-										요금의 10%<br>
-										(노쇼 수수료)
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
 				<div class="popup-cont-bot-btns">
-					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-one-way">취소</button>	
-					<button type="button" class="btn btn-red">예약취소</button>	
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-business">확인</button>		
 				</div>
 			</div>
 		</div>
