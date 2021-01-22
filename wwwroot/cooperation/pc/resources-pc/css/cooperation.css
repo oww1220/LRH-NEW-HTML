@@ -8,6 +8,7 @@
 .cooperation-container .cooperation-wrap .car-select-slide-wrap{width: 1040px; margin: 0 auto; overflow: hidden;}
 .cooperation-container .cooperation-wrap .car-select-slide-wrap .car-select-slide-cont{width: 100%; margin: 0 auto; padding-top: 40px;}
 
+/*라디오 버튼 설정*/
 .choice-list,
 .car-list,
 .cdw-choice{
@@ -132,8 +133,52 @@
 .cdw-choice.type-col4 > li {
 	width: 25%;
 }
-.car-list .chk-view-box label{
-	flex-wrap: wrap;
+
+/* 차 선택 사진있는 라디오 버튼*/
+.car-list .chk-view-box label {display: block; height: 150px; padding: 15px 0 0 0;}
+.car-list .chk-view-box label span{display: block;}
+.car-list .chk-view-box label span.title{margin-top: 5px;}
+.car-list .chk-view-box label span img{width: 160px;}
+.car-list .chk-view-box label:after{top: 76%;right: 70px;}
+
+.car-list.list-type-col3 {margin-left: 0;}
+
+.cooperation-wrap .pagination-wrap .swiper-pagination {
+	z-index: 0;
+	position: inherit;
+	width: 0;
+}
+
+.cooperation-wrap .pagination-wrap .btn-paging-prev {
+	margin-right: 20px;
+}
+
+.cooperation-wrap .pagination-wrap .btn-paging-next {
+	margin-left: 20px;
+}
+
+/*차 선택 슬라이드*/
+.cooperation-wrap .car-select-slide-wrap {
+	margin-top: 60px;
+	overflow: hidden;
+}
+
+.cooperation-wrap .car-select-slide-wrap .swiper-wrapper {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
 }
 
 .cooperation-container .cooperation-wrap .form-cont .row.mt-80 {
@@ -148,10 +193,6 @@
 
 .cooperation-container .cooperation-wrap .form-cont.agree-area {
 	padding: 0;
-}
-
-.cooperation-container .cooperation-wrap .form-cont .row + .row {
-	padding-top: 40px;
 }
 
 .cooperation-container .cooperation-wrap .form-cont div:last-child .txt {
@@ -185,11 +226,6 @@
 	min-width: 125px;
 }
 
-
-.cooperation-container .cooperation-wrap .form-cont .row + .row {
-	padding-top: 20px;
-}
-
 .cooperation-container .cooperation-wrap .form-cont .box-between {
 	position: relative;
 }
@@ -213,7 +249,6 @@
 .cooperation-container .cooperation-wrap .form-cont li {
 	padding-bottom: 20px;
 }
-
 
 .cooperation-container .cooperation-wrap .form-cont li + li {
 	padding: 20px 0;
@@ -334,10 +369,6 @@
 
 .cooperation-container .cooperation-wrap .form-cont li:last-child {
 	padding-bottom: 0;
-}
-
-.cooperation-container .cooperation-wrap .form-cont .row + .row {
-	padding-top: 40px;
 }
 
 .cooperation-container .cooperation-wrap .form-cont .radio-icon-box label {
@@ -1013,6 +1044,8 @@
 .cooperation-container .calender-cont{height: 700px; overflow-y: auto; padding: 0 130px; border: 1px solid #ccc;}
 .cooperation-container .calender-cont > div{overflow-y: auto;overflow-x: hidden;height: 700px;}
 .cooperation-container .tbl-box .calendar-tit{font-size: 20px;  padding: 40px 10px 20px;  text-align: center;  color: #2f2f2f;}
+
+/*테이블 설정*/
 .cooperation-container .tbl-box table{width:100%;}
 .cooperation-container .tbl-box table th, td{text-align:center; padding:2px 0; height: 40px; color: #54585a;  font-size: 14px;}
 .cooperation-container .tbl-box table th{padding-top:0; color: #2f2f2f;}
@@ -1034,6 +1067,135 @@
 .cooperation-container .tbl-box table .on .btn{ color:#fff;  background-color:#ff404b;  border-radius:100%;}
 .cooperation-container .tbl-box table .t-red .btn{color: #ed1c24;}
 .cooperation-container .tbl-box table .day .btn{ width:38px; background-color: #ff404b; border-radius: 1.7rem; font-weight: normal;  color:#fff; }
+.coop-pay-cont .tbl-box {width: 100%;} 
+
+
+.layer-wrap .tbl-box table, 
+.coop-main-wrap .tbl-box table, 
+.coop-pay-cont .tbl-box table, 
+.cooperation-container .reserv-confirm .tbl-box table {
+	position: relative;
+	width: 100%;
+	word-break: break-word;
+	border-top: 1px solid #e7e7e7;
+	border-collapse: collapse;
+	z-index: 5;
+}
+
+.layer-wrap .tbl-box table th, 
+.layer-wrap .tbl-box table td, 
+.coop-main-wrap .tbl-box table th, 
+.coop-main-wrap .tbl-box table td, 
+.coop-pay-cont .tbl-box table th, 
+.coop-pay-cont .tbl-box table td, 
+.cooperation-container .reserv-confirm table th, 
+.cooperation-container .reserv-confirm table td{
+	padding: 30px;
+	text-align: center;
+	color: #54585a;
+	vertical-align: middle;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.layer-wrap .tbl-box table th .lst, 
+.layer-wrap .tbl-box table td .lst, 
+.coop-main-wrap table th .lst, 
+.coop-main-wrap table td .lst,
+.coop-pay-cont table th .lst, 
+.coop-pay-cont table td .lst,
+.cooperation-container .reserv-confirm .tbl-box table th .lst,
+.cooperation-container .reserv-confirm .tbl-box table td .lst {
+	margin: 0;
+}
+
+.layer-wrap .tbl-box table th p strong, 
+.layer-wrap .tbl-box table td p strong, 
+.coop-main-wrap .tbl-box table th p strong, 
+.coop-main-wrap .tbl-box table td p strong, 
+.coop-pay-cont .tbl-box table th p strong, 
+.coop-pay-cont .tbl-box table td p strong, 
+.cooperation-containerp .reserv-confirm .tbl-box table th p strong, 
+.cooperation-containerp .reserv-confirm .tbl-box table td p strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.layer-wrap .tbl-box table th p + .lst, 
+.layer-wrap .tbl-box table td p + .lst, 
+.coop-main-wrap .tbl-box table th p + .lst, 
+.coop-main-wrap .tbl-box table td p + .lst, 
+.coop-pay-cont .tbl-box table th p + .lst, 
+.coop-pay-cont .tbl-box table td p + .lst, 
+.cooperation-container .reserv-confirm .tbl-box table th p + .lst, 
+.cooperation-container .reserv-confirm .tbl-box table td p + .lst {
+	margin-top: 10px;
+}
+
+.layer-wrap .tbl-box table th:last-child, 
+.layer-wrap .tbl-box table td:last-child, 
+.coop-main-wrap .tbl-box table th:last-child, 
+.coop-main-wrap .tbl-box table td:last-child, 
+.coop-pay-cont .tbl-box table th:last-child, 
+.coop-pay-cont .tbl-box table td:last-child, 
+.cooperation-container .reserv-confirm .tbl-box table th:last-child, 
+.cooperation-container .reserv-confirm .tbl-box table td:last-child {
+	border-right: none;
+	border-left: 1px solid #e7e7e7;
+}
+
+.layer-wrap .tbl-box table th, 
+.coop-main-wrap .tbl-box table th, 
+.coop-pay-cont .tbl-box table th, 
+.cooperation-container .reserv-confirm .tbl-box table th {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	background-color: #fafafa;
+}
+
+.layer-wrap .tbl-box table td, 
+.coop-main-wrap .tbl-box table td, 
+.coop-pay-cont .tbl-box table td, 
+.cooperation-container .reserv-confirm .tbl-box table td {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	font-size: 14px;
+	color: #54585a;
+}
+
+.layer-wrap .tbl-box table td, 
+.layer-wrap .tbl-box table th {
+	padding: 30px;
+	text-align: center;
+	color: #54585a;
+	vertical-align: middle;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	line-height: 1.5;
+}
+
+.layer-wrap .tbl-box table th:last-child, 
+.layer-wrap .tbl-box table td:last-child{
+	border-right: none;
+	border-left: 1px solid #e7e7e7;
+}
+
+.layer-wrap.layer-cdw .tbl-box table td,
+.layer-wrap.layer-kickboard .tbl-box table td,
+.layer-wrap.layer-carseat .tbl-box table td,
+.layer-wrap.layer-stroller .tbl-box table td{text-align: center;}
+
+.layer-wrap .tbl-box table th{text-align: center; font-size: 18px;}
+.layer-wrap .tbl-box table td{text-align: left; font-size: 15px;}
+.layer-wrap .tbl-box table td ul li{font-size: 15px; line-height: 1.7;}
+
+
 .cooperation-container .section-form .form-cont{padding:0;}
 .cooperation-container .section-form .form-cont .row{padding:0 30px;}
 .cooperation-container .section-form .form-cont.reserv-form .row{padding: 0 450px 0 0;}
@@ -1041,6 +1203,46 @@
 .cooperation-container .section-form .form-cont.reserv-form li {padding-bottom: 0;}
 .cooperation-container .section-form .form-cont.reserv-form li + li {padding: 0; border-top: 0;}
 .cooperation-container .section-form + .section-form {margin-top:0;}
+
+
+/*제휴사 메인*/
+.cooperation-wrap .main-tit{font-size: 36px; padding-bottom: 30px; border-bottom: 1px solid #e7e7e7;}
+.cooperation-wrap .input-cont{padding: 50px 160px;}
+.cooperation-wrap .input-cont .btn-black{width: 80px; margin-left: 10px;}
+.cooperation-container .coop-main-wrap .sub-tit{padding-bottom: 50px;}
+.cooperation-container .coop-main-wrap .icon{margin-right: 10px;}
+.cooperation-container .coop-main-wrap .icon.coop-grade01 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-cooper-grade01.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 45px;
+	height: 45px;
+}
+
+.cooperation-container .coop-main-wrap .icon.coop-grade02 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-cooper-grade02.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 45px;
+	height: 45px;
+}
+
+.cooperation-container .coop-main-wrap .icon.coop-grade03 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-cooper-grade03.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 45px;
+	height: 45px;
+}
 
 .cooperation-container .section-form .form-cont.reserv-form .row.type2 .selectbox {
 	max-width: 30%;
@@ -1381,19 +1583,8 @@
 	line-height: 1;
 	font-size: 14px;
 	font-family: "ManropeR", "NotoR", serif;
-	/*font-family: "SpoqaR", serif;*/
-	/*font-family: "SpoqaHanSansR", serif;*/
 	font-weight: normal;
 	word-break: break-word;
-	/* &:after {
-                                display: flex;
-                                content: "";
-                                background: url(../../resources-pc/images/icons/ico-map-off.png) 0 0 no-repeat;
-                                width: 28px;
-                                height: 28px;
-                                margin-left: 5px;
-                                background-size: 100% auto;
-                            } */
 }
 
 .cooperation-container  .short-branch .short-branch-section .shor-main-list-wrap .shor-main-list-rt .btn-link b {
@@ -1403,13 +1594,8 @@
 
 .cooperation-container  .short-branch .short-branch-section .shor-main-list-wrap .shor-main-list-rt .btn-link.active {
 	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 	background: #fff;
-	/* &:after {
-                                    background: url(../../resources-pc/images/icons/ico-map-on.png) 0 0 no-repeat;
-                                } */
 }
 
 .cooperation-container  .short-branch .short-branch-section .shor-main-list-wrap .shor-main-list-rt .btn-link.active b {
@@ -1470,8 +1656,6 @@
 	font-size: 14px;
 	word-break: break-word;
 	font-family: "ManropeR", "NotoR", serif;
-	/*font-family: "SpoqaR", serif;*/
-	/*font-family: "SpoqaHanSansR", serif;*/
 	font-weight: normal;
 }
 
@@ -1482,8 +1666,6 @@
 
 .cooperation-container  .short-branch .short-branch-section .shor-main-list-wrap .shor-main-list-lt .btn-link.active {
 	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
 	background: #fff;
 }
@@ -1577,8 +1759,130 @@
 
 .cooperation-container .short-branch .short-branch-section.short-type2 .shor-main-list-wrap .shor-main-list-lt {height: 590px;}
 .cooperation-container .short-branch .short-branch-section.short-type2 .shor-main-list-wrap .shor-main-list-rt {height: 590px;}
-
 .cooperation-container .short-car {	width: 480px;padding: 17px 30px 0;}
+
+/*대여 및 차량유형 선택(step2)*/
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont .input-cont{padding: 0;}
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li {
+	padding-bottom: 20px;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li + li {
+	padding: 20px 0;
+	border-top: 1px solid #e7e7e7;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li + li > div > strong {
+	padding-top: 5px;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div strong {
+	width: 30%;
+	font-size: 16px;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div strong i {
+	margin-right: 10px;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div {
+	width: 65%;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div > div + div {
+	padding-top: 20px;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .chk-icon-box {
+	width: 50%;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .chk-icon-box label {
+	color: #8f9191;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .chk-icon-box span {
+	padding-left: 32px;
+	margin-top: 5px;
+	display: block;
+	color: #8f9191;
+	font-size: 14px;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .chk-icon-box input:checked + label {
+	color: #2f2f2f;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .input-increase {
+	padding: 17px 20px;
+	border: 1px solid #d2d2d2;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: 50px;
+	   -moz-border-radius: 50px;
+	        border-radius: 50px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 30%;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .input-increase input {
+	width: 70px;
+	text-align: center;
+	color: #8f9191;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .input-increase button {
+	color: #d2d2d2;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .input-increase.active {
+	border-color: #2f2f2f;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .input-increase.active input {
+	color: #2f2f2f;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .input-increase.active button {
+	color: #2f2f2f;
+}
+
+.cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li:last-child {
+	padding-bottom: 0;
+}
 
 .cooperation-container .reserv-confirm-wrap{ position: relative; border-radius: 6px; width: 100%; margin: 120px 0 40px;  background-color: #fafafa;}
 .cooperation-container .reserv-confirm-wrap .reserv-confirm-ul{margin: 0 auto; width: 1040px;}
@@ -1936,6 +2240,1114 @@
 }
 
 
+/* 결제 */
+
+.cooperation-wrap .coop-pay-cont {
+	position: relative;
+	padding-right: 450px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form + .section-form {
+	margin-top: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form:last-child .form-cont {
+	padding-bottom: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form .form-header {
+	margin-bottom: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form .form-header span {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	position: relative;
+	font-size: 14px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form .form-header span::before {
+	content: '*';
+	display: inline-block;
+	position: absolute;
+	top: 20%;
+	left: -12px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form .form-cont {
+	padding: 40px 0 80px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form .form-cont .row {
+	padding: 0 40px;
+	margin-bottom: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form .form-cont .row .lst li + li {
+	margin-top: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form .form-cont.agree-area {
+	padding: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form1 .form-cont .row + .row {
+	padding-top: 40px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form1 .form-cont div:last-child .input-tit {
+	font-size: 22px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form1 .form-cont div:last-child .txt {
+	font-size: 32px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form2 .form-cont .row + .row {
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form2 .form-cont .addr-area .inputT + .inputT {
+	margin-left: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form2 .form-cont .type-left {
+	position: relative;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form2 .form-cont .type-left .left-txt {
+	position: absolute;
+	top: 35%;
+	left: 35px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form2 .form-cont .certify-area .inputT, .cooperation-wrap .coop-pay-cont .section-cont .section-form.form2 .form-cont .certify-area .selectbox {
+	max-width: 100%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form2 .form-cont .certify-area .btn {
+	min-width: 125px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box label {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 0 30px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box label strong {
+	color: #8f9191;
+	font-size: 18px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box label strong:after {
+	content: '';
+	display: block;
+	width: 13px;
+	height: 12px;
+	margin-left: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box label span {
+	font-size: 18px;
+	color: #8f9191;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box input:checked + label {
+	border-color: #ed1c24;
+	background-color: #fff9f9;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box input:checked + label:after {
+	display: none;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box input:checked + label strong {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #ed1c24;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box input:checked + label strong:after {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+	background-position: center center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form4 .chk-view-box input:checked + label span {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #2f2f2f;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form5 .form-cont .row + .row {
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form5 .form-cont .box-between {
+	position: relative;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form5 .form-cont .box-between::before {
+	content: '-';
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -2.5px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form5 .form-cont .box-between select {
+	max-width: 48%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form5 .form-cont .box-between select + .inputT {
+	max-width: 48%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li {
+	padding-bottom: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li + li {
+	padding: 20px 0;
+	border-top: 1px solid #e7e7e7;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li + li > div > strong {
+	padding-top: 5px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	   -moz-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div strong {
+	width: 30%;
+	font-size: 16px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div strong i {
+	margin-right: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div {
+	width: 65%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div > div + div {
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box {
+	width: 50%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box label {
+	color: #8f9191;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box span {
+	padding-left: 32px;
+	margin-top: 5px;
+	display: block;
+	color: #8f9191;
+	font-size: 14px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .chk-icon-box input:checked + label {
+	color: #2f2f2f;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase {
+	padding: 17px 20px;
+	border: 1px solid #d2d2d2;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: 50px;
+	   -moz-border-radius: 50px;
+	        border-radius: 50px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 30%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase input {
+	width: 70px;
+	text-align: center;
+	color: #8f9191;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase button {
+	color: #d2d2d2;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase.active {
+	border-color: #2f2f2f;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase.active input {
+	color: #2f2f2f;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li > div > div .input-increase.active button {
+	color: #2f2f2f;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form6 .form-cont li:last-child {
+	padding-bottom: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form8 .form-cont .row + .row {
+	padding-top: 40px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form8 .form-cont .radio-icon-box label {
+	color: #8f9191;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form8 .form-cont .radio-icon-box input:checked + label {
+	color: #2f2f2f;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form8 .form-cont .input-cont select {
+	max-width: 100%;
+	color: #8f9191;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form9 .form-cont .row + .row {
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form9 .form-cont .row + .row .input-cont li + li {
+	margin-top: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form9 .form-cont .box-between .inputT {
+	max-width: 70%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form9 .form-cont .box-between button {
+	width: 30%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form9 .form-cont .chk-icon-box label {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	color: #8f9191;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form9 .form-cont .chk-icon-box input:checked + label {
+	color: #2f2f2f;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form9 .form-cont .chk-icon-box button {
+	margin-left: 5px;
+	padding: 3px 9px 3px 7px;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+	border: 1px solid #d2d2d2;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-size: 14px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form10 .form-cont .row + .row {
+	padding-top: 30px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form10 .form-cont .input-cont select {
+	max-width: 100%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form11 .form-cont .row + .row {
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form11 .form-cont label {
+	width: 35%;
+	-webkit-flex-basis: 35%;
+	    -ms-flex-preferred-size: 35%;
+	        flex-basis: 35%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form11 .form-cont label span {
+	margin-left: 10px;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form11 .form-cont .box-between .inputT {
+	max-width: 70%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form11 .form-cont .box-between button {
+	width: 30%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-icon-box {
+	padding-bottom: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-icon-box label {
+	width: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio {
+	width: 100%;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio ul {
+	width: 100%;
+	margin: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio ul li {
+	padding: 5px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input {
+	display: none;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box label {
+	color: #8f9191;
+	border: 1px solid #d2d2d2;
+	background-color: #fff;
+	height: 100px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label {
+	color: #ed1c24;
+	border-color: #ed1c24;
+	background-color: #fff9f9;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll {
+	min-width: 130px;
+	min-height: 40px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll01 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll01.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll02 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll02.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll03 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll03.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll04 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll04.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll05 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll05.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll06 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll06.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll07 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll07.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label .enroll08 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/logos/ico-enroll08.png");
+	background-position: center -40px;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .chk-view-box input:checked + label:after {
+	display: none;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont {
+	margin: 40px 0 0;
+	padding: 40px 0 0;
+	border-top: 1px solid #e7e7e7;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont.detail-tab-wrap-P {
+	display: none;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont.detail-tab-wrap-P.active {
+	display: block;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont.detail-tab-wrap-L {
+	display: none;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont.detail-tab-wrap-L.active {
+	display: block;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont.detail-tab-wrap-D {
+	display: none;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont.detail-tab-wrap-D.active {
+	display: block;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add {
+	padding: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add > div + div {
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add > div .input-tit {
+	width: 170px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add > div .input-cont {
+	width: 100%;
+	padding-bottom: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add > div .input-cont.radio-cont {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add > div .input-cont.radio-cont > div + div {
+	margin-left: 15px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add > div .input-cont select {
+	color: #8f9191;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add .lst {
+	padding-top: 30px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .input-add .lst .btn-box {
+	position: absolute;
+	top: -50%;
+	right: 0;
+	-webkit-transform: translateY(-10%);
+	   -moz-transform: translateY(-10%);
+	    -ms-transform: translateY(-10%);
+	     -o-transform: translateY(-10%);
+	        transform: translateY(-10%);
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 670px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add ul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-size: 0;
+	overflow-x: visible;
+	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	padding-bottom: .2rem;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add ul li {
+	width: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box {
+	margin-left: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box input:checked + label {
+	color: #ed1c24;
+	border-color: #ed1c24;
+	background-color: #fff9f9;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box input:checked + label:after {
+	display: block;
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+	background-position: right center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box label {
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	width: 160px;
+	height: 140px;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	color: #8f9191;
+	border: 1px solid #d2d2d2;
+	background-color: #fff;
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	   -moz-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	padding: 0 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box label b {
+	font-size: 18px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	padding: 30px 0 0 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box label em {
+	font-size: 18px;
+	color: #54585a;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	padding: 10px 0 0 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box label div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width: 100%;
+	padding: 20px 0 0 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box label div span {
+	font-size: 18px;
+	color: #8f9191;
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .chk-view-box label::after {
+	display: none;
+	content: '';
+	width: 13px;
+	height: 12px;
+	margin-top: -6px;
+	position: absolute;
+	top: 50%;
+	right: 30px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add .card-add-btn {
+	margin-left: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add a {
+	width: 160px;
+	height: 140px;
+	background-color: #fff;
+	border: 1px solid #d2d2d2;
+	color: #2f2f2f;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add a i {
+	font-size: 28px;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	line-height: 1;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .card-add a em {
+	padding: 15px 0 0 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-cont .section-form.form13 .form-cont .detail-radio-cont .lpay-card .input-add {
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb {
+	width: 390px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .lnb-wrap {
+	position: relative;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky-items {
+	position: absolute;
+	right: 0;
+	width: 390px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky-items.fixed .detail-sticky {
+	position: fixed;
+	height: 100vh;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky {
+	position: relative;
+	top: 0;
+	z-index: 5;
+	width: 390px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll {
+	width: 390px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li {
+	background-color: #4a4a4a;
+	padding-bottom: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	border-top: 1px solid #fff;
+	margin: 0 30px;
+	padding-top: 20px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > div strong {
+	padding-left: 10px;
+	font-size: 18px;
+	color: #fff;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > div > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	padding-right: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > div > div span {
+	font-size: 16px;
+	color: #fff;
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > div > div span + span {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	font-size: 14px;
+	color: #bbb;
+	padding-top: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > div > div span.price {
+	font-size: 32px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > div > div span.price em {
+	font-size: 18px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > ul li {
+	padding-top: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > ul li > div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin: 0 30px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > ul li > div strong {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	font-size: 14px;
+	color: #bbb;
+	padding-left: 10px;
+	line-height: 1.5;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > ul li > div div {
+	padding-right: 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li > ul li > div div span {
+	font-family: "ManropeR", "NotoR", serif;
+	/*font-family: "SpoqaR", serif;*/
+	/*font-family: "SpoqaHanSansR", serif;*/
+	font-weight: normal;
+	font-size: 14px;
+	color: #bbb;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li:first-child {
+	padding-top: 20px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+	        border-radius: 10px 10px 0 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li:first-child > div {
+	border-top: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li:last-child {
+	background-color: #656565;
+	-webkit-border-radius: 0 0 10px 10px;
+	   -moz-border-radius: 0 0 10px 10px;
+	        border-radius: 0 0 10px 10px;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-cont .cont-result > ul > li:last-child > div {
+	border-top: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-btn {
+	padding: 30px 0;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-btn ul {
+	width: 100%;
+	margin: 0;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.cooperation-wrap .coop-pay-cont .section-sticky-lnb .detail-sticky .detail-sticky-iscroll .sticky-btn ul li {
+	width: 49%;
+}
+
+.cooperation-wrap .coop-pay-cont .form-cont label {
+	width: 100%;
+	-webkit-flex-basis: auto;
+	    -ms-flex-preferred-size: auto;
+	        flex-basis: auto;
+}
+
+.cooperation-wrap .coop-pay-cont .input-cont {padding: 0;}
+.cooperation-wrap .coop-pay-cont .choice-list li:first-child{width: 100%;}
+.cooperation-wrap .coop-pay-cont .form-cont li {padding-bottom: 0;}
+
+
 /*예약확인*/
 .reserv-confirm-tab{margin: 0 auto; width: 950px;}
 .reserv-confirm-tab .selection {
@@ -1958,11 +3370,11 @@
 .reserv-confirm-tab .gray-noti-section {padding: 60px 180px 60px 100px;}
 .reserv-confirm-tab .lst.dot {text-align: left;}
 .reserv-confirm-tab .section-form .lst.dot li + li {padding-left: 12px;}
-.cooperation-container .reserv-confirm .tbl-box table td{text-align: left;}
+.reserv-confirm .tbl-box table td{text-align: left;}
 
 
 
-/*레이어 팝업 테이블*/
+/*레이어 팝업*/
 .layer-wrap .tit{
 	font-family: "ManropeB", "NotoM", serif;
 	font-weight: normal;
@@ -1971,99 +3383,6 @@
 	margin-bottom: 25px;
 }
 
-.layer-wrap .tbl-box table, 
-.cooperation-container .reserv-confirm .tbl-box table {
-	position: relative;
-	width: 100%;
-	word-break: break-word;
-	border-top: 1px solid #e7e7e7;
-	border-collapse: collapse;
-	z-index: 5;
-}
-
-.layer-wrap .tbl-box table th, 
-.layer-wrap .tbl-box table td, 
-.cooperation-container .reserv-confirm table th, 
-.cooperation-container .reserv-confirm table td{
-	padding: 30px;
-	text-align: center;
-	color: #54585a;
-	vertical-align: middle;
-	border-right: 1px solid #e7e7e7;
-	border-bottom: 1px solid #e7e7e7;
-}
-
-.layer-wrap .tbl-box table th .lst, 
-.layer-wrap .tbl-box table td .lst, 
-.cooperation-container .reserv-confirm .tbl-box table th .lst,
-.cooperation-container .reserv-confirm .tbl-box table td .lst {
-	margin: 0;
-}
-
-.layer-wrap .tbl-box table th p strong, 
-.layer-wrap .tbl-box table td p strong, 
-.cooperation-containerp .reserv-confirm .tbl-box table th p strong, 
-.cooperation-containerp .reserv-confirm .tbl-box table td p strong {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-}
-
-.layer-wrap .tbl-box table th p + .lst, 
-.layer-wrap .tbl-box table td p + .lst, 
-.cooperation-container .reserv-confirm .tbl-box table th p + .lst, 
-.cooperation-container .reserv-confirm .tbl-box table td p + .lst {
-	margin-top: 10px;
-}
-
-.layer-wrap .tbl-box table th:last-child, 
-.layer-wrap.tbl-box table td:last-child, 
-.cooperation-container .reserv-confirm .tbl-box table th:last-child, 
-.cooperation-container .reserv-confirm .tbl-box table td:last-child {
-	border-right: none;
-	border-left: 1px solid #e7e7e7;
-}
-
-.layer-wrap .tbl-box table th, 
-.cooperation-container .reserv-confirm .tbl-box table th {
-	font-family: "ManropeB", "NotoM", serif;
-	/*font-family: "SpoqaB", serif;*/
-	/*font-family: "SpoqaHanSansB", serif;*/
-	font-weight: normal;
-	background-color: #fafafa;
-}
-
-.layer-wrap .tbl-box table td, 
-.cooperation-container .reserv-confirm .tbl-box table td {
-	font-family: "ManropeR", "NotoR", serif;
-	/*font-family: "SpoqaR", serif;*/
-	/*font-family: "SpoqaHanSansR", serif;*/
-	font-weight: normal;
-	font-size: 14px;
-	color: #54585a;
-}
-
-.layer-wrap .tbl-box table td, 
-.layer-wrap .tbl-box table th {
-	padding: 30px;
-	text-align: center;
-	color: #54585a;
-	vertical-align: middle;
-	border-right: 1px solid #e7e7e7;
-	border-bottom: 1px solid #e7e7e7;
-	line-height: 1.5;
-}
-
-.layer-wrap .tbl-box table th:last-child, 
-.layer-wrap .tbl-box table td:last-child{
-	border-right: none;
-	border-left: 1px solid #e7e7e7;
-}
-
-.layer-wrap .tbl-box table th{text-align: center; font-size: 18px;}
-.layer-wrap .tbl-box table td{text-align: left; font-size: 15px;}
-.layer-wrap .tbl-box table td ul li{font-size: 15px; line-height: 1.7;}
 
 .layer-wrap .lst.dot{margin-top: 20px;}
 .layer-wrap .lst.dot li{line-height: 1.7;}
@@ -2072,10 +3391,7 @@
 .layer-wrap.layer-kickboard,
 .layer-wrap.layer-carseat,
 .layer-wrap.layer-stroller{width: 930px;}
-.layer-wrap.layer-cdw .tbl-box table td,
-.layer-wrap.layer-kickboard .tbl-box table td,
-.layer-wrap.layer-carseat .tbl-box table td,
-.layer-wrap.layer-stroller .tbl-box table td{text-align: center;}
+
 .layer-cancel .cancel-info{font-size: 18px; padding: 0 0 40px 0; margin-bottom: 40px; border-bottom: 1px solid #f5f5f5;}
 .layer-cancel .tbl-box table td{text-align: center;}
 .layer-cancel .icon.coop-dialogue {

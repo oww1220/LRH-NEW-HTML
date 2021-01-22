@@ -110,10 +110,10 @@ $(function(){
     }
 
 
-    // 제휴사 예약 - 차량 종류 선택 슬라이드
-    if($('.car-select-slide-wrap .car-select-slide-cont').length) { 
-        if($('.secondhand-wrap .car-select-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 1) {
-            MUI.slide.init('.secondhand-wrap .car-select-slide-cont','swiper', {
+    //제휴사 예약 - 차량 종류 선택 슬라이드
+    if($('.cooperation-wrap .car-select-slide-cont').length) { 
+        if($('.cooperation-wrap .car-select-slide-cont').children('.swiper-wrapper').children('.swiper-slide').get().length > 1) {
+            MUI.slide.init('.cooperation-wrap .car-select-slide-cont','swiper', {
             loop: true,
             slidesPerView: 1,
             centeredSlides: false,
@@ -123,16 +123,15 @@ $(function(){
                 nextEl: '.btn-paging-next',
                 prevEl: '.btn-paging-prev',
             },
-            autoplay: {
-                delay: 3000,
-            },
             pagination: {
-                el: '.secondhand-wrap .swiper-pagination',
+                el: '.cooperation-wrap .swiper-pagination',
                 type: 'fraction',
             },
         });
         }
     }
+
+
 
     //제휴사 예약 - 국내/국제 면허증 탭
     if($('.driver-license-section .detail-radio').length) {
@@ -211,9 +210,58 @@ $(function(){
                 },200);
             });
         });
-}
+    }
 
-    
+    //견적 스티키 
+    // if($('.cooperation-wrap .detail-sticky-items').length) {
+    //     $(window).on('scroll', function(e) {
+    //         var scrollPos = window.scrollY || window.pageYOffset,
+    //             $target = $('.detail-sticky-items'),
+    //             $parent = $('.lnb-wrap'),
+    //             $targetScroll = $target.find('.detail-sticky-iscroll'),
+    //             parentBottomPos = $parent.offset().top + $parent.height() - $targetScroll.height(),
+    //             targetPos = $target.offset().top;
+
+    //         if(scrollPos >= targetPos) {
+    //             if(scrollPos >= parentBottomPos){
+    //                 $target.removeClass('fixed');
+    //                 $target.find('.detail-sticky').css({top: $parent.height()-$targetScroll.height()});
+    //                 if(stickyScrollObj){
+    //                     stickyScrollObj.destroy();
+    //                     $targetScroll.removeAttr('style'); 
+    //                     stickyScrollObj = null;
+    //                 }
+    //             }
+    //             else {
+    //                 $target.addClass('fixed');
+    //                 $target.find('.detail-sticky').css({top: 0});
+    //                 if(stickyScrollObj){
+    //                     stickyScrollObj.refresh();
+    //                 }
+    //                 if(!stickyScrollObj && $targetScroll.height() > $(window).height()) {
+    //                     stickyScrollObj = new IScroll('.detail-sticky', { 
+    //                         scrollbars: true,
+    //                         mouseWheel: true,
+    //                         interactiveScrollbars: true,
+    //                         shrinkScrollbars: 'scale',
+    //                         fadeScrollbars: true,
+    //                     });
+    //                 }
+                    
+    //             }
+                
+    //         }
+    //         else{
+    //             $target.removeClass('fixed');
+    //             if(stickyScrollObj){
+    //                 stickyScrollObj.destroy();
+    //                 $targetScroll.removeAttr('style'); 
+    //                 stickyScrollObj = null;
+    //             }
+                
+    //         }
+    //     });
+    // }
 
 });
 
