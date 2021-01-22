@@ -659,14 +659,16 @@
 
 	<!-- 메인 팝업 띄우기 위한 script -->
 	<script>
-		MUI.layer.open('.layer-bn', '.bg-dimmed', '.layer-wrap');
-		MUI.slide.init('.main-event-lists','swiper', {
-            slidesPerView: 'auto',
-            spaceBetween: 15,
-            centeredSlides: true,
-            autoplay: {
-                delay: 3000,
-            },
+		$(window).load(function(){
+			MUI.layer.open('.layer-bn', '.bg-dimmed', '.layer-wrap');
+			MUI.slide.init('.main-event-lists','swiper', {
+				slidesPerView: 'auto',
+				spaceBetween: 15,
+				centeredSlides: true,
+				autoplay: {
+					delay: 3000,
+				},
+			});
 		});
 	</script>
 	<!-- //메인 팝업 띄우기 위한 script -->
