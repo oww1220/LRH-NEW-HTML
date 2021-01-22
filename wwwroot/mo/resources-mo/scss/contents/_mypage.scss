@@ -121,14 +121,19 @@
                                     @include Bold;
                                 }
                                 &.underline {
-                                    position: relative;
-                                    &::before {
+                                    width: 70%;
+                                    //position: relative;
+                                    display: inline-block;
+                                    text-decoration: underline;
+                                    line-height: 1.2;
+                                    //border-bottom:1px solid #000;
+                                    /* &::before {
                                         content:'';
                                         display: inline-block;
                                         border-bottom:1px solid #000;
                                         width:100%;
                                         @include Position($bottom: 0, $left: 0)
-                                    }
+                                    } */
                                 }
                             }
                             & + li {
