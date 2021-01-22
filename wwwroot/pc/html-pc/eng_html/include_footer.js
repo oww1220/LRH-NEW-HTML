@@ -9,7 +9,7 @@ $(function(){
 				<div class="inner">
 					<ul>
 						<li>
-							<a href="#n" onclick="members.goWithNoAuth('https://direct.lotterentacar.net/main/main.do?utm_source=lotterentacar&amp;utm_medium=footer&amp;utm_campaign=FamilySite&amp;utm_content=신차장다이렉트', 'Y');ga('send', 'event', '풋터', 'goToDirect', '신차장다이렉트');">COMPAY</a>
+							<a href="#n" onclick="members.goWithNoAuth('https://direct.lotterentacar.net/main/main.do?utm_source=lotterentacar&amp;utm_medium=footer&amp;utm_campaign=FamilySite&amp;utm_content=신차장다이렉트', 'Y');ga('send', 'event', '풋터', 'goToDirect', '신차장다이렉트');">COMPANY</a>
 						</li>
 						<li>
 							<a href="#n" onclick="members.goWithNoAuth('https://manager.lotterentacar.net/main.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '신차장_멤버십랜딩');">USER AGREEMENT</a>
@@ -38,8 +38,8 @@ $(function(){
 									<li>
 										<ul class="address">
 											<li>LOTTE rental co., ltd. | President : Kim, Hyun Soo | Business Registration # : 214-87-79183</li>
-											<li>Communication Service # : 2010-Gyunggi Anyang 420 | Address : 8F Shinwonvision Tower 898. Hogye-dong, Dongan-Gu, Anyang</li>
-											<li>Main Contact 1588-12300 | Oversea 82-2-797-8000</li>
+											<li>Communication Service # : 2010-Gyeonggi Anyang 420 | Address : 8F Shinwonvision Tower 898. Hogye-dong, Dongan-Gu, Anyang</li>
+											<li>Main Contact 1588-1230 | Oversea +82-2-797-8000</li>
 											<li>copyright ⓒ 2021 LOTTE rental co., ltd.All Rights Reserved.</li>
 										</ul>
 									</li>
