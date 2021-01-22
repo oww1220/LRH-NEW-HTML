@@ -1739,6 +1739,15 @@ if($('.mypage-container .indicator-toggle-cont').length) {
         }
     }
 
+    //메인 배너 레이어팝업
+    if($('#wrap').length) {
+        MUI.layer.closeClick('.layer-bn-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
+            //console.log('close');
+            $('.bg-dimmed').css('z-index','50');
+            hide();
+        });
+    }
+
 /* 메인end-------------------------------------------------*/
 
 /* 실시간예약 메인start-------------------------------------------------*/

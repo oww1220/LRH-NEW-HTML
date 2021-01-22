@@ -853,6 +853,47 @@
 	</div>
 	<!-- //무단이메일 수집 거부 레이어 -->
 
+	<!--layer-popup 메인 배너 컴포넌트-->
+	<div class="layer-wrap layer-popup layer-bn">
+		<div class="pop-inner">
+			<div class="pop-scroll">
+				<div class="pop-cont">
+					<div class="swiper-container main-event-lists">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="main-event-lists-img">
+									<img src="../../../resources-pc/images/@temp-main-info-bn-01.png" alt="bn">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="main-event-lists-img">
+									<img src="../../../resources-pc/images/@temp-main-info-bn-01.png" alt="bn">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="main-event-lists-img">
+									<img src="../../../resources-pc/images/@temp-main-info-bn-01.png" alt="bn">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="main-event-lists-img">
+									<img src="../../../resources-pc/images/@temp-main-info-bn-01.png" alt="bn">
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next"><span class="icon swiper-next"></span></div>
+						<div class="swiper-button-prev"><span class="icon swiper-prev"></span></div>
+					</div>
+					<div class="pop-bottom">
+						<button type="button" class="layer-today-close layer-bn-close" data-layer="layer-bn">오늘 하루 그만 보기</button>
+						<button type="button" class="layer-bn-close" data-layer="layer-bn">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//layer-popup 메인 배너 컴포넌트-->
+
 	<!--bg-dimmed 컴포넌트-->
 	<div class="bg-dimmed">딤(Dim)처리 배경</div>
 	<!-- gnb 관련 필수 dim 입니다. -->
@@ -869,6 +910,26 @@
 		플로팅 사이드 바영역
 	</aside>
 	<!--//floating_zone 컴포넌트-->
+
+	<!-- 메인 팝업 띄우기 위한 script -->
+	<script>
+		$(window).load(function(){
+			MUI.layer.open('.layer-bn', '.bg-dimmed', '.layer-wrap');
+			MUI.slide.init('.main-event-lists','swiper', {
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				autoplay: {
+					delay: 3000,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+			$('.bg-dimmed').css('z-index','55');
+		});
+	</script>
+	<!-- //메인 팝업 띄우기 위한 script -->
 
 
 </body>
