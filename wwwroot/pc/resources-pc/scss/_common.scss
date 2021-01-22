@@ -616,6 +616,9 @@ $txt-darkblack: #2f2f2f;
 			// .lst{
 			// 	margin-bottom:30px;
 			// }
+			.lst{
+				+ .tbl-box{margin-top:25px;}
+			}
 			.tbl-box{
 				table{
 					position:relative;
@@ -782,8 +785,8 @@ $txt-darkblack: #2f2f2f;
 			.input-group{
 				border-top:1px solid $border-grey;
 				border-bottom:1px solid $border-grey;
-				padding:20px 0 0;
-				margin:0 80px 20px;
+				padding:20px 0;
+				margin:20px 80px;
 
 				.input-group-tit{
 					@include Bold;
@@ -872,7 +875,7 @@ $txt-darkblack: #2f2f2f;
 		}
 		.format-cont{
 			@include Align-middle;        
-			padding:40px 0;
+			padding:0 0 40px;
 			margin-bottom:40px;
 			border-bottom:1px solid #e7e7e7;
 
@@ -1628,8 +1631,7 @@ $txt-darkblack: #2f2f2f;
 	}
 
 	&.type-col3{		
-		width: calc(100% + 30px);
-		margin-left:-10px;
+		width: calc(100% + 10px);
 
 		> li{
 			width:33.3333%;
@@ -1637,8 +1639,7 @@ $txt-darkblack: #2f2f2f;
 	}
 	
 	&.type-col4{		
-		width: calc(100% + 40px);
-		margin-left:-40px;
+		width: calc(100% + 10px);
 
 		> li{width:25%;}
 	}	
