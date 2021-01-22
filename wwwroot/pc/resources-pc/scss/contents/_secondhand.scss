@@ -79,25 +79,132 @@
         border:1px solid #d2d2d2;
         border-radius: 6px;;
 
+        // .calendar-wrap{
+        //     position:relative;
+        //     padding:60px;
+
+        //     .calendar{
+        //         @include Align-between-top;
+                
+        //         .col{
+        //             flex-basis: 33.333%;
+        //             &:last-of-type{
+        //                 .tbl-box{border-right:none;}
+        //             }  
+        //         }
+        //         .tbl-box{
+        //             border-right:1px solid #e7e7e7;
+        //             padding:0 15px;
+        //             table{
+        //                 width:100%;
+        //                 th, td{text-align:center;padding:15px 0;}
+        //                 th{padding-top:0;}
+        //                 .btn {width:38px; height:38px; padding:0;}                                                
+        //                 .disabled, .disabled button, button[disabled]{
+        //                     color:#ddd;
+        //                     cursor: unset;
+        //                 }
+        //                 .today{
+        //                     .btn{
+        //                         position: relative;
+        //                         @include Bold; 
+        //                         color:#a02a3d; 
+        //                         &:after{
+        //                             content:"";
+        //                             display:block;
+        //                             width: 20px;
+        //                             height:1px;
+        //                             margin: 0 auto;
+        //                             background-color:#a02a3d;
+        //                         }                                
+        //                     }                            
+        //                 }
+        //                 .today{
+        //                     &.on, &.start, &.end, &.during{
+        //                         .btn{
+        //                             &:after{background-color:#fff;}
+        //                         }
+        //                     }
+        //                 }
+        //                 .start, .end, .during{
+        //                     .btn{
+        //                         width: 100%;
+        //                         color:#fff;
+        //                         background-color: #ff404b;
+        //                     }
+        //                 }
+        //                 .start{
+        //                     .btn{                                
+        //                         border-top-left-radius: 38px;
+        //                         border-bottom-left-radius: 38px;
+        //                     }
+        //                 }
+        //                 .end{
+        //                     .btn{                               
+        //                         border-top-right-radius: 38px;
+        //                         border-bottom-right-radius: 38px;
+        //                     }
+        //                 }
+        //                 .on{    
+        //                     .btn{
+        //                         color:#fff;
+        //                         background-color:#ff404b;
+        //                         border-radius:100%;
+        //                     }         
+        //                 }                       
+                        
+        //             }
+        //         }                
+        //         .calendar-tit{@include Bold; text-align:center; margin-bottom:30px;}                
+        //     }
+        //     .btn-paging-prev, .btn-paging-next{
+        //         @include Position($top:50px, $left:50px);
+        //         border:none;            
+        //     }
+        //     .btn-paging-next{
+        //         @include Position($top:50px, $left:auto, $right:50px);
+        //     }
+        // }
+        
         .calendar-wrap{
             position:relative;
-            padding:60px;
+            padding:40px;
 
             .calendar{
-                @include Align-between-top;
+                @include Align-between-top;                
                 
                 .col{
+                    flex:none;
+                    width:33.3333%;
                     flex-basis: 33.333%;
-                    &:last-of-type{
-                        .tbl-box{border-right:none;}
-                    }  
+                    
+
+                    + .col{
+                        position:relative;
+
+                        &:before{
+                            @include Position($top:0, $left:0);
+                            content:"";
+                            width:1px;
+                            height:100%;
+                            background-color:$border-grey;
+                        }
+                    }
                 }
-                .tbl-box{
-                    border-right:1px solid #e7e7e7;
+                .calendar-tit{
+                    position:relative;
+                    left:-1px;          
+                    @include Bold; 
+                    text-align:center; 
+                    padding-bottom:30px;
+                    background-color:#fff;
+                }   
+                .tbl-box{                    
                     padding:0 15px;
+
                     table{
                         width:100%;
-                        th, td{text-align:center;padding:15px 0;}
+                        th, td{text-align:center;padding:6px 0;}
                         th{padding-top:0;}
                         .btn {width:38px; height:38px; padding:0;}                                                
                         .disabled, .disabled button, button[disabled]{
@@ -151,20 +258,20 @@
                                 background-color:#ff404b;
                                 border-radius:100%;
                             }         
-                        }                       
+                        }                      
                         
                     }
-                }                
-                .calendar-tit{@include Bold; text-align:center; margin-bottom:30px;}                
+                }            
             }
             .btn-paging-prev, .btn-paging-next{
-                @include Position($top:50px, $left:50px);
+                @include Position($top:30px, $left:30px);
                 border:none;            
             }
             .btn-paging-next{
-                @include Position($top:50px, $left:auto, $right:50px);
+                @include Position($top:30px, $left:auto, $right:30px);
             }
         }
+
         .schedule-bot{
             @include Align-box;
             border-top:1px solid #e7e7e7;
@@ -477,6 +584,9 @@
 
                 .result-cont{
                     .item{
+                        padding-right: 40px;
+
+                        .img-box{height:300px;}
                         .descri-area{
                             .bar-type{
                                 .branch{
@@ -514,26 +624,37 @@
 
                     .img-box{                        
                         position:relative;
-                        @include Align-middle;
+                        //@include Align-middle;
                         //overflow:hidden;
                         height:200px;
-                        img {
-                            width: 270px; height: 185px; background-size: 100% auto;
-                        }
                         
+
+                        //비율 깨져도 해당 영역 벗어나지 않고 꽉차게
                         .img-wrap{
-                            position:relative;
-                            @include Align-middle;
-                            overflow:hidden;
+                            height:inherit;
+                        }
+                        img{
                             width:100%;
-                            height:200px;
-                            img{
-                                @include Position($top:0, $left:0, $right:0, $bottom:0);
-                                margin: auto;
-                                width:100%;
-                                height:100%;
-                            }
-                        }                        
+                            height:100%;
+                        }
+
+                        // img {
+                        //     width: 270px; height: 185px; background-size: 100% auto;
+                        // }
+                        
+                        // .img-wrap{
+                        //     position:relative;
+                        //     @include Align-middle;
+                        //     overflow:hidden;
+                        //     width:100%;
+                        //     height:200px;
+                        //     img{
+                        //         @include Position($top:0, $left:0, $right:0, $bottom:0);
+                        //         margin: auto;
+                        //         width:100%;
+                        //         height:100%;
+                        //     }
+                        // }                        
                         
                         .cover{
                             @include Position($bottom:0, $left:0, $right:0);

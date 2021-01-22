@@ -376,6 +376,7 @@ html, body{
 	font-size:16px;
 	@include Regular;
 	line-height:1.5;
+	word-break: break-word;
 }
 #wrap{padding-bottom:120px;}
 
@@ -729,6 +730,8 @@ $txt-darkblack: #2f2f2f;
 	}
 
 	&-form{
+		padding-bottom:40px;
+
 		.form-header{
 			position:relative;
 			@include Align-middle-left;
@@ -756,27 +759,11 @@ $txt-darkblack: #2f2f2f;
 			.tooltip-area{margin-left:10px;}
 		}
 		.form-cont{
-			//padding:40px 0 120px;
-			padding:40px 0 60px;
+			//padding-top:40px;
 
 			.row{
 				padding:0 80px;
-				margin-bottom:20px; 
 				box-sizing:border-box;
-				
-				/*
-				&.type2{
-					@include Align-top-left;
-
-					.input-tit{width:170px; padding-top:18px;}
-					.inputT, .selectbox{width:300px; margin-right:5px;}
-					.selectbox{width:210px;}
-					.txt{padding-top:18px;}
-					.txt-exam{padding:0 5px; color:#8f9191;}
-					.at{margin-right:5px;}
-					.textarea{width:700px; height:160px;}
-				}
-				*/
 				
 				&.type2{
 					@include formRow;
@@ -787,6 +774,8 @@ $txt-darkblack: #2f2f2f;
 					
 					}
 				}
+
+				+ .row, + .lst{margin-top:20px; }
 			}
 
 			//기사포함단기렌터카 - 상담하기 2단계 임시로 디자인 적용
@@ -809,10 +798,11 @@ $txt-darkblack: #2f2f2f;
 			}
 		}
 
-		+ .section-form{ margin-top:60px;}
+		+ .section-form{ margin-top:40px;}
 	}
 
-	&-form-align-c{ //form-cont 가운데 정렬
+	//form-cont 가운데 정렬
+	&-form-align-c{ 
 		.form-cont{
 			@include Align-top-column;
 			.form-row{
@@ -826,24 +816,32 @@ $txt-darkblack: #2f2f2f;
 		}
 	}
 	&-format{
-		@include Align-middle;        
-		padding-bottom:40px;
-		margin-bottom:50px;
+		@include Align-middle;        		
+		padding:0 80px 40px;
+		margin-bottom:40px;
 		border-bottom:1px solid #e7e7e7;
 
 		.format-area{		
+			flex: 0 1 auto;
+			max-width: 100%;
+			
+
             > .row{
-				//@include Align-top-left;
-				@include Align-baseline;
-                margin-bottom:40px;
+				//@include Align-baseline;
+				display:table;
+				table-layout: fixed;
+
+				dt, dd{					
+					display:table-cell;					
+				}
 
                 dt{
-					flex:none;
-					flex-basis: 170px;
+					// flex:none;
+					// flex-basis: 170px;
 					width:170px;
 					@include Bold; 
 				}
-                
+                + .row{margin-top:40px;}
 			}
         }
 	}	
@@ -862,7 +860,6 @@ $txt-darkblack: #2f2f2f;
 		.format-area{	
 			> .row{
 				@include Align-top-left;
-				margin-bottom:40px;
 
 				dt{
 					flex:none;
@@ -870,19 +867,19 @@ $txt-darkblack: #2f2f2f;
 					width:170px;
 					@include Bold; 
 				}
-				
+				+ .row{margin-top:40px;}
 			}
 		}
 		.format-cont{
 			@include Align-middle;        
 			padding:40px 0;
-			margin-bottom:50px;
+			margin-bottom:40px;
 			border-bottom:1px solid #e7e7e7;
 
 			&-type2{	
 				@include Align-middle; 
 				padding:40px 80px; 
-				margin-bottom:50px;
+				margin-bottom:40px;
 
 				.format-area{
 					flex:none;
@@ -1171,16 +1168,15 @@ $txt-darkblack: #2f2f2f;
 		border-radius: 40px;
 		background-color:#8f9191;
 	}
-	.tit{display:block; font-size:16px; margin-top:20px; margin-bottom:0;}
+	.tit{
+		display:block; 
+		font-size:16px; 
+		margin-top:20px; 
+		margin-bottom:0;
+		line-height:inherit;
+	}
 	.txt{font-size:14px; margin-top:15px; color:#54585a}
-	// .lst.txt{
-	// 	li{
-	// 		+ li{margin-top:15px;}
-	// 	}
-	// }
-
 	+ .lst{margin-top:20px;}
-
 
 	&.type-col4{
 		@include Align-box;
@@ -1592,7 +1588,7 @@ $txt-darkblack: #2f2f2f;
 
 .choice-list{
 	@include Align-box;
-	
+		
 	li{		
 		padding:0 10px 10px 0;
 		box-sizing: border-box;
@@ -1633,9 +1629,11 @@ $txt-darkblack: #2f2f2f;
 
 	&.type-col3{		
 		width: calc(100% + 30px);
-		margin-left:-30px;
+		margin-left:-10px;
 
-		> li{width:33.3333%;}
+		> li{
+			width:33.3333%;
+		}
 	}
 	
 	&.type-col4{		
@@ -1824,9 +1822,10 @@ $txt-darkblack: #2f2f2f;
 		}
 	}
 }
-.section-form {
-	.agree-area{padding:0 0 60px}
-}
+// .section-form {
+// 	.agree-area{padding:0 0 60px}
+// }
+
 .qna-list{	
 	$qna-spacing: 40px;
 	$icon-q-pos: calc(26px - (30px - 26px));
