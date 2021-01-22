@@ -12,7 +12,7 @@ $(function(){
 				<li>	
 					<span class="icon myPannel07"></span>
 					<div class="txt-box">
-						<p>L.POINT</p>
+						<p>Level</p>
 						<span>General</span>
 					</div>
 				</li>
