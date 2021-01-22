@@ -5,9 +5,9 @@ $(function(){
         <!--footer 컴포넌트-->
         <footer class="footer">
             <div class="inner">
-                <div class="footer-bn">
+                <!-- <div class="footer-bn">
                     <img src="../../../resources-mo/images/icons/ico-foot-bn.png" alt="bn">
-                </div>
+                </div> -->
                 <div class="footer-center">
                     <ul class="list-type-col2">
                         <li><em>Customer Service</em><b><a href="tel:1588-1230">1588-1230</a></b></li>

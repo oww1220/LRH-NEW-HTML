@@ -591,7 +591,7 @@ if($('.footerMenu-wrap .tab-normal').length){
     }
 
 
-
+    //설정 레이어팝업
     if($('#wrap').length) {
         MUI.layer.openClick('.layer-setup-open', LAYER_DIM, LAYER_PARENT, false, function(show){
             //console.log('open');
@@ -607,19 +607,17 @@ if($('.footerMenu-wrap .tab-normal').length){
         });
     }
 
-
-
-    //설정 레이어팝업
-    // if($('#wrap').length) {
-    //     MUI.layer.openClick('.layer-setup', LAYER_DIM, LAYER_PARENT, false, function(show){
-    //         //console.log('open');
-    //         show();
-    //     });
-    //     MUI.layer.closeClick('.layer-setup-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
-    //         //console.log('close');
-    //         hide();
-    //     });
-    // }
+    //메인 배너 레이어팝업
+    if($('#wrap').length) {
+        // MUI.layer.openClick('.layer-bn-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+        //     //console.log('open');
+        //     show();
+        // });
+        MUI.layer.closeClick('.layer-bn-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
+            //console.log('close');
+            hide();
+        });
+    }
 /* -------------------------------------------------레이어팝업end*/
 
 
