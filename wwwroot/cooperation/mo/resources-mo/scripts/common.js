@@ -421,5 +421,27 @@ $(function(){
             }
         });
     }
+
+    //옵션 - 유모차 탭전환
+    if($('.short-rental-option .tab-normal').length){
+        MUI.event.taps('.short-rental-option .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+    //옵션 - 카시트 탭전환
+    if($('.short-rental-carseat .tab-normal').length){
+        MUI.event.taps('.short-rental-carseat .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+    //옵션 - 펫카 탭전환
+    if($('.short-rental-pet .tab-normal').length){
+        MUI.event.taps('.short-rental-pet .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
+
+
     
 });
