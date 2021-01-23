@@ -1218,7 +1218,11 @@ $txt-darkblack: #2f2f2f;
 	&.txt-color-red{
 		color:$txt-red;
 
-		li{color:inherit;}
+		li{color:inherit;
+			&::before {
+				background-color: $txt-red;
+			}
+		}
 	}
 	
 	&.simple{
@@ -1234,17 +1238,21 @@ $txt-darkblack: #2f2f2f;
 	&.dot{
 		> li{
 			&::before{
-				@include Position($left:0, $top:-2px);
-				width:12px;
-				font-size:18px;
-				content:"·";
-				// display: inline-block;
-				// width:3px;
-				// height:3px;
+				//210123 폰트 로드속도 이슈로 수정
+				@include Position($left:0, $top:9px);
+				//width:12px;
+				//font-size:18px;
+				content:"";
+				display: inline-block;
+				width:2px;
+				height:2px;
 				// border-radius:100%;
-				// background-color: #2f2f2f;
-				// vertical-align: middle;
+				background-color:#54585a;
+				vertical-align: middle;
 
+			}
+			&.txt-color-red:before {
+				background-color: $txt-red;
 			}
 		}
 

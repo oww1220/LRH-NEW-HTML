@@ -1833,6 +1833,10 @@ html, body {
 	color: inherit;
 }
 
+.lst.txt-color-red li::before {
+	background-color: #ed1c24;
+}
+
 .lst.simple > li {
 	padding: 0;
 }
@@ -1844,11 +1848,18 @@ html, body {
 
 .lst.dot > li::before {
 	position: absolute;
-	top: -2px;
+	top: 9px;
 	left: 0;
-	width: 12px;
-	font-size: 18px;
-	content: "·";
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 2px;
+	background-color: #54585a;
+	vertical-align: middle;
+}
+
+.lst.dot > li.txt-color-red:before {
+	background-color: #ed1c24;
 }
 
 .lst.dot-type2 > li {
