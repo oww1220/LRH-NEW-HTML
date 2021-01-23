@@ -312,8 +312,11 @@
             .drawer-menu-tab{
                 padding:2.6rem 0;
                 width:40%;
+                height: 30vh;
+                overflow-y: auto;
                 ul{
                     @include Align-left-column;
+                    margin-bottom: 20vh;
                     .drawer-menu-tit{
                         position: relative;
                         margin:.4rem 0 0 0;
@@ -345,12 +348,16 @@
             .drawer-menu-list{
                 padding:2.6rem 0;
                 width:60%;
-                height: 41.4rem;
+                //height: 41.4rem;
+                height: 30vh;
                 overflow-y: auto;
                 background-color: #fff;
                 .drawer-menu-cont{
                     margin:0 0 0 3.4rem;
-                    &:nth-of-type(1) {
+                    > ul:nth-of-type(1) {
+                        margin-bottom: 50vh;
+                        }
+                   /*  &:nth-of-type(1) {
                         > ul:nth-of-type(1) {
                         margin-bottom: 40vh;
                         }
@@ -359,7 +366,7 @@
                         > ul:nth-of-type(1) {
                         margin-bottom: 32vh;
                         }
-                    }
+                    } */
                     
                     ul > li{
                         b{
