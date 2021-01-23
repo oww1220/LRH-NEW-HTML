@@ -1,0 +1,89 @@
+.push {
+    @include Position( $position:fixed, $top: 0, $right: 0);
+    width: 83.3%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 70;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform .4s;
+    -webkit-overflow-scrolling:touch;
+    &.active {
+        transform: translateX(0);
+    }
+
+    .push-top {
+        @include Position( $position:sticky, $top: 0, $left: 0);
+        z-index: 1;
+        padding: 0 1.7rem;
+        border-bottom:1px solid #d2d2d2;
+        background: #fff;
+        p{
+            @include Align-middle;
+            padding:2.9rem 0 1.8rem;
+            b{
+                font-size:1.6rem;
+                @include Bold;
+                @include Align-box-left;
+            }
+        }
+        .setup-btn{
+            @include Position($top:2.9rem, $right:1.7rem);
+            button {
+                padding: 0 1.3rem;
+                width: 1.4rem;
+                height: 1.6rem;
+            }
+        }
+    }
+
+    .push-cont {
+        background-color: #EFF2F7;
+    }
+
+    .push-list {
+        padding:0 0 5.1rem 0;
+        background-color: #fff;
+        h5 {
+            padding:3.4rem 1.7rem 1.3rem;
+            font-size:1.1rem;
+            color:#54585a;
+            @include Regular;
+            border-bottom:1px solid #e7e7e7;
+            b {
+                @include Bold;
+                font-size:1.1rem;
+                color:#ed1c24;
+            }
+        }
+        > ul {
+            position: relative;
+            @include Align-box;
+            > li {
+                box-sizing: border-box;
+                padding:1.3rem 0;
+                border-bottom:1px solid #e7e7e7;
+                width:100%;
+                a {
+                    @include Align-left-column;
+                    position: relative;
+                    margin:0 1.7rem;
+                    span{
+                        @include Regular;
+                        line-height:1.4;
+                    }
+                }
+                a:after{
+                    display:inline-block;
+                    content: "";
+                    @include Background($sprite:'ico-next02', $size:100% auto, $position:center center);
+                    width: 0.5rem;
+                    height: 1rem;
+                    @include Position($top:50%, $right:0);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.tab{
+	&-nav{
+		> ul {
+			width: 100%;
+			@include Align-box;
+			> li {
+				button {
+					@include Align-middle;
+					height: 4.1rem;
+					width: 100%;
+					border-bottom: 1px solid #e7e7e7;
+					font-size:1.4rem;
+					@include Regular;
+				}
+				&.active {
+					button {
+						color: #ff3f4c;
+						@include Bold;
+						border-bottom: .3rem solid #ff3f4c;
+					}
+				}
+			}
+			&.tab-col2 > li {
+				width: 50%;
+			}
+			&.tab-col3 > li {
+				width: 33.333%;
+			}
+			&.tab-col4 > li {
+				width: 25%;
+			}
+			&.tab-col5 > li {
+				width: 20%;
+			}
+			&.tab-col6 {
+				padding:0 1.7rem;
+				border-bottom:1px solid #e7e7e7;
+				@include Inline-scrolling;
+				padding-bottom:0;
+				display: block;
+				> li {
+					width: auto;
+					margin-left:1.3rem;
+					display:inline-block;
+					&:first-child {
+						margin-left:0;
+					}
+					button {
+						border:0;
+					}
+					&.active {
+						button {
+							color: #ff3f4c;
+							@include Bold;
+							border-bottom: .3rem solid #ff3f4c;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-history {
+		border-bottom:1px solid #e7e7e7;
+		background-color: #fff;
+		padding:3.4rem 1.7rem 0;
+		li {
+			&.active {
+				button {
+					border-bottom: .3rem solid #ff3f4c !important;
+				}
+			}
+			button {
+				position: relative;
+				display: inline-block;
+				border-bottom:0 !important;
+				height:auto;
+				margin-right:2.6rem;
+				font-size:1.3rem;
+				color:#8f9191;
+				@include Normal;
+			}
+		}
+	}
+}

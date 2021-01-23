@@ -1,0 +1,319 @@
+
+.slide-list,
+.slick-slider .slick-track,
+.slick-slider .slick-list{
+	height: 100%;
+}
+.slick-slide{
+	outline: none;
+}
+.slick-arrow{
+	position: absolute;
+	top: 50%;
+	width: 24px;
+	height: 24px;
+	font: 0/0 a;
+	border-top: 3px solid rgba(255, 255, 255, .4);
+	border-left: 3px solid rgba(255, 255, 255, .4);
+	border-radius: 2px;
+	z-index: 1;
+	&.slick-prev{
+		left: 20px;
+		transform: rotate(-45deg);
+	}
+	&.slick-next{
+		right: 20px;
+		transform: rotate(135deg);
+	}
+}
+
+.slide-controls{
+	position: absolute;
+	bottom: 56px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	.btn-pause,
+	.btn-play{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		margin: 0 2px;
+		padding-top: 4px;
+		text-align: center;
+		font:0/0 a;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,.3);
+		box-sizing: border-box;
+	}
+	.btn-pause:before,
+	.btn-pause:after{
+		content: '';
+		display: inline-block;
+		width: 2px;
+		height: 12px;
+		margin: -4px 2px 0;
+		background-color: #fff;
+	}
+	.btn-play{
+		.icon{
+			margin-top: -4px;
+			margin-left: 2px;
+		}
+		/*
+		&:after{
+			content: '';
+			display: inline-block;
+			margin-top: -4px;
+			margin-left: -3px;
+			border-top: 5px solid #fff;
+			border-right: 5px solid #fff;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid transparent;
+			transform: rotate(45deg);
+		}
+		*/
+	}
+	.slick-dots{
+		padding-left:28px;
+		li{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin: 0 2px;
+			padding-top: 4px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,.3);
+			box-sizing: border-box;
+			button{
+				width: 16px;
+				height: 16px;
+				border: 1px solid #fff;
+				font: 0/0 a;
+				border-radius: 50%;
+				box-sizing: border-box;
+				vertical-align: top;
+			}
+			&.slick-active button{
+				background: #fff;
+			}
+		}
+	}
+}
+
+.slide{
+	position: relative;
+	height: 791px;
+	background-size: cover;
+	background-position: 50% 50%;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		height: 100%;
+		background-size: cover;
+	}
+	h2,
+	.content{
+		strong{
+			font-weight: 700;
+		}
+	}
+	.content{
+		position: relative;
+	}
+}
+
+/*중고차 상세 슬라이드*/
+.swipe-detail-wrap {
+	margin:0;
+	padding:0;
+	.life-event-view{
+		padding-bottom:0;
+		position: relative;
+		.text{
+			margin-top:1.7rem;
+			b{
+				display: block;
+				@include Bold;
+			}
+			em{
+				display: block;
+				color:#8f9191;
+				margin-top:.6rem;
+			}
+			span {
+				margin-top: .4rem;
+				display: block;
+				@include Bold;
+				color:#da291c;
+				font-size:1.5rem;
+				b{
+					display:inline-block;
+					font-size:1rem;
+					color:#da291c;
+					margin-right:.4rem;
+				}
+				em{
+					font-size:1.2rem;
+					color:#da291c;
+					display:inline-block;
+				}
+			}
+		}
+		.btn-group{
+			padding-top:1.3rem;
+			justify-content: flex-start;
+			.btn{
+				width:auto;
+				height:2.2rem;
+				font-size:1rem;
+				color:#2f2f2f;
+				border-radius: .4rem;
+				background-color: #f4f4f4;
+				border-color:#f4f4f4;
+				margin:0 .4rem 0 0;
+				@include Regular;
+				&.blueOverlay02{
+					color:#fff;
+				}
+			}
+		}
+		.detail-slide-gallery-top {
+			height: 80%;
+			.swiper-slide{
+				margin:0;
+			}
+		}
+
+		.detail-slide-gallery-thumbs {
+			height: 20%;
+			box-sizing: border-box;
+			margin:0 1.7rem;
+		}
+
+		.detail-slide-gallery-thumbs .swiper-slide {
+			width: 33.3%;
+			height: 100%;
+			opacity: 0.4;
+			margin:.9rem .9rem .9rem 0;
+			cursor: pointer;
+		}
+
+		.detail-slide-gallery-thumbs .swiper-slide-thumb-active {
+			opacity: 1;
+		}
+		.swiper-play-list-wrap{
+			z-index: 5;
+		}
+		.swiper-scrollbar{
+			opacity: 1 !important;
+			bottom: 0;
+			height: 5px;
+			width: 99%;
+			background-color: #f5f5f5;
+			.swiper-scrollbar-drag{
+				border-radius:0;
+				background-color: #54585a;
+			}
+		}
+		.swiper-pagination-wrap{
+			margin-top:0;
+			@include Align-middle;
+			width: 100%;
+			z-index: 1;
+			.swiper-pagination {
+				width: 100%;
+				position: static;
+				@include Align-middle;
+				/* 인디게이터바 한개씩 */
+				.swiper-pagination-bullet {
+					@include Inline-align-middle;
+					justify-content: space-around;
+					width: 100%;
+					height: .7rem;
+					border-radius: 0;
+					background-color: #ddd;
+					//background-color:#54585a;
+					border:0;
+					opacity: 1;
+					//transition: all .4s;
+					&.swiper-pagination-bullet-active {
+						background-color:#54585a;
+					}
+					// &.swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+					// 	background-color: #ddd;
+					// }
+				}
+
+				/* 인디게이터바 퍼센트로 늘어나는 */
+				.swiper-pagination-bullet-type02 {
+					@include Inline-align-middle;
+					justify-content: space-around;
+					width: 100%;
+					height: .7rem;
+					border-radius: 0;
+					//background-color: #ddd;
+					background-color:#54585a;
+					border:0;
+					opacity: 1;
+					//transition: all .4s;
+					// &.swiper-pagination-bullet-active {
+					// 	background-color:#54585a;
+					// }
+					&.swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+						background-color: #ddd;
+					}
+				}
+			}
+		}
+		.swiper-play-list-wrap{
+			height: 2.6rem;
+			background-color: #000;
+			opacity: .6;
+			@include Position($bottom:0, $right:0);
+			z-index: 1;
+			@include Align-middle;
+			//border-radius: .5rem 0 0 0;
+			.swiper-button-pause{
+				@include Background($sprite:'ico-stop', $size:100% auto, $position:center center);
+				width: .6rem;
+				height: 1rem;
+				@include Vertical-inline;
+				@include Hide_txt;
+				flex: none;
+				margin:0 1.3rem;
+			}
+			.swiper-button-play{
+				@include Background($sprite:'ico-next02', $size:100% auto, $position:center center);
+				width: .6rem;
+				height: 1rem;
+				@include Vertical-inline;
+				@include Hide_txt;
+				flex: none;
+				display:none;
+				margin:0 1.3rem;
+			}
+			.swiper-button-thumbs{
+				@include Background($sprite:'ico-gallery', $size:100% auto, $position:center center);
+				width: 1rem;
+				height: 1rem;
+				@include Vertical-inline;
+				@include Hide_txt;
+				flex: none;
+				margin:0 .9rem 0 .2rem;
+				.btn{
+					height:1rem;
+				}
+			}
+		}
+	}
+}

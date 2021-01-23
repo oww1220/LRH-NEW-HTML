@@ -1,0 +1,188 @@
+.mobileSelect {
+    position: relative;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.4s, z-index 0.4s;
+    transition: opacity 0.4s, z-index 0.4s;
+}
+.mobileSelect * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mobileSelect .ensure{
+    color:#fff;
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    border: 1px solid #54585a;
+    background-color: #54585a;
+    @include Vertical-inline;
+    box-sizing: border-box;
+    height: 4.7rem;
+    padding: 0 1rem;
+    @include Align-middle;
+    @include Bold;
+    position: relative;
+}
+.mobileSelect .grayLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #eee;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 888;
+    display: block;
+}
+.mobileSelect .content {
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 889;
+    color: black;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    bottom: -350px;
+    left: 0;
+    //background: white;
+}
+.mobileSelect .content .fixWidth {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    // @include Align-between;
+	padding:0 1.7rem;
+}
+.mobileSelect .content .fixWidth:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.mobileSelect .content .btnBar {
+    //border-bottom: 1px solid #DCDCDC;
+    //font-size: 15px;
+    //height: 45px;
+    position: relative;
+    //text-align: center;
+    //line-height: 45px;
+    padding:4.3rem 0 0 0;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #fff;
+}
+.mobileSelect .content .btnBar .cancel,
+.mobileSelect .content .btnBar .ensure {
+    height: 45px;
+    width: 55px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+.mobileSelect .content .btnBar .cancel {
+    top:50%;
+    right: 1.7rem;
+    color: #666;
+    @include Background($sprite:'ico-pannelclose', $size:95% auto, $position:center center);
+    width: 1.4rem;
+    height: 1.4rem;
+    @include Vertical-inline;
+    @include Hide_txt;
+    flex: none;
+    transform: translateY(-50%);
+}
+.mobileSelect .content .btnBar .ensure {
+    right: 0;
+    color: #1e83d3;
+}
+.mobileSelect .content .btnBar .title {
+    //font-size: 15px;
+    font-size:1.8rem;
+    @include Bold;
+    color: #2f2f2f;
+    //padding: 0 15%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.mobileSelect .content .panel{
+    background-color: #fff;
+    padding: 3.4rem 0;
+}
+.mobileSelect .content .panel:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.mobileSelect .content .panel .wheels {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.mobileSelect .content .panel .wheel {
+    position: relative;
+    z-index: 0;
+    float: left;
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+.mobileSelect .content .panel .wheel .selectContainer {
+    display: block;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.18s ease-out;
+    transition: -webkit-transform 0.18s ease-out;
+    transition: transform 0.18s ease-out;
+    transition: transform 0.18s ease-out, -webkit-transform 0.18s ease-out;
+}
+.mobileSelect .content .panel .wheel .selectContainer li {
+    font-size: 1.2rem;
+    display: block;
+    height: 4.3rem;
+    line-height: 4.3rem;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color:#2f2f2f;
+    @include Bold;
+}
+.mobileSelect .content .panel .selectLine {
+    height: 4.3rem;
+    width: 89%;
+    position: absolute;
+    top: 8.6rem;
+    pointer-events: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+.mobileSelect .content .panel .shadowMask {
+    position: absolute;
+    top: 0;
+    width: 89%;
+    height: 260px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
+    background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+    opacity: 0.9;
+    pointer-events: none;
+}
+.mobileSelect-show {
+    opacity: 1;
+    z-index: 10000;
+    visibility: visible;
+}
+.mobileSelect-show .content {
+    bottom: 0;
+}
