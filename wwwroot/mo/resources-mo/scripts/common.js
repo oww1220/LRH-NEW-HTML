@@ -986,18 +986,18 @@ if($('.footerMenu-wrap .tab-normal').length){
     }
 
     //중고차 메인 롤링 02
-    if($('.secondhand-wrap .life-event-lists02').length) {
-        MUI.slide.init('.secondhand-wrap .life-event-lists02','swiper', {
-            loop: true,
-            autoHeight: true,
-            pagination: {
-                el: '.life-event-pagination02',
-            },
-            autoplay: {
-                delay: 3000,
-            },
-        });
-    }
+    // if($('.secondhand-wrap .life-event-lists02').length) {
+    //     MUI.slide.init('.secondhand-wrap .life-event-lists02','swiper', {
+    //         loop: true,
+    //         autoHeight: true,
+    //         pagination: {
+    //             el: '.life-event-pagination02',
+    //         },
+    //         autoplay: {
+    //             delay: 3000,
+    //         },
+    //     });
+    // }
 
     //중고차 메인 롤링 03
     if($('.secondhand-wrap .life-event-lists03').length) {
