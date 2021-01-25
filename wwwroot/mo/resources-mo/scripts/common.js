@@ -559,6 +559,7 @@ if($('.footerMenu-wrap .tab-normal').length){
     //bg-dimmed 클릭시 열린 레이어 들 닫기
     MUI.layer.closeClick(LAYER_DIM, LAYER_DIM, LAYER_PARENT, true, function(hide){
         //console.log('close');
+        $('.bg-dimmed').css('z-index','50');
         hide();
     });
 

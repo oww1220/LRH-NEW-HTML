@@ -3796,15 +3796,22 @@
                         //background-color: #2f2f2f;
                         //opacity: .8;
                         border-radius: 0;
-                        padding:0 .5rem;
+                        padding:0 .5rem 0 0;
                         justify-content: space-between;
                         // justify-content: flex-start;
                         z-index: 10;
-                        p{
-                            color:#fff;
+                        > p{
+                            color:#cccdcd;
                             font-size:.8rem;
                             @include Bold;
                             z-index: 10;
+                            background-color:#8f9191;
+                            height: 100%;
+                            padding: 0 .9rem;
+                            &.active{
+                                color:#fff;
+                                background-color:#ff404b;
+                            }
                         }
                         .btn-small{
                             border-radius: 0;

@@ -31267,7 +31267,7 @@
 	-webkit-border-radius: 0;
 	   -moz-border-radius: 0;
 	        border-radius: 0;
-	padding: 0 .5rem;
+	padding: 0 .5rem 0 0;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
 	   -moz-box-pack: justify;
@@ -31276,13 +31276,21 @@
 	z-index: 10;
 }
 
-.secondhand-wrap .section-list ul li .img .flag p {
-	color: #fff;
+.secondhand-wrap .section-list ul li .img .flag > p {
+	color: #cccdcd;
 	font-size: .8rem;
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaB", serif;
 	font-weight: normal;
 	z-index: 10;
+	background-color: #8f9191;
+	height: 100%;
+	padding: 0 .9rem;
+}
+
+.secondhand-wrap .section-list ul li .img .flag > p.active {
+	color: #fff;
+	background-color: #ff404b;
 }
 
 .secondhand-wrap .section-list ul li .img .flag .btn-small {
