@@ -1217,7 +1217,7 @@
                     //padding:40px 0 80px;
                     .row {
                         padding:0 40px;
-                        margin-bottom:0;
+                        margin:0;
                         .lst {
                             li + li {
                                 margin-top:10px;
@@ -1789,7 +1789,8 @@
 
             }
             .detail-sticky-items {
-                @include Position($top: 450px, $right: 0);
+                //@include Position($top: 450px, $right: 0);
+                position:absolute;
                 width: 390px;
                 &.fixed {
                     .detail-sticky {
@@ -1933,7 +1934,7 @@
             .section-form {
                 //margin-top:0;
                 .form-header {
-                    margin-bottom:0;
+                    //margin-bottom:0;
                     @include Align-between;
                     span {
                         @include Bold;
@@ -1949,11 +1950,11 @@
                 .form-cont {
                     //padding:40px 0 80px;
                     .row {
-                        padding:0 40px;
-                        margin-bottom:0;
-                        & + .row {
-                            padding-top:20px;
-                        }
+                        // padding:0 40px;
+                        // margin-bottom:0;
+                        // & + .row {
+                        //     padding-top:20px;
+                        // }
                         .type-left {
                             position: relative;
                             .left-txt {
@@ -1978,7 +1979,7 @@
                 &.form2 {
                     .form-cont {
                         & + .form-cont {
-                            padding-top:0;
+                            padding-top:60px;
                         }
                         .row-header {
                             padding:0 40px 20px;
@@ -2043,11 +2044,11 @@
                         }
                     }
                 }
-                &:last-child {
-                    .form-cont {
-                        padding-bottom:0;
-                    }
-                }
+                // &:last-child {
+                //     .form-cont {
+                //         padding-bottom:0;
+                //     }
+                // }
             }
         }
         .section-certi {

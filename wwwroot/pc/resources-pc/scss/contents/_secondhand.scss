@@ -1077,7 +1077,8 @@
                 // }
             }
             .row{
-                padding:0 40px 60px;
+                //padding:0 40px 60px;
+                padding:0 40px 30px;
                 border-bottom:1px solid $border-grey;
 
                 + .row{margin-top:60px;}
@@ -1685,11 +1686,20 @@
         margin-bottom:80px;
 
         .car-img{
+            position:relative;
             flex:none;            
             width:560px;
             flex-basis:560px;
             height:350px;
             padding-right:60px;
+
+            img{
+                position: absolute;
+                width : 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
         .carSpec-infos{
             .tit{
@@ -2089,22 +2099,39 @@
         margin-bottom:50px;
 
         .car-img{
+            position:relative;
             flex:none;            
-            width:580px;
-            flex-basis:580px;
-            height:250px;
+            width:560px;
+            flex-basis:560px;
+            height:350px;
+            padding-right:60px;
+
+            img{
+                position: absolute;
+                width : 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        // .car-img{
+        //     flex:none;            
+        //     width:580px;
+        //     flex-basis:580px;
+        //     height:250px;
             
 
-            // flex:none;
-            // width:620px;
-            // flex-basis:620px;
+        //     // flex:none;
+        //     // width:620px;
+        //     // flex-basis:620px;
             
-            // img {
-            //     width: 580px;
-            //     height: 250px;
-            //     background-size: 100% auto;
-            // }
-        }
+        //     // img {
+        //     //     width: 580px;
+        //     //     height: 250px;
+        //     //     background-size: 100% auto;
+        //     // }
+        // }
         .carDetail-infos{
             .tit{@include Bold; font-size:26px; word-break: break-word;}
             .infos-box{

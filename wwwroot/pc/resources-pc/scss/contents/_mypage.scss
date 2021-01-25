@@ -618,7 +618,8 @@
 
             li{
                 position:relative;
-                margin-bottom:40px;
+                margin-bottom: 0px;
+                //margin-bottom:40px;
             }
             &.col2{
                 .item{
@@ -1345,7 +1346,7 @@
     .section-form{
         margin-top:80px;
         .form-cont{
-            padding:0;
+            //padding:0;
             .row {
                 padding:0 40px;
             }
@@ -1635,6 +1636,7 @@
                 border-top:1px solid #d2d2d2;
                 .row {
                     padding:0;
+                    margin-top:0;
                     margin-bottom:0;
                     border-bottom:1px solid #e7e7e7;
                     label {
@@ -2472,8 +2474,7 @@
                     }
                 }
             }
-        }
-        
+        }        
         .btn-box-between{
             @include Inline-align-top;
 
@@ -2491,12 +2492,35 @@
         }
         .point-infos-area{
             padding:60px 40px;
-        }
-        
+        }        
         .required-box{
             margin:30px 0 0;
             
             + .section-form{margin-top:30px;}
         }
+
+        //
+        &.reservation-container{
+            .result-none{
+                padding:0 0 40px;
+                
+                .inner-area{
+                    @include Align-middle-column;
+                    padding:40px;
+                    min-height:234px;
+                    font-size:16px;
+                    box-sizing:border-box;
+                    @include Background($sprite:'bg-mypage-result', $type:'png', $path:'', $position:center center, $size:contain);
+
+                    .tit{
+                        font-size:22px;
+
+                        + p{margin-top:4px; color:#54585a;}
+                    }
+                    .btn-box{margin-top:25px;}
+                }
+            }
+        }
     }
 }
+ 
