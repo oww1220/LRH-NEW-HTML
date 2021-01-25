@@ -148,6 +148,30 @@
     bottom: 5rem;
 }
 
+.fixedRight ~ div > iframe#launcher {
+    bottom: 3.6rem !important;
+    z-index: 41 !important;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+}
+
+.fixedBottom ~ .fixedRight ~ div > iframe#launcher,
+.noFixBottom.fixedRight ~ div > iframe#launcher {
+    bottom: 5.5rem !important;
+}
+
+.noBottomLayer.fixedRight ~ div > iframe#launcher {
+    bottom: 0 !important;
+}
+
+.fixedBottom.close ~ .fixedRight ~ div > iframe#launcher {
+    transform: translate3d(0, 5.5rem, 0);
+}
+
+.noFixBottom ~ div > iframe#launcher {
+    transform: translate3d(0, 0, 0) !important;
+}
+
 
 //하단 고정 버튼 [승계게시판/승계차량, 마이페이지/단기렌터카상세]
 .fixed-btnBottom {
