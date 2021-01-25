@@ -4778,7 +4778,7 @@ html, body {
 
 .main-wrap .hotdeal-wrap {
 	margin-top: 100px;
-	background: url(../../resources-pc/images/common/bg-main-hotdeal.png) bottom left repeat-x;
+	background: url(../../resources-pc/images/common/bg-main-hotdeal.png) left 97% repeat-x;
 }
 
 .main-wrap .hotdeal-wrap .hotdeal-twrap {
@@ -4930,10 +4930,13 @@ html, body {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	height: 325px;
 }
 
 .main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .txt-type {
+	position: relative;
 	width: 290px;
+	height: 270px;
 	margin-top: 10px;
 	color: #8f9191;
 	font-size: 22px;
@@ -4944,12 +4947,19 @@ html, body {
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
 	font-weight: normal;
-	font-size: 28px;
+	font-size: 24px;
 	color: #2f2f2f;
 	line-height: 1.5;
 }
 
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .txt-type .t-red {
+	position: absolute;
+	bottom: 60px;
+}
+
 .main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .txt-type del {
+	position: absolute;
+	bottom: 100px;
 	font-family: "ManropeB", "NotoB", serif;
 	/*font-family: "SpoqaB", serif;*/
 	/*font-family: "SpoqaHanSansB", serif;*/
@@ -4966,6 +4976,16 @@ html, body {
 
 .main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .img {
 	position: relative;
+}
+
+.main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .img:after {
+	display: block;
+	content: "";
+	width: 360px;
+	height: 50px;
+	position: absolute;
+	bottom: -50px;
+	background: url(../../resources-pc/images/bg-main-hotdeal.png) repeat-x 0 0;
 }
 
 .main-wrap .hotdeal-wrap .hotdeal-slide-cont .slide-type a .img img {
@@ -5001,7 +5021,7 @@ html, body {
 }
 
 .main-wrap .hotdeal-wrap .pagination-wrap {
-	padding: 50px 0;
+	padding: 15px 0 50px;
 }
 
 .main-wrap .life-wrap {

@@ -904,7 +904,7 @@
     //핫딜 찬스
     .hotdeal-wrap {
         margin-top: 100px;
-        background: url(../../resources-pc/images/common/bg-main-hotdeal.png) bottom left repeat-x;
+        background: url(../../resources-pc/images/common/bg-main-hotdeal.png) left 97% repeat-x;
         .hotdeal-twrap {
             @include Align-between-base;
             border-bottom: 1px solid #eee;
@@ -944,18 +944,27 @@
             @include Align-between;
             .slide-type a {
                 @include Align-between-top;
+                height: 325px;
                 .txt-type {
+                    position: relative;
                     width: 290px;
+                    height: 270px;
                     margin-top: 10px;
                     color: #8f9191;
                     font-size: 22px;
                     .tit > strong {
                         @include Bold;
-                        font-size: 28px;
+                        font-size: 24px;
                         color: #2f2f2f;
                         line-height: 1.5;
                     }
+                    .t-red {
+                        position: absolute;
+                        bottom: 60px;
+                    }
                     del {
+                        position: absolute;
+                        bottom: 100px;
                         @include Bold;
                         display: block;
                         margin-top: 30px;
@@ -968,6 +977,16 @@
                 }
                 .img {
                     position: relative;
+                    //box-shadow: 10px 10px 10px gray;
+                    &:after {
+                        display: block;
+                        content: "";
+                        width: 360px;
+                        height: 50px;
+                        position: absolute;
+                        bottom: -50px;
+                        background: url(../../resources-pc/images/bg-main-hotdeal.png) repeat-x 0 0;
+                    }
                     img {
                         width: 360px;
                         height: 280px;
@@ -994,7 +1013,7 @@
             }
         }
         .pagination-wrap {
-            padding: 50px 0;
+            padding: 15px 0 50px;
         }
     }
 
