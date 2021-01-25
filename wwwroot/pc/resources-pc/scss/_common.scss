@@ -614,6 +614,7 @@ $txt-darkblack: #2f2f2f;
 				+ .row{margin-top:60px;}
 				
 				.tit-size-mid{margin-bottom:25px;}
+				+ .tbl-box{margin-top:20px;}
 			}
 			// .lst{
 			// 	margin-bottom:30px;
@@ -778,7 +779,7 @@ $txt-darkblack: #2f2f2f;
 					}
 				}
 
-				+ .row, + .lst, + .license-area{margin-top:20px; }
+				+ .row, + .lst, + .license-area, + .koreanLicense{margin-top:20px; }
 			}
 
 			//기사포함단기렌터카 - 상담하기 2단계 임시로 디자인 적용
@@ -868,31 +869,14 @@ $txt-darkblack: #2f2f2f;
 			margin-bottom:40px;
 			border-bottom:1px solid #e7e7e7;
 
+			
+
 			&-type2{	
 				@include Align-between; 
 				padding:0 80px; 
 				margin-bottom:40px;
 
-				.format-area{		
-					flex: 0 1 auto;
-					max-width: 100%;
-					
-
-					> .row{						
-						display:table;
-						table-layout: fixed;
-
-						dt, dd{					
-							display:table-cell;					
-						}
-
-						dt{
-							width:170px;
-							@include Bold; 
-						}
-						+ .row{margin-top:40px;}
-					}
-				}
+				
 				
 				.car-img-box{
 					position:relative;
@@ -911,6 +895,26 @@ $txt-darkblack: #2f2f2f;
 						transform: translate(-50%, -50%);
 					}
 				}
+			}
+		}
+		.format-area{		
+			flex: 0 1 auto;
+			max-width: 100%;
+			
+
+			> .row{						
+				display:table;
+				table-layout: fixed;
+
+				dt, dd{					
+					display:table-cell;					
+				}
+
+				dt{
+					width:170px;
+					@include Bold; 
+				}
+				+ .row{margin-top:40px;}
 			}
 		}
 
