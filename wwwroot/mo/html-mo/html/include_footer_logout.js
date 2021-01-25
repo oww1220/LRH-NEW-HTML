@@ -388,34 +388,28 @@ $(function(){
         <div class="fixedRight">
             <ul class="goQuick-menu-list">
                 <li>
-                    <a href="#"><span>제주예약</span><i class="icon goQuick-menu10"></i></a>
+                    <a href="#"><span>신차장특가</span><i class="icon goQuick-menu07"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>내륙예약</span><i class="icon goQuick-menu09"></i></a>
+                    <a href="#"><span>다이렉트견적</span><i class="icon goQuick-menu11"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>신차장특가</span><i class="icon goQuick-menu08"></i></a>
+                    <a href="#"><span>신차장 멤버십</span><i class="icon goQuick-menu12"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>중고차특가</span><i class="icon goQuick-menu07"></i></a>
+                    <a href="#"><span>중고차 검색</span><i class="icon goQuick-menu13"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>공지사항</span><i class="icon goQuick-menu06"></i></a>
+                    <a href="#"><span>승계렌터카 검색</span><i class="icon goQuick-menu14"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>사전체크인</span><i class="icon goQuick-menu05"></i></a>
+                    <a href="#"><span>월간렌터카 검색</span><i class="icon goQuick-menu15"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>예약정보확인</span><i class="icon goQuick-menu04"></i></a>
+                    <a href="#"><span>지점안내</span><i class="icon goQuick-menu09"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>#즐거움을 타봥</span><i class="icon goQuick-menu03"></i></a>
-                </li>
-                <li>
-                    <a href="#"><span>추가운전자등록</span><i class="icon goQuick-menu02"></i></a>
-                </li>
-                <li>
-                    <a href="#"><span>반납일/지점변경</span><i class="icon goQuick-menu01"></i></a>
+                    <a href="#"><span>이벤트</span><i class="icon goQuick-menu03"></i></a>
                 </li>
             </ul>
             <button type="button" class="btn btn-goQuick">퀵메뉴</button>
