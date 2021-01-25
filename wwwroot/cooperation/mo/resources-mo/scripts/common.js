@@ -204,6 +204,15 @@ $(function(){
         });
     }
 
+    //제휴사 예약 소개 메인 탭
+    if($('.cooper-box .tab-normal').length){
+
+        MUI.event.taps('.cooper-box .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
+
     //대여기간 달력 레이어
     if($('.cooperation-wrap').length){
         MUI.event.toggle('.cooperation-wrap .btn-schedule-toggle', '.cooperation-wrap .schedule-toggle-cont', false, function(logic, layer) {
