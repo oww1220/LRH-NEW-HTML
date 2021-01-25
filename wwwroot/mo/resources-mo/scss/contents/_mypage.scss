@@ -180,8 +180,40 @@
                 @include Align-middle;
                 min-height:12rem;
                 margin:.9rem 0;
-                border-top:1px solid #e7e7e7;
-                border-bottom:1px solid #e7e7e7;
+                .no-data {
+                    .list-box01 {
+                        > div {
+                            @include Background($sprite:'bg-mypage-nodata', $size:cover, $position:center center, $path:'bgs');
+                        }
+                    }
+                    > div > div {
+                        background-color: #f5f5f5;
+                        border-radius: 1rem;
+                        padding:2.1rem;
+                    }
+                    .list-cont {
+                        @include Align-middle-column;
+                        strong {
+                            font-size:1.6rem;
+                            text-align: center;
+                            line-height: 1.3;
+                            @include Bold;
+                        }
+                        span {
+                            @include Regular;
+                            padding:1.3rem 0 1.7rem;
+                            font-size:1.1rem;
+                            color:#54585a;
+                        }
+                        & + div {
+                            width:16rem;
+                            margin:0 auto;
+                            .btn {
+                                font-size:1.2rem;
+                            }
+                        }
+                    }
+                }
             }
         }
         .cont-tit {
