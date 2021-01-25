@@ -12112,6 +12112,15 @@
 	margin-top: 1.7rem;
 }
 
+.mypage-wrap .section-detail .detail-layout-list .list-T .inputC input:checked + label:before {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-chk-on.png");
+	background-position: center center;
+	-webkit-background-size: 92% auto;
+	   -moz-background-size: 92% auto;
+	        background-size: 92% auto;
+}
+
 .mypage-wrap .section-detail .detail-layout-list .list-T .btn-simple {
 	-webkit-border-radius: .5rem;
 	   -moz-border-radius: .5rem;
@@ -12141,7 +12150,6 @@
 
 .mypage-wrap .section-detail .section-list ul.list-type-col2 li .img {
 	position: relative;
-	overflow: hidden;
 	height: 9rem;
 }
 
@@ -12150,6 +12158,15 @@
 	position: absolute;
 	top: .5rem;
 	left: .5rem;
+}
+
+.mypage-wrap .section-detail .section-list ul.list-type-col2 li .img .inputC input:checked + label:before {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-mo/images/icons/ico-chk-on.png");
+	background-position: center center;
+	-webkit-background-size: 92% auto;
+	   -moz-background-size: 92% auto;
+	        background-size: 92% auto;
 }
 
 .mypage-wrap .section-detail .section-list ul.list-type-col2 li .img img {
@@ -12224,7 +12241,6 @@
 
 .mypage-wrap .section-detail .section-list ul li .img {
 	position: relative;
-	overflow: hidden;
 	height: 14rem;
 }
 
@@ -12238,25 +12254,33 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: #2f2f2f;
-	opacity: .8;
 	-webkit-border-radius: 0;
 	   -moz-border-radius: 0;
 	        border-radius: 0;
-	padding: 0 .5rem;
+	padding: 0 .5rem 0 0;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	z-index: 10;
 }
 
-.mypage-wrap .section-detail .section-list ul li .img .flag p {
-	color: #fff;
+.mypage-wrap .section-detail .section-list ul li .img .flag > p {
+	color: #cccdcd;
 	font-size: .8rem;
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaB", serif;
 	font-weight: normal;
+	z-index: 10;
+	background-color: #8f9191;
+	height: 100%;
+	padding: 0 .9rem;
+}
+
+.mypage-wrap .section-detail .section-list ul li .img .flag > p.active {
+	color: #fff;
+	background-color: #ff404b;
 }
 
 .mypage-wrap .section-detail .section-list ul li .img .flag .btn-small {
@@ -12270,6 +12294,24 @@
 	color: #fff;
 	font-size: 1rem;
 	margin: 0 .4rem 0 0;
+	z-index: 10;
+}
+
+.mypage-wrap .section-detail .section-list ul li .img .flag .btn-tooltip-box {
+	margin: 0 2rem 0 0;
+}
+
+.mypage-wrap .section-detail .section-list ul li .img .flag:after {
+	display: block;
+	content: "";
+	background-color: #2f2f2f;
+	width: 100%;
+	height: 1.5rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: .6;
+	z-index: 5;
 }
 
 .mypage-wrap .section-detail .section-list ul li .text strong {
@@ -16401,7 +16443,7 @@
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
-	width: 1.5rem;
+	width: 1rem;
 	height: 1rem;
 	display: inline-block;
 	vertical-align: middle;
@@ -26322,7 +26364,7 @@
                     }
                     .swiper-button-thumbs{
                         @include Background($sprite:'ico-gallery', $size:100% auto, $position:center center);
-                        width: 1.5rem;
+                        width: 1rem;
                         height: 1rem;
                         @include Vertical-inline;
                         @include Hide_txt;
@@ -26685,7 +26727,7 @@
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
-	width: 1.5rem;
+	width: 1rem;
 	height: 1rem;
 	display: inline-block;
 	vertical-align: middle;
@@ -33571,7 +33613,7 @@
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
-	width: 1.5rem;
+	width: 1rem;
 	height: 1rem;
 	display: inline-block;
 	vertical-align: middle;
@@ -34463,7 +34505,7 @@
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
-	width: 1.5rem;
+	width: 1rem;
 	height: 1rem;
 	display: inline-block;
 	vertical-align: middle;
