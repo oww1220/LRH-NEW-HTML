@@ -88,6 +88,7 @@
 								<section class="section-form form1">
 									<div class="form-header">
 										<h3 class="tit-size-mid">예약상세내역</h3>
+										<button type="button" class="layer-details-open" data-layer="layer-ds">딜리버리 서비스(DS) <i class="icon info04"></i></button>
 									</div>					
 									<div class="form-cont">
 										<div class="row type2">
@@ -714,6 +715,188 @@
 		플로팅 사이드 바영역
 	</aside>
 	<!--//floating_zone 컴포넌트-->
+
+	
+
+	<!-- 편도 이용료 안내 레이어 -->
+	<div class="layer-wrap layer-popup layer-details layer-ds">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>편도 이용료 안내</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-ds"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+				
+					<div class="statement">
+						<h5 class="tit">딜리버리 서비스(DS) 이용고객 안내 사항</h5>
+						<div class="tbl-type02">
+							 <table class="td-align-l">
+								 <caption></caption>
+								 <tr>
+									 <th>대상</th>
+									<td>롯데렌터카 회원(비회원은 회원가입 후 이용 가능)</td>									
+								 </tr>
+								 <tr>
+									 <th>이용 금액</th>
+									 <td>정상가 : 15,000원 / 대여, 반납 별도</td>
+								 </tr>
+								 <tr>
+									<th>결제 방법</th>
+									<td>임차인 본인 신용카드(법인카드 포함)</td>
+								 </tr>
+								 <tr>
+									<th>
+										서비스 가능 시간 <br>
+										및 지점
+									</th>
+									<td>
+										<ul class="lst dot">
+											<li>
+												오전 09:30~18:00 <br>
+												(대여시간으로부터 48시간 이전 예약 필수)
+											</li>
+											<li>
+												대여시간이 48시간 이내일 경우 지점으로 문의 후 <br>
+												딜리버리 서비스 가능여부 확인
+												
+											</li>
+											<li>
+												강남 지점 (02-34443-8000)
+											</li>
+											<li>
+												논현 지점 (02-511-1001)
+											</li>
+											<li>
+												송파 지점 (02-2203-8000)
+											</li>
+											<li>
+												양재 지점 (02-3444-8000)
+											</li>
+											<li>
+												구로 지점 (02-3664-8000)
+											</li>
+											<li>
+												강북지점 (02-922-8000)
+											</li>
+											<li>
+												서울역 지점 (02-715-0010)
+											</li>
+											<li>
+												여의도 지점 (02-785-8000
+											</li>
+										</ul>
+									</td>
+								 </tr>
+							 </table>
+						</div>
+						<ul class="lst dot">
+							<li class="txt-color-red">
+								딜리버리 서비스는 고객연락 두절 시, 서비스 이용이 불가합니다. <br>
+								고객연락처를 정확히 기입해 주시기 바랍니다.
+							</li>
+							<li>
+								DS는 회원전용 서비스 입니다.(비회원의 경우, 회원가입 후 이용 가능합니다.)
+								<p>* 단, i-PIN인증 회원은 임대차계약서 ;k작성을 위하여 주민번호 생성 작업을 요청 드릴 수 있습니다</p>
+							</li>
+							<li>
+								DS는 예약자와 임차인이 동일 하여야 하며, 상이할 경우 대여가 제한 될 수 있습니다.
+							</li>
+							<li>
+								DS이용 시, 일부 지점은 배송시간이 제한 될 수 있습니다. (서비스 가능지역: 서울 전 지역)
+							</li>
+							<li>
+								DS요금은 편도 15,000원(1회)이며, 20Km(반납시)초과시 추가요금이 부과됩니다.
+							</li>
+							<li>
+								DS는 임차인 본인의 신용카드와 포인트 결제만 가능합니다.<br>
+								(차량대여 시 신용정보조회를 동반하는 현금(현금/무료이용권) 결제 불가합니다.)
+							</li>
+							<li>
+								DS는 차량/기사 준비 및 이동시4간을 고려하여 사전예약필수 항목이며, 변경요청 시간에 따라 
+								서비스가 제한 될 수 있습니다.(예약: 48시간 전)
+							</li>
+							<li>
+								DS는 교통사정에 따라, 고객님이 지정해주신 시점에서 20~30분 이내에 도착 가능합니다.
+							</li>
+							<li>
+								차량인수(계약서 작성완료)시점부터 렌탈 시간에 포함됩니다.
+							</li>
+							<li>
+								차량색상, 차량번호 등 고객의 단순변심으로 인한 교환, 취소의 경우 DS요금이 청구됩니다.
+							</li>
+							<li>
+								예약 시간 및 위치변경은 3시간 전까지만 요청가능하며, 관련 내용은 <span class="txt-color-red">해당지점으로 직접 문의</span>
+								하셔야 합니다.
+							</li>
+							<li class="txt-color-red">
+								DS는 조기반납/ 반납지연/ 기간연장 시, 지점&고객 센터로 사전연락 필수 서비스 입니다.
+								<p>* DS는 조기반납/ 반납지연/ 기간연장 시, 지점&고객 센터로 사전연락 필수 서비스 입니다.</p>
+							</li>
+						</ul>
+					</div>
+					<div class="statement">
+						<h5 class="tit">지역별 딜리버리 서비스 가능 지점 안내</h5>
+						<div class="tbl-type02">
+							 <table class="td-align-l">
+								<caption></caption>
+								<thead>
+									<tr>
+										<th>가능지점(서울)</th>
+										<th>딜리버리 가능 지역</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>강남 지점</th>
+										<td>강남구, 서초구, 송파구, 성동구</td>
+									</tr>
+									<tr>
+										<th>논현 지점</th>
+										<td>강남구</td>
+									</tr>
+									<tr>
+										<th>송파 지점</th>
+										<td>송파구, 강동구</td>
+									</tr>
+									<tr>
+										<th>양재 지점</th>
+										<td>서초구, 관악구, 동작구, 용산구, 강남구</td>
+									</tr>
+									<tr>
+										<th>구로 지점</th>
+										<td>금천구, 관악구, 양천구, 동작구</td>
+									</tr>
+									<tr>
+										<th>강북 지점</th>
+										<td>성북구, 강북구, 도봉구, 노원구</td>
+									</tr>
+									<tr>
+										<th>서울역 지점</th>
+										<td>용산구, 마포구, 중구, 종로구, 서대문구, 동대문구</td>
+									</tr>
+									<tr>
+										<th>여의도 지점</th>
+										<td>강서구, 양천구, 영등포구, 동작구, 용산구</td>
+									</tr>
+								</tbody>
+							 </table>
+						</div>
+						<ul class="lst dot txt-color-red">
+							<li>사고 발생 시 DS로 반납 불가하며, 해당지점으로 반납해주여야 합니다.</li>
+							<li>차량 반납이전에 발생한 주차비, 과태료는 고객님 부담입니다.</li>
+							<li>딜리버리 주소지 입력 시, 서비스 가능 지점이 설정됩니다.</li>
+							<li>예약문의 : 롯데렌터카 지점 및 고객 센터 (T. 1588-1230)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="popup-cont-bot-btns">	
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-ds">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //편도 이용료 안내 레이어 -->
 
 	<script>
 		$(function(){

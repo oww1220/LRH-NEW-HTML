@@ -509,6 +509,8 @@ $txt-darkblack: #2f2f2f;
 		}
 	}
 	
+	.tit{@include Bold; font-size:18px; margin-bottom:30px;}
+
 	+ .tbl-box{margin-top:60px;}
 	+ .row{margin-top:60px;}
 	+ .lst{margin-top:20px;}
@@ -733,8 +735,6 @@ $txt-darkblack: #2f2f2f;
 	}
 
 	&-form{
-		padding-bottom:40px;
-
 		.form-header{
 			position:relative;
 			@include Align-middle-left;
@@ -742,7 +742,7 @@ $txt-darkblack: #2f2f2f;
 			width:100%;
 			height:80px;
 			padding:0 40px;
-			margin-bottom:40px;
+			margin-bottom:20px;
 			background-color:#f5f5f5;
 			box-sizing:border-box;
 
@@ -762,7 +762,7 @@ $txt-darkblack: #2f2f2f;
 			.tooltip-area{margin-left:10px;}
 		}
 		.form-cont{
-			//padding-top:40px;
+			padding:20px 0 60px;
 
 			.row{
 				padding:0 80px;
@@ -778,7 +778,7 @@ $txt-darkblack: #2f2f2f;
 					}
 				}
 
-				+ .row, + .lst{margin-top:20px; }
+				+ .row, + .lst, + .license-area{margin-top:20px; }
 			}
 
 			//기사포함단기렌터카 - 상담하기 2단계 임시로 디자인 적용
@@ -801,7 +801,7 @@ $txt-darkblack: #2f2f2f;
 			}
 		}
 
-		+ .section-form{ margin-top:40px;}
+		+ .section-form{ margin-top:20px;}
 	}
 
 	//form-cont 가운데 정렬
@@ -849,6 +849,8 @@ $txt-darkblack: #2f2f2f;
         }
 	}	
 	&-format-type2{
+		padding-bottom:40px;
+		
 		.format-header{
 			position:relative;
 			@include Align-middle-left;
@@ -860,39 +862,60 @@ $txt-darkblack: #2f2f2f;
 			background-color:#f5f5f5;
 			box-sizing:border-box;
 		}
-		.format-area{	
-			> .row{
-				@include Align-top-left;
-
-				dt{
-					flex:none;
-					flex-basis: 170px;
-					width:170px;
-					@include Bold; 
-				}
-				+ .row{margin-top:40px;}
-			}
-		}
-		.format-cont{
+		.format-cont{			
 			@include Align-middle;        
-			padding:0 0 40px;
+			padding:0 80px 40px;
 			margin-bottom:40px;
 			border-bottom:1px solid #e7e7e7;
 
 			&-type2{	
-				@include Align-middle; 
-				padding:40px 80px; 
+				@include Align-between; 
+				padding:0 80px; 
 				margin-bottom:40px;
 
-				.format-area{
+				.format-area{		
+					flex: 0 1 auto;
+					max-width: 100%;
+					
+
+					> .row{						
+						display:table;
+						table-layout: fixed;
+
+						dt, dd{					
+							display:table-cell;					
+						}
+
+						dt{
+							width:170px;
+							@include Bold; 
+						}
+						+ .row{margin-top:40px;}
+					}
+				}
+				
+				.car-img-box{
+					position:relative;
 					flex:none;
-					width:600px;       
-					flex-basis: 600px;					
-					box-sizing:border-box;
-				}				
+					max-width:420px;
+					flex-basis: 420px;
+					margin-left:60px;
+					text-align:center;
+					box-sizing: border-box;
+		
+					img{
+						position: absolute;
+						width : 100%;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+				}
 			}
 		}
 
+		+ .section-form{margin-top:40px;}
+		
 	}	
 	&.round{
 		@include roundBox;
@@ -1218,11 +1241,7 @@ $txt-darkblack: #2f2f2f;
 	&.txt-color-red{
 		color:$txt-red;
 
-		li{color:inherit;
-			&::before {
-				background-color: $txt-red;
-			}
-		}
+		li{color:inherit;}
 	}
 	
 	&.simple{
@@ -1238,21 +1257,17 @@ $txt-darkblack: #2f2f2f;
 	&.dot{
 		> li{
 			&::before{
-				//210123 폰트 로드속도 이슈로 수정
-				@include Position($left:0, $top:9px);
-				//width:12px;
-				//font-size:18px;
-				content:"";
-				display: inline-block;
-				width:2px;
-				height:2px;
+				@include Position($left:0, $top:-2px);
+				width:12px;
+				font-size:18px;
+				content:"·";
+				// display: inline-block;
+				// width:3px;
+				// height:3px;
 				// border-radius:100%;
-				background-color:#54585a;
-				vertical-align: middle;
+				// background-color: #2f2f2f;
+				// vertical-align: middle;
 
-			}
-			&.txt-color-red:before {
-				background-color: $txt-red;
 			}
 		}
 
@@ -1397,6 +1412,7 @@ $txt-darkblack: #2f2f2f;
 	p{color:#fff; padding:20px 0;}	
 	.infos{
 		padding:20px 0;
+		
 		.tit{
 			@include Bold;
 			font-size:16px;
@@ -1406,6 +1422,7 @@ $txt-darkblack: #2f2f2f;
 				margin-top:15px;
 			}
 		}
+		p{padding:0;}
 	}
 
 	&::after{

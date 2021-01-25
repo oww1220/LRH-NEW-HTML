@@ -1905,24 +1905,38 @@ if($('.main-visual-list .main-slide-wrap').length) {
     $('.main-visual-list .main-slide-wrap').on('afterChange',function(){
         var curIdx = $(".slick-active").attr("data-slick-index"); //슬라이드 갯수
         var currentSlide = $('.main-visual-list .main-slide-wrap').slick('slickCurrentSlide');//현재 슬라이드 번호
-       
         curIdx = parseInt(curIdx);
         $(".loading-ani").animate({
-           "width": (result * (curIdx+1))+"%"
+           "width": (result * (currentSlide+1))+"%"
         },300);
 
         $('.main-visual-pager .num-1').text(currentSlide+1);
         $('.main-visual-pager .num-2').text(slideIdxR);
 
     });
-    
+
+    $('.main-visual-pager .play').hide();
+
     $('.main-visual-pager .play').click(function() {
         $('.main-visual-list .main-slide-wrap').slick('slickPlay');
+        $(this).hide();
+        $('.main-visual-pager .stop').show();
     });
     
     $('.main-visual-pager .stop').click(function() {
         $('.main-visual-list .main-slide-wrap').slick('slickPause');
+        $(this).hide();
+        $('.main-visual-pager .play').show();
     });
+
+    $('.main-visual-pager .num.num-1').click(function() {
+        $('.main-visual-list .main-slide-wrap').slick('slickPrev');
+    });
+    $('.main-visual-pager .num.num-2').click(function() {
+        $('.main-visual-list .main-slide-wrap').slick('slickNext');
+    });
+
+
 
     /*
     $('.header .draw-btn-s').each(function(i){
