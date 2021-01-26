@@ -68,8 +68,17 @@
                     b {
                         color:#fff;
                         vertical-align: middle;
-                        padding-left:.4rem;
-                        text-decoration: underline;
+                        //padding-left:.4rem;
+                        //text-decoration: underline;
+                        margin-left:.4rem;
+                        position: relative;
+                        &::before{
+                            display:block;
+                            content: "";
+                            border-bottom:1px solid #fff;
+                            width:100%;
+                            @include Position( $bottom: 0, $right: 0);
+                        }
                     }
                     & + button {
                         padding-left:1.7rem;

@@ -19941,6 +19941,20 @@
 
 .shor-wrap .section-detail .detail-layout .layer-item.item-step6 h3 {
 	margin-bottom: 1.7rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.shor-wrap .section-detail .detail-layout .layer-item.item-step6 h3 button {
+	margin-left: .5rem;
 }
 
 .shor-wrap .section-detail .detail-layout .layer-item.item-step6 .item-cont {
@@ -19956,6 +19970,12 @@
 	/*font-family:"ManropeB", "NotoM", serif;*/
 	font-family: "SpoqaR", serif;
 	font-weight: normal;
+}
+
+.shor-wrap .section-detail .detail-layout .layer-item.item-step6 .item-cont .radioIconBox .list-type-col2 > li {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .shor-wrap .section-detail .detail-layout .layer-item.item-step6 .item-cont .radioIconBox label {
@@ -25569,8 +25589,18 @@
 .secondhand-wrap .section-tit.bg-block .btn-list button b {
 	color: #fff;
 	vertical-align: middle;
-	padding-left: .4rem;
-	text-decoration: underline;
+	margin-left: .4rem;
+	position: relative;
+}
+
+.secondhand-wrap .section-tit.bg-block .btn-list button b::before {
+	display: block;
+	content: "";
+	border-bottom: 1px solid #fff;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 .secondhand-wrap .section-tit.bg-block .btn-list button + button {
