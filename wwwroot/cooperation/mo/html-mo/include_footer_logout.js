@@ -161,8 +161,8 @@ $(function(){
                 </div>
 
                 <div class="drawer-cont">
-                    <div class="drawer-list">
-                        <!-- <h5><span>주요서비스</span></h5> -->
+                    <!-- <div class="drawer-list">
+                        <h5><span>주요서비스</span></h5>
                         <ul>
                             <li><a href="#"><i class="icon login-pannel06"></i><span>렌터카예약</span></a></li>
                             <li><a href="#"><i class="icon login-pannel07"></i><span>월간렌터카 검색</span></a></li>	
@@ -171,7 +171,7 @@ $(function(){
                             <li><a href="#"><i class="icon login-pannel10"></i><span>중고차렌터카 검색</span></a></li>
                             <li><a href="#"><i class="icon login-pannel11"></i><span>승계렌터카 검색</span></a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- <div class="drawer-list">
                         <h5><span>전체 서비스 보기</span></h5>
                     </div> -->
@@ -181,19 +181,10 @@ $(function(){
                             <div class="drawer-menu-tab tab-nav tab-normal">
                                 <ul>
                                     <li class="drawer-menu-tit active">
-                                        <button type="button" class="btn">단기렌터카</button>
+                                        <button type="button" class="btn">단기 렌터카 예약</button>
                                     </li>
                                     <li class="drawer-menu-tit">
-                                        <button type="button" class="btn">신차 장기렌터카</button>
-                                    </li>
-                                    <li class="drawer-menu-tit">
-                                        <button type="button" class="btn">중고차 장기렌터카</button>
-                                    </li>
-                                    <li class="drawer-menu-tit">
-                                        <button type="button" class="btn">CAR뮤니티</button>
-                                    </li>
-                                    <li class="drawer-menu-tit">
-                                        <button type="button" class="btn">고객지원</button>
+                                        <button type="button" class="btn">단기 렌터카 안내</button>
                                     </li>
                                 </ul>
                             </div>
@@ -204,142 +195,28 @@ $(function(){
                                 <div class="drawer-menu-cont">
                                     <ul>
                                         <li>
-                                            <a href="#"><b>빠른 예약</b></a>
                                             <div>
                                                 <ul>
-                                                    <li><em>- 제주 렌트</em></li>
-                                                    <li><em>- 내륙 렌트</em></li>
+                                                    <li><em>- 내륙</em></li>
+                                                    <li><em>- 제주</em></li>
+                                                    <li><em>- 예약확인</em></li>
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
-                                            <a href="#"><b>단기렌트 서비스 안내</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 대여 및 요금안내</em></li>
-                                                    <li><em>- 체크인 서비스</em></li>
-                                                    <li><em>- 부가서비스안내</em></li>
-                                                    <li><em>- 팻카 상품안내</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>월간렌터카</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 월간렌트 서비스 안내</em></li>
-                                                    <li><em>- 렌터카 검색</em></li>
-                                                    <li><em>- 상담 신청</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>기사포함렌터카</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 기사포함 서비스 안내</em></li>
-                                                    <li><em>- 렌터카 예약 접수</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>해외렌터카</b></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>사고 대차 서비스</b></a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                                 <div class="drawer-menu-cont" style="display: none;">
                                     <ul>
                                         <li>
-                                            <a href="#"><b>신차장특가</b></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>다이렉트 견적</b></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>장기렌트 서비스 안내</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 개인 장기렌터카</em></li>
-                                                    <li><em>- 법인 장기렌터카</em></li>
-                                                    <li><em>- 전기차 장기렌터카</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>제휴카드 혜택</b></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>신차장 멤버십</b></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>신차장 친구추천</b></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="drawer-menu-cont" style="display: none;">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><b>중고차 장기렌터카</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 중고차렌트 서비스 안내</em></li>
-                                                    <li><em>- 중고차 검색</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>렌터카 승계 서비스</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 렌터카 승계 안내</em></li>
-                                                    <li><em>- 승계 차량 검색</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>내 차 팔기 서비스</b></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="drawer-menu-cont" style="display: none;">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><b>매거진</b></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>이벤트</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 진행중인 이벤트</em></li>
-                                                    <li><em>- 당첨자 발표</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>제주오토하우스</b></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="drawer-menu-cont" style="display: none;">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><b>공지사항</b></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>지점 안내</b></a>
-                                            <div>
-                                                <ul>
-                                                    <li><em>- 전국 지점</em></li>
-                                                    <li><em>- 기사 포함</em></li>
-                                                    <li><em>- 해외 지점</em></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#"><b>고객센터</b></a>
+                                           <div>
+                                               <ul>
+                                                   <li><em>- 대여자격안내</em></li>
+                                                   <li><em>- 대여/반납 절차</em></li>
+                                                   <li><em>- 대여요금안내</em></li>
+                                                   <li><em>- 보험 및 보상</em></li>
+                                               </ul>
+                                           </div>
                                         </li>
                                     </ul>
                                 </div>

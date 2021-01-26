@@ -347,7 +347,7 @@ $(function(){
                 type: 'fraction',
             },
             autoplay:{
-                delay:10000,
+                delay:100000,
              },
         });
         }
