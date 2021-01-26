@@ -175,161 +175,45 @@ $(function(){
 							<li>
 								<ul>
 									<li>
-										<p><a href="#"><b>단기렌터카</b></a></p>
-									</li>
-									<li>
-										<p><a href="#">빠른 예약</a></p>
 										<div class="layer-gnb-list">
 											<ul>
-												<li><a href="#">제주 렌트</a></li>
-												<li><a href="#">내륙 렌트</a></li>
+												<li><a href="#"></a></li>
+												<li><a href="#"></a></li>
+												<li><a href="#"></a></li>
 											</ul>
 										</div>
 									</li>
+								</ul>
+							</li>
+							
+							<li>
+								<ul>
 									<li>
-										<p><a href="#">단기렌트 서비스 안내</a></p>
 										<div class="layer-gnb-list">
 											<ul>
-												<li><a href="#">대여 및 요금안내</a></li>
-												<li><a href="#">체크인서비스</a></li>
-												<li><a href="#">부가서비스안내</a></li>
-												<li><a href="#">펫카상품안내</a></li>
+												<li><a href="#">내륙</a></li>
+												<li><a href="#">제주</a></li>
+												<li><a href="#">예약확인</a></li>
 											</ul>
 										</div>
-									</li>
-									<li>
-										<p><a href="#">월간렌터카</a></p>
-										<div class="layer-gnb-list">
-											<ul>
-												<li><a href="#">월간렌트 서비스 안내</a></li>
-												<li><a href="#">렌터카 검색</a></li>
-												<li><a href="#">상담 신청</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">기사포함렌터카</a></p>
-										<div class="layer-gnb-list">
-											<ul>
-												<li><a href="#">기사포함 서비스 안내</a></li>
-												<li><a href="#">렌터카 예약 접수</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">해외렌터카</a></p>
-									</li>
-									<li>
-										<p><a href="#">사고대차 서비스</a></p>
 									</li>
 								</ul>
 							</li>
 							<li>
 								<ul>
 									<li>
-										<p><a href="#"><b>신차 장기렌터카</b></a></p>
-									</li>
-									<li>
-										<p><a href="#">신차장 특가</a></p>
-									</li>
-									<li>
-										<p><a href="#">다이렉트 견적</a></p>
-									</li>
-									<li>
-										<p><a href="#">장기렌트 서비스 안내</a></p>
 										<div class="layer-gnb-list">
 											<ul>
-												<li><a href="#">개인 장기렌터카</a></li>
-												<li><a href="#">법인 장기렌터카</a></li>
-												<li><a href="#">전기차 장기렌터카</a></li>
+												<li><a href="#">대여자격안내</a></li>
+												<li><a href="#">대여/반납 절차</a></li>
+												<li><a href="#">대여요금안내</a></li>
+												<li><a href="#">보험 및 보상</a></li>
 											</ul>
 										</div>
-									</li>
-									<li>
-										<p><a href="#">제휴카드 혜택</a></p>
-									</li>
-									<li>
-										<p><a href="#">신차장 멤버십</a></p>
-									</li>
-									<li>
-										<p><a href="#">신차장 친구추천</a></p>
 									</li>
 								</ul>
 							</li>
-							<li>
-								<ul>
-									<li>
-										<p><a href="#"><b>중고차</b></a></p>
-									</li>
-									<li>
-										<p><a href="#">중고차 장기렌터카</a></p>
-										<div class="layer-gnb-list">
-											<ul>
-												<li><a href="#">중고차렌트 서비스 안내</a></li>
-												<li><a href="#">중고차 검색</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">중고차 승계 서비스</a></p>
-										<div class="layer-gnb-list">
-											<ul>
-												<li><a href="#">렌터카 승계 안내</a></li>
-												<li><a href="#">승계 차량 검색</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">내 차 팔기 서비스</a></p>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<ul>
-									<li>
-										<p><a href="#"><b>CAR뮤니티</b></a></p>
-									</li>
-									<li>
-										<p><a href="#">매거진</a></p>
-										<!-- <p><a href="#">즐거움을 <span class="SpoqaHanSans_txt SpoqaHanSans_txt_b"><i>#</i>타봥</span></a></p> -->
-									</li>
-									<li>
-										<p><a href="#">이벤트</a></p>
-										<div class="layer-gnb-list">
-											<ul>
-												<li><a href="#">진행중인이벤트</a></li>
-												<li><a href="#">당첨자발표</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">제주오토하우스</a></p>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<ul>
-									<li>
-										<p><a href="#"><b>고객지원</b></a></p>
-									</li>
-									<li>
-										<p><a href="#">공지사항</a></p>
-									</li>
-									<li>
-										<p><a href="#">지점 안내</a></p>
-										<div class="layer-gnb-list">
-											<ul>
-												<li><a href="#">전국지점</a></li>
-												<li><a href="#">기사포함</a></li>
-												<li><a href="#">해외지점</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<p><a href="#">고객센터</a></p>
-									</li>
-								</ul>
-							</li>
+							
 							<li>
 								<ul>
 									<!-- 로그아웃 일시 -->
