@@ -3133,7 +3133,7 @@
 .car-list .chk-view-box input:checked + label:after,
 .cdw-choice .chk-view-box input:checked + label:after {
 	background-repeat: no-repeat;
-	background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+	/* background-image: url("../images/icons/ico-radio-on03.png"); */
 	background-position: center center;
 	-webkit-background-size: auto auto;
 	   -moz-background-size: auto;
@@ -3202,6 +3202,10 @@
 
 .cooperation-wrap .detail-layout .detail-layer-inputT {
 	margin-top: .9rem;
+}
+
+.cooperation-wrap .detail-layout .detail-layer-inputT.mt-0 {
+	margin-top: 0;
 }
 
 /*예약확인 탭*/
@@ -3925,6 +3929,73 @@
 }
 
 /* 제휴사 예약 정보 입력 step2*/
+
+/*차종 선택*/
+.info-input-wrap .car-select-wrap {
+	position: relative;
+	
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.info-input-wrap .car-select-wrap .car-select-btn{
+	padding: 2rem 1.3rem;
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-align: left;
+	border: 1px solid #d2d2d2;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+	border-radius: .5rem;	
+}
+
+.info-input-wrap .car-select-wrap .car-select-btn span{
+	display: inline-block;
+	width: 68%;
+	color: #8f9191;
+}
+
+.info-input-wrap .car-select-wrap .car-select-btn img{
+	width: 30%;
+}
+
+/*차종 선택 후*/
+.info-input-wrap .car-select-wrap.after-select .car-select-btn span{
+	color: #2f2f2f;
+}
+
+.info-input-wrap .car-select-wrap.after-select .car-select-btn{
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #ed1c24;
+	border-color: #ed1c24;
+	background-color: #fff9f9;
+}
+
+
+.info-input-wrap .car-select-wrap.after-select .car-select-btn .icon.checked {
+	background-repeat: no-repeat;
+	background-image: url("../images/icons/ico-radio-on03.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 0 0 .5rem 1rem;
+}
+
+/*//차종 선택*/
+
 
 .info-input-wrap .section-detail .detail-layout .layer-item.item-step2 .item-cont .radioIconBox label {
 	padding: 1.3rem 0;
@@ -5848,3 +5919,233 @@
     background: #ed1c24;
 }
 
+.layer-carselect .car-select{padding: 3rem 2rem 1.5rem;}
+
+.layer-carselect .choice-list,
+.layer-carselect .car-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.layer-carselect .choice-list.list-type-col5{
+	margin-left: 0;
+}
+
+.layer-carselect .choice-list li{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.layer-carselect .choice-list .chk-view-box input,
+.layer-carselect .car-list .chk-view-box input {
+	display: none;
+}
+
+.layer-carselect .choice-list .chk-view-box label{
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-border-radius: .5rem;
+	   -moz-border-radius: .5rem;
+	        border-radius: .5rem;
+	height: 3rem;
+	color: #8f9191;
+	border: 1px solid #f5f5f5;
+	text-align: center;
+	background: #f5f5f5;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.layer-carselect .choice-list .chk-view-box label:after,
+.layer-carselect .car-list .chk-view-box label:after{
+	display: block;
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	width: 13px;
+	height: 12px;
+	margin-top: -6px;
+}
+
+.layer-carselect .choice-list .chk-view-box input:checked + label{
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #ed1c24;
+	border-color: #ed1c24;
+	background-color: #fff9f9;
+}
+
+.layer-carselect .car-select-wrap .car-select-list .chk-view-box label{
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	border-bottom: 1px solid #f1f1f1;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	padding: 2rem 1.7rem;
+}
+
+.layer-carselect .car-select-wrap .car-select-list li:first-child label{
+	border-top: 1px solid #f1f1f1;
+
+}
+
+.layer-carselect .car-select-wrap .car-select-list .chk-view-box input{
+	display: none;
+}
+
+.layer-carselect .car-select-wrap .car-select-list .chk-view-box input:checked + label{
+	background-color: #fff9f9;
+	border-color: none;
+}
+
+.layer-carselect .car-select-wrap .car-select-list .chk-view-box label:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 2.7rem;
+	left: 16rem;
+	/* left: 19rem; */
+	width: 1.3rem;
+	height: 1.3rem;
+	margin-top: -.5rem;
+}
+
+.layer-carselect .car-select-wrap .car-select-list .chk-view-box input:checked + label:after{
+	background-repeat: no-repeat;
+	background-image: url("../images/icons/ico-radio-on03.png");
+	background-position: center center;
+	-webkit-background-size: 92% auto;
+	   -moz-background-size: 92% auto;
+	        background-size: 92% auto;
+}
+
+
+.choice-list .chk-view-box input:checked + label,
+.car-list .chk-view-box input:checked + label,
+.cdw-choice .chk-view-box input:checked + label {
+	font-family: "ManropeB", "NotoM", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #ed1c24;
+	border-color: #ed1c24;
+	background-color: #fff9f9;
+}
+
+
+
+.layer-carselect .car-select-wrap .car-select-list li {
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul{
+	position: relative;
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul > li:first-child{
+	width: 60%;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul > li:last-child{
+	width: 40%;
+}
+.layer-carselect .car-select-wrap .car-info-ul > li img{
+	margin-top: 2rem;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li{
+	margin-bottom: .7rem;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li span{
+	font-family: "ManropeB", "NotoM", serif;
+	font-weight: normal;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li .car-title{
+	font-size: 1.8rem;
+	color: #2f2f2f;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li .car-name{
+	font-size: 1.2rem;
+	color: #54585a;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li .line{
+	display: inline-block;
+	margin: 0 .7rem;
+	width: 1px;
+	height: 1rem;
+	background: #54585a;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li .car-price-red{
+	font-size: 1.8rem;
+	color: #ed1c24;
+	margin-right: .8rem;
+	font-family: "ManropeB", "NotoM", serif;
+	font-weight: normal;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li .car-price-grey{
+	font-size: 1.3rem;
+	color: #bbbbbb;
+	text-decoration: line-through;
+}
+
+.layer-carselect .car-select-wrap .car-info-ul li .car-info-left li .car-disc{
+	font-size: 1.3rem;
+	color: #ed1c24;
+}
