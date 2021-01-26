@@ -1701,8 +1701,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
             spaceBetween: 40,
             //spaceBetween: 30,
             navigation: {
-                nextEl: '.btn-paging-next',
-                prevEl: '.btn-paging-prev',
+                nextEl: '.secondhand-wrap .btn-paging-next',
+                prevEl: '.secondhand-wrap .btn-paging-prev',
             },
             autoplay: {
                 delay: 3000,
@@ -1725,8 +1725,8 @@ if($('.mypage-container .indicator-toggle-cont').length) {
                 spaceBetween: 100,
                 //spaceBetween: 30,
                 navigation: {
-                    nextEl: '.btn-paging-next',
-                    prevEl: '.btn-paging-prev',
+                    nextEl: '.hotdeal-slide-wrap .btn-paging-next',
+                    prevEl: '.hotdeal-slide-wrap .btn-paging-prev',
                  },
                  autoplay: {
                      delay: 3000,
