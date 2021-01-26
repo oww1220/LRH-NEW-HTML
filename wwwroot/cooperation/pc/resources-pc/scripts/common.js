@@ -487,8 +487,26 @@ $(function(){
         });
     }
 
+    //견적 스티키
+	if($('.section-sticky-lnb').length) {
+        (function (){
+            var stickyFixObj = MUI.stickyFix.init({
+                target: '.detail-sticky-items', 
+                parent: '.coop-pay-cont', 
+                targetScroll: '.detail-sticky-iscroll', 
+                targetItem: '.detail-sticky', 
+                navHeight: 0,
+                noTargetHeight: '.sticky-view-info',
+                parentMinHeight: 1160,
+            });
+            $(window).on('scroll', function(e) {		
+                stickyFixObj.calculate();
+            });
 
-
+        })();
+    }
+	
+    
 
 });
 
