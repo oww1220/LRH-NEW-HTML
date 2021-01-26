@@ -1615,6 +1615,19 @@ if($('.mypage-main .swiper-item').length) {
     });
 }
 
+// if($('.mypage-main .swiper-item').length) {
+//     $('.mypage-main .list-item-01 .swiper-pagination').hide();
+//     if($('.mypage-main .list-item-01 .swiper-slide').length >= 2) {
+//         $('.mypage-main .list-item-01 .swiper-pagination').show();
+//         MUI.slide.init('.mypage-main .list-item-01','swiper', {
+//             loop: true,
+//             pagination: {
+//                 el: '.swiper-pagination',
+//             },
+//         });
+//     }
+// }
+
 //운전면허정보 - 국내,외
 //면허 국내,외 구분
 if($('.driver-license .detail-radio').length) {
