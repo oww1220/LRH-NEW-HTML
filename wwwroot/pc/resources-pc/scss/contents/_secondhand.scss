@@ -1301,7 +1301,7 @@
                     }
                     .price-list{
                         padding: 0 20px;
-                        li{
+                        > li{
                             height:50px;
                             @include Align-between;
                             font-size:14px;
@@ -1605,6 +1605,14 @@
                         background-color:#f5f5f5;
                     }
                 }
+
+                .tooltip-layer{
+                    .tooltip-inner{
+                        .lst{
+                            margin: 10px 0 0;
+                        }
+                    }
+                }
             }
 
             &.fixed {
@@ -1692,17 +1700,18 @@
             position:relative;
             flex:none;            
             width:560px;
-            flex-basis:560px;
-            height:350px;
+            flex-basis:560px;            
             padding-right:60px;
 
-            img{
-                position: absolute;
-                width : 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+            //height:350px;
+            
+            // img{
+            //     position: absolute;
+            //     width : 100%;
+            //     top: 50%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            // }
         }
         .carSpec-infos{
             .tit{
@@ -2106,16 +2115,16 @@
             flex:none;            
             width:560px;
             flex-basis:560px;
-            height:350px;
             padding-right:60px;
+            //height:350px;            
 
-            img{
-                position: absolute;
-                width : 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+            // img{
+            //     position: absolute;
+            //     width : 100%;
+            //     top: 50%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            // }
         }
 
         // .car-img{
