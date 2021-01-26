@@ -11677,7 +11677,7 @@ body.fixed {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
-	padding: 50px;
+	padding: 50px 50px 0;
 	scrollbar-base-color: #E1E1E1;
 	scrollbar-face-color: #E1E1E1;
 	scrollbar-3dlight-color: #E1E1E1;
@@ -11686,6 +11686,12 @@ body.fixed {
 	scrollbar-arrow-color: #FAFAFA;
 	scrollbar-shadow-color: #FAFAFA;
 	scrollbar-dark-shadow-color: #FAFAFA;
+}
+
+.layer-popup .popup-cont:after {
+	content: "";
+	display: block;
+	height: 50px;
 }
 
 .layer-popup .popup-cont::-webkit-scrollbar {
@@ -14229,6 +14235,10 @@ body.fixed {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	height: 48px;
+}
+
+.layer-popup.layer-sel-branch .selBranchSwiper .slide-img-box {
+	text-align: center;
 }
 
 .layer-popup.layer-shor-lpoint .popup-top {

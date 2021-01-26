@@ -97,8 +97,15 @@ body.fixed {
 		}
 		.popup-cont {
 			position: relative;
-			box-sizing:border-box;
-			padding:50px;
+			box-sizing:border-box;			
+			padding:50px 50px 0;
+
+			&:after{
+				content:"";
+				display:block;
+				height:50px; 
+			}
+
 			.iscroll-in {
 				//padding-bottom: 40px;
 			}
@@ -1510,6 +1517,8 @@ body.fixed {
 					@include Align-middle;
 					height:48px;
 				}
+
+				.slide-img-box{text-align:center;}
 			}
 		}
 
