@@ -15,6 +15,203 @@ $(function(){
         MUI.IScrollSingle.iscrollConstructor(layer + ' .layer-iscroll');
     };
 
+    
+    /* 유틸start-------------------------------------------------*/
+    //textarea 자동높이 조절
+    if($('.textarea.auto-height').length){
+        autosize($('.textarea.auto-height textarea'));
+    }
+
+    //차트그리기
+    if($('.pie-chart').length){
+        $('.pie-chart').easyPieChart({
+            size:110,
+            lineWidth: 7,
+            barColor:'#F04040',
+            trackColor:'#EBEBEB',
+            scaleColor:false,
+            onStep: function(from, to, percent) {
+                $(this.el).find('.percent span').text(Math.round(percent));
+            }
+        });
+    }
+
+    //댓글쓰기 키업이벤트
+    if($('.unit-text-write-wrap').length) {
+        var keyTarget = $('.unit-text-write-wrap');
+        keyTarget.on('keyup', 'textarea', function(e){
+            if(e.target.value) {
+                keyTarget.find('button').addClass('active');
+            }
+            else{
+                keyTarget.find('button').removeClass('active');
+            }
+        });
+    }
+
+    //주소검색 키업이벤트
+    if($('.layer-address').length) {
+        var addressTarget = $('.layer-address .layer-address-top');
+        addressTarget.on('keyup', 'input', function(e){
+            if(e.target.value) {
+                addressTarget.find('button').addClass('active');
+            }
+            else{
+                addressTarget.find('button').removeClass('active');
+            }
+        });
+    }
+
+
+    //전체동의 열고 닫기
+    if($('.chk-agree-list').length){
+        MUI.event.toggle('.chk-agree-list .agree-toggle-btn', '.chk-agree-list .agree-toggle-cont', false, function(logic, layer) {
+            //console.log(layer);
+            if($(".chk-agree-list").is(':visible')){
+                MUI.IScrollSingle.iscrollRefresh(500);
+            }
+            logic();
+        });
+    }
+
+    //필터 범위 슬라이드
+    if($('.section-filter-result').length) {
+        $('#slider-price').slider({
+            range: true,
+            min: 0,							// 최저
+            max: 80,						// 최고
+            orientation: 'horizontal',		// 바타입 수평
+            step: 20,						// 스텝
+            values: [0, 80],				// 디폴트 값
+            start: function(event, ui) {	// start
+            },
+            slide: function(event, ui) {	// mouse movement
+            },
+            stop: function(event, ui) {		// stop
+            },
+            change: function(event, ui) {
+                var min = ui.values[0],
+                    max = ui.values[1];
+
+                    console.log(ui, min, max);
+                // update form fields
+                $('#min_slider_price').val(min);
+                $('#max_slider_price').val(max);
+
+                $('.price_box_case .price-txt span').each(function(idx, item){
+                    var text = $(item).text(),
+                        minTxt = min === 0 ? min + '원' : min + '만원',
+                        maxTxt = max + '만원',
+                        minRegex = RegExp(minTxt),
+                        maxRegex = RegExp(maxTxt);
+                    if(minRegex.test(text) || maxRegex.test(text)) {
+                        $(item).addClass('active');
+                    }
+                    else{
+                        $(item).removeClass('active');
+                    }
+                });
+
+            }
+        });
+
+        $('.section-filter-result .price-all').on('click', function(e) {
+            console.log(11);
+            $('#slider-price').slider('values', [0, 80]);
+        });
+        $('.section-filter-result .filter-reset-btn').on('click', function(e) {
+            $('#slider-price').slider('values', [0, 80]);
+            $('.section-filter-result input').prop('checked', false);
+        });
+    }
+
+    //필터 버튼 토글
+    MUI.event.toggle('.filter-result-open', null, true, function(logic, layer) {
+        logic();
+    });
+
+    //tooltip 토글
+    if($('.tooltip-box').length){
+        MUI.event.toggle('.tooltip-box > button', null, true, function(logic, layer) {
+            $('.tooltip-box .layer-tooltip').hide();
+            $('.tooltip-box button').removeClass('active');
+            logic();
+            layer.prev().addClass('active');
+        });
+        $('.tooltip-box .layer-tooltip-close').on('click', function(){
+            //var $layer = $('.' + $(this).data('target'));
+            //$layer.hide();
+            $('.tooltip-box .layer-tooltip').hide();
+            $('.tooltip-box button').removeClass('active');
+        });
+    }
+
+
+    //하단 버튼바 있을시 footer padding
+    if($('.estimateBottom').length && $('.estimateBottom').is(':visible')){
+        $('.footer').css({'padding-bottom': 200});
+    }
+
+    //데이트피커
+    MUI.event.calander(".datepicker", {
+        dateFormat: 'yy-mm-dd',
+        showMonthAfterYear: true,
+        changeYear: false,
+        changeMonth: false,
+        showOn: "both",
+        buttonText: "날짜선택",
+        yearSuffix: '.',
+        monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    },
+    function(e){
+        //console.log("날짜변경됨");
+    });
+
+
+    //토스트 메시지 
+    if($('.toast-message-login').length){
+        MUI.event.toastMessage('', 'toast-message-login', 5000);
+    }
+
+    if($('.toast-message-sale').length){
+        MUI.event.toastMessage('', 'toast-message-sale', 5000);
+    }
+
+    //툴팁 공통
+    if($('#wrap .tooltipToggle-top').length) {
+        MUI.event.toggle('#wrap .tooltipOpenBtn-top', '#wrap .tooltipCont-top', false, function(logic, layer) {
+            logic();
+        });
+    }
+
+    //툴팁
+    if($('#wrap .tooltip-layer').length) {
+        MUI.event.toggle('#wrap .tooltipOpenBtn', '#wrap .tooltipCont', false, function(logic, layer) {
+            logic();
+
+            $('.tooltipClose').on('click', function(){
+                $(this).parents('.tooltipCont').fadeOut();            
+            });
+        });
+    }
+
+    //레이어 공통
+    if($('.layer-details').length) {
+        MUI.layer.openClick('.layer-details-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
+            show();
+        });
+    }
+
+
+    /* -------------------------------------------------유틸end*/
+
+    
+    
+
     //모달 팝업 공통 닫기
     if($('.layer-popup').length) {
         MUI.layer.closeClick('.layer-popup-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
@@ -102,7 +299,7 @@ $(function(){
         });
     }
 
-    //미결제 시 예약 취소 안내
+    //제휴사 조회 팝업 레이어
     if($('.layer-business').length) {
         MUI.layer.openClick('.layer-business-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
            
@@ -112,7 +309,8 @@ $(function(){
         });
     }
 
-    //제휴사 조회 팝업 레이어
+    
+    //미결제 시 예약 취소 안내
     if($('.layer-paycancel').length) {
         MUI.layer.openClick('.layer-paycancel-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
            
@@ -235,6 +433,61 @@ $(function(){
             });
         });
     }
+
+    //단기렌터카 안내 - 스티키
+    if($('.short-container .detail-layer-nav').length) {
+        MUI.event.goTarget('.menu-link', $('.short-container .detail-layer-nav').height());
+
+        $(window).on('scroll', function(){
+            var scrollTop = $(this).scrollTop();
+            MUI.event.scrollTaps(scrollTop, $('.short-container .layer-item'), $('.short-container .detail-layer-nav'));
+
+            var scrollPos = window.scrollY || window.pageYOffset,
+                $target = $('.detail-layer-nav-wrap'),
+                $parent = $('.detail-layer-items-wrap'),
+                stickyPos = $parent.height() - $target.find('.detail-layer-nav').height();
+                parentBottomPos = $parent.offset().top + stickyPos;
+                targetPos = $target.offset().top;
+
+
+            if(scrollPos >= targetPos) {            
+                if(scrollPos >= parentBottomPos){ 
+                    $target.removeClass('fixed');
+                    $target.find('.detail-layer-nav').css({top: $parent.height()});
+                }
+                else{
+                    $target.addClass('fixed');
+                    $target.find('.detail-layer-nav').css({top: -20});
+                }
+
+
+            }
+            else{            
+                $target.removeClass('fixed');
+            }
+        });
+    }
+
+    //단기렌터카 상담하기 탭 메뉴
+    if($('.short-container .tab-normal').length){
+        MUI.event.taps('.short-container .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
+    //대여및 요금 안내 - 요금안내의 차 종류
+    if($('.short-container .rentalFeeTab').length){
+        MUI.event.taps('.short-container .rentalFeeTab', false, function(swap){
+            swap();
+        });
+    }
+    if($('.short-container .rentalFeeTab2').length){
+        MUI.event.taps('.short-container .rentalFeeTab2', false, function(swap){
+            swap();
+        });
+    }
+
+
 
 
 });

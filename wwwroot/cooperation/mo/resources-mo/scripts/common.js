@@ -450,6 +450,91 @@ $(function(){
         });
     }
 
+     //견적 기본정보 토글
+     if($('.summary-table-wrap .summary-toggle-btn').length) {
+        MUI.event.toggle('.summary-table-wrap .summary-toggle-btn', '.summary-table-wrap .summary-toggle-cont', true, function(logic, layer) {
+            logic();
+        });
+    }
+    
+
+    //bg-dimmed 클릭시 열린 레이어 들 닫기
+    MUI.layer.closeClick(LAYER_DIM, LAYER_DIM, LAYER_PARENT, true, function(hide){
+        //console.log('close');
+        hide();
+    });
+
+    
+   //설정 레이어팝업
+   if($('#wrap').length) {
+    MUI.layer.openClick('.layer-business-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+        //console.log('open');
+        $('.bg-dimmed').css('z-index','110');
+        show();
+    });
+    MUI.layer.closeClick('.layer-business-close', LAYER_DIM, LAYER_PARENT, true, function(hide){
+        //console.log('close');
+        $('.push').removeClass('active');
+        $('.bg-dimmed').css('z-index','50');
+        hide();
+    });
+}
+
+    //단기렌터카 안내 열고 닫기
+    if($('.shor-wrap').length){
+        MUI.event.toggle('.shor-wrap .shor-notice-toggle-btn', '.shor-wrap .shor-notice-toggle-cont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+
+            //단기렌터카 부가서비스 롤링
+            MUI.slide.init('.shor-wrap .shor-notice-toggle-cont .shor-notice-slide','swiper', {
+                loop: true,
+                autoHeight: true,
+                autoplay: {
+                    delay: 3000,
+                },
+            });
+        });
+    }
+
+    //단기렌터카 안내 탭전환
+    if($('.shor-notice-list .tab-normal').length){
+
+        MUI.event.taps('.shor-notice-list .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
+    //단기렌터카 요금안내 탭전환
+    if($('.shor-notice-list .tab-carkind-wrap').length){
+
+        MUI.event.taps('.shor-notice-list .tab-carkind-wrap', false, function(swap){
+            swap();
+        });
+    }
+
+    //단기렌터카 요금안내 탭전환02
+    if($('.shor-notice-list .shor-notice-carkind-tab .tab-carkind').length){
+
+        MUI.event.taps('.shor-notice-list .shor-notice-carkind-tab .tab-carkind', false, function(swap){
+            swap();
+        });
+    }
+
+    //단기렌터카 요금안내 열고 닫기
+    if($('.shor-wrap').length){
+        MUI.event.toggle('.shor-wrap .shor-notice-carkind-toggle-btn', '.shor-wrap .shor-notice-carkind-toggle-cont', false, function(logic, layer) {
+            //console.log('toggle');
+            logic();
+        });
+    }
+
+    //제주요금 탭
+    if($('.shor-wrap .rentalFeeTab2').length){
+        MUI.event.taps('.shor-wrap .rentalFeeTab2', false, function(swap){
+            swap();
+        });
+    }
 
 
     
