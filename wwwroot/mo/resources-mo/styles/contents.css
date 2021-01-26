@@ -26240,7 +26240,7 @@
 
 .secondhand-wrap .section-filter.section-filter-list .selection .detail-iconBox input[type='checkbox']:checked + label:before {
 	background-repeat: no-repeat;
-	background-image: url("../../resources-mo/images/icons/ico-chk-on04.png");
+	background-image: url("../../resources-mo/images/icons/ico-chk-on06.png");
 	background-position: center center;
 	-webkit-background-size: 92% auto;
 	   -moz-background-size: 92% auto;
@@ -26274,6 +26274,10 @@
 	font-weight: normal;
 }
 
+.secondhand-wrap .section-filter.section-filter-list .detail-iconBox input[type='checkbox']:checked + label {
+	color: #ed1b24;
+}
+
 .secondhand-wrap .section-filter.section-filter-list .detail-iconBox input[type='checkbox'] + label:after {
 	background-repeat: no-repeat;
 	background-image: url("../../resources-mo/images/icons/ico-chk-off03.png");
@@ -26285,7 +26289,7 @@
 
 .secondhand-wrap .section-filter.section-filter-list .detail-iconBox input[type='checkbox']:checked + label:after {
 	background-repeat: no-repeat;
-	background-image: url("../../resources-mo/images/icons/ico-chk-on05.png");
+	background-image: url("../../resources-mo/images/icons/ico-chk-on06.png");
 	background-position: center center;
 	-webkit-background-size: 92% auto;
 	   -moz-background-size: 92% auto;
@@ -26325,6 +26329,7 @@
 
 .secondhand-wrap .section-filter.section-filter-list .detail-layer-submit .detail-layer-list-btn .btn-default {
 	background-color: #8f9191;
+	border-color: #8f9191;
 }
 
 .secondhand-wrap .section-filter.section-filter-list .detail-layer-submit .detail-layer-list-btn .btn {
@@ -31429,11 +31434,43 @@
 }
 
 .secondhand-wrap .section-list ul.list-type-col2 li .text em {
-	display: block;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .secondhand-wrap .section-list ul.list-type-col2 li .text em b {
+	color: #8f9191;
+	display: inline-block;
+	width: 8.8rem;
+	width: 8.8rem;
+	display: block;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	white-space: nowrap;
 	font-size: 1rem;
+}
+
+.secondhand-wrap .section-list ul.list-type-col2 li .text em b:before {
+	display: inline-block;
+	content: "";
+	width: 1px;
+	height: 1rem;
+	background-color: #d2d2d2;
+	margin: 0 .5rem;
 }
 
 .secondhand-wrap .section-list ul.list-type-col2 li .text .price {
@@ -31569,14 +31606,34 @@
 
 .secondhand-wrap .section-list ul li .text em {
 	color: #8f9191;
-	display: inline-block;
 	margin-top: .6rem;
 	font-size: 1rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .secondhand-wrap .section-list ul li .text em b {
 	color: #8f9191;
-	margin-left: 1.1rem;
+	width: 23rem;
+	display: block;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 1rem;
 }
 
 .secondhand-wrap .section-list ul li .text em b:before {
@@ -31585,9 +31642,7 @@
 	width: 1px;
 	height: 1rem;
 	background-color: #d2d2d2;
-	position: relative;
-	left: -.6rem;
-	top: 0;
+	margin: 0 1rem;
 }
 
 .secondhand-wrap .section-list ul li .text .price {

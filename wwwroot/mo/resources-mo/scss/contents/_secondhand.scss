@@ -434,7 +434,7 @@
                         @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
                     }
                     input[type='checkbox']:checked + label:before{
-                        @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+                        @include Background($sprite:'ico-chk-on06', $type:'png', $size:92% auto, $position:center center);
                     }
                 }
             }
@@ -454,11 +454,14 @@
                 input:checked + label {
                     @include Regular;
                 }
+                input[type='checkbox']:checked + label{
+                    color:#ed1b24;
+                }
                 input[type='checkbox'] + label:after{
                     @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
                 }
                 input[type='checkbox']:checked + label:after{
-                    @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                    @include Background($sprite:'ico-chk-on06', $type:'png', $size:92% auto, $position:center center);
                 }
             }
             .detail-layer-submit{
@@ -473,7 +476,8 @@
                         margin-left:0;
                     }
                     .btn-default{
-                        background-color: #8f9191;;
+                        background-color: #8f9191;
+                        border-color:#8f9191;
                     }
                     .btn{
                         border-radius: .5rem;
@@ -3759,10 +3763,32 @@
                             @include Bold;
                             @include Ellipsis($w:100%, $lines:2);
                         }
+                        // em{
+                        //     display: block;
+                        //     b{
+                        //         font-size:1rem;
+                        //     }
+                        // }
                         em{
-                            display: block;
+                            @include Align-between;
                             b{
+                                color:#8f9191;
+                                //margin-left:1.1rem;
+                                display:inline-block;
+                                width: 8.8rem;
+                                @include Ellipsis($w:8.8rem, $lines:1);
                                 font-size:1rem;
+                            }
+                            b:before{
+                                display:inline-block;
+                                content:"";
+                                width:1px;
+                                height:1rem;
+                                background-color:#d2d2d2;
+                                // position: relative;
+                                // left:-.6rem;
+                                // top:0;
+                                margin:0 .5rem;
                             }
                         }
                         .price{
@@ -3861,12 +3887,15 @@
                     }
                     em{
                         color:#8f9191;
-                        display: inline-block;
+                        //display: inline-block;
                         margin-top: .6rem;
                         font-size:1rem;
+                        @include Align-between;
                         b{
                             color:#8f9191;
-                            margin-left:1.1rem;
+                            //margin-left:1.1rem;
+                            @include Ellipsis($w:23rem, $lines:1);
+                            font-size:1rem;
                         }
                         b:before{
                             display:inline-block;
@@ -3874,9 +3903,10 @@
                             width:1px;
                             height:1rem;
                             background-color:#d2d2d2;
-                            position: relative;
-                            left:-.6rem;
-                            top:0;
+                            // position: relative;
+                            // left:-.6rem;
+                            // top:0;
+                            margin: 0 1rem;
                         }
                     }
                     .price{
