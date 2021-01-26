@@ -2070,6 +2070,7 @@ $(function(){
             arrows: false,
             customPagin:0,
             adaptiveHeight: true,
+            pauseOnHover: false,
         });
 
         $headerDrawBt.on({
