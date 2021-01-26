@@ -2048,6 +2048,7 @@ $(function(){
         var slideUpFlag = true,
             slideDownFlag = true,
             idx = 0,
+            speed = 200,
             $slickTarget = $('.header .specials-view-list'),
             $headerDrawBt = $('.header .nav-wrap .draw-btn'),
             $headerDrawBtEn = $('.header .nav-wrap .draw-btn-e'),
@@ -2079,7 +2080,7 @@ $(function(){
                 $(this).parents('li').addClass('hover');
                 
                 if(slideDownFlag){
-                    $drawToggleNormal.slideDown(400, 'linear', function(){
+                    $drawToggleNormal.slideDown(speed, 'linear', function(){
                         setTimeout(function(){
                             slideDownFlag = true;
                         },1000)
@@ -2095,7 +2096,7 @@ $(function(){
         $headerDrawBtAll.on({
             mouseenter:	function(){
                 if(slideDownFlag){
-                    $drawToggleAll.slideDown(400, 'linear', function(){
+                    $drawToggleAll.slideDown(speed, 'linear', function(){
                         slideDownFlag = true;
                     });
                     $drawToggleNormal.hide();
@@ -2111,12 +2112,12 @@ $(function(){
             mouseleave:	function(){
                 if(slideUpFlag) {
                     slideUpFlag = false;
-                    $drawToggleNormal.slideUp(400, 'linear', function(){
+                    $drawToggleNormal.slideUp(speed, 'linear', function(){
                         setTimeout(function(){
                             slideUpFlag = true;
                         },1000)
                     });
-                    $drawToggleAll.slideUp(400, 'linear', function(){
+                    $drawToggleAll.slideUp(speed, 'linear', function(){
                         setTimeout(function(){
                             slideUpFlag = true;
                         },1000)
@@ -2138,7 +2139,7 @@ $(function(){
                 $(this).parents('li').addClass('hover');
                 
                 if(slideDownFlag){
-                    $drawToggleNormal.slideDown(400, 'linear', function(){
+                    $drawToggleNormal.slideDown(speed, 'linear', function(){
                         setTimeout(function(){
                             slideDownFlag = true;
                         },1000)
@@ -2153,9 +2154,8 @@ $(function(){
         $headerDrawBtAllEn.on({
             mouseenter:	function(){
                 if(slideDownFlag){
-                    $drawToggleAll.slideDown(400, 'linear', function(){
+                    $drawToggleAll.slideDown(speed, 'linear', function(){
                         slideDownFlag = true;
-                        console.log(111);
                     });
                     $drawToggleNormal.hide();
                     $hoverTarget.removeClass('hover');
