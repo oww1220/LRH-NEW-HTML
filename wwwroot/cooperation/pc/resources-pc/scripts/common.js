@@ -487,6 +487,20 @@ $(function(){
         });
     }
 
+    //대여/반납절차 내륙,제주 탭
+    if($('.section-explain05 .tab-normal').length){
+        MUI.event.taps('.section-explain05 .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
+     //대여/반납절차 내륙,제주 탭
+     if($('.section-explain06 .tab-normal').length){
+        MUI.event.taps('.section-explain06 .tab-normal', false, function(swap){
+            swap();
+        });
+    }
+
     //견적 스티키
 	if($('.section-sticky-lnb').length) {
         (function (){
