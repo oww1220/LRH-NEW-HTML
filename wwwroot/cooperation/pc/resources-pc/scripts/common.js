@@ -210,6 +210,23 @@ $(function(){
     /* -------------------------------------------------유틸end*/
 
     
+    //gotop
+    if($('.fixedRight .btn-goTop').length){
+        MUI.event.goTop($('.fixedRight .btn-goTop'));
+        MUI.event.topScrollCh($('.fixedRight'));
+        $(window).on('scroll', function(){
+            MUI.event.topScrollCh($('.fixedRight'));
+        });
+    }
+
+    /*브라우저 리사이즈*/
+    if($(".layer-iscroll").length){
+        $(window).on("resize",function(){
+            MUI.IScrollSingle.iscrollRefresh(null);
+        });
+    }
+
+    
     
 
     //모달 팝업 공통 닫기

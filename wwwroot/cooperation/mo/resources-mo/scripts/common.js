@@ -536,6 +536,19 @@ $(function(){
         });
     }
 
+     //대여/반납 내륙제주 탭
+     if($('.shor-notice-cont-05 .tab-carkind-wrap').length){
+        MUI.event.taps('.shor-notice-cont-05 .tab-carkind-wrap', false, function(swap){
+            swap();
+        });
+    }
+
+    if($('.shor-notice-cont-06 .tab-carkind-wrap').length){
+        MUI.event.taps('.shor-notice-cont-06 .tab-carkind-wrap', false, function(swap){
+            swap();
+        });
+    }
+
 
     
 });
