@@ -1817,24 +1817,33 @@ body.fixed {
 
 		//메인 팝업
 		&.layer-bn{
+			width:620px;
+			// height:760px;
 			.pop-inner{
 				border-radius: 10px;
+				margin:0;
 			}
 			.pop-cont{
-				width: 100%;
-				height: 100%;
+				width:620px;
+				height:760px;
 				padding:0;
 				.main-event-lists {
-					width: 100%;
-					height: 100%;
+					width:620px;
+					height:700px;
 				}
 	
 				.swiper-slide {
 					@include Align-middle;
 					box-sizing: border-box;
+					width:620px;
+					height:700px;
 				}
 				.swiper-slide .main-event-lists-img{
-					width:auto;
+					width:620px;
+					img{
+						width:100%;
+						height:auto;
+					}
 				}
 				.swiper-button-next{
 					z-index: 20;
@@ -1899,7 +1908,7 @@ body.fixed {
 				padding:0 50px;
 				height:60px;
 				background-color: #2f2f2f;
-				@include Position($bottom: 0, $right: 0, $left: 0);
+				//@include Position($bottom: 0, $right: 0, $left: 0);
 				z-index: 10;
 				button{
 					color:#fff;
