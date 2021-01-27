@@ -974,8 +974,9 @@
                 align-items: flex-end;
 
                 .deadline{
+                    @include Align-bottom-middle;
                     @include Bold;
-                    display:flex;
+                    //display:flex;
                     font-size:26px;
                     margin-left:50px;
                     text-align:center;
@@ -1007,6 +1008,33 @@
                     span {
                         display:block;
                         font-size:12px;
+                    }
+
+                    .d-day {
+                        @include Align-middle-column;
+                        position: relative;
+                        background: linear-gradient(90deg, rgba(251,68,87,1) 0%, rgba(241,93,55,1) 100%);
+                        width: 70px;
+                        height: 70px;
+                        margin-right: 30px;
+                        border-radius: 100%;
+                        @include Bold;
+                        color: #fff;
+                        font-size: 12px;
+                        strong {
+                            font-size: 22px;
+                            color: #fff;
+                        }
+                        &:after {
+                            display: inline-block;
+                            content: "";
+                            position: absolute;
+                            right: 9px;
+                            bottom: -1px;
+                            width: 12px;
+                            height: 12px;
+                            background: url(../../resources-pc/images/bg-main-dday.png) no-repeat center center;
+                        }
                     }
                 }
             }
