@@ -1277,6 +1277,10 @@
 	max-width: 30%;
 }
 
+.cooperation-container .section-form .form-cont.reserv-form .row.type2 .selectbox.email-select {
+	max-width: 45%;
+}
+
 .cooperation-container .section-form .form-cont .row.type2 .inputT{
 	max-width: 100%;
 }
@@ -1802,7 +1806,7 @@
 }
 
 .cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li + li > div > strong {
-	padding-top: 5px;
+	padding-top: 0;
 }
 
 .cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div {
@@ -1826,6 +1830,7 @@
 .cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div strong {
 	width: 30%;
 	font-size: 16px;
+	display: inline-block;
 }
 
 .cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div strong i {
@@ -1841,7 +1846,7 @@
 }
 
 .cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .chk-icon-box {
-	width: 50%;
+	width: 100%;
 }
 
 .cooperation-container .reserv-select-wrap .section-cont .section-form.form2 .form-cont li > div > div .chk-icon-box.eng-nav{
@@ -1974,15 +1979,38 @@
 }
 
 /*예약자 정보 폼*/
-.cooperation-container .coop-form-wrap .section-form .form-cont{padding:0;}
-.cooperation-container .coop-form-wrap .section-form .form-cont .row{padding:0 30px;}
-.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .row{padding: 0 450px 0 0;}
-.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .row + .row .input-cont li + li { margin-top: 0;}
-.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form li {padding-bottom: 0;}
-.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form li + li {padding: 0; border-top: 0;}
-.cooperation-container .coop-form-wrap .section-form + .section-form {margin-top:0;}
+.cooperation-container .coop-form-wrap .section-form .form-cont{
+	padding:0;
+}
+
+.cooperation-container .coop-form-wrap .section-form .form-cont .row{
+	padding:0 30px;
+}
+
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .row{
+	padding: 0 450px 0 0;
+}
+
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .row + .row .input-cont li + li { 
+	margin-top: 0;
+}
+
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form li {
+	padding-bottom: 0;
+}
+
+.cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form li + li {
+	/* padding: 0;  */
+	border-top: 0;
+}
+.cooperation-container .coop-form-wrap .section-form + .section-form {
+	margin-top:0;
+}
+
 .cooperation-container .coop-form-wrap .section-form .form-cont.reserv-form .input-cont,
-.cooperation-container .coop-form-wrap .section-form .form-cont.driver-license-section .input-cont{padding:0;}
+.cooperation-container .coop-form-wrap .section-form .form-cont.driver-license-section .input-cont{
+	padding:0;
+}
 
 
 /* 운전면허증 탭*/
@@ -2215,21 +2243,71 @@
 	background-color: #ff404b;
 }
 
-.cooperation-container .section-form .form-cont.driver-license-section li {padding-bottom: 0; }
-.cooperation-container .section-form .form-cont.driver-license-section .guide-cont .lst li {padding-left: 28px;}
-.cooperation-container .cooperation-wrap .form-cont li + li {padding: 0;border-top: none;}
-.cooperation-container .section-form .form-cont.driver-license-section .row{padding: 0;}
-.cooperation-container .section-form .form-cont.driver-license-section label {width: auto;-webkit-flex-basis: auto; -ms-flex-preferred-size: auto;  flex-basis: auto;}
-.cooperation-container .cooperation-wrap .form-cont.driver-license-section .input-tit {font-weight: normal;}
-.cooperation-container .cooperation-wrap .form-cont.driver-license-section .lst.dot{margin-top: 20px;}
-.cooperation-container .cooperation-wrap .form-cont.driver-license-section li + li {padding-left: 12px;}
-.cooperation-container .cooperation-wrap .lst.dot li + li {padding-left: 12px;}
-.cooperation-container .cooperation-wrap .form-cont.agreeAccor li {padding-bottom:0;}
-.cooperation-container .cooperation-wrap .textarea{height: 200px;  width: auto;}
-.cooperation-container .cooperation-wrap .textarea .textarea{border: 0; width: auto;}
-.cooperation-container .cooperation-wrap .agree-area .agree-header .agree-header-top {padding: 0;}
-.cooperation-container .cooperation-wrap .form-cont.agreeAccor li > div > div {	width: 100%;}
-.cooperation-container .cooperation-wrap .form-cont .lst li + li {margin-top: 10px;}
+.cooperation-container .section-form .form-cont.driver-license-section li {
+	padding-bottom: 0; 
+}
+
+.cooperation-container .section-form .form-cont.driver-license-section .guide-cont .lst li {
+	padding-left: 28px;
+}
+
+.cooperation-container .cooperation-wrap .form-cont li + li {
+	padding: 0;
+	border-top: none;
+}
+
+.cooperation-container .section-form .form-cont.driver-license-section .row{
+	padding: 0;
+}
+
+.cooperation-container .section-form .form-cont.driver-license-section label {
+	width: auto;
+	-webkit-flex-basis: auto; 
+	-ms-flex-preferred-size: auto;  
+	flex-basis: auto;
+}
+
+.cooperation-container .cooperation-wrap .form-cont.driver-license-section .input-tit {
+	font-weight: normal;
+}
+
+.cooperation-container .cooperation-wrap .form-cont.driver-license-section .lst.dot{
+	margin-top: 20px;
+}
+
+.cooperation-container .cooperation-wrap .form-cont.driver-license-section li + li {
+	padding-left: 12px;
+}
+
+.cooperation-container .cooperation-wrap .lst.dot li + li {
+	padding-left: 12px;
+}
+
+.cooperation-container .cooperation-wrap .form-cont.agreeAccor li {
+	padding-bottom:0;
+}
+
+.cooperation-container .cooperation-wrap .textarea{
+	height: 200px;  
+	width: auto;
+}
+
+.cooperation-container .cooperation-wrap .textarea .textarea{
+	border: 0; 
+	width: auto;
+}
+
+.cooperation-container .cooperation-wrap .agree-area .agree-header .agree-header-top {
+	padding: 0;
+}
+
+.cooperation-container .cooperation-wrap .form-cont.agreeAccor li > div > div {	
+	width: 100%;
+}
+
+.cooperation-container .cooperation-wrap .form-cont .lst li + li {
+	margin-top: 10px;
+}
 
 .cooperation-container .gray-noti-section {
 	text-align: center;
@@ -3388,9 +3466,17 @@
 	        flex-basis: auto;
 }
 
-.cooperation-wrap .coop-pay-cont .input-cont {padding: 0;}
-.cooperation-wrap .coop-pay-cont .choice-list li:first-child{width: 100%;}
-.cooperation-wrap .coop-pay-cont .form-cont li {padding-bottom: 0;}
+.cooperation-wrap .coop-pay-cont .input-cont {
+	padding: 0;
+}
+
+.cooperation-wrap .coop-pay-cont .choice-list li:first-child{
+	width: 100%;
+}
+
+.cooperation-wrap .coop-pay-cont .form-cont li {
+	padding-bottom: 0;
+}
 
 
 /*예약확인*/
@@ -3411,11 +3497,25 @@
 	padding-bottom: 50px;
 }
 
-.reserv-confirm-tab .section-form .form-cont.reserv-form .row{padding: 0;}
-.reserv-confirm-tab .gray-noti-section {padding: 60px 180px 60px 100px;}
-.reserv-confirm-tab .lst.dot {text-align: left;}
-.reserv-confirm-tab .section-form .lst.dot li + li {padding-left: 12px;}
-.reserv-confirm .tbl-box table td{text-align: left;}
+.reserv-confirm-tab .section-form .form-cont.reserv-form .row{
+	padding: 0;
+}
+
+.reserv-confirm-tab .gray-noti-section {
+	padding: 60px 180px 60px 100px;
+}
+
+.reserv-confirm-tab .lst.dot {
+	text-align: left;
+}
+
+.reserv-confirm-tab .section-form .lst.dot li + li {
+	padding-left: 12px;
+}
+
+.reserv-confirm .tbl-box table td{
+	text-align: left;
+}
 
 /* 정보 페이지 */
 .cooperation-container .explain-cont01 table tbody tr td.person{
@@ -3459,8 +3559,13 @@
 }
 
 
-.layer-wrap .lst.dot{margin-top: 20px;}
-.layer-wrap .lst.dot li{line-height: 1.7;}
+.layer-wrap .lst.dot{
+	margin-top: 20px;
+}
+
+.layer-wrap .lst.dot li{
+	line-height: 1.7;
+}
 
 .layer-wrap.layer-cdw,
 .layer-wrap.layer-kickboard,
@@ -3468,10 +3573,24 @@
 .layer-wrap.layer-stroller{width: 930px;}
 
 .layer-cancel .cancel-info,
-.layer-business .cancel-info{display: flex; flex-wrap: nowrap; font-size: 18px; padding: 0 0 40px 0; margin-bottom: 40px; border-bottom: 1px solid #ddd;}
+.layer-business .cancel-info{
+	display: flex; 
+	flex-wrap: nowrap; 
+	font-size: 18px; 
+	padding: 0 0 40px 0; 
+	margin-bottom: 40px; 
+	border-bottom: 1px solid #ddd;
+}
+
 .layer-cancel .cancel-info p,
-.layer-business .cancel-info p{padding-top: 5px;}
-.layer-cancel .tbl-box table td{text-align: center;}
+.layer-business .cancel-info p{
+	padding-top: 5px;
+}
+
+.layer-cancel .tbl-box table td{
+	text-align: center;
+}
+
 .layer-business .icon.coop-dialogue,
 .layer-cancel .icon.coop-dialogue {
 	background-repeat: no-repeat;
@@ -3484,5 +3603,14 @@
 	height: 35px;
 }
 
-.layer-business .btn-wrap{padding: 0 50px 0;}
-.layer-business .btn-wrap button{margin-bottom: 20px;}
+.layer-business .btn-wrap{
+	padding: 0 50px 0;
+}
+
+.layer-business .btn-wrap button{
+	margin-bottom: 20px;
+}
+
+.layer-wrap.layer-carseat .tbl-box table td img{
+	width: 100%;
+}
