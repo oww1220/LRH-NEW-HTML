@@ -4096,6 +4096,9 @@
             padding:1.7rem 0;
             .wrap {
                 padding:0 1.7rem;
+                &.wrap-ty2{
+                    padding:0;
+                }
                 .cont-tit h4 {
                     background-color: #f5f5f5;
                     padding:1.5rem 1.3rem;
@@ -4199,6 +4202,28 @@
                                 height:4.1rem;
                                 border-radius: .5rem;
                                 font-size: 1.2rem;
+                            }
+                            &.phone-num-ty2 {
+                                @include Align-between;
+                                .detail-layer-inputT-phone {
+                                    width:69%;
+                                    margin:0;
+                                    @include Align-between;
+                                    li {
+                                        &:first-child {
+                                            width:32%;
+                                        }
+                                        & + li {
+                                            width:32%; 
+                                        }
+                                    }
+                                }
+                                button {
+                                    width:30%;
+                                    height:4.1rem;
+                                    border-radius: .5rem;
+                                    font-size: 1.2rem;
+                                }
                             }
                         }
                         .detail-layer-inputT-certification {
