@@ -1,0 +1,153 @@
+// 약관
+.provisionWrap {
+    padding: 0;
+    margin: 0 0 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #54585a;
+    * {
+        box-sizing: border-box;
+    }
+    h1, h2, h3 {
+        @include Bold;
+        color: #2f2f2f;
+    }
+    h1 {
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
+    h2, h3 {
+        font-size: 18px;
+        padding: 30px 0 20px 0;
+    }
+    h1 + h2 {
+        padding-top: 0;
+    }
+    p {line-height: 1.5;
+        &.tit {
+            padding-bottom: 20px;
+        }
+    }
+    .mt20 {
+        margin-top: 20px;
+    }
+    .t-notice {
+        margin-top: 20px;
+        margin-left: 18px;
+        text-indent: -15px;
+        word-break: break-all;
+        color: #ed1c24;
+        &:before {
+            content:'';
+            display: inline-block;
+            width:3px;
+            height:3px;
+            background: #ed1c24;
+            margin-right:10px;
+            margin-top: 10px;
+            border-radius:100%;
+            vertical-align: middle;
+            margin-top: -5px;
+        } 
+    }
+    .agree-list {
+        &-type1 {
+            li {
+                padding-bottom: 20px;
+                .agree-list-type2 {
+                    margin-top: 10px;
+                    li {
+                        padding-bottom: 10px;
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-type2 {
+            margin-left: 18px;
+            li {
+                text-indent: -15px;
+                word-break: break-all;
+                //padding-top: 10px;
+                p {
+                    text-indent: -2px;
+                }
+                strong {
+                    @include Bold;
+                    font-size: 14px;
+                }
+                &:before {
+                    content:'';
+                    display: inline-block;
+                    width:3px;
+                    height:3px;
+                    background: #929494;
+                    margin-right:10px;
+                    margin-top: 10px;
+                    border-radius:100%;
+                    vertical-align: middle;
+                    margin-top: -5px;
+                }
+                &.texRed {
+                    &:before {
+                        background: #ed1c24;
+                    }
+                }
+            }
+        }
+    }
+
+    .agree-form {
+        margin-top: 30px !important;
+        strong {
+            @include Bold;
+            font-size: 16px;
+        }
+        .agree-form-box {
+            border-top: 1px solid #e7e7e7;
+            border-bottom: 1px solid #e7e7e7;
+            padding: 0 0 20px 0 !important;
+            margin-top: 20px;
+            h4 {
+                background: #8f9191;
+                color: #fff;
+                font-size: 18px;
+                @include Bold;
+                padding: 20px;
+            }
+            & + .agree-form-box {
+                margin-top: 30px;
+            }
+        }
+    }
+    .form-cont {
+        .row {
+            padding: 20px 20px 0 !important;
+            margin-bottom: 0;
+            &.type2{
+                .input-tit {
+                width: 100px;
+                flex-basis: 100px;
+                }
+                .input-cont {
+                    .box-between {
+                        width: 100% !important;
+                    }
+                }
+                
+                .type-left {
+                    position: relative;
+                    .left-txt {
+                        position: absolute;
+                        top: 28%;
+                        right: 15px;
+                        height: 35px;
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}
