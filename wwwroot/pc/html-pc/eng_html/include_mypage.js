@@ -6,7 +6,7 @@ $(function(){
 		<div class="box-between">
 			<h3 class="txt">
 				<p class="greeting">Hello</p>
-				<strong class="name">kimLOTTE (ID123)</strong>
+				<strong class="name">kimLOTTE (ID123) <br>kimLOTTE (ID123)kimLOTTE (ID123)kimLOTTE (ID123)kimLOTTE (ID123)kimLOTTE (ID123)</strong>
 			</h3>						
 			<ul class="item-list">
 				<li>	

@@ -687,6 +687,7 @@ $txt-darkblack: #2f2f2f;
 				}
 				
 				+ .tbl-box{margin-top:60px;}
+				+ .statement{margin-top:60px;}
 				+ .row{margin-top:60px;}
 				+ .lst{margin-top:20px;}
 			}
@@ -1121,10 +1122,17 @@ $txt-darkblack: #2f2f2f;
 	.details{
 		.tit{
 			margin-bottom:0;
-			+ .lst, + .txt{margin-top:25px;}
+			+ .lst, + .txt, + .lst-tit{margin-top:25px;}
 		}
 		.txt{
-			+ .lst, + .txt{margin-top:25px;}
+			.bold{font-size:inherit;}
+			+ .lst, + .txt, + .lst-tit{margin-top:25px;}
+		}
+		.lst{
+			+ .lst, + .txt, + .lst-tit{margin-top:25px;}
+		}
+		.lst-tit{
+			+ .lst{margin-top:10px;}
 		}
 		.details-header{
 			@include Align-between;
