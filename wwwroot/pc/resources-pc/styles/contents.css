@@ -1684,6 +1684,10 @@ html, body {
 	        justify-content: left;
 }
 
+.multi-segment-list.align-top .circle + .details {
+	margin-top: 10px;
+}
+
 .multi-segment-list + .row {
 	margin-top: 80px;
 }
@@ -4684,9 +4688,13 @@ html, body {
 	   -moz-box-pack: left;
 	    -ms-flex-pack: left;
 	        justify-content: left;
+	min-width: 100%;
 }
 
 .main-wrap .secondhand-wrap .secondhand-slide-wrap .swiper-wrapper .slide-type .txt-type .t-list li {
+	-webkit-flex-shrink: 0;
+	    -ms-flex-negative: 0;
+	        flex-shrink: 0;
 	color: #8f9191;
 	font-size: 16px;
 	line-height: 1.5;
@@ -4702,7 +4710,10 @@ html, body {
 }
 
 .main-wrap .secondhand-wrap .secondhand-slide-wrap .swiper-wrapper .slide-type .txt-type .t-list li:nth-of-type(3) {
-	width: 118px;
+	-webkit-flex-shrink: 1;
+	    -ms-flex-negative: 1;
+	        flex-shrink: 1;
+	width: 100%;
 	display: block;
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
@@ -27375,6 +27386,16 @@ html, body {
 .carRental-container.drivingTips-container .visual-top .txt-box .txt {
 	font-size: 14px;
 	color: #54585a;
+}
+
+.carRental-container.drivingTips-container .visual-top .txt-box .txt strong {
+	display: block;
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 20px;
+	margin-bottom: 10px;
 }
 
 .carRental-container.drivingTips-container .statement-list {
