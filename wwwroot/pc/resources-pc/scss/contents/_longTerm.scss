@@ -372,204 +372,203 @@
 
     //신차장 다이렉트
     .estimate-visual-section{
-        //@include Align-between-top;
-        @include Align-middle-column;
+        padding:20px 0 60px;       
         background-color: #fafafa;
-        .estimate-visual-col{
-            .estimateSwiper{
-                position:relative;
-                width:1000px;
-                height:500px;
-                .swiper-slide {
-                    img {
-                        width: 1000px;
-                        height: 500px;
-                        background-size: 100% auto;
-                        position: relative;
-                    }
-                    .img{
-                        position: relative;
-                    }
-                    .cover{
-                        width: 1000px;
-                        height: 500px;
-                        position: relative;
-                        overflow: hidden;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    .flag-bottom-wrap {
-                        width: 100%;
-                        padding: 0 2px 0 40px;
-                        box-sizing: border-box;
-                        left: 0;
-                        bottom: 20%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex-flow: wrap-reverse;
-                        position: absolute;
-                        font-size: 0;
-                        z-index: 3;
-                        .flag {
-                            margin-right: 5px;
-                            margin-top: 5px;
-                            position: static;
-                            box-sizing: border-box;
-                            line-height: 1;
-                            display: inline-flex;
-                            align-items: center;
-                            justify-content: center;
-                            & > i {
-                                margin-right: 5px;
-                            }
-                            &.hotsale {
-                                top: 10px;
-                                left: 10px;
-                                font-size: 13px;
-                                color: #fff;
-                                height: 30px;
-                                border-radius: 15px;
-                                padding: 0 10px;
-                                background-color: #7C49FC;
-                                @include Bold;
-                                .icon.hotsale {
-                                    background-repeat: no-repeat;
-                                    background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-hotsale.png);
-                                    background-position: center center;
-                                    background-size: auto;
-                                    width: 15px;
-                                    height: 15px;
-                                }
-                            }
-                            &.fast {
-                                top: 10px;
-                                left: 10px;
-                                font-size: 13px;
-                                color: #fff;
-                                height: 30px;
-                                border-radius: 15px;
-                                padding: 0 10px;
-                                background-color: #406FF0;
-                                @include Bold;
-                                .icon.fast {
-                                    background-repeat: no-repeat;
-                                    background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-fast.png);
-                                    background-position: center center;
-                                    background-size: 15px auto;
-                                    width: 15px;
-                                    height: 15px;
-                                }
-                            }
-                            &.popular {
-                                top: 10px;
-                                left: 10px;
-                                font-size: 13px;
-                                color: #fff;
-                                height: 30px;
-                                border-radius: 15px;
-                                padding: 0 10px;
-                                background-color: #FF4C88;
-                                @include Bold;
-                                .icon.popular {
-                                    background-repeat: no-repeat;
-                                    background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-popular.png);
-                                    background-position: center center;
-                                    background-size: 15px auto;
-                                    width: 15px;
-                                    height: 15px;
-                                }
-                            }
-                            &.limit {
-                                top: 10px;
-                                left: 10px;
-                                font-size: 13px;
-                                color: #fff;
-                                height: 30px;
-                                border-radius: 15px;
-                                padding: 0 10px;
-                                background-color: #00B2C9;
-                                @include Bold;
-                                .icon.limit {
-                                    background-repeat: no-repeat;
-                                    background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-limit.png);
-                                    background-position: center center;
-                                    background-size: 15px auto;
-                                    width: 15px;
-                                    height: 15px;
-                                }
-                            }
-                        }
-                    }
-                    .conts {
-                        padding: 40px 40px 34px;
-                        @include Position ($bottom:0, $left:0, $right:0);
-                        .text{
-                            position: relative;
-                            z-index: 5;
-                            & > strong {
-                                font-size: 18px;
-                                display: block;
-                                line-height: 1.3;
-                                color: #fff;
-                            }
-                            & > span {
-                                font-size: 13px;
-                                margin-top: 6px;
-                                line-height: 1;
-                                color: #fff;
-                                display: block;
-                            }
-                        }
-                        &:before{
-                            display:block;
-                            content: "";
-                            background-color: #000;
-                            opacity: .6;
-                            width:100%;
-                            height:100%;
-                            @include Position ($bottom:0, $left:0);
-                            z-index: 2;
-                        }
-                    }
-                }
-                .estimateSwiper-button-prev, .estimateSwiper-button-next{ 
-                    cursor: pointer;
-                    @include Position($top:50%, $left:0);
-                    width: 84px; 
-                    height:130px;
-                    margin-top:-65px;
-                    @include Align-middle;
-                    z-index:5;
-                }
-                .estimateSwiper-button-next{@include Position($left:auto, $right:0);}
-
-                .estimateSwiper-pagination{
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    left: auto;
-                    font-family: "ManropeB", "NotoM", serif;
-                    font-weight: normal;
-                    width: auto;
-                    color: #fff;
-                    padding: 30px;
-                    z-index:5;
-                }
-            }
-            .banner-box {
-                padding:20px 0 0 0;
+        
+        .estimateSwiper{
+            position:relative;
+            width:1000px;
+            height:500px;
+            .swiper-slide {
                 img {
                     width: 1000px;
-                    height: 180px;
+                    height: 500px;
                     background-size: 100% auto;
+                    position: relative;
+                }
+                .img{
+                    position: relative;
+                }
+                .cover{
+                    width: 1000px;
+                    height: 500px;
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .flag-bottom-wrap {
+                    width: 100%;
+                    padding: 0 2px 0 40px;
+                    box-sizing: border-box;
+                    left: 0;
+                    bottom: 20%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-flow: wrap-reverse;
+                    position: absolute;
+                    font-size: 0;
+                    z-index: 3;
+                    .flag {
+                        margin-right: 5px;
+                        margin-top: 5px;
+                        position: static;
+                        box-sizing: border-box;
+                        line-height: 1;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        & > i {
+                            margin-right: 5px;
+                        }
+                        &.hotsale {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #7C49FC;
+                            @include Bold;
+                            .icon.hotsale {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-hotsale.png);
+                                background-position: center center;
+                                background-size: auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                        &.fast {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #406FF0;
+                            @include Bold;
+                            .icon.fast {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-fast.png);
+                                background-position: center center;
+                                background-size: 15px auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                        &.popular {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #FF4C88;
+                            @include Bold;
+                            .icon.popular {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-popular.png);
+                                background-position: center center;
+                                background-size: 15px auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                        &.limit {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #00B2C9;
+                            @include Bold;
+                            .icon.limit {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-limit.png);
+                                background-position: center center;
+                                background-size: 15px auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                    }
+                }
+                .conts {
+                    padding: 40px 40px 34px;
+                    @include Position ($bottom:0, $left:0, $right:0);
+                    .text{
+                        position: relative;
+                        z-index: 5;
+                        & > strong {
+                            font-size: 18px;
+                            display: block;
+                            line-height: 1.3;
+                            color: #fff;
+                        }
+                        & > span {
+                            font-size: 13px;
+                            margin-top: 6px;
+                            line-height: 1;
+                            color: #fff;
+                            display: block;
+                        }
+                    }
+                    &:before{
+                        display:block;
+                        content: "";
+                        background-color: #000;
+                        opacity: .6;
+                        width:100%;
+                        height:100%;
+                        @include Position ($bottom:0, $left:0);
+                        z-index: 2;
+                    }
                 }
             }
+            .estimateSwiper-button-prev, .estimateSwiper-button-next{ 
+                cursor: pointer;
+                @include Position($top:50%, $left:0);
+                width: 84px; 
+                height:130px;
+                margin-top:-65px;
+                @include Align-middle;
+                z-index:5;
+            }
+            .estimateSwiper-button-next{@include Position($left:auto, $right:0);}
+
+            .estimateSwiper-pagination{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: auto;
+                font-family: "ManropeB", "NotoM", serif;
+                font-weight: normal;
+                width: auto;
+                color: #fff;
+                padding: 30px;
+                z-index:5;
+            }
         }
+        .banner-box {            
+            text-align:center;
+            margin:20px 0 0;
+            
+            // img {
+            //     width: 1000px;
+            //     height: 180px;
+            //     background-size: 100% auto;
+            // }
+        }        
     }
     .estimate-filter-section{
-        padding:90px 40px 50px;
-        //margin-top:40px;
+        padding:0 40px 60px;        
         background-color:#fafafa;
 
         .estimate-filter-header{
@@ -600,8 +599,8 @@
                         border:1px solid $txt-red;
                         @include roundBox;
                         background-color:#fff9f9;
-                        transition: all .25s ease-out;
-                        transform: scale(1.05);
+                        transition: all .15s ease-out;
+                        transform: scale(1.06);
                         @include box-shadow($top:0, $left:10px, $blur:25px, $color:rgba(0, 0, 0, 0.15));
                         z-index:5;
                     }
@@ -652,7 +651,7 @@
                     flex:1;
 
                     .chk-box{
-                        width:132px;
+                        width:112px;
                         
                         label{
                             @include Align-middle-column;

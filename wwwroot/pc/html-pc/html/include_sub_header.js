@@ -163,7 +163,7 @@ $(function(){
 						<div class="detail-layer-in">
 							<ul class="layer-gnb list-type-col4">
 								<li>
-									<p><a href="#">신차장 특가</a></p>
+									<p><a href="#">신차 특가</a></p>
 								</li>
 								<li>
 									<p><a href="#">다이렉트 견적</a></p>
@@ -367,7 +367,7 @@ $(function(){
 										<p><a href="#"><b>신차 장기렌터카</b></a></p>
 									</li>
 									<li>
-										<p><a href="#">신차장 특가</a></p>
+										<p><a href="#">신차 특가</a></p>
 									</li>
 									<li>
 										<p><a href="#">다이렉트 견적</a></p>

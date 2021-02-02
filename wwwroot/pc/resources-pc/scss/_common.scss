@@ -2028,7 +2028,13 @@ $txt-darkblack: #2f2f2f;
 				+ p, + .tooltip-list{margin-top:10px;}
 			}
 			p{
-				+ p, + .tooltip-list{margin-top:10px;}
+				+ p, + .tooltip-list, + .tbl-type02{margin-top:10px;}
+
+				strong{
+					@include Regular;
+					font-size:16px;
+					color:#2f2f2f;
+				}
 			}
 			.tooltip-list{
 				padding:10px 0;
@@ -2038,6 +2044,12 @@ $txt-darkblack: #2f2f2f;
 					
 					+ .lst{margin-top:10px;}
 				}				
+			}
+			
+			.tbl-type02{
+				table{
+					th, td{padding:20px;}
+				}
 			}
 			
 			&.align-c-type{
