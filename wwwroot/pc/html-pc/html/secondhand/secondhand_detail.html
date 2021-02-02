@@ -1305,26 +1305,26 @@
 			})();
 		}
 
-		/*영역외 닫기*/
-		$(document).on('click', function(e){
-			var targetBtn = $('.carInfoTooltipBtn'),
-				targetLayer = $('.carInfoTooltipCont')
-			if((!targetBtn.has(e.target).length)) {
-				targetLayer.hide();
-			}
-		});
+		// /*영역외 닫기*/
+		// $(document).on('click', function(e){
+		// 	var targetBtn = $('.carInfoTooltipBtn'),
+		// 		targetLayer = $('.carInfoTooltipCont')
+		// 	if((!targetBtn.has(e.target).length)) {
+		// 		targetLayer.hide();
+		// 	}
+		// });
 
-		// 타겟영역을 제외하고 클릭했을 시 팝업 숨김처리.
-		$('body').on('click', function(e){
-			var $tgPoint = $(e.target);
-			var $tooltipCallBtn = $tgPoint.hasClass('tooltipOpenBtn')
-			var $tooltipArea = $tgPoint.hasClass('tooltipCont')
+		// // 타겟영역을 제외하고 클릭했을 시 툴팁 숨김처리.
+		// $('body').on('click', function(e){
+		// 	var $tgPoint = $(e.target);
+		// 	var $tooltipCallBtn = $tgPoint.hasClass('tooltipOpenBtn')
+		// 	var $tooltipArea = $tgPoint.hasClass('tooltipCont')
 		
-			if ( !$tooltipCallBtn && !$tooltipArea ) {
-				$('.tooltipCont').hide();
-				//$('.tooltipCont').removeClass('active');
-			}
-		});
+		// 	if ( !$tooltipCallBtn && !$tooltipArea ) {
+		// 		$('.tooltipCont').hide();
+		// 		//$('.tooltipCont').removeClass('active');
+		// 	}
+		// });
 
 	});
 	</script>
