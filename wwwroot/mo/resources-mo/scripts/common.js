@@ -180,7 +180,7 @@ $(function(){
 
     //tooltip 토글
     if($('.btn-tooltip-box-group').length){
-        MUI.event.toggle('.btn-tooltip-box', '.btn-tooltip-box-group .tooltip-box', true, function(logic, layer) {
+        MUI.event.toggle('.btn-tooltip-box', '.btn-tooltip-box-group .tooltip-box', false, function(logic, layer) {
             //$('.btn-tooltip-box').next('.tooltip-box').addClass('active');
             //$('.btn-tooltip-box').next('.tooltip-box.active').prev('.btn-tooltip-box').addClass('active');
             logic();
@@ -1777,6 +1777,26 @@ if($('.etc-wrap .tab-Level').length){
         });
         
     }
+
+    /*영역외 닫기*/
+    // $(document).on('click', function(e){
+    //     var targetBtn = $('.btn-tooltip-box'),
+    //         targetLayer = $('.tooltip-box')
+    //     if((!targetBtn.has(e.target).length)) {
+    //         targetLayer.hide();
+    //     }
+    // });
+
+    $('body').on('click', function(e){
+        var $tgPoint = $(e.target);
+        var $tooltipCallBtn = $tgPoint.hasClass('btn-tooltip-box')
+        var $tooltipArea = $tgPoint.hasClass('tooltip-box')
+    
+        if ( !$tooltipCallBtn && !$tooltipArea ) {
+            $('.tooltip-box').hide();
+            $('.tooltip-box').removeClass('active');
+        }
+    });
     
     //일반 레이어팝업 테스트 ---추후삭제
     MUI.layer.openClick('#layer-open2', LAYER_DIM, LAYER_PARENT, true, function(show){
