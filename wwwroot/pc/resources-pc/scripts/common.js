@@ -202,6 +202,34 @@ if($('#wrap .tooltip-layer').length) {
     });
 }
 
+// 타겟영역을 제외하고 클릭했을 시 툴팁 숨김처리.
+if($('#wrap .tooltip-layer').length) {
+    $('body').on('click', function(e){
+        var $tgPoint = $(e.target);
+        var $tooltipArea = $tgPoint.parents('.tooltip-layer').hasClass('active'); 
+
+        if($tgPoint.siblings('label').hasClass('carInfoTooltipBtn')){ //input + label 구조일 경우의 툴팁 버튼            
+            var $tooltipCallBtn = $tgPoint.siblings('label').hasClass('carInfoTooltipBtn');         
+            //console.log('1');
+        }else if($tgPoint.hasClass('carInfoTooltipBtn')){ //클래스 carInfoTooltipBtn 버튼
+            var $tooltipCallBtn = $tgPoint.hasClass('carInfoTooltipBtn');            
+            //console.log('2');
+        }if($tgPoint.hasClass('tooltipOpenBtn')){ //클래스 tooltipOpenBtn 버튼
+            var $tooltipCallBtn = $tgPoint.hasClass('tooltipOpenBtn');
+            //console.log('3');
+        }
+
+        if (!$tooltipCallBtn && !$tooltipArea) {
+            $('.carInfoTooltipBtn').removeClass('active');
+            $('.carInfoTooltipCont').hide().removeClass('active');
+            $('.tooltipCont').hide().removeClass('active');
+        }
+    });
+}
+
+
+
+
 //레이어 공통
 if($('.layer-details').length) {
     MUI.layer.openClick('.layer-details-open', LAYER_DIM, LAYER_PARENT, true, function(show, layer){
