@@ -1739,6 +1739,114 @@ body.fixed {
 				}
 			}
 		}
+
+		//메인 팝업
+		&.layer-bn{
+			width:620px;
+			// height:760px;
+			.pop-inner{
+				border-radius: 10px;
+				margin:0;
+			}
+			.pop-cont{
+				width:620px;
+				height:760px;
+				padding:0;
+				.main-event-lists {
+					width:620px;
+					height:700px;
+				}
+	
+				.swiper-slide {
+					@include Align-middle;
+					box-sizing: border-box;
+					width:620px;
+					height:700px;
+				}
+				.swiper-slide .main-event-lists-img{
+					width:620px;
+					img{
+						width:100%;
+						height:auto;
+					}
+				}
+				.swiper-button-next{
+					z-index: 20;
+					.swiper-next{
+						z-index: 20;
+						@include Position($top: 20px, $right: -5px);
+						width:20px;
+						height: 38px;
+					}
+					&:after{
+						display:block;
+						content: "";
+						background-color: #000;
+						width:80px;
+						height:80px;
+						border-radius: 50px;
+						opacity: .1;
+						@include Position($top: 0, $right: -50px);
+					}
+					&.swiper-button-disabled{
+						opacity: 1;
+						pointer-events: auto;
+					}
+				}
+				.swiper-button-prev{
+					z-index: 20;
+					.swiper-prev{
+						z-index: 20;
+						@include Position($top: 20px, $left: -5px);
+						width:20px;
+						height: 38px;
+					}
+					&:after{
+						display:block;
+						content: "";
+						background-color: #000;
+						width:80px;
+						height:80px;
+						border-radius: 50px;
+						opacity: .1;
+						@include Position($top: 0, $left: -50px);
+					}
+					&.swiper-button-disabled{
+						opacity: 1;
+						pointer-events: auto;
+					}
+				}
+				// .swiper-pagination{
+				// 	z-index: 20;
+				// 	bottom:80px;
+				// 	left:50%;
+				// 	width:60px;
+				// 	transform: translateX(-50%);
+				// 	@include Bold;
+				// 	color:#fff;
+				// 	background-color: #000;
+				// 	border-radius: 50px;
+				// 	padding: 7px 0;
+				// 	opacity: .5;
+				// }
+			}
+			.pop-bottom{
+				@include Align-between;
+				padding:0 50px;
+				height:60px;
+				background-color: #2f2f2f;
+				//@include Position($bottom: 0, $right: 0, $left: 0);
+				z-index: 10;
+				button{
+					color:#fff;
+					@include Bold;
+				}
+				.layer-today-close{
+					position: relative;
+					color:#8f9191;
+				}
+			}
+		}
 	}
 
 	//슬라이드 형태
