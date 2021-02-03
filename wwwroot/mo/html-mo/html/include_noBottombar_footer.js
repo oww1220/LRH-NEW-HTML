@@ -313,6 +313,10 @@ $(function(){
         <!--bg-dimmed 컴포넌트-->
         <div class="bg-dimmed">딤(Dim)처리 배경</div>
         <!--//bg-dimmed 컴포넌트-->
+
+        <div class="bg-dimmed bg-dimmed1">딤(Dim)처리 배경</div>
+
+	    <div class="bg-dimmed bg-dimmed3">딤(Dim)처리 배경</div>
     `;
 
     $(".footer").html(footer);

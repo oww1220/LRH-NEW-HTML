@@ -89,7 +89,7 @@ $(function(){
         //console.log(11);
         $BODY.addClass("fixed");
         $('.goQuick-menu-list').addClass('active');
-        $('.bg-dimmed').show();
+        $('.bg-dimmed3').show();
         $('.btn-goQuick').addClass('btn-goQuick-close');
         $('.fixedRight').css('z-index', '51');
         logic();
@@ -99,14 +99,14 @@ $(function(){
     MUI.event.toggle('.fixedRight .btn-goQuick-close', null, true, function(logic, layer) {
         $BODY.removeClass("fixed");
         $('.goQuick-menu-list').removeClass('active');
-        $('.bg-dimmed').hide();
+        $('.bg-dimmed3').hide();
         $('.btn-goQuick').removeClass('btn-goQuick-close');
         $('.fixedRight').css('z-index', '11');
         logic();
     });
 
     //goQuick 딤드 닫기
-    MUI.event.toggle('.fixedRight ~ .bg-dimmed', null, true, function(logic, layer) {
+    MUI.event.toggle('.fixedRight ~ .bg-dimmed3', null, true, function(logic, layer) {
         $('.goQuick-menu-list').removeClass('active');
         $('.btn-goQuick').removeClass('btn-goQuick-close');
         $('.fixedRight').css('z-index', '11');
