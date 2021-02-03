@@ -1291,6 +1291,10 @@ if($('.secondhand-wrap #secondhand-slide').length) {
             pagination: {
                 el: '#secondhand-slide .swiper-pagination',
             },
+            navigation: {
+                nextEl: '.thumbs-swiper-button-next',
+                prevEl: '.thumbs-swiper-button-prev',
+            },
 
         });
 
@@ -1674,6 +1678,10 @@ if($('.layer-national-branch .cont-slide').length) {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
     });
 }
