@@ -262,6 +262,64 @@
     }
 }
 
+/* 차 선택 사진있는 라디오 버튼*/
+.car-list {
+    li {
+        padding: 0 10px 10px 0;
+        box-sizing: border-box;
+        .chk-view-box {
+            input {
+                display: none;
+                &:checked + label {
+                    color: #ed1c24;
+                    border-color: #ed1c24;
+                    background-color: #fff9f9;
+                }
+                &:checked + label:after {
+                    background-repeat: no-repeat;
+                    background-image: url("../../resources-pc/images/icons/ico-chk-on2.png");
+                    background-position: center center;
+                    background-size: auto;
+                }
+            }
+            label {
+                @include Align-middle-column;
+                //display: block;
+                position: relative;
+                height: 150px; 
+                padding: 15px 0 0 0;
+                border-radius: 6px;
+                border: 1px solid #d2d2d2;
+                box-sizing: border-box;
+                color: #8f9191;
+                &:after{
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: 76%; 
+                    right: 70px;
+                    width: 13px;
+                    height: 12px;
+                    margin-top: -6px;
+                }
+                span{
+                    //display: block;
+                    &.title{
+                        margin-top: 5px;
+                    }
+                    img{
+                        width: 160px;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+
 //제휴사
 .cooperation-container {
     .cooperation-wrap {
@@ -270,11 +328,75 @@
             width: 1040px; 
             margin: 0 auto; 
             padding-top: 40px;
-            .choice-list {
-                padding-bottom: 60px;
+
+            .cdw-choice {
+                @include Align-box;
+                li {
+                    padding: 0 10px 10px 0;
+                    box-sizing: border-box;
+                }
+                .chk-view-box{	
+                    label{			
+                        @include Align-between;
+                        padding:0 30px;
+                        border-radius: 6px;
+                        height: 80px;
+                        color: #8f9191;
+                        border: 1px solid #d2d2d2;
+                        strong {
+                            color:#8f9191;
+                            font-size:18px;
+                            @include Align-middle-left;
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 13px;
+                                height: 12px;
+                                margin-left:10px;
+                            }
+                        }
+                        span {
+                            font-size:18px;
+                            color:#8f9191;
+                        }
+                        &:after {
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            right: 30px;
+                            width: 13px;
+                            height: 12px;
+                            margin-top: -6px;
+                        }
+                    }
+                    input {
+                        display: none;
+                    }
+                    input:checked + label{
+                        border-color:$txt-red;
+                        background-color:#fff9f9;
+                    }
+                    input:checked + label:after	{
+                        display:none;
+                    }
+                    input:checked + label strong {
+                        @include Bold; 
+                        color:$txt-red;
+                    }
+                    input:checked + label strong:after{
+                        @include Background($sprite:'ico-chk-on2', $position:center center);
+                    }	
+                    input:checked + label span {
+                        @include Bold; 
+                        color:#2f2f2f;
+                    }
+                }
             }
+            // 대여 차량유형 선택
             &.car-select {
                 .choice-list {
+                    padding-bottom: 60px;
                     li:last-child {
                         width: 33.3%;
                     }
@@ -316,6 +438,32 @@
                 padding-bottom: 50px;
             }
         }
+
+        .estimate-search-result-header {
+            width: 1040px;
+            margin: 0 auto;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e7e7e7;
+            .count-area span {
+                @include Bold;
+                color: #ed1c24;
+            }
+        }
+
+        //차량 유형 슬라이드
+        .car-select-slide-wrap{
+            width: 1040px; 
+            margin: 0 auto; 
+            overflow: hidden;
+            .car-select-slide-cont{
+                width: 100%; 
+                margin: 0 auto; 
+                padding-top: 40px;
+                .list-type-col3 {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 
     //단기예약 1단계
@@ -334,8 +482,101 @@
         }
     }
     .section-form {
+        .form-header {
+            margin-bottom:40px;
+            @include Align-between;
+            span {
+                @include Regular;
+                position: relative;
+                font-size:14px;
+                &::before {
+                    content:'*';
+                    display: inline-block;
+                    @include Position ($left:-12px, $top:20%);
+                }
+            }
+        }
         .form-cont {
             padding: 0;
+        }
+        //단기예약 2단계 기타 옵션
+        &.form2 {
+            .form-cont {
+                li {
+                    padding:20px 0;
+                    border-bottom:1px solid #e7e7e7;
+                    & + li {
+                        > div > strong {
+                            padding-top:5px;
+                        }
+                    }
+                    > div {
+                        @include Align-top-left;
+                        strong {
+                            width:30%;
+                            font-size:16px;
+                            i {
+                                margin-right:10px;
+                            }
+                        }
+                        .info04 {
+                            margin-left: 5px;
+                        }
+                        > div {
+                            width:65%;
+                            .box-between {
+                                position: relative;
+                            }
+                            > div + div {
+                                padding-top:20px;
+                            }
+                            .chk-icon-box {
+                                width:50%;
+                                label {
+                                    color:#8f9191;
+                                }
+                                span {
+                                    padding-left:32px;
+                                    margin-top:5px;
+                                    display: block;
+                                    color:#8f9191;
+                                    font-size:14px;
+                                }
+                                input:checked + label {
+                                    color:#2f2f2f;
+                                }
+                            }
+                            .input-increase {
+                                padding:17px 20px;
+                                border:1px solid #d2d2d2;
+                                box-sizing: border-box;
+                                border-radius:50px;
+                                @include Align-middle;
+                                width:30%;
+                                input {
+                                    width:70px;
+                                    text-align: center;
+                                    color:#8f9191;
+                                }
+                                button {
+                                    color:#d2d2d2;
+                                    width: 30%;
+                                }
+                                &.active {
+                                    border-color: #2f2f2f;
+                                    input {
+                                        color:#2f2f2f;
+                                    }
+                                    button {
+                                        color:#2f2f2f;
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                }
+                
+            }
         }
     }
 
