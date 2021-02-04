@@ -723,6 +723,80 @@
                             height: 100%;
                         }
                     }
+                    .slide-txt-info{
+                        @include Position($top:0, $bottom:0, $right:0);
+                        width:40%;
+                        height:100%;
+                        @include Align-middle-column;
+                        align-items: flex-start;
+                        p{
+                            position: relative;
+                            z-index: 10;
+                            @include Align-left-column;
+                            align-items: flex-start;
+                            line-height:1.4;
+                            padding:0 1rem 0 2.1rem;
+                            strong{
+                                color:#fff;
+                                font-size:1.6rem;
+                                @include Bold;
+                                @include Ellipsis($w:100%, $lines:3);
+                            }
+                            em{
+                                color:#fff;
+                                font-size:1.6rem;
+                                @include Bold;
+                            }
+                            span{
+                                color:#d0d0cf;
+                                font-size:1.1rem;
+                                @include Regular;
+                                margin-top:.4rem;
+                            }
+                        }
+                        div{
+                            position: relative;
+                            z-index: 10;
+                            color:#ff404b;
+                            font-size:1.4rem;
+                            @include Align-middle-left;
+                            align-items: flex-end;
+                            padding:2.3rem 0 0 2.1rem;
+                            @include Bold;
+                            sub{
+                                font-size:.8rem;
+                                @include Regular;
+                            }
+                            span{
+                                font-size:1.1rem;
+                                @include Bold;
+                            }
+                            del{
+                                color:#aaa;
+                                font-size:1rem;
+                                @include Regular;
+                                sub{
+                                    font-size:.6rem;
+                                    @include Regular;
+                                }
+                                span{
+                                    font-size:.8rem;
+                                    @include Regular;
+                                }
+                            }
+                        }
+                        div + div{
+                            padding-top:.7rem;
+                        }
+                        &::before{
+                            background-color: #000;
+                            opacity: .8;
+                            content: "";
+                            height:100%;
+                            width:100%;
+                            @include Position($top:0, $bottom:0, $right:0);
+                        }
+                    }
                 }
             }
             &.detail-main-list2{
