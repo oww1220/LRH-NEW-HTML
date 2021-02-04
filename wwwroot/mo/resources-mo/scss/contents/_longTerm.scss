@@ -1722,6 +1722,7 @@
                 ul {
                     @include Inline-scrolling;
                     padding-bottom:.5rem;
+                    display: inline-flex;
                     li {
                         display: inline-flex;
                         width:6rem;
@@ -1742,6 +1743,7 @@
                             font-size:1rem;
                             @include Regular;
                             border:1px solid #d2d2d2;
+                            width:6rem;
                             span{
                                 margin:1.7rem 0 0 0;
                             }
@@ -1778,6 +1780,24 @@
                             }
                             .brand08{
                                 @include Background($sprite:'ico-brand08-on', $size:100% auto, $position:center center);
+                            }
+                        }
+                        .brand-all-chk-btn{
+                            border:1px solid #ed1c24;
+                            background-color: #ed1c24;
+                            color:#fff;
+                            @include Bold;
+                            @include Align-middle-column;
+                            height:8.6rem;
+                            border-radius: .4rem;
+                            font-size:1rem;
+                            @include Regular;
+                            width:6rem;
+                            span{
+                                margin:1.7rem 0 0 0;
+                            }
+                            i {
+                                min-height:2.6rem;
                             }
                         }
                     }
