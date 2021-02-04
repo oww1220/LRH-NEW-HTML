@@ -259,17 +259,27 @@
     }
     //메인 신차장 하단 버튼
     &.mainlongTermBottom{
-        background-color: #fff;
+        //background-color: #fff;
+        background-color: transparent;
         @include Align-middle;
-        height: 6rem;
+        //height: 6rem;
+        padding-top: 1.3rem;
+        box-shadow: 0 0 0 0;
+        .detail-layer-list-btn{
+            background-color: #ff404b;
+        }
         li {
             a {
                 font-size:1.6rem;
                 @include Align-middle-column;
+                padding-bottom: 1.3rem;
+                margin-top: -1.9rem;
                 span{
                     font-size:1rem;
-                    padding:.7rem 0 0 0;
-                    color:#54585a;
+                    //padding:.7rem 0 0 0;
+                    //color:#54585a;
+                    color:#fff;
+                    @include Bold;
                 }
             }
         }
