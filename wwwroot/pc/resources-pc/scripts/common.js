@@ -886,15 +886,25 @@ if($('.customer-list').length){
 }
 
 //전국지점안내 + 영문 location 페이지
-if($('.branch-office-section').length){        
-    MUI.event.toggle('.accorSpotBtn', '.accorSpotCont', false, function(logic, layer) {
+if($('.branch-office-section').length){
+    MUI.event.toggle('.accorSpotBtn', '.accorSpotCont', false, function(logic, layer, target) {
         if(MUI.slide.LayerSwiper) MUI.slide.LayerSwiper.destroy();
 
         logic();
-        
+
+        var activeBtn = $(target + '.active').selector;
         var activeDiv = layer.selector;
         var activeSlide = $(activeDiv + ' .swiper-slide');
         
+        //선택된 영역 효과
+        if($(target).hasClass('active')){
+            $(activeBtn).closest('.row').addClass('on');
+            $(activeBtn).closest('.row').siblings('.row').removeClass('on');
+        }else{
+            $('.tbl-type-list .row').removeClass('on');            
+        }
+        
+
         //슬라이드
         if(activeSlide.length > 1){
          
