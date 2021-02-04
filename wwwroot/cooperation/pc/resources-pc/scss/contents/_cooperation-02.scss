@@ -1,3 +1,267 @@
+.tbl-box {
+    table {
+        position: relative;
+        width: 100%;
+        word-break: break-word;
+        border-top: 1px solid #e7e7e7;
+        border-collapse: collapse;
+        z-index: 5;
+        th, td {
+            padding: 30px;
+            text-align: center;
+            color: #54585a;
+            vertical-align: middle;
+            border-right: 1px solid #e7e7e7;
+            border-bottom: 1px solid #e7e7e7;
+            .lst{margin:0;}
+            p{
+                strong{@include Bold;}	
+                + .lst{margin-top:10px;}
+            }
+            &:last-child{
+                border-right:none;
+                border-left:1px solid $border-grey;
+            }
+        }
+        th{
+            @include Bold;
+            background-color:#fafafa;
+        }
+        td{
+            @include Regular; 
+            @include txtSetting;
+        }
+        .align-l{text-align:left;}					
+        .lst{
+            text-align:left;
+        }
+        
+        + .lst{margin-top:20px; margin-bottom:0;}
+
+        &.td-align-l{
+            td{text-align:left;}
+        }
+    }
+}
+
+// 단기예약 스텝1 캘린더
+.calender-cont {
+    height: 700px; 
+	overflow-y: auto; 
+	padding: 0 100px 0 130px;
+    border: 1px solid #ccc;
+    > div {
+        height: 700px;
+        padding-right: 20px;
+    }
+    .tbl-box{
+        .calendar-tit {
+            font-size: 20px;
+            padding: 40px 10px 20px;
+            text-align: center;
+            color: #2f2f2f;
+        }  
+        table{
+            width:100%;
+            border: 0 none;
+            th, td{
+                text-align:center;
+                padding:2px 0;
+                height: 40px;
+                color: #54585a;
+                font-size: 14px;
+                border: 0 none;
+            }
+            th{
+                padding-top:0;
+                background-color: inherit;
+            }
+            .btn {
+                width:100%; 
+                height:38px; 
+                padding:0; 
+                color: #aaa;
+                font-size: 14px;
+            }                                                
+            .disabled, 
+                .disabled > button, 
+                button[disabled]{
+                color:#e8e8e8;
+            }
+            .today{
+                .btn{
+                    position: relative;
+                    @include Bold; 
+                    color:#a02a3d;
+                    &:after{
+                        content:"";
+                        display:block;
+                        width: 20px;
+                        height:1px;
+                        margin: 0 auto;
+                        background-color:#a02a3d;
+                    }                                
+                }                            
+            }
+            .today{
+                &.on, &.start, &.end, &.during{
+                    .btn{
+                        &:after{background-color:#fff;}
+                    }
+                }
+            }
+            .start, .end, .during{
+                .btn{
+                    width: 100%;
+                    color:#fff;
+                    background-color: #ff404b;
+                }
+            }
+            .start{
+                .btn{                                
+                    border-top-left-radius: 38px;
+                    border-bottom-left-radius: 38px;
+                }
+            }
+            .end{
+                .btn{                               
+                    border-top-right-radius: 38px;
+                    border-bottom-right-radius: 38px;
+                }
+            }
+            .on{    
+                .btn{
+                    color:#fff;
+                    background-color:#ff404b;
+                    border-radius:100%;
+                }         
+            }
+            .t-red {
+                .btn {
+                    color: #ed1c24;
+                }
+            }                   
+            .day{
+                .btn{
+                    width:38px;
+                    background-color: #ff404b;
+                    border-radius: 1.7rem;
+                    @include Bold;
+                    color:#fff;   
+                }
+            }
+        }
+    }
+}
+
+.list-box{
+	padding-top: 10px; 
+	color: #54585a;
+}
+.tab-cont-inner {
+    padding: 20px 0;
+}
+
+//스탭
+.section-top{
+    text-align: center;
+    margin-bottom: 60px;
+
+    .step-list{
+        @include Inline-align-top;
+        li{
+            padding:0 67px;
+
+            &.active{
+                .txt{
+                    @include Bold;
+                    color:#ed1c24;
+                }
+            }
+            .icon{position:relative; z-index: 5;}
+            .txt{
+                color:#8f9191;
+                margin-top:15px;
+            }
+            & + li{
+                position:relative;
+                
+                &:after{
+                    content:"";
+                    @include Position($top: 16px, $left: -50%);
+                    display:block;
+                    width:100%;
+                    height:1px; 
+                    background-color:#e7e7e7;
+                }
+            }
+        }
+    }
+}
+
+.reserv-confirm-wrap{ 
+	position: relative; 
+	border-radius: 6px; 
+	width: 100%;
+	margin: 120px 0 40px;  
+    background-color: #fafafa;
+    .reserv-confirm-ul{
+        margin: 0 auto; 
+        width: 1040px;
+        li{
+            padding: 30px;
+            .reserv-confirm-list{
+                @include Align-box;
+                li {
+                    padding: 0;
+                    &:nth-child(1), &:nth-child(3), &:nth-child(5) {width: 25%;}
+                    &:nth-child(2), &:nth-child(4) {width: 12%; color: #54585a;}
+                    &.title{
+                        @include Bold; 
+                        font-size: 20px; 
+                        line-height: 20px;
+                    }
+                    .bold{
+                        @include Bold;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        > li:first-child{
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+
+.reserv-price {
+	position: relative; 
+	border-radius: 6px; 
+	width: 100%; 
+	margin: 60px 0 40px;  
+    background-color: #54585a;
+    .reserv-price-ul{
+        @include Align-box;
+        li {
+            width:14%; 
+            @include Bold;
+            font-size: 20px; 
+            color: #fff; 
+            padding: 30px 0;
+            &:last-child{
+                width:22%; 
+                padding: 0;
+            }
+            &:nth-child(1), &:nth-child(6) {width:11%;}
+            .btn-red{
+                height: 100%; 
+                font-size: 20px; 
+                color: #fff;
+            }
+        }
+    }
+}
+
 //제휴사
 .cooperation-container {
     .cooperation-wrap {
@@ -9,12 +273,10 @@
             .choice-list {
                 padding-bottom: 60px;
             }
-            .car-select {
-                &.radio-check {
-                    .choice-list {
-                        li:last-child {
-                            width: 33.3%;
-                        }
+            &.car-select {
+                .choice-list {
+                    li:last-child {
+                        width: 33.3%;
                     }
                 }
             }
@@ -49,13 +311,266 @@
                     width: 80px;
                     margin-left: 10px;
                 }
-                
             }
             .sub-tit{
                 padding-bottom: 50px;
             }
         }
     }
+
+    //단기예약 1단계
+    .cooperation-cont {
+        width: 100%; 
+        position:relative;
+        @include Align-between-top;
+        .left, .right {
+            width: 48%;
+        }  
+        i{
+            margin: 10px 15px 10px 0;
+            &.info04{
+                margin: 10px 15px 10px 10px;
+            }
+        }
+    }
+    .section-form {
+        .form-cont {
+            padding: 0;
+        }
+    }
+
+    // 반납 지점
+    .short-branch {
+        h2 {@include Hide_txt;}
+        .tab-nav {
+            background: #54585a;
+            padding-bottom: 0;
+            .tab-col2 {
+                li {
+                   button {
+                        line-height: 1;
+                        font-size:16px;
+                        height: 50px;
+                        color:#bbb;
+                        border: 0;
+                        @include Regular;
+                        &:before{
+                            content: "";
+                            display: inline-block;
+                            background: url(../../resources-pc/images/icons/ico-check3-off.png) 0 0 no-repeat;
+                            width: 14px;
+                            height: 11px;
+                            margin-right: 10px;
+                        }
+                    }
+                    &.active {
+                        button {
+                            border: 0;
+                            color: #fff;
+                            &:before{
+                                background: url(../../resources-pc/images/icons/ico-check3-on.png) 0 0 no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .short-branch-tab{
+            width: 100%;
+            @include Align-middle;
+            li {
+                @include Align-middle;
+                width: 50%;
+                height: 70px;
+                background: #fff;
+                label {
+                    @include Align-middle;
+                    text-align: center;
+                    font-size: 18px;
+                    color: #8f9191;
+                    width: 100%;
+                    height: 70px;
+                    border-bottom: 1px solid #e7e7e7;
+                }
+                &.active {
+                    label {
+                        border-bottom: 2px solid #ff404b;
+                        @include Bold;
+                        color: #ff404b;
+                    }
+                }
+                input:disabled + label {
+                    color: #ddd;
+                }
+                &.active {
+                    input:disabled + label {
+                        border-bottom: 1px solid #e7e7e7;
+                        color: #ddd;
+                    }
+                }
+                
+            }
+        }
+        .short-branch-tab2 {
+            width: 100%;
+            @include Align-middle;
+            li {
+                @include Align-middle;
+                height: 80px;
+                background: #fff;
+                button {
+                    @include Align-middle;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #8f9191;
+                    width: 145px;
+                    height: 38px;
+                    border: 1px solid #d2d2d2;
+                    border-radius: 38px;
+                    margin: 0 5px;
+                }
+                &.active {
+                    button {
+                        border: 1px solid #ff404b;
+                        @include Bold;
+                        color: #ff404b;
+                        background: #fff9f9;
+                    }
+                }
+                
+            }
+        }
+        .short-branch-section {
+            width: 100%;
+            //border-left: 1px solid #e7e7e7;
+            //border-right: 1px solid #e7e7e7;
+            .shor-main-list-wrap{
+                @include Align-box;
+                border: 1px solid #ccc;
+                // padding:1.7rem;
+                .shor-main-list-lt{
+                    overflow-y: auto;
+                    height: 390px;
+                    width:50%;
+                    background: #fafafa;
+                    @include Align-box;
+                    ul{
+                        width:100%;
+                        margin-top: 20px;
+                    }
+                    .btn-link{
+                        border:0 none;
+                        color:#2f2f2f;
+                        height:43px;
+                        width: 100%;
+                        padding:0 15px;
+                        text-align: left;
+                        line-height:1;
+                        font-size: 14px;
+                        word-break: break-word;
+                        @include Regular;
+                            b{
+                                color: #aaa;
+                                font-size: 14px;
+                            }
+                        &.active{
+                            @include Bold;
+                            background: #fff;
+                            &:after {
+                                display: inline-block;
+                                content: "";
+                                background: url(../../resources-pc/images/icons/ico-chk2-on.png) 0 0 no-repeat;
+                                width: 13px;
+                                height: 10px;
+                                margin-left: 10px;
+                                background-size: 100% auto;
+                            }
+                            b{
+                                color:#2f2f2f;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .shor-main-list-rt{
+                    height: 390px;
+                    width:50%;
+                    overflow: hidden;
+                    background: #fff;
+                    > div {
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        height: 670px;
+                        width: 100%;
+                    }
+                    &.tab2 > div {
+                        height: 390px;
+                    }
+                    ul{
+                        width:100%;
+                        margin-top: 20px;
+                        li {
+                            
+                            width: 100%;
+                        }
+                    }
+                    .btn-link{
+                        @include Align-between;
+                        border:0 none;
+                        color:#2f2f2f;
+                        height:43px;
+                        width: 100%;
+                        padding:0 10px 0 15px;
+                        text-align: left;
+                        line-height:1;
+                        font-size: 14px;
+                        @include Regular;
+                        word-break: break-word;
+                        /* &:after {
+                            display: flex;
+                            content: "";
+                            background: url(../../resources-pc/images/icons/ico-map-off.png) 0 0 no-repeat;
+                            width: 28px;
+                            height: 28px;
+                            margin-left: 5px;
+                            background-size: 100% auto;
+                        } */
+                            b{
+                                color: #aaa;
+                                font-size: 14px;
+                            }
+                        &.active{
+                            @include Bold;
+                            background: #fff;
+                            /* &:after {
+                                background: url(../../resources-pc/images/icons/ico-map-on.png) 0 0 no-repeat;
+                            } */
+                            b{
+                                color:#2f2f2f;
+                                font-size: 14px;
+                                border-bottom: 1px solid #2f2f2f;
+                            }
+                        }
+                    }
+                }
+
+            }
+            &.short-type2 {
+                .shor-main-list-wrap{
+                    @include Align-box;
+                    .shor-main-list-lt {
+                    height: 310px;
+                    }
+                    .shor-main-list-rt {
+                        height: 310px;
+                    }
+                }  
+            }
+        }
+    }
+
+
     
     .round-banner{
         @include roundBanner;
@@ -67,4 +582,29 @@
         padding-bottom: 50px;
     }
 
+
+}
+
+
+/*레이어 팝업*/
+.layer-wrap {
+    .tit{
+        @include Bold;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    .tbl-box {
+        table {
+            th {
+                text-align: center; 
+                font-size: 18px;
+                line-height: 1.5;
+            }
+            td {
+                text-align: left; 
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+    }
 }
