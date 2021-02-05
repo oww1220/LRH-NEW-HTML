@@ -3321,6 +3321,95 @@ html, body {
 	line-height: 1.2;
 }
 
+.floating-zone {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-top: 1px solid #e7e7e7;
+	background-color: #fafafa;
+	z-index: 10;
+}
+
+.floating-zone .floating-inner {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 25px 0;
+}
+
+.floating-zone .floating-inner.between-type {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.floating-zone .floating-inner.between-type .tel-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.floating-zone .floating-inner.between-type .tel-box p {
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 26px;
+	margin-left: 15px;
+}
+
+.floating-zone .floating-inner.between-type .tel-box p span {
+	font-size: 32px;
+	color: #ed1c24;
+	margin-left: 15px;
+}
+
+.floating-zone .floating-inner.between-type .btns {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.floating-zone .floating-inner.between-type .btns .btn {
+	white-space: nowrap;
+	margin-left: 10px;
+}
+
+.floating-zone .floating-inner.between-type .btns .btn.fs-m {
+	min-width: 200px;
+	padding: 20px;
+	font-size: 22px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
 /* Slider */
 .slick-slider {
 	position: relative;
@@ -6879,6 +6968,17 @@ button[disabled] {
 	        background-size: auto;
 	width: 33px;
 	height: 33px;
+}
+
+.icon.tel04 {
+	background-repeat: no-repeat;
+	background-image: url("../../resources-pc/images/icons/ico-tel4.png");
+	background-position: center;
+	-webkit-background-size: auto auto;
+	   -moz-background-size: auto;
+	        background-size: auto;
+	width: 43px;
+	height: 43px;
 }
 
 .icon.info04 {

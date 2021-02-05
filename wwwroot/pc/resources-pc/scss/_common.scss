@@ -2309,3 +2309,54 @@ $txt-darkblack: #2f2f2f;
 		line-height: 1.2;
 	}
 }
+
+//플로팅
+.floating-zone{
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	border-top:1px solid $border-grey;
+	background-color:#fafafa;
+	z-index:10;
+
+	.floating-inner{
+		@include innerType2Width;
+		margin:0 auto;	
+		padding:25px 0;
+
+		&.between-type{
+			@include Align-between;
+
+			.tel-box{
+				@include Align-middle;
+
+				p{
+					@include Bold;
+					font-size:26px;
+					margin-left:15px;
+
+					span{
+						font-size:32px;
+						color:$txt-red;
+						margin-left:15px;
+					}
+				}
+			}
+			.btns{
+				display:flex;
+				.btn{
+					white-space: nowrap; 
+					margin-left:10px;
+
+					&.fs-m{
+						min-width:200px;
+						padding:20px;
+						font-size:22px;
+						box-sizing: border-box;
+					}
+				}
+			}
+		}
+	}
+}
