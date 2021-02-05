@@ -50,10 +50,31 @@
             margin-top: -5px;
         } 
     }
+    .ico-point{
+        @include Vertical-inline;
+        @include Hide_txt;
+        flex: none;
+        @include Background($sprite:'ico-chk-on2', $position:center center);
+        width: 13px;
+        height: 10px;
+        margin: -5px 5px 0 0;
+        vertical-align: middle;
+    }
+    .t-highlight {
+        @include Bold;
+        text-decoration: underline;
+        color: #ed1c24;
+    }
+    .t_udl {
+        text-decoration: underline;
+    }
     .agree-list {
         &-type1 {
             li {
                 padding-bottom: 20px;
+                strong {
+                    @include Bold;
+                }
                 .agree-list-type2 {
                     margin-top: 10px;
                     li {
@@ -76,7 +97,7 @@
                 }
                 strong {
                     @include Bold;
-                    font-size: 14px;
+                    //font-size: 14px;
                 }
                 &:before {
                     content:'';
@@ -91,8 +112,14 @@
                     margin-top: -5px;
                 }
                 &.texRed {
+                    color: #ed1c24;
                     &:before {
                         background: #ed1c24;
+                    }
+                }
+                &.nodot {
+                    &:before {
+                        display: none;
                     }
                 }
             }

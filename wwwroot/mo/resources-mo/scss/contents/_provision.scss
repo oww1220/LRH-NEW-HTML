@@ -53,10 +53,32 @@
             margin-top: -.4rem;
         } 
     }
+    .ico-point{
+        @include Vertical-inline;
+        @include Hide_txt;
+        flex: none;
+        @include Background($sprite:'ico-chk-on06', $position:center center);
+        width: .9rem;
+        height: .8rem;
+        background-size: 100%;
+        margin: -.5rem .2rem 0 0;
+        vertical-align: middle;
+    }
+    .t-highlight {
+        @include Bold;
+        text-decoration: underline;
+        color: #ed1c24;
+    }
+    .t_udl {
+        text-decoration: underline;
+    }
     .agree-list {
         &-type1 {
             li {
                 padding-bottom: 1.7rem;
+                strong {
+                    @include Bold;
+                }
                 &:last-child {
                     padding-bottom: 0;
                 }
@@ -76,7 +98,6 @@
             li {
                 text-indent: -1.1rem;
                 word-break: break-all;
-                //padding-top: 10px;
                 p {
                     text-indent: -.1rem;
                 }
@@ -99,6 +120,11 @@
                 &.texRed {
                     &:before {
                         background: #ed1c24;
+                    }
+                }
+                &.nodot {
+                    &:before {
+                        display: none;
                     }
                 }
             }
@@ -156,9 +182,6 @@
                 
             }
             &.type2{
-                .input-tit {
-
-                }
                 .type-left {
                     position: relative;
                     .left-txt {
@@ -172,8 +195,4 @@
             }
         }
     }
-}
-
-.eng-provisionWrap {
-    
 }
