@@ -1,0 +1,831 @@
+.longTerm-container{
+    padding-bottom:100px;   
+
+    //공통
+    .round-banner{
+        @include roundBanner;
+    }
+
+    .gray-noti-section{
+        text-align:center;
+        padding:60px;
+        margin:50px 0 60px 0;
+        background-color:#f5f5f5;
+        @include roundBox;
+
+        .tit{
+            @include Bold;
+            display:block; 
+            font-size:26px;            
+
+            + p{margin-top:20px;}
+        }
+        .sub-txt{color:#54585a;}
+        .icon{margin-right:5px;}
+
+        + .complete-box{margin-top:20px;}
+    }
+
+    .complete-box{
+        @include Align-middle;
+
+        .circle {
+            width: 230px;
+            height: 230px;
+            border-radius: 230px;
+            border: 1px solid #f1f1f1;
+        }
+    }
+
+    //개인 장기렌터카
+    &.individual-container{
+        .round-banner{
+            @include Background($sprite: 'bg-longTermIndividual', $path:'');
+        }
+        .sentence{
+            @include txtSpacing;
+        }
+    }
+
+    //법인 장기렌터카
+    &.corporation-container{     
+        .round-banner{
+            @include Background($sprite: 'bg-longTermCorporation', $path:'');
+        }   
+        .evaluate-area{            
+            @include Align-box;
+            width: calc(100% + 40px);
+            padding-top:53px;
+
+            .bad-box, .good-box{
+                position:relative;
+                width:50%;
+                padding:0 40px 0 0;
+                box-sizing: border-box;
+                
+                .evaluate-header{
+                    @include Position($top:-33px, $left:-40px, $right:0);
+
+                    .tit{
+                        @include Align-middle;
+                        width:380px;
+                        height:55px;
+                        border-radius: 55px;
+                        background-color:#fff;
+                        margin: 0 auto;
+
+                        .icon{margin-right:10px;}
+                    }
+                }
+                .evaluate-list{
+                    padding:46px 40px 0;
+
+                    > li{
+                        height:140px; 
+                        padding:30px 46px;
+                        font-size:14px;
+                        box-sizing:border-box;
+                        
+                        + li{border-top:1px solid $border-grey;}
+                    }
+
+                    .lst{margin:0;}
+                }
+            }
+            .bad-box{
+                .evaluate-header{
+                    .tit{border:1px solid $border-darkgrey;}
+                }
+                .evaluate-list{                    
+                    background-color:#fafafa;
+
+                    > li{ 
+                        @include Align-middle; 
+                    }
+                }
+
+            }
+            .good-box{
+                .evaluate-header{
+                    .tit{
+                        color:$txt-red;
+                        border:1px solid $border-red;
+                    }
+                }
+                .evaluate-list{
+                    background-color:#fff9f9;
+
+                    > li{ @include Align-middle-left;}
+                }
+            }
+        }
+    }
+
+    //전기차 장기렌터카
+    &.electricity-container{
+        .round-banner{
+            @include Background($sprite: 'bg-longTermElectricity', $path:'');
+        } 
+    }
+
+    //제휴카드 안내
+    &.affiliateCard-container{       
+        .round-banner{
+            @include Background($sprite: 'bg-longTermInfo', $path:'');
+            margin:60px 0 0;
+
+            .infos{
+                .tit{
+                    display:block;
+                    color:#fff;
+                    
+                    + .bar-type{margin-top:15px;}
+                }    
+                .bar-type{
+                    font-size:14px;
+                    padding:0;
+    
+                    > span{ 
+                        position:relative; 
+    
+                        + span{                                    
+                            padding-left:10px;
+                            margin-left:10px;                            
+    
+                            &:before{
+                                content:"";
+                                @include Position($top:50%, $left:0);
+                                display:block;
+                                width:1px;
+                                height:14px;
+                                margin-top:-7px;
+                                background-color:#e7e7e7;
+                            }
+                        }
+                    }
+                }       
+            }
+            
+        }  
+        .tab-cont{
+            .tab-cont-inner{
+                display:none;
+                padding:40px 0;
+
+                &:first-child{display:block;}
+            }
+        }
+        .card-section{
+            @include Align-middle-left;
+            padding:40px 120px;
+            margin-bottom:80px;
+
+            .infos{
+                margin-right:250px;
+
+                .tit{font-size:32px; margin-top:40px;}
+                .txt{color:#54585a; margin-top:20px;}
+                .btn-box-align-left{margin-top:40px;}
+            }
+            .img-box{
+                @include Align-middle;
+
+                img{
+                    border-radius: 20px;
+                    @include box-shadow($top:10px, $left:10px, $blur:15px, $color:rgba(50, 50, 50, 0.35));
+                }
+            }
+
+            &.bg-blue{
+                background-color:#e2fdfe;
+            }
+            &.bg-purple{
+                background-color:#ede4f2;
+            }
+        }
+        .tbl-box{
+            .tit-size-big{margin-bottom:60px;}
+        }
+        .guide-section{
+            @include roundBox;
+            padding:50px 40px;
+            margin:40px 0;
+            background-color:#fafafa;
+        }
+    }
+
+    //신차장 멤버십 & 신차장 혜택이란
+    .benefit-content{
+        .tab-cont-inner{
+            padding:30px 0;    
+
+            > .tit-size-big{margin-top:30px;}
+            .banner-box{
+                position:relative;
+                margin-top:100px;
+                
+                .banner-btns{
+                    @include Position($bottom:36px, $left:535px);
+                    @include Align-box;
+
+                    .btn-appStore, .btn-googlePlay{
+                        margin-right:10px;
+                    }
+                }                    
+            }
+        }
+        .tit-size-big{
+            + .lst{margin-top:30px;}
+        }
+        .life-benefit-box{
+            @include Align-between-top;
+            margin-top:110px;
+            
+            .box-item{
+                flex:1;
+                padding:0 40px;
+                text-align:center;
+
+                .tit{
+                    @include Bold;
+                    font-size:26px;
+                    text-transform:capitalize;
+                    
+                    + .txt{margin-top:20px;}
+                }
+                .straight-align{
+                    display:flex;
+                    justify-content: center;
+                    margin-top:30px;
+                    
+                    li{
+                        margin:0 10px;
+
+                        .icon{
+                            + p{margin-top:10px; font-size:14px; color:#54585a;}
+                        }                        
+                    }
+                }
+            }
+        }
+        
+        .detail-layer-nav-wrap{
+            height:160px;
+
+            .detail-layer-nav{
+                @include Align-between;            
+                height:160px;
+                .menu-link{
+                    width:175px;               
+                    height:120px;
+                    @include roundBox;
+                    border:1px solid $border-darkgrey;
+                    box-sizing: border-box;
+
+                    &.active{
+                        @include Bold;
+                        color:$txt-red;
+                        border:1px solid $border-red;
+                        background-color:#fff9f9;
+                    }
+
+                    .icon{
+                        height:55px;
+
+                        + .tit{margin-top:10px;}
+                    }
+                }
+            }
+            &.fixed{
+                .detail-layer-nav{
+                    @include innerType2Width;
+                    background-color:#fff;
+                    border-bottom:1px solid $border-darkgrey;
+                }
+            }
+        }
+
+        .explain-cont{
+            .statement{
+                .segment{
+                    margin-bottom:40px;
+
+                    .segment-tit{
+                        @include Bold;
+                        font-size:18px;
+                        color:#000;
+                        padding-bottom:20px;
+                        background-color:#fff;
+                    }
+                    .segment-cont{
+                        padding:40px;
+                        box-sizing:border-box;
+
+                        > p{
+                            display:flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            .icon{margin-right:10px;}
+                        }
+                        .lst{
+                            color:#54585a; 
+                            margin-top:20px; 
+                            margin-bottom:0;
+
+                            li{
+                                .lst{
+                                    margin-top:0;
+                                }
+                            }
+
+                            + .lst{
+                                padding-top:20px;
+                                border-top:1px solid $border-darkgrey;
+                            }
+                        }
+                    }
+
+                    .segment-inner{
+                        height:100%;
+                        margin-right:40px;  
+                        background-color:#fafafa;
+                    }
+                }
+
+                &.align-between{
+                    @include Align-spacing-box($spacing:40px);
+                    .segment{ 
+                        width:50%;
+                    }
+                }
+            }
+        }
+    }
+
+    //신차장 특가
+    .longTerm-special-content{
+        .tab-cont-inner{
+            padding: 60px 0;
+        }
+    }
+
+    //신차장 다이렉트
+    .estimate-visual-section{
+        padding:20px 0 60px;       
+        background-color: #fafafa;
+        
+        .estimateSwiper{
+            position:relative;
+            width:1000px;
+            height:500px;
+            .swiper-slide {
+                img {
+                    width: 1000px;
+                    height: 500px;
+                    background-size: 100% auto;
+                    position: relative;
+                }
+                .img{
+                    position: relative;
+                }
+                .cover{
+                    width: 1000px;
+                    height: 500px;
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .flag-bottom-wrap {
+                    width: 100%;
+                    padding: 0 2px 0 40px;
+                    box-sizing: border-box;
+                    left: 0;
+                    bottom: 20%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-flow: wrap-reverse;
+                    position: absolute;
+                    font-size: 0;
+                    z-index: 3;
+                    .flag {
+                        margin-right: 5px;
+                        margin-top: 5px;
+                        position: static;
+                        box-sizing: border-box;
+                        line-height: 1;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        & > i {
+                            margin-right: 5px;
+                        }
+                        &.hotsale {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #7C49FC;
+                            @include Bold;
+                            .icon.hotsale {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-hotsale.png);
+                                background-position: center center;
+                                background-size: auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                        &.fast {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #406FF0;
+                            @include Bold;
+                            .icon.fast {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-fast.png);
+                                background-position: center center;
+                                background-size: 15px auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                        &.popular {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #FF4C88;
+                            @include Bold;
+                            .icon.popular {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-popular.png);
+                                background-position: center center;
+                                background-size: 15px auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                        &.limit {
+                            top: 10px;
+                            left: 10px;
+                            font-size: 13px;
+                            color: #fff;
+                            height: 30px;
+                            border-radius: 15px;
+                            padding: 0 10px;
+                            background-color: #00B2C9;
+                            @include Bold;
+                            .icon.limit {
+                                background-repeat: no-repeat;
+                                background-image: url(https://direct.lotterentacar.net/resources-pc/images/icons/ico-limit.png);
+                                background-position: center center;
+                                background-size: 15px auto;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                    }
+                }
+                .conts {
+                    padding: 40px 40px 34px;
+                    @include Position ($bottom:0, $left:0, $right:0);
+                    .text{
+                        position: relative;
+                        z-index: 5;
+                        & > strong {
+                            font-size: 18px;
+                            display: block;
+                            line-height: 1.3;
+                            color: #fff;
+                        }
+                        & > span {
+                            font-size: 13px;
+                            margin-top: 6px;
+                            line-height: 1;
+                            color: #fff;
+                            display: block;
+                        }
+                    }
+                    &:before{
+                        display:block;
+                        content: "";
+                        background-color: #000;
+                        opacity: .6;
+                        width:100%;
+                        height:100%;
+                        @include Position ($bottom:0, $left:0);
+                        z-index: 2;
+                    }
+                }
+            }
+            .estimateSwiper-button-prev, .estimateSwiper-button-next{ 
+                cursor: pointer;
+                @include Position($top:50%, $left:0);
+                width: 84px; 
+                height:130px;
+                margin-top:-65px;
+                @include Align-middle;
+                z-index:5;
+            }
+            .estimateSwiper-button-next{@include Position($left:auto, $right:0);}
+
+            .estimateSwiper-pagination{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: auto;
+                font-family: "ManropeB", "NotoM", serif;
+                font-weight: normal;
+                width: auto;
+                color: #fff;
+                padding: 30px;
+                z-index:5;
+            }
+        }
+        .banner-box {            
+            text-align:center;
+            margin:20px 0 0;
+            
+            // img {
+            //     width: 1000px;
+            //     height: 180px;
+            //     background-size: 100% auto;
+            // }
+        }        
+    }
+    .estimate-filter-section{
+        padding:0 40px 60px;        
+        background-color:#fafafa;
+
+        .estimate-filter-header{
+            text-align:center;
+            .tit{
+                @include Bold;
+                font-size:32px;
+            }
+        }
+        .estimate-filter-body{
+            .tit{font-size:22px;}
+            .cont{
+                margin-top:25px;
+
+                + .tit{margin-top:60px;}
+            }
+
+            .menu-list, .menu-list2{   
+                .chk-box{
+                    input{display:none;}
+                    label{
+                        position:relative;
+                        box-sizing:border-box;
+                    }
+                    input:checked + label{
+                        @include Bold; 
+                        color:$txt-red;
+                        border:1px solid $txt-red;
+                        @include roundBox;
+                        background-color:#fff9f9;
+                        transition: all .15s ease-out;
+                        transform: scale(1.06);
+                        @include box-shadow($top:0, $left:10px, $blur:25px, $color:rgba(0, 0, 0, 0.15));
+                        z-index:5;
+                    }
+                }
+            }
+            .menu-list{                
+                @include Align-between;
+                @include roundBox;
+                border:1px solid $border-darkgrey; 
+                background-color:#fff;
+                box-sizing: border-box;
+
+                li{
+                    flex:1;
+
+                    .chk-box{
+                        input{display:none;}
+                        label{
+                            @include Align-middle;
+                            height:78px;
+                        }
+                        input:checked + label{
+                            &::before{display:none;}
+                        }
+                    }
+
+                    + li{
+                        .chk-box{
+                            label{
+                                &:before{
+                                    @include Position($top:50%, $left:-1px);
+                                    content:"";
+                                    display:block;
+                                    width:1px; 
+                                    height:30px;
+                                    margin-top:-15px;
+                                    background-color:$border-grey;
+                                }
+                            }
+                        }
+                    }
+                }                
+            }
+            .menu-list2{                
+                @include Align-between;
+
+                li{
+                    flex:1;
+
+                    .chk-box{
+                        width:112px;
+                        
+                        label, .link{
+                            @include Align-middle-column;
+                            @include roundBox;
+                            border:1px solid $border-darkgrey; 
+                            background-color:#fff;
+                            height:110px;
+
+                            p{
+                                margin-top:15px;
+                                font-size:14px;
+                            }
+                        }    
+
+                        > .link{
+                            background-color: $bg-red;
+                            color:#fff;
+                        }                    
+                    }
+                }                
+            }
+        }
+        .btn-box{
+            margin-top:50px;
+            padding:0;
+
+            .btn{width:146px;}
+        }
+    }
+    .estimate-search-result-section{
+        margin-top:60px;
+        
+        .estimate-search-result-header{
+            padding-bottom:25px;
+            border-bottom:1px solid $border-grey;
+
+            .count-area{
+                span{
+                    @include Bold;
+                    color:$txt-red;
+                }
+            }
+        }
+        .estimate-search-result-body{
+            padding:30px 0;
+
+            .car-list{
+                @include Align-box;
+                
+                li{
+                    position:relative;
+                    width:25%;                    
+                    text-align:center;
+                    box-sizing:border-box;
+                    margin-bottom:15px;
+
+                    // > p{
+                    //     padding:0 20px;
+                    //     margin-top:10px;
+                    // }
+                    .img-box{
+                        + p{
+                            padding:0 20px;
+                            margin-top:10px;
+                        }
+                    }
+                    .btn-box{
+                        padding:25px 20px;
+
+                        .btn{color:#54585a;}
+                    }
+
+                    .carFlag{
+                        @include Position($top:20px, $left:20px);
+                    }
+                }
+            }
+
+            .result-none{
+                padding:50px;
+                @include Bold;
+                color:#54585a;
+                font-size:20px;
+                text-align:center;
+
+                .icon{margin-right:20px;}
+            }
+        }
+    }
+
+    //신차장친구추천
+    .event-content{
+        img{max-width:100%; height:auto;}
+        .top-visual{
+            background-color: #f7f5f1;
+        }
+        .top-visual-foot{
+            @include Align-middle;
+            @include Bold;
+            padding:30px;
+            background-color:#f1ece6;
+
+            p{margin-right:20px; font-size:20px;}
+        }
+        .step-section{
+            padding:80px 0 0;
+
+            > .tit{
+                @include Bold;
+                font-size:40px;
+                text-align:center;
+                margin-bottom:60px;
+
+                span{color:$txt-red;}
+            }
+
+            .step-list{
+                display:flex;
+                justify-content: center;
+                padding:0 40px;
+
+                li{
+                    @include Align-middle;
+
+                    + li{
+                        position:relative;
+                        padding-left:50px;
+                        &:before{
+                            @include Position($top:50%, $left:0);
+                            content:"";
+                            display:block;
+                            width:50px;
+                            height:55px;
+                            margin-top:-27px;
+                            @include Background($sprite:'ico-arrow', $position:center);
+                        }
+                    }
+                }
+            }
+        }
+        .recom-section{
+            margin-top:60px;
+
+            &.lpoint-recom{
+                border-top:1px solid $border-grey;
+            }
+            &.lotte-recom{
+                @include roundBox;
+                padding-bottom:80px;
+                background-color:#fafafa;
+            }
+
+            .btn-box{
+                padding:0;
+
+                .btn{width:838px;}
+            }
+
+            + .recom-section{margin-top:80px;}
+        }
+        .guide-box{
+            padding:0 40px;
+            margin-top:60px;
+
+            .tit{
+                @include Bold;
+                font-size:18px;
+
+                + .lst{
+                    margin-top:20px;
+
+                    + .tit{margin-top:40px;}
+                }
+            }
+        }
+    }
+}

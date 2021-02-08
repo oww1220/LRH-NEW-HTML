@@ -1,0 +1,30 @@
+.section-nav {
+    .section-common-nav {
+        border-bottom: 2px solid #EBEBEB;
+        letter-spacing: 0;
+        z-index: 5;
+        a {
+            font-size:32px;
+            position: relative;
+            display: inline-block;
+            padding: 0 0 30px;
+            margin-right: 40px;
+            line-height: 1;
+            &.active, &:hover {
+                @include Bold;
+                &:after {
+                    display: block;
+                    content: '';
+                    @include Position( $bottom: -5.5px, $left: 50%);
+                    z-index: 1;
+                    width: 10px;
+                    height: 10px;
+                    margin-left: -5px;
+                    border-radius: 100%;
+                    background-color: #F04040;
+                }
+            }
+        }
+    }
+    
+}

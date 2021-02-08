@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="../../../resources-mo/images/favicon.ico">
+<link rel="stylesheet" href="../../../resources-mo/styles/reset.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/layout.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/modules.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/contents.css">
+
+<script src="../../../resources-mo/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/jquery-ui.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/jquery.ui.touch-punch.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/slick.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/masonry.min.js"></script>
+<script src="../include_sub_header_type1.js"></script><!--인크루드용..-->
+<script src="../include_footer_logout.js"></script><!--인크루드용..-->
+<script src="../../../resources-mo/scripts/MUI.js"></script>
+<script src="../../../resources-mo/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+	<!--//header 컴포넌트-->
+
+	<!--container 컴포넌트-->
+	<main id="wrap">
+		<div class="mypage-wrap">
+            <!--상단 탭메뉴-->
+			<!-- <div class="tab-nav tab-normal">
+				<ul class="tab-col2">
+					<li class="active">
+						<button type="button">국내</button>
+					</li>
+					<li class="">
+						<button type="button">국제</button>
+					</li>
+				</ul>
+			</div> -->
+			<!--//상단 탭메뉴-->
+			<div class="section-list">
+				<div class="section-cont">
+					<div class="cont-tit">
+						<h3>
+							예약자 운전면허 정보입력
+						</h3>
+					</div>
+					<div class="driver-license">
+						<div class="selection">
+							<div class="detail-radio">
+								<ul class="detail-radio-box">
+									<li>
+										<div class="inputR">
+											<input type="radio" id="radio03" name="radio2" checked="" value="Y">
+											<label for="radio03"><span>국내면허증</span></label>
+										</div>
+									</li>
+									<li>
+										<div class="inputR">
+											<input type="radio" id="radio04" name="radio2" value="N">
+											<label for="radio04"><span>국제면허증</span></label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 국내면허증 -->
+						<div class="domestic-view view-Y">
+							<div class="license">
+								<div class="type-box">
+									<span class="numbering">1</span>
+									<select name="" id="" class="selectbox">
+										<option value="">선택</option>
+										<option value="">1종대형</option>
+										<option value="">1종보통</option>
+										<option value="">2종보통</option>
+										<option value="">2종오토</option>
+									</select>
+								</div>
+								<div class="number-box">
+									<span class="numbering">2</span>
+									<div class="box-between">
+										<select name="" id="" class="selectbox">
+											<option value="">선택</option>
+											<option value="">선택 1</option>
+											<option value="">선택 2</option>
+										</select>
+										<div class="inputT">
+											<input type="text">
+										</div>
+										<div class="inputT">
+											<input type="password">
+										</div>										
+										<div class="inputT">
+											<input type="text">
+										</div>
+									</div>
+								</div>
+								<div class="name-box">
+									<span class="numbering">3</span>
+									<div class="inputT">
+										<input type="text">
+									</div>
+								</div>
+								<div class="expiration-date-box">
+									<span class="numbering">4</span>	
+									<div class="box-between">
+										<span class="symbol">~</span>
+										<div class="inputT">
+											<input type="text" placeholder="YYYY.MM.DD">
+										</div>
+									</div>
+								</div>
+								<div class="issue-date-box">
+									<span class="numbering">5</span>									
+									<div class="inputT">
+										<input type="text" placeholder="YYYY.MM.DD">
+									</div>
+								</div>
+							</div>
+							<h4>면허정보 입력항목 안내</h4>
+							<ul class="input-info">
+								<li>
+									<span class="numbering">1</span>
+									면허종류 : 10인승 이상 차량은 1종 보통 이상 면허가 있어야 
+									운전이 가능합니다.
+								</li>
+								<li>
+									<span class="numbering">2</span>
+									면허번호 : 2014년 07월 02일 이후 발급 면허는 지역정보를 
+									숫자코드로 입력합니다.	
+								</li>
+								<li>
+									<span class="numbering">3</span>
+									이름 : 면허증의 기재된 이름을 입력합니다.
+								</li>
+								<li>
+									<span class="numbering">4</span>
+									만료일자 : 유효하지 않은 면허증은 대여가 불가하므로, 
+									기간 내 갱신해주세요.
+								</li>
+								<li>
+									<span class="numbering">5</span>
+									발급일자 : 신규발급 또는 갱신, 재발급한 면허증에 기입된 
+									발급일자를 입력합니다.	
+								</li>
+							</ul>
+						</div>
+						<!-- //국내면허증 -->
+						<!-- 국제면허증 -->
+						<div class="global-view view-N">
+							<div class="license">
+								<!-- <div class="country-box">
+									<span class="numbering">1</span>
+									<select name="" id="" class="selectbox">
+										<option value="">선택</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+								</div> -->
+								<div class="number-box">
+									<span class="numbering">1</span>
+									<div class="inputT">
+										<input type="text" maxlength="12">
+									</div>
+								</div>
+								<div class="type-box">
+									<span class="numbering">2</span>	
+									<ul>
+										<li>
+											<div class="detail-iconBox iconBox">
+												<input type="checkbox" id="chk01">
+												<label for="chk01">A</label>											
+											</div>	
+										</li>
+										<li>
+											<div class="detail-iconBox iconBox">
+												<input type="checkbox" id="chk02" checked="">
+												<label for="chk02">B</label>											
+											</div>
+										</li>
+										<li>
+											<div class="detail-iconBox iconBox">
+												<input type="checkbox" id="chk03">
+												<label for="chk03">C</label>											
+											</div>
+										</li>
+										<li>
+											<div class="detail-iconBox iconBox">
+												<input type="checkbox" id="chk04" checked="">
+												<label for="chk04">D</label>											
+											</div>
+										</li>
+									</ul>									
+								</div>
+							</div>
+							<h4>면허정보 입력항목 안내</h4>
+							<ul class="input-info">
+								<!-- <li>
+									<span class="numbering">1</span>
+									발급국가 : 국제면허증을 발급한 국가를 선택합니다.
+								</li> -->
+								<li>
+									<span class="numbering">1</span>
+									면허번호 : 면허번호 12자리를 입력합니다.
+								</li>
+								<li>
+									<span class="numbering">2</span>
+									면허종류 : 10인승 이상 차량은 D 등급 면허가 있어야 운전이
+									가능합니다.
+								</li>
+							</ul>
+						</div>
+						<!-- //국제면허증 -->
+						<div class="cont-guide">
+							<ul>
+								<li class="red">
+									예약자(임차인)은 면허증을 반드시 지참하고 지점에 방문해 주시기 바랍니다.
+								</li>
+								<li class="red">
+									정보가 지점 대여 시 상이할 경우, 예약이 취소되거나 추가 확인이 필요할 수 있습니다.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="section-cont">
+					<div class="cont-tit">
+						<h3>
+							운전면허정보 등록을 위한 이용자 동의 사항
+						</h3>
+					</div>
+					<div class="chk-agree-list">
+						<ul class="chk-agree-cols">
+							<li>
+								<div class="chk-agree-top">
+									<div class="inputC inputC02">
+										<input type="checkbox" name="checkbox11" id="checkbox11-2">
+										<label for="checkbox11-2">
+											<span>고유식별정보 수집에 대한 동의(필수)</span>
+										</label>
+									</div> 
+								</div>
+								<div class="chk-agree-cont2">
+									<ul class="guide">
+										<li><i class="icon listCircle"></i>수집하는 고유식별정보 항목 : 운전면허번호</li>
+										<li><i class="icon listCircle"></i>수집 및 이용 목적 : 보험 조건 등 렌터카 대여 조건 확인</li>
+										<li><i class="icon listCircle"></i>보유 및 이용 기간 : 렌터카 서비스 이용 종료 후 5년간</li>
+										<li class="red_txt"><i class="icon listCircle"></i>귀하는 동의를 거부할 수 있습니다.<br>
+											단 동의 거부시 렌터카 서비스 이용이 불가능할 수 
+											있음을 알려 드립니다.</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="chk-agree-top">
+									<div class="inputC inputC02">
+										<input type="checkbox" name="checkbox11" id="checkbox11-3">
+										<label for="checkbox11-3">
+											<span>과태료 수신동의(선택)</span>
+										</label>
+									</div> 									
+								</div>
+								<div class="chk-agree-cont2">
+									<p>렌터카 이용 시 발생된 과태료에 대하여 사전 알림을
+										위해 동의하신 회원님에게만 MMS 발송됩니다.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="section-layer-submit">
+					<button type="button" class="btn btn-gray">등록</button>
+				</div>
+            </div>
+        </div>
+	</main>
+	<!--//container 컴포넌트-->
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+
+	<!--상단 타이틀(추후삭제)-->
+    <script>
+	$(function(){
+		$('.header-top.sub h1').text('운전면허정보');
+	})
+	</script>
+	<!--//상단 타이틀(추후삭제)-->
+
+
+</body>
+</html>
+

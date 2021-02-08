@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+    <!--//header 컴포넌트-->
+	
+	
+
+	<main id="wrap" >
+		<div class="path-wrap">
+			<div class="cover">
+				<div class="inner">            
+					<ul>
+						<li>
+							<a href=""> 
+								<span class="icon home">HOME</span>
+							</a>
+						</li>
+						<li>
+							<a href="">중고차</a>
+						</li>
+						<li>
+							<a href="">중고차 장기렌터카</a>
+						</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+		
+		<!--중고차장기렌터카-->
+		<div class="secondhand-container">		
+			<div class="inner-type2">
+
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">중고차 승계렌터카</h2>	
+					<p class="txt">일정기간 차량이 필요 할 때!</p>
+				
+					<div class="tooltip-top-wrap tooltipToggle-top tooltip-site">										
+						<button type="button" class="btn btn-share tooltipOpenBtn-top" data-target="tooltipCont-top" data-on="true" data-siblings="true"><span class="icon share">공유하기</span></button>
+						<div class="tooltip tooltipCont tooltipCont-top">
+							<div class="tooltipCont-inner">
+								<div class="layer-list">
+									<ul class="list-type-col6">
+										<li>
+											<a href="#" class="btn btn-share-sns">
+												<i class="icon share-sns-ka">카카오톡</i>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn btn-share-sns">
+												<i class="icon share-sns-bd">네이버밴드</i>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn btn-share-sns">
+												<i class="icon share-sns-ks">카카오스토리</i>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn btn-share-sns">
+												<i class="icon share-sns-fb">페이스북</i>
+											</a>
+										</li>
+										<!-- <li>
+											<a href="#" class="btn btn-share-sns">
+												<i class="icon share-sns-in">인스타그램</i>
+											</a>
+										</li> -->
+										<li>
+											<a href="#" class="btn btn-share-sns">
+												<i class="icon share-sns-tw">트위터</i>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn btn-share-sns">
+												<i class="icon share-sns-lk">링크복사</i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <button type="button" class="btn-share">
+						<span class="icon share">공유하기</span>
+					</button> -->
+				</section>
+				<!-- //페이지 타이틀 -->				
+				
+
+				<div class="section-counsel">					
+					<div class="col">
+						<a href="" class="btn btn-link">
+							<span class="icon note"></span>
+							중고차 승계렌터카 안내
+						</a>
+						<p>
+							잔여 계약기간이 있는 장기렌터카 차량과 승계 희망자를 매칭하여 <br>
+							동일한 계약 조건으로 계약 승계하실 수 있습니다.
+						</p>
+					</div>
+					<div class="col">
+						<a href="" class="btn btn-link">
+							<span class="icon car"></span>
+							승계 차량 등록하기
+						</a>
+						<p>
+							승계매물등록은 롯데렌터카 홈페이지 로그인후 가능하며, <br>
+							승계 매물 검색은 누구나 가능합니다.
+						</p>
+					</div>
+				</div>
+
+				<div class="sort-section">
+					<div class="selection-area filterAccor">
+						<!-- 차량 검색 -->
+						<div class="top-header">
+							<h3 class="tit">차량 검색</h3>
+							<button type="button" class="btn">검색조건초기화 <span class="icon reset2"></span></button>
+						</div>
+
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn active" data-target="filterToggleCont01" data-on="true" data-siblings="false">
+									차량등급
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont01 active" style="display:block;">
+								<!-- 20210120 pjh : 마크업 수정 -->
+								<ul class="select-grid">
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk1">
+											<label for="chk1">경차</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk2">
+											<label for="chk2">소형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk12">
+											<label for="chk12">중형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk4">
+											<label for="chk4">준대형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk5">
+											<label for="chk5">대형</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk6">
+											<label for="chk6">승합</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk7">
+											<label for="chk7">SUV&amp;RV</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk8">
+											<label for="chk8">전기차</label>
+										</div>
+									</li>
+									<li>
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk9">
+											<label for="chk9">수입차</label>
+										</div>
+									</li>
+									<li class="wide-size">
+										<div class="chk-box">
+											<input type="checkbox" name="" id="chk10">
+											<label for="chk10">전체보기</label>
+										</div>
+									</li>
+								</ul>
+								<!-- //20210120 pjh : 마크업 수정 -->
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn active" data-target="filterToggleCont02" data-on="true" data-siblings="false">
+									제조사/차종
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont02 active" style="display:block;">
+
+								<ul class="select-list">
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk01">
+											<label for="chk01">현대</label>
+
+											<ul class="carType-list">
+												<li class="active"><a href="#">아반떼</a></li>
+												<li class="active"><a href="#">소나타</a></li>
+												<li><a href="#">그랜저</a></li>
+												<li><a href="#">싼타페</a></li>
+												<li><a href="#">투싼</a></li>
+												<li><a href="#">스타렉스</a></li>
+											</ul>
+										</div>	
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk02">
+											<label for="chk02">기아</label>
+
+											<ul class="carType-list">
+												<li><a href="#">대표 차종01</a></li>
+												<li><a href="#">대표 차종02</a></li>
+											</ul>
+										</div>										
+										
+									</li>
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk03">
+											<label for="chk03">쌍용</label>
+
+											<ul class="carType-list">
+												<li><a href="#">대표 차종01</a></li>
+												<li><a href="#">대표 차종02</a></li>
+											</ul>
+										</div>										
+										
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk04">
+											<label for="chk04">GM</label>
+
+											<ul class="carType-list">
+												<li><a href="#">대표 차종01</a></li>
+												<li><a href="#">대표 차종02</a></li>
+											</ul>
+										</div>										
+										
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk05">
+											<label for="chk05">르노</label>
+
+											<ul class="carType-list">
+												<li><a href="#">대표 차종01</a></li>
+												<li><a href="#">대표 차종02</a></li>
+											</ul>
+										</div>										
+										
+									</li>							
+								</ul>
+								<!-- 20210120 pjh : 마크업 수정 -->
+								<div class="other-box">
+									<div class="chk-icon-box type-chkOn-red">
+										<input type="checkbox" name="chk" id="chk06">
+										<label for="chk06">관심차종만 보기</label>
+									</div>	
+									<div class="btns">
+										<button type="button" class="btn-auto white">설정</button>
+									</div>
+								</div>
+								<!-- //20210120 pjh : 마크업 수정 -->
+
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn" data-target="filterToggleCont03" data-on="true" data-siblings="false">
+									렌트구분
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont03">
+								<ul class="select-list">
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk07">
+											<label for="chk07">인수형</label>
+										</div>																				
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk08">
+											<label for="chk08">반납형</label>
+										</div>																				
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk09">
+											<label for="chk09">타보고 구매하기</label>
+										</div>																				
+									</li>	
+								</ul>
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn active" data-target="filterToggleCont04" data-on="true" data-siblings="false">
+									연식
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont04 active" style="display:block;">
+								<div class="select-area">
+									<select name="" id="" class="selectbox">
+										<option value="">최소</option>
+										<option value="">2010</option>
+										<option value="">2011</option>
+										<option value="">2012</option>
+										<option value="">2013</option>
+									</select>
+									<span class="dash">~</span>
+									<select name="" id="" class="selectbox">
+										<option value="">최대</option>
+										<option value="">2010</option>
+										<option value="">2011</option>
+										<option value="">2012</option>
+										<option value="">2013</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn" data-target="filterToggleCont08" data-on="true" data-siblings="false">
+									연료
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont08">
+
+								<ul class="select-list">
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk15">
+											<label for="chk15">가솔린</label>
+										</div>	
+									</li>	
+
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk16">
+											<label for="chk16">디젤</label>
+										</div>										
+										
+									</li>
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk17">
+											<label for="chk17">전기</label>
+										</div>										
+										
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk18">
+											<label for="chk18">LPG</label>
+										</div>										
+										
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk19">
+											<label for="chk19">하이브리드</label>
+										</div>										
+										
+									</li>	
+									<li>
+										<div class=" chk-icon-box type-chkOn-red">
+											<input type="checkbox" name="chk" id="chk20">
+											<label for="chk20">기타</label>
+										</div>										
+										
+									</li>							
+								</ul>
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn" data-target="filterToggleCont05" data-on="true" data-siblings="false">
+									가격(렌트)
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont05">
+								<div class="select-area">
+									<select name="" id="" class="selectbox">
+										<option value="">최소</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+									<span class="dash">~</span>
+									<select name="" id="" class="selectbox">
+										<option value="">최대</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn" data-target="filterToggleCont06" data-on="true" data-siblings="false">
+									가격(타보고 구매하기)
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont06">
+								<div class="select-area">
+									<select name="" id="" class="selectbox">
+										<option value="">최소</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+									<span class="dash">~</span>
+									<select name="" id="" class="selectbox">
+										<option value="">최대</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn" data-target="filterToggleCont07" data-on="true" data-siblings="false">
+									주행거리
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont07">
+								<div class="select-area">
+									<select name="" id="" class="selectbox">
+										<option value="">최소</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+									<span class="dash">~</span>
+									<select name="" id="" class="selectbox">
+										<option value="">최대</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="selection-cont">
+							<div class="selection-cont-header">
+								<button type="button" class="btn-toggle-grey filterToggleBtn" data-target="filterToggleCont09" data-on="true" data-siblings="false">
+									지역
+								</button>
+							</div>
+							<div class="selection-cont-body filterToggleCon filterToggleCont09">
+								<div class="select-area">
+									<select name="" id="" class="selectbox">
+										<option value="">(시/도)</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+									<span class="dash">~</span>
+									<select name="" id="" class="selectbox">
+										<option value="">(구/시)</option>
+										<option value="">선택1</option>
+										<option value="">선택2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- 20210120 pjh : 마크업 수정 -->
+						<div class="inputT-cont">
+							<div class="box-between">
+								<div class="inputT">						
+									<input type="text" id="" placeholder="차량번호 검색">
+								</div>
+								<button type="button" class="btn btn-black">검색</button>
+							</div>
+							<p class="txt-exam txt-color-red"><span class="txt-color-red">*</span> 01가1234   형식으로 입력해주세요</p>
+						</div>
+						<!-- //20210120 pjh : 마크업 수정 -->
+					</div>
+					<div class="result-area">
+						<div class="top-header">
+							<div class="total-box">
+								총 <strong class="txt-color-red">123</strong>개
+							</div>
+							<div class="selelct-box">
+								<select name="" id="" class="select-normal">
+									<option value="">최신 연식순</option>
+									<option value="">높은 가격순</option>
+									<option value="">낮은 가격순</option>
+								</select>
+							</div>
+							
+						</div>
+						<div class="result-cont">
+							<ul class="grid-col col3 carInfo-list">
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="/lrhp/pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+											</div>
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state">상담 가능</p>
+												<div class="right-area">
+													<div class="heart-chk-box">
+														<input type="checkbox" id="chk21" checked>
+														<label for="chk21" class="icon heart2"></label>
+														<span>25</span>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>154,974km</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->											
+											<div class="price-box">
+												<p class="price-row">
+													<strong>반납 7개월</strong>
+													<span class="price">
+														610,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>추가 지원금</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>									
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="/lrhp/pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+											</div>
+
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div class="heart-chk-box">
+														<input type="checkbox" id="chk22" checked>
+														<label for="chk22" class="icon heart2"></label>
+														<span>25</span>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>154,974km</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
+											<div class="price-box">
+												<p class="price-row">
+													<strong>반납 7개월</strong>
+													<span class="price">
+														610,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>추가 지원금</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>								
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="/lrhp/pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+											</div>
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state">상담 가능</p>
+												<div class="right-area">
+													<div class="heart-chk-box">
+														<input type="checkbox" id="chk23">
+														<label for="chk23" class="icon heart2"></label>
+														<span>25</span>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>154,974km</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->											
+											<div class="price-box">
+												<p class="price-row">
+													<strong>반납 7개월</strong>
+													<span class="price">
+														610,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>추가 지원금</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>									
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="/lrhp/pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+											</div>
+
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div class="heart-chk-box">
+														<input type="checkbox" id="chk24" checked>
+														<label for="chk24" class="icon heart2"></label>
+														<span>25</span>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>154,974km</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
+											<div class="price-box">
+												<p class="price-row">
+													<strong>반납 7개월</strong>
+													<span class="price">
+														610,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>추가 지원금</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>								
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="/lrhp/pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+											</div>
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state">상담 가능</p>
+												<div class="right-area">
+													<div class="heart-chk-box">
+														<input type="checkbox" id="chk25">
+														<label for="chk25" class="icon heart2"></label>
+														<span>25</span>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>154,974km</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->											
+											<div class="price-box">
+												<p class="price-row">
+													<strong>반납 7개월</strong>
+													<span class="price">
+														610,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>추가 지원금</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>									
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="item">
+										<div  class="img-box">
+											<div class="img-wrap">
+												<img src="/lrhp/pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+											</div>
+
+											<div class="cover">
+												<!-- 
+													20210120 pjh : 마크업 수정 
+													클래스 state => 상담 가능
+													클래스 state.ing => 상담 진행중
+												-->
+												<p class="state ing">상담 진행중</p>
+												<div class="right-area">
+													<div class="heart-chk-box">
+														<input type="checkbox" id="chk26">
+														<label for="chk26" class="icon heart2"></label>
+														<span>25</span>
+													</div>
+												</div>
+												<!-- //20210120 pjh : 마크업 수정 -->
+											</div>
+										</div>
+										<div class="descri-area">
+											<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+											<!-- 20210120 pjh : 마크업 수정 -->
+											<div class="bar-type">
+												<span>19/03식</span>
+												<span>154,974km</span>
+											</div>			
+											<!-- //20210120 pjh : 마크업 수정 -->								
+											<div class="price-box">
+												<p class="price-row">
+													<strong>반납 7개월</strong>
+													<span class="price">
+														610,000<small>원</small>
+													</span>
+												</p>
+												<p class="price-row">
+													<strong>추가 지원금</strong>
+													<span class="price">
+														450,000<small>원</small>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>								
+								</li>								
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		
+						
+		</div>
+		<!-- //중고차장기렌터카 -->
+
+	</main>
+
+
+
+
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+	<!--bg-dimmed 컴포넌트-->
+	<div class="bg-dimmed">딤(Dim)처리 배경</div>
+	<!--//bg-dimmed 컴포넌트-->
+
+
+
+
+	<!--floating_zone 컴포넌트-->
+	<aside class="floating_zone" style="display: none;">
+		플로팅 사이드 바영역
+	</aside>
+	<!--//floating_zone 컴포넌트-->
+
+
+
+</body>
+</html>

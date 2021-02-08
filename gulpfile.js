@@ -290,6 +290,56 @@ gulp.task('buildMO-co', function () {
   );
 });
 
+//lrhp-개발디렉토리
+gulp.task('sassPC-lrhp', function () {
+  return gulp
+    .src('wwwroot/lrhp/pc/scss/**/*.scss')
+    .pipe(plumber(plumberOption))
+    .pipe(
+      sourcemaps.init({
+        loadMaps: true,
+      })
+    )
+    .pipe(
+      sass({
+        outputStyle: 'expanded', //[nested, compact, expanded, compressed]
+        indentType: 'tab',
+        indentWidth: 1,
+      }).on('error', sass.logError)
+    )
+    .pipe(
+      autoprefixer({
+        browsers: autoprefixBrowsers,
+        cascade: true,
+      })
+	)
+    .pipe(sourcemaps.write('../maps'))
+    .pipe(gulp.dest('wwwroot/lrhp/pc/styles'))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('buildPC-lrhp', function () {
+  return gulp
+    .src('wwwroot/lrhp/pc/scss/**/*.scss')
+    .pipe(plumber(plumberOption))
+    .pipe(
+      sass({
+        outputStyle: 'compressed', //[nested, compact, expanded, compressed]
+      }).on('error', sass.logError)
+    )
+    .pipe(
+      autoprefixer({
+        browsers: autoprefixBrowsers,
+        cascade: true,
+      })
+    )
+    .pipe(gulp.dest('wwwroot/lrhp/pc/styles/dist'))
+    .pipe(browserSync.reload({ stream: true }))
+    .on('end', function () {
+      console.log('-------- appned css --------');
+    });
+});
+
 gulp.task('watch', function () {
   browserSync.init({
     //logLevel: "debug",
@@ -310,6 +360,13 @@ gulp.task('watch', function () {
     gulp.series('sassMO', 'buildMO')
   );
 
+  //lrhp-개발디렉토리
+  gulp.watch(
+    'wwwroot/lrhp/pc/scss/**/*.scss',
+    gulp.series('sassPC-lrhp', 'buildPC-lrhp')
+  );
+
+
   /*제휴사*/
   gulp.watch(
     'wwwroot/cooperation/pc/resources-pc/scss/**/*.scss',
@@ -324,7 +381,9 @@ gulp.task('watch', function () {
   gulp.watch('wwwroot/**/*.js').on('change', browserSync.reload);
 });
 
+
+
 gulp.task(
   'default',
-  gulp.series('sassPC', 'buildPC', 'sassMO', 'buildMO', 'sassPC-co', 'buildPC-co', 'sassMO-co', 'buildMO-co', 'watch')
+  gulp.series('sassPC', 'buildPC', 'sassMO', 'buildMO', 'sassPC-co', 'buildPC-co', 'sassMO-co', 'buildMO-co', 'sassPC-lrhp', 'buildPC-lrhp', 'watch')
 );

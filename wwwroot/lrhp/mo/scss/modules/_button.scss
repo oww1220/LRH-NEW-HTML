@@ -1,0 +1,524 @@
+.btn-group{
+	@include Align-middle;
+	.btn{
+		margin: 0 .4rem;
+	}
+}
+.btn-group-justified{
+	@include Clear;
+	padding-top: 10px;
+	//margin-bottom: -20px;
+}
+
+.btn{
+	@include Vertical-inline;
+	height: 4.7rem;
+	padding: 0 1rem;
+	box-sizing: border-box;
+	line-height: 1;
+	color:#2B2B2B;
+	&.radius {
+		border-radius: .5rem;
+	}
+	&-default{
+		width: 100%;
+		color: #fff;
+		border-radius: .5rem;
+		font-size: 1.4rem;
+		border: 1px solid #B4B8BF;
+		background-color: #B4B8BF;
+		pointer-events: none;
+		@include Bold;
+		&.noRadius {
+			border-radius: 0;
+		}
+		&.active {
+			border: 1px solid #F04040;
+			background-color: #F04040;
+			pointer-events: auto;
+		}
+		&.eventsAuto {
+			pointer-events: auto;
+		}
+		&.black {
+			border: 1px solid #54585a;
+			background-color: #54585a;
+			pointer-events: auto;
+			&.ty_no{
+				color:#999;
+				pointer-events: none;
+			}
+		}
+		&.white {
+			border: 1px solid #d2d2d2;
+			background-color: #fff;
+			pointer-events: auto;
+			color:#54585a;
+		}
+		&.red {
+			background-color: #ed1c24;
+			pointer-events: auto;
+			color:#fff;
+			border:0;
+		}
+		&.brown {
+			border: 1px solid #877669;
+			background-color: #877669;
+			pointer-events: auto;
+		}
+		&.blueOverlay {
+			background: rgb(97,137,185);
+			background: linear-gradient(90deg, rgba(97,137,185,1) 0%, rgba(92,65,180,1) 100%);
+			border-radius: .4rem;
+			pointer-events: auto;
+		}
+		&.blueOverlay02 {
+			background: rgb(129,112,221);
+			background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
+			border-radius: .4rem;
+			pointer-events: auto;
+		}
+		&.redOverlay {
+			background: rgb(251,68,87);
+			background: linear-gradient(90deg, rgba(251,68,87,1) 0%, rgba(241,93,55,1) 100%);
+			border-radius: 3.8rem;
+			pointer-events: auto;
+		}
+	}
+	&-red {
+		width: 100%;
+		color: #fff;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #ed1c24;
+		background-color: #ed1c24;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-brown {
+		width: 100%;
+		color: #fff;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #54585a;
+		background-color: #54585a;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-gray {
+		width: 100%;
+		color: #fff;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #54585a;
+		background-color: #54585a;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-white {
+		width: 100%;
+		color: #F04040;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #fff;
+		background-color: #fff;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+		&.gray{
+			color: #bbb;
+    		background-color: #f5f5f5;
+		}
+	}
+	&-orange {
+		width: 100%;
+		color: #F04040;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #FDE4E4;
+		background-color: #FDE4E4;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-blue {
+		width: 100%;
+		color: #fff;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		border: 1px solid #20BBC4;
+		background-color: #20BBC4;
+		@include Bold;
+		@include Align-middle;
+		border-radius: 0;
+	}
+	&-simple{
+		border: 1px solid #d2d2d2;
+		height: 2.8rem;
+		border-radius: 1.5rem;
+		font-size:1.1rem;
+		padding:0 .9rem;
+		background-color: #fff;
+		&.active{
+			color: #0074b2;
+			border-color: #0074b2;
+		}
+		&.black {
+			color: #fff;
+			border-color: #2B2B2B;
+			background-color: #2B2B2B;
+		}
+		&.red {
+			color: #ff404b;
+			border-color: #ed1c24;
+		}
+		&.mid {
+			height: 3.2rem;
+			padding: 0 1.7rem;
+		}
+		&.gray {
+			color: #fff;
+			border-color: #54585a;
+			background-color: #54585a;
+			border-radius: .5rem;
+			@include Regular;
+			height:2.2rem;
+		}
+	}
+	&-toggle {
+		width: 1.7rem;
+		height: 1.7rem;
+		position: relative;
+		cursor: pointer;
+		&:after {
+			display: block;
+			content: '';
+			@include Position($top: 50%, $right: 50%);
+			@include Background($sprite:'ico-arrow-down', $size:100% auto, $position:center center);
+			width: .9rem;
+			height: .9rem;
+			margin: -.45rem -.45rem 0 0;
+			transition: transform .5s;
+			transform: rotate(0deg);
+		}
+		&.gray:after {
+			@include Background($sprite:'ico-arrow-down2', $size:100% auto, $position:center center);
+		}
+		&.darkgray:after {
+			@include Background($sprite:'ico-arrow-down9', $size:100% auto, $position:center center);
+		}
+		&.shor:after {
+			@include Background($sprite:'ico-arrow-down3', $size:100% auto, $position:center center);
+			width:1.1rem;
+			height:.8rem;
+		}
+		&.active:after {
+			transform: rotate(180deg);
+		}
+	}
+	&-pannel {
+		@include Align-middle;
+		width: 2.6rem;
+		height: 2.6rem;
+		padding:0;
+		position: relative;
+		cursor: pointer;
+	}
+	&-link{
+		@include Vertical-inline;
+		box-sizing: border-box;
+		line-height: 1;
+		color:#2B2B2B;
+		border-bottom: 1px solid #2B2B2B;
+		font-size: 1.1rem;
+		padding-bottom: .1rem;
+	}
+	&-share{
+		@include Align-middle;
+		width: 3.4rem;
+		height: 3.4rem;
+		background-color: #EFF2F7;
+		border-radius: 100%;
+		&.ty2 {
+			background-color: #fff;
+			box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+		}
+		&.btn-sns {
+			background-color: transparent;
+			@include Position($top: 0, $right: 0);
+			padding-right: 0;
+		}
+		&.btn-sns-h-auto {
+			background-color: transparent;
+			@include Position($top: 0, $right: 0);
+			padding-right: 0;
+			height:auto;
+		}
+		&.btn-sns-site {
+			background-color: transparent;
+			@include Position($top: 1.9rem, $right: 1.7rem);
+			padding-right: 0;
+		}
+		&.btn-sns-site-bt {
+			background-color: transparent;
+			@include Position($top: auto, $bottom: 1.9rem, $right: 0);
+			padding-right: 0;
+		}
+		&.btn-sns-site-ct {
+			background-color: transparent;
+			@include Position($top: 50%, $right: 1.7rem);
+			padding-right: 0;
+			transform: translateY(-50%);
+		}
+		&.btn-sns-site-t {
+			background-color: transparent;
+			@include Position($top: 0, $right: 1.7rem);
+			padding-right: 0;
+		}
+	}
+	&-goTop {
+		@include Background($sprite:'ico-goTop', $size:100% auto, $position:center center);
+		width: 3.2rem;
+		height: 3.2rem;
+		@include Hide_txt;
+		border-radius: 100%;
+		box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+	}
+	&-goQuick {
+		@include Background($sprite:'ico-goQuick', $size:100% auto, $position:center center);
+		width: 3.2rem;
+		height: 3.2rem;
+		@include Hide_txt;
+		border-radius: 100%;
+		box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+	}
+	&-goWrite {
+		@include Background($sprite:'ico-goWrite', $size:100% auto, $position:center center);
+		width: 4.7rem;
+		height: 4.7rem;
+		@include Hide_txt;
+	}
+	&-fixedRight03 {
+		background-color: #1E1E1E;
+		border-radius: 100%;
+		@include Align-middle;
+		width: 5.5rem;
+		height: 5.5rem;
+		padding:0;
+		position: relative;
+		color:#fff;
+		span {
+			margin-top:.4rem;
+			display: block;
+		}
+	}
+	&-paging-prev {
+		@include Hide_txt;
+		@include Align-middle;
+		@include Background($sprite:'ico-paging-prev', $size:.5rem, $position:center center);
+		width: 3.4rem;
+		height: 2.8rem;
+		box-sizing: border-box;
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		border-radius: .5rem;
+	}
+	&-paging-next {
+		@include Hide_txt;
+		@include Align-middle;
+		@include Background($sprite:'ico-paging-next', $size:.5rem, $position:center center);
+		width: 3.4rem;
+		height: 2.8rem;
+		box-sizing: border-box;
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		border-radius: .5rem;
+	}
+	&-comment {
+		border: 1px solid #EBEBEB;
+		@include Hide_txt;
+		@include Background($sprite:'ico-comment-off', $size:1.6rem, $position:center center);
+		background-color: #fff;
+		border-radius: 1rem;
+		width: 4.5rem;
+		height: 4.1rem;
+		flex:none;
+		&.active {
+			@include Background($sprite:'ico-comment-on', $size:1.6rem, $position:center center);
+			background-color: #F04040;
+		}
+	}
+	&-small{
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		border-radius: 1rem;
+		padding: 0 .8rem;
+		height: 2.1rem;
+		box-sizing: border-box;
+		@include Align-middle;
+		&.active {
+			background-color: #4054F0;
+			border-color: #4054F0;
+			color: #fff;
+		}
+		> .icon {
+			margin-right:.3rem;
+		}
+		&.inline{
+			border-radius: .5rem;
+			@include Regular;
+			font-size:1rem;
+			display:inline-flex;
+			border:1px solid #d2d2d2;
+			height:1.5rem;
+		}
+	}
+	&-anchor{
+		border: 1px solid #EBEBEB;
+		background-color: #FAFAFA;
+		border-radius: 1rem;
+		padding: 0 .8rem;
+		height: 2.8rem;
+		font-size:1.1rem;
+		box-sizing: border-box;
+		@include Align-middle;
+	}
+	&-middle {
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		border-radius: 1.5rem;
+		padding: 0 1.7rem;
+		height: 3.4rem;
+		font-size:1.1rem;
+		box-sizing: border-box;
+		@include Align-middle;
+		> i {
+			margin-left:.4rem;
+		}
+	}
+}
+
+.item-add-btns {
+	@include Align-middle;
+	position: relative;
+	> button {
+		position: relative;
+		z-index: 1;
+	}
+	&:after{
+		display:block;
+		content: '';
+		width: 100%;
+		height: 1px;
+		background-color: #EBEBEB;
+		@include Position($top: 50%, $left: 0);
+		margin-top:-.5px;
+	}
+}
+.item-remove-btns {
+	@include Align-middle;
+	position: relative;
+	> button {
+		position: relative;
+		z-index: 1;
+	}
+	&:after{
+		display:block;
+		content: '';
+		width: 100%;
+		height: 1px;
+		background-color: #EBEBEB;
+		@include Position($top: 50%, $left: 0);
+		margin-top:-.5px;
+	}
+}
+.btn-map-opt{
+	@include Align-middle;
+	background-color: #fff;
+	width: 50%;
+	box-sizing: border-box;
+	border-radius: 3.4rem;
+	.btn{
+		@include Vertical-inline;
+		height: 3.4rem;
+		padding: 0 1.5rem;
+		box-sizing: border-box;
+		line-height: 1;
+		color: #666;
+		width: 100%;
+		border-radius: 3.4rem;
+		font-size: 1.4rem;
+		background-color: #fff;
+		@include Regular;
+		&.active {
+			background-color: #54585a;
+			color:#fff;
+			@include Bold;
+		}
+	}
+}
+
+a.btn {
+	@include Inline-align-middle;
+}
+
+.small-btns{
+	margin-left:.9rem;
+	.btn{
+		border: 1px solid #EBEBEB;
+		background-color: #fff;
+		border-radius: .2rem;
+		padding: 0 .8rem;
+		height: 2.1rem;
+		box-sizing: border-box;
+		@include Align-middle;
+		
+		&.red{
+			border:1px solid #ff404b;
+			color:#ff404b;
+		}
+	}
+}
+
+.section-layer-submit {
+	padding:4.1rem 1.7rem 2.6rem;
+	.btn {
+		color:#54585a;
+	 	font-size:1.6rem;
+	 	border:1px solid #d2d2d2;
+		border-radius:.5rem;
+		 &-gray {
+			 color:#fff;
+			 font-size:1.4rem;
+		 }
+		 &-red {
+			 color:#fff;
+			 font-size:1.4rem;
+			 border:0;
+		 }
+	}
+	//리스트 - 버튼 width:100% 인 경우
+	ul {
+		li {
+			& + li {
+				margin-top:.9rem;
+			}
+		}
+	}
+	//리스트 - 버튼 width:48% 인 경우
+	ul.list-type-col2 {
+		width:100%;
+		margin:0;
+		justify-content: space-between;
+		li {
+			width:48%;
+			& + li {
+				margin-top:0;
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>lotterentacar</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header eng-header">
+
+		<!--해더상단-->
+		<div class="header-top">
+			<div class="inner">
+				<a href="#container" class="skip_nav">본문 바로가기</a>
+				<ul class="extra-menu">
+					<li><a href="#none">Register</a></li>
+					<li><a href="#none">My Reservation</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//해더상단-->
+
+		<!--해더네비-->
+		<nav class="header-nav header-nav-line eng-header-nav">
+			<div class="inner">
+				<div class="nav-wrap">
+					<h1><a href="#none"><img src="/lrhp/pc/images/common/eng-logo-header.png" alt="LOTTE rental"/></a></h1>
+					<ul>
+						<li>
+							<a href="#" class="draw-btn-e" data-target="draw-cont-01" data-on="true" data-siblings="true">Reservation</a>
+						</li>
+						<li>
+							<a href="#" class="draw-btn-e" data-target="draw-cont-02" data-on="true" data-siblings="true">Car rental </a>
+						</li>
+						<li>
+							<a href="#" class="draw-btn-e" data-target="draw-cont-03" data-on="true" data-siblings="true">Location</a>
+						</li>
+						<li>
+							<a href="#" class="draw-btn-e" data-target="draw-cont-04" data-on="true" data-siblings="true">FAQ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-menu">
+					<ul>
+						<li>
+							<button type="button" class="btn"><i class="icon mypage">My page</i></button>
+							<!--div class="nav-menu-mypage-box">
+								<b>진행중 예약</b>
+							</div-->
+						</li>
+						<li>
+							<button type="button" class="btn draw-btn-all draw-btn-all-e" data-target="draw-cont-06" data-on="true" data-siblings="true"><i class="icon draw">전체메뉴</i></button>
+						</li>
+						<li><button type="button" class="btn"><i class="icon global">언어설정</i></button></li>
+					</ul>
+				</div>
+			</div>
+
+			<!--- 드롭다운 메뉴 추가-->
+			<div class="draw-toggle-wrap draw-toggle-wrap-s">
+				<!-- 헤더 2뎁스 메뉴 - 렌터카 예약 - 로그인 했을때 -->
+				<div class="draw-toggle-area">
+					<!-- 로그인 전/후-->
+					<div class="layer-gnb-info-wrap">
+						<!-- 로그인 했을때-->
+						<div class="layer-gnb-info">
+							<div class="layer-gnb-info-top">
+								<strong>Hello</strong>
+								<p>KimLOTTE</p>
+							</div>
+							<ul class="layer-gnb-link">
+								<li>
+									<button type="button" class="btn">
+										<div class="link-btn-align-left">
+											<i class="flag point">P</i>Point
+										</div>
+										<div class="link-btn-align-right">
+											<b>1,800</b><i class="icon next02"></i>
+										</div>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="btn">
+										<div class="link-btn-align-left">
+											<i class="flag coupon">L</i>Level
+										</div>
+										<div class="link-btn-align-right">
+											<b>General</b><i class="icon next02"></i>
+										</div>
+									</button>
+								</li>
+							</ul>
+						</div><!-- 로그인 했을때-->
+						<!-- 로그인 안했을때-->
+						<div class="layer-gnb-info-top">
+							<strong>Welcom to</strong>
+							<p>LOTTE rent a car</p>
+							<button type="button" class="btn btn-black">Login</button>
+						</div><!-- //로그인 안했을때-->
+					</div><!-- //로그인 전/후-->
+					
+
+					<div class="draw-toggle-cont draw-cont-01">
+						<div class="detail-layer-in">
+							<ul class="layer-gnb layer-gnb-s list-type-col4">
+								<li>
+									<p><a href="#">Reservation</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">MainIand</a></li>
+											<li><a href="#">Jeju</a></li>
+											<li><a href="#">Overseas</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">Car rental</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">Rental Information</a></li>
+											<li><a href="#">Jeju Auto House</a></li>
+											<li><a href="#">Additional Services</a></li>
+											<li><a href="#">Chauffeured Service</a></li>
+											<li><a href="#">Driving Tips in Korea</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">Location</a></p>
+									<div class="layer-gnb-list">
+										<ul>
+											<li><a href="#">Branches by Region</a></li>
+											<li><a href="#">Branches Offering</a></li>
+											<li><a href="#">Chauffeur</a></li>
+											<li><a href="#">Overseas Branches</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<p><a href="#">FAQ</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //헤더 2뎁스 메뉴 - 렌터카 예약 -->
+	
+					
+				</div>
+				
+				<div class="layer-gnb-bn layer-gnb-bn-e">
+					<div class="gnb-banner">
+						<a href="#"><img src="/lrhp/pc/images/@temp-eng-login-bn02.png" alt="Members Benefits"></a>
+					</div>
+				</div>
+			</div>
+			<!--- 드롭다운 메뉴 추가-->
+
+
+
+
+
+
+			
+			<!--- 드롭다운 메뉴 추가, 전체 메뉴는 높이가 다르기 때문에 따로 설정-->
+			<div class="draw-toggle-wrap-all draw-toggle-wrap-all-e">
+				<!-- 헤더 전체 메뉴 -->
+				<div class="draw-toggle-cont-all draw-cont-06">
+					<div class="detail-layer-in detail-layer-all-in">
+						<ul class="layer-gnb-all">
+							<li>
+								<ul>
+									<li>
+										<p><a href="#"><b>Reservation</b></a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">Reservation</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>
+										<p><a href="#"><b>Car rental</b></a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">Rental Information</a></li>
+												<li><a href="#">Jeju Auto House</a></li>
+												<li><a href="#">Additional Services</a></li>
+												<li><a href="#">Chauffeured Service</a></li>
+												<li><a href="#">Driving Tips in Korea</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>
+										<p><a href="#"><b>Location</b></a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">Location</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>
+										<p><a href="#"><b>FAQ</b></a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">FAQ</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>
+										<p><a href="#"><b>Company</b></a></p>
+										<div class="layer-gnb-list">
+											<ul>
+												<li><a href="#">Corpirate profile</a></li>
+												<li><a href="#">Contact us</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<!-- 로그아웃 일시 -->
+									<li>
+										<p><a href="#">Login</a></p>
+									</li>
+									<!-- //로그아웃 일시 -->
+									<!-- 로그인 일시 -->
+									<li style="display:none;">
+										<p><a href="#">Logout</a></p>
+									</li>
+									<!-- //로그인 일시 -->
+									<li>
+										<div class="layer-gnb-list">
+											<ul>
+												<li>
+													<p><a href="#">My page</a></p>
+												</li>
+												<li>
+													<p><a href="#">Register</a></p>
+												</li>
+												<li>
+													<p><a href="#">My Reservation</a></p>
+												</li>
+												<li>
+													<p><a href="#">Members benefits</a></p>
+												</li>
+											</ul>	
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //헤더 전체 메뉴 -->
+			</div>
+			<!--- 드롭다운 메뉴 추가-->	
+			
+			
+		</nav>
+		<!--//해더네비-->
+
+	</header>
+	<!--//header 컴포넌트-->
+
+	<!--container 컴포넌트-->
+	<main id="wrap eng-wrap">
+
+
+
+		<div>
+			컨텐츠영역1<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			컨텐츠영역2<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		</div>
+
+
+
+	</main>
+	<!--//container 컴포넌트-->
+
+	<!--footer 컴포넌트-->
+	<footer class="footer eng-footer">
+
+		<div class="footer-link">
+			<div class="inner">
+				<ul>
+					<li>
+						<a href="#n" onclick="members.goWithNoAuth('https://direct.lotterentacar.net/main/main.do?utm_source=lotterentacar&amp;utm_medium=footer&amp;utm_campaign=FamilySite&amp;utm_content=신차장다이렉트', 'Y');ga('send', 'event', '풋터', 'goToDirect', '신차장다이렉트');">COMPANY</a>
+					</li>
+					<li>
+						<a href="#n" onclick="members.goWithNoAuth('https://manager.lotterentacar.net/main.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '신차장_멤버십랜딩');">USER AGREEMENT</a>
+					</li>
+					<li>
+						<a href="#n" onclick="members.goWithNoAuth('https://www.lotteautoauction.net/hp/pub/cmm/viewMain.do', 'Y');ga('send', 'event', '풋터', '패밀리사이트', '오토옥션랜딩');">CONTACT US</a>				
+					</li>
+					<li>
+						<a href="#">SITE MAP</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		<div class="inner">
+			<div class="footer-logo">
+				<img src="/lrhp/pc/images/common/logo-footer.png" alt="LOTTE rental"/>
+			</div>
+			<div class="footer-bottom-menu">
+				<div class="footer-infos-wrap">
+		
+					<div class="site-infos">
+		
+						<div class="information">
+							<ul class="entrepreneur-info">
+								<li>
+									<ul class="address">
+										<li>LOTTE rental co., ltd. | President : Kim, Hyun Soo | Business Registration # : 214-87-79183</li>
+										<li>Communication Service # : 2010-Gyeonggi Anyang 420 | Address : 8F Shinwonvision Tower 898. Hogye-dong, Dongan-Gu, Anyang</li>
+										<li>Main Contact 1588-1230 | Oversea +82-2-797-8000</li>
+										<li>copyright ⓒ 2021 LOTTE rental co., ltd.All Rights Reserved.</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="footer-infos-bn">
+						<div class="footer-infos-list">
+							<div class="detail-view-list-wrap">
+								
+								<div class="swiper-container detail-view-list">
+									<p class="detail-view-list-tit">LOTTE rental Award</p>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded01.png" alt="한국서비스대상 명예의 전당 2015년 명예의 전당 헌정">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded02.png" alt="2019 국가고객만족도  렌터카부문1위 (5년 연속)">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded03.png" alt="2020 한국산업의 브랜드 파워 1위 (18년 연속)">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded04.png" alt="대한민국 브랜드 스타 (14년 연속)">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded05.png" alt="2019 국가브랜드 경쟁력  지수 1위 (8년 연속)">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded06.png" alt="2019 한국서비스 품질지수 1위 (8년 연속) ">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded07.png" alt="한국산업의 고객만족도 (4년 연속)">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded08.png" alt="2020 대한민국 퍼스트  브랜드 (16년 연속)">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded09.png" alt="2019 프리미엄 브랜드 지수 1위 (11년 연속) ">
+										</div>
+										<div class="swiper-slide">
+											<img src="/lrhp/pc/images/icons/ico-awarded10.png" alt="2019 한국품질만족지수 1위 2013년~2015년, 2019년 수상">
+										</div>
+									</div>
+									<div class="swiper-pagination-wrap">
+										<div class="swiper-button-next"></div>
+										<div class="swiper-button-prev"></div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="footer-infos-sns">
+							<p>LOTTE rental SNS</p>
+							<ul>
+								<li>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsK">카카오톡</i></a>
+								</li>
+								<li>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsF">페이스북</i></a>
+								</li>
+								<li>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsI">인스타그램</i></a>
+								</li>
+								<!-- <li>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsY">유튜브</i></a>
+								</li> -->
+								<li>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsP">포스트</i></a>
+								</li>
+								<li>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsB">블로그</i></a>
+								</li>
+								<li>
+									<a href="#" class="btn btn-foot-sns"><i class="icon snsT">트위터</i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-center-wrap">
+					<div class="footer-center-top">
+						<p>Customer Service</p>
+						<b>
+							<a href="tel:1588-1230">1588-1230</a>
+						</b>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</footer>
+	<!--//footer 컴포넌트-->
+
+	<!--bg-dimmed 컴포넌트-->
+	<div class="bg-dimmed">딤(Dim)처리 배경</div>
+	<!-- gnb 관련 필수 dim 입니다. -->
+	<div class="bg-dimmed-h">딤(Dim)처리 배경</div>
+	<!--//bg-dimmed 컴포넌트-->
+
+
+
+
+	<!--floating_zone 컴포넌트-->
+	<aside class="floating_zone" style="display: none;">
+		플로팅 사이드 바영역
+	</aside>
+	<!--//floating_zone 컴포넌트-->
+	<!--  ---->
+
+</body>
+</html>
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_mypage.js"></script><!-- 마이페이지 상단과 LNB 인크루드 -->
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+	<!--//header 컴포넌트-->
+
+	<!--container 컴포넌트-->
+	<main id="wrap">
+		<div class="path-wrap">
+			<div class="cover">
+				<div class="inner">            
+					<ul>
+						<li>
+							<a href=""> 
+								<span class="icon home">HOME</span>
+							</a>
+						</li>
+						<li>
+							<a href="">마이페이지</a>
+						</li>
+						<li>
+							<a href="">할인쿠폰 및 무료이용권</a>
+						</li>
+						<li>
+							<a href="">할인쿠폰</a>
+						</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+
+		<div class="mypage-container">
+			<div class="inner-type2">
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">마이페이지</h2>					
+					<p>롯데렌터카 회원을 위한 다양한 혜택이 준비되어 있습니다.</p>
+				</section>
+				<!-- //페이지 타이틀 -->			
+
+				<!-- //.mypage-header 인크루드 -->
+				<div class="mypage-header"></div>
+				<!-- //.mypage-header -->
+
+				<div class="mypage-body">
+
+					<!-- //.mypage-lnb 인크루드 -->
+					<div class="mypage-lnb"></div>
+					<!-- //.mypage-lnb -->
+
+					<div class="mypage-body-cont">
+						<div class="mypage-body-cont-header">
+							<div class="tit-area">
+								<h4 class="tit">할인쿠폰</h4>
+							</div>
+						</div>
+
+						<div class="infos-section">	
+							<div class="box-between">
+								<p class="txt-align">
+									<span class="icon talk-small"></span> 할인쿠폰을 등록하시면 결제 시 사용하실 수 있습니다. 
+								</p>
+								<button type="button" class="btn-normal black layer-mypage-open" data-layer="layer-registCoupon">
+									할인쿠폰 등록하기 <span class="icon coupon"></span>
+								</button>	
+							</div>
+						</div>
+						<div class="count-section">
+							<p>나의  총 할인쿠폰 <span class="txt-color-red">0건</span></p>
+						</div>
+						<div class="infos-section">							
+							<div class="result-none">
+								보유 쿠폰이 없습니다. 
+							</div>	
+						</div>		
+						<ul class="lst dot txt-color-red">
+							<li>사용기간이 이미 경과하였거나, 사용완료된 쿠폰은 삭제 되오니 이점 착오 없으시길 바랍니다.</li>
+						</ul>
+
+						
+					</div>
+					<!-- //.mypage-body-cont -->
+				</div>	
+				<!-- //.mypage-body -->
+				
+			</div>
+		</div>
+
+	</main>
+	<!--//container 컴포넌트-->
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+	<!-- 할인쿠폰 등록 레이어 -->
+	<div class="layer-wrap layer-popup layer-mypage layer-registCoupon">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>할인쿠폰 등록</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-registCoupon"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+
+					<div class="form-cont">
+						<div class="form-row">
+							<div class="input-tit">
+								<label for="input01">쿠폰 번호</label>
+							</div>
+							<div class="input-cont">
+								<div class="inputT">
+									<input type="text" id="input01" value="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="lst dot">
+						<li>발급받으신 쿠폰 번호를 입력해주세요.</li>
+						<li>쿠폰 등록 후 기간, 혜택, 사용조건 등을 꼭 확인하세요.</li>
+						<li>알파벳 O 와 숫자 0 을 명확히 구분하여 입력하세요.</li>
+						<li>무료 이용권은 등록할 수 없습니다. </li>
+						<li>전화 예약 시, 이용권 번호를 말씀해 주시면 적용해 드립니다.</li>
+					</ul>
+
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-registCoupon">취소</button>		
+					<button type="button" class="btn btn-red layer-popup-close" data-layer="layer-registCoupon">등록</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //할인쿠폰 등록 레이어 -->
+
+</body>
+</html>
+

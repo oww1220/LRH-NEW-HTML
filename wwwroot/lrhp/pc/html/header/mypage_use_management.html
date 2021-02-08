@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+    <!--//header 컴포넌트-->
+	<main id="wrap" >
+		<div class="path-wrap">
+			<div class="cover">
+				<div class="inner">            
+					<ul>
+						<li>
+							<a href=""> 
+								<span class="icon home">HOME</span>
+							</a>
+						</li>
+						<li>
+							<a href="">단기렌터카 예약</a>
+						</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+		
+		<!--마이페이지 - 단기렌터카 예약-->
+		<div class="mypage-container">
+			<div class="inner-type2">	
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">이용중관리</h2>
+					<p class="txt">대여 중 기간연장이나 반납지점의 변경도 갑자기 운전자를 추가해야 할 때도!</P>				
+				</section>
+				<!-- //페이지 타이틀 -->
+
+				<div class="useManagement-cont">
+					<div class="section-banner">
+						<p><strong>지점방문 없이 홈페이지에서</strong> 바로바로 이용중 관리 서비스</p>
+					</div>
+					<div class="section-cont">
+						<form action="" method="">
+							<fieldset>
+								<div class="return_wrap">
+									<div class="box-between">
+										<section class="section-form form4">
+											<div class="form-header">
+												<h3 class="tit-size-mid">반납 시간 변경</h3>
+												<span>이용시간<em class="txt-color-red">24시간</em></span>
+											</div>
+											<div class="form-cont">
+												<div class="row type2">
+													<div class="box-between">
+														<div>
+															<label for="" class="input-tit">대여</label>
+															<div class="input-cont">
+																<div class="">						
+																	<input type="text" id="" value="2020/10/28 16시 00분" disabled>
+																</div>
+															</div>
+															<button type="button" disabled><i class="icon date"></i></button>
+														</div>
+														<div>
+															<label for="" class="input-tit">반납</label>
+															<div class="input-cont">
+																<div class="">						
+																	<input type="text" id="" value="2020/10/28 17시 00분">
+																</div>
+															</div>
+															<button type="button" class="btn-schedule-toggle" data-target="schedule-toggle-cont" data-on="true" data-siblings="true"><i class="icon date"></i></button>
+														</div>
+													</div>
+												</div>
+												<div class="row type2">
+													<ul class="lst dot">
+														<li>
+															반납시간이 변경되면 이용시간 변경에 따라 대여금액이 변경됩니다.
+														</li>
+													</ul>
+												</div>
+											</div>
+										</section>
+										<section class="section-form form5">
+											<div class="form-header">
+												<h3 class="tit-size-mid">반납 지점 변경</h3>
+												<span>편도반납수수료<em class="txt-color-red">0</em>원</span>
+											</div>
+											<div class="form-cont">
+												<div class="row type2">
+													<div class="box-between">
+														<div>
+															<label for="" class="input-tit">대여</label>
+															<div class="input-cont">
+																<div class="">						
+																	<input type="text" id="" value="전략영업 1팀" disabled>
+																</div>
+															</div>
+														</div>
+														<div>
+															<label for="" class="input-tit">반납</label>
+															<div class="input-cont">
+																<div class="">						
+																	<input type="text" id="" value="전략영업 1팀">
+																</div>
+															</div>
+															<button type="button" class="btn-indicator-toggle" data-target="indicator-toggle-cont" data-on="true" data-siblings="true">선택</button>
+														</div>
+													</div>
+												</div>
+												<div class="row type2">
+													<ul class="lst dot">
+														<li>
+															대여지점과 다른 지점으로 반납하실 경우 별도의 수수료가 부가됩니다.
+														</li>
+													</ul>
+												</div>
+											</div>
+										</section>
+									</div>
+									<!-- 캘린더 -->
+									<div class="schedule-wrap schedule-toggle-cont" style="display:none;">
+										<div class="calendar-wrap">
+											<ul class="calendar">
+												<li class="col">									
+													<div class="calendar-tit">2020.09</div>
+													<div class="tbl-box">
+														<table>
+															<caption></caption>
+															<colgroup>
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th>일</th>
+																	<th>월</th>
+																	<th>화</th>
+																	<th>수</th>
+																	<th>목</th>
+																	<th>금</th>
+																	<th>토</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>															
+																	<td></td>
+																	<td></td>
+																	<td class="disabled">1</td>
+																	<td class="disabled">2</td>
+																	<td class="disabled">3</td>
+																	<td class="disabled">4</td>
+																	<td class="disabled">5</td>
+																</tr>
+																<tr>
+																	<td class="disabled">6</td>
+																	<td class="disabled">7</td>
+																	<td class="disabled">8</td>
+																	<td class="disabled">9</td>
+																	<td class="disabled">10</td>
+																	<td class="disabled">11</td>
+																	<td class="disabled">12</td>
+																</tr>
+																<tr>															
+																	<td class="disabled">13</td>
+																	<td class="disabled">14</td>
+																	<td class="disabled">15</td>
+																	<td class="disabled">16</td>
+																	<td class="disabled">17</td>
+																	<td class="today"><button type="button" class="btn">18</button></td>
+																	<td><button type="button" class="btn">19</button></td>
+																</tr>
+																<tr>
+																	
+																	<td><button type="button" class="btn">20</button></td>
+																	<td class="start"><button type="button" class="btn">21</button></td>
+																	<td class="during"><button type="button" class="btn">22</button></td>
+																	<td class="end"><button type="button" class="btn">23</button></td>
+																	<td><button type="button" class="btn">24</button></td>
+																	<td><button type="button" class="btn">25</button></td>
+																	<td><button type="button" class="btn">26</button></td>
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">27</button></td>
+																	<td><button type="button" class="btn">28</button></td>
+																	<td><button type="button" class="btn">29</button></td>
+																	<td><button type="button" class="btn">30</button></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>		
+													</div>							
+												</li>
+												<li class="col">								
+													<div class="calendar-tit">2020.10</div>
+													<div class="tbl-box">
+														<table>
+															<caption></caption>
+															<colgroup>
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th>일</th>
+																	<th>월</th>
+																	<th>화</th>
+																	<th>수</th>
+																	<th>목</th>
+																	<th>금</th>
+																	<th>토</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td><button type="button" class="btn">1</button></td>
+																	<td><button type="button" class="btn">2</button></td>
+																	<td><button type="button" class="btn">3</button></td>
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">4</button></td>
+																	<td><button type="button" class="btn">5</button></td>
+																	<td><button type="button" class="btn">6</button></td>
+																	<td><button type="button" class="btn">7</button></td>
+																	<td><button type="button" class="btn">8</button></td>
+																	<td><button type="button" class="btn">9</button></td>
+																	<td><button type="button" class="btn">10</button></td>
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">11</button></td>
+																	<td><button type="button" class="btn">12</button></td>
+																	<td><button type="button" class="btn">13</button></td>
+																	<td><button type="button" class="btn">14</button></td>
+																	<td><button type="button" class="btn">15</button></td>
+																	<td><button type="button" class="btn">16</button></td>
+																	<td><button type="button" class="btn">17</button></td>
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">18</button></td>
+																	<td><button type="button" class="btn">19</button></td>
+																	<td><button type="button" class="btn">20</button></td>
+																	<td><button type="button" class="btn">21</button></td>
+																	<td><button type="button" class="btn">22</button></td>
+																	<td><button type="button" class="btn">23</button></td>
+																	<td><button type="button" class="btn">24</button></td>
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">25</button></td>
+																	<td><button type="button" class="btn">26</button></td>
+																	<td><button type="button" class="btn">27</button></td>
+																	<td><button type="button" class="btn">28</button></td>
+																	<td><button type="button" class="btn">29</button></td>
+																	<td><button type="button" class="btn">30</button></td>
+																	<td><button type="button" class="btn">31</button></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+												<li class="col">									
+													<div class="calendar-tit">2020.11</div>
+													<div class="tbl-box">
+														<table>
+															<caption></caption>
+															<colgroup>
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+																<col style="width:14.2%;">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th>일</th>
+																	<th>월</th>
+																	<th>화</th>
+																	<th>수</th>
+																	<th>목</th>
+																	<th>금</th>
+																	<th>토</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td><button type="button" class="btn">1</button></td>
+																	<td><button type="button" class="btn">2</button></td>
+																	<td><button type="button" class="btn">3</button></td>
+																	<td><button type="button" class="btn">4</button></td>
+																	<td><button type="button" class="btn">5</button></td>
+																	<td><button type="button" class="btn">6</button></td>
+																	<td><button type="button" class="btn">7</button></td>													
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">8</button></td>
+																	<td><button type="button" class="btn">9</button></td>
+																	<td><button type="button" class="btn">10</button></td>
+																	<td><button type="button" class="btn">11</button></td>
+																	<td><button type="button" class="btn">12</button></td>
+																	<td><button type="button" class="btn">13</button></td>
+																	<td><button type="button" class="btn">14</button></td>													
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">15</button></td>
+																	<td><button type="button" class="btn">16</button></td>
+																	<td><button type="button" class="btn">17</button></td>
+																	<td><button type="button" class="btn">18</button></td>
+																	<td><button type="button" class="btn">19</button></td>
+																	<td><button type="button" class="btn">20</button></td>
+																	<td><button type="button" class="btn">21</button></td>													
+																</tr>
+																<tr>
+																	<td><button type="button" class="btn">22</button></td>
+																	<td><button type="button" class="btn">23</button></td>
+																	<td><button type="button" class="btn">24</button></td>
+																	<td><button type="button" class="btn">25</button></td>
+																	<td><button type="button" class="btn">26</button></td>
+																	<td><button type="button" class="btn">27</button></td>
+																	<td><button type="button" class="btn">28</button></td>
+																</tr>
+																<tr>
+																	
+																	<td><button type="button" class="btn">29</button></td>
+																	<td><button type="button" class="btn">30</button></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+											</ul>
+											<!-- //달력 -->
+				
+											<!-- 페이지네이션 -->
+											<div class="pagination-wrap">
+												<button type="button" class="btn btn-paging-prev">이전 달</button>
+												<button type="button" class="btn btn-paging-next">다음 달</button>
+											</div>
+											<!-- //페이지네이션 -->
+										</div>
+										<div class="box-type3 schedule-bot">
+											<div class="schedule-bot-cont">
+												<div class="schedule-bot-cont-col date-area">
+													대여일시
+													<strong class="date">
+														2020/09/21
+													</strong>
+												</div>
+												<div class="schedule-bot-cont-col select-area">
+													<select name="" id="" class="selectbox">
+														<option value="">10시</option>
+													</select>
+													<select name="" id="" class="selectbox">
+														<option value="">00분</option>
+													</select>
+												</div>
+											
+												<div class="schedule-bot-cont-col date-area">
+													반납일시
+													<strong class="date">
+														2020/09/23
+													</strong>
+												</div>
+												<div class="schedule-bot-cont-col select-area">
+													<select name="" id="" class="selectbox">
+														<option value="">10시</option>
+													</select>
+													<select name="" id="" class="selectbox">
+														<option value="">00분</option>
+													</select>
+												</div>
+											</div>
+											<button type="button" class="btn right">확인</button>
+										</div>								
+									</div>
+									<!-- //캘린더 -->
+									
+									<div class="section-indicator indicator-toggle-cont" style="display:none;">
+										<div class="tab-nav tab-normal">
+											<ul class="menu-list">
+												<li class="active">						
+													<button>서울</button>
+												</li>
+												<li>
+													<button>인천/경기</button>
+												</li>
+												<li>
+													<button>강원</button>
+												</li>
+												<li>
+													<button>충청/대전/세종</button>
+												</li>
+												<li>
+													<button>전라/광주</button>
+												</li>
+												<li>
+													<button>경상/대구/부산/울산</button>
+												</li>
+												<li>
+													<button>제주</button>
+												</li>
+												<li>
+													<button>공항지점</button>
+												</li>
+												<li>
+													<button>역사지점</button>
+												</li>
+												<li>
+													<button>24시간지점</button>
+												</li>
+											</ul>
+										</div>	
+										<div class="tab-cont tab-normal">
+											<div class="tab-cont-inner">
+												<ul class="choice-list list-type-col6">
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio01" name="radio" checked="">
+															<label for="radio01">
+																<span>SP영업1지점</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio02" name="radio" disabled>
+															<label for="radio02">
+																<span>강남</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio03" name="radio">
+															<label for="radio03">
+																<span>강북</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio04" name="radio">
+															<label for="radio04">
+																<span>공덕</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio05" name="radio">
+															<label for="radio05">
+																<span>관악</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio06" name="radio">
+															<label for="radio06">
+																<span>광화문</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio07" name="radio">
+															<label for="radio07">
+																<span>SP영업1지점</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio08" name="radio">
+															<label for="radio08">
+																<span>강남</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio09" name="radio">
+															<label for="radio09">
+																<span>강북</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio10" name="radio">
+															<label for="radio10">
+																<span>공덕</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio11" name="radio">
+															<label for="radio11">
+																<span>관악</span>
+															</label>
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="radio12" name="radio">
+															<label for="radio12">
+																<span>광화문</span>
+															</label>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="btn-area">
+											<button type="submit" class="btn btn-red">전국지점안내</button>
+											<button type="submit" class="btn btn-black">확인</button>		
+										</div>
+									</div>
+								</div>
+								<section class="section-form form1">
+									<div class="form-header">
+										<h3 class="tit-size-mid">예약상세내역</h3>
+									</div>
+									<div class="form-cont">
+										<div class="row-wrap">
+											<div class="row type2">
+												<div class="box-between">
+													<span class="input-tit">변경전 대여료</span>
+													<div class="txt">
+														298,350원
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<div class="box-between">
+													<span class="input-tit">변경후 대여료</span>
+													<div class="txt">
+														298,350원
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<div class="box-between">
+													<span class="input-tit">기존결제금액</span>
+													<div class="txt">
+														298,350원
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row type2">
+											<div class="box-between">
+												<span class="input-tit">최종추가금액</span>
+												<div class="txt txt-color-red">0원</div>
+											</div>
+										</div>
+										<ul class="lst dot txt-color-red">
+											<li>
+												최종 추가금액이 마이너스(-)인 경우 반납 시 환불 처리 됩니다.
+											</li>
+											<li>
+												위 결제 금액은 대략적인 금액이며 차량 반납 시 변동 될 수 있습니다.
+											</li>
+										</ul>
+									</div>
+								</section>
+								<section class="section-form form2">
+									<div class="form-header">
+										<h3 class="tit-size-mid box-align">
+											추가 운전자 등록
+											
+											<div class="tooltip-area">
+												<button type="button" class="icon question-grey tooltipOpenBtn" data-target="tooltipCont01" data-on="true" data-sort="fade" data-siblings="ture"><span class="txt-hide">알아보기 버튼</span></button>
+												<div class="tooltip-layer tooltipCont tooltipCont01" style="display: none;">
+													<div class="tooltip">
+														<button type="button" class="btn-tooltip-close tooltipClose">닫기</button>
+														<div class="tooltip-inner">
+															<p class="tooltip-tit">추가운전자 등록이란?</p>
+															<p>
+																롯데렌터카는 별도의 비용 없이 최대 2명까지 추가운전자 등록이 가능하며, 계약자를 포함한 총 3명의 운전자가 운전이 가능합니다.
+															<br>
+																장시간 운전을 해야 하는 경우 충분한 휴식을 취해주시고, 추가 운전자와 운전 부담을 나눠 안전한 운전 하시기 바랍니다.
+															<br>
+																단, 추가운전자 등록 후에는 홈페이지에서의 운전자 정보변경 및 삭제가 불가하며, 변경/삭제는 롯데렌터카 지점방문이 필요합니다.
+															</p>
+															<p class="txt-color-red">
+																대여 자격은 “대여일자“ 기준으로 적용이 되오니 등록 시 주의해주시기 바랍니다.<br>
+																예시 2019년 1월 31일 취득, 2020년 1월 30일 대여건에 대해서는 등록불가 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+
+										</h3>
+									</div>
+									<div class="form-cont">
+										<div class="row-header">
+											<ul class="chk-list">
+												<li>
+													<div class="chk-icon-box type-square">
+														<input type="checkbox" id="chk01">
+														<label for="chk01">제 2운전자 동의</label>	
+													
+														
+														<div class="tooltip-area">
+															<button type="button" class="icon info05 tooltipOpenBtn" data-target="tooltipCont02" data-on="true" data-sort="fade" data-siblings="ture"><span class="txt-hide">알아보기 버튼</span></button>
+															<div class="tooltip-layer absolute-type tooltipCont tooltipCont02" style="display: none;">
+																<div class="tooltip">
+																	<button type="button" class="btn-tooltip-close tooltipClose">닫기</button>
+																	<div class="tooltip-inner">
+																		<p class="tooltip-tit">제2운전자란?</p>
+																		<p>
+																			임차인이 대여한 차량을 운전할 수 있는 권한을 부여받은 운전자로, 계약사항, 과태료, 사고발생으로 이한 비용 등에 대한 책임은 가지지 않습니다.<br>
+																			제2운전자 등록 시 임차인은 반드시 제2운전자의 개인정보제공에 대한 동의를 얻어야하며, 이에대한 모든 책임은 임차인에게 있으므로, 등록 시 주의하여 주시기 바랍니다.
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="chk-icon-box type-square">
+														<input type="checkbox" id="chk03">
+														<label for="chk03">현재 차량의 외관 상태는 대여시점과 동일합니다.</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="row-cont">
+											<div class="row type2">
+												<label for="" class="input-tit">이름</label>
+												<div class="input-cont">
+													<div class="inputT">						
+														<input type="text" id="" placeholder="이름을 입력하세요">
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<label for="" class="input-tit">성별</label>
+												<div class="input-cont">
+													<ul class="radio-area">
+														<li>
+															<div class="radio-icon-box">
+																<input type="radio" id="radio22" name="radio5" checked="">
+																<label for="radio22">남성</label>
+															</div>
+														</li>
+														<li>
+															<div class="radio-icon-box">
+																<input type="radio" id="radio23" name="radio5">
+																<label for="radio23">여성</label>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="row type2">
+												<label for="" class="input-tit">인증번호</label>
+												<div class="input-cont">
+													<div class="box-between">
+														<select class="selectbox" name="" id="" onchange="">
+															<option value="">선택</option>
+															<option value=""></option>
+															<option value=""></option>
+														</select>
+														<div class="inputT">						
+															<input type="text" id="" placeholder="01021133454">
+														</div>
+														<button type="button" class="btn btn-black">인증번호 받기</button>
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<label for="" class="input-tit">생년월일</label>
+												<div class="input-cont">
+													<div class="inputT">						
+														<input type="text" id="" placeholder="생년월일 8자리">
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<div class="driver-license-section">
+													<div class="selection">
+														<p for="" class="input-tit">면허구분 (국내기준)</p>
+														<!-- <div class="input-cont detail-radio ">
+															<ul class="radio-area detail-radio-box">
+																<li>
+																	<div class="radio-icon-box">
+																		<input type="radio" id="radio24" name="radio6" checked="" value="Y">
+																		<label for="radio24">국내면허증</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="radio-icon-box">
+																		<input type="radio" id="radio25" name="radio6" value="N">
+																		<label for="radio25">국제면허증</label>
+																	</div>
+																</li>
+															</ul>
+														</div> -->
+													</div>
+													<!-- 국내 면허증 -->
+													<div class="domestic-license detail-tab-wrap-Y active">
+														<div class="driver-license-cont">
+																						
+															<div class="type-box">
+																<span class="numbering">1</span>
+																<select name="" id="" class="selectbox">
+																	<option value="">선택</option>
+																	<option value="">1종대형</option>
+																	<option value="">1종보통</option>
+																	<option value="">2종보통</option>
+																	<option value="">2종오토</option>
+																</select>
+															</div>
+															
+															<div class="number-box">
+																<span class="numbering">2</span>
+																<div class="box-between">
+																	<select name="" id="" class="selectbox">
+																		<option value="">선택</option>
+																		<option value="">선택 1</option>
+																		<option value="">선택 2</option>
+																	</select>
+																	<div class="inputT">
+																		<input type="text">
+																	</div>
+																	<div class="inputT">
+																		<input type="password">
+																	</div>										
+																	<div class="inputT">
+																		<input type="text">
+																	</div>
+																</div>
+															</div>	
+															<div class="name-box">
+																<span class="numbering">3</span>
+																<div class="inputT">
+																	<input type="text">
+																</div>
+															</div>						
+															<div class="expiration-date-box">
+																<span class="numbering">4</span>	
+																<div class="box-align">
+																	<span class="symbol">~</span>
+																	<div class="inputT">
+																		<input type="text" placeholder="YYYY.MM.DD">
+																	</div>
+																</div>
+															</div>
+															<div class="issue-date-box">
+																<span class="numbering">5</span>									
+																<div class="inputT">
+																	<input type="text" placeholder="YYYY.MM.DD">
+																</div>
+															</div>							
+														</div>
+														<div class="guide-cont">
+															<h5 class="tit">면허정보 입력항목 안내</h5>
+															<ul class="lst num">
+																<li>
+																	<span class="bul numbering">1</span> 면허종류 : 10인승 이상 차량은 1종 보통 이상 면허가 있어야 운전이 가능합니다.
+																</li>
+																<li>
+																	<span class="bul numbering">2</span> 면허번호 : 2014년 07월 02일 이후 발급 면허는 지역정보를 숫자코드로 입력합니다.
+																</li>
+																<li>
+																	<span class="bul numbering">3</span> 이름 : 본인의 실명으로 입력합니다.
+																</li>
+																<li>
+																	<span class="bul numbering">4</span> 만료일자 : 유효하지 않은 면허증은 대여가 불가하므로, 기간 내 갱신해주세요.
+																</li>
+																<li>
+																	<span class="bul numbering">5</span> 발급일자 : 신규발급 또는 갱신, 재발급힌 면허증에 기입된 발급일자를 입력합니다.
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- // 국내 면허증 -->
+												</div>
+											</div>
+											<div class="row type2">
+												<ul class="lst dot">
+													<li class="txt-color-red">제2운전자 등록시 임차인은 반드시 제2운전자의 개인정보제공에 대한 동의를 얻어야하며 이에 대한 모든 책임은 임차인에게 있으므로 
+													등록시 주의하여주시기 바랍니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>	
+									<div class="form-cont">
+										<div class="row-header">
+											<ul class="chk-list">
+												<li>
+													<div class="chk-icon-box type-square">
+														<input type="checkbox" id="chk04">
+														<label for="chk04">공동임차인 동의</label>	
+														
+														<div class="tooltip-area">
+															<button type="button" class="icon info05 tooltipOpenBtn" data-target="tooltipCont03" data-on="true" data-sort="fade" data-siblings="ture"><span class="txt-hide">알아보기 버튼</span></button>
+															<div class="tooltip-layer absolute-type tooltipCont tooltipCont03" style="display: none;">
+																<div class="tooltip">
+																	<button type="button" class="btn-tooltip-close tooltipClose">닫기</button>
+																	<div class="tooltip-inner">
+																		<p class="tooltip-tit">공동 임차인이란?</p>
+																		<p>
+																			계약사항 및 차량 이용중 발생된 과태료, 사고 발생 시 발생되는 비용 등에 대해서 임차인과 함께 연대하여 책임을 가집니다.<br>
+																			공동 임차인 등록 시 임차인은 반드시 공동 임차인의 개인정보제공에 대한 동의를 얻어야하며, 이에 대한 모든 책임은 임차인에게 있으므로 등록 시 주의하여 주시기 바랍니다.
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="chk-icon-box type-square">
+														<input type="checkbox" id="chk05">
+														<label for="chk05" class="input-tit">현재 차량의 외관 상태는 대여시점과 동일합니다.</label>
+													</div>
+												</li>
+											</ul>
+										</div>										
+										<div class="row-cont">
+											<div class="row type2">
+												<label for="" class="input-tit">이름</label>
+												<div class="input-cont">
+													<div class="inputT">						
+														<input type="text" id="" placeholder="이름을 입력하세요">
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<label for="" class="input-tit">성별</label>
+												<div class="input-cont">
+													<ul class="radio-area">
+														<li>
+															<div class="radio-icon-box">
+																<input type="radio" id="radio22" name="radio5" checked="">
+																<label for="radio22">남성</label>
+															</div>
+														</li>
+														<li>
+															<div class="radio-icon-box">
+																<input type="radio" id="radio23" name="radio5">
+																<label for="radio23">여성</label>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="row type2">
+												<label for="" class="input-tit">인증번호</label>
+												<div class="input-cont">
+													<div class="box-between">
+														<select class="selectbox" name="" id="" onchange="">
+															<option value="">선택</option>
+															<option value=""></option>
+															<option value=""></option>
+														</select>
+														<div class="inputT">						
+															<input type="text" id="" placeholder="01021133454">
+														</div>
+														<button type="button" class="btn btn-black">인증번호 받기</button>
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<label for="" class="input-tit">생년월일</label>
+												<div class="input-cont">
+													<div class="inputT">						
+														<input type="text" id="" placeholder="생년월일 8자리">
+													</div>
+												</div>
+											</div>
+											<div class="row type2">
+												<div class="driver-license-section">
+													<div class="selection">
+														<p for="" class="input-tit">면허구분 (국내기준)</p>
+													</div>
+													<!-- 국내 면허증 -->
+													<div class="domestic-license detail-tab-wrap-Y active">
+														<div class="driver-license-cont">
+																						
+															<div class="type-box">
+																<span class="numbering">1</span>
+																<select name="" id="" class="selectbox">
+																	<option value="">선택</option>
+																	<option value="">1종대형</option>
+																	<option value="">1종보통</option>
+																	<option value="">2종보통</option>
+																	<option value="">2종오토</option>
+																</select>
+															</div>
+															
+															<div class="number-box">
+																<span class="numbering">2</span>
+																<div class="box-between">
+																	<select name="" id="" class="selectbox">
+																		<option value="">선택</option>
+																		<option value="">선택 1</option>
+																		<option value="">선택 2</option>
+																	</select>
+																	<div class="inputT">
+																		<input type="text">
+																	</div>
+																	<div class="inputT">
+																		<input type="password">
+																	</div>										
+																	<div class="inputT">
+																		<input type="text">
+																	</div>
+																</div>
+															</div>	
+															<div class="name-box">
+																<span class="numbering">3</span>
+																<div class="inputT">
+																	<input type="text">
+																</div>
+															</div>						
+															<div class="expiration-date-box">
+																<span class="numbering">4</span>	
+																<div class="box-align">
+																	<span class="symbol">~</span>
+																	<div class="inputT">
+																		<input type="text" placeholder="YYYY.MM.DD">
+																	</div>
+																</div>
+															</div>
+															<div class="issue-date-box">
+																<span class="numbering">5</span>									
+																<div class="inputT">
+																	<input type="text" placeholder="YYYY.MM.DD">
+																</div>
+															</div>							
+														</div>
+														<div class="guide-cont">
+															<h5 class="tit">면허정보 입력항목 안내</h5>
+															<ul class="lst num">
+																<li>
+																	<span class="bul numbering">1</span> 면허종류 : 10인승 이상 차량은 1종 보통 이상 면허가 있어야 운전이 가능합니다.
+																</li>
+																<li>
+																	<span class="bul numbering">2</span> 면허번호 : 2014년 07월 02일 이후 발급 면허는 지역정보를 숫자코드로 입력합니다.
+																</li>
+																<li>
+																	<span class="bul numbering">3</span> 이름 : 본인의 실명으로 입력합니다.
+																</li>
+																<li>
+																	<span class="bul numbering">4</span> 만료일자 : 유효하지 않은 면허증은 대여가 불가하므로, 기간 내 갱신해주세요.
+																</li>
+																<li>
+																	<span class="bul numbering">5</span> 발급일자 : 신규발급 또는 갱신, 재발급힌 면허증에 기입된 발급일자를 입력합니다.
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- // 국내 면허증 -->
+												</div>
+											</div>
+											<div class="row type2">
+												<ul class="lst dot">
+													<li class="txt-color-red">제2운전자 등록시 임차인은 반드시 제2운전자의 개인정보제공에 대한 동의를 얻어야하며 이에 대한 모든 책임은 임차인에게 있으므로 
+													등록시 주의하여주시기 바랍니다.</li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="agree-area">
+											<ul class="chk-list">
+												<li>
+													<div class="chk-icon-box type-square">
+														<input type="checkbox" id="chk06">
+														<label for="chk06">최종 대여금액에 대해서 확인하였으며, 차량 반납 시 추가 결제금액을 결제한는 것에 동의합니다.</label>	
+													</div>
+												</li>
+												<li>
+													<div class="chk-icon-box type-square">
+														<input type="checkbox" id="chk07">
+														<label for="chk07">추가된 운전자에게 동의를 받았으며, 추가 운전자 등룩 후 변경 및 삭제가 불가하다는 것을 확인하였습니다.</label>	
+													</div>
+												</li>											
+											</ul>
+										</div>
+									</div>	
+								</section>
+								<section class="section-form form3">
+									<div class="form-header">
+										<h3 class="tit-size-mid">이용중 관리를 위한 이용자 동의 사항</h3>
+									</div>	
+									<!-- 20201217 : 마크업 변경(약관 공통화) -->	
+									<div class="form-cont agree-area agreeAccor">
+										<div class="row">
+											<div class="agree-body">
+												<div class="agree-body-header">
+													<div class="chk-icon-box">
+														<input type="checkbox" id="agreeTest02">	
+														<label for="agreeTest02">											
+															개인정보 · 이용 · 제공동의서(필수)
+														</label>										
+													</div>
+													<button type="button" class="btnToggle" data-target="toggleCont01" data-on="true" data-siblings="false">
+														자세히
+													</button>
+												</div>
+												<div class="agree-body-cont toggleCont toggleCont01">
+													내용
+												</div>
+											</div>						
+											
+										</div>
+									</div>
+									<!-- //20201217 : 마크업 변경(약관 공통화) -->
+								</section>
+							</fieldset>
+						</form>
+					</div>
+					<div class="btn-area">
+						<button type="button" class="btn btn-white">취소</button>
+
+						<button type="button" class="btn btn-red">확인</button>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!-- //마이페이지 - 단기렌터카 예약 -->
+	</main>
+
+
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+	<!--bg-dimmed 컴포넌트-->
+	<div class="bg-dimmed">딤(Dim)처리 배경</div>
+	<!--//bg-dimmed 컴포넌트-->
+
+
+	<!--floating_zone 컴포넌트-->
+	<aside class="floating_zone" style="display: none;">
+		플로팅 사이드 바영역
+	</aside>
+	<!--//floating_zone 컴포넌트-->
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+//경고성 토스트 메시지
+.toast-message {
+    @include Position( $position:fixed, $bottom: 0, $left:50%);
+    @include Bold;
+    @include Align-middle;
+    width: 1000px;
+    margin-left: -500px;
+    margin-bottom: 20px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 115%, 0);
+    transition: opacity .5s, visibility .5s, transform .5s;
+    border-radius: 15px;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+//견적결과 확인 토스트 메시지
+.toast-message-login {
+    background-color: #fff;
+    margin-left: auto;
+    box-sizing: border-box;
+    position: relative;
+    width: 250px;
+    border:1px solid #333;
+    border-radius: 15px;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+    b {
+        font-size: 13px;
+    }
+    &:before {
+        display: block;
+        content: '';
+        @include Background($sprite:'ico-arr-toast01', $position:center center);
+        width: 11px;
+        height: 7px;
+        @include Position($top: -7.5px, $left: 50%);
+        margin-left: -5.5px;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+//대여료 추가할인 토스트 메시지
+.toast-message-sale {
+    @include Position($top:-35px, $right:0);
+    background-color: #fff;
+    margin-left: auto;
+    box-sizing: border-box;
+    width: 260px;
+    border:1px solid #333;
+    border-radius: 15px;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 14px;
+    @include Bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+
+    &:before {
+        display: block;
+        content: '';
+        @include Background($sprite:'ico-arr-toast03', $position:center center);
+        width: 11px;
+        height: 8px;
+        @include Position($bottom: -8px, $left: 50%);
+        margin-left: -5.5px;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_mypage.js"></script><!-- 마이페이지 상단과 LNB 인크루드 -->
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+	<!--//header 컴포넌트-->
+
+	<!--container 컴포넌트-->
+	<main id="wrap" class="eng-wrap">
+		<div class="path-wrap">
+			<div class="cover">
+				<div class="inner">            
+					<ul>
+						<li>
+							<a href=""> 
+								<span class="icon home">HOME</span>
+							</a>
+						</li>
+						<li>
+							<a href="">My Page</a>
+						</li>
+						<li>
+							<a href="">My Reservation</a>
+						</li>
+					</ul>				
+				</div>
+			</div>
+		</div>
+
+		<div class="mypage-container">
+			<div class="inner-type2">
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">My Page</h2>
+				</section>
+				<!-- //페이지 타이틀 -->			
+
+				<div class="mypage-header"></div>
+				<!-- //.mypage-header -->
+
+				<div class="mypage-body">
+					<div class="mypage-lnb"></div>
+					<!-- //.mypage-lnb -->
+
+					<div class="mypage-body-cont">
+						<div class="mypage-body-cont-header">
+							<div class="tit-area">
+								<h4 class="tit">Driver’s License Info</h4>
+							</div>
+						</div>						
+						<p class="required-box">* fields are required.</p>			
+						<section class="section-form">
+							<div class="form-cont">							
+								<div class="row type2">
+									<label for="" class="input-tit">License Classification <span class="txt-color-red">*</span></label>
+									<!-- 수정 시 참고 : 셀렉트박스 value값에 따라 해당 영역이 노출되도록 하단 스크립트 처리되어있습니다. -->
+									<div class="input-cont">
+										<select name="" id="" class="selectbox licenseSelect">
+											<option value="korean">Korean</option>
+											<option value="international">international</option>
+										</select>
+									</div>								
+								</div>	
+								<div class="row type2">
+									<label for="" class="input-tit">License Type <span class="txt-color-red">*</span></label>
+									<div class="input-cont">
+										<select name="" id="" class="selectbox">
+											<!-- <option value="">Please select</option> -->
+											<option value="">Type one Large Vehicle</option>
+											<option value="">Type One General</option>
+											<option value="">Type Two General</option>
+											<option value="">Type Two Automatic </option>
+										</select>
+									</div>								
+								</div>	
+
+								<!-- koreanLicense -->
+								<div class="koreanLicense">
+									<div class="row type2">
+										<label for="" class="input-tit">License Number <span class="txt-color-red">*</span></label>
+										<div class="input-cont">
+											<div class="box-between">
+												<select name="" id="" class="selectbox">
+													<option value="">Select</option>
+													<option value="">선택 1</option>
+													<option value="">선택 2</option>
+												</select>
+												<div class="inputT">
+													<input type="text" title="">
+												</div>
+												<div class="inputT">
+													<input type="text" title="">
+												</div>
+												<div class="inputT">
+													<input type="text" title="">
+												</div>
+											</div>					
+										</div>								
+									</div>							
+									<div class="row type2">
+										<label for="" class="input-tit">Date for License <span class="txt-color-red">*</span></label>
+										<div class="input-cont">
+											<div class="box-between">
+												<div class="inputT">
+													<input type="text">
+												</div>
+												<span class="hypen">-</span>
+												<div class="inputT">
+													<input type="text" title="">
+												</div>
+												<span class="hypen">-</span>
+												<div class="inputT">
+													<input type="text" title="">
+												</div>
+											</div>		
+											<div class="txt-valid">
+												<ul class="lst dot">
+													<li>ex)yyyy-mm-dd The year of first license issuance is automatically</li>
+												</ul>					
+											</div>	
+										</div>						
+									</div>
+									<div class="row type2">
+										<label for="" class="input-tit">Aptitude Test <span class="txt-color-red">*</span></label>
+										<div class="input-cont">
+											<div class="box-between">
+												<div class="inputT">
+													<input type="text">
+												</div>
+												<span class="hypen">-</span>
+												<div class="inputT">
+													<input type="text" title="">
+												</div>
+												<span class="hypen">-</span>
+												<div class="inputT">
+													<input type="text" title="">
+												</div>
+											</div>		
+											<div class="txt-valid">
+												<ul class="lst dot">
+													<li>ex)yyyy-mm-dd Indicate expiration date</li>
+												</ul>					
+											</div>	
+										</div>						
+									</div>		
+								</div>
+								<!-- //koreanLicense -->
+
+								<!-- internationalLicense -->
+								<div class="internationalLicense" style="display:none;">
+									<div class="row type2">
+										<label for="" class="input-tit">License Number <span class="txt-color-red">*</span></label>
+										<div class="input-cont">
+											<div class="inputT">
+												<input type="text" id="">
+											</div>					
+										</div>								
+									</div>
+								</div>
+								<!-- //internationalLicense -->
+							</div>
+
+							
+							<section class="section-form">
+								<div class="form-header">
+									<h3 class="tit-size-mid">Personal Information</h3>
+								</div>
+								<div class="form-cont agree-area agreeAccor">
+									<div class="row">
+										<div class="agree-body">
+											<div class="agree-body-header">
+												<div class="chk-icon-box">
+													<input type="checkbox" id="agreeTest02">	
+													<label for="agreeTest02">											
+														Agreement for receiving penalty
+													</label>										
+												</div>
+												<button type="button" class="btnToggle" data-target="toggleCont01" data-on="true" data-siblings="false">
+													자세히
+												</button>
+											</div>
+											<div class="agree-body-cont toggleCont toggleCont01">
+												MMS will be sent to customers who agreed to receive service, for information of penalties occured while using vehicle.
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>							
+						</section>				
+
+						<div class="btn-area">
+							<button type="submit" class="btn btn-red">Submit</button>
+						</div>
+					</div>
+					<!-- //.mypage-body-cont -->
+				</div>	
+				<!-- //.mypage-body -->
+				
+			</div>
+		</div>
+
+	</main>
+	<!--//container 컴포넌트-->
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+	<script>
+		//운전면허정보 - 면허구분
+		if($('.eng-mypage-container .licenseSelect').length) {
+			$('.eng-mypage-container .licenseSelect').on('change', function(e){
+				// korean :  국내, international : 국제
+				var domesticElem = $(".koreanLicense");
+				var internationalElem = $(".internationalLicense");
+
+ 				if(e.target.value === 'korean'){
+					domesticElem.show();
+					internationalElem.hide();
+				}
+				else if(e.target.value === 'international'){
+					internationalElem.show();
+					domesticElem.hide();
+				}
+			});			
+		}
+	</script>
+
+</body>
+</html>
+

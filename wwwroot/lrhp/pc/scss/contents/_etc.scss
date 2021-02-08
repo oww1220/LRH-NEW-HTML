@@ -1,0 +1,25 @@
+.etc-container{
+	.round-banner{
+        @include roundBanner;
+	}
+	
+	&.faq-container{
+		.round-banner{
+			@include Background($sprite: 'bg-etcFaq', $path:'');
+		}
+	}
+	&.memberBenefits-container{
+		.tab-cont-row{
+			.multi-segment-list{
+				+ .guide-box{
+					//padding:20px 0;
+					border-top:1px solid $border-darkgrey;
+
+					.lst{margin:20px 0;}
+					+ .tbl-box{margin-top:40px;}
+				}
+			}
+			
+		}
+	}
+}

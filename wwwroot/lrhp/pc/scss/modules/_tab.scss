@@ -1,0 +1,112 @@
+.tab{
+	&-nav{
+		> ul {
+			width: 100%;
+			@include Align-box;
+			
+			> li {
+				button {
+					@include Align-middle;
+					height: 95px;
+					width: 100%;
+					border-bottom: 1px solid #e7e7e7;
+					font-size:24px;
+				}
+				&.active {
+					button {
+						color: #ff3f4c;
+						@include Bold;
+						border-bottom: .3rem solid #ff3f4c;
+					}
+				}
+			}
+			&.tab-col2 > li {
+				width: 50%;
+			}
+			&.tab-col3 > li {
+				width: 33.333%;
+			}
+			&.tab-col4 > li {
+				width: 25%;
+			}
+			&.tab-col5 > li {
+				width: 20%;
+			}
+		}
+		.tabs{
+			width: 100%;
+			display:flex;
+			border: 0 solid $border-darkgrey;
+            border-width: 0 1px 1px 0;
+			
+			> li {
+				flex:1; 
+
+				button {
+					position:relative;
+					@include Align-middle;
+					width: 100%;
+					height: 60px;
+					font-size:1rem;
+					border: 0 solid $border-darkgrey;
+            		border-width: 1px 0 0 1px;
+				}
+				&.active {					
+					button {
+						@include Bold;
+						color:$txt-red;
+						background-color:#fff9f9;
+						border-bottom:none;
+
+						&:after{
+							content:"";
+							display:block;
+							@include Position($top:-1px, $bottom:-1px, $right:-1px, $left:-1px);
+							border:1px solid $border-red;
+							z-index: 5;
+						}
+					}
+				}
+			}
+		}
+
+		.tab-inline-type{
+			position:relative;
+			width: 100%;
+			padding:0 20px;
+			@include Inline-align-middle;
+			justify-content: flex-start;
+			box-sizing: border-box;
+			
+			> li {
+				button {
+					position:relative;
+					@include Align-middle;
+					height: 44px;
+					width: 100%;
+					padding:0 20px;
+					border-bottom: 1px solid transparent;
+					box-sizing: border-box;
+					font-size:14px;
+					z-index: 5;
+				}
+				&.active {
+					button {
+						color: #ff3f4c;
+						@include Bold;
+						border-bottom: 4px solid #ff3f4c;
+					}
+				}
+			}
+
+			&:after{
+				@include Position($right:0, $bottom:0, $left:0);
+				content:"";
+				display:block;
+				height:1px;
+				background-color:$border-grey;
+			}
+		}
+	}
+}
+

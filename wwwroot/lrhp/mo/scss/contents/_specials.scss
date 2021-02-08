@@ -1,0 +1,130 @@
+.specials-wrap {
+    background-color: #EFF2F7;
+    padding-bottom: 4rem;
+
+    .section-list {
+        .specials-view {
+            @include Background($sprite:'bg-specials', $size:contain, $position:top center, $path:'bgs');
+            padding-bottom: 3.5rem;
+            h3 {
+                font-size: 2.2rem;
+                @include Bold;
+                text-align: center;
+                margin-bottom: 35px;
+            }
+            .specials-view-list {
+                .slick-slide {
+                    display: inline-block;
+                    width:13.5rem !important;
+                    vertical-align: top;
+                    text-align: left;
+                    padding-left: 1.3rem;
+                    > a{
+                        position: relative;
+                        border-radius: 1.5rem;
+                        @include Align-middle-column;
+                        background-color: #fff;
+                        overflow: hidden;
+                        padding-bottom: 2.6rem;
+                        .img {
+                            .flag-wrap {
+                                @include Position($top: 1.3rem, $left: 1.3rem);
+                            }
+                            .cover {
+                                position: relative;
+                                z-index: 1;
+                                margin-top: 2rem;
+                                img {
+                                    mix-blend-mode: multiply;
+                                    position: relative;
+                                    left: 3rem;
+                                    transform: scale(1.1);
+                                }
+                            }
+                            &:after {
+                                display: block;
+                                content: '';
+                                @include Position($top: 0, $left: 0);
+                                width: 100%;
+                                height: 9rem;
+                                background-color: #D9E6EA;
+                            }
+                        }
+                        .text {
+                            padding:0 1.7rem;
+                            margin-top: 1.7rem;
+                            width: 100%;
+                            box-sizing: border-box;
+                            > strong {
+                                display: block;
+                                font-size: 1.2rem;
+                                @include Bold;
+                                line-height: 1.3;
+                            }
+                            > span {
+                                display: block;
+                                font-size: 1rem;
+                                line-height: 1.3;
+                                margin-top:.4rem;
+                                @include Ellipsis($lines:2);
+                                min-height: 2.7rem;
+                            }
+                        }
+                        .price {
+                            margin-top: 1.7rem;
+                            padding:0 1.7rem;
+                            font-size: 1.2rem;
+                            @include Bold;
+                            line-height: 1.3;
+                            color:#F04040;
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+
+        }
+        .specials-list {
+            background-color: #fff;
+            padding: 1rem 1.7rem 2.6rem;
+            border-radius: 1.5rem;
+            .specials-list-top {
+                @include Align-middle;
+                > h3 {
+                    position: relative;
+                    font-size: 2.6rem;
+                    @include Bold;
+                    line-height: 1;
+                    left:3.6rem;
+                    > b {
+                        font-size: 2.6rem;
+                        line-height: 1;
+                    }
+                    > span {
+                        @include Normal;
+                        color:#999;
+                        font-size: 1rem;
+                        line-height: 1;
+                        display: block;
+                        margin-top: .4rem;
+                    }
+                }
+                &:after{
+                    position: relative;
+                    z-index: 1;
+                    display: block;
+                    content: '';
+                    width: 12rem;
+                    height: 7.5rem;
+                    margin-left:2rem;
+                    @include Background($sprite:'bg-shin2', $size:100% auto, $position:center center, $path:'bgs');
+                }
+            }
+        }
+        .specials-bn {
+            padding: 3rem 1.7rem 0;
+        }
+    }
+
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+    
+    
+    <!-- 위치 설정 레이어 -->
+	<div class="layer-wrap layer-popup layer-address active">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>위치 설정</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-address"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					
+					<div class="box-between srch-box">
+						<div class="inputT">
+							<input type="text" placeholder="검색어를 입력하세요.">
+						</div>
+						<button type="button" class="btn btn-white right-btn">검색</button>
+					</div>
+
+                    <!-- 네이버 맵 -->
+					<div id="mapDiv" class="address-result-box">
+						<div class="map">
+                            <img src="/lrhp/pc/images/@temp-address-map01.png" alt="더미">
+                        </div>							
+                        <ul class="address-result-list">
+                            <li>
+                                <div class="addr-area"> 
+                                    <dl class="addr-col01">
+                                        <div class="addr-item">
+                                            <dt>
+                                                <span class="addr-flag">도로명</span>
+                                            </dt>
+                                            <dd>
+                                                <button type="button">
+                                                    <span class="addr-txt">서울특별시 강동구 천호대로 1097 강동역</span>
+                                                </button>											
+                                            </dd>
+                                        </div>											
+                                        <div class="addr-item">
+                                            <dt>
+                                                <span class="addr-flag">지번</span>
+                                            </dt>
+                                            <dd>
+                                                <button type="button">
+                                                    <span class="addr-txt">서울특별시 강동구 천호동 447 강동역</span>
+                                                </button>											
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                    <div class="addr-col02">
+                                        <p>
+                                            우- 63236<br>
+                                            (690-121)
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="popup-cont-bot-btn">
+                            <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-address">선택한 위치로 설정</button>		
+                        </div>
+                    </div>
+                    <!-- //네이버 맵 -->
+
+                    <!-- 주소 찾기 -->
+                    <div id="addSearchDiv" class="address-result-box">
+                        <div class="address-result-top">
+                            <strong id="searchKeywordText"></strong> 검색 결과 입니다.
+                        </div>
+                        <ul id="list" class="address-result-list">
+                            <li>
+                                <div class="addr-area"> 
+                                    <dl class="addr-col01">
+                                        <div class="addr-item">
+                                            <dt>
+                                                <span class="addr-flag">도로명</span>
+                                            </dt>
+                                            <dd>
+                                                <button type="button">
+                                                    <span class="addr-txt">서울특별시 강동구 천호대로 1097 강동역</span>
+                                                </button>											
+                                            </dd>
+                                        </div>											
+                                        <div class="addr-item">
+                                            <dt>
+                                                <span class="addr-flag">지번</span>
+                                            </dt>
+                                            <dd>
+                                                <button type="button">
+                                                    <span class="addr-txt">서울특별시 강동구 천호동 447 강동역</span>
+                                                </button>											
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                    <div class="addr-col02">
+                                        <p>
+                                            우- 63236<br>
+                                            (690-121)
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="pagination-wrap paging">
+                            <button type="button" class="btn btn-paging-prev">이전 페이지로 이동</button>
+                            <div class="pagination-list">
+                                <strong title="현재 페이지">1</strong>/<em>8</em>
+                            </div>
+                            <button type="button" class="btn btn-paging-next">다음 페이지로 이동</button>
+                        </div>
+                        <div class="popup-cont-bot-btn">
+                            <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-address">선택한 위치로 설정</button>		
+                        </div>
+                    </div>
+                    <!-- //주소 찾기 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //위치 설정 레이어 -->	
+
+
+
+</body>
+</html>

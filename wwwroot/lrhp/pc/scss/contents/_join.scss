@@ -1,0 +1,278 @@
+//통합 회원 가입
+.join-container{
+    //본인인증
+    .section-top{
+        text-align:center;
+        margin-bottom:60px;
+
+        .step-list{
+            @include Inline-align-top;
+
+            li{
+                padding:0 67px;
+
+                &.active{
+                    .txt{
+                        @include Bold;
+                        color:#ed1c24;
+                    }
+                }
+                .icon{position:relative; z-index: 5;}
+                .txt{
+                    color:#8f9191;
+                    margin-top:15px;
+                }
+                & + li{
+                    position:relative;
+                    
+                    &:after{
+                        content:"";
+                        @include Position($top: 16px, $left: -50%);
+                        display:block;
+                        width:100%;
+                        height:1px; 
+                        background-color:#e7e7e7;
+                    }
+                }
+            }
+        }
+    }
+    .gray-noti-section{
+        text-align:center;
+        padding:60px;
+        margin-bottom:60px;
+        background-color:#f5f5f5;
+        @include roundBox;
+
+        .tit{
+            @include Bold;
+            display:block; 
+            font-size:26px;            
+
+            + p{margin-top:20px;}
+        }
+        .sub-txt{color:#54585a;}
+        .icon{margin-right:5px;}
+    }  
+    
+    .section-certi, .section-form-align-c{
+        //padding-top:20px;
+        padding:20px 80px 0;
+
+        .radio-icon-box{
+            @include Align-top;
+            margin-bottom:40px;
+
+            li{margin:0 20px;}
+        }
+        .choice-member{
+            margin-bottom:40px;
+            
+            li{
+                flex:1;
+            }
+        }
+
+        .lst{
+            li{font-size:14px;}
+        }
+
+        + .lst{
+            padding-top:20px;
+            border-top:1px solid #e7e7e7;
+        }
+    }
+
+    .section-form-align-c{
+        + .lst{
+            margin-top:40px;
+        }
+    }
+
+    
+
+    .section-certi{
+        //padding:0 80px;
+
+       .certi-list{
+            @include Align-top;
+            padding-bottom:40px;            
+           
+            li{
+                margin:0 50px;
+                text-align:center;
+
+                .circle{
+                    width:230px;
+                    height:230px;
+                    border:1px solid #f1f1f1;
+                    border-radius:230px;
+                }
+                .certi-tit{margin:40px 0; font-size:18px;}
+           }
+
+           + .lst{
+               padding-top:20px;
+               border-top:1px solid #e7e7e7;
+            }
+       } 
+
+       .choice-member, .area-rentcar-id{
+            max-width:542px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .area-rentcar-id{
+            margin-bottom:40px;
+
+            .form-row {
+                .input-tit{width:80px; flex-basis:80px;}
+                .input-cont{padding-right:10px;}
+            }
+            .inputT{max-width:100%;}
+        }
+
+       .lst{
+           li{font-size:14px;}
+       }
+
+       + .lst{
+            padding-top:20px;
+            border-top:1px solid #e7e7e7;
+        }
+    }
+    
+    
+    
+    .btn-area{
+        padding:60px 0;
+    }
+    //약관동의
+    // .agree-area{
+    //     padding-top:15px;
+
+    //     .agree-header{
+    //         @include Bold;
+    //         padding-bottom:30px;
+    //         margin-bottom:30px;
+    //         border-bottom:1px solid #e7e7e7;
+    //     }
+    //     .agree-cont, .agree-cont-type2{
+    //         padding:0 0 30px;
+    //         border-bottom:1px solid #e7e7e7;
+
+    //         .agree-tit{
+    //             @include Bold;
+    //             margin-bottom:30px;
+    //         }
+    //         .agree-lst{
+    //             li{
+    //                 @include Align-between-top;
+    //                 margin-bottom:20px;
+    //                 color:#54585a;
+
+    //                 &:last-of-type{
+    //                     margin-bottom:0;
+    //                 }
+    //             }
+    //         }
+    //         .agree-tbl{
+    //             table{
+    //                 width:100%;
+    //                 border-top:1px solid #d2d2d2;
+                    
+    //                 th, td{
+    //                     text-align:center;
+    //                     padding:30px;
+    //                     border-bottom:1px solid #e7e7e7;
+    //                     border-right:1px solid #e7e7e7;
+
+    //                     &:last-of-type{border-right:0;}
+    //                 }
+    //                 thead{
+    //                     th{background-color:#fafafa;}
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     .agree-cont-type2{
+    //         border-bottom:0;
+    //     }
+    //     .lst {
+    //         li{color:#54585a; font-size:14px;}
+    //         .txt-color-red{color:#ed1c24; margin-bottom:15px;}
+    //     }
+
+    //     .btn-link{@include Bold;}
+        
+    //     .row{
+    //         > .agree-cont ~ .agree-cont{
+    //             margin-top:30px;
+    //         }
+    //     }
+    // }
+
+    //정보입력
+    .section-form {
+        .form-cont {
+            > .row.type2 {
+                .email-cont, .addr-area{
+                    .btn{width:130px;}
+                }
+                .addr-area{
+                    max-width:70%;
+                    .inputT{margin-right:0; margin-left: 0;}
+                }
+            }
+        }
+    }
+}
+
+//영문
+.eng-wrap{
+    .join-container{
+        //create account
+        .membership-benefits{
+            @include Align-between;
+            padding-bottom:30px;
+            border-bottom:1px solid $border-grey;
+
+            li{
+                flex:1;
+                @include Align-middle-left;
+
+                + li{                    
+                    &:before{
+                        content:"";
+                        width:1px;
+                        height:120px;
+                        background-color:$border-grey;
+                    }
+                }
+
+                .item{
+                    width:100%;
+                    @include Align-middle-column;
+                    color:#8f9191;
+                    font-size:12px;
+                    text-align:center;
+                    
+                    .icon{
+                        height:70px;
+                        margin-bottom:20px;
+                    }
+                    strong{
+                        display:block;
+                        font-size:16px;
+                        color:#54585a;
+                    }
+                }
+            }
+        }
+        .agree-body-form{
+            margin-top:30px;
+            padding:30px 40px;
+            border-top:1px solid $border-grey;
+        }        
+    }
+}
