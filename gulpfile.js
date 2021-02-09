@@ -340,6 +340,83 @@ gulp.task('buildPC-lrhp', function () {
     });
 });
 
+
+gulp.task('sassMO-lrhp', function () {
+  return (
+    gulp
+      .src('wwwroot/lrhp/mo/scss/**/*.scss')
+      .pipe(plumber(plumberOption))
+      .pipe(
+        sourcemaps.init({
+          loadMaps: true,
+        })
+      )
+      .pipe(
+        sass({
+          outputStyle: 'expanded', //[nested, compact, expanded, compressed]
+          indentType: 'tab',
+          indentWidth: 1,
+        }).on('error', sass.logError)
+      )
+      .pipe(
+        autoprefixer({
+          browsers: autoprefixBrowsers,
+          cascade: true,
+        })
+      )
+      /*
+		.pipe(pxtorem({
+			propList: ['*', '!'],
+			rootValue: 16,
+			replace: false,
+			minPixelValue: 2,
+			mediaQuery: true
+		}))
+		*/
+      .pipe(sourcemaps.write('../maps'))
+      .pipe(gulp.dest('wwwroot/lrhp/mo/styles'))
+      .pipe(browserSync.reload({ stream: true }))
+  );
+});
+
+gulp.task('buildMO-lrhp', function () {
+  return (
+    gulp
+      .src('wwwroot/lrhp/mo/scss/**/*.scss')
+      .pipe(plumber(plumberOption))
+      .pipe(
+        sass({
+          outputStyle: 'compressed', //[nested, compact, expanded, compressed]
+        }).on('error', sass.logError)
+      )
+      .pipe(
+        autoprefixer({
+          browsers: autoprefixBrowsers,
+          cascade: true,
+        })
+      )
+      /*
+		.pipe(pxtorem({
+			propList: ['*', '!'],
+			rootValue: 16,
+			replace: false,
+			minPixelValue: 2,
+			mediaQuery: true
+		}))
+		.pipe(modifyCssUrls({
+			modify: function (url, filePath) {
+				return url.replace('../images/', '../../images/app/');
+			},
+		}))
+		*/
+      .pipe(gulp.dest('wwwroot/lrhp/mo/styles/dist'))
+      .pipe(browserSync.reload({ stream: true }))
+      .on('end', function () {
+        console.log('-------- appned css --------');
+      })
+  );
+});
+
 gulp.task('watch', function () {
   browserSync.init({
     //logLevel: "debug",
@@ -365,6 +442,10 @@ gulp.task('watch', function () {
     'wwwroot/lrhp/pc/scss/**/*.scss',
     gulp.series('sassPC-lrhp', 'buildPC-lrhp')
   );
+  gulp.watch(
+    'wwwroot/lrhp/mo/scss/**/*.scss',
+    gulp.series('sassMO-lrhp', 'buildMO-lrhp')
+  );
 
 
   /*제휴사*/
@@ -385,5 +466,5 @@ gulp.task('watch', function () {
 
 gulp.task(
   'default',
-  gulp.series('sassPC', 'buildPC', 'sassMO', 'buildMO', 'sassPC-co', 'buildPC-co', 'sassMO-co', 'buildMO-co', 'sassPC-lrhp', 'buildPC-lrhp', 'watch')
+  gulp.series('sassPC', 'buildPC', 'sassMO', 'buildMO', 'sassPC-co', 'buildPC-co', 'sassMO-co', 'buildMO-co', 'sassPC-lrhp', 'buildPC-lrhp', 'sassMO-lrhp', 'buildMO-lrhp', 'watch')
 );
