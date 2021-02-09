@@ -1,0 +1,430 @@
+.footerMenu-container {
+    
+    .round-banner{
+        @include roundBanner;
+    }
+
+    .tab-cont-inner{
+        padding:60px 0;
+    }
+    .statement, .img-box{
+        text-align:center;
+    }
+    .statement{
+        .tit{
+            @include Bold;
+            font-size:30px;
+
+            span{color:$txt-red;}
+
+            + .txt{
+                margin-top:30px;
+                color:#54585a;
+            }
+        }
+        ~ .img-box{
+            margin-top:60px;
+        }
+    }
+        
+    .tbl-box2 {
+        table {
+            width: 100%;
+            border-top: 1px solid $border-grey;
+            th, td {
+                border: 1px solid $border-grey;
+                border-right: 0 none;
+                padding: 30px 40px;
+                text-align: center;
+                vertical-align: middle;
+                &:first-child {border-left: 0 none;}
+            }
+            th{
+                @include Bold;
+                background-color:#fafafa;
+            }
+            td{
+                font-size:14px;
+                .btns {
+                    @include Vertical-inline;
+                    width: 110px;
+                    .btn-white {
+                        @include Regular;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .t-left {
+                text-align: left;
+                padding-left: 20px;
+            }
+        }
+    }
+    .about-lotte-tab{
+        .section-explain{
+            margin-top: 120px;
+        }
+        .tbl-box{
+            table{
+                td{
+                    padding-left:70px;
+                    padding-right:70px;
+                }
+            }
+        }
+    }
+    .pr-center-tab{
+        .promotion{
+            border-radius: 15px;
+            padding:80px 158px;
+            
+
+            > .tit{font-size:32px; text-align: center; margin-bottom:60px;}
+            
+            .segment-area{   
+                .segment-tit, .segment-video{
+                    display:flex;
+
+                    > p, .video-box{flex:1;}
+                }
+                .year, .video-list{
+                    flex:none;
+                    width: 210px;                        
+                    flex-basis: 210px;
+                    margin-right:20px;
+                }
+                .segment-tit{
+                    align-items: center;
+                    padding-bottom:30px;
+                    font-size:24px;
+                    box-sizing: border-box;
+
+                    strong{
+                        font-size:inherit;
+                        color:$txt-red;
+                    }
+                    
+
+                    .year{
+                        position:relative;
+                        @include Align-middle;
+                        height:50px;
+                        color:#fff;
+                        font-size:20px;
+                        text-align:center;
+
+                        &:after{
+                            content:"";
+                            @include Position($left:0, $right:0, $bottom:-10px);
+                            margin:0 auto;
+                            z-index: 5;
+                        }
+                    }
+                }
+                .segment-video{
+                    .video-list{
+                        li{
+                            a{
+                                position: relative;
+                                display:block;
+                                color:#fff;
+                                width:210px;
+                                height:132px;
+
+                                .cover{
+                                    @include Position($top:0, $right:0, $bottom:0, $left:0);
+                                    @include Align-middle;
+                                    width:100%;
+                                    height:100%;
+                                    font-size:14px;
+                                    text-align:center;
+                                    background-color:rgba(0,0,0,.2);
+                                    box-sizing:border-box;
+                                    z-index: 5;
+                                }
+                            }
+
+                            + li{margin-top:10px;}
+                        }
+                    }
+                    .video-box{
+                        min-height: 416px;
+
+                        iframe{border:0;}
+                    }
+                }
+
+                + .segment-area{margin-top:60px;}
+            }
+
+            &.bg-pink{
+                background-color:#fff9f9;
+                
+                .segment-area{    
+                    .year{
+                        background-color:#ff404b;
+
+                        &:after{
+                            @include arrow-bot($color:#ff404b);
+                        }
+                    }
+                    .video-list{
+                        .active{
+                            a{
+                                .cover{border:6px solid #ff404b;}
+                            }
+                        }
+                    }
+                        
+                }
+            }
+            &.bg-grey{
+                background-color:#f7f7f7;
+                
+                .segment-area{    
+                    .year{
+                        background-color:#54585a;
+
+                        &:after{
+                            @include arrow-bot($color:#54585a);
+                        }
+                    }
+                }
+
+                .video-list{
+                    .active{
+                        a{
+                            .cover{border:6px solid #54585a;}
+                        }
+                    }
+                }
+            }
+
+            + .promotion{margin-top:60px;}
+        }
+    }
+    .social-contribution-tab{
+        .tbl-type02{margin-top:60px;}
+        .frame-section{
+            margin-top:120px;
+            
+            .frame-header{                
+                @include roundBox;
+                padding:40px;
+                text-align:center;
+                background-color:#fafafa;
+
+                strong{
+                    @include Bold;
+                    font-size:20px;
+                    color:$txt-red;
+
+                    + p{margin-top:20px;}
+                }
+                p{font-size:24px;}
+            }
+            .frame-cont{
+                margin-top:40px;
+                
+                .segment{
+                    @include Align-middle;
+                    .img-box, .frame-cont-statement{flex:1;}
+                    .img-box{
+                        flex:none;
+                        width:540px;
+                        flex-basis: 540px;
+                        margin-right:60px;
+                    }
+                    .frame-cont-statement{
+                        .tit{
+                            @include Bold;
+                            font-size:20px;
+
+                            + .txt{margin-top:30px; color:#54585a;}
+                        }
+                    }
+
+                    + .segment{margin-top:40px;}
+                }
+            }
+        }
+        .statement{
+            strong{@include Bold; font-size:16px;}
+        }
+    }
+
+    //약관
+    .provision-section {
+        color: #54585a;
+        font-size: 14px;
+        .tit-h3 {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: #2f2f2f;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .tit-h4 {
+            @include Bold;
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+        .tit-h5 {
+            font-size: 15px;
+            padding-bottom: 20px;
+        }
+        .tbl-box2 + .tit-h5, .tbl-box2 + p {
+            margin-top: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .prov-list {
+            &-type {
+                margin-bottom: 20px;
+                li {
+                    padding: 2px 0;
+                    .prov-list-type2 {
+                        margin: 10px 0;
+                    }
+                    .tbl-box2 {
+                        margin: 10px 0 20px;
+                    }
+                }
+                .prov-list-type1 {
+                    margin: 20px 0 20px 18px;
+                    li {
+                        padding: 0;
+                    }
+                }
+            }
+            &-type1 {
+                margin-left: 18px;
+                margin-bottom: 20px;
+                li {
+                    text-indent: -15px;
+                    word-break: break-all;
+                    line-height: 1.5;
+                    //padding-top: 10px;
+                    p {
+                        text-indent: -2px;
+                    }
+                    strong {
+                        @include Bold;
+                        font-size: 14px;
+                    }
+                    &:before {
+                        content:'';
+                        display: inline-block;
+                        width:3px;
+                        height:3px;
+                        background: #929494;
+                        margin-right:10px;
+                        margin-top: 10px;
+                        border-radius:100%;
+                        vertical-align: middle;
+                        margin-top: -5px;
+                    }
+                    ins {
+                        font-size: 15px;
+                    }
+                    &.txt-red {
+                        &:before {
+                            background: #ed1c24;
+                        }
+                    }
+                    .prov-list-type2 {
+                        margin-left: 27px;
+                        li:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .prov-cont {
+            margin-bottom: 40px;
+        }
+        .txt-box {
+            margin-bottom: 20px;
+        }
+    }
+
+    //contact us
+    &.contactUs-container{
+        .round-banner{
+            @include Background($sprite: 'bg-footerMenuContactUs', $path:'', $position:center, $size:cover);
+            background-color:#90969E;
+
+            .infos{
+                .txt{
+                    + .lst{
+                        margin-top:20px;
+                        line-height: 1.2;
+                        
+                        li{font-size:14px;}
+                    }
+                }
+            }
+        }
+        .tbl-between{
+            @include Align-between-top;
+            width: calc(100% + 60px);
+
+            .tbl-between-col{
+                flex:1;
+                padding-right:60px;
+            }
+
+            + .tbl-between{margin-top:60px;}
+        }
+    }
+}
+
+//영문
+.eng-wrap{
+    .footerMenu-container {
+        //사이트맵
+        .site-map-section{
+            padding:20px 0;
+            
+            .site-map-list{
+                width: calc(100% + 40px);
+                @include Align-box;
+                text-align:center;
+
+                > li{
+                    width: calc(100% / 4);
+                    padding-right:40px;
+                    margin-top:80px;
+                    box-sizing: border-box;
+
+                    > a{
+                        @include Align-middle;
+                        @include roundBox;
+                        @include Bold;
+                        font-size:20px;
+                        padding:30px;
+                        color:#fff;
+                        background-color:#54585a;
+     
+                        + ul{
+                            padding:40px 0;
+                            li{
+                                + li{margin-top:20px;}
+                            }
+                        }
+                     }
+
+                     &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4){
+                         margin-top:0px;
+
+                         > a{background-color:#ff404b;}
+                    }
+                }
+                
+            }
+        }
+    }
+}

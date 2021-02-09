@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>LOTTE rental 롯데렌터카 ENG HTML 목록</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css">
+		/* CSS 리셋 설정 */
+		body,html,
+		header,footer,aside,nav,section,article,details,figure,figcaption,menu,command,
+		div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td, /* 블럭 요소 */
+		h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,
+		img,embed,object,canvas,audio,video,meter,progress,keygen, /* 인라인 블럭 요소 */
+		a,label,output,dialog, /* 인라인 요소 */
+		address,blockquote, /* 텍스트 블럭 요소 */
+		p,pre,/* 텍스트 인라인 블럭 요소 */
+		span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,ruby,rp,rt,code,kbd,samp, /* 텍스트 인라인 요소 */
+		acronym,big,frame,frameset,noframes,tt, /* HTML5에서 사용하지 않는 요소 */
+		map,option,hr,*{border:0;padding:0;margin:0;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
+		header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block} /* HTML5 블럭 요소 */
+		applet,basefont,center,dir,font,strike{display:none} /* XHTML4, HTML5 이후 사용하지 않는 요소 제거 */
+		q,blockquote{quotes:none;content:none}
+		li,menu{list-style:none}
+		table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed} /* 테이블 보더 변경 (겹칩지 않음 separate) */
+		caption{text-align:left}
+		th,td{text-align:left;vertical-align:middle;}
+		address{font-style:normal}
+		label{display:inline-block;*zoom:1}
+		a{text-decoration:none;display:inline-block;*zoom:1} /* 접근성 포커싱을 위해 a요소 속성 변경 */
+		a:hover{text-decoration:underline;color:#1979CA}
+		/* 공통 설정 */
+		html{}
+		html,body{} /* 가로스크롤 시 배경이 잘리는 버그를 없애기 위해 최소사이즈 지정 */
+		body{color:#333;font:normal 12px/1 "Nanum Gothic",Sans-Serif} /* 기본 폰트 지정 */
+		.blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
+		.hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden} /* .blind를 적용할 수 없는 곳에 사용 (예, caption) */
+		/* 내용 */
+		#wrap{padding:0 10px;margin:0 auto}
+		#header h1{padding:20px 0;text-align:center;font-size:30px;letter-spacing: -1px;}
+		#header h1 strong {color:#0058EF;}
+		#header .nav{border-width:3px 0;border-style:solid;border-color:#222;overflow:hidden}
+		#header .nav li{float:left;width:50%;}
+		#header .nav li.dev{float:left;width:100%;background:#222;color:#fff;height:50px;text-align:center;line-height:50px;display:block;font-size:16px;font-weight:bold;}
+		#header .nav li a{height:50px;color:#333;font-size:16px;font-weight:bold;text-align:center;line-height:50px;display:block}
+		#header .nav li.on a{color:#fff;background:#222}
+		.list_table{margin:40px 0;line-height:1.3}
+		.list_table tr.line td {border-top:2px solid #000}
+		.list_table th{padding:10px 0;border:1px solid #e5e5e5;text-align:center;vertical-align:top}
+		.list_table th[scope="col"]{background:#f7f7f7;}
+		.list_table th[scope="row"]{color:#4c4c4c;font-weight:normal;}
+		.list_table td{height:15px; padding:5px 5px;border:1px solid #e5e5e5;color:#4c4c4c;word-break:break-word;vertical-align:top}
+		.list_table td.t_left{padding-left:10px;text-align:left}
+		.list_table td img{vertical-align:middle}
+		.list_table td a{font-size:11px;}
+		.list_table td a span{height:24px;padding:0 8px;color:#fff;line-height:24px;display:block}
+		.list_table td span.date{background-color:#4f4f4f}
+		.list_table td span.jpg{background-color:#ff8a23}
+		.list_table td span.kwah{background-color:#6f9fd1}
+		.list_table td.line{background:#dddddd;height:1px;padding:0;}
+		.today {background:#fcead7;font-weight:bold}
+		.today .on {}
+		.t_center {text-align:center;}
+		.remark {float:right;}
+		.remark span {margin-left:10px;}
+		.remark span:before {content:"-"}
+		.txt_fin {color:#0058EF !important;}
+		.txt_ing {color:#EF3100 !important;}
+		.txt_add {color:#00BE19 !important;}
+
+		.check-list-box ul{margin-left:15px; margin-bottom:10px;}
+		.check-list-box ul li{
+			list-style-type: disc;
+    		list-style-position: inside;
+		}
+		
+	</style>
+	<script type="text/javascript" src="../../resources-pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			function toDayCaculate(){
+				var date = new Date();
+				var yy = date.getFullYear();
+				var mm = '' + ((date.getMonth()+1)<10)?'0'+(date.getMonth()+1):(date.getMonth()+1);
+				var dd = (date.getDate()<10)?'0'+date.getDate():date.getDate();
+
+				return (yy + '-' + mm + '-' + dd);
+			}
+		
+			$('.list_table tbody th').each(function(i){
+				$(this).text(i+1);
+			});
+
+			//alert( '.' +today)
+			$('td').each(function(){
+				var vars=$(this).text();
+				if(vars==toDayCaculate()){
+					$(this).parent('tr').addClass('today');
+					$(this).addClass('on')
+				}
+			});
+
+			$('.toDay').html(toDayCaculate());
+
+
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1><b style="color:#E60112">LOTTE rental</b> 롯데렌터카 <strong>MO</strong> ENG HTML LIST [<span class="toDay"></span>]</h1>
+		</div>
+	  <div style="border: 1px solid #aaa; background:#f0f0f0; padding: 10px 20px; line-height: 1.5;">
+			<h2> Mark-up 수정 이력 </h2>
+			<!--
+			<b>* v1.0</b> : 2019.09.19 (Design XD 기준)<br />
+			<b>* v2.0</b> : 2019.09.30 (Design XD 기준)<br />
+			<b>* v3.0</b> : 2019.10.01 (수정 날짜 기준)<br /><br />
+			-->
+			<h2> 수정 시, 아래 내용으로 주석 필 기입 </h2>
+			<p style="padding: 0 20px; font-family: Consolas, 'Noto Sans KR'; color:red;">
+				&lt;!-- 수정 20201018 : 설명 --&gt; <br />
+				<!-- 수정 v2.0 : (클래스 / 마크업) 수정 -->
+				(Mark-up Code)<br />
+				<!-- //수정 v2.0 : (클래스 / 마크업) 수정 -->
+				&lt;!-- //수정 20201018 : 설명 --&gt;
+			</p>
+		</div>
+
+		<!--
+		<div class="remark">
+			<span class="txt_fin">완료일 : 2020.12.15</span>
+			<span class="txt_ing">수정일 : 2020.12.15</span>
+		</div>
+		-->
+
+		<!--
+		<ul class="tab_menu">
+			<li><a href="#menu1">메인</a></li>
+			<li><a href="#menu2">예매</a></li>
+			<li><a href="#menu3">영화</a></li>
+			<li><a href="#menu4">영화관</a></li>
+			<li><a href="#menu5">스위트샵</a></li>
+		</ul>
+		-->
+
+		<table class="list_table" summary="롯데렌터카 MO ENG HTML LIST 입니다.">
+			<caption class="hidden">롯데렌터카 MO ENG HTML LIST</caption>
+			<colgroup>
+				<col style="width:8%"/>
+				<col style="width:12%"/>
+				<col style="width:12%"/>
+				<col style="width:12%"/>
+				<col style="width:18%"/>
+				<col style="width:70px"/>
+				<col style="width:90px"/>
+				<col style="width:110px"/>
+				<col style="width:auto"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">파일명</th>
+					<th scope="col">작업완료</th>
+					<th scope="col">작업완료일</th>
+					<th scope="col">수정일</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 가이드 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">가이드</td>
+					<td>버튼</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_button.html" target="_blank">guide_button.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>폼</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_form.html" target="_blank">guide_form.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>테이블</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_table.html" target="_blank">guide_table.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>텝</td>
+					<td></td>
+					<td></td>
+					<td><a href="guide/guide_tab.html" target="_blank">guide_tab.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+
+				<!-- 공통 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="6">공통</td>
+					<td>메인</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/main_short_accordion.html" target="_blank">main_short_accordion.html</a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 -4 - 단기실시간예약 메인</td>
+				</tr>
+				<tr> 
+					<td>레이아웃</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/layout.html" target="_blank">layout.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>해더, 푸터</td>
+				</tr>
+				<tr> 
+					<td>레이아웃-서브</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/layout_sub.html" target="_blank">layout_sub.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>서브해더, 하단바</td>
+				</tr>
+				<tr> 
+					<td>레이아웃-서브 상세</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/layout_sub2.html" target="_blank">layout_sub2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>서브해더, 하단바</td>
+				</tr>
+				<tr> 
+					<td>우측패널 - 로그인 전</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/panel_beforeLogin.html" target="_blank">panel_beforeLogin.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr> 
+					<td>우측패널 - 로그인 후</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/panel_afterLogin.html" target="_blank">panel_afterLogin.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<!-- Util ================================================================================ -->
+				<tr class="line">
+					<td rowspan="12">Util</td>
+					<td rowspan="3">register</td>
+					<td>Verification</td>
+					<td></td>
+					<td><a href="header/join_step1.html" target="_blank">join_step1.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2 <br>
+					약관</td>
+				</tr>
+				<tr>
+				  	<td>register now</td>
+					<td></td>
+					<td><a href="header/join_step2.html" target="_blank">join_step2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2</td>
+				</tr>
+				<tr>
+				  	<td>complete subscription</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2 <br>완료화면  - 디자인 및 퍼블 해당사항 없음</td>
+				</tr>
+				<tr>
+					<td>login</td>
+					<td></td>
+					<td></td>
+					<td><a href="header/login_normal.html" target="_blank">login_normal.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2</td>
+				</tr>
+				<tr>
+					<td rowspan="3">my reservaition</td>
+					<td>mambers</td>
+					<td></td>
+					<td><a href="header/login_normal.html" target="_blank">login_normal.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2</td>
+				</tr>
+				<tr>
+					<td rowspan="2">guest</td>
+					<td></td>
+					<td><a href="header/login_normal.html" target="_blank">login_normal.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2 <br> </td>
+				</tr>
+				<tr>
+					<td>members benefis (layer)</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">X</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2 <br> </td>
+				</tr>
+				<tr>
+					<td rowspan="2">find ID</td>
+					<td></td>
+					<td></td>
+					<td><a href="header/id_search.html" target="_blank">id_search.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3</td>
+				</tr>
+				<tr>
+					<td>Check ID</td>
+					<td></td>
+					<td><a href="header/id_search_result.html" target="_blank">id_search_result.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3</td>
+				</tr>
+				<tr>
+					<td>find passwrd</td>
+					<td></td>
+					<td></td>
+					<td><a href="header/password_search_join.html" target="_blank">password_search_join.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2</td>
+				</tr>
+				<tr>
+					<td>gest</td>
+					<td></td>
+					<td></td>
+					<td><a href="header/login_normal.html" target="_blank">login_normal.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2 - 로그인 화면과 동일</td>
+				</tr>
+				<tr>
+					<td>HOWTOUSE (layer popup)</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">x</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 2</td>
+				</tr>
+
+				<!-- reservation ================================================================================ -->
+				<tr class="line">
+					<td rowspan="16">reservation</td>
+					<td>mainland book a car</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/main_short_accordion.html" target="_blank">main_short_accordion.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3</td>
+				</tr>
+				<tr>
+				 	<td>jeju book a car</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/main_short_accordion.html" target="_blank">main_short_accordion.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3</td>
+				</tr>
+				<tr>
+				  	<td>overseas book a car</td>
+					<td></td>
+					<td></td>
+					<td><a href="common/main_short_accordion.html" target="_blank">main_short_accordion.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3</td>
+				</tr>
+				<tr>
+					<td rowspan="5">reservations (예약완료)</td>
+					<td>reservation_제주</td>
+				    <td>Information for Point use, Information of Insurance, Navigation Rental Service, Car-Seat Rental Information, Stroller Rental Information, Instax rental Service 레이어</td>
+					<td><a href="short/short_realTime_step1-1.html" target="_blank">short_realTime_step1-1.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>210119 -
+						Point 영역 인포 버튼 - Information for Point use 레이어
+						Collision Damage Waiver (CDW) 영역 인포 버튼 - Information of Insurance 레이어
+						Additional options 영역 > Navigation 인포 버튼 - Navigation Rental Service 레이어
+						Additional options 영역 > Car Seat 인포 버튼 - Car-Seat Rental Information 레이어
+						Additional options 영역 > Baby Carriage 인포 버튼 - Stroller Rental Information 레이어
+						Additional options 영역 > Instax 인포 버튼 - Instax rental Service 레이어</td>
+				</tr>
+				<tr>
+					<td>reservation_내륙</td>
+				    <td>Information for Point use, Information of Insurance, Navigation Rental Service, Baby Seat Service 레이어</td>
+					<td><a href="short/short_realTime_step1-2.html" target="_blank">short_realTime_step1-2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>210119 -
+						Point 영역 인포 버튼 - Information for Point use 레이어
+						Collision Damage Waiver (CDW) 영역 인포 버튼 - Information of Insurance 레이어
+						Additional options 영역 > Navigation 인포 버튼 - Navigation Rental Service 레이어
+						Additional options 영역 > Baby Seat 인포 버튼 - Baby Seat Service 레이어</td>
+				</tr>
+				<tr>
+					<td>reservation_약관</td>
+				    <td></td>
+					<td><a href="short/short_realTime_step2.html" target="_blank">short_realTime_step2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3 <br> 약관</td>
+				</tr>
+				<tr>
+					<td>reservation_결제</td>
+				    <td></td>
+					<td><a href="short/short_realTime_step3.html" target="_blank">short_realTime_step3.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3</td>
+				</tr>
+				<tr>
+					<td>reservation_완료</td>
+				    <td></td>
+					<td><a href="short/short_realTime_step4.html" target="_blank">short_realTime_step4.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 3</td>
+				</tr>
+				<tr>
+					<td rowspan="5">car rental</td>
+				  	<td>RENTALINFOMAION</td>
+					<td></td>
+					<td><a href="short/carrental_info.html" target="_blank">carrental_info.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>JEJU AUTO HOUSE</td>
+					<td></td>
+					<td><a href="short/carrental_auto.html" target="_blank">carrental_auto.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>additional service</td>
+					<td></td>
+					<td><a href="short/carrental_additional.html" target="_blank">carrental_additional.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+				    <td>chauffeured service</td>
+					<td></td>
+					<td><a href="short/carrental_chauffeured.html" target="_blank">carrental_chauffeured.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>USER GUIDE -> 명칭변경Driving Tips in Korea</td>
+					<td></td>
+					<td><a href="short/carrental_drivingTips.html" target="_blank">carrental_drivingTips.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">location</td>
+					<td>branches by region (20)</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">퍼블해당없음</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>퍼블작업 필요X-개발에서 국문기준으로 작업</td>
+				</tr>
+				<tr>
+					<td>branches offering chauffeur (7)</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">퍼블해당없음</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>퍼블작업 필요X-개발에서 국문기준으로 작업</td>
+				</tr>
+				<tr>
+				  	<td>overseas branches (2)</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">퍼블해당없음</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>퍼블작업 필요X-개발에서 국문기준으로 작업</td>
+				</tr>
+
+				<!-- mypage ================================================================================ -->
+				<tr class="line">
+					<td rowspan="14">mypage</td>
+					<td rowspan="6">my reservaiton</td>
+					<td>메인</td>
+					<td></td>
+					<td><a href="header/mypage_main.html" target="_blank">mypage_main.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						작업순위 - 1<br>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">list</td>
+					<td></td>
+					<td><a href="header/mypage_short_list.html" target="_blank">mypage_short_list.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>
+						작업순위 - 1<br>
+					</td>
+				</tr>
+				<tr>
+					<td>상세(예약취소 레이어)</td>
+					<td><a href="header/mypage_short_detail.html" target="_blank">mypage_short_detail.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1</td>
+				</tr>
+				<tr>
+				  	<td><del>modif</del></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">퍼블해당없음</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1<br>
+						기획서 및 디자인 없음 - 확인필 (PC/MO 동일)</td>
+				</tr>
+				<tr>
+				  	<td><del>payment</del></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">퍼블해당없음</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1<br>
+						기획서 및 디자인 없음 - 확인필 (PC/MO 동일)</td>
+				</tr>
+				<tr>
+					<td>cancel</td>
+					<td>cancel layer pp</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1</td>
+				</tr>
+				<tr>
+				  <td rowspan="3">modify personal infomaition</td>					
+					<td rowspan="2">modify</td>
+					<td>information</td>
+					<td><a href="header/mypage_member_modify2.html" target="_blank">mypage_member_modify2.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1</td>
+				</tr>
+				<tr>
+					  <td>수정</td>
+					  <td><a href="header/mypage_member_modify.html" target="_blank">mypage_member_modify.html</a></td>
+					  <td class="t_center txt_add">완료</td>
+					  <td class="t_center txt_fin"></td>
+					  <td class="t_center txt_ing"></td>
+					  <td>작업순위 - 1</td>
+				  </tr>
+				<tr>
+					<td>withdrawal of membership</td>
+					<td></td>
+					<td><a href="header/mypage_member_leave.html" target="_blank">mypage_member_leave.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1</td>
+				</tr>
+				<tr>
+				  	<td>my branch</td>
+				  	<td></td>
+					<td></td>
+					<td><a href="header/mypage_branch.html" target="_blank">mypage_branch.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1</td>
+				</tr>
+				<tr>
+				  	<td rowspan="2">drivers license info</td>
+					<td>국내</td>
+					<td></td>
+					<td><a href="header/mypage_license.html" target="_blank">mypage_license.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1 <br>약관</td>
+				</tr>		
+				<tr>
+				  <td>국제</td>
+				  <td></td>
+				  <td><a href="header/mypage_license2.html" target="_blank">mypage_license2.html</a></td>
+				  <td class="t_center txt_add">완료</td>
+				  <td class="t_center txt_fin"></td>
+				  <td class="t_center txt_ing"></td>
+				  <td>작업순위 - 1 <br>약관</td>
+			  </tr>		
+				<tr>
+				  	<td rowspan="2">check member point</td>
+					<td>point used</td>
+					<td></td>
+					<td><a href="header/mypage_point.html" target="_blank">mypage_point.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1</td>
+				</tr>
+				<tr>
+				  	<td>point exchange</td>
+					<td></td>
+					<td><a href="header/mypage_point.html" target="_blank">mypage_point.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>작업순위 - 1</td>
+				</tr>
+
+				<!-- footer ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">footerMenu</td>
+					<td>company</td>
+					<td>btn (goto lotte rental)</td>
+					<td></td>
+					<td><a href="footerMenu/footerMenu_about.html" target="_blank">footerMenu_about.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+				  	<td>user agreement</td>
+				  	<td></td>
+					<td></td>
+					<td><a href="footerMenu/footerTermsNew.html" target="_blank">footerTermsNew.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>약관</td>
+				</tr>				
+				<tr>
+				  	<td>contct us</td>
+					<td></td>
+					<td></td>
+					<td><a href="footerMenu/footerMenu_contactus.html" target="_blank">footerMenu_contactus.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+				  	<td><del>site map</del></td>
+				  	<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center ">삭제</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				
+				<!-- etc ================================================================================ -->
+				<tr class="line">
+			  	  <td rowspan="3">etc</td>
+			  	  <td>members benefits</td>
+					<td></td>
+					<td></td>
+					<td><a href="etc/etc_members_benefits.html" target="_blank">etc_members_benefits.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+				  	<td>with driver rental reservaiton</td>
+				  	<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td>링크</td>
+				</tr>
+				<tr>
+				  	<td>FAQ</td>
+					<td></td>
+					<td></td>
+					<td><a href="etc/etc-faq.html" target="_blank">etc-faq.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 약관 ================================================================================ -->
+				<tr class="line">
+			  	  <td rowspan="3">약관</td>
+			  	  <td>Register</td>
+					<td>User Agreement (requirement)</td>
+					<td></td>
+					<td><a href="provision/register-userAgree.html" target="_blank">register-userAgree.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+				  	<td></td>
+				  	<td>Privacy Policy (requirement)</td>
+					<td></td>
+					<td><a href="provision/register-Privacy.html" target="_blank">register-Privacy.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+				  	<td>Reservations</td>
+					<td>Terms of service</td>
+					<td></td>
+					<td><a href="provision/reservations-agree.html" target="_blank">reservations-agree.html</a></td>
+					<td class="t_center txt_add">완료</td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

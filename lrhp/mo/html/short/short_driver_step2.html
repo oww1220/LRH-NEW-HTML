@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/mo/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/mo/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/mo/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/mo/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/mo/styles/contents.css">
+
+<script src="/lrhp/mo/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/mo/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/mo/scripts/jquery/jquery.ui.touch-punch.min.js"></script>
+<script src="/lrhp/mo/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/mo/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_sub_header_type1.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/mo/scripts/MUI.js"></script>
+<script src="/lrhp/mo/scripts/common.js"></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+	</header>
+
+
+	<main id="wrap" >
+
+		<!--기사포함 렌터카-->
+		<div class="shor-wrap">
+
+			<!-- 상세 -->
+			<div class="section-detail">
+				<!-- 상단 현재위치 -->
+				<div class="detail-view-rest">
+					<ul class="list-type-col3">
+						<li><i class="icon progress02"></i><span>기본정보</span></li>
+						<li class="active"><i class="icon complete02"></i><span>상세정보</span></li>
+						<li><i class="icon progress02"></i><span>완료</span></li>
+					</ul>
+				</div>
+				<!-- //상단 현재위치 -->
+				
+				<div class="detail-layout">
+					
+					<div class="detail-layer-cont">
+						<div class="detail-layer-items">
+
+							<div class="layer-item item-step11">
+								<h3>
+									<strong>예약자 정보입력</strong>
+								</h3>
+								<div class="item-cont">
+									<div class="detail-layer-cont">
+										<div>
+											<strong>이름</strong>
+											<b>김롯데</b>
+										</div>
+										<div>
+											<strong>휴대전화</strong>
+											<b>010-1234-5678</b>
+										</div>
+									</div>
+									<div class="detail-layer-inputT inputT">
+										<ul class="detail-layer-inputT-email list-type-col2">
+											<li>
+												<input type="text" id="chrgemail_fs" value="" name="email" title="이메일 정보 입력" placeholder="이메일 정보 입력하세요.">
+											</li>
+											<li>
+												<!-- <input type="text" class="direct-input" id="chrgemail_ls" value="" title="이메일 종류 선택" placeholder="직접입력"> -->
+												<input type="text" id="chrgemail_ls" value="" title="이메일 종류 선택" placeholder="직접입력">
+											</li>
+										</ul>
+									</div>
+									<div class="detail-layer-inputT inputT">
+										<select class="selectbox" name="" id="email_list" onchange="$('#chrgemail_ls').val($('#email_list').val());">
+											<option value="">직접입력</option>
+											<option value="lotte.net">lotte.net</option>
+											<option value="naver.com">naver.com</option>
+										</select>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="layer-item item-step12">
+								<h3>
+									<strong>대여 정보</strong>
+								</h3>
+								<div class="item-cont">
+									<div class="detail-layer-cont">
+										<div>
+											<strong>차량</strong>
+											<b>그랜드 스타렉스 하이리무진</b>
+										</div>
+										<div>
+											<strong>기간</strong>
+											<b>08월 13일 (목) 10:00~<br/>08월 13일 (목) 19:00</b>
+										</div>
+									</div>
+									<div class="detail-layer-inputT-wrap">
+										<div class="detail-layer-inputT-tit">2020년 08월 13일 (목)</div>
+										<div class="detail-layer-inputT inputT">
+											<ul class="detail-layer-inputT-number list-type-col2">
+												<li class="inputT"><input type="text" id="" name="" title="출발지 선택" placeholder="'출발지' 입력은 필수 항목 입니다" value=""></li>
+												<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
+											</ul>
+										</div>
+										<div class="detail-layer-inputT inputT">
+											<ul class="detail-layer-inputT-number list-type-col2">
+												<li class="inputT"><input type="text" id="" name="" title="경유지 선택" placeholder="'경유지' 입력은 선택 항목 입니다" value=""></li>
+												<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
+											</ul>
+										</div>
+										<div class="detail-layer-inputT inputT">
+											<ul class="detail-layer-inputT-number list-type-col2">
+												<li class="inputT"><input type="text" id="" name="" title="경유지 선택" placeholder="'경유지' 입력은 선택 항목 입니다" value=""></li>
+												<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
+											</ul>
+										</div>
+										<div class="detail-layer-inputT inputT">
+											<ul class="detail-layer-inputT-number list-type-col2">
+												<li class="inputT"><input type="text" id="" name="" title="도착지 선택" placeholder="'도착지' 입력은 필수 항목 입니다" value=""></li>
+												<li class="inputT"><button type="button" class="btn-default black layer-infos-open" data-layer="type-map">지도</button></li>
+											</ul>
+										</div>
+										<div class="detail-iconBox iconBox">
+											<input type="checkbox" id="checkbox2-1" name="checkbox2-1">
+											<label for="checkbox2-1">출발지/도착지 동일</label>
+										</div>
+									</div>
+									<div class="detail-layer-inputT">
+										<div class="inputT"><input type="text" id="" name="" title="탑승인원 입력" placeholder="탑승 인원을 적어주세요." value="">명</div>
+									</div>
+									<div class="detail-layer-textarea textarea">
+										<textarea name="" id="" title="특이사항 입력" placeholder="특이사항을 입력하세요."></textarea>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="layer-item item-step13">
+								<h3>
+									<strong>약관동의</strong>
+								</h3>
+								<div class="item-cont">
+									<div class="chk-agree-list">
+										<ul class="chk-agree-cols">
+											<li>
+												<div class="chk-agree-top">
+													<div class="inputC inputC02">
+														<input type="checkbox" name="checkbox10" id="checkbox10-2">
+														<label for="checkbox10-2">
+															<span>자차손해면책제도/휴차보상료에 대한 동의</span>
+														</label>
+													</div> 
+													<a href="#none" class="layer-infos-open" data-layer="type-agree"><i class="icon next2"></i></a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 하단 버튼 -->
+				<div class="fixed-btnBottom">
+					<ul class="list-type-col2 detail-layer-list-btn">
+						<li>
+							<button type="button" class="btn btn-white">취소</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-red">다음</button>
+						</li>
+					</ul>
+				</div>
+				<!-- //하단 버튼 -->
+
+			</div>
+			<!--//상세-->
+
+		</div>
+		<!--//기사포함 렌터카-->
+
+	</main>
+
+	<footer class="footer">
+	</footer>
+
+	<!--layer-full 위치설정 지도 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-address type-map" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="type-map"><i class="icon layerclose">닫기 버튼</i></button>
+            <h4>
+                위치 설정
+            </h4>
+        </div>
+        <!--//상단-->
+        <!--컨텐츠-->
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="layer-infos">
+					<div class="layer-address-top">
+						<div class="inputT">
+							<input type="text" id="" name="" title="name" placeholder="예) 테헤란로 422" value="">
+						</div>
+						<button type="button" class="btn btn-default black">검색</button>
+					</div>
+					
+					<div class="layer-address-result">
+						<!-- 위치설정 - 지도 -->
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<div class="map-wrap">
+										<div class="detail-map-marker">
+											<div class="map-marker-box">
+												<i class="icon marker"></i>
+												<div class="map-marker-txt">강남지점</div>
+											</div>
+										</div>
+										<div class="cover">
+											<img src="/lrhp/mo/images/@temp-address-map01.png" alt="더미">
+										</div>
+									</div>
+									<a href="#">
+										<div class="flag-wrap">
+											<div class="flag address">도로명</div>
+										</div>
+										<div class="address-result-txt">
+											경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라
+											<b>우- 63236 (690-121)</b>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //위치설정 - 지도 -->
+
+						<!--검색결과 없을시-->
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<div class="none">검색결과가 없습니다.</div>
+								</li>
+							</ul>
+						</div>
+						<!--//검색결과 없을시-->
+						
+						<div class="layer-address-foot">
+							<button type="button" class="btn btn-white">선택한 위치로 설정</button>
+						</div>
+					</div>
+
+					<!-- 위치설정 - 주소 -->
+					<div class="layer-address-top">
+						<div class="inputT">
+							<input type="text" id="" name="" title="name" placeholder="강동역" value="">
+						</div>
+						<button type="button" class="btn btn-default black">검색</button>
+					</div>
+
+					<div class="layer-address-result">
+						<div class="address-result-top">
+							<strong><b>강동역</b> 검색 결과 입니다.</strong>
+						</div>
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<a href="#">
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">도로명</div>
+											</div>
+											<div class="address-result-txt">
+												<span>경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라</span>
+											</div>
+										</div>
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">지번</div>
+											</div>
+											<div class="address-result-txt">
+												경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라
+											</div>
+											<div class="address-result-txt">
+												<b>우- 63236 (690-121)</b>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">도로명</div>
+											</div>
+											<div class="address-result-txt">
+												<span>경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라</span>
+											</div>
+										</div>
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">지번</div>
+											</div>
+											<div class="address-result-txt">
+												경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라
+											</div>
+											<div class="address-result-txt">
+												<b>우- 63236 (690-121)</b>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">도로명</div>
+											</div>
+											<div class="address-result-txt">
+												<span>경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라</span>
+											</div>
+										</div>
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">지번</div>
+											</div>
+											<div class="address-result-txt">
+												경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라
+											</div>
+											<div class="address-result-txt">
+												<b>우- 63236 (690-121)</b>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">도로명</div>
+											</div>
+											<div class="address-result-txt">
+												<span>경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라</span>
+											</div>
+										</div>
+										<div class="address-result-txt-wrap">
+											<div class="flag-wrap">
+												<div class="flag address">지번</div>
+											</div>
+											<div class="address-result-txt">
+												경기도 화성시 동탄중앙로 189 동탄시범다은마을 월드메르디앙반도유보라
+											</div>
+											<div class="address-result-txt">
+												<b>우- 63236 (690-121)</b>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination-wrap">
+							<button type="button" class="btn btn-paging-prev">이전 페이지로 이동</button>
+							<div class="pagination-list">
+								<strong title="현재 페이지">1</strong>/<em>2</em> 
+							</div>
+							<button type="button" class="btn btn-paging-next">다음 페이지로 이동</button>
+						</div>
+	
+						<!--검색결과 없을시-->
+						<div class="address-result-list">
+							<ul>
+								<li>
+									<div class="none">검색결과가 없습니다.</div>
+								</li>
+							</ul>
+						</div>
+						<!--//검색결과 없을시-->
+					</div>
+					<!-- //위치설정 - 주소 -->
+
+				</div>
+            </div>
+        </div>
+        <!--//컨텐츠-->
+    </div>
+	<!--//layer-full 위치설정 지도 컴포넌트-->
+
+	<!--layer-full 자차손해면책제도/휴차보상료에 대한 동의 컴포넌트-->
+	<div class="layer-wrap layer-full layer-infos type-agree" data-type="full">
+		<!--상단-->
+        <div class="full-top">
+            <button type="button" class="btn btn-pannel layer-full-close" data-layer="type-agree"><i class="icon layerclose">닫기 버튼</i></button>
+            <h4>
+                자차손해면책제도/휴차보상료에 대한 동의
+            </h4>
+        </div>
+		<!--//상단-->
+		<!--컨텐츠-->
+        <div class="full-inner">
+		</div>
+        <!--//컨텐츠-->	
+	</div>
+	<!--//layer-full 자차손해면책제도/휴차보상료에 대한 동의 컴포넌트-->
+
+
+	<!--상단 타이틀(추후삭제)-->
+    <script>
+	$(function(){
+		$('.header-top.sub h1').text('기사포함 렌터카');
+
+	});
+	</script>
+	<!--//상단 타이틀(추후삭제)-->
+
+
+</body>
+</html>
+

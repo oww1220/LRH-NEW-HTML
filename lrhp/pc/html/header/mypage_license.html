@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_mypage.js"></script><!-- 마이페이지 상단과 LNB 인크루드 -->
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+	<!--//header 컴포넌트-->
+
+	<!--container 컴포넌트-->
+	<main id="wrap">
+		<div class="path-wrap">
+			<div class="cover">
+				<div class="inner">            
+					<ul>
+						<li>
+							<a href=""> 
+								<span class="icon home">HOME</span>
+							</a>
+						</li>
+						<li>
+							<a href="">운전면허정보</a>
+						</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+
+		<div class="mypage-container">
+			<div class="inner-type2">
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">마이페이지</h2>					
+					<p>롯데렌터카 회원을 위한 다양한 혜택이 준비되어 있습니다.</p>
+				</section>
+				<!-- //페이지 타이틀 -->			
+
+				<div class="mypage-header"></div>
+				<!-- //.mypage-header -->
+
+				<div class="mypage-body">
+					<div class="mypage-lnb"></div>
+					<!-- //.mypage-lnb -->
+
+					<div class="mypage-body-cont">
+						<div class="mypage-body-cont-header">
+							<div class="tit-area">
+								<h4 class="tit">운전면허정보</h4>
+							</div>
+						</div>
+						<div class="infos-section driver-license-section">							
+							<div class="selection">
+								<p class="input-tit">면허구분</p>
+								<div class="input-cont">
+									<!-- 수정 시 참고 : 라디오박스 name, value값에 따라 국내/국제 면허증 영역 노출되도록 스크립트 처리 -->
+									<ul class="radio-area">
+										<li>
+											<div class="radio-icon-box">
+												<input type="radio" id="radio01" name="driverLicense" value="domestic" checked>
+												<label for="radio01">국내면허증</label>
+											</div>
+										</li>
+										<li>
+											<div class="radio-icon-box">
+												<input type="radio" id="radio02" name="driverLicense" value="international" >
+												<label for="radio02">국제면허증</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 국내 면허증 -->
+							<div class="domestic-license domesticLicense">
+								<div class="driver-license-cont">
+																
+									<div class="type-box">
+										<span class="numbering">1</span>
+										<select name="" id="" class="selectbox">
+											<option value="">선택</option>
+											<option value="">1종대형</option>
+											<option value="">1종보통</option>
+											<option value="">2종보통</option>
+											<option value="">2종오토</option>
+										</select>
+									</div>
+									
+									<div class="number-box">
+										<span class="numbering">2</span>
+										<div class="box-between">
+											<select name="" id="" class="selectbox">
+												<option value="">선택</option>
+												<option value="">선택 1</option>
+												<option value="">선택 2</option>
+											</select>
+											<div class="inputT">
+												<input type="text">
+											</div>
+											<div class="inputT">
+												<input type="password">
+											</div>										
+											<div class="inputT">
+												<input type="text">
+											</div>
+										</div>
+									</div>		
+									<div class="name-box">
+										<span class="numbering">3</span>
+										<div class="inputT">
+											<input type="text">
+										</div>
+									</div>					
+									<div class="expiration-date-box">
+										<span class="numbering">4</span>	
+										<div class="box-align">
+											<span class="symbol">~</span>
+											<div class="inputT">
+												<input type="text" placeholder="YYYY.MM.DD">
+											</div>
+										</div>
+									</div>
+									<div class="issue-date-box">
+										<span class="numbering">5</span>									
+										<div class="inputT">
+											<input type="text" placeholder="YYYY.MM.DD">
+										</div>
+									</div>							
+								</div>
+								<div class="guide-cont">
+									<h5 class="tit">면허정보 입력항목 안내</h5>
+									<ul class="lst num">
+										<li>
+											<span class="bul numbering">1</span> 면허종류 : 10인승 이상 차량은 1종 보통 이상 면허가 있어야 운전이 가능합니다.
+										</li>
+										<li>
+											<span class="bul numbering">2</span> 면허번호 : 2014년 07월 02일 이후 발급 면허는 지역정보를 숫자코드로 입력합니다.
+										</li>
+										<li>
+											<span class="bul numbering">3</span> 이름 : 면허증에 기재된 이름을 입력합니다.
+										</li>
+										<li>
+											<span class="bul numbering">4</span> 만료일자 : 유효하지 않은 면허증은 대여가 불가하므로, 기간 내 갱신해주세요.
+										</li>
+										<li>
+											<span class="bul numbering">5</span> 발급일자 : 신규발급 또는 갱신, 재발급힌 면허증에 기입된 발급일자를 입력합니다.
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //국내 면허증 -->
+							<!-- 국제 면허증 -->
+							<div class="international-license internationalLicense" style="display:none;">
+								<div class="driver-license-cont">
+									<!-- <div class="country-box">
+										<span class="numbering">1</span>
+										<select name="" id="" class="selectbox">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</div>									 -->
+									<div class="number-box">
+										<span class="numbering">1</span>
+										<div class="inputT">
+											<input type="text" maxlength="12">
+										</div>
+									</div>							
+									<div class="type-box">
+										<span class="numbering">2</span>	
+										<ul>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk01">
+													<label for="chk01">A</label>											
+												</div>	
+											</li>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk02" checked>
+													<label for="chk02">B</label>											
+												</div>
+											</li>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk03">
+													<label for="chk03">C</label>											
+												</div>
+											</li>
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk04" checked>
+													<label for="chk04">D</label>											
+												</div>
+											</li>
+											<!-- 
+											<li>
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk05">
+													<label for="chk05">E</label>											
+												</div>
+											</li>
+											 -->
+										</ul>									
+									</div>				
+								</div>
+								<div class="guide-cont">
+									<h5 class="tit">면허정보 입력항목 안내</h5>
+									<ul class="lst num">
+										<!-- <li>
+											<span class="bul numbering">1</span> 발급국가 : 국제면허증을 발급한 국가를 선택합니다.
+										</li> -->
+										<li>
+											<span class="bul numbering">1</span> 면허번호 : 면허번호 12자리를 입력합니다.
+										</li>
+										<li>
+											<span class="bul numbering">2</span> 면허종류 : 10인승 이상 차량은 D 등급 면허가 있어야 운전이 가능합니다.
+										 </li>
+									</ul>
+								</div>
+							</div>
+							<!-- //국제 면허증 -->
+						</div>				
+						<section class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">운전면허정보 등록을 위한 이용자 동의 사항</h3>
+							</div>					
+
+							<!-- 20201218 : 마크업 변경(약관 공통화) -->
+							<div class="form-cont agree-area agreeAccor">
+								<div class="row">
+									<div class="agree-body">
+										<ul>
+											<li>
+												<div class="agree-body-header">
+													<div class="chk-icon-box">
+														<input type="checkbox" id="agreeTest03">	
+														<label for="agreeTest03">											
+															고유식별정보 수집에 대한 동의(필수)
+														</label>										
+													</div>
+													<button type="button" class="btnToggle" data-target="toggleCont01" data-on="true" data-siblings="false">
+														자세히
+													</button>
+												</div>
+												<div class="agree-body-cont toggleCont toggleCont01">
+													내용
+												</div>
+											</li>
+											<li>
+												<div class="agree-body-header">
+													<div class="chk-icon-box">
+														<input type="checkbox" id="agreeTest04">	
+														<label for="agreeTest04">											
+															고유식별정보 수집에 대한 동의(필수)
+
+														</label>										
+													</div>
+													<button type="button" class="btnToggle" data-target="toggleCont02" data-on="true" data-siblings="false">
+														자세히
+													</button>
+												</div>
+												<div class="agree-body-cont toggleCont toggleCont02">
+													내용
+												</div>
+											</li>													
+										</ul>
+									</div>						
+									
+								</div>
+							</div>
+							<!-- //20201218 : 마크업 변경(약관 공통화) -->
+						</section>				
+
+						<div class="btn-area">
+							<button type="submit" class="btn btn-red">등록</button>
+						</div>
+					</div>
+					<!-- //.mypage-body-cont -->
+				</div>	
+				<!-- //.mypage-body -->
+				
+			</div>
+		</div>
+
+	</main>
+	<!--//container 컴포넌트-->
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+
+	<script>
+		//운전면허정보 - 면허구분
+		if($('.driver-license-section .selection .radio-area').length) {
+			$('.selection .radio-area input[type=radio][name=driverLicense]').on('change', function(e){
+				// domestic :  국내, international : 국제
+				var domesticElem = $(".domesticLicense");
+				var internationalElem = $(".internationalLicense");
+
+ 				if(e.target.value === 'domestic'){
+					domesticElem.show();
+					internationalElem.hide();
+				}
+				else if(e.target.value === 'international'){
+					internationalElem.show();
+					domesticElem.hide();
+				}
+			});			
+		}
+	</script>
+
+</body>
+</html>
+

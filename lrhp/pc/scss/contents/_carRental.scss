@@ -1,0 +1,53 @@
+.carRental-container{
+	.round-banner{
+        @include roundBanner;
+	}
+	
+	&.drivingTips-container{
+		.visual-top{
+			position:relative;
+			padding-bottom:60px;
+			margin-bottom:120px;
+
+			.txt-box{
+				@include Position($right:0, $bottom:0, $left:0);
+				z-index:5;
+
+				.tit{
+					color:$txt-red;
+					font-size:32px;
+
+					+ .txt{
+						margin-top:20px;
+					}
+				}
+				.txt{
+					@include txtSetting;
+
+					strong{
+						display:block;
+						@include Bold;
+						font-size:20px;
+						margin-bottom:10px;
+					}
+				}
+			}
+		}
+		.statement-list{
+			@include Align-box;
+			padding:20px;
+			box-sizing: border-box;
+			
+			li{
+				width:50%;
+				padding:0 20px;
+				margin-bottom:80px;
+				box-sizing: border-box;
+
+				.img-box{
+					+ .cont{margin-top:50px;}
+				}
+			}
+		}
+	}	
+}

@@ -1,0 +1,4842 @@
+/*
+	fixedBottom : z-index: 41, 
+	풀팝업: z-index: 45, 
+	딤, bottomAlert(토스트메시지): z-index: 50, 
+	일반팝업, 슬라이드 팝업: z-index: 60, 
+	패널(drawer): z-index: 70, 
+*/
+body.fixed {
+	overflow: hidden;
+	position: fixed;
+	#wrap {
+		//pointer-events: none;
+	}
+}
+.bg-dimmed {
+	@include Hide_txt;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: {
+		color: #000;
+	}
+	opacity: 0.5;
+	z-index: 50;
+}
+.layer {
+	&-wrap {
+		line-height: 1;
+		z-index: 60;
+	}
+
+	//슬라이드 형태
+	&-slide {
+		opacity: 0;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		transform: translateY(120%);
+		transition: transform .4s;
+		box-sizing: border-box;
+		&.active {
+			transform: translateY(0);
+		}
+		.slide-top {
+			background-color: #fff;
+			border-radius: 2rem 2rem 0 0;
+			position: relative;
+			padding:2.3rem 0 0 0;
+			.layer-slide-close {
+				// cursor: pointer;
+				// width: 100%;
+				// height: 2.3rem;
+				// text-align:center;
+				// @include Hide_txt;
+				// &:after {
+				// 	content: '';
+				// 	@include Vertical-inline;
+				// 	width: 4.1rem;
+				// 	height: .3rem;
+				// 	background-color: #EBEBEB;
+				// 	border-radius: .5rem;
+				// }
+				@include Position( $top: 50%, $right: 1.7rem);
+				margin-top: -1.3rem;
+			}
+			h4 {
+				font-size: 1.5rem;
+				margin: 0 1.7rem;
+				padding: .5rem 0 1.7rem;
+				border-bottom: 1px solid #EBEBEB;
+				@include Bold;
+				@include Align-middle-left;
+				> span {
+					@include Normal;
+					margin-left:.6rem;
+					color:#999;
+					font-size:1.2rem;
+				}
+				> i {
+					margin-left:.6rem;
+				}
+			}
+		}
+		.slide-inner {
+			background-color: #fff;
+			overflow-y: visible;
+			overflow-x: hidden;
+			max-height:calc(100vh - 16rem);
+			-webkit-overflow-scrolling:touch;
+			.slide-cont {
+				padding: 0 1.7rem;
+			}
+			.slide-btn {
+			}
+		}
+
+		//필터 슬라이드
+		&.layer-filter {
+			.filter-reset-btn {
+				@include Position($top:2rem, $right:1.7rem);
+				i {margin-right: .4rem;}
+			}
+			.filter-col {
+				position: relative;
+				padding-top: 2rem;
+				h5 {
+					font-size: 1.4rem;
+					@include Bold;
+				}
+				.price-all {
+					border-bottom:1px solid #2B2B2B;
+					@include Position($top: 2rem, $right: 0);
+				}
+				.chk-list {
+					margin-top: .4rem;
+					li {
+						input {
+							display: none;
+						}
+						label {
+							position: relative;
+							height: 4.1rem;
+							display: block;
+							@include Align-middle;
+							box-sizing: border-box;
+							font-size: 1.2rem;
+							border-radius: 1rem;
+							border: .15rem solid #EBEBEB;
+							padding: 0 1.2rem;
+							transition: all .4s;
+						}
+						input:checked + label {
+							border-color: #2B2B2B;
+							@include Bold;
+							&:after {
+								display: block;
+								content: '';
+								@include Position( $top: .7rem, $right: .7rem);
+								z-index: 1;
+								width: .5rem;
+								height: .5rem;
+								margin-left: -.2rem;
+								border-radius: 100%;
+								background-color: #F04040;
+							}
+						}
+					}
+				}
+				.price_box_case {
+					position: relative;
+					&:before {
+						display: block;
+						content: '';
+						width: 100%;
+						width: calc(100% - 1.3rem);;
+						height: .5rem;
+						background-color: #EBEBEB;
+						border-radius: .5rem;
+						margin: 1.7rem 0;
+					}
+					.price-box {
+						@include Position($top: 0, $right: 0);
+						width: 100%;
+						.ui-widget.ui-widget-content {
+							background-color: #EBEBEB;
+							border:0;
+							height: .5rem;
+							margin: 0 2.5rem 0 .8rem;
+						}
+						.ui-slider .ui-slider-range {
+							background-color: #f04040;
+							height: .5rem;
+						}
+						.ui-slider-horizontal .ui-slider-handle {
+							width: 1.7rem;
+							height: 1.7rem;
+							background-color: #fff;
+							border-radius: 100%;
+							top: -.7rem;
+							border: 0;
+							box-shadow: 0 1px 5px rgba(96,97,112,0.3);
+						}
+					}
+					.price-txt {
+						@include Align-between;
+						span {
+							position: relative;
+							&:first-child {
+								margin-right: 1rem;
+							}
+							&:after {
+								display: block;
+								content: '';
+								@include Position($top:-2.05rem, $left:50%);
+								background-color: #fff;
+								width: .2rem;
+								height: .2rem;
+								border-radius: 100%;
+								margin-left: -.1rem;
+							}
+							&.active {
+								@include Bold;
+							}
+						}
+					}
+				}
+
+			}
+			.slide-btn {
+				padding: 2.6rem 1.7rem;
+			}
+		}
+
+		//본인인증 슬라이드
+		&.layer-certification {
+			.slide-cont {
+				padding: 0;
+			}
+			.certification-col-top {
+				padding: 0 1.7rem;
+				padding-top: 1.7rem;
+				.guide {
+					line-height: 1.3;
+					font-size: 1.1rem;
+				}
+				.number {
+					margin-top:2.6rem;
+					background-color: #EFF2F7;
+					border-radius: 1.5rem;
+					height: 2.8rem;
+					@include Align-middle;
+					span {
+						font-size: 1.1rem;
+					}
+					b {
+						font-size: 1.1rem;
+						@include Bold;
+						margin-left:1.1rem;
+					}
+				}
+			}
+			.certification-col-form {
+				margin: 1rem 0 3rem;
+				.chk-agree-list {
+					padding: 0 1.7rem;
+				}
+				.radio-box {
+					padding: 0 1.7rem;
+					label {
+						height: 10.2rem;
+						span {
+							display: block;
+							font-size: 1.1rem;
+							margin-top: 1.2rem;
+						}
+					}
+				}
+				.radio-box2 {
+					.radioIconBox {
+						> label {
+							@include Align-box;
+							flex-flow: row;
+							justify-content: left;
+							padding: 1.5rem;
+							margin: 0 1.7rem;
+							i {flex: none;margin-right: 1.5rem;}
+							strong {
+								@include Bold;
+								display: block;
+								line-height: 1.3;
+							}
+							span {
+								@include Normal;
+								display: block;
+								line-height: 1.3;
+								margin-top: .7rem;
+							}
+						}
+						> input:checked ~ .radio-depth {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		//차량선택 슬라이드
+		&.layer-carSelect {
+			h4{
+				border:0;
+				@include Align-middle-left;
+				> span {
+					margin-left:auto;
+				}
+			}
+			.filter-list{
+				margin:0 0 1.7rem;
+			}
+			.slide-cont {
+				padding:0;
+			}
+			.layer-carSelect-list {
+				padding:0 1.7rem;
+				> ul {
+					border-bottom:1px solid #EBEBEB;
+					> li {
+						border-top:1px solid #EBEBEB;
+						a{
+							height: 8rem;
+							@include Align-middle-left;
+							.img {
+								width:11rem;
+								flex:none;
+							}	
+							> strong {
+								word-break:break-all;
+								line-height: 1.3;
+								@include Bold;
+								margin:0 1rem;
+							}
+							> i {
+								margin-left: auto;
+								flex:none;
+								margin-right: 1rem;
+							}
+							.options {
+								> strong {
+									line-height: 1.3;
+									font-size: 1.2rem;
+									display: block;
+									@include Bold;
+								}
+								> span{
+									line-height: 1.3;
+									font-size: 1.2rem;
+									display: block;
+									color:#999;
+									margin-top: .5rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.layer-allTime{
+			.layer-time-col-cont{
+				padding:3.4rem 1.7rem;
+				.selectbox{
+					border-left:0;
+					border-right:0;
+					border-radius: 0;
+				}
+			}
+		}
+
+		//중고차 등록 - 슬라이드 팝업
+		&.layer-rental{
+			.layer-time-col-cont{
+				padding:3.4rem 1.7rem;
+				.rental-selectbox-wrap{
+					.selectbox-list{
+						border-top: 1px solid #d2d2d2;
+						overflow-y: visible;
+						overflow-x: hidden;
+						height:17.2rem;
+						.selectbox-list-col2{
+							height:4.3rem;
+							box-sizing: border-box;
+							border-bottom: 1px solid #d2d2d2;
+							background-color: #fff;
+							@include Align-between;
+							padding:0 1.3rem;
+							li{
+								border-bottom:0 none;
+								.inner{
+									margin-top:0;	
+								}
+							}
+							li:last-child{
+								text-align: right;
+							}
+						}
+						li{
+							&.active{
+								b{
+									@include Bold;
+									color:#2f2f2f;
+									i{
+										display:inline-flex;
+									}
+								}
+								em{
+									@include Bold;
+									color:#ed1c24;
+								}
+							}
+						}
+					}
+					b{
+						@include Regular;
+						color:#54585a;
+						i{
+							display:none;
+							margin-left:.9rem;
+						}
+					}
+					em{
+						@include Regular;
+						color:#54585a;
+					}
+				}
+				.selectbox{
+					border-left:0;
+					border-right:0;
+					border-radius: 0;
+				}
+			}
+		}
+
+		//승계렌터가-진행팝업
+		&.layer-suc-prog {
+			.slide-message {
+				color:#fff;
+				padding:1.7rem 1.7rem 2.3rem;
+			}
+			.slide-top { 
+				@include Align-between;
+				padding:4.3rem 1.7rem 0;
+				h4 {
+					border:0;
+					margin:0;
+					padding:0;
+					font-size:1.8rem;
+				}
+				.layer-slide-close {
+					// width: auto;
+					// height: 2.3rem;
+					// &:after {
+					// 	display: none;
+					// }
+					margin-top:.3rem;
+				}
+			}
+			.slide-cont {
+				margin:3.4rem 0;
+				.item-info {
+					.detail-cont {
+						> div { 
+							@include Align-middle-left;
+							strong {
+								@include Bold;
+								width:30%;
+							}
+							& + div {
+								padding-top:2.6rem;
+							}
+							i {
+								margin-left:auto;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//승계렌터가-진행팝업
+		&.layer-cus-premium {
+			.slide-top { 
+				@include Align-between;
+				padding:4.3rem 1.7rem 0;
+				h4 {
+					border:0;
+					margin:0;
+					padding:0;
+					font-size:1.8rem;
+				}
+				.layer-slide-close {
+					// width: auto;
+					// height: 2.3rem;
+					// &:after {
+					// 	display: none;
+					// }
+					margin-top: .6rem;
+				}
+			}
+			.slide-cont {
+				margin:4.5rem 0;
+				.item-cont {
+					strong {
+						font-size:1.2rem;
+						@include Bold;
+					}
+					p {
+						font-size:1.2rem;
+						margin-top:1.2rem;
+						line-height: 1.4;
+					}
+					& + .item-cont {
+						margin-top:2.6rem;
+					}
+				}
+			}
+		}
+
+		//신차장 메인 톡톡
+		&.layer-longTermTalk{
+			.slide-top {
+				padding-bottom:3.4rem;
+				.layer-slide-close{
+					margin-top: -3.8rem;
+				}
+				h4{
+					border-bottom:0 none;
+				}
+				.evaluation{
+					@include Align-middle-left;
+					margin: 0 1.7rem;
+					.name{
+						@include Regular;
+						font-size:1rem;
+						color:#8f9191;
+						margin-left:2.6rem;
+						span{
+							color:#e7e7e7;
+							font-size:.6rem;
+							padding:0 .5rem;
+						}
+					}
+				}
+			}
+			.slide-inner {
+				max-height:calc(100vh - 25rem);
+			}
+			.slide-cont {
+				padding:0 1.7rem 3.4rem;
+				.longTermTalk-list{
+					.longTermTalk-txt{
+						@include Regular;
+						line-height:1.6;
+						color:#54585a;
+						margin-bottom:2.6rem;
+					}
+					li{
+						margin-top:.9rem;
+					}
+					li:first-child{
+						margin-top:0;
+					}
+				}
+			}
+		}
+
+		//sns 공유하기
+		&.layer-sns{
+			.slide-top{
+				h4{
+					border-bottom:0 none;
+				}
+			}
+			.sns-col-cont{
+				.sns-list{
+					padding:0 0 5.1rem 0;
+					.inner{
+						@include Align-middle;
+						padding:4.3rem 0 0 0;
+						margin:0 .4rem 0;
+					}
+					.btn{
+						height:auto;
+						span{
+							@include Align-middle;
+							@include Regular;
+							padding:.9rem 0 0 0;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	//풀팝업 형태
+	&-full {
+		@include Position( $position:fixed, $top: 0, $left: 0);
+		z-index: 45;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		transform: translateY(120%);
+		transition: transform .4s;
+		box-sizing: border-box;
+		background-color: #fff;
+		-webkit-overflow-scrolling:touch;
+		&.fixed {
+			overflow: hidden;
+			pointer-events: none;
+		}
+		&.active {
+			transform: translateY(0);
+		}
+		.full-top {
+			background-color: #fff;
+			height: 6.8rem;
+			@include Align-middle;
+			@include Position( $position:sticky, $top: 0, $left: 0);
+        	z-index: 2;
+			.layer-full-close {
+				@include Position( $top: 50%, $right: 1.7rem);
+				margin-top: -1.3rem;
+			}
+			h4 {
+				font-size: 1.4rem;
+				@include Bold;
+				padding: 0 4.2rem 0 2rem;
+				word-break: keep-all;
+				line-height: 1.5;
+			}
+		}
+		.full-inner {
+			.full-cont {
+				padding: 0 1.7rem 1.7rem;
+			}
+			.full-cont-tab {
+				padding:1.7rem 0;
+			}
+			.full-btn {
+				padding: 1rem 1.7rem 2.6rem;
+			}
+		}
+		.fixed-btnBottom{
+			@include Position( $position:sticky, $bottom: 0, $left: 0);
+		}
+
+		//주소 풀팝업
+		&.layer-address {
+			.layer-address-top {
+				@include Align-middle-left;
+				> button {
+					margin-left: .7rem;
+					width: 7.5rem;
+					height: 4.1rem;
+					flex:none;
+					font-size: 1.2rem;
+				}
+			}
+			.layer-address-guide {
+				position: relative;
+				padding-left: 3.8rem;
+				margin-top: 1rem;
+				&:before {
+					display: block;
+					content: 'TIP.';
+					font-size: 1rem;
+					line-height: 1.3;
+					@include Bold;
+					@include Position($top:0, $left: 1.3rem)
+				}
+				> p {
+					font-size: 1rem;
+					line-height: 1.4;
+				}
+				> span {
+					font-size: 1rem;
+					color: #999;
+					line-height: 1.4;
+					display: block;
+					a {
+						font-size: 1rem;
+						color: #999;
+						line-height: 1.4;
+					}
+				}
+				
+			}
+			.layer-address-result {
+				margin-top: 2.2rem;
+				.address-result-top {
+					strong {
+						@include Bold;
+						b {
+							color: #F04040;
+						}
+					}
+				}
+				.address-result-list {
+					// border: 1px solid #EBEBEB;
+					// border-radius: 1rem;
+					border-bottom: 1px solid #EBEBEB;
+					margin-top: 1rem;
+					.map-wrap{
+						position: relative;
+						margin-bottom:1.2rem;
+						.cover{
+							width:100%;
+							height:23.5rem;
+						}
+					}
+					.detail-map-marker{
+                        @include Position();
+                        cursor: pointer;
+                        .map-marker-box{
+                            @include Align-between;
+                            border:.2rem solid #ff404b;
+                            background-color:#fff;
+                            border-radius: 1.7rem;
+                            padding:.4rem .9rem;
+                            .map-marker-txt{
+                                font-size:.9rem;
+                                @include Bold;
+                                padding-left:.9rem;
+                            }
+						}
+						&:before{
+                            display:block;
+                            content: "";
+                            @include Background($sprite:'ico-arrow-down8', $size:100%, $position:center center);
+                            width:1rem;
+                            height:.6rem;
+                            @include Hide_txt;
+                            flex: none;
+                            @include Position($bottom: -.4rem, $left: 30%);
+                        }
+                    }
+					> ul {
+						> li {
+							border-top: 1px solid #EBEBEB;
+							a {
+								display: block;
+								font-size: 1.1rem;
+								line-height: 1.4;
+								padding:1.2rem 1.2rem 1.2rem 4.7rem;
+								//padding:1.2rem 1.2rem 1.2rem 0;
+								position: relative;
+								.flag-wrap{
+									top: 1.3rem;
+									left:0;
+								}
+								.address-result-txt{
+									padding-top:.2rem;
+									b{
+										display:block;
+										padding-top:.9rem;
+										font-size:1rem;
+									}
+								}
+								.address-result-txt-wrap{
+									position: relative;
+									margin-left:-4.7rem;
+									.flag-wrap{
+										top:.3rem;
+									}
+									.address-result-txt{
+										padding-left:4.7rem;
+									}
+								}
+							}
+							.none {
+								@include Align-middle;
+								height: 11.5rem;
+							}
+						}
+					}
+				}
+			}
+			.layer-address-foot{
+				padding: 2.6rem 0;
+				.btn-white{
+					border-color: #d2d2d2;
+					color: #54585a;
+					width:50%;
+					margin:0 auto;
+					border-radius: 1rem;
+				}
+			}
+			.pagination-wrap {
+				margin-top:1.3rem;
+			}
+		}
+
+		//운전면허 정보안내 풀팝업
+		&.layer-license {
+			.layer-license-top {
+				position: relative;
+				max-width: 30rem;
+				margin: 0 auto;
+				i {
+					&.red {
+						@include Position($top: 1rem, $left: 1rem)
+					}
+					&.blue {
+						@include Position($top: 2.5rem, $left: 9rem)
+					}
+					&.green {
+						@include Position($top: 10rem, $left: 9rem)
+					}
+					&.mint {
+						@include Position($top: 13.5rem, $left: 9rem)
+					}
+				}
+			}
+			.layer-license-guide {
+				max-width: 30rem;
+				margin: 1.7rem auto 0;
+				> ul {
+					@include Align-box;
+					margin: 0 1.3rem;
+					> li {
+						flex-basis: 33.333%;
+						margin-bottom: 1.1rem;
+						@include Align-middle-left;
+						> span {
+							margin-left: .4rem;
+						}
+					}
+				}
+			}
+		}
+
+		//제휴카드 혜택안내 풀팝업
+		&.layer-cards {
+			.layer-cards-lists {
+				padding-bottom: 4.6rem;
+				position: relative;
+				.cards-lists {
+					padding-bottom: 2.6rem;
+					border-bottom: 1px solid #EBEBEB;
+				}
+				.swiper-slide {
+					@include Align-middle-column;
+					justify-content: space-between;
+					height: 41rem;
+					.img {
+						width: 18rem;
+						height:18rem;
+						margin: 0 auto 4rem;
+						@include Align-bottom-middle;
+						img {
+							width: auto;
+							max-width: 100%;
+							max-height: 100%;
+						}
+					}
+					.text {
+						padding: 0 2rem;
+						text-align: center;
+						> strong {
+							display: block;
+							font-size:2rem;
+							@include Bold;
+							line-height: 1.3;
+						}
+						> span {
+							display: block;
+							line-height: 1.3;
+							font-size: 1.1rem;
+							margin-top: 1.3rem;
+						}
+					}
+					.guide {
+						padding: 0 2rem;
+						margin-top: auto;
+						font-size:1rem;
+						line-height: 1.3;
+						color:#999;
+						text-align: center;
+						a {
+							font-size:1rem;
+							line-height: 1.3;
+							color:#999;
+							text-decoration: underline;
+						}
+					}
+
+				}
+				.swiper-pagination-wrap {
+					@include Position($bottom: 1rem, $left: 0);
+					width: 100%;
+					.swiper-pagination {
+						position: static;
+						@include Bold;
+						font-size:1rem;
+					}
+				}
+				.swiper-button-prev {
+					left:-1rem;
+					top: 13rem;
+				}
+				.swiper-button-next {
+					right:-1rem;
+					top: 13rem;
+				}
+				
+				
+			}
+		}
+
+		//후기작성및 상세 풀팝업
+		&.layer-review-write{
+			&-detail{
+				.layer-review-write-detail{
+					.detail-view-list{
+						padding-bottom:2.9rem;
+					}
+					.swiper-pagination-wrap{
+						@include Position($bottom:0, $left:0);
+						@include Align-middle;
+						width: 100%;
+						z-index: 1;
+						.swiper-pagination {
+							position: static;
+							background-color: rgba(255, 255, 255, .7);
+							height: 2rem;
+							padding: 0 1.4rem;
+							border-radius: 1rem;
+							@include Align-middle;
+							.swiper-pagination-bullet {
+								@include Inline-align-middle;
+								margin: 0 .4rem;
+								width: auto;
+								height: auto;
+								border-radius: none;
+								background-color: transparent;
+								border:0;
+								opacity: 1;
+								//transition: all .4s;
+								&:before {
+									display: inline-block;
+									content: '';
+									width: .5rem;
+									height: .5rem;
+									border-radius: 100%;
+									background-color: #ccc;
+								}
+								&:after {
+									display: inline-block;
+									content: '';
+									width: 0;
+									transition: width .6s;
+								}
+								&.swiper-pagination-bullet-active {
+									&:before {
+										background-color: transparent;
+										border: 0.3rem solid #2B2B2B;
+										width: .3rem;
+										height: .3rem;
+									}
+									
+									&:after {
+										width: 1.3rem;
+										height: .3rem;
+										background-color: #2B2B2B;
+										border-radius: 0 .5rem .5rem 0;
+										margin-left: -.1rem;
+									}
+								}
+							}
+						}
+					}
+					.unit-text{
+						margin-top:0;
+						padding-top:0;
+						.text-cont{
+							padding:0;
+							.text-cont-in{
+								.img {
+									position: relative; 
+									border-radius: 1rem;
+									overflow: hidden;
+									background-color: #fff;  
+								}
+								.text {
+									white-space: normal;
+									margin-top:1.3rem;
+									strong {
+										display:block;
+										line-height: 1.3;
+										word-break: keep-all;
+										padding-bottom: 1.6rem;
+									}
+									span {
+										display: block;
+										@include Bold;
+										padding-top: 1.7rem;
+										border-top: 1px solid #EBEBEB;
+									}
+								}
+								.thumb { 
+									margin-top: .9rem;
+									@include Align-between;
+									.info{
+										color: #999;
+										margin-left:1rem;
+									}
+									.days {color: #999;}
+								}
+								.star {
+									margin-top: .4rem;
+									font-size: 0;
+									i {
+										margin-top: 0;
+										margin-left: .4rem;
+									}
+									i:first-child{
+										margin-left:0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&-default{
+				.unit-text{
+					margin-top:0;
+					padding-top:0;
+					border-radius:0;
+					.text-cont{
+						padding:0 0 1.7rem;
+						.list-cont{
+							margin-bottom:1rem;
+							strong{
+								display: block;
+								@include Bold;
+								margin-bottom:1rem;
+							}
+							.unit-normal{
+								padding:1.8rem 0;
+								@include Align-middle;
+								margin-top:0;
+								.click-star {
+									i{
+										width:2.1rem;
+										height:2.1rem;
+										cursor: pointer;
+									}
+								}
+							}
+							.guide{
+								font-size: 1rem;
+								color: #999;
+								line-height: 1.3;
+							}
+							.review-text-write-wrap{
+								margin-top:1rem;
+								textarea{
+									height: 23.5rem;	
+								}
+							}
+							.img-info{
+								position: relative;
+								padding:1.5rem 0 0;
+								& > ul{
+									margin-left:0;
+									& > li{
+										position: relative;
+										margin-bottom:1rem;
+										& > span{
+											padding-left:.6rem;
+											font-size: 1rem;
+											color: #999;
+											line-height: 1.3;
+										}
+										& > b{
+											@include Bold;
+											font-size: 1rem;
+											line-height: 1.3;
+										}
+										&:after{
+											display:block;
+											content:"";
+											@include Background($sprite:'ico-circle', $size:100% auto, $position:center center);
+											width: 2px;
+											height: 2px;
+											@include Position($position:absolute, $top: 50%, $left: 0);
+											transform: translateY(-50%);
+											border-radius: 50%;
+										}
+									}
+								}
+							}
+							.inputF{
+								.img{
+									width:9rem;
+									height:9rem;
+									position: absolute;
+									top:0;
+									left:0;
+									z-index: 1;
+								}
+							}
+							.chk-agree-cols{
+								.chk-agree-top{
+									border-top: 1px solid #EBEBEB;
+									.chk-agree-txt{
+										padding:1.4rem 0;
+										@include Align-top-left;
+										line-height: 1.3;
+										@include Vertical-inline;
+										font-size: 1.2rem;
+										margin-left: .4rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				.layer-review-write-cont-box{
+					margin-top:1.7rem;
+					& > .inner{
+						margin-top:0;
+					}
+				}
+			}
+		}
+
+		//게시글작성 풀팝업
+		&.layer-write {
+			.layer-write-cont {
+				textarea {
+					height: 23.5rem;
+				}
+				.vs-item-btns {
+					margin-top: 1rem;
+				}
+				.vs-cont-box {
+					margin-top:1rem;
+					.inner {
+						margin-top:0;
+					}
+					&:after {
+						display:none;
+					}
+				}
+				.vs-item-enrollment{
+					h5 {
+						font-size:1.2rem;
+						@include Bold;
+						margin-top:1rem;
+					}
+				}
+			}
+
+		}
+
+		//정보성 공통 풀팝업
+		&.layer-infos{
+			.full-top{
+				// background-color:#2B2B2B;
+				// color:#fff;
+				// justify-content: left;
+				// padding-left:1.7rem;
+				border-bottom: .2rem solid #d2d2d2;
+				z-index: 3;
+				// .layer-full-close{
+				// 	color:#fff;
+				// }
+			}
+			.full-cont{
+				.layer-infos{
+					padding: 1.7rem 0;
+					.layer-infos-top{
+						strong{
+							display:block;
+							line-height: 1.3;
+							@include Bold;
+							margin-bottom: 1.5rem;
+							.txt-red{
+								color:#F04040;
+							}
+						}
+						b{
+							display:block;
+							line-height: 1.3;
+							font-size:1.4rem;
+							@include Bold;
+							margin-bottom: 1.5rem;
+						}
+					}
+					.layer-infos-guide{
+						margin-bottom: 1.5rem;
+						& > ul{
+							& > li{
+								// text-indent: -.8rem;
+								padding-left: 1.4rem;
+								margin-top:.6rem;
+								line-height: 1.3;
+								i{
+									margin-right:.6rem;
+								}
+								strong{
+									@include Bold;
+								}
+								& > ul{
+									& > li{
+										padding-left: .8rem;
+										margin-top:.6rem;
+										font-size:1.1rem;
+										& > strong{
+											font-size:1.1rem;
+										}
+									}
+								}
+							}
+							& > li:first-child{
+								margin-top:0;		
+							}
+						}
+						&-tip{
+							& > ul{
+								& > li{
+									text-indent: -2.4rem;
+									padding-left: 2.4rem;
+									font-size:1.1rem;
+								}
+								& > li +  li{
+									text-indent:0;
+								}
+							}
+						}
+					}
+					.layer-infos-txt-box{
+						@include Align-between;
+						padding: 1.2rem;
+						background-color: #F9FAFC;
+						border: 1px solid #EBEBEB;
+						border-radius: 1rem;
+						font-size: 1.1rem;
+						margin-bottom: 1.5rem;
+						&-noboder{
+							border:0 none;
+							background-color:#EFF2F7;
+							@include Align-middle-column;
+							align-items: flex-start;
+							& > strong{
+								@include Bold;
+								display:block;
+								margin-bottom: 1.2rem;
+							}
+							& > ul{
+								& > li{
+									line-height: 1.4;
+								}
+							}
+						}
+					}
+				}
+				.unit-normal{
+					margin-top:0;
+					.option-wrap{
+						margin-top:0;
+					}
+					.section-tit{
+						.t_comment {
+							padding: 0;
+							font-size: 1.1rem;
+							color: #2f2f2f;
+							line-height: 1.5;
+							margin-bottom: 2.2rem;
+							> .pannel09 {
+								width: 2.3rem;
+								height: 2.2rem;
+								margin-right: .5rem;
+							}
+						}
+					}
+					.section-detail{
+						.detail-cont-pw-change {
+							margin-top:0;              
+							.detail-inputT-tit {
+								@include Bold;
+								@include Align-middle-left;
+								margin-top: 2rem;
+							}
+							.detail-inputT-tit:first-of-type {
+								margin-top: 2.2rem;
+							}
+							.detail-inputT {
+								margin-top:1.7rem;
+								p {
+									margin-top:1.3rem;
+									font-size:1rem;
+									color:#ff404b;
+								}
+								& > input {
+									border-radius: .5rem;
+								}
+								.pw-safe {
+									display: flex;
+									margin-top: 1.7rem;
+									font-size: 1.1rem;
+									color: #2f2f2f;
+									align-items: center;
+									> strong {
+										margin-left:.9rem;
+										font-size: 1.1rem;
+										color: #ff404b;
+									}
+									> strong:before {
+										content: "";
+										display: inline-block;
+										width: 1px;
+										height: .9rem;
+										background: #d2d2d2;
+										margin-right: .9rem;
+									}
+									> span {
+										width: .7rem;
+										height: 2px;
+										background: #e7e7e7;
+										color: #e7e7e7;
+										vertical-align: middle;
+										margin: 0 2px;
+										&.on {
+										   background-color: #ff404b; 
+										}
+									}
+								}
+							}
+							.detail-info {
+								margin-top: 1.3rem;
+								font-size: 1.1rem;
+								color: #8f9191;
+								line-height: 1.7;
+								.no-list li {
+									text-indent: -1.2rem;
+									padding-left: 2rem;
+								}
+							}
+						}
+					}
+				}
+				.short-payment{
+					.detail-layer-inputT:first-child{
+						margin-top: 0;
+					}
+					.detail-layer-inputT{
+						margin-top:.9rem;
+						.detail-layer-inputT-number{
+							display:flex;
+							width:100%;
+							margin-left:0;
+							li{
+								position: relative;
+								&:first-child{
+									width:68%;
+									margin-right:.4rem;
+								}
+								&:last-child{
+									width:30%;
+								}
+								& > input{
+									border:1px solid #EBEBEB;
+									border-radius: 1rem;
+									background-color: #fff;
+									height: 4.1rem;
+									width:100%;
+									padding:0 1.2rem;
+								}
+								& > button{
+									width:100%;
+									height: 4.1rem;
+									border-radius: 1rem; 
+									background-color:#54585a;
+									border-color:#54585a;
+									color:#fff;
+									font-size:1.2rem;
+								}
+							}
+						}
+					}
+					.detail-layer-inputT-number02{
+						margin-left:0;
+						width:100%;
+						.inputT{
+							width:21.3%;
+							margin-left:1.4rem;
+						}
+						.inputT:first-child{
+							margin-left:0;
+						}
+						.inputT:after{
+							display: block;
+							content: "";
+							border-left: .6rem solid #2B2B2B;
+							position: absolute;
+							top: 50%;
+							left: -1rem;
+							height: 0.15rem;
+						}
+						.inputT:first-child:after{
+							display:none;
+						}
+					}
+					.detail-layer-inputT-number03{
+						margin-left:0;
+						width:100%;
+						.inputT{
+							width:47%;
+							margin-left:1.4rem;
+						}
+						.inputT:first-child{
+							margin-left:0;
+						}
+					}
+					.detail-layer-inputT-tit{
+						@include Bold;
+						margin-bottom:.9rem;
+						@include Align-between;
+						& > span{
+							font-size:1rem;
+							@include Regular;
+							b{
+								font-size:1rem;
+								color:#ff404b;
+							}
+						}
+					}
+					.detail-layer-chk-box{
+						.chk-agree-tit{
+							margin: 1.7rem 0;
+							background-color: #EFF2F7;
+							padding: 1.5rem 1.3rem;
+							border-radius: 1rem;
+							strong {
+								font-size: 1.4rem;
+								@include Bold;
+							}
+						}
+						.chk-agree-list{
+							margin-top:0;
+							padding: 0 1.3rem;
+							.chk-agree-cols{
+								& > li{
+									border-bottom:0;
+								}
+								& > li + li{
+									.chk-agree-top{
+										align-items: flex-start;
+									}
+									.inputC{
+										label{
+											padding-top:0;
+										}
+									}
+								}
+								.inputC02{
+									label {
+										line-height: 1;
+										&:before{
+											@include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+											width: 1.2rem;
+											height: .9rem;
+										}
+										span{
+											font-size:1.1rem;
+											color:#999;
+											@include Regular;
+										}
+									}
+									input:checked + label {
+										&:before{
+											@include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+										}
+										span{
+											color:#2f2f2f;
+										}
+									}
+								}
+							}
+						}
+					}
+					.payment-guide{
+						font-size: 1.1rem;
+						line-height: 1.3;
+						margin-top: 1.2rem;
+						text-indent: -.8rem;
+						padding-left:1rem;
+						& > li{
+							margin-top:.4rem;
+							color:#8f9191;
+							@include Regular;
+							& > i{
+								margin-right: .6rem;
+								margin-top: -.2rem;
+							}
+							&.red_txt{
+								color:#ed1c24;
+							}
+							& > button{
+								@include Inline-align-middle;
+								margin-left:.6rem;
+								font-size:1rem;
+								border-radius: .4rem;
+								height:1.7rem;
+								padding:0 .6rem;
+								border-color: #d2d2d2;
+							}
+						}
+						& > li:first-child{
+							margin-top:0;
+						}
+					}
+				}
+
+			}
+			&.type-fuel{
+				.list-type-col2{
+					margin-left:0;
+					width:100%;
+					& > li{
+						width:75%;
+						margin-top:0;
+						& > .icon_info_box_fuel{
+							@include Align-middle;
+							box-sizing: border-box;
+							border: .15rem solid #EBEBEB;
+							border-radius: 1rem;
+							position: relative;
+							padding: 1.1rem 1.5rem;
+							width:4.7rem;
+							margin-top:.4rem;
+							& > .fuelD{
+								width:1.6rem;
+							}
+						}
+					}
+					& > li:first-child{
+						width:25%;
+					}
+				}
+			}
+			//달력 풀팝업
+			&.layer-schedule {
+				overflow:hidden;
+				.full-cont{
+					padding:0;
+					position: relative;
+					.layer-infos{
+						padding:0;
+						position: relative;
+					}
+				}
+				.schedule-wrap{
+					.schedule-opt{
+						@include Align-between-top;
+						padding: 3.4rem 1.7rem 2.2rem;
+						margin:0;
+						background-color: #fafafa;
+						ul{
+							@include Align-between-top;
+						}
+						ul > li{
+							@include Align-middle-column;
+							align-items: flex-start;
+							position: relative;
+							width:auto;
+						}
+						ul > li:after{
+							display:block;
+							content:"";
+							@include Background($sprite:'ico-next08', $type:'png', $size:100% auto, $position:center center);
+							width: 1.6rem;
+							height: .7rem;
+							@include Position($top: 50%, $right: -40%);
+							transform: translateY(-100%);
+						}
+						ul > li:last-child:after{
+							display:none;
+						}
+						strong{
+							font-size:1.4rem;
+							@include Bold;
+						}
+						b{
+							font-size:1.4rem;
+							@include Regular;
+							margin-top:.9rem;
+						}
+						.detail-layer-selectbox{
+							margin-top:1.3rem;
+							.list-type-col2{
+								justify-content: center;
+								li:after{
+									display:none;
+								}
+								li:first-child{
+									.selectbox{
+										border-right: 0;
+										border-radius: .5rem 0 0 .5rem;
+									}
+								}
+								li:last-child{
+									.selectbox{
+										border-left: 0;
+										border-radius: 0 .5rem .5rem 0;
+									}
+								}
+							}
+						}
+						.selectbox{
+							//padding-right:3.4rem;
+							height:3rem;
+							@include Align-middle;
+							width:9.8rem;
+						}
+					}
+					.calendar-wrap{
+						overflow-y: auto;
+						height:34.2rem;
+						padding:1.6rem 0;
+						margin:0 1.7rem;
+						.calendar-tit{
+							font-size:1.4rem;
+							@include Bold;
+							padding:.6rem 0;
+							text-align:center;
+						}
+						.table{
+							border:none;
+							thead{
+								th{
+									margin:.9rem 0;
+									padding:.7rem;
+									text-align: center;
+									@include Bold;
+									font-size:1.1rem;
+									border:0 none;
+								}
+							}
+							tbody{
+								td{
+									padding:.9rem 0;
+									text-align: center;
+									border:0 none;
+									.btn{
+										padding:0;
+										height:2rem;
+										color:#54585a;
+										@include Regular;
+										font-size:1rem;
+									}
+									&.today{
+										.btn{
+											width:40%;
+											border-bottom: 1px solid #a02a3d;
+											padding-bottom:.2rem;
+											@include Bold;
+											color:#a02a3d;
+										}
+									}
+									&.start{
+										.btn{
+											width:100%;
+											// background: rgb(254,43,123);
+											// background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											background-color: #ff404b;
+											border-radius: 1.7rem 0 0 1.7rem;
+											@include Bold;
+											color:#fff;
+										}
+									}
+									&.during{
+										.btn{
+											width:100%;
+											//background: rgb(254,43,123);
+											background-color: #ff404b;
+											@include Bold;
+											color:#fff;   
+										}
+									}
+									&.end{
+										.btn{
+											width:100%;
+											// background: rgb(254,43,123);
+											// background: linear-gradient(90deg, rgba(254,43,123,1) 0%, rgba(255,77,52,1) 100%);
+											background-color: #ff404b;
+											border-radius: 0 1.7rem 1.7rem 0;
+											@include Bold;
+											color:#fff;   
+										}
+									}
+									&.disabled{
+										.btn{
+											color: #ddd;
+										}
+									}
+									&.start.end{
+										.btn{
+											width:50%;
+											background-color: #ff404b;
+											border-radius: 1.7rem;
+											@include Bold;
+											color:#fff;   
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.layer-schedule-foot{
+					@include Position($position:sticky, $bottom: 0, $left: 0, $right: 0);
+				}
+			}
+			.btn-group{
+				.btn{
+					margin:0;
+				}
+			}
+			.detail-layer-submit{
+				padding:4.5rem 1.7rem 0;
+				background-color: #fff;
+		
+				.detail-layer-list-btn{
+					@include Align-between;
+					& > li{
+						width:48%;
+						margin-left:1rem;
+					}
+					& > li:first-child{
+						margin-left:0;
+					}
+				}
+				.btn-white{
+					border-color:#d2d2d2;
+					color:#54585a;
+				}
+				.btn{
+					border-radius: .5rem;
+				}
+				&.submit-normal{
+					padding: 4.5rem 0 0;
+					.btn{
+						border-radius: 0;
+					}
+				}
+			}
+		}
+
+		//상세검색 팝업
+		&.layer-list-search {
+			.full-cont {
+				padding:0;
+				.layer-infos{
+					padding: 0 !important;
+					.layer-search-item{
+						padding:3.4rem 0;
+						border-bottom:.6rem solid #f5f5f5;
+						&:last-child {
+							border-bottom: 0;
+						}
+						h5 {
+							font-size: 1.4rem;
+							padding-bottom:1.3rem;
+							@include Bold;
+						}
+						.section-filter {
+							padding:0 1.7rem;
+						}
+						.section-filter-list{
+							.result {
+								.filter-col {
+									padding:0 0 2rem 0;
+									.chk-list {
+										margin-top:0;
+										li {
+											label {
+												height:8.6rem;
+												border-radius: .4rem;
+												color:#54585a;
+												@include Align-middle-column;
+												background-color: #fff;
+												font-size:1rem;
+												@include Regular;
+												span{
+													margin:1.7rem 0 0 0;
+												}
+											}
+											input:checked + label {
+												background-color:rgb(255,249,249);
+												background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+												color:#ff404b;
+												border:1px solid #ff404b;
+												.brand01{
+													@include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+												}
+												.brand02{
+													@include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+												}
+												.brand03{
+													@include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+												}
+												.brand04{
+													@include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+												}
+												.brand05{
+													@include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+												}
+												.brand06{
+													@include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+												}
+											}
+											input:checked + label:after{
+												display:none;
+											}
+										}
+									}
+								}
+							}
+							.result-type {
+								.filter-col {
+									padding:0;
+									.chk-list {
+										li {
+											label {
+												height:3.9rem;
+												font-size:1.1rem;
+											}
+										}
+									}
+								}
+							}
+							.detail-iconBox{
+								margin-left: -.6rem;
+								label {
+									border:0 none;
+									border-radius: 0;
+									@include Regular;
+									&:after {
+										width: 1.7rem;
+										height: 1.7rem;
+										margin-top: -.85rem;
+										left:.5rem;
+									}
+								}
+								input:checked + label {
+									@include Regular;
+								}
+								input[type='checkbox'] + label:after{
+									@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+								}
+								input[type='checkbox']:checked + label:after{
+									@include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+								}
+							}
+						}
+						.selection {
+							.selectbox {
+								&.selectbox-layer{
+									font-size:1.2rem;
+									color:#8f9191;
+									@include Regular;
+									@include Align-middle-left;
+								}
+							}
+						}
+						&.search-item-step1{
+							.result {
+								.filter-col {
+									padding-bottom:2.6rem;
+									.chk-list {
+										ul {
+											@include Inline-scrolling;
+											padding-bottom:.5rem;
+											li {
+												display: inline-flex;
+												width:6rem;
+												margin-left:1rem;
+												> div { 
+													width:100%;
+												}
+												&:first-child {
+													margin-left:0;
+												}
+												label {
+													@include Align-middle-column;
+													padding:0;
+													height:8.6rem;
+													border-radius: .4rem;
+													color:#54585a;
+													background-color: #fff;
+													font-size:1rem;
+													@include Regular;
+													border:1px solid #d2d2d2;
+													span{
+														margin:1.7rem 0 0 0;
+													}
+													i {
+														min-height:2.6rem;
+													}
+												}
+												input:checked + label {
+													background-color:rgb(255,249,249);
+													background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+													color:#ff404b;
+													border:1px solid #ff404b;
+													.brand01{
+														@include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+													}
+													.brand02{
+														@include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+													}
+													.brand03{
+														@include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+													}
+													.brand04{
+														@include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+													}
+													.brand05{
+														@include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+													}
+													.brand06{
+														@include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							.selection {
+								@include Align-between;
+								padding:0;
+								.selectbox {
+									width:60%;
+									border-right:0;
+									border-radius: .5rem 0 0 .5rem;
+								}
+								.detail-iconBox{
+									width:40%;
+									height:4.1rem;
+									border:1px solid #d2d2d2;
+									box-sizing: border-box;
+									border-left:0;
+									border-radius:0 .5rem .5rem 0;
+									position: relative;
+									@include Align-middle;
+									label {
+										border:0 none;
+										border-radius: 0;
+										font-size:1.1rem;
+										color:#8f9191;
+										@include Regular;
+										&::before {
+											content:'';
+											display: inline-block;
+											width: 1.2rem;
+											height: .9rem;
+											vertical-align: middle;
+											margin-right:.4rem;
+										}
+									}
+									input {
+										&::before {
+											content:'';
+											height:2rem;
+											display: inline-block;
+											border-left:1px solid #d2d2d2;
+											@include Position($top: 25%, $left: 0);
+										}
+									}
+									input:checked + label {
+										@include Regular;
+									}
+									input[type='checkbox'] + label:before{
+										@include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:center center);
+									}
+									input[type='checkbox']:checked + label:before{
+										@include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:center center);
+									}
+								}
+							}
+						}
+						&.search-item-step2{
+							.result-type {
+								.filter-col {
+									.chk-list {
+										li:last-child {
+											label {
+												padding:0;
+											}
+										}
+									}
+								}
+							}
+						}
+						&.search-item-step3{
+							.list-type-col2{
+								margin-top:.4rem;
+							}
+						}
+						&.search-item-step4{
+							
+						}
+						&.search-item-step5{
+							
+						}
+						&.search-item-step6{
+							.filter-col {
+								.slider_price_box{
+									li{
+										input{
+											width:2.8rem;
+										}
+									}
+								}
+							}
+						}
+						&.search-item-step7{
+							.filter-col {
+								.slider_price_box{
+									li{
+										input{
+											width:4rem;
+										}
+									}
+								}
+							}
+						}
+						&.search-item-step8{
+							.detail-layer-inputT{
+								margin-top:1.2rem;
+							}
+						}
+						.filter-col {
+							position: relative;
+							padding-top: 2rem;
+							.slider_price_box{
+								@include Position($top: 2rem, $right: 1.7rem);
+								@include Align-middle-left;
+								li{
+									@include Align-middle-left;
+									input{
+										font-size:1.1rem;
+										color:#ed1c24;
+										@include Regular;
+										width:1.3rem;
+									}
+									span {
+										font-size:1.1rem;
+										color:#ed1c24;
+										@include Regular;
+										vertical-align: middle;
+									}
+									em{
+										padding:0 .5rem;
+									}
+								}
+							}
+							.price-all {
+								border-bottom:1px solid #2B2B2B;
+								@include Position($top: 2rem, $right: 0);
+							}
+							.chk-list {
+								margin-top: .4rem;
+								li {
+									input {
+										display: none;
+									}
+									label {
+										position: relative;
+										height: 4.1rem;
+										display: block;
+										@include Align-middle;
+										box-sizing: border-box;
+										font-size: 1.2rem;
+										border-radius: 1rem;
+										border: .15rem solid #EBEBEB;
+										padding: 0 1.2rem;
+										transition: all .4s;
+									}
+									input:checked + label {
+										border-color: #2B2B2B;
+										@include Bold;
+										&:after {
+											display: block;
+											content: '';
+											@include Position( $top: .7rem, $right: .7rem);
+											z-index: 1;
+											width: .5rem;
+											height: .5rem;
+											margin-left: -.2rem;
+											border-radius: 100%;
+											background-color: #F04040;
+										}
+									}
+								}
+							}
+							.price_box_case {
+								position: relative;
+								top:.4rem;
+								&:before {
+									display: block;
+									content: '';
+									width: 100%;
+									width: calc(100% - 1.3rem);;
+									height: .2rem;
+									background-color: #EBEBEB;
+									border-radius: .5rem;
+									margin: 1.7rem 0;
+								}
+								.price-box {
+									@include Position($top: 0, $right: 0);
+									width: 100%;
+									.ui-widget.ui-widget-content {
+										background-color: #EBEBEB;
+										border:0;
+										height: .2rem;
+										margin: 0 .8rem 0 .8rem;
+									}
+									.ui-slider .ui-slider-range {
+										background-color: #f04040;
+										height: .2rem;
+									}
+									.ui-slider-horizontal .ui-slider-handle {
+										width: 2.2rem;
+										height: 2.2rem;
+										background-color: #fff;
+										border-radius: 100%;
+										border:1px solid #353535;
+										top: -1.1rem;
+										box-shadow: 0 1px 5px rgba(96,97,112,0.3);
+									}
+								}
+								.price-txt {
+									@include Align-between;
+									span {
+										position: relative;
+										&:first-child {
+											margin-right: 1rem;
+										}
+										&:after {
+											display: block;
+											content: '';
+											@include Position($top:-2.05rem, $left:50%);
+											background-color: #fff;
+											width: .2rem;
+											height: .2rem;
+											border-radius: 100%;
+											margin-left: -.1rem;
+										}
+										&.active {
+											@include Bold;
+										}
+									}
+								}
+							}
+			
+						}
+						.slide-btn {
+							padding: 2.6rem 1.7rem;
+						}
+					}
+				}
+			}
+		}
+
+		//승계렌터카등록 - 차량상세 팝업
+		&.layer-car-detail {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.detail-layer-items {
+					border-top: 1px solid #f1f1f1;
+					h5 {
+						padding: 2.3rem 1.7rem;
+						margin: 0;
+						font-size: 1.4rem;
+						border-bottom: 1px solid #f1f1f1;
+						position: relative;
+						@include Bold;
+						button {
+							@include Position($top: 50%, $right: 1.7rem);
+							transform: translateY(-50%);
+						}
+					}
+					.item-cont {
+						border-bottom: 1px solid #f1f1f1;
+						.detail-cont {
+							padding:1.3rem 1.7rem;
+							> div { 
+								@include Align-middle-left;
+								padding:1.3rem 0;
+								strong {
+									@include Bold;
+									width:40%;
+								}
+								b{
+									@include Ellipsis($w:100%, $lines:2);
+								}
+							}
+						}
+					}
+				}
+				
+			}
+
+		}
+		//중고차상세 - 정비이력 팝업
+		&.layer-car-repair {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.detail-layer-items {
+					.item-cont {
+						.detail-cont {
+							padding:1.3rem 1.7rem;
+							.table{
+                                table{
+                                    border-right:1px solid #e7e7e7;
+                                    border-bottom:1px solid #e7e7e7;
+                                    tr:first-child{
+                                        th{
+                                            background-color: #fafafa;
+                                        }
+                                    }
+                                    th{
+                                        text-align: center;
+                                        border-left:1px solid #e7e7e7;
+                                        padding: 1.4rem 1.3rem;
+                                        font-size:1.1rem;
+										@include Regular;
+										line-height:1.4;
+                                    }
+                                    td{
+                                        border-left:1px solid #e7e7e7;
+                                        padding: 1.4rem 1.3rem;
+                                        font-size:1.1rem;
+										@include Regular;
+										line-height:1.4;
+                                    }
+								}
+								&.table-default{
+									table{
+										td{
+											text-align: center;
+											padding:5.6rem 0;
+										}
+									}
+								}
+							}
+							.guide {
+								font-size: 1.1rem;
+								line-height: 1.3;
+								margin-bottom: 1.2rem;
+								text-indent: -.8rem;
+								padding-left:1rem;
+								& > li{
+									margin-top:.4rem;
+									color:#54585a;
+									@include Regular;
+									& > i{
+										margin-right: .6rem;
+									}
+									&.red_txt{
+										color:#ed1c24;
+									}
+									&.gray_txt{
+										color:#8f9191;
+										font-size:1rem;
+									}
+								}
+								& > li:first-child{
+									margin-top:0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		//중고차상세 - 차량 성능검사 팝업
+		&.layer-car-check {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:3.4rem 1.7rem;
+				.detail-layer-items {
+					.item-cont {
+						.galleryThumbs-list{
+							li{
+								margin:.9rem 0;
+								overflow: hidden;
+							}
+						}
+					}
+				}
+			}
+		}
+		//중고차상세 - 차량사진 팝업
+		&.layer-car-images {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.detail-layer-items {
+					.item-cont {
+						.galleryThumbs-list{
+							.swiper-wrapper{
+								height:auto;
+							}
+							li{
+								margin:.9rem 0;
+								overflow: hidden;
+							}
+							li:first-child{
+								margin-top:0;
+							}
+							li:last-child{
+								margin-bottom:0;
+							}
+						}
+					}
+				}
+			}
+		}
+		//승계렌터카 상세 - 수정 팝업
+		&.layer-suc-edit {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding-top:1.7rem;
+				.section-cont {
+					background-color: #fff;
+					padding:1.7rem 0;
+					.wrap {
+						.cont-tit {
+							h3 {
+								background-color: #EFF2F7;
+								padding: 1.5rem 1.3rem;
+								border-radius: 1rem;
+								@include Bold;
+								font-size:1.4rem;
+							}
+						}
+						.cont-in {
+							padding-top:1.7rem;
+						}
+						> strong {
+							@include Bold;
+							font-size:1.8rem;
+						}
+						
+					}
+					
+					
+					&.cont-item2 {
+						.cont-in {
+							padding-top:0;
+						}
+						.detail-cont {
+							> div {
+								@include Align-between;
+								.text-cont {
+									width:75%;
+									strong {
+										@include Bold;
+										font-size:1.4rem;
+									}
+									.info {
+										@include Align-left-column;
+										margin-top:1rem;
+										> div {
+											@include Align-middle-left;
+										
+											em {
+												min-width:3.6rem;
+												margin-right:1rem;
+											}
+											span {
+												&:before {
+													content:'|';
+													display:inline-block;
+													padding-right:1rem;
+													color:#e7e7e7;
+												}
+											}
+											& + div {
+												padding-top:.4rem;
+											}
+										}
+									}
+								}
+								.cover {
+									width:8.8rem;
+									min-height:4.4rem;
+									@include Align-middle;
+									img {
+										width:100%;
+										height:100%;
+									}
+								}
+							}
+						}
+						
+						
+					}
+					&.cont-item3 {
+						.detail-cont {
+							padding:0 1.3rem;
+							margin-top:0;
+							border:0;
+							> div {
+								@include Align-middle-left;
+								padding-bottom:2.6rem;
+								strong {
+									width:25%;
+									@include Bold;
+								}
+								& + div {
+									padding-top:0;
+								}
+							}
+						}
+					}
+					&.cont-item4 {
+						.inputT {
+							.inner {
+								position: relative;
+								input {
+									width:100%;
+									border: 1px solid #d2d2d2;
+									border-radius: .5rem;
+									background-color: #fff;
+									height: 4.1rem;
+									padding: 0 1.2rem;
+									text-align: right;
+									padding-right: 3.6rem;
+								}
+								span {
+									@include Position($top: 35%, $right: 1rem);
+									@include Bold;
+								}
+							}
+						}
+					}
+					&.cont-item5 {
+						.cont-in {
+							> div + div {
+								padding-top:3.4rem;
+								margin-top:1.7rem;
+								border-top:1px solid #d2d2d2;
+							}
+							h4 {
+								@include Bold;
+								font-size:1.2rem;
+							}
+							ul{
+								@include Align-top-left;
+								margin-left:0;
+								li{
+									@include Align-middle-column;
+									padding:1.3rem 0;
+									position: relative;
+									.inner{
+										margin-top:0;
+										@include Regular;
+										font-size:1.1rem;
+										@include Align-middle-column;
+										color:#54585a;
+										text-align: center;
+										label > div{
+											height:2.6rem;
+											margin-bottom:.9rem;
+										}
+									}
+									.icon{
+										width:2.6rem;
+										height:2.6rem;
+									}
+									input {
+										display: none;
+									}
+									label {
+										position: relative;
+										border:0 none;
+										box-sizing: border-box;
+										//transition: all .4s;
+										color:#ddd;
+									}
+									input:checked + label {
+										color:#54585a;
+									}
+								}
+							}
+							
+						}
+						
+					}
+					&.cont-item6 {
+						.example {
+							p {
+								text-indent: -.6rem;
+								padding-left: 1rem;
+								font-size: 1.1rem;
+								color:#8f9191;
+								&::before {
+									content:'';
+									display: inline-block;
+									width:.2rem;
+									height:.2rem;
+									background-color: #000;
+									vertical-align: middle;
+									margin-right:.4rem;
+									border-radius:100%;
+								}
+							}
+							li {
+								.inner {
+									@include Align-middle-column;
+									border: 1px solid #d2d2d2;
+									border-radius: .5rem;
+									padding:1.3rem 0;
+									.cover {
+										@include Align-middle;
+										width:8rem;
+										height: 5.5rem;
+										img {
+											width: 70%;
+										}
+									}
+									span {
+										padding-top:.4rem;
+									}
+								}
+							}
+							.guide {
+								padding:1.3rem 0 0;
+								li {
+									text-indent: -.6rem;
+									padding-left: 1rem;
+									font-size: 1.1rem;
+									color:#8f9191;
+									& + li {
+										padding-top:1rem;
+									}
+									&::before {
+										content:'';
+										display: inline-block;
+										width:.2rem;
+										height:.2rem;
+										background-color: #000;
+										vertical-align: middle;
+										margin-right:.4rem;
+										border-radius:100%;
+									}
+								}
+							}
+						}
+						.live {
+							//display: none;
+							padding-top:0;
+							p {
+								border-top:1px solid #d2d2d2;
+								margin:1.3rem 0 1rem;
+								padding-top:2.6rem;
+								text-indent: -.6rem;
+								padding-left: 1rem;
+								font-size: 1.1rem;
+								color:#8f9191;
+								.icon.pannel09 { 
+									width:2.1rem;
+									height:1.9rem;
+									margin-right:1rem;
+								}
+							}
+							.file-box {
+								&.hidden-filebox-toggle {
+									display: none;
+									margin-top:0;
+								}
+								li {
+									&.dp-none {
+										display: none;
+									}
+									.inner {
+										@include Align-middle-column;
+										position: relative;
+										.inputF {
+											border:0;
+											border-radius: 0;
+											&.active {
+												&.active01 {
+													@include Background($sprite:'car-front', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												&.active02 {
+													@include Background($sprite:'car-back', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												&.active03 {
+													@include Background($sprite:'car-inside', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												&.active04 {
+													@include Background($sprite:'car-right', $size:100% 100%, $position:center center, $path:'bgs');
+												}
+												.btn-close {
+													@include Position($top: .4rem, $right: .4rem);
+													padding:0;
+													height: auto;
+													z-index: 2;
+													i {
+														display: block;
+													}
+												}
+												label {
+													i {
+														display: none;
+													}
+													span {
+														display: block;
+														margin-top:0;
+														padding:.4rem 0;
+														width:100%;
+														color:#fff;
+														background-color: rgba(0,0,0,.6);
+														text-align:center;
+														font-size:.8rem;
+														@include Bold;
+														@include Position($bottom: 0, $left: 0);
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						.btn-addphoto {
+							padding-top:1.3rem;
+							button {
+								width: 100%;
+								background-color: #54585a;
+								color:#fff;
+								border-radius: .5rem;
+								font-size:1.6rem;
+								@include Bold;
+							}
+						}
+						.btn-addphoto-wrap{
+							padding-top:1.3rem;
+							input{
+								display:none;
+							}
+							label{
+								width: 100%;
+								background-color: #54585a;
+								color:#fff;
+								border-radius: .5rem;
+								font-size:1.6rem;
+								@include Bold;
+								@include Align-middle;
+							}
+						}
+					}
+		
+					&.cont-item7 {
+						.cont-in {
+							.textarea {
+								textarea {
+									font-size:1.1rem;
+									height: 11rem;
+									word-break:break-word;
+								}
+							}
+						}
+					}  
+		
+					&.cont-item8 {
+						> div {
+							> strong {
+								@include Bold;
+								font-size:1.8rem;
+							}
+						}
+						
+					}
+				}
+				.detail-layer-submit{
+					padding: 2.6rem 0;
+					background-color: #fff;
+					.detail-layer-list-btn{
+						@include Align-between;
+						& > li{
+							width:48%;
+							margin-left:1rem;
+						}
+						& > li:first-child{
+							margin-left:0;
+						}
+					}
+					.btn-white{
+						border-color:#d2d2d2;
+						color:#54585a;
+					}
+					.btn{
+						border-radius: .5rem;
+					}
+				}
+			}
+
+		}
+		//지점안내-전국지점안내 검색 팝업
+		&.layer-national-branch {
+			.full-top {
+				.layer-full-close {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.cont-top {
+					.cont-tit {
+						padding: 2.2rem 1.7rem 2.6rem;
+						@include Background($sprite:'bg_cus_branch', $size:cover, $position:center center, $path:'bgs');
+						em {
+							@include Align-middle-left;
+							color:#fff;
+							font-size:2.3rem;
+							@include Bold;
+							i {
+								margin-right:.4rem;
+							}
+						}
+						strong {
+							display: block;
+							margin-top:1.7rem;
+							color:#fff;
+							font-size:1.4rem;
+							@include Normal;
+							line-height: 1.5;
+						}
+						
+					}
+				}
+				.cont-in {
+					padding:3.4rem 1.7rem;
+					.cont-map {
+						.point-tit {
+							@include Align-middle-left;
+							strong {
+								@include Bold;
+								font-size:1.4rem;
+								margin-left:.8rem;
+								&::after {
+									content:'';
+									display: block;
+									padding-top:.1rem;
+									border-bottom:1px solid #000;
+								}
+							}
+							.flagwrap {
+								@include Align-middle;
+								margin-left:auto;
+								li {
+									span {
+										font-size: .9rem;
+										&.notice {
+											border-color: #6e5d50;
+											color: #6e5d50;
+										}
+									}
+									.notice {
+										border-color: #6e5d50;
+										color: #6e5d50;
+									}
+									& + li {
+										margin-left:.5rem;
+									}
+								}
+								
+							}
+						}
+						.cover {
+							margin:1.4rem 0 1.7rem;
+							border: 1px solid #dedede;
+						}
+						> button {
+							height:4.3rem;
+							width:100%;
+							border:1px solid #d2d2d2;
+							border-radius:.5rem;
+							font-size:1.4rem;
+							@include Bold;
+						}
+					}
+					.cont-info {
+						padding:2.6rem 0 3.4rem;
+						li {
+							@include Align-top-left;
+							> div {
+								padding-left:1rem;
+								strong {
+									@include Bold;
+									font-size:1.1rem;
+									vertical-align: top;
+									&.underline {
+										display: inline-block;
+										&::after {
+											content:'';
+											display: block;
+											padding-top:.1rem;
+											border-bottom:1px solid #000;
+										}
+									}
+								}
+								p {
+									padding-top:.8rem;
+									font-size:1.1rem;
+									line-height: 1.3;
+								}
+							}
+							
+							& + li {
+								margin-top:2.6rem;
+							}
+						}
+					}
+					.cont-slide {
+						.swiper-slide{
+							height:21.5rem;
+							div{
+								height:21.5rem;
+								overflow: hidden;
+								img{
+									height:auto;
+								}
+							}
+						}
+						.swiper-button-prev, 
+						.swiper-button-next{
+							transform: translateY(-50%);
+						}
+						.swiper-pagination-wrap{
+							@include Align-middle;
+							width: 100%;
+							z-index: 1;
+							.swiper-pagination {
+								margin-top:1rem;
+								position: static;
+								height: 2rem;
+								padding: 0 1.4rem;
+								.swiper-pagination-bullet {
+									margin:0 .4rem;
+									width:.7rem;
+									height: .7rem;
+									border-radius: .5rem;
+									background-color: #ddd;
+									opacity: 1;
+									&-active {
+										background-color: #ff404b;
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+			
+		}
+		&.layer-each-branch {
+			.full-top {
+				.layer-full-close {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.cont-in {
+					padding:2.6rem 1.7rem;
+					.cont-info {
+						padding:2.6rem 0 3.4rem;
+						li {
+							@include Align-top-left;
+							> div {
+								padding-left:1rem;
+								strong {
+									@include Bold;
+									font-size:1.1rem;
+									vertical-align: top;
+									&.underline {
+										display: inline-block;
+										&::after {
+											content:'';
+											display: block;
+											padding-top:.1rem;
+											border-bottom:1px solid #000;
+										}
+									}
+								}
+								p {
+									padding-top:.8rem;
+									font-size:1.1rem;
+									line-height: 1.3;
+								}
+							}
+							
+							& + li {
+								margin-top:2.6rem;
+							}
+						}
+					}
+					.cont-slide {
+						.swiper-pagination-wrap{
+							@include Align-middle;
+							width: 100%;
+							z-index: 1;
+							.swiper-pagination {
+								margin-top:1rem;
+								position: static;
+								height: 2rem;
+								padding: 0 1.4rem;
+								.swiper-pagination-bullet {
+									margin:0 .4rem;
+									width:.7rem;
+									height: .7rem;
+									border-radius: .5rem;
+									background-color: #ddd;
+									opacity: 1;
+									&-active {
+										background-color: #ff404b;
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+			
+		}
+		//지점안내 - 레이어팝업 형식
+		&.layer-branch-info {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:0;
+				.customer-wrap {
+					padding:0;
+				}
+			}
+		}
+		
+		//중고차상세 - 할부계산기 팝업
+		&.layer-detail-monthl {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding-top:1.7rem;
+				.section-cont:first-child{
+					border-top:0 none;
+				}
+				.section-cont {
+					background-color: #fff;
+					padding:1.7rem 0;
+					border-top:1px solid #e7e7e7;
+					.wrap {
+						.cont-tit {
+							h3 {
+								background-color: #EFF2F7;
+								padding: 1.5rem 1.3rem;
+								border-radius: 1rem;
+								@include Bold;
+								font-size:1.4rem;
+							}
+						}
+						.cont-in {
+							padding-top:1.7rem;
+						}
+						> strong {
+							@include Bold;
+							font-size:1.8rem;
+						}
+						.guide {
+							font-size: 1.1rem;
+							line-height: 1.3;
+							text-indent: -.8rem;
+							padding:1.1rem 0;
+							& > li{
+								color:#54585a;
+								@include Regular;
+								line-height: 1.4;
+								margin:.4rem 0 0 0;
+								padding-left:1rem;
+								& > i{
+									margin-right: .6rem;
+									margin-top: -.4rem;
+								}
+								&.red_txt{
+									color:#ed1c24;
+								}
+								&.gray_txt{
+									color:#8f9191;
+								}
+							}
+							& > li:first-child{
+								margin-top:0;
+							}
+						}
+					}
+					&.cont-item2 {
+						.cont-in {
+							padding-top:0;
+						}
+					}
+					&.cont-item3 {
+						.cont-in {
+							padding-top:0;
+							.detail-iconBox{
+								margin-left: -.2rem;
+								label {
+									border:0 none;
+									border-radius: 0;
+									@include Bold;
+									&:after {
+										width: 1.7rem;
+										height: 1.7rem;
+										margin-top: -.85rem;
+										left:.5rem;
+									}
+								}
+								input:checked + label {
+									@include Bold;
+								}
+								input[type='checkbox'] + label:after{
+									@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+								}
+								input[type='checkbox']:checked + label:after{
+									@include Background($sprite:'ico-chk-on07', $type:'png', $size:92% auto, $position:center center);
+								}
+							}
+							.inputT-txt{
+								@include Align-middle-right;
+								b{
+									font-size:1.6rem;
+									@include Bold;
+								}
+							}
+							.detail-layer-inputT-tit{
+								@include Bold;
+								@include Align-between;
+								margin:.9rem 0 .8rem 0;
+								& > span{
+									font-size:1rem;
+									@include Regular;
+									b{
+										font-size:1rem;
+										color:#ff404b;
+									}
+								}
+							}
+							.inputT {
+								.inner {
+									position: relative;
+									input {
+										width:100%;
+										border: 1px solid #d2d2d2;
+										border-radius: .5rem;
+										background-color: #fff;
+										height: 4.1rem;
+										padding: 0 1.2rem;
+										text-align: right;
+										padding-right: 3.6rem;
+										color:#ed1c24;
+										@include Regular;
+									}
+									span {
+										@include Position($top: 35%, $right: 1rem);
+										@include Regular;
+										color:#8f9191;
+									}
+								}
+							}
+						}
+					}
+					&.cont-item4 {
+						.cont-in {
+							padding-top:0;
+							.detail-layer-inputT-tit{
+								@include Bold;
+								@include Align-between;
+								& > span{
+									font-size:1rem;
+									@include Regular;
+									b{
+										font-size:1rem;
+										color:#ff404b;
+									}
+								}
+							}
+							.info-monthl{
+								background-color: #fafafa;
+								padding: 1.5rem 1.3rem;
+								border-radius: .5rem;
+								@include Regular;
+								line-height: 2;
+								margin:3.4rem 0 0 0;
+								em{
+									@include Bold;
+								}
+								b{
+									font-size:1.8rem;
+									@include Bold;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		//마이페이지-단기렌터카 예약취소 팝업
+		&.layer-cancel-reservation {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding-top:1.7rem;
+				.cont-top {
+					padding:2.2rem 3.4rem;
+					background-color:#f5f5f5;
+					border-radius: .5rem;
+					margin:1.3rem 0;
+					strong {
+						@include Bold;
+						@include Align-middle;
+						font-size:1.6rem;
+						text-align: center;
+						line-height: 1.3;
+					}
+				}
+				.cont-in { 
+					> div {
+						padding:1.3rem 0;
+						& + div {
+							> strong {
+								@include Bold;
+								font-size:1.2rem;
+								display: block;
+								margin-bottom:1.3rem;
+							}
+							.list-table {
+								@include Align-between;
+								border:1px solid #e7e7e7;
+								border-left:0;
+								width:100%;
+								margin:0;
+								li {
+									border-left:1px solid #e7e7e7;
+									box-sizing: border-box;
+									strong {
+										@include Align-middle-column;
+										@include Bold;
+										height:6rem;
+										font-size:1.1rem;
+										background-color: #fafafa;
+										text-align: center;
+										border-bottom:1px solid #e7e7e7;
+										line-height: 1.3;
+									}
+									b {
+										@include Align-middle-column;
+										height:6rem;
+										font-size:1.1rem;
+										text-align: center;
+										color:#54585a;
+										line-height: 1.3;
+									}
+								}
+							}
+						}
+					}
+					
+				}
+				.cont-btn {
+					padding-top:5rem;
+					ul {
+						width:100%;
+						margin:0;
+						@include Align-between;
+						li {
+							width:48%;
+							.btn {
+								border-radius:.5rem;
+								font-size:1.6rem;
+								&-white {
+									color: #54585a;
+									border: 1px solid #d2d2d2;
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		}
+		//마이페이지-단기렌터카 예약선결제 및 수수료안내 팝업
+		&.layer-prepayment-info {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.section-cont {
+				padding-top:1.7rem;
+				.cont-in {
+					padding:1.7rem 0;
+					strong {
+						font-size:1.2rem;
+						@include Bold;
+					}
+					> div {
+						> strong {
+							font-size:1.2rem;
+							display: block;
+							margin-bottom:1.3rem;
+						}
+						.payment-step {
+							border-top:1px solid #d2d2d2;
+							li {
+								@include Align-top-left;
+								padding:1.7rem 0;
+								border-bottom:1px solid #d2d2d2;
+								span {
+									//background-color: #ff666f;
+									//padding:2.3rem 1rem;
+									@include Align-middle;
+									width:6.4rem;
+									height:5.5rem;
+									color:#fff;
+									@include Bold;
+								}
+								div {
+									margin-left:2.1rem;
+									strong {
+										font-size:1.2rem;
+									}
+									p {
+										font-size:1.1rem;
+										padding-top:.7rem;
+										line-height: 1.3;
+									}
+								}
+							}
+						}
+						.list-table {
+							@include Align-between;
+							border:1px solid #e7e7e7;
+							border-left:0;
+							width:100%;
+							margin:0;
+							li {
+								border-left:1px solid #e7e7e7;
+								box-sizing: border-box;
+								strong {
+									@include Align-middle-column;
+									@include Bold;
+									height:6rem;
+									font-size:1.1rem;
+									background-color: #fafafa;
+									text-align: center;
+									border-bottom:1px solid #e7e7e7;
+									line-height: 1.3;
+								}
+								b {
+									@include Align-middle-column;
+									height:6rem;
+									font-size:1.1rem;
+									text-align: center;
+									color:#54585a;
+									line-height: 1.3;
+								}
+							}
+						}
+					}
+					.guide {
+						padding-top:1.1rem;
+						li {
+							text-indent: -.7rem;
+							padding-left: 1rem;
+							font-size: 1.05rem;
+							color: #8f9191;
+							word-break: break-all;
+							line-height: 1.3;
+							&::before {
+								content: '';
+								display: inline-block;
+								width: .2rem;
+								height: .2rem;
+								background-color: #8f9191;
+								margin-right: .4rem;
+								margin-top: -.2rem;
+								border-radius: 100%;
+								vertical-align: middle;
+							}
+							& + li {
+								padding-top:.3rem;
+							}
+						}
+					}
+				}
+				.cont-btn {
+					padding-top:5rem;
+					button {
+						border-radius: .5rem;
+						font-size:1.6rem;
+					}
+				}
+			}
+		}
+		//마이페이지-포인트 - 아시아나 마일리지 전환 팝업
+		&.layer-asiana-apply {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				.cont-in {
+					padding:1.7rem 0 0;
+					> div {
+						padding:1.7rem 0;
+						&.input-wrap {
+							.inputT {
+								@include Align-left-column;
+								label {
+									@include Bold;
+									font-size:1.2rem;
+									margin-bottom:1.2rem;
+								}
+								& + .inputT {
+									padding-top:2.6rem;
+								}
+							}
+						}
+						&.agree-wrap {
+							.chk-agree-tit {
+								background-color: #EFF2F7;
+								padding: 1.5rem 1.3rem;
+								border-radius: .6rem;
+								h5 {
+									@include Bold;
+								}
+							}
+							.chk-agree-list {
+								margin:1.7rem 0 0;
+								li {
+									border:0;
+									.chk-agree-top {
+										@include Align-between-top;
+										padding:0 1.3rem;
+									}
+									label {
+										padding:0;
+										line-height: 1;
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:top center);
+                                            width: 1.2rem;
+                                            height: .9rem;
+                                        }
+                                        span{
+											font-size:1.1rem;
+											color:#999;
+											line-height:1.3;
+											@include Regular;
+											margin:0 .4rem;
+                                        }
+                                    }
+                                    input:checked + label {
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:top center);
+                                        }
+                                        span{
+                                            color:#2f2f2f;
+                                        }
+									}
+									.icon.next2 {
+										background-position: top center;
+									}
+								}
+							}
+						}
+					}
+				}
+				.cont-btn {
+					padding-top:3.4rem;
+					ul {
+						width: 100%;
+						margin:0;
+						justify-content: space-between;
+					}
+					li {
+						width:48%;
+						button {
+							border-radius: .6rem;
+							&.btn-white {
+								border:1px solid #d2d2d2;
+								color:#54585a;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		//마이페이지-포인트 - 아시아나 마일리지 전환 - 롯데렌터카 이용안내 팝업
+		&.layer-rentercar-info {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding-top:1.7rem;
+				.cont-in {
+					padding:1.7rem 0 0;
+				
+					h5 {
+						@include Bold;
+						font-size:1.6rem;
+					}
+					.transform-info {
+						border-bottom:1px solid #e7e7e7;
+						padding:.4rem 0;
+						li {
+							@include Align-top-left;
+							padding:1.3rem 0;
+							line-height:1.3;
+							font-size:1.1rem;
+							color:#54585a;
+							i {
+								margin-right:1rem;
+								padding-top:.5rem;
+							}
+						}
+					}
+					
+					p.caption {
+						text-indent: -.7rem;
+						font-size:1.1rem;
+						color:#8f9191;
+						word-break: break-all;
+						padding:1.3rem 0 1.3rem 1rem;
+						line-height:1.3;
+						&::before {
+							content:'';
+							display: inline-block;
+							width:.2rem;
+							height:.2rem;
+							background-color: #000;
+							margin-right:.4rem;
+							margin-top:-.2rem;
+							border-radius:100%;
+							vertical-align: middle;
+						}
+					}
+					.cont-guide {
+						margin-top:1.3rem;
+						padding:2.1rem 1.3rem;
+						background-color: #f5f5f5;
+						border-radius: .6rem;
+						ul {
+							padding-top:.4rem;
+						}
+						//두줄이상 인 경우 가이드
+						li {
+							text-indent: -.7rem;
+							padding-top:.9rem;
+							padding-left:1rem;
+							font-size:1rem;
+							color:#8f9191;
+							word-break: break-all;
+							&::before {
+								content:'';
+								display: inline-block;
+								width:.2rem;
+								height:.2rem;
+								background-color: #000;
+								margin-right:.4rem;
+								margin-top:-.2rem;
+								border-radius:100%;
+								vertical-align: middle;
+							}
+						}
+						
+					}
+				}
+			}
+		}
+		//마이페이지-포인트 - 할인쿠폰 전환 신청 팝업
+		&.layer-discount-coupon {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				.cont-in {
+					padding:1.7rem 0 0;
+					> div {
+						padding:1.7rem 0;
+						&.input-wrap {
+							> div {
+								@include  Align-middle-left;
+								strong {
+									@include Bold;
+									font-size:1.2rem;
+									display:inline-block;
+									width:30%;
+								}
+								label {
+									@include Bold;
+									display: block;
+									font-size:1.2rem;
+									margin-bottom:1.2rem;
+								}
+								span {
+									font-size:1.1rem;
+								}
+								& + div {
+									padding-top:2.6rem;
+									& + div {
+										align-items: flex-start;
+										flex-flow: column;
+									}
+								}
+							}
+						}
+						&.agree-wrap {
+							.chk-agree-tit {
+								background-color: #EFF2F7;
+								padding: 1.5rem 1.3rem;
+								border-radius: .6rem;
+								h5 {
+									@include Bold;
+								}
+							}
+							.chk-agree-list {
+								margin:1.7rem 0 0;
+								li {
+									border:0;
+									.chk-agree-top {
+										@include Align-between-top;
+										padding:0 1.3rem;
+									}
+									label {
+										padding:0;
+										line-height: 1;
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:top center);
+                                            width: 1.2rem;
+                                            height: .9rem;
+                                        }
+                                        span{
+											font-size:1.1rem;
+											color:#999;
+											line-height:1.3;
+											@include Regular;
+											margin:0 .4rem;
+                                        }
+                                    }
+                                    input:checked + label {
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:top center);
+                                        }
+                                        span{
+                                            color:#2f2f2f;
+                                        }
+									}
+									.icon.next2 {
+										background-position: top center;
+									}
+								}
+							}
+						}
+					}
+				}
+				.cont-btn {
+					padding-top:3.4rem;
+					ul {
+						width: 100%;
+						margin:0;
+						justify-content: space-between;
+					}
+					li {
+						width:48%;
+						button {
+							border-radius: .6rem;
+							&.btn-white {
+								border:1px solid #d2d2d2;
+								color:#54585a;
+							}
+						}
+					}
+				}
+			}
+		}
+		//마이페이지- 할인 쿠폰 등록 팝업
+		&.layer-coupon-enroll {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				.cont-in {
+					padding:3.4rem 0 1.3rem;
+					> div {
+						.inputT {
+							@include Align-left-column;
+							label {
+								@include Bold;
+								font-size:1.2rem;
+								margin-bottom:1.2rem;
+							}
+							& + .inputT {
+								padding-top:2.6rem;
+							}
+						}
+					}
+				}
+				.cont-guide {
+					padding:0;
+					li {
+						text-indent: -.7rem;
+						padding-top:.9rem;
+						padding-left:1rem;
+						font-size:1rem;
+						color:#8f9191;
+						word-break: break-all;
+						&::before {
+							content:'';
+							display: inline-block;
+							width:.2rem;
+							height:.2rem;
+							background-color: #000;
+							margin-right:.4rem;
+							margin-top:-.2rem;
+							border-radius:100%;
+							vertical-align: middle;
+						}
+						&:first-child {
+							padding-top:0;
+						}
+					}
+					
+				}
+				.cont-btn {
+					padding-top:3.4rem;
+					ul {
+						width: 100%;
+						margin:0;
+						justify-content: space-between;
+					}
+					li {
+						width:48%;
+						button {
+							border-radius: .6rem;
+							&.btn-white {
+								border:1px solid #d2d2d2;
+								color:#54585a;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
+		//마이페이지- 예약 qr코드
+		&.layer-qrcode {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:1.7rem 0 0;
+			}
+			.qr-code{
+				padding: 10.4rem 1.7rem;
+				text-align:center;
+
+				img{max-width:17.4rem;}
+			}
+			.schedule-infos{
+				@include Align-middle;
+				text-align:center;
+				background-color:#f5f5f5;				
+				
+				.item{
+					flex:1;
+					padding: 3.4rem 1.7rem;
+					
+					span{color:#54585a;}
+					p{
+						@include Bold;
+						margin-top:.9rem;
+					}
+
+					+ .item{
+						position:relative;
+						
+						&:before{
+							@include Position($top:50%, $left:0);
+							@include Align-middle;
+							content:">";
+							font-family: "ManropeB", "NotoM", serif;
+							color:#8f9191;
+							font-size:16px;
+							width:1.5rem;
+							height:1.5rem;
+							border:1px solid #d2d2d2;
+							border-radius: 1.5rem;
+							margin-top:-.8rem;
+							margin-left:-.8rem;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+		}
+
+		//마이페이지- 반납지점변경
+		&.layer-branch-change {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				padding:1.7rem 0 0;
+			}
+			.section-top{
+				.tab-nav{
+					@include Inline-scrolling;
+					@include NoscrollBar;
+					display: inline-flex;
+					flex-wrap: nowrap;
+					ul{
+						width:100%;
+						margin-left:0;
+						display: inline-flex;
+						flex-wrap: nowrap;
+						li{
+							width:auto;
+							button{
+								padding:0 .9rem;
+							}
+						}
+					}
+				}
+			}
+			.section-list{
+				.section-filter {
+					padding:0 1.7rem;
+				}
+				.section-filter-list{
+					.result {
+						.filter-col {
+							padding:0 0 2rem 0;
+							.chk-list {
+								margin-top:0;
+								li {
+									.inner{
+										height: 3.9rem;
+									}
+									label {
+										height:8.6rem;
+										border-radius: .4rem;
+										color:#8f9191;
+										border:1px solid #d2d2d2;
+										@include Align-middle-column;
+										background-color: #fff;
+										font-size:1.1rem;
+										@include Regular;
+										span{
+											margin:1.7rem 0 0 0;
+										}
+									}
+									input:checked + label {
+										background-color:rgb(255,249,249);
+										background: linear-gradient(90deg, rgba(255,249,249,1) 0%, rgba(255,249,249,1) 100%);
+										color:#ff404b;
+										border:1px solid #ff404b;
+										.brand01{
+											@include Background($sprite:'ico-brand01-on', $size:100% auto, $position:center center);
+										}
+										.brand02{
+											@include Background($sprite:'ico-brand02-on', $size:100% auto, $position:center center);
+										}
+										.brand03{
+											@include Background($sprite:'ico-brand03-on', $size:100% auto, $position:center center);
+										}
+										.brand04{
+											@include Background($sprite:'ico-brand04-on', $size:100% auto, $position:center center);
+										}
+										.brand05{
+											@include Background($sprite:'ico-brand05-on', $size:100% auto, $position:center center);
+										}
+										.brand06{
+											@include Background($sprite:'ico-brand06-on', $size:100% auto, $position:center center);
+										}
+									}
+									input:checked + label:after{
+										display:none;
+									}
+								}
+							}
+						}
+					}
+					.result-type {
+						.filter-col {
+							padding:0;
+							.chk-list {
+								li {
+									input:disabled + label{
+										color:#ddd;
+									}
+									label {
+										height:3.9rem;
+										font-size:1.1rem;
+									}
+								}
+							}
+						}
+					}
+					.detail-iconBox{
+						margin-left: -.6rem;
+						label {
+							border:0 none;
+							border-radius: 0;
+							@include Regular;
+							&:after {
+								width: 1.7rem;
+								height: 1.7rem;
+								margin-top: -.85rem;
+								left:.5rem;
+							}
+						}
+						input:checked + label {
+							@include Regular;
+						}
+						input[type='checkbox'] + label:after{
+							@include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
+						}
+						input[type='checkbox']:checked + label:after{
+							@include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+						}
+					}
+				}
+			}
+		}
+
+		//신차장 친구추천 레이어팝업
+		&.layer-makeUrl{
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.cont-in{
+				padding:3.4rem 0;
+			}
+			.makeUrl-top-box{
+				padding:0 0 2.6rem 0;
+				//border-bottom:1px solid #e7e7e7;
+				.makeUrl-my-num{
+					@include Align-middle-left;
+				}
+				.makeUrl-expirydate{
+					@include Align-middle-left;
+					padding:1.7rem 0 0 0;
+				}
+				.tit-box{
+					@include Bold;
+					@include Align-box-left;
+					width:25%;
+					box-sizing: border-box;
+				}
+				.txt-box{
+					@include Regular;
+					@include Align-between;
+					padding:0 0 0 2.6rem;
+					width:75%;
+					box-sizing: border-box;
+				}
+			}
+			.agree-wrap {
+				.chk-agree-tit {
+					background-color: #EFF2F7;
+					padding: 1.5rem 1.3rem;
+					border-radius: .6rem;
+					h5 {
+						@include Bold;
+						font-size: 1.4rem;
+					}
+				}
+				.chk-agree-list {
+					margin:0;
+					li {
+						//border:0;
+						.chk-agree-top {
+							//@include Align-between-top;
+							padding:0 1.3rem;
+						}
+						label {
+							line-height: 1;
+							&:before{
+								@include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:top center);
+								width: 1.2rem;
+								height: .9rem;
+								margin-top: .2rem;
+							}
+							span{
+								font-size:1.1rem;
+								color:#999;
+								line-height:1.3;
+								@include Regular;
+								margin:0 .4rem;
+							}
+						}
+						input:checked + label {
+							&:before{
+								@include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:top center);
+							}
+							span{
+								color:#2f2f2f;
+							}
+						}
+						.icon.next2 {
+							background-position: top center;
+						}
+					}
+					.chk-agree-cols{
+						& > li{
+							//border-bottom:0;
+						}
+						& > li + li{
+							.chk-agree-top{
+								align-items: flex-start;
+							}
+							.inputC{
+								label{
+									padding-top:0;
+								}
+							}
+						}
+					}
+				}
+			}
+			.makeUrl-bt-box{
+				padding:2.6rem 0 0 0;
+				.makeUrl-new{
+					@include Align-between;
+					padding:0 0 1.3rem 0;
+				}
+				.tit-box{
+					@include Bold;
+				}
+				.btn-group{
+
+				}
+				.url-box-wrap{
+					//width:100%;
+					//box-sizing: border-box;
+					background-color: #f5f5f5;
+					padding:1.5rem 2.2rem;
+					border-radius: .5rem;
+					word-break: break-all;
+				}
+			}
+		}
+
+		//대여 차량 상세 팝업
+		&.type-detail-info {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.pop-inner {
+				overflow-x: hidden;
+				background-color:#fff;
+				position: relative;
+				margin:0;
+				border-radius:0 0 1rem 1rem;
+			}
+			.pop-cont {
+				padding:3.4rem 2.1rem 2.6rem;
+				.detail-layout {
+					position: relative;
+					.detail-view-img{
+						margin:0 auto;
+						width: 21rem;
+						img{
+							width: 100%;
+						}
+					}
+					.carDtlDescText {
+						//대여 상세 차량 이미지 사이즈(pc 이미지와 동일 사용으로 모바일 사이즈 고정 필요)
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.detail-view-top {
+						background-color: #fff;
+						padding:2.6rem 0 1.7rem;
+						.normal{
+							color:#2B2B2B;
+							& > strong{
+								font-size:1.8rem;
+								@include Bold;
+							}
+						}
+					}
+					.detail-layer-cont-terms{
+						background-color: #fff;
+						padding-bottom:2.1rem;
+						& > .table{
+							border-top:1px solid #EBEBEB;
+							border-bottom:1px solid #EBEBEB;
+							padding-bottom:1.7rem;
+							& > table tr th{
+								border-top:0;
+								@include Bold;
+								@include Align-middle-left;
+								color:#2f2f2f;
+								padding:1.7rem 0 0;
+								& > i {
+									margin-right:.4rem;
+								}
+							}
+							& > table tr td{
+								border-top:0;
+								text-align: right;
+								padding-right:0;
+								padding:1.7rem 0 0;
+								& > b{
+									@include Normal;
+									color:#54585a;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+					.detail-layer-submit {
+						button {
+							margin:0 auto;
+							width:8rem;
+							height:3.9rem;
+							color:#54585a;
+							border-color: #d2d2d2;
+							border-radius: 1rem;
+						}
+					}
+				}
+			}
+		}
+
+		//간편견적신청 레이어팝업
+		&.layerCounsel-open {
+			.full-top {
+				button {
+					left:1.7rem;
+				}
+			}
+			.full-cont {
+				.cont-in {
+					padding:1.7rem 0 0;
+					> div {
+						padding:1.7rem 0;
+						&.input-wrap {
+							.inputT {
+								@include Align-left-column;
+								label {
+									@include Bold;
+									font-size:1.2rem;
+									margin-bottom:1.2rem;
+									sub{
+										position: relative;
+										top:.2rem;
+										left:.5rem;
+										transform: translateY(-50%);
+									}
+								}
+								& + .inputT {
+									padding-top:2.6rem;
+								}
+							}
+							.detail-layer-inputT{
+								.list-type-col2{
+									@include Align-middle-left;
+									width:100%;
+									margin-left:0;
+									.inputT{
+										flex-flow: row;
+										padding-top:2.6rem;
+										.inputR{
+											width:49%;
+											border-bottom:0 none;
+											label{
+												margin-bottom:0;
+											}
+										}
+									}
+									li:first-child{
+										width:30%;
+										.detail-layer-inputT-tit{
+											margin-top:0;
+										}
+									}
+									li:last-child{
+										width:70%;
+									}
+								}
+							}
+							.detail-layer-inputT-tit{
+								@include Bold;
+								margin-top:1.7rem;
+								@include Align-middle;
+								justify-content: left;
+							}
+							.detail-layer-inputR{
+								width:100%;
+								padding:.6rem 0;
+								label{
+									@include Regular;
+								}
+							}
+						}
+						&.agree-wrap {
+							.chk-agree-tit {
+								background-color: #EFF2F7;
+								padding: 1.5rem 1.3rem;
+								border-radius: .6rem;
+								h5 {
+									@include Bold;
+									font-size: 1.4rem;
+								}
+							}
+							.chk-agree-list {
+								margin:1.7rem 0 0;
+								li {
+									border:0;
+									.chk-agree-top {
+										//@include Align-between-top;
+										padding:0 1.3rem;
+									}
+									label {
+										line-height: 1;
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-off04', $type:'png', $size:92% auto, $position:top center);
+                                            width: 1.2rem;
+											height: .9rem;
+											margin-top: .2rem;
+                                        }
+                                        span{
+											font-size:1.1rem;
+											color:#999;
+											line-height:1.3;
+											@include Regular;
+											margin:0 .4rem;
+                                        }
+                                    }
+                                    input:checked + label {
+                                        &:before{
+                                            @include Background($sprite:'ico-chk-on04', $type:'png', $size:92% auto, $position:top center);
+                                        }
+                                        span{
+                                            color:#2f2f2f;
+                                        }
+									}
+									.icon.next2 {
+										background-position: top center;
+									}
+								}
+								.chk-agree-cols{
+                                    & > li{
+                                        border-bottom:0;
+                                    }
+                                    & > li + li{
+                                        .chk-agree-top{
+                                            align-items: flex-start;
+                                        }
+                                        .inputC{
+                                            label{
+                                                padding-top:0;
+                                            }
+                                        }
+									}
+								}
+							}
+						}
+					}
+				}
+				.cont-btn {
+					padding-top:3.4rem;
+					ul {
+						width: 100%;
+						margin:0;
+						justify-content: space-between;
+					}
+					li {
+						width:48%;
+						button {
+							border-radius: .6rem;
+							&.btn-white {
+								border:1px solid #d2d2d2;
+								color:#54585a;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
+		//단기렌터 옵션 레이어팝업
+		&.layer-rental {
+			.txt-h4 {
+				@include Bold;
+				font-size: 1.2rem;
+				color: #2f2f2f;
+				margin: 1.7rem 0 1.2rem;
+			}
+			.img-box {
+				@include Align-middle;
+				width: 100%;
+				height: 8rem;
+				img {
+					width: 50%;
+					height: auto;
+				}
+			}
+			.table02 {
+				th, td {
+					font-size: 1.1rem;
+					color: #54585a;
+				}
+				td {
+					line-height: 1.5;
+					.board-img {
+						width: 100%;
+						height: 7.5rem;
+						padding: 0 2rem;
+						box-sizing: border-box;
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+			.list-num {
+				padding-left: 2.6rem;
+				li {
+					//@include Align-top-middle;
+					color: #54585a;
+					font-size: 1.1rem;
+					padding-bottom: .5rem;
+					line-height: 1.2;
+				}
+				.num {
+					margin-left: -1.6rem;
+					//display: inline-flex;
+				}
+			}
+			//유모차
+			.stroller-tab-cont {
+				padding-top: 3.2rem;
+				.option-img {
+					@include Align-middle;
+					width: 100%;
+					height: 8rem;
+					img {
+						width: 25%;
+						height: auto;
+					}
+				}
+				.option-info-list {
+					padding: 1.7rem 2rem;
+					border-bottom: 1px solid #e7e7e7;
+					dt {
+						@include Bold;
+						color: #2f2f2f;
+						font-size: 1.2rem;
+						padding: 1.3rem 0 1rem;
+					}
+					dd {
+						color: #54585a;
+						font-size: 1.1rem;
+						line-height: 1.5;
+						.ml-dept {
+							margin-left: 7rem;
+						}
+					}
+				}
+			}
+			.guide {
+				li {
+					color: #8f9191;
+					font-size: 1rem;
+				}
+			}
+
+		}
+	}
+
+	//팝업 형태
+	&-popup {
+		position: fixed;
+		width:100%;
+		max-width:30rem;
+		display: none;
+		&.active {
+			display: block !important;
+			opacity: 1 !important;
+		}
+		.pop-top {
+			background-color: #fff;
+			@include Align-between;
+			height: 5.5rem;
+			padding:0 2.1rem;
+			border-radius:1rem 1rem 0 0;
+			h4 {
+				font-size: 1.4rem;
+				color:#000;
+				@include Bold;
+			}
+			.layer-pop-close {
+				margin-top: -1.3rem;
+			}
+		}
+		.pop-inner {
+			overflow: hidden;
+			border-radius:0.625rem;
+			background-color:#f4f4f4;
+			margin:0.9375rem;
+			position: relative;
+		}
+		.pop-cont {
+			padding:4.0625rem 1.25rem 2.5rem;
+			position: relative;
+			box-sizing:border-box;
+		}
+
+		&.layer-setup{
+			z-index: 120;
+			.pop-top {
+				@include Align-between;
+				height: 2.6rem;
+				border-radius:1rem 1rem 0 0;
+				position: relative;
+				.layer-pop-close {
+					margin-top: 0;
+					@include Position( $top: 50%, $right: 1.7rem);
+				}
+			}
+			.pop-inner {
+				overflow: hidden;
+				background-color:#fff;
+				position: relative;
+				margin:0;
+				border-radius: 0.625rem 0.625rem 0 0;
+			}
+			.pop-cont {
+				padding:3rem 2.1rem 2.6rem;
+				.pop-logout-info-wrap{
+					font-size:1.4rem;
+					@include Bold;
+					@include Align-middle-left;
+					b{
+						font-size:1.4rem;
+						@include Bold;
+						position: relative;
+						&::before{
+							display:block;
+							content: "";
+							width:100%;
+							border-bottom:1px solid #2f2f2f;
+							@include Position( $bottom: .2rem, $left: 0);
+						}
+					}
+				}
+				.pop-login-info-wrap{
+					@include Align-between-top;
+					.pop-login-id{
+						@include Align-middle-left;
+						em{
+							font-size:1.4rem;
+							@include Bold;
+							margin:0 1.3rem 0 0;
+						}
+						b{
+							font-size:1.4rem;
+							@include Regular;
+							color:#ed1c24;
+						}
+					}
+					.pop-logout-btn-box{
+						b{
+							font-size:1.4rem;
+							@include Bold;
+							position: relative;
+							&::before{
+								display:block;
+								content: "";
+								width:100%;
+								border-bottom:1px solid #2f2f2f;
+								@include Position( $bottom: .2rem, $left: 0);
+							}
+						}
+					}
+				}
+				.pop-txt-web{
+					margin:1.7rem 0 0 0;
+				}
+				.pop-tit-wrap{
+					@include Align-between;
+				}
+				h4 {
+					font-size: 1.4rem;
+					@include Bold;
+				}
+				.pop-txt-wrap{
+					padding:1.3rem 0 1.7rem;
+					color:#54585a;
+					@include Regular;
+					line-height:1.3;
+					font-size: 1.1rem;
+				}
+				.pop-txt-bottom-wrap{
+					@include Regular;
+					line-height:1.3;
+					font-size:1rem;
+					color:#8f9191;
+					b{
+						@include Bold;
+						color:#8f9191;
+						font-size:1rem;
+					}
+				}
+			}
+			.pop-txt-bottom{
+				background-color: #54585a;
+				border-radius:0 0 1rem 1rem;
+				padding:1.3rem 2.1rem;
+				text-align: center;
+				p{
+					color:#fff;
+					@include Regular;
+					line-height:1.3;
+					text-align: center;
+				}
+				button{
+					color:#fff;
+					font-size: 1.4rem;
+					@include Bold;
+					width:100%;
+				}
+			}
+		}
+
+		//메인 팝업
+		&.layer-bn{
+			max-width:100%;
+			top:20% !important;
+			.pop-inner{
+				background-color: transparent;
+				margin:0;
+				border-radius: 0;
+			}
+			.pop-cont{
+				width: 100%;
+				height: 100%;
+				padding:0;
+				.main-event-lists {
+					width: 100%;
+					height: 100%;
+				}
+	
+				.swiper-slide {
+					@include Align-middle;
+					box-sizing: border-box;
+					width:24.8rem;
+				}
+				.swiper-slide .main-event-lists-img{
+					width:auto;
+				}
+			}
+			.pop-bottom{
+				@include Align-between;
+				padding:3.4rem 6rem;
+				button{
+					color:#fff;
+					@include Bold;
+				}
+				.layer-today-close{
+					position: relative;
+					&::before{
+						display:block;
+						content: "";
+						border-left:2px solid #999;
+						@include Position($top:50%, $right:-3rem);
+						transform: translateY(-50%);
+						height:100%;
+					}
+				}
+			}
+		}
+
+		//대여 차량 상세 팝업
+		&.type-detail-info {
+			.pop-top {
+				@include Background($sprite:'pop-top-bg-rectangle', $size:100%, $position:center center, $path:'bgs');
+				@include Align-between;
+				height: 5.5rem;
+				padding:0 2.1rem;
+				border-radius:1rem 1rem 0 0;
+				h4 {
+					font-size: 1.6rem;
+					color:#fff;
+					@include Bold;
+				}
+				.layer-pop-close {
+					margin-top: 0;
+				}
+			}
+			.pop-inner {
+				overflow: hidden;
+				background-color:#fff;
+				position: relative;
+				margin:0;
+				border-radius:0 0 1rem 1rem;
+			}
+			.pop-cont {
+				padding:3.4rem 2.1rem 2.6rem;
+				.detail-layout {
+					position: relative;
+					.detail-view-img{
+						margin:0 auto;
+						width: 21rem;
+						img{
+							width: 100%;
+						}
+					}
+					.detail-view-top {
+						background-color: #fff;
+						padding:2.6rem 0 1.7rem;
+						.normal{
+							color:#2B2B2B;
+							& > strong{
+								font-size:1.8rem;
+								@include Bold;
+							}
+						}
+					}
+					.detail-layer-cont-terms{
+						background-color: #fff;
+						padding-bottom:2.1rem;
+						& > .table{
+							border-top:1px solid #EBEBEB;
+							border-bottom:1px solid #EBEBEB;
+							padding-bottom:1.7rem;
+							& > table tr th{
+								border-top:0;
+								@include Bold;
+								@include Align-middle-left;
+								color:#2f2f2f;
+								padding:1.7rem 0 0;
+								& > i {
+									margin-right:.4rem;
+								}
+							}
+							& > table tr td{
+								border-top:0;
+								text-align: right;
+								padding-right:0;
+								padding:1.7rem 0 0;
+								& > b{
+									@include Normal;
+									color:#54585a;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+					.detail-layer-submit {
+						button {
+							margin:0 auto;
+							width:8rem;
+							height:3.9rem;
+							color:#54585a;
+							border-color: #d2d2d2;
+							border-radius: 1rem;
+						}
+					}
+				}
+			}
+		}
+
+
+		//중고차 상세 옵션 팝업
+		&.type-detail-option {
+			.pop-top {
+				@include Background($sprite:'pop-top-bg-rectangle', $size:100%, $position:center center, $path:'bgs');
+				@include Align-between;
+				height: 5.5rem;
+				padding:0 2.1rem;
+				border-radius:1rem 1rem 0 0;
+				h4 {
+					font-size: 1.6rem;
+					color:#fff;
+					@include Bold;
+				}
+				.layer-pop-close {
+					margin-top: 0;
+				}
+			}
+			.pop-inner {
+				overflow: hidden;
+				background-color:#fff;
+				position: relative;
+				margin:0;
+				border-radius:0 0 1rem 1rem;
+			}
+			.pop-cont {
+				padding:3.4rem 2.1rem 2.6rem;
+				.detail-layout {
+					position: relative;
+					.detail-view-img{
+						margin:0 auto;
+						width: 21rem;
+						img{
+							width: 100%;
+						}
+					}
+					.detail-view-top {
+						background-color: #fff;
+						padding:2.6rem 0 1.7rem;
+						.normal{
+							color:#2B2B2B;
+							& > strong{
+								font-size:1.8rem;
+								@include Bold;
+							}
+						}
+					}
+					.detail-layer-cont-terms{
+						background-color: #fff;
+						padding-bottom:2.1rem;
+						& > .table{
+							border-top:1px solid #EBEBEB;
+							border-bottom:1px solid #EBEBEB;
+							padding-bottom:1.7rem;
+							& > table tr th{
+								border-top:0;
+								@include Bold;
+								@include Align-middle-left;
+								color:#2f2f2f;
+								padding:1.7rem 0 0;
+								& > i {
+									margin-right:.4rem;
+								}
+							}
+							& > table tr td{
+								border-top:0;
+								text-align: right;
+								padding-right:0;
+								padding:1.7rem 0 0;
+								& > b{
+									@include Normal;
+									color:#54585a;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+					.detail-layer-submit {
+						button {
+							margin:0 auto;
+							width:8rem;
+							height:3.9rem;
+							color:#54585a;
+							border-color: #d2d2d2;
+							border-radius: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//툴팁 레이어
+.tooltip-box {
+	position: relative;
+	@include Vertical-inline;
+	display: none;
+	cursor: pointer;
+	width:100%;
+	min-height:3.5rem;
+	margin-top:-.3rem;
+	@include Position($top:100%, $left:0);
+	.layer-tooltip {
+		z-index: 10;
+		//display: none;
+		@include Align-middle;
+		width:100%;
+		//@include Position($top:.7rem, $left:0);
+		padding-top:.7rem;
+		.pop-inner {
+			border-radius:.5rem;
+			position: relative;
+			background-color: #fff;
+			border: 1px solid #d2d2d2;
+			width:100%;
+		}
+		.tooltip-cont {
+			
+		}
+
+		.layer-info{
+			@include Align-between;
+			padding:.9rem 0;
+			.tooltip-tit-num{
+				@include Bold;
+				width:30%;
+				font-size:1.1rem;
+				text-align: center;
+			}
+			.tooltip-txt{
+				@include Regular;
+				width:70%;
+				font-size:.8rem;
+				color:#54585a !important;
+			}
+		}
+
+	}
+	// .layer-tooltip:after{
+	// 	display:inline-block;
+	// 	content: "";
+	// 	@include Background($sprite:'ico-arrow-04', $size:100% auto, $position:center center);
+	// 	width: 1.1rem;
+	// 	height: .7rem;
+	// 	@include Position($top:1px, $left:50%);
+	// 	transform: translateX(100%);
+	// }
+	// &.active{
+	// 	@include Vertical-inline;
+	// }
+	&.tooltip-box-option{
+		width:calc(18rem - 1.7rem);
+		transform: translateX(-50%);
+		z-index: 10;
+		.layer-tooltip{
+			padding-top:0;
+			.layer-info{
+				@include Align-left-column;
+				padding:.9rem;
+				.tooltip-txt{
+					width:100%;
+				}
+				.tooltip-tit{
+					font-size:1.1rem;
+					@include Regular;
+					text-align: left;
+				}
+				.tooltip-txt-list{
+					@include Align-box-left;
+					padding-top:.9rem;
+					b{
+						font-size:1rem;
+						@include Bold;
+						text-align: left;
+					}
+					.guide{
+						padding-left:0;
+						text-indent: 0;
+						margin: .4rem 0 0 0;
+						li{
+							font-size: 1rem;
+							text-align: left;
+						}
+						.red_txt{
+							font-size:.8rem;
+						}
+					}
+				}
+				.tooltip-txt + .tooltip-txt{
+					padding-top:.9rem;
+				}
+			}
+		}
+		.layer-tooltip:after{
+			display:none;
+		}
+		&.tooltip-box-option-lt{
+			transform: translateX(0);
+		}
+		&.tooltip-box-option-top{
+			transform: translate(20%,-115%);
+		}
+		&.tooltip-box-option-top-02{
+			transform: translate(20%,-130%);
+		}
+	}
+}

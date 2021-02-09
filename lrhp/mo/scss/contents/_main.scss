@@ -1,0 +1,157 @@
+.main-wrap {
+    //@include Align-middle-column;
+    // display: flex;
+    // flex-flow: column; 
+    // min-height: 100vh;
+    // width:100%;
+    //height:100%;
+    // @include Align-box;
+    display: flex; 
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    .section-list {
+        flex: 1;
+        @include Background($path:'bgs', $sprite:'bg-main-02', $type:'png', $size:100% 100%, $position:center center);
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+        @include Align-middle-column;
+        //align-items: flex-end;
+        //padding-bottom:2.2rem;
+        padding:6vh 0 4vh 0;
+        width:100%;
+        height:calc(100vh - 9rem);
+        .section-top{
+            //padding: 3.9rem 0 0;
+        }
+        .section-menu{
+            padding: 2.2rem 0 2.2rem;
+            width:100%;
+            ul{
+                & > li{
+                    a{
+                        padding:1.8rem 0 1.3rem 0;
+                        margin:.9rem 2.6rem 0;
+                        @include Align-middle-column;
+                        background-color: #fff;
+                        border-radius: .5rem;
+                        h2{
+                            font-size: 1.5rem;
+                            @include Bold;
+                            line-height:1.3;
+                            @include Align-middle;
+                            b{
+                                font-size: 1.5rem;
+                                @include Bold;
+                                line-height:1.3;
+                                color:#ed1c24;
+                            }
+                        }
+                        em{
+                            @include Align-middle;
+                            padding-top:1rem;
+                            font-size:1.1rem;
+                            line-height:1.3;
+                            @include Regular;
+                        }
+                    }
+                }
+                & > li:first-child{
+                    margin-top:0;
+                }
+                // & > li:after{
+                //     display:block;
+                //     content:"";
+                //     border-bottom:1px solid #fff;
+                //     opacity: 0.3;
+                // }
+            }
+        }
+        // .section-bn{
+        //     padding:0 2.1rem;
+        //     .img{
+        //         width:17.3rem;
+        //     }
+        // }
+        .section-foot{
+            padding: 0 2.1rem 0;
+            .btn{
+                height:auto;
+                @include Align-middle;
+                b{
+                    color:#fff;
+                    font-size:1.1rem;
+                    //padding-right:.7rem;
+                    border-bottom:1px solid #fff;
+                    @include Regular;
+                    padding-bottom:.2rem;
+                }
+            }
+        }
+    }
+    .section-bn{
+        //flex: 1;
+        // padding:0 2.1rem;
+        // .img{
+        //     width:17.3rem;
+        // }
+        height:9rem;
+        position: relative;
+        .swiper-slide{
+            width:100%;
+            .img{
+                height:9rem;
+                img{
+                    height:auto;
+                }
+            }
+        }
+        .swiper-pagination-wrap{
+            @include Align-middle-left;
+            width: 100%;
+            z-index: 1;
+            @include Position($bottom: 1.3rem, $left: 0);
+            .swiper-pagination {
+                position: static;
+                //height: 2rem;
+                //padding: 0 1.4rem;
+                margin:0 0 0 2.6rem;
+                border-radius: 1rem;
+                @include Align-middle;
+                .swiper-pagination-bullet {
+                    @include Inline-align-middle;
+                    margin: 0 .4rem;
+                    width: .7rem;
+                    height: .7rem;
+                    border-radius: .5rem;
+                    background-color: #ddd;
+                    border:0;
+                    opacity: 1;
+                    //transition: all .4s;
+                    &.swiper-pagination-bullet-active {
+                        background-color:#ff404b;
+                    }
+                }
+            }
+        }
+    }
+}
+// .main-wrap:after{
+//     display:block;
+//     content:"";
+//     width:100%;
+//     height:100vh;
+//     background-color:#ff3d4a;
+//     opacity:0.9;
+//     @include Position($position:absolute, $top: 0, $left: 0);
+//     margin-left:9.8rem;
+// }
+
+
+
+
+
+
+
+

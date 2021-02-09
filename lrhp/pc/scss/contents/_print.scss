@@ -1,0 +1,214 @@
+.printMap-header{
+    @include Align-between;
+    padding-bottom:40px;
+    border-bottom:1px solid $border-grey;
+
+    h1{
+        font-size:24px; 
+        @include Bold; 
+    }
+    .btns{
+        display:flex;
+        
+        .btn{
+            height:40px;
+            font-size:14px;
+            white-space: nowrap;
+
+            .icon{margin-right:10px;}
+            + .btn{margin-left:10px;}
+        }
+    }
+}
+
+.printMap-header, .tbl-type-list, .branch-driver-section{
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+//전국지점안내 및 전국지점안내 컨텐츠 프린트 페이지 공통 사용
+.customer-branch-printMap{
+    padding-top:60px;
+    .tbl-type-list{
+        .detail-cont{          
+            @include Align-top-left;
+            padding:50px 0;
+            box-sizing: border-box;
+            border-bottom:1px solid $border-grey;  
+
+            .branchesSwiper{width:430px;}
+            .branchesSwiper-controls{
+                @include Align-middle;
+                padding:20px 0;
+
+                .btnAutoplay{
+                    @include Align-middle;
+                    width:25px;
+                    height:25px;
+                    @include Hide_txt;
+                    border:1px solid $border-darkgrey;
+                    border-radius: 25px;
+                    box-sizing: border-box;
+                    
+                    &::before, &::after{
+                        content:"";
+                        width:2px;
+                        height:9px;
+                        background-color:#8f9191;
+                        margin:0 1.5px;
+                    }
+
+                    &.stop{                        
+                        &::before{
+                            display:none;
+                        }                        
+                        &::after{
+                            @include arrowR;
+                            background-color:transparent;
+                            margin:0;
+                        }
+                    }
+                }
+
+                .branchesSwiper-pagination{
+                    @include Align-middle;
+
+                    span{
+                        margin-left:10px;
+                    }
+                }
+            }
+
+            .detail-cont-col{      
+                flex:1;
+
+                .detail-cont-row{
+                    .tit{@include Bold;}
+                    .txt{
+                        margin-top:10px; 
+                        font-size:14px;
+                        color:#54585a;
+                    }
+
+                    + .detail-cont-row{margin-top:30px;}
+
+                    .txt-inner{
+                        line-height:1.4;
+                        padding: 20px;
+                        margin-top: 20px;
+                        background: #f6f6f6;
+
+                        .tit{margin-bottom:10px;}
+
+                        .txt-row{
+                            @include Align-baseline;
+                            word-break: break-word;
+                            margin-top:10px;
+
+                            strong{
+                                flex:none;
+                                width:70px;
+                                flex-basis: 70px;
+                            }
+                        }
+                        li{
+                            + li{margin-top:10px;}
+                        }                    
+                    }
+                }
+                .detail-cont-btns{
+                    display:flex;
+                    margin-top:30px;
+                    
+                    .btn{
+                        width:auto; 
+                        height:40px;
+                        color:#54585a;
+                        @include Regular;
+
+                        .icon{margin-right:5px;}
+                        + .btn{margin-left:10px;}
+                    }
+                }
+
+                + .detail-cont-col{
+                    padding-left:50px;
+                }
+
+                &:first-child{
+                    flex:none;
+                    width:430px;
+                    flex-basis: 430px;
+                }
+            }
+        }
+    }
+}
+//기사포함지점 프린트 페이지
+.customer-branch-driver-printMap{
+    padding-top:60px;
+    .tit-top-box{
+        @include Align-between-top;
+        @include Bold;
+        margin-bottom:30px;
+
+       .tit{                       
+           font-size:30px;
+       }
+       .right{
+           @include Align-middle;
+           color:#ed1c24;
+           font-size:26px;
+           .icon{margin-right:10px;}
+       }
+    }
+    .map{
+        overflow: hidden;;
+        border:1px solid #d2d2d2;
+        margin:60px 0 0;
+        @include roundBox;
+    }  
+    .branch-driver-section{        
+        margin-top:50px;
+
+        .branch-driver-top-area{
+            > .right{
+                width:750px;
+            }
+            .tit-top-box{margin-bottom:35px;}
+            .descri-box{
+                margin-bottom:46px; 
+
+                > .row{
+                    width:100%;
+                    @include Inline-align-top-left;
+                    margin-bottom:10px;
+
+                    dt{
+                        position:relative;
+                        @include Bold; 
+                        width:110px;
+                        flex-basis: 110px;
+                        flex-shrink: 0;
+
+                        &:after{
+                            @include Position($top:50%, $right:15px);
+                            content:"";
+                            display:block;
+                            width:1px;
+                            height:15px;
+                            margin-top:-7px;
+                            background-color:#e7e7e7;
+                        }
+                    }
+                    dd{color:#8f9191;}
+                }                
+            }
+            .btn-box{
+                display:block;
+            }
+            
+        }
+        .map{min-height:380px; margin-bottom:30px;}
+    }
+}

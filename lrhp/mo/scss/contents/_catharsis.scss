@@ -1,0 +1,293 @@
+.catharsis-wrap {
+    background-color: #EFF2F7;
+    padding-bottom: 4rem;
+
+    .section-list {
+
+        .catharsis-list-top{
+            background-color: #DBE1EA;
+            border-radius: 1.5rem;
+            padding: 2.3rem 1.7rem 2.6rem;
+            margin-top: 1.5rem;
+            .catharsis-top-txt {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                margin-bottom: -0.2rem;
+                strong {
+                    margin-top: .8rem;
+                    font-size: 1.7rem;
+                    @include Bold;
+                    span{
+                        font-size: 1.2rem;
+                        display: block;
+                        @include Normal;
+                        margin-bottom: .4rem;
+                    }
+                }
+                &:after {
+                    display: block;
+                    content: '';
+                    width: 7rem;
+                    height: 6rem;
+                    @include Background($sprite:'bg-shin', $size:100% auto, $position:center center, $path:'bgs');
+                }
+            }
+            
+            .catharsis-top-btn {
+                position: relative;
+                z-index: 1;
+            }
+            &-review{
+                .catharsis-top-txt{
+                    padding-bottom:1.5rem;
+                    .lpoint{
+                        margin-top:.4rem;
+                        margin-right:1.7rem;
+                    }
+                    strong{
+                        em{
+                            position: relative;
+                            color:#178FBA;
+                            button{
+                                @include Position($position:absolute, $top: 50%, $right: -1.7rem);
+                                transform: translateY(-50%);
+                            }
+                        }
+                        span{
+                            color:#2B2B2B;
+                        }
+                    }
+                    &:after{
+                        display:none;
+                    }
+                }
+                .catharsis-top-info{
+                    position: relative;
+                    padding:1.5rem 2rem 1.8rem;
+                    &:after{
+                        display: block;
+                        content:"";
+                        border-top:1px solid #000;
+                        opacity:0.1;
+                        @include Position($position:absolute, $top: 0, $left: 0);
+                        width:100%;
+                    }
+                    & > ul{
+                        & > li{
+                            position: relative;
+                            & > span{
+                                padding-left:.6rem;
+                            }
+                            & > strong{
+                                @include Bold;
+                            }
+                            &:after{
+                                display:block;
+                                content:"";
+                                @include Background($sprite:'ico-circle', $size:100% auto, $position:center center);
+                                width: 2px;
+                                height: 2px;
+                                @include Position($position:absolute, $top: 50%, $left: 0);
+                                transform: translateY(-50%);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .catharsis-list{
+            &-text-review{
+                .text-cont-in{
+                    .img {
+                        position: relative; 
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        background-color: #fff;  
+                    }
+                    .text {
+                        white-space: normal;
+                        margin-top:1.3rem;
+                        strong {
+                            @include Ellipsis($lines:2);
+                            line-height: 1.3;
+                            word-break: keep-all;
+                        }
+                        span {
+                            display: block;
+                            @include Bold;
+                            margin-top: 1.1rem;
+                        }
+                    }
+                    .thumb { 
+                        margin-top: .9rem;
+                        @include Align-between;
+                        .info{
+                            color: #999;
+                            margin-left:1rem;
+                        }
+                        .days {color: #999;}
+                    }
+                    .star {
+                        margin-top: .4rem;
+                        font-size: 0;
+                        i {
+                            margin-top: 0;
+                            margin-left: .4rem;
+                        }
+                        i:first-child{
+                            margin-left:0;
+                        }
+                    }
+                }
+            }
+            &-tv{
+                background-color: #fff;
+                border-radius: 1.5rem;
+                padding: 2.6rem 1.7rem;
+                margin-top:2.4rem;
+                .unit-normal {
+                    margin-top:0;
+                    + .unit-normal {
+                        margin-top:.9rem;
+                    }
+                    .text{
+                        & > strong{
+                            & > b{
+                                color:#999;
+                            }
+                        }
+                    }
+                    .video02{
+                        @include Position($top: 50%, $left: 50%);
+                        transform: translate(-50%,-50%);
+                        z-index:2;
+                    }
+                }
+                .unit-pro{
+                    margin-bottom:.9rem;
+                    ul {
+                        @include NoscrollBar;
+                        @include Inline-scrolling;
+                        margin-top: 1.7rem;
+                        li {
+                            display: inline-block;
+                            margin-right:1.5rem;
+                            vertical-align: middle;
+                            max-width: 23.5rem;
+                            a {
+                                display: block;
+                            }
+                            .img {
+                                position: relative; 
+                                border-radius: 1rem;
+                                overflow: hidden;
+                                background-color: #EEF1F6;
+                                display: inline-block;
+                                width: 10.2rem;
+                                img{
+                                    mix-blend-mode: multiply;
+                                }  
+                            }
+                            .text {
+                                white-space: normal;
+                                margin:.9rem 1.3rem 0;
+                                display: inline-block;
+                                vertical-align: top;
+                                height:100%;
+                                strong {
+                                    display: block;
+                                    line-height: 1.3;
+                                    word-break: keep-all;
+                                }
+                                span {
+                                    display: block;
+                                    @include Bold;
+                                    margin-top: .4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .catharsis-tv-view{
+            position: relative;
+            .video02{
+                @include Position($top: 50%, $left: 50%);
+                transform: translate(-50%,-100%);
+            }
+        }
+        .catharsis-tv-bn{
+            margin-top:1.2rem;
+        }
+
+    }
+    .section-detail{
+        .text-detail-cont-tv{
+            .detail-img{
+                margin:0 -1.7rem;
+            }
+            .detail-cont-txt{
+                border-top:0 none;
+            }
+            .unit-pro{
+                margin-bottom:.9rem;
+                ul {
+                    @include NoscrollBar;
+                    @include Inline-scrolling;
+                    margin-top: 1.7rem;
+                    li {
+                        display: block;
+                        width: 100%;
+                        margin-top:1.2rem;
+                        a {
+                            display: block;
+                        }
+                        .img {
+                            position: relative; 
+                            border-radius: 1rem;
+                            overflow: hidden;
+                            background-color: #EEF1F6;
+                            display: inline-block;
+                            width: 10.2rem;
+                            img{
+                                mix-blend-mode: multiply;
+                            }
+                        }
+                        .text {
+                            white-space: normal;
+                            margin-left: 1.3rem;
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-top:.9rem;
+                            strong {
+                                display: block;
+                                line-height: 1.3;
+                                word-break: keep-all;
+                            }
+                            span {
+                                display: block;
+                                @include Bold;
+                                margin-top: .4rem;
+                            }
+                        }
+                    }
+                    & > li:first-child{
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+

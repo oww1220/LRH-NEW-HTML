@@ -1,0 +1,406 @@
+.fixedBottom {
+    @include Position( $position:fixed, $bottom: 0, $left: 0);
+    @include Hide_txt;
+    z-index: 41;
+    width: 100%;
+    height: 7rem;
+    box-sizing: border-box;
+    transform: translate3d(0, 0, 0);
+    transition: transform .2s;
+    .fixedBottom_in {
+        @include Align-between;
+        height: 5.1rem;
+        margin-top:1.9rem;
+        box-sizing: border-box;
+        border-top:1px solid #EBEBEB;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        &:after {
+            display: block;
+            content: '';
+            @include Background($sprite:'bg-fixedRight', $size:100% auto, $position:center center, $path:'bgs');
+            width: 13rem;
+            height: 2.8rem;
+            @include Position($top: -.8rem, $left: 50%);
+            margin-left: -6.5rem;
+        }
+        button {
+            @include Align-middle-column;
+            margin:0;
+            span {
+                display: block;
+                font-size:1rem;
+                margin-top:.4rem;
+            }
+        }
+        .left {
+            @include Align-box;
+            flex-basis:calc(50% - 3rem);
+            height: 100%;
+            box-sizing: border-box;
+            padding-top: .5rem;
+            button {
+                flex-basis:50%;
+            }
+        }
+        .center {
+            position: relative;
+            z-index: 1;
+            @include Align-middle;
+            flex-basis:6rem;
+            margin-bottom: 2rem;
+            span {font-size:1rem;}
+        }
+        .right {
+            @include Align-box;
+            flex-basis:calc(50% - 3rem);
+            height: 100%;
+            box-sizing: border-box;
+            padding-top: .5rem;
+            button {
+                flex-basis:50%;
+            }
+        }
+    }
+    &.close {
+        transform: translate3d(0, 115%, 0);
+    }
+}
+
+.fixedRight {
+    @include Position( $position:fixed, $bottom: 3.6rem, $right: 0);
+    z-index: 11;
+    transition: transform .2s; 
+    padding: 1.7rem;
+    @include Align-right-column;
+    button {
+        display: block;
+        margin-top: .9rem;
+    }
+    &.close-topBt {
+        transform:translate3d(0, 5.5rem, 0) scale(1);
+        .btn-goTop {
+            transform:scale(0);
+            opacity: 0;
+            transition: opacity .2s, transform .2s;
+        }
+    }
+    .goQuick-menu-list{
+        @include Align-right-column;
+        transform:scale(0);
+        opacity: 0;
+        transition: opacity .2s, transform .2s;
+        width:0;
+        height:0;
+        li{
+            margin-top: .8rem;
+        }
+        span{
+            font-size:1.1rem;
+            color:#fff;
+            @include Regular;
+        }
+        i{
+            margin-left:.9rem;
+        }
+        &.active{
+            transform:translate3d(0, 0, 0) scale(1);
+            opacity: 1;
+            width:auto;
+            height:auto;
+        }
+    }
+    .btn-goQuick{
+        &.btn-goQuick-close{
+            @include Background($sprite:'ico-goQuick-close', $size:100% auto, $position:center center);
+        }
+    }
+}
+
+.toast-message {
+    @include Position( $position:fixed, $bottom: 0, $left:0);
+    @include Bold;
+    @include Align-middle;
+    width: calc(100% - 2rem);
+    height: 4.1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 115%, 0);
+    transition: opacity .5s, visibility .5s, transform .5s;
+    margin:1rem;
+    border-radius: 1rem;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fixedBottom.close ~ .fixedRight {
+    transform: translate3d(0, 5.5rem, 0);
+}
+
+.fixedBottom ~ .fixedRight,
+.estimateBottom ~ .fixedRight,
+.unit-text-write-wrap ~ .fixedRight{
+    bottom: 5rem;
+}
+
+.fixedRight ~ div > iframe#launcher {
+    bottom: 3.6rem !important;
+    z-index: 41 !important;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+}
+
+.fixedBottom ~ .fixedRight ~ div > iframe#launcher,
+.noFixBottom.fixedRight ~ div > iframe#launcher {
+    bottom: 5.5rem !important;
+}
+
+.noBottomLayer.fixedRight ~ div > iframe#launcher {
+    bottom: 0 !important;
+}
+
+.fixedBottom.close ~ .fixedRight ~ div > iframe#launcher {
+    transform: translate3d(0, 5.5rem, 0);
+}
+
+.noFixBottom ~ div > iframe#launcher {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+
+//하단 고정 버튼 [승계게시판/승계차량, 마이페이지/단기렌터카상세]
+.fixed-btnBottom {
+    @include Position( $position:fixed, $bottom: 0, $left: 0);
+    z-index: 41;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -3px 12px rgba(96, 97, 112, 0.3);
+    .bottom-top {
+        width:100%;
+        div {
+            @include Position($top: -80%, $right: 1.7rem);
+            @include Align-middle;
+            b {
+                font-size:1.1rem;
+                margin-right:1.3rem;
+                display: block;
+                @include Align-middle;
+                @include Background($sprite:'bg-tip', $size:100% 100%, $position:center center, $path:'bgs');
+                width:12rem;
+                height:2.6rem;
+                text-align: center;
+                em {
+                    padding-left:.4rem;
+                    color:#ff004b
+                }
+            }
+            button {
+                font-size:1.2rem;
+                height:2.6rem;
+                @include Bold;
+            }
+        }
+        ul {
+            @include Inline-align-middle;
+            background-color: #fff;
+            width:100%;
+            height:4.7rem;
+            margin:0;
+            li {
+                width:auto;
+                height:100%;
+                button {
+                    height:100%;
+                    padding:0 2.6rem;
+                    color:#e7e7e7;
+                    @include Bold;
+                    &.active {
+                        color:#54585a;
+                    }
+                    &.my_shor_font{
+                        font-size:1.1rem;
+                    }
+                }
+                & + li {
+                    position: relative;
+                    &::before {
+                        content:'';
+                        display: inline-block;
+                        height: 1.7rem;
+                        border-left: 1px solid #999;
+                        @include Position($top: 50%, $left: 0);
+                        transform: translateY(-.7rem);
+                    }
+                }
+            }
+        }
+        .list-type-col3{
+            & > li{
+                button{
+                    padding: 0 2.1rem;
+                }
+            }
+        }
+
+    }
+    button {
+        font-size:1.6rem;
+    }
+    li {
+        button {
+            width:100%;
+            font-size:1.6rem;
+        }
+    }
+    //메인 신차장 하단 버튼
+    &.mainlongTermBottom{
+        //background-color: #fff;
+        background-color: transparent;
+        @include Align-middle;
+        //height: 6rem;
+        padding-top: 1.3rem;
+        box-shadow: 0 0 0 0;
+        .detail-layer-list-btn{
+            background-color: #ff404b;
+        }
+        li {
+            a {
+                font-size:1.6rem;
+                @include Align-middle-column;
+                padding-bottom: 1.3rem;
+                margin-top: -1.9rem;
+                span{
+                    font-size:1rem;
+                    //padding:.7rem 0 0 0;
+                    //color:#54585a;
+                    color:#fff;
+                    @include Bold;
+                }
+            }
+        }
+    }
+
+    //실시간예약 하단 버튼
+    &.bottom-top-amount{
+        box-shadow:0 0 0 0;
+        //background-color: #fff;
+        //padding:0 1.7rem 1.7rem;
+        //border-top:1px solid #8f9191;
+        .summary-table-wrap{
+            border:0 none;
+            border-radius: 0;
+            padding:1.1rem 0 0;
+            background-color: transparent;
+            .summary-toggle-btn{
+                height:auto;
+                background-color: transparent;
+                border-top:1px solid #8f9191;
+                box-shadow: 0 -3px 12px rgba(96, 97, 112, 0.3);
+                strong{
+                    @include Hide_txt;
+                }
+                &.active{
+                    border-top:1px solid #ff404b;
+                }
+                &.active:after{
+                    @include Background($sprite:'ico-amount-arrow-down', $size:100% auto, $position:center center);
+                    transform: rotate(0);
+                    transform: translateX(-50%);
+                }
+            }
+            .summary-toggle-btn:after{
+                @include Background($sprite:'ico-amount-arrow-on', $size:100% auto, $position:center center);
+                width: 4.7rem;
+                height: 1.1rem;
+                transform: translateX(-50%);
+                top:-1.1rem;
+                left:50%;
+                right: auto;
+                margin:0;
+            }
+            .summary-cont-bottom-01{
+                background-color: #fff;
+                padding:1.7rem 1.7rem 0;
+                .bottom-amount-cont-top{
+                    @include Align-between;
+                    padding:0 .9rem 1.3rem;
+                    b{
+                        font-size:1.1rem;
+                        @include Bold;
+                    }
+                    em{
+                        font-size:1.1rem;
+                        @include Bold;
+                    }
+                }
+                .table{
+                    background-color: #fafafa;
+                    border-radius: .5rem;
+                    table{
+                        td{
+                            position: relative;
+                            padding: 1.4rem 0;
+                            border-top:0 none;
+                            text-align: center;
+                            span{
+                                @include Regular;
+                                color:#54585a;
+                            }
+                            b{
+                                color:#54585a;
+                                margin-top:.6rem;
+                            }
+                        }
+                        td:first-child{
+                            padding: 1.4rem 0 1.4rem 1.3rem;
+                        }
+                        td:first-child:after{
+                            display:inline-block;
+                            content: "";
+                            width: 1px;
+                            height:2.6rem;
+                            background-color: #e7e7e7;
+                            @include Position($top: 50%, $right: -5%);
+                            transform: translateY(-50%);
+                        }
+                        td:last-child{
+                            padding: 1.4rem 1.3rem 1.4rem 0;
+                        }
+                        td:last-child:after{
+                            display:inline-block;
+                            content: "";
+                            width: 1px;
+                            height:2.6rem;
+                            background-color: #e7e7e7;
+                            @include Position($top: 50%, $left: -5%);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+        .bottom-amount-default{
+            background-color: #fff;
+            @include Align-between;
+            padding:1.7rem 2.6rem 1.7rem;
+            b{
+                font-size:1.4rem;
+                @include Bold;
+            }
+            em{
+                font-size:1.4rem;
+                @include Bold;
+                color:#ed1c24;
+                span{
+                    font-size: 1.2rem;
+                    color:#ed1c24;
+                }
+            }
+        }
+    }
+}

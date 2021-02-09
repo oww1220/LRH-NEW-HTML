@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+    <!--//header 컴포넌트-->
+	<main id="wrap" >
+		<div class="path-wrap">
+			<div class="cover">
+				<div class="inner">            
+					<ul>
+						<li>
+							<a href=""> 
+								<span class="icon home">HOME</span>
+							</a>
+						</li>
+						<li>
+							<a href="">단기렌터카</a>
+						</li>
+						<li>
+							<a href="">실시간예약</a>
+						</li>
+						<li>
+							<a href="">내륙예약</a>
+						</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+		
+		<!--단기렌터카 할인/결제 -->
+		<div class="short-container">
+			<div class="inner-type2">	
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">내륙예약</h2>					
+				</section>
+				<!-- //페이지 타이틀 -->
+				<!-- 진행 단계 -->
+				<div class="section-top">
+					<ol class="step-list">
+						<li >
+							<span class="icon progress"></span>
+							<p class="txt">예약/약관</p>
+						</li>
+						<li class="active">
+							<span class="icon complete"></span>
+							<p class="txt">할인/결제</p>
+						</li>
+						<li>
+							<span class="icon progress"></span>
+							<p class="txt">완료</p>
+						</li>
+					</ol>
+				</div>
+				<!-- //진행 단계 -->
+
+				<div class="realTime-cont">
+					<div class="section-cont">
+						<form action="" method="">
+							<fieldset>
+								<!-- <section class="section-form form12">
+									<div class="form-header">
+										<h3 class="tit-size-mid">최종결제정보</h3>
+									</div>					
+									<div class="form-cont">
+										<div class="tbl-box">
+											<table>
+												<tbody>
+													<tr>
+														<th>대여금액</th>
+														<td>285,000 원</td>
+													</tr>
+													<tr>
+														<th>할인금액</th>
+														<td>-164,000 원
+															<b>
+																[서울전지점] (김포공항, 상봉제외) <br/>
+																여름 휴가 50% 할인이벤트 
+															</b>
+														</td>
+													</tr>
+													<tr>
+														<th>추가할인정보</th>
+														<td>0 원</td>
+													</tr>	
+													<tr>
+														<th>보험 및 기타옵션</th>
+														<td>20,000 원</td>
+													</tr>
+													<tr>
+														<th>결제금액</th>
+														<td>141,000 원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+								</section> -->
+								<section class="section-form form13">
+									<div class="form-header">
+										<h3 class="tit-size-mid">나의 등록카드</h3>
+									</div>					
+									<div class="form-cont">
+										<div class="row type2">
+											<div class="input-cont">
+												<div class="chk-icon-box type-square">
+													<input type="checkbox" id="chk03" checked="">
+													<label for="chk03">이 결제 수단을 다음 번에도 사용</label>											
+												</div>
+											</div>
+										</div>
+										<!-- 결제수단 선택 탭메뉴-->
+										<div class="row type2">
+											<div class="detail-radio">
+												<ul class="choice-list list-type-col4 detail-radio-box">
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="r-chk04" name="card-select"  checked="" value="P">
+															<label for="r-chk04"><i class="icon enroll enroll01"></i>간편결제</label>	
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box" >
+															<input type="radio" id="r-chk05" name="card-select" value="D">
+															<label for="r-chk05"><i class="icon enroll enroll02"></i>등록카드</label>	
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="r-chk06" name="card-select" >
+															<label for="r-chk06"><i class="icon enroll enroll03"></i>PAYCO간편결제</label>	
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="r-chk07" name="card-select" >
+															<label for="r-chk07"><i class="icon enroll enroll04"></i>신용카드</label>	
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="r-chk08" name="card-select" >
+															<label for="r-chk08"><i class="icon enroll enroll05"></i>네이버페이</label>	
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="r-chk09" name="card-select" >
+															<label for="r-chk09"><i class="icon enroll enroll06"></i>카카오페이</label>	
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="r-chk10" name="card-select" >
+															<label for="r-chk10"><i class="icon enroll enroll07"></i>삼성페이</label>	
+														</div>
+													</li>
+													<li>
+														<div class="chk-view-box">
+															<input type="radio" id="r-chk11" name="card-select" value="L">
+															<label for="r-chk11"><i class="icon enroll enroll08"></i>카드번호 직접입력</label>	
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- //결제수단 선택 탭메뉴 -->
+
+										<!-- 탭메뉴에 따른 하위 컨텐츠 -->
+										<div class="row">
+											<!-- L.pay 간편결제 -->
+											<div class="detail-radio-cont detail-tab-wrap-P active">
+												<div class="tab-row lpay-card">
+													<div class="card-add">
+														<ul class="list-type-col2">
+															<li>
+																<div class="chk-view-box">
+																	<!-- <i></i> -->
+																	<input type="radio" name="chk12" id="chk12-1" checked="">
+																	<!-- <label for="chk12">L.pay 카드</label>	 -->
+																	<label for="chk12-1">
+																		<b>삼성카드</b>
+																		<em>3491</em>
+																		<div>
+																			<span>별칭</span>
+																			<i class="icon lpoint"></i>
+																		</div>
+																	</label>
+																</div>
+															</li>
+															<li>
+																<div class="chk-view-box">
+																	<input type="radio" name="chk12" id="chk12-2">
+																	<label for="chk12-2">
+																		<b>우리카드</b>
+																		<em>3491</em>
+																		<div>
+																			<span>별칭</span>
+																			<i class="icon lpoint"></i>
+																		</div>
+																	</label>
+																</div>
+															</li>
+															<li>
+																<div class="card-add-btn">
+																	<a href="http://web.lpay.com" target="_blank" class="btn btn-black">
+																		<i class="icon">+</i>
+																		<em>결제수단 등록</em>
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="input-add">
+														<!-- <div>
+															<label for="" class="input-tit">카드선택</label>
+															<div class="input-cont">
+																<select class="selectbox" name="" id="">
+																	<option value="">카드선택</option>
+																	<option value="">선택1</option>
+																	<option value="">선택2</option>
+																</select>
+															</div>
+														</div> -->
+														<div>
+															<label for="" class="input-tit">할부기간</label>
+															<div class="input-cont">
+																<select class="selectbox" name="" id="">
+																	<option value="">일시불</option>
+																	<option value="">선택1</option>
+																	<option value="">선택2</option>
+																</select>
+															</div>
+														</div>
+														<ul class="lst dot">
+															<li>
+																비밀번호 없이 한번에 결제 OK! 
+															</li>
+															<li>
+																L.PAY 는 결제정보를 미리 등록하여 비밀번호 입력만으로 빠르게 결제 할 수 있는 간편결제 서비스 
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<!-- 등록카드 -->
+											<div class="detail-radio-cont detail-tab-wrap-D">
+												<div class="tab-row direct-input">
+													<div class="input-add">
+														<div>
+															<label for="" class="input-tit">카드선택</label>
+															<div class="input-cont">
+																<select class="selectbox" name="" id="">
+																	<option value="">카드선택</option>
+																	<option value="">선택1</option>
+																	<option value="">선택2</option>
+																</select>
+															</div>
+														</div>
+														<div>
+															<label for="" class="input-tit">할부기간</label>
+															<div class="input-cont">
+																<select class="selectbox" name="" id="">
+																	<option value="">일시불</option>
+																	<option value="">선택1</option>
+																	<option value="">선택2</option>
+																</select>
+															</div>
+														</div>
+														<ul class="lst dot">
+															<li>
+																등록카드로 결제하면 차량대여요금 5천원 추가할인!
+																<div class="btn-box">
+																	<button type="button" class="btn btn-black layer-infos-open" data-layer="layer-registration-card">카드추가</button>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<!-- 카드 번호직접입력 -->
+											<div class="detail-radio-cont detail-tab-wrap-L">
+												<div class="tab-row direct-input">
+													<div class="input-add">
+														<div>
+															<span class="input-tit">카드종류</span>
+															<div class="input-cont radio-cont">
+																<div class="radio-icon-box">
+																	<input type="radio" name="radio2" id="radio4" checked="">
+																	<label for="radio4">
+																		개인카드
+																	</label>
+																</div>
+																<div class="radio-icon-box">
+																	<input type="radio" name="radio2" id="radio5">
+																	<label for="radio5">
+																		법인카드
+																	</label>
+																</div>
+															</div>
+														</div>
+														<div>
+															<label for="" class="input-tit">카드번호</label>
+															<div class="input-cont">
+																<select class="selectbox" name="" id="">
+																	<option value="">카드선택</option>
+																	<option value="">선택1</option>
+																	<option value="">선택2</option>
+																</select>
+															</div>
+														</div>
+														<div>
+															<label for="" class="input-tit">유효기간</label>
+															<div class="input-cont">
+																<div class="inputT">
+																	<input type="text" id="" name="" placeholder="MMY"/>
+																</div>
+															</div>
+														</div>
+														<div>
+															<label for="" class="input-tit">할부기간</label>
+															<div class="input-cont">
+																<select class="selectbox" name="" id="">
+																	<option value="">일시불</option>
+																	<option value="">선택1</option>
+																	<option value="">선택2</option>
+																</select>
+															</div>
+														</div>
+														<div>
+															<label for="" class="input-tit">비밀번호</label>
+															<div class="input-cont">
+																<div class="inputT">
+																	<input type="text" id="" name="" placeholder="비밀번호 앞 2자리를 입력하세요." maxlength="2"/>
+																</div>
+															</div>
+														</div>
+														<div>
+															<label for="" class="input-tit">생년월일</label>
+															<div class="input-cont">
+																<div class="inputT">
+																	<input type="text" id="" name="" placeholder="주민번호 앞 6자리 입력하세요." maxlength="6"/>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //탭메뉴에 따른 하위 컨텐츠 -->
+									</div>
+								</section>
+								<section class="section-form form14">
+									<div class="form-header">
+										<h3 class="tit-size-mid">취소 수수료 안내</h3>
+									</div>					
+									<!-- 20210122 : 마크업 변경 -->
+									<div class="form-cont">
+										<div class="row">
+											<ul class="lst dot">
+												<li>
+													차량 수령 24시간 전 취소 : 전액 환불
+												</li>
+												<li>
+													차량 수령 24시간 이내 ~ 수령시간까지 취소 : 취소수수료 발생 (3,000원)
+												</li>
+												<li>
+													차량 수령시간 이후 : NO SHOW 수수료 발생 (차량대여요금의 10% )
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //20210122 : 마크업 변경 -->
+								</section>
+							</fieldset>
+						</form>
+					</div>
+					<!-- 스틱키 lnb -->
+					<div class="section-sticky-lnb">
+						<div class="lnb-wrap">
+							<div class="sticky-view-info">
+								<div class="info-top align-c">
+									올뉴 쏘렌토
+								</div>
+								<div class="info-cover">
+									<img src="/lrhp/pc/images/@temp-estimate-list06.png" alt="더미">
+								</div>
+								<ul class="lst dot">
+									<li>
+										실제 대여하는 차량과 외관, 색상, 옵션 등 차이가 있을 수 있으며 
+										사고 또는 고장 등 부득이한 경우 동급차종으로 변경될 수 있습니다.
+									</li>
+								</ul>
+							</div>
+							<div class="detail-sticky-items">
+								<div class="detail-sticky">
+									<div class="detail-sticky-iscroll">
+										
+										<div class="sticky-cont">
+											<div class="cont-result">
+												<ul>
+													<li>
+														<div>
+															<strong>대여지점</strong>
+															<div>
+																<span>강남</span>
+																<span>2020.11.27 10시 00분</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div>
+															<strong>반납지점</strong>
+															<div>
+																<span>인천국제공항(터미널)</span>
+																<span>2020.11.27 10시 00분</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div>
+															<strong>대여금액</strong>
+															<div>
+																<span class="price">150,000<em>원</em></span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div>
+															<strong>보험 및 기타옵션</strong>
+															<div>
+																<span>0원</span>
+															</div>
+														</div>
+														<ul>
+															<li>
+																<div>
+																	<strong>보험 미적용</strong>
+																	<div>
+																		<span>0원</span>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<div>
+															<strong>할인금액</strong>
+															<div>
+																<span class="price">-82,500<em>원</em></span>
+															</div>
+														</div>
+														<ul>
+															<li>
+																<div>
+																	<strong>비회원 할인 50%</strong>
+																	<div>
+																		<span>44,000원</span>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div>
+																	<strong>추가할인</strong>
+																	<div>
+																		<span>0원</span>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<div>
+															<strong>총금액</strong>
+															<div>
+																<span class="price">44,000<em>원</em></span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="sticky-btn">
+											<ul class="list-type-col2">
+												<li><a href="" class="btn btn-white">취소</a></li>
+												<li><button type="submit" class="btn btn-red">다음</button></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //스틱키 lnb -->
+				</div>
+			</div>	
+		</div>
+		<!-- //단기렌터카 할인/결제 -->
+	</main>
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+	<!--bg-dimmed 컴포넌트-->
+	<div class="bg-dimmed">딤(Dim)처리 배경</div>
+	<!--//bg-dimmed 컴포넌트-->
+
+
+	<!--floating_zone 컴포넌트-->
+	<aside class="floating_zone" style="display: none;">
+		플로팅 사이드 바영역
+	</aside>
+	<!--//floating_zone 컴포넌트-->
+
+	<!--  L.POINT 레이어 -->
+	<div class="layer-wrap layer-popup layer-infos layer-shor-lpoint">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>L.POINT 온라인 사용인증 서비스</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-shor-lpoint">
+					<span class="icon pop-close">닫기 버튼</span>
+				</button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					<div class="talk-section">
+						<span class="icon talk3"></span>
+						<span>
+							안전한 L.POINT 결제를 위해 고객님이 소지하신 포인트 카드의<br/>
+							본인 확인이 필요합니다.
+						</span>
+					</div>
+					<div class="form-cont between-type">
+						<div class="form-row">
+							<label for="" class="input-tit">카드번호</label>
+							<div class="input-cont">
+								<ul class="list-type-col4">
+									<li>
+										<div class="inputT">
+											<input type="tel" id="">
+										</div>
+									</li>
+									<li>
+										<div class="inputT">
+											<input type="tel" id="">
+										</div>
+									</li>
+									<li>
+										<div class="inputT">
+											<input type="tel" id="">
+										</div>
+									</li>
+									<li>
+										<div class="inputT">
+											<input type="tel" id="">
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="" class="input-tit">비밀번호</label>
+							<div class="input-cont">
+								<div class="inputT">
+									<input type="text" placeholder="L.POINT 비밀번호를 입력해주세요.">
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="lst dot">
+						<li>본인 명의의 카드로만 조회 및 사용이 가능합니다.</li>
+						<li>
+							L.POINT 비밀번호는 숫자6자리 또는 영문/숫자 6~8자리로 구성됩니다. <br/>
+							(최초 설정은 L.POINT 에서 가능) <button>비밀번호 설정하기</button><br/>
+							5회 이상 비밀번호 입력이 틀릴 경우 새로운 비밀번호 등록이 필요합니다. <br/>
+							비밀번호 설정하기 버튼을 눌러 L.POINT 서비스에서 설정 해주세요.
+						</li>
+						<li>L.pay로 결제하시면 비밀번호 없이 편리하게 사용 가능합니다.</li>
+					</ul>	
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-shor-lpoint">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // L.POINT 레이어 -->
+
+	<!--  등록카드 정보 입력 레이어 -->
+	<div class="layer-wrap layer-popup layer-infos layer-registration-card">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>등록카드 정보 입력</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-registration-card">
+					<span class="icon pop-close">닫기 버튼</span>
+				</button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					
+						<div class="form-cont between-type">
+							<div class="form-row">
+								<label for="" class="input-tit">카드사</label>
+								<div class="input-cont">
+									<select class="selectbox" id="" value="">
+										<option value="">선택하세요.</option>
+										<option value="">국민</option>
+										<option value="">비씨</option>
+										<option value="">삼성</option>
+										<option value="">현대</option>
+										<option value="">신한</option>
+										<option value="">롯데</option>
+										<option value="">하나</option>
+										<option value="">NH농협</option>
+										<option value="">외환</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-row">
+								<label for="" class="input-tit">카드별명</label>
+								<div class="input-cont">
+									<div class="inputT">
+										<input type="text" id="" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="form-row">
+								<label for="" class="input-tit">카드번호</label>
+								<div class="input-cont">
+									<ul class="list-type-col4">
+										<li>
+											<div class="inputT">
+												<input type="tel" id="">
+											</div>
+										</li>
+										<li>
+											<div class="inputT">
+												<input type="tel" id="">
+											</div>
+										</li>
+										<li>
+											<div class="inputT">
+												<input type="tel" id="">
+											</div>
+										</li>
+										<li>
+											<div class="inputT">
+												<input type="tel" id="">
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-row">
+								<label for="" class="input-tit">유효기간</label>
+								<div class="input-cont">
+									<ul class="list-type-col2">
+										<li>
+											<select class="selectbox">
+												<option>년</option>
+												<option>2020</option>
+												<option>2021</option>
+												<option>2022</option>
+												<option>2023</option>
+												<option>2024</option>
+												<option>2025</option>
+												<option>2026</option>
+												<option>2027</option>
+												<option>2028</option>
+												<option>2029</option>
+												<option>2030</option>
+											</select>
+										</li>
+										<li>
+											<select class="selectbox" id="">
+												<option>월</option>
+												<option>01</option>
+												<option>02</option>
+												<option>03</option>
+												<option>04</option>
+												<option>05</option>
+												<option>06</option>
+												<option>07</option>
+												<option>08</option>
+												<option>09</option>
+												<option>10</option>
+												<option>11</option>
+												<option>12</option>
+											</select>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-row">
+								<label for="" class="input-tit">비밀번호</label>
+								<div class="input-cont">
+									<div class="inputT">
+										<input type="text" id="" placeholder="비밀번호 앞 2자리 숫자">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 20210121 : 마크업 변경 -->
+						<div class="section-form">
+							<div class="form-header">
+								<h3 class="tit-size-mid">카드정보 등록을 위한 이용자 동의 사항</h3>
+							</div>
+							
+							<div class="form-cont agree-area agreeAccor">
+								<div class="row">
+									<div class="agree-header">
+										<div class="agree-header-top">
+											<div class="chk-icon-box type-circle">
+												<input type="checkbox" id="agreeTest01">	
+												<label for="agreeTest01">											
+													전체동의
+												</label>										
+											</div>
+										</div>								
+									</div>			
+									<div class="agree-body">
+										<ul>
+											<li>
+												<div class="agree-body-header">
+													<div class="chk-icon-box">
+														<input type="checkbox" id="agreeTest02">	
+														<label for="agreeTest02">											
+															개인정보 수집 및 이용안내 동의사항 (필수)
+														</label>										
+													</div>
+													<button type="button" class="btnToggle" data-target="toggleCont01" data-on="true" data-siblings="false">
+														자세히
+													</button>
+												</div>
+												<div class="agree-body-cont toggleCont toggleCont01">
+													내용
+												</div>
+											</li>
+											<li>
+												<div class="agree-body-header">
+													<div class="chk-icon-box">
+														<input type="checkbox" id="agreeTest03">	
+														<label for="agreeTest03">											
+															개인정보 위탁 및 제공안내 이용자 동의 사항 (필수)
+														</label>										
+													</div>
+													<button type="button" class="btnToggle" data-target="toggleCont02" data-on="true" data-siblings="false">
+														자세히
+													</button>
+												</div>
+												<div class="agree-body-cont toggleCont toggleCont02">
+													내용
+												</div>
+											</li>
+											<li>
+												<div class="agree-body-header">
+													<div class="chk-icon-box">
+														<input type="checkbox" id="agreeTest04">	
+														<label for="agreeTest04">											
+															전자금융 이용약관 이용자 동의 (필수)
+														</label>										
+													</div>
+													<button type="button" class="btnToggle" data-target="toggleCont03" data-on="true" data-siblings="false">
+														자세히
+													</button>
+												</div>
+												<div class="agree-body-cont toggleCont toggleCont03">
+													내용
+												</div>
+											</li>
+											<li>
+												<div class="agree-body-header">
+													<div class="chk-icon-box">
+														<input type="checkbox" id="agreeTest05">	
+														<label for="agreeTest05">											
+															정기과금 이용약관 이용자 동의사항 (필수)
+														</label>										
+													</div>
+													<button type="button" class="btnToggle" data-target="toggleCont04" data-on="true" data-siblings="false">
+														자세히
+													</button>
+												</div>
+												<div class="agree-body-cont toggleCont toggleCont04">
+													내용
+												</div>
+											</li>
+										</ul>
+									</div>						
+									
+								</div>
+							</div>							
+						</div>
+						<!-- //20210121 : 마크업 변경 -->
+						
+						<div class="btn-area">
+							<a href="" class="btn btn-white">취소</a>
+							<button type="submit" class="btn btn-red">등록</button>
+						</div>
+											
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- // 등록카드 정보 입력 레이어 -->
+
+	<script>
+		$(function(){
+	
+			//스티키
+			if($('.section-sticky-lnb').length) {
+				(function (){
+					var stickyFixObj = MUI.stickyFix.init({
+						target: '.detail-sticky-items', 
+						parent: '.realTime-cont', 
+						targetScroll: '.detail-sticky-iscroll', 
+						targetItem: '.detail-sticky', 
+						navHeight: 0,
+						noTargetHeight: '.sticky-view-info',
+						parentMinHeight: 1160,
+					});
+					$(window).on('scroll', function(e) {		
+						stickyFixObj.calculate();
+					});
+	
+				})();
+			}
+	
+	
+		});
+	</script>
+
+</body>
+</html>
