@@ -2089,6 +2089,45 @@
         }
     }
 
+    //20210209 - 하단 배너 추가
+    .banner{            
+        &--bot{            
+            padding-top:2.6rem;           
+
+            .banner__inner{
+                padding: 3rem 1.7rem;
+                color:#fff;
+                @include Background($sprite: 'bg-longTerm-bot', $type:'jpg', $path:'bgs', $size:cover);
+
+                .banner__tit{
+                    font-size:1.3rem;
+
+                    strong{                        
+                        @include Bold;
+                        display:block;
+                        font-size:1.9rem;
+                        color:inherit;
+                        margin-top:.5rem
+                    }
+
+                    + .banner__text{margin-top:1.2rem;}
+                }
+                .banner__text{
+                    font-size:1.1rem;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+                .banner__link{
+                    display:inline-block;
+                    @include Bold;
+                    color:inherit;
+                    padding-bottom:.2rem;
+                    border-bottom:1px solid #fff;
+                    margin-top:3rem;
+                }
+            }
+        }
+    }
+
 }
 
 
