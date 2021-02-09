@@ -119,6 +119,35 @@
                 }
             }
         }
+
+        //20200209 - 하단 배너
+        .banner{            
+            &--bot{
+                margin-top:20px;
+                @include Background($sprite: 'bg-longTermCorporation2', $type:'jpg', $path:'', $size:cover);
+
+                .banner__inner{
+                    padding:40px 40px 40px 544px;
+                    color:#fff;
+
+                    .banner__tit{
+                        @include Bold;
+                        font-size:24px;
+
+                        + .banner__text{margin-top:20px;}
+                    }
+                    .banner__text{
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+                    .banner__link{
+                        display:inline-block;
+                        @include Bold;
+                        border-bottom:1px solid #fff;
+                        margin-top:30px;
+                    }
+                }
+            }
+        }
     }
 
     //전기차 장기렌터카
