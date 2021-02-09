@@ -6,7 +6,7 @@ $(function(){
         <footer class="footer">
             <div class="inner">
                 <!-- <div class="footer-bn">
-                    <img src="../../../resources-mo/images/icons/ico-foot-bn.png" alt="bn">
+                    <img src="/lrhp/mo/images/icons/ico-foot-bn.png" alt="bn">
                 </div> -->
                 <div class="footer-center">
                     <ul class="list-type-col2">
