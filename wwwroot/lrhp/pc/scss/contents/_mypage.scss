@@ -1033,7 +1033,7 @@
                             bottom: -1px;
                             width: 12px;
                             height: 12px;
-                            background: url(/lrhp/pc/images/bg-main-dday.png) no-repeat center center;
+                            background: url(../../resources-pc/images/bg-main-dday.png) no-repeat center center;
                         }
                     }
                 }
@@ -2445,6 +2445,31 @@
                     li {
                         font-size:14px;
                     }
+                }
+            }
+        }
+    }
+
+    // 20210209 - 나의 찜 차량
+    &.mypickCar-container{
+        .tab-nav {
+            margin-top:60px;
+            
+            + .list-section{margin-top:40px;}
+        }
+        .tab-cont{
+            .tab-cont-inner{padding:0;}
+        }
+        .list-section-header{
+            .tit-area{
+                @include Align-between;
+                margin-bottom:30px;
+
+                .btns{
+                    @include Align-baseline;
+                    flex-wrap:nowrap;
+
+                    > *{margin-left:40px;}
                 }
             }
         }

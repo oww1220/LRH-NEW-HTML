@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="/lrhp/pc/images/favicon.ico">
+<link rel="stylesheet" href="/lrhp/pc/styles/reset.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/layout.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/modules.css">
+<link rel="stylesheet" href="/lrhp/pc/styles/contents.css">
+
+<script src="/lrhp/pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="/lrhp/pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../include_mypage.js"></script><!-- 마이페이지 상단과 LNB 인크루드 -->
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="/lrhp/pc/scripts/MUI.js"></script>
+<script src="/lrhp/pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+	<!--//header 컴포넌트-->
+
+	<!--container 컴포넌트-->
+	<main id="wrap">
+		<div class="path-wrap">
+			<div class="cover">
+				<div class="inner">            
+					<ul>
+						<li>
+							<a href=""> 
+								<span class="icon home">HOME</span>
+							</a>
+						</li>
+						<li>
+							<a href="">마이페이지</a>
+						</li>
+						<li>
+							<a href="">나의 찜 차량</a>
+						</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+
+		<!-- 
+			20210209 : 나의 찜 차량 UI 변경으로 인한 작업 - 클래스 추가
+			클래스 mypage-container에 mypickCar-container 추가
+		-->
+		<div class="mypage-container mypickCar-container">
+			<div class="inner-type2">
+				<!-- 페이지 타이틀 -->
+				<section class="section-headline">
+					<h2 class="tit">마이페이지</h2>					
+					<p>롯데렌터카 회원을 위한 다양한 혜택이 준비되어 있습니다.</p>
+				</section>
+				<!-- //페이지 타이틀 -->			
+
+				<!-- //.mypage-header 인크루드 -->
+				<div class="mypage-header"></div>
+				<!-- //.mypage-header -->
+
+				<div class="mypage-body">
+					<!-- //.mypage-lnb 인크루드 -->
+					<div class="mypage-lnb"></div>
+					<!-- //.mypage-lnb -->
+
+					<div class="mypage-body-cont">
+						<div class="mypage-body-cont-header">
+							<div class="tit-area">
+								<h4 class="tit">나의 찜 차량</h4>
+							</div>
+						</div>
+						<ul class="lst dot">
+							<li>중고차장기렌터카에서 선택한 찜 차량입니다.</li>
+							<li>판매 완료 시 해당 목록에서 삭제 됩니다.</li>
+						</ul>
+						
+						<!-- 20210209 : 나의 찜 차량 UI 변경으로 인한 작업 - 마크업 추가 -->
+						<div class="tab-nav tabControl">
+							<ul class="tab-col2">
+								<li class="active">
+									<button type="button">중고차 장기렌터카</button>
+								</li>
+								<li>
+									<button type="button">중고차 승계렌터카</button>
+								</li>
+							</ul>
+						</div>						
+						<!-- //20210209 : 나의 찜 차량 UI 변경으로 인한 작업 - 마크업 추가 -->
+
+						<div class="list-section">
+							<div class="list-section-header">
+								<div class="tit-area">
+									<div class="chk-icon-box type-circle">
+										<input type="checkbox" id="chk22">
+										<label for="chk22">전체 선택(1/6)</label>
+									</div>
+
+									<!-- 20210209 : 나의 찜 차량 UI 변경으로 인한 작업 - 마크업 추가(선택삭제 버튼은 유지) -->
+									<div class="btns">
+										<div class="selelct-box">
+											<select name="" id="" class="select-normal">
+												<option value="">최신 연식순</option>
+											</select>
+										</div>
+										<button type="button" class="btn-auto black">선택삭제</button>
+									</div>
+									<!-- //20210209 : 나의 찜 차량 UI 변경으로 인한 작업 - 마크업 추가(선택삭제 버튼은 유지) -->
+								</div>
+							</div>
+							<div class="list-section-body">
+								<!-- 20210209 : 나의 찜 차량 UI 변경으로 인한 작업 - 탭 구조로 마크업 변경 -->
+								<div class="tab-cont tabControl">
+									<div class="tab-cont-inner">
+										<ul class="grid-col col3 carInfo-list">
+											<li>
+												<a href="javascript:void(0);" class="item">
+													<div  class="img-box">
+														<div class="img-wrap">
+															<img src="/lrhp/pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+														</div>
+														<div class="cover">
+															<p class="state">상담 가능</p>
+															<div class="right-area">
+																<div>
+																	<div class="tooltip-wrap tooltipToggle">										
+																		<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-04" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+																		<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-04">
+																			<div class="tooltipCont-inner">
+																				<div class="layer-info">
+																					<div class="tooltip-tit-num">5</div>
+																					<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>												
+																</div>
+																<div>
+																	<div class="heart-chk-box">
+																		<input type="checkbox" id="chk24" checked>
+																		<label for="chk24" class="icon heart2"></label>
+																		<span>25</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="descri-area">
+														<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+														<div class="bar-type">
+															<span>19/03식</span>
+															<span>하이브리드</span>
+															<span>154,974km</span>
+															<span>강남지점</span>
+														</div>															
+														<div class="price-box">
+															<p class="price-row">
+																<strong>인수 24개월</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+															<p class="price-row">
+																<strong>반납 12개월</strong>
+																<span class="price">
+																	610,000<small>원</small>
+																</span>
+															</p>
+															<p class="price-row">
+																<strong>타보고 구매</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>	
+												<div class="chk-icon-box type-circle">
+													<input type="checkbox" id="chk32" checked>
+													<label for="chk32">
+														<span class="txt-hide">선택</span>
+													</label>
+												</div>								
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="item">
+													<div  class="img-box">
+														<div class="img-wrap">
+															<img src="/lrhp/pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+														</div>
+			
+														<div class="cover">
+															<p class="state ing">상담 진행중</p>
+															<div class="right-area">
+																<div>
+																	<div class="tooltip-wrap tooltipToggle">										
+																		<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-05" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+																		<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-05">
+																			<div class="tooltipCont-inner">
+																				<div class="layer-info">
+																					<div class="tooltip-tit-num">5</div>
+																					<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>												
+																</div>
+																<div>
+																	<div class="heart-chk-box">
+																		<input type="checkbox" id="chk25" checked>
+																		<label for="chk25" class="icon heart2"></label>
+																		<span>25</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="descri-area">
+														<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+														<div class="bar-type">
+															<span>19/03식</span>
+															<span>하이브리드</span>
+															<span>154,974km</span>
+															<span>강남지점</span>
+														</div>			
+														<div class="price-box">
+															<p class="price-row">
+																<strong>인수 24개월</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+															<p class="price-row">
+																<strong>반납 12개월</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>	
+												<div class="chk-icon-box type-circle">
+													<input type="checkbox" id="chk33">
+													<label for="chk33">
+														<span class="txt-hide">선택</span>
+													</label>
+												</div>							
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="item">
+													<div  class="img-box">
+														<div class="img-wrap">
+															<img src="/lrhp/pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+														</div>
+														<div class="cover">
+															<p class="state">상담 가능</p>
+															<div class="right-area">
+																<div>
+																	<div class="tooltip-wrap tooltipToggle">										
+																		<button type="button" class="tooltipOpenBtn" data-target="tooltipCont-list-06" data-on="true" data-siblings="true"><i class="icon tooltip"></i><span>5</span></button>
+																		<div class="tooltip tooltipCont tooltipCont-list tooltipCont-list-06">
+																			<div class="tooltipCont-inner">
+																				<div class="layer-info">
+																					<div class="tooltip-tit-num">5</div>
+																					<p class="tooltip-txt">고객님이 상담 신청을 한 차량입니다.</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>												
+																</div>
+																<div>
+																	<div class="heart-chk-box">
+																		<input type="checkbox" id="chk26">
+																		<label for="chk26" class="icon heart2"></label>
+																		<span>25</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="descri-area">
+														<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+														<div class="bar-type">
+															<span>19/03식</span>
+															<span>하이브리드</span>
+															<span>154,974km</span>
+															<span>광명중고차반납센터</span>
+														</div>			
+														<div class="price-box">
+															<p class="price-row">
+																<strong>인수 24개월</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+															<p class="price-row">
+																<strong>타보고 구매</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>	
+												<div class="chk-icon-box type-circle">
+													<input type="checkbox" id="chk34">
+													<label for="chk34">
+														<span class="txt-hide">선택</span>
+													</label>
+												</div>								
+											</li>
+										</ul>
+									</div>	
+									<div class="tab-cont-inner">
+										<ul class="grid-col col3 carInfo-list">
+											<li>
+												<a href="javascript:void(0);" class="item">
+													<div class="img-box">
+														<div class="img-wrap">
+															<img src="/lrhp/pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+														</div>
+														<div class="cover">
+															<p class="state">상담 가능</p>
+															<div class="right-area">
+																<div class="heart-chk-box">
+																	<input type="checkbox" id="chk31" checked="">
+																	<label for="chk31" class="icon heart2"></label>
+																	<span>25</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="descri-area">
+														<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+														<div class="bar-type">
+															<span>19/03식</span>
+															<span>154,974km</span>
+														</div>									
+														<div class="price-box">
+															<p class="price-row">
+																<strong>반납 7개월</strong>
+																<span class="price">
+																	610,000<small>원</small>
+																</span>
+															</p>
+															<p class="price-row">
+																<strong>추가 지원금</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>			
+												<div class="chk-icon-box type-circle">
+													<input type="checkbox" id="chk12" checked>
+													<label for="chk12">
+														<span class="txt-hide">선택</span>
+													</label>
+												</div>						
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="item">
+													<div class="img-box">
+														<div class="img-wrap">
+															<img src="/lrhp/pc/images/@temp-short-main-banner.png" alt="더미 이미지">
+														</div>
+			
+														<div class="cover">
+															<p class="state ing">상담 진행중</p>
+															<div class="right-area">
+																<div class="heart-chk-box">
+																	<input type="checkbox" id="chk32" checked="">
+																	<label for="chk32" class="icon heart2"></label>
+																	<span>25</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="descri-area">
+														<strong class="tit">THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디 THE NEW RAY (G) 1.0 트렌디</strong>
+														<div class="bar-type">
+															<span>19/03식</span>
+															<span>154,974km</span>
+														</div>			
+														<div class="price-box">
+															<p class="price-row">
+																<strong>반납 7개월</strong>
+																<span class="price">
+																	610,000<small>원</small>
+																</span>
+															</p>
+															<p class="price-row">
+																<strong>추가 지원금</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>			
+												<div class="chk-icon-box type-circle">
+													<input type="checkbox" id="chk13" checked>
+													<label for="chk13">
+														<span class="txt-hide">선택</span>
+													</label>
+												</div>						
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="item">
+													<div class="img-box">
+														<div class="img-wrap">
+															<img src="/lrhp/pc/images/@temp-PUC-SUC-0001-img02.jpg" alt="더미 이미지">
+														</div>
+														<div class="cover">
+															<p class="state">상담 가능</p>
+															<div class="right-area">
+																<div class="heart-chk-box">
+																	<input type="checkbox" id="chk33">
+																	<label for="chk33" class="icon heart2"></label>
+																	<span>25</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="descri-area">
+														<strong class="tit">THE NEW RAY (G) 1.0 트렌디</strong>
+														<div class="bar-type">
+															<span>19/03식</span>
+															<span>154,974km</span>
+														</div>			
+														<div class="price-box">
+															<p class="price-row">
+																<strong>반납 7개월</strong>
+																<span class="price">
+																	610,000<small>원</small>
+																</span>
+															</p>
+															<p class="price-row">
+																<strong>추가 지원금</strong>
+																<span class="price">
+																	450,000<small>원</small>
+																</span>
+															</p>
+														</div>
+													</div>
+												</a>		
+												<div class="chk-icon-box type-circle">
+													<input type="checkbox" id="chk14">
+													<label for="chk14">
+														<span class="txt-hide">선택</span>
+													</label>
+												</div>								
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //20210209 : 나의 찜 차량 UI 변경으로 인한 작업 - 탭 구조로 마크업 변경 -->
+								
+							</div>
+						</div>
+					</div>
+					<!-- //.mypage-body-cont -->
+				</div>	
+				<!-- //.mypage-body -->
+				
+			</div>
+		</div>
+
+	</main>
+	<!--//container 컴포넌트-->
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+
+</body>
+</html>
+
