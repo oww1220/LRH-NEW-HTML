@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>롯데렌터카</title>
+<link rel="shortcut icon" href="../../../resources-mo/images/favicon.ico">
+<link rel="stylesheet" href="../../../resources-mo/styles/reset.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/layout.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/modules.css">
+<link rel="stylesheet" href="../../../resources-mo/styles/contents.css">
+
+<script src="../../../resources-mo/scripts/jquery/jquery-1.9.1.min.js"></script>
+<!--<script src="../../../resources-mo/scripts/jquery/jquery-ui.min.js"></script>-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../../../resources-mo/scripts/jquery/jquery.ui.touch-punch.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/slick.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../../../resources-mo/scripts/jquery/plugins/masonry.min.js"></script>
+<script src="../../../resources-mo/scripts/MUI.js"></script>
+<script src="../../../resources-mo/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+		<div class="header-top">
+			<h1 class="header-logo"><a href="#none"><i class="icon logo">롯데렌터카</i></a></h1>
+		</div>
+		<nav class="header-nav">
+			<a href="#" class="active">가이드 - 버튼</a>
+			<a href="/mo/html-mo/html/guide/guide_form.html">가이드 - 폼</a>
+			<a href="/mo/html-mo/html/guide/guide_table.html">가이드 - 테이블</a>
+			<a href="/mo/html-mo/html/guide/guide_tab.html">가이드 - 텝</a>
+		</nav>
+	</header>
+	<!--//header 컴포넌트-->
+
+	<!--container 컴포넌트-->
+	<main id="wrap">
+		<!-- 버튼 유형 정리 -->
+		<!-- <h1>버튼 유형 저리</h1>
+		<div>
+			<h2>default 종류</h2>
+			<ul class="list-type-col1">
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default">btn-default</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default noRadius">btn-default noRadius</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default active">btn-default active</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default black">btn-default black</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default black ty_no">btn-default black ty_no</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default white">btn-default white</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default red">btn-default red</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default brown">btn-default brown</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default blueOverlay">btn-default blueOverlay</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default blueOverlay02">btn-default blueOverlay02</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default redOverlay">btn-default redOverlay</button>
+					</div>
+				</li>
+			</ul>
+			<div class="textarea">
+				<textarea>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default active">다음</button>
+					</div>
+				</textarea>
+			</div>
+		</div>
+
+		<div>
+			<h2>색상 종류</h2>
+			<ul class="list-type-col1">
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-red">btn-red</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-brown">btn-brown</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-gray">btn-gray</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-white">btn-white</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-white gray">btn-white gray</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-orange">btn-orange</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-blue">btn-blue</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h2>simple 종류</h2>
+			<ul class="list-type-col1">
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-simple">btn-simple</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-simple active">btn-simple active</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-simple black">btn-simple black</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-simple red">btn-simple red</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-simple mid">btn-simple mid</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-simple gray">btn-simple gray</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h2>toggle 종류</h2>
+			<ul class="list-type-col1">
+				<li>
+					<div class="chk-agree-list">
+						<div class="chk-agree-cols">
+							<div class="chk-agree-top">
+								<div class="btn-group">
+									<span>btn-toggle</span>
+									<button type="button" class="btn btn-toggle agree-toggle-btn" data-target="toggle-cont-001" data-on="true" data-siblings="true"></button>
+								</div>
+							</div>
+							<div class="agree-toggle-cont toggle-cont-001">
+								btn-toggle
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="chk-agree-list">
+						<div class="chk-agree-cols">
+							<div class="chk-agree-top">
+								<div class="btn-group">
+									<span>btn-toggle gray</span>
+									<button type="button" class="btn btn-toggle gray agree-toggle-btn" data-target="toggle-cont-002" data-on="true" data-siblings="true"></button>
+								</div>
+							</div>
+							<div class="agree-toggle-cont toggle-cont-002">
+								btn-toggle gray
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="chk-agree-list">
+						<div class="chk-agree-cols">
+							<div class="chk-agree-top">
+								<div class="btn-group">
+									<span>btn-toggle darkgray</span>
+									<button type="button" class="btn btn-toggle darkgray agree-toggle-btn" data-target="toggle-cont-003" data-on="true" data-siblings="true"></button>
+								</div>
+							</div>
+							<div class="agree-toggle-cont toggle-cont-003">
+								btn-toggle darkgray
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="chk-agree-list">
+						<div class="chk-agree-cols">
+							<div class="chk-agree-top">
+								<div class="btn-group">
+									<span>btn-toggle shor</span>
+									<button type="button" class="btn btn-toggle shor agree-toggle-btn" data-target="toggle-cont-004" data-on="true" data-siblings="true"></button>
+								</div>
+							</div>
+							<div class="agree-toggle-cont toggle-cont-004">
+								btn-toggle shor
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="chk-agree-list">
+						<div class="chk-agree-cols">
+							<div class="chk-agree-top">
+								<div class="btn-group">
+									<span>btn-toggle active</span>
+									<button type="button" class="btn btn-toggle active agree-toggle-btn" data-target="toggle-cont-005" data-on="true" data-siblings="true"></button>
+								</div>
+							</div>
+							<div class="agree-toggle-cont toggle-cont-005">
+								btn-toggle active
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h2>pannel 종류</h2>
+			<ul class="list-type-col1">
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-pannel">btn-pannel</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h2>link 종류</h2>
+			<ul class="list-type-col1">
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-link">btn-link</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div style="position: relative;">
+			<h2>share 종류</h2>
+			<ul class="list-type-col1">
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share">btn-share</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share ty2">btn-share ty2</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share btn-sns">btn-share btn-sns</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share btn-sns-h-auto">btn-share btn-sns-h-auto</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share btn-sns-site">btn-share btn-sns-site</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share btn-sns-site-bt">btn-share btn-sns-site-bt</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share btn-sns-site-ct">btn-share btn-sns-site-ct</button>
+					</div>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-share btn-sns-site-t">btn-share btn-sns-site-t</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="btn-group-justified">
+			<button type="button" class="btn btn-default">다음</button>
+		</div> -->
+		<!-- //버튼 유형 정리 -->
+
+		<!-- 사용한 버튼 유형 정리 -->
+		
+		<!-- //사용한 버튼 유형 정리 -->
+	</main>
+	<!--//container 컴포넌트-->
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+		<div class="inner">
+			<div class="footer-center">
+				<ul class="list-type-col2">
+					<li><em><a href="tel:010-7321-5186">제작자 : 정연호</a></em></li>
+					<li><em>제작자 : 박수연</em></li>
+					<li><em>제작자 : 이동걸</em></li>
+					<li><em>제작자 : 박지현</em></li>
+					<li><em>제작자 : 김종희</em></li>
+					<li><em>제작자 : 김인영</em></li>
+				</ul>
+			</div>
+			<div class="footer-companyInfo">
+				<div class="chk-agree-list">
+					<div class="chk-agree-top">
+						<h2>메가존㈜</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--//footer 컴포넌트-->
+
+</body>
+</html>
+
