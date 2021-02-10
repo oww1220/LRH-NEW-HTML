@@ -293,7 +293,7 @@ gulp.task('buildMO-co', function () {
 //lrhp-개발디렉토리
 gulp.task('sassPC-lrhp', function () {
   return gulp
-    .src('../LRH-NEW-HTML/wwwroot/lrhp/pc/scss/**/*.scss')
+    .src('wwwroot/lrhp/pc/scss/**/*.scss')
     .pipe(plumber(plumberOption))
     .pipe(
       sourcemaps.init({
@@ -314,13 +314,13 @@ gulp.task('sassPC-lrhp', function () {
       })
 	)
     .pipe(sourcemaps.write('../maps'))
-    .pipe(gulp.dest('../LRH-NEW-HTML/wwwroot/lrhp/pc/styles'))
+    .pipe(gulp.dest('wwwroot/lrhp/pc/styles'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('buildPC-lrhp', function () {
   return gulp
-    .src('../LRH-NEW-HTML/wwwroot/lrhp/pc/scss/**/*.scss')
+    .src('wwwroot/lrhp/pc/scss/**/*.scss')
     .pipe(plumber(plumberOption))
     .pipe(
       sass({
@@ -333,7 +333,7 @@ gulp.task('buildPC-lrhp', function () {
         cascade: true,
       })
     )
-    .pipe(gulp.dest('../LRH-NEW-HTML/wwwroot/lrhp/pc/styles/dist'))
+    .pipe(gulp.dest('wwwroot/lrhp/pc/styles/dist'))
     .pipe(browserSync.reload({ stream: true }))
     .on('end', function () {
       console.log('-------- appned css --------');
@@ -344,7 +344,7 @@ gulp.task('buildPC-lrhp', function () {
 gulp.task('sassMO-lrhp', function () {
   return (
     gulp
-      .src('../LRH-NEW-HTML/wwwroot/lrhp/mo/scss/**/*.scss')
+      .src('wwwroot/lrhp/mo/scss/**/*.scss')
       .pipe(plumber(plumberOption))
       .pipe(
         sourcemaps.init({
@@ -374,7 +374,7 @@ gulp.task('sassMO-lrhp', function () {
 		}))
 		*/
       .pipe(sourcemaps.write('../maps'))
-      .pipe(gulp.dest('../LRH-NEW-HTML/wwwroot/lrhp/mo/styles'))
+      .pipe(gulp.dest('wwwroot/lrhp/mo/styles'))
       .pipe(browserSync.reload({ stream: true }))
   );
 });
@@ -382,7 +382,7 @@ gulp.task('sassMO-lrhp', function () {
 gulp.task('buildMO-lrhp', function () {
   return (
     gulp
-      .src('../LRH-NEW-HTML/wwwroot/lrhp/mo/scss/**/*.scss')
+      .src('wwwroot/lrhp/mo/scss/**/*.scss')
       .pipe(plumber(plumberOption))
       .pipe(
         sass({
@@ -423,7 +423,7 @@ gulp.task('watch', function () {
     port: 3333,
     open: false,
     directory: true,
-    server: '../LRH-NEW-HTML/wwwroot/',
+    server: './wwwroot/',
     browser: 'google chrome',
   });
 
@@ -439,11 +439,11 @@ gulp.task('watch', function () {
 
   //lrhp-개발디렉토리
   gulp.watch(
-    '../LRH-NEW-HTML/wwwroot/lrhp/pc/scss/**/*.scss',
+    'wwwroot/lrhp/pc/scss/**/*.scss',
     gulp.series('sassPC-lrhp', 'buildPC-lrhp')
   );
   gulp.watch(
-    '../LRH-NEW-HTML/wwwroot/lrhp/mo/scss/**/*.scss',
+    'wwwroot/lrhp/mo/scss/**/*.scss',
     gulp.series('sassMO-lrhp', 'buildMO-lrhp')
   );
 
@@ -458,8 +458,8 @@ gulp.task('watch', function () {
     gulp.series('sassMO-co', 'buildMO-co')
   );
 
-  gulp.watch('../LRH-NEW-HTML/wwwroot/**/*.html').on('change', browserSync.reload);
-  gulp.watch('../LRH-NEW-HTML/wwwroot/**/*.js').on('change', browserSync.reload);
+  gulp.watch('wwwroot/**/*.html').on('change', browserSync.reload);
+  gulp.watch('wwwroot/**/*.js').on('change', browserSync.reload);
 });
 
 

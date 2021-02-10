@@ -2526,8 +2526,8 @@
                             width:100%;
                             margin-top: 20px;
                             li {
-                                
                                 width: 100%;
+                                @include Align-between-top;
                             }
                         }
                         .btn-link{
@@ -2535,22 +2535,13 @@
                             border:0 none;
                             color:#2f2f2f;
                             height:43px;
-                            width: 100%;
+                            width: 75%;
                             padding:0 10px 0 15px;
                             text-align: left;
                             line-height:1;
                             font-size: 14px;
                             @include Regular;
                             word-break: break-word;
-                            /* &:after {
-                                display: flex;
-                                content: "";
-                                background: url(/lrhp/pc/images/icons/ico-map-off.png) 0 0 no-repeat;
-                                width: 28px;
-                                height: 28px;
-                                margin-left: 5px;
-                                background-size: 100% auto;
-                            } */
                                 b{
                                     color: #aaa;
                                     font-size: 14px;
@@ -2566,6 +2557,20 @@
                                     font-size: 14px;
                                     border-bottom: 1px solid #2f2f2f;
                                 }
+                            }
+                        }
+                        //20210210 지점보기 버튼 추가
+                        .btn-map {
+                            background: url(/lrhp/pc/images/icons/ico-map-off.png) center center no-repeat;
+                            width: 28px;
+                            height: 30px;
+                            margin: 5px 5px 0 0;
+                            background-size: 100% auto;
+                            span {
+                                @include Hide_txt;
+                            }
+                            &:hover, &.active {
+                                background: url(/lrhp/pc/images/icons/ico-map-on.png) center center no-repeat;
                             }
                         }
                     }
@@ -2666,12 +2671,12 @@
                     width: 100%;
                 }
                 .short-car-list-cont {
-                    li {
+                    > li {
                         height: 170px;
                         .radioIconBox {
                             > label {
-                            @include Align-between;
-                            flex-flow: nowrap;
+                            @include Align-box;
+                            flex-flow: wrap;
                             border-radius: 0;
                             padding:20px 10px;
                             height: 170px;
@@ -2720,7 +2725,35 @@
                                         font-size: 16px;
                                         margin-top: 15px;
                                     }
-                                } 
+                                    //20210210 회원가 추가
+                                    .txt-gray {
+                                        @include Bold;
+                                        color: #ddd;
+                                        font-size: 16px;
+                                        sub {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                                //20210210 차량유종 추가
+                                .car-spec {
+                                    width: 100%;
+                                    .car-spec-list {
+                                        @include Align-middle-left;
+                                        li {
+                                            font-size: 13px;
+                                            color: #54585a;
+                                            .speed {
+                                                padding: 2px 5px;
+                                                background: rgb(129,112,221);
+                                                background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
+                                                border-radius: 3px;
+                                                color: #fff;
+                                                @include Bold;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             > input:checked + label:after, > input + label:after{
                                 display:none;
