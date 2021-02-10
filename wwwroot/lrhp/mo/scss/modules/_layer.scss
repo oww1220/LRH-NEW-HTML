@@ -620,6 +620,7 @@ body.fixed {
 				font-size: 1.4rem;
 				@include Bold;
 				padding: 0 4.2rem 0 2rem;
+				//padding: 0 2rem 0 2rem;
 				word-break: keep-all;
 				line-height: 1.5;
 			}
@@ -4333,6 +4334,88 @@ body.fixed {
 				li {
 					color: #8f9191;
 					font-size: 1rem;
+				}
+			}
+
+			.cont-info{
+				padding: 1.7rem 1.7rem;
+				p{
+					font-size:1.1rem;
+					@include Regular;
+					@include Align-top-left;
+					i{
+						width: 2.1rem;
+						height: 1.9rem;
+						margin-right: 1rem;
+					}
+					strong{
+						line-height: 1.4;
+					}
+					b{
+						@include Bold;
+					}
+				}
+				.list-view-info {
+					background-color: #f5f5f5;
+					padding: 2.2rem 1.3rem;
+					border-radius: 1rem;
+					margin:2.2rem 0 1.3rem;
+					strong {
+						@include Bold;
+						@include Align-middle;
+						font-size:1.4rem;
+						span {
+							color:#ff404b;
+							font-size:1.4rem;
+							margin-left:.4rem;
+						}
+					}
+					
+				}
+			}
+			&.type-upgrade{
+				.full-top {
+					button {
+						left:1.7rem;
+					}
+				}
+				.stroller-tab-cont{
+					padding-top:1.5rem;
+				}
+			}
+			&.type-upgradecar{
+				.full-top {
+					button {
+						left:1.7rem;
+					}
+				}
+				.cont-info{
+					padding:1.7rem 0;
+				}
+				.radio-box{
+					padding:.9rem 0 1.8rem 0;
+					ul {
+						label {
+							.img{
+								padding:0 1.3rem 0;
+							}
+							.txt{
+								@include Align-middle-column;
+								padding:0 0 .9rem 0;
+							}
+							span{
+								color: #2f2f2f;
+								font-size:1.1rem;
+								@include Regular;
+							}
+							em{
+								color: #54585a;
+								font-size:.7rem;
+								@include Regular;
+								padding-top:.4rem;
+							}
+						}
+					}
 				}
 			}
 
