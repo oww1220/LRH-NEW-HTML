@@ -2354,7 +2354,27 @@
 
         // 반납 지점
         .short-branch {
+            position: relative;
             width: 340px;
+            //20210215 추가
+            .nodata {
+                @include Align-middle-column;
+                @include Position($top: 0, $left: 0);
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 1);
+                @include  Opacity(0.7);
+                z-index: 1;
+                p {
+                    @include Bold;
+                    color: #fff;
+                    font-size: 22px;
+                    text-align: center;
+                }
+                .talk4 {
+                    margin-bottom: 20px;
+                }
+            }
             h2 {@include Hide_txt;}
             .tab-nav {
                 background: #54585a;
@@ -2479,7 +2499,7 @@
                             color:#2f2f2f;
                             height:43px;
                             width: 100%;
-                            padding:0 15px;
+                            padding:0 9px 0 15px;
                             text-align: left;
                             line-height:1;
                             font-size: 14px;
@@ -2528,6 +2548,7 @@
                             li {
                                 
                                 width: 100%;
+                                @include Align-between-top;
                             }
                         }
                         .btn-link{
@@ -2535,22 +2556,14 @@
                             border:0 none;
                             color:#2f2f2f;
                             height:43px;
-                            width: 100%;
+                            width: 75%;
                             padding:0 10px 0 15px;
                             text-align: left;
                             line-height:1;
                             font-size: 14px;
                             @include Regular;
                             word-break: break-word;
-                            /* &:after {
-                                display: flex;
-                                content: "";
-                                background: url(../../resources-pc/images/icons/ico-map-off.png) 0 0 no-repeat;
-                                width: 28px;
-                                height: 28px;
-                                margin-left: 5px;
-                                background-size: 100% auto;
-                            } */
+                            
                                 b{
                                     color: #aaa;
                                     font-size: 14px;
@@ -2568,6 +2581,20 @@
                                 }
                             }
                         }
+                       //20210210 지점보기 버튼 추가
+                       .btn-map {
+                            background: url(/lrhp/pc/images/icons/ico-map-off.png) center center no-repeat;
+                            width: 28px;
+                            height: 30px;
+                            margin: 5px 5px 0 0;
+                            background-size: 100% auto;
+                            span {
+                                @include Hide_txt;
+                            }
+                            &:hover, &.active {
+                                background: url(/lrhp/pc/images/icons/ico-map-on.png) center center no-repeat;
+                            }
+                        } 
                     }
 
                 }
@@ -2666,12 +2693,12 @@
                     width: 100%;
                 }
                 .short-car-list-cont {
-                    li {
+                    > li {
                         height: 170px;
                         .radioIconBox {
                             > label {
-                            @include Align-between;
-                            flex-flow: nowrap;
+                            @include Align-box;
+                            flex-flow: wrap;
                             border-radius: 0;
                             padding:20px 10px;
                             height: 170px;
@@ -2693,11 +2720,17 @@
                                     width: calc(100% - 172px);
                                     padding-left: 15px;
                                     strong {
-                                        @include Ellipsis($w:100%, $lines:1);
+                                        @include Ellipsis($w:90%, $lines:1, $display:inline-block);
                                         @include Bold;
                                         font-size: 22px;
                                         color: #2f2f2f;
                                         line-height: 1.2;
+                                        & + button {
+                                            display: inline-block;
+                                            vertical-align: top;
+                                            margin-top: 3px;
+                                            z-index: 50;
+                                        }
                                     }
                                     .txt-red {
                                         @include Bold;
@@ -2707,6 +2740,10 @@
                                         line-height: 1;
                                         sub {
                                             font-size: 18px;
+                                        }
+                                        span {
+                                            font-size: 16px;
+                                            @include Regular;
                                         }
                                     }
                                     del {
@@ -2720,6 +2757,48 @@
                                         font-size: 16px;
                                         margin-top: 15px;
                                     }
+                                  //20210210 회원가 추가
+                                  .txt-gray {
+                                    @include Bold;
+                                    color: #ddd;
+                                    font-size: 16px;
+                                    sub {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            //20210210 차량유종 추가
+                            .car-spec {
+                                @include Align-between;
+                                width: 100%;
+                                .car-spec-list {
+                                    @include Align-middle-left;
+                                    li {
+                                        font-size: 13px;
+                                        color: #54585a;
+                                        .speed {
+                                            display: inline-block;
+                                            padding: 2px 5px;
+                                            background: rgb(129,112,221);
+                                            background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
+                                            border-radius: 3px;
+                                            color: #fff;
+                                            @include Bold;
+                                        }
+                                    }
+                                    li + li:before {
+                                        display: inline-block;
+                                        content: "";
+                                        width: 1px;
+                                        height: 12px;
+                                        margin: 0 10px;
+                                        background: #d2d2d2;
+                                    }
+                                }
+                                .btn-link {
+                                    font-size: 13px;
+                                    @include Bold;
+                                    }  
                                 } 
                             }
                             > input:checked + label:after, > input + label:after{
@@ -2737,6 +2816,7 @@
                                 }
                             }
                             > input:checked + label{
+                                @include Regular;
                                 .img{
                                     .radio-check{
                                         display:inline-flex;
@@ -2801,6 +2881,7 @@
         width: 100%;
         height: 80px;
         background: #fff;
+        position: relative;
         .short-result {
             @include Align-between-top;
             height: 100%;
@@ -2868,6 +2949,29 @@
                         border-color: #d2d2d2;
                     }
                 }
+
+            }
+        }
+        .no-time {
+            @include Position($top: -120px, $right: 35px);
+            width: 397px;
+            height: 97px;
+            padding: 25px 30px;
+            background: url(/lrhp/pc/images/bg-notime.png) no-repeat center right #c01123;
+            border-radius: 10px;
+            p {
+                color: #fff;
+                @include Bold;
+                font-size: 22px;
+                line-height: 1.2;
+            }
+            &:after {
+                display: inline-block;
+                content: "";
+                background: url(/lrhp/pc/images/bg-notime-spot.png) no-repeat center center;
+                width: 40px;
+                height: 20px;
+                @include Position($top: 97px, $right: 320px);
 
             }
         }

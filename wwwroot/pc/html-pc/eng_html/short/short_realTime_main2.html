@@ -1,0 +1,2478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>lotterentcar</title>
+<link rel="shortcut icon" href="../../../resources-pc/images/favicon.ico">
+<link rel="stylesheet" href="../../../resources-pc/styles/reset.css">
+<link rel="stylesheet" href="../../../resources-pc/styles/layout.css">
+<link rel="stylesheet" href="../../../resources-pc/styles/modules.css">
+<link rel="stylesheet" href="../../../resources-pc/styles/contents.css">
+<link rel="stylesheet" href="../../../resources-pc/styles/jquery.mCustomScrollbar.css">
+
+<script src="../../../resources-pc/scripts/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../resources-pc/scripts/jquery/jquery-ui.min.js"></script>
+<script src="../../../resources-pc/scripts/jquery/plugins/slick.min.js"></script>
+<script src="../../../resources-pc/scripts/jquery/plugins/swiper.min.js"></script>
+<script src="../../../resources-pc/scripts/jquery/plugins/iscroll.min.js"></script>
+<script src="../../../resources-pc/scripts/jquery/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../include_sub_header.js"></script><!--인크루드용..-->
+<script src="../include_footer.js"></script><!--인크루드용..-->
+<script src="../../../resources-pc/scripts/MUI.js"></script>
+<script src="../../../resources-pc/scripts/common.js"></script>
+
+</head>
+
+<body>
+	<!--header 컴포넌트-->
+	<header class="header">
+	</header>
+    <!--//header 컴포넌트-->
+	<main id="wrap" class="shortWrap eng-wrap">
+        <div class="short-main-wrap eng-short-main-wrap">
+            <!-- eng-top -->
+            <div class="eng-short-main-top">
+                <h2><strong>Welcome to</strong> Lotte rental</h2>
+                <div class="short-log-wrap">
+                    <div class="short-log">
+                        <div>
+                            <p class="input-type">
+                                <label for="id">ID</label>
+                                <input type="text" id="id" name="id">
+                            </p>
+                            <p class="input-type">
+                                <label for="pw">PW</label>
+                                <input type="password" id="pw" name="pw">
+                            </p>
+                        </div>                       
+                        <button type="button" class="btn btn-red">Login</button>
+                    </div> 
+                    <div class="short-sch-wrap">
+                        <div class="detail-iconBox iconBox">
+                            <input type="checkbox" id="auto-login" name="auto-login">
+                            <label for="auto-login">ID memory</label>
+                        </div>
+                        <ul class="sch-list">
+                            <li><a href="#">Find id</a></li>
+                            <li><a href="#">Find Password</a></li>
+                            <li><a href="#">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="short-info-wrap">
+                    <p class="tel">1588-1230</p>
+                    <ul>
+                        <li class="ico-info"><a href="#">Rental information</a></li>
+                        <li class="ico-use">
+                            <a href="#" class="layer-details-open" data-layer="layer-howToUse">How to use?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //eng-top -->
+            <div class="short-main-cont">
+                <!-- 탭메뉴 -->
+                <div class="tab-menu tab-nav shortAction">
+                    <ul>
+                        <li class="active"><div><button type="button">Select<br>Date</button></div></li>
+                        <li><div><button type="button">Select<br>Location</button></div></li>
+                        <li><div><button type="button">Select<br>Vehicle</button></div></li>
+                    </ul>
+                </div>
+                <!-- //탭메뉴 -->
+                <!-- 컨텐츠 영역 -->
+                <div class="tab-cont-wrap tab-cont shortAction">
+                    <!-- 언제 선택영역 -->
+                    <div class="tab-step1">
+                        <!-- 실시간 예약 -->
+                        <div class="tab-cont-section">
+                            <!-- 캘린더 -->
+                            <div class="short-calendar">
+                                <h2>LOTTE rent-a car is at your service<br><span class="txt-red">anytime, anywhere!</span></h2>
+                                <div class="calender-cont">
+                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.09</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="disabled"><button type="button" class="btn">1</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">2</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">3</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">4</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="disabled"><button type="button" class="btn">6</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">7</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">8</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">9</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">10</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">11</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="disabled"><button type="button" class="btn">13</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">14</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">15</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">16</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td class="start"><button type="button" class="btn">21</button></td>
+                                                        <td class="during"><button type="button" class="btn">22</button></td>
+                                                        <td class="end"><button type="button" class="btn">23</button></td>
+                                                        <td class="day"><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+            
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.10</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="t-red"></td>
+                                                        <td></td>
+                                                        <td><button type="button" class="btn">1</button></td>
+                                                        <td><button type="button" class="btn">2</button></td>
+                                                        <td><button type="button" class="btn">3</button></td>
+                                                        <td><button type="button" class="btn">4</button></td>
+                                                        <td><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">6</button></td>
+                                                        <td><button type="button" class="btn">7</button></td>
+                                                        <td><button type="button" class="btn">8</button></td>
+                                                        <td><button type="button" class="btn">9</button></td>
+                                                        <td><button type="button" class="btn">10</button></td>
+                                                        <td><button type="button" class="btn">11</button></td>
+                                                        <td><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">13</button></td>
+                                                        <td><button type="button" class="btn">14</button></td>
+                                                        <td><button type="button" class="btn">15</button></td>
+                                                        <td><button type="button" class="btn">16</button></td>
+                                                        <td><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td><button type="button" class="btn">21</button></td>
+                                                        <td><button type="button" class="btn">22</button></td>
+                                                        <td><button type="button" class="btn">23</button></td>
+                                                        <td><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+        
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.11</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="t-red"></td>
+                                                        <td></td>
+                                                        <td><button type="button" class="btn">1</button></td>
+                                                        <td><button type="button" class="btn">2</button></td>
+                                                        <td><button type="button" class="btn">3</button></td>
+                                                        <td><button type="button" class="btn">4</button></td>
+                                                        <td><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">6</button></td>
+                                                        <td><button type="button" class="btn">7</button></td>
+                                                        <td><button type="button" class="btn">8</button></td>
+                                                        <td><button type="button" class="btn">9</button></td>
+                                                        <td><button type="button" class="btn">10</button></td>
+                                                        <td><button type="button" class="btn">11</button></td>
+                                                        <td><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">13</button></td>
+                                                        <td><button type="button" class="btn">14</button></td>
+                                                        <td><button type="button" class="btn">15</button></td>
+                                                        <td><button type="button" class="btn">16</button></td>
+                                                        <td><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td><button type="button" class="btn">21</button></td>
+                                                        <td><button type="button" class="btn">22</button></td>
+                                                        <td><button type="button" class="btn">23</button></td>
+                                                        <td><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+                            <!-- 반납지점 -->
+                            <div class="short-branch">
+                                <div class="nodata">
+                                    <p class="icon talk4"></p>
+                                    <p>Please select the time,<br>vehicle first.</p>
+                                </div>
+                                <h2>어디서</h2>
+                                <div class="tab-nav">
+                                    <ul class="tab-col2">
+                                        <li class="active"><button type="button">Pickup&amp;Return</button></li>
+                                        <li><button type="button">Return elsewhere</button></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-cont">
+                                    <!-- 대여반납지점동일 -->
+                                    <div class="short-branch-section">
+                                        <ul class="short-branch-tab">
+                                            <li class="active">
+                                                <input type="radio" name="radio1" id="radio1-1" checked>
+                                                <label for="radio1-1">MainIand</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="radio1" id="radio1-2">
+                                                <label for="radio1-2">Jeju</label>
+                                            </li>
+                                            <li>
+                                                <a href="#">Overseas</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-cont tab-action">
+                                            <!-- 지점 목록 -->
+                                            <div class="shor-main-list-wrap">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //지점 목록 -->
+                                        </div>    
+                                    </div>
+                                    <!-- //대여반납지점동일 -->
+                                    <!-- 다른지점 반납 -->
+                                    <div class="short-branch-section short-type2" style="display: none;">
+                                        <ul class="short-branch-tab">
+                                            <li class="active">
+                                                <input type="radio" name="radio2" id="radio2-1" checked>
+                                                <label for="radio2-1">MainIand</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="radio2" id="radio2-2" disabled>
+                                                <label for="radio2-2">Jeju</label>
+                                            </li>
+                                            <li>
+                                                <a href="#">Overseas</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="short-branch-tab2">
+                                            <li class="active">
+                                                <button type="button">Pickup</button>
+                                            </li>
+                                            <li>
+                                                <button type="button">Return</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-cont tab-action3">
+                                            <!-- 대여지점 -->
+                                            <div class="shor-main-list-wrap">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt tab2">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //대여지점 -->
+                                        
+                                            <!-- 반납지점 -->
+                                            <div class="shor-main-list-wrap" style="display: none;">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt tab2">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //반납지점 -->
+                                        </div>    
+                                    </div>
+                                    <!-- //다른지점 반납 -->
+                                </div>
+                            </div>
+                            <!-- //반납지점 -->
+                            <!-- 차 종류 -->
+                            <div class="short-car">
+                                <h3 class="tit-h3">Vehicle Type</h3>
+                                <div class="input-cont">						
+                                    <select class="selectbox" name="" id="">
+                                        <option value="">select.</option>
+                                        <option value="">select1</option>
+                                        <option value="">select2</option>
+                                    </select>
+                                </div>
+                                <div class="short-car-list">
+                                    <div class="mCustomScrollbar mCS-autoHide" data-mcs-theme="minimal-dark">
+                                        <!-- 차량 목록이 없는 경우 및 알림 영역 -->
+                                        <div class="no-data">
+                                            <p><span class="icon talk"></span> There is no vehicle list</p>
+                                        </div>
+                                        <!-- //차량 목록이 없는 경우 및 알림 영역 -->
+
+                                        <!-- 차량 목록 -->
+                                        <ul class="short-car-list-cont">
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk-dis" id="car-chk-dis" disabled>
+                                                    <label for="car-chk-dis">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="" class="mCS_img_loaded">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>더뉴모닝(G)소나타 신형</strong>
+                                                            <p class="txt-red">58,000 <sub>원</sub></p>
+                                                            <del>77,000 원</del>
+                                                        </div>
+                                                        <div class="disabled-cont">
+                                                            <p>Reservation Closed</p>
+                                                            <button type="button">Reserved for another location</button>
+                                                        </div> 
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk" id="car-chk1-1">
+                                                    <label for="car-chk1-1">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <!-- 툴팁 -->
+                                                            <button type="button" class="icon info04 tooltipOpenBtn" data-target="tooltipCont01" data-on="true" data-sort="fade" data-siblings="ture"><span class="txt-hide">info</span></button>		
+                                                            <div class="tooltip-layer absolute-type tooltipCont tooltipCont01">
+                                                                <div class="tooltip type2">
+                                                                    <button type="button" class="btn-tooltip-close tooltipClose">close</button>
+                                                                    <div class="tooltip-inner">
+                                                                        <div class="tooltip-list">
+                                                                            <ul class="lst dot">
+                                                                                <li>You can rent/return only within branch business hours.</li>
+                                                                                <li>Branch/member discounts are applicable for 24 hours.</li>
+                                                                                <li>Branch hours may vary depending on week/weekend.</li>
+                                                                                <li>24 Hours Point Guide: Gangnam Branch/Seoul Station Branch</li>
+                                                                                <li>Is it time to have difficulty making reservations? (Call Center) 1588-1230</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //툴팁 -->
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>11seat</li>
+                                                                <li><p class="speed">110km limted</p></li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk" id="car-chk1-2">
+                                                    <label for="car-chk1-2">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <!-- 툴팁 -->
+                                                            <button type="button" class="icon info04 tooltipOpenBtn" data-target="tooltipCont02" data-on="true" data-sort="fade" data-siblings="ture"><span class="txt-hide">info</span></button>		
+                                                            <div class="tooltip-layer absolute-type tooltipCont tooltipCont02">
+                                                                <div class="tooltip type2">
+                                                                    <button type="button" class="btn-tooltip-close tooltipClose">close</button>
+                                                                    <div class="tooltip-inner">
+                                                                        <div class="tooltip-list">
+                                                                            <ul class="lst dot">
+                                                                                <li>You can rent/return only within branch business hours.</li>
+                                                                                <li>Branch/member discounts are applicable for 24 hours.</li>
+                                                                                <li>Branch hours may vary depending on week/weekend.</li>
+                                                                                <li>24 Hours Point Guide: Gangnam Branch/Seoul Station Branch</li>
+                                                                                <li>Is it time to have difficulty making reservations? (Call Center) 1588-1230</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //툴팁 -->
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>5seat</li>
+                                                                <li><p class="speed">110km limted</p></li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk" id="car-chk1-3">
+                                                    <label for="car-chk1-3">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>5seat</li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk" id="car-chk1-4">
+                                                    <label for="car-chk1-4">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>5seat</li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- //차량 목록 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //차 종류 -->
+                        </div>
+                        <!-- //실시간 예약 -->
+                        <!-- 결과값 -->
+                        <div class="tab-cont-result">
+                            <div class="no-time">
+                                <p>reservation time<br>Please choose.</p>
+                            </div>
+                            <ul class="short-result">
+                                <li>
+                                    <div class="result-time">
+                                        <p>Pickup<br>Date & Time</p>
+                                        <strong>2020/09/23</strong>
+                                        <select class="selectbox" name="" id="" onchange="">
+                                            <option value="">select</option>
+                                            <option value="">00h</option>
+                                            <option value="">01h</option>
+                                        </select>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00m</option>
+                                            <option value="">10m</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="result-time">
+                                        <p>Return<br>Date & Time</p>
+                                        <strong>2020/09/23</strong>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00h</option>
+                                            <option value="">01h</option>
+                                        </select>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00m</option>
+                                            <option value="">10m</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li><button type="button" class="btn btn-red" disabled>Reservation</button></li>
+                            </ul>
+                        </div>
+                        <!-- //결과값 -->
+                    </div>
+                    <!-- //언제 선택영역 -->
+
+                    <!-- 어디서 선택영역 -->
+                    <div class="tab-step2">
+                        <!-- 실시간 예약 -->
+                        <div class="tab-cont-section">
+                            <!-- 반납지점 -->
+                            <div class="short-branch">
+                                <h2>select Location</h2>
+                                <div class="tab-nav">
+                                    <ul class="tab-col2">
+                                        <li class="active"><button type="button">Equal</button></li>
+                                        <li><button type="button">Another</button></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-cont">
+                                    <!-- 대여반납지점동일 -->
+                                    <div class="short-branch-section">
+                                        <ul class="short-branch-tab">
+                                            <li class="active">
+                                                <input type="radio" name="radio1" id="radio1-1" checked>
+                                                <label for="radio1-1">MainIand</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="radio1" id="radio1-2">
+                                                <label for="radio1-2">Jeju</label>
+                                            </li>
+                                            <li>
+                                                <a href="#">Overseas</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-cont tab-action">
+                                            <!-- 지점 목록 -->
+                                            <div class="shor-main-list-wrap">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //지점 목록 -->
+                                        </div>    
+                                    </div>
+                                    <!-- //대여반납지점동일 -->
+                                    <!-- 다른지점 반납 -->
+                                    <div class="short-branch-section short-type2" style="display: none;">
+                                        <ul class="short-branch-tab">
+                                            <li class="active">
+                                                <input type="radio" name="radio2" id="radio2-1" checked>
+                                                <label for="radio2-1">MainIand</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="radio2" id="radio2-2" disabled>
+                                                <label for="radio2-2">Jeju</label>
+                                            </li>
+                                            <li>
+                                                <a href="#">Overseas</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="short-branch-tab2">
+                                            <li class="active">
+                                                <button type="button">Pickup</button>
+                                            </li>
+                                            <li>
+                                                <button type="button">Return</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-cont tab-action3">
+                                            <!-- 대여지점 -->
+                                            <div class="shor-main-list-wrap">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt tab2">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //대여지점 -->
+                                        
+                                            <!-- 반납지점 -->
+                                            <div class="shor-main-list-wrap" style="display: none;">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt tab2">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //반납지점 -->
+                                        </div>    
+                                    </div>
+                                    <!-- //다른지점 반납 -->
+                                </div>
+                            </div>
+                            <!-- //반납지점 -->
+                            <!-- 캘린더 -->
+                            <div class="short-calendar">
+                                <h2>LOTTE rent a car is at your service <span class="txt-red">anytime, anywhere</span></h2>
+                                <div class="calender-cont">
+                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.09</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="disabled"><button type="button" class="btn">1</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">2</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">3</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">4</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="disabled"><button type="button" class="btn">6</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">7</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">8</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">9</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">10</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">11</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="disabled"><button type="button" class="btn">13</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">14</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">15</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">16</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td class="start"><button type="button" class="btn">21</button></td>
+                                                        <td class="during"><button type="button" class="btn">22</button></td>
+                                                        <td class="end"><button type="button" class="btn">23</button></td>
+                                                        <td class="day"><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+            
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.10</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="t-red"></td>
+                                                        <td></td>
+                                                        <td><button type="button" class="btn">1</button></td>
+                                                        <td><button type="button" class="btn">2</button></td>
+                                                        <td><button type="button" class="btn">3</button></td>
+                                                        <td><button type="button" class="btn">4</button></td>
+                                                        <td><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">6</button></td>
+                                                        <td><button type="button" class="btn">7</button></td>
+                                                        <td><button type="button" class="btn">8</button></td>
+                                                        <td><button type="button" class="btn">9</button></td>
+                                                        <td><button type="button" class="btn">10</button></td>
+                                                        <td><button type="button" class="btn">11</button></td>
+                                                        <td><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">13</button></td>
+                                                        <td><button type="button" class="btn">14</button></td>
+                                                        <td><button type="button" class="btn">15</button></td>
+                                                        <td><button type="button" class="btn">16</button></td>
+                                                        <td><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td><button type="button" class="btn">21</button></td>
+                                                        <td><button type="button" class="btn">22</button></td>
+                                                        <td><button type="button" class="btn">23</button></td>
+                                                        <td><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+        
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.11</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="t-red"></td>
+                                                        <td></td>
+                                                        <td><button type="button" class="btn">1</button></td>
+                                                        <td><button type="button" class="btn">2</button></td>
+                                                        <td><button type="button" class="btn">3</button></td>
+                                                        <td><button type="button" class="btn">4</button></td>
+                                                        <td><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">6</button></td>
+                                                        <td><button type="button" class="btn">7</button></td>
+                                                        <td><button type="button" class="btn">8</button></td>
+                                                        <td><button type="button" class="btn">9</button></td>
+                                                        <td><button type="button" class="btn">10</button></td>
+                                                        <td><button type="button" class="btn">11</button></td>
+                                                        <td><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">13</button></td>
+                                                        <td><button type="button" class="btn">14</button></td>
+                                                        <td><button type="button" class="btn">15</button></td>
+                                                        <td><button type="button" class="btn">16</button></td>
+                                                        <td><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td><button type="button" class="btn">21</button></td>
+                                                        <td><button type="button" class="btn">22</button></td>
+                                                        <td><button type="button" class="btn">23</button></td>
+                                                        <td><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+                            
+                            <!-- 차 종류 -->
+                            <div class="short-car">
+                                <h3 class="tit-h3">Vehicle Type</h3>
+                                <div class="input-cont">						
+                                    <select class="selectbox" name="" id="">
+                                        <option value="">select.</option>
+                                        <option value="">select1</option>
+                                        <option value="">select2</option>
+                                    </select>
+                                </div>
+                                <div class="short-car-list">
+                                    <div class="mCustomScrollbar mCS-autoHide" data-mcs-theme="minimal-dark">
+                                        <!-- 차량 목록이 없는 경우 및 알림 영역 -->
+                                        <div class="no-data">
+                                            <p><span class="icon talk"></span> 선택하신 차량 목록이 없습니다.</p>
+                                        </div>
+                                        <!-- //차량 목록이 없는 경우 및 알림 영역 -->
+
+                                        <!-- 차량 목록 -->
+                                        <ul class="short-car-list-cont">
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk2" id="car-chk2-1">
+                                                    <label for="car-chk2-1">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk2" id="car-chk2-2">
+                                                    <label for="car-chk2-2">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk2" id="car-chk2-3">
+                                                    <label for="car-chk2-3">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk2" id="car-chk2-4">
+                                                    <label for="car-chk2-4">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- //차량 목록 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //차 종류 -->
+                        </div>
+                        <!-- //실시간 예약 -->
+                        <!-- 결과값 -->
+                        <div class="tab-cont-result">
+                            <ul class="short-result">
+                                <li>
+                                    <div class="result-time">
+                                        <p>Pickup<br>Date & Time</p>
+                                        <strong>2020/09/23</strong>
+                                        <select class="selectbox" name="" id="" onchange="">
+                                            <option value="">select</option>
+                                            <option value="">00h</option>
+                                            <option value="">01h</option>
+                                        </select>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00m</option>
+                                            <option value="">10m</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="result-time">
+                                        <p>Return<br>Date & Time</p>
+                                        <strong>2020/09/23</strong>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00h</option>
+                                            <option value="">01h</option>
+                                        </select>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00m</option>
+                                            <option value="">10m</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li><button type="button" class="btn btn-red" disabled>Reservation</button></li>
+                            </ul>
+                        </div>
+                        <!-- //결과값 -->
+                    </div>
+                    <!-- //어디서 선택영역 -->
+                    
+                    <!-- 어떤차 선택영역 -->
+                    <div class="tab-step3">
+                        <!-- 실시간 예약 -->
+                        <div class="tab-cont-section">
+                            <!-- 차 종류 -->
+                            <div class="short-car">
+                                <h3 class="tit-h3">Vehicle Type</h3>
+                                <div class="input-cont">						
+                                    <select class="selectbox" name="" id="">
+                                        <option value="">select.</option>
+                                        <option value="">select1</option>
+                                        <option value="">select2</option>
+                                    </select>
+                                </div>
+                                <div class="short-car-list">
+                                    <div class="mCustomScrollbar mCS-autoHide" data-mcs-theme="minimal-dark">
+                                        <!-- 차량 목록이 없는 경우 및 알림 영역 -->
+                                        <div class="no-data">
+                                            <p><span class="icon talk"></span> 선택하신 차량 목록이 없습니다.</p>
+                                        </div>
+                                        <!-- //차량 목록이 없는 경우 및 알림 영역 -->
+
+                                        <!-- 차량 목록 -->
+                                        <ul class="short-car-list-cont">
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk3" id="car-chk3-1">
+                                                    <label for="car-chk3-1">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk3" id="car-chk3-2">
+                                                    <label for="car-chk3-2">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk3" id="car-chk3-3">
+                                                    <label for="car-chk3-3">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="radioIconBox">
+                                                    <input type="radio" name="car-chk3" id="car-chk3-4">
+                                                    <label for="car-chk3-4">
+                                                        <div class="img">
+                                                            <i class="icon radio-check"></i>
+                                                            <img src="/lrhp/pc/images/@temp-shortmain-car.png" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="txt-type">
+                                                            <strong>THE NEW MORNING</strong>
+                                                            <p class="txt-red">58,000 <sub>KRW</sub></p>
+                                                            <del>77,000 KRW</del>
+                                                        </div>
+                                                    </label>    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- //차량 목록 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //차 종류 -->
+                            <!-- 캘린더 -->
+                            <div class="short-calendar">
+                                <h2>LOTTE rent a car is at your service <span class="txt-red">anytime, anywhere</span></h2>
+                                <div class="calender-cont">
+                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.09</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="disabled"><button type="button" class="btn">1</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">2</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">3</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">4</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="disabled"><button type="button" class="btn">6</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">7</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">8</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">9</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">10</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">11</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="disabled"><button type="button" class="btn">13</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">14</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">15</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">16</button></td>
+                                                        <td class="disabled"><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td class="start"><button type="button" class="btn">21</button></td>
+                                                        <td class="during"><button type="button" class="btn">22</button></td>
+                                                        <td class="end"><button type="button" class="btn">23</button></td>
+                                                        <td class="day"><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+            
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.10</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="t-red"></td>
+                                                        <td></td>
+                                                        <td><button type="button" class="btn">1</button></td>
+                                                        <td><button type="button" class="btn">2</button></td>
+                                                        <td><button type="button" class="btn">3</button></td>
+                                                        <td><button type="button" class="btn">4</button></td>
+                                                        <td><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">6</button></td>
+                                                        <td><button type="button" class="btn">7</button></td>
+                                                        <td><button type="button" class="btn">8</button></td>
+                                                        <td><button type="button" class="btn">9</button></td>
+                                                        <td><button type="button" class="btn">10</button></td>
+                                                        <td><button type="button" class="btn">11</button></td>
+                                                        <td><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">13</button></td>
+                                                        <td><button type="button" class="btn">14</button></td>
+                                                        <td><button type="button" class="btn">15</button></td>
+                                                        <td><button type="button" class="btn">16</button></td>
+                                                        <td><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td><button type="button" class="btn">21</button></td>
+                                                        <td><button type="button" class="btn">22</button></td>
+                                                        <td><button type="button" class="btn">23</button></td>
+                                                        <td><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+        
+                                        <div class="tbl-box">
+                                            <div class="calendar-tit">2020.11</div>
+                                            <table>
+                                                <caption></caption>
+                                                <colgroup>
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="t-red"></td>
+                                                        <td></td>
+                                                        <td><button type="button" class="btn">1</button></td>
+                                                        <td><button type="button" class="btn">2</button></td>
+                                                        <td><button type="button" class="btn">3</button></td>
+                                                        <td><button type="button" class="btn">4</button></td>
+                                                        <td><button type="button" class="btn">5</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">6</button></td>
+                                                        <td><button type="button" class="btn">7</button></td>
+                                                        <td><button type="button" class="btn">8</button></td>
+                                                        <td><button type="button" class="btn">9</button></td>
+                                                        <td><button type="button" class="btn">10</button></td>
+                                                        <td><button type="button" class="btn">11</button></td>
+                                                        <td><button type="button" class="btn">12</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">13</button></td>
+                                                        <td><button type="button" class="btn">14</button></td>
+                                                        <td><button type="button" class="btn">15</button></td>
+                                                        <td><button type="button" class="btn">16</button></td>
+                                                        <td><button type="button" class="btn">17</button></td>
+                                                        <td class="today"><button type="button" class="btn">18</button></td>
+                                                        <td><button type="button" class="btn">19</button></td>
+                                                    </tr>
+                                                    <tr>
+            
+                                                        <td class="t-red"><button type="button" class="btn">20</button></td>
+                                                        <td><button type="button" class="btn">21</button></td>
+                                                        <td><button type="button" class="btn">22</button></td>
+                                                        <td><button type="button" class="btn">23</button></td>
+                                                        <td><button type="button" class="btn">24</button></td>
+                                                        <td><button type="button" class="btn">25</button></td>
+                                                        <td><button type="button" class="btn">26</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t-red"><button type="button" class="btn">27</button></td>
+                                                        <td><button type="button" class="btn">28</button></td>
+                                                        <td><button type="button" class="btn">29</button></td>
+                                                        <td><button type="button" class="btn">30</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //캘린더 -->
+                            <!-- 반납지점 -->
+                            <div class="short-branch">
+                                <h2>Select Location</h2>
+                                <div class="tab-nav">
+                                    <ul class="tab-col2">
+                                        <li class="active"><button type="button">Equal</button></li>
+                                        <li><button type="button">Another</button></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-cont">
+                                    <!-- 대여반납지점동일 -->
+                                    <div class="short-branch-section">
+                                        <ul class="short-branch-tab">
+                                            <li class="active">
+                                                <input type="radio" name="radio1" id="radio1-1" checked>
+                                                <label for="radio1-1">MainIand</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="radio1" id="radio1-2">
+                                                <label for="radio1-2">Jeju</label>
+                                            </li>
+                                            <li>
+                                                <a href="#">Overseas</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-cont tab-action">
+                                            <!-- 지점 목록 -->
+                                            <div class="shor-main-list-wrap">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //지점 목록 -->
+                                        </div>    
+                                    </div>
+                                    <!-- //대여반납지점동일 -->
+                                    <!-- 다른지점 반납 -->
+                                    <div class="short-branch-section short-type2" style="display: none;">
+                                        <ul class="short-branch-tab">
+                                            <li class="active">
+                                                <input type="radio" name="radio2" id="radio2-1" checked>
+                                                <label for="radio2-1">MainIand</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="radio2" id="radio2-2" disabled>
+                                                <label for="radio2-2">Jeju</label>
+                                            </li>
+                                            <li>
+                                                <a href="#">Overseas</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="short-branch-tab2">
+                                            <li class="active">
+                                                <button type="button">Pickup</button>
+                                            </li>
+                                            <li>
+                                                <button type="button">Return</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-cont tab-action3">
+                                            <!-- 대여지점 -->
+                                            <div class="shor-main-list-wrap">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt tab2">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //대여지점 -->
+                                        
+                                            <!-- 반납지점 -->
+                                            <div class="shor-main-list-wrap" style="display: none;">                                  
+                                                <div class="shor-main-list-lt">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link active"><b>Seoul</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>incheon/Gyeonggi/Ganwon</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daejeon/Chungcheong/Sejong</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Gwangju/Jeolla</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Daegu/Busan/Ulsan/Gyongsang</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Airport</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Station</b></button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn-link"><b>Day's duty</b></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shor-main-list-rt tab2">
+                                                    <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>                                       
+                                                </div>
+                                            </div>
+                                            <!-- //반납지점 -->
+                                        </div>    
+                                    </div>
+                                    <!-- //다른지점 반납 -->
+                                </div>
+                            </div>
+                            <!-- //반납지점 -->
+                            
+                        </div>
+                        <!-- //실시간 예약 -->
+                        <!-- 결과값 -->
+                        <div class="tab-cont-result">
+                            <ul class="short-result">
+                                <li>
+                                    <div class="result-time">
+                                        <p>Pickup<br>Date & Time</p>
+                                        <strong>2020/09/23</strong>
+                                        <select class="selectbox" name="" id="" onchange="">
+                                            <option value="">select</option>
+                                            <option value="">00h</option>
+                                            <option value="">01h</option>
+                                        </select>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00m</option>
+                                            <option value="">10m</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="result-time">
+                                        <p>Return<br>Date & Time</p>
+                                        <strong>2020/09/23</strong>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00h</option>
+                                            <option value="">01h</option>
+                                        </select>
+                                        <select class="selectbox" name="" id="" onchange="" disabled>
+                                            <option value="">select</option>
+                                            <option value="">00m</option>
+                                            <option value="">10m</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li><button type="button" class="btn btn-red" disabled>Reservation</button></li>
+                            </ul>
+                        </div>
+                        <!-- //결과값 -->
+                    </div>
+                    <!-- //어떤차 선택영역 -->
+                </div>
+                <!-- //컨텐츠 영역 -->
+                
+            </div>
+        </div>
+	</main>
+
+
+
+	<!--footer 컴포넌트-->
+	<footer class="footer">
+	</footer>
+	<!--//footer 컴포넌트-->
+
+	<!--bg-dimmed 컴포넌트-->
+	<div class="bg-dimmed">딤(Dim)처리 배경</div>
+	<!--//bg-dimmed 컴포넌트-->
+
+
+	<!-- how to use 레이어 -->
+	<div class="layer-wrap layer-popup layer-details layer-howToUse">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>How to use?</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-howToUse"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					<div class="statement">
+						<h5 class="tit">
+                            <span class="icon period"></span>
+                            Choosing Rental Period
+                        </h5>
+						<ul class="lst check-red">
+							<li>                                
+								Reservation is available up to 60 days prior to the pick up date.<br>
+                                (Up to 90 days prior for Incheon International Airport)
+							</li>
+							<li>
+								Minimum 24 hours of rental period is required to apply discount
+							</li>
+						</ul>
+                    </div>
+                    <div class="statement">
+						<h5 class="tit">
+                            <span class="icon location2"></span>
+                            Choosing a Location
+                        </h5>
+						<ul class="lst check-red">
+							<li>                                
+                                Please check operation hours of the location that you are willing 
+                                to pick up a vehicle
+							</li>
+							<li>
+								Locations cannot be chosen if the location cannot serve you with
+                                your selected rental period and car model.
+                            </li>
+                            <li>
+                                Additional charge will be added if return location is different from 
+                                pick up location.
+                            </li>
+						</ul>
+                    </div>
+                    <div class="statement">
+						<h5 class="tit">
+                            <span class="icon car2"></span>
+                            Choosing a Car
+                        </h5>
+						<ul class="lst check-red">
+							<li>                                
+                                You can choose either General (choose a specific model), 
+                                or Mystery Deal (choose car group only)
+							</li>
+							<li>
+								Mystery Deal is available for members only.
+                            </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //how to use 레이어 -->
+
+    <!-- 지점안내 레이어 -->
+	<div class="layer-wrap layer-popup layer-mypage layer-sel-branch">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>강남지점안내</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-sel-branch"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					
+					<div class="map">
+						<!-- 201210105 : position: absolute 마크업상 위치 잡으려고 넣은것 입니다. 개발시 빼주세요 -->
+						<div class="detail-map-marker" style="position: absolute;">
+							<div class="map-marker-box">
+								<i class="icon marker"></i>
+								<div class="map-marker-txt">강남지점</div>
+							</div>
+						</div>
+						<img src="/lrhp/pc/images/@temp-address-map01.png" alt="더미">
+					</div>
+					<dl class="infos">
+						<dt>영업시간</dt>
+						<dd>평일(월~목) 08:30 ~ 18:00 / 주말(금~일) 08:30 ~ 19:00</dd>
+						<dt>전화번호</dt>
+						<dd>02-3443-8000</dd>
+						<dt>주소</dt>
+						<dd>서울특별시 강남구 테헤란로 422</dd>
+						<dt>공지사항</dt>
+						<dd>※ 편도반납 장소는 기존 주차장과 동일(서울의료원 내)</dd>
+						<dt>이벤트</dt>
+						<dd>서울전지점(김포공항,마곡,상봉제외)]  코로나극복 함께해요 최대 55% 할인 이벤트</dd>
+					</dl>
+					<div class="swiper-container selBranchSwiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="/lrhp/pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="/lrhp/pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="/lrhp/pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+						</ul>
+
+						<div class="selBranchSwiper-pagination"></div>
+						<!-- navigation buttons  -->
+						<div class="selBranchSwiper-button-prev">
+							<span class="icon swiper-prev"></span>
+						</div>
+						<div class="selBranchSwiper-button-next">
+							<span class="icon swiper-next"></span>
+						</div>
+						<!-- // navigation buttons  -->
+					</div>
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-sel-branch">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //지점안내 레이어 -->
+
+    <!-- 차량 무료 업그레이드 레이어 -->
+    <div class="layer-wrap layer-popup layer-infos layer-car-upgrade">
+        <div class="pop-inner">
+            <div class="popup-top">
+                <h4>Free upgrade</h4>
+                <button type="button" class="layer-popup-close" data-layer="layer-car-upgrade">
+					<span class="icon pop-close">close</span>
+				</button>
+            </div>
+            <div class="popup-cont layer-iscroll">
+                <div class="iscroll-in">
+                    <div class="talk-section">
+						<span class="icon talk3"></span>
+						<span>
+							Total numbers of rent <em class="num">5<em>Times</em></em>,<br>
+                            You can upgrade your car this time. <strong>Do you want to upgrade?</strong>
+						</span>
+					</div>
+                    <div class="popup-cont-bot-btns">
+                        <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-car-upgrade">Don't use</button>
+                        <button type="button" class="btn btn-red layer-popup-close" data-layer="layer-car-upgrade">use</button>		
+                    </div>
+                    <div class="tab-nav tabControl">
+                        <ul class="tab-col2">
+                            <li class="active">
+                                <button type="button">Free upgrade benefit</button>
+                            </li>
+                            <li>
+                                <button type="button">Free coupons</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont tabControl">
+                        <div class="tab-cont-inner">
+                            <ul class="lst dot">
+                                <li class="txt-color-red">Free vehicle upgrade is provided depends on member  grade.</li>
+                                <li><p>For 5th, 15th, 25th, 35th…(every +10th) rental</p>
+                                    <p>Compact → Intermediate</p>
+                                    <p>Intermediate → Full size</p>
+                                </li>
+                                <li>Full seze, imported, SUVs/RVs, Minivans cannot be upgraded</li>
+                                <li>Upgrade cannot be postponed (you car cannot be upgraded for you 6th rental even 
+                                    you did not upgrade for you 5th)
+                                    <p>※ Your upgraded reservation may not valid if you make additional reservation with 
+                                        earlier pickup date than your upgraded reservation.</p>
+                                </li>
+                                <li>Upgrade cannot be applied for walk-in. (Booking through homepage or customer 
+                                    center only, minimum 6 hour lead time is required)
+                                    <p>※ Upgrade can be applied if upgrade vehicle is availabe at your selected location.</p>
+                                    <p>※ If you want to use free coupon for upgrade reservation, your coupon should have 
+                                        same vehicle grade with the upgraded vehicle.</p>
+                                </li>
+                                <li>For additional information, please contact to your selected  location.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-cont-inner">
+                            <ul class="lst dot">
+                                <li class="txt-color-red">Free coupon (1day, 24hours) will be provided depends  on member grade</li>
+                                <li>Free coupon for compact vehicle will be provided after  first 5 rentals.</li>
+                                <li>Free coupon for intermediate vehicle will be provided after every 10th rental. 
+                                    (10th, 20th…)
+                                    <p>e.g.) A coupon for compact vehicle is provided after your 5th rental and the coupon 
+                                        can be used from your 6th rental.</p>
+                                </li>
+                                <li>Purchase of CDW is required.</li>
+                                <li>Valid date : 6th months from issued date.</li>
+                                <li>Coupon distribution: A free coupon will be provided through SMS
+                                    (for customers agreed to SMS service).
+                                    <p>※ Customers did not agree to SMS service can change their option at My Page</p>
+                                </li>
+                                <li>Distribution date: 1st day of every month (if your 5th rental
+                                    occured in Jan, the coupon will be sent on 1st Feb)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //차량 무료 업그레이드 레이어 -->
+
+    <!-- 같은 지점 무료 업그레이드 가능차량 레이어 -->
+    <div class="layer-wrap layer-popup layer-infos layer-car-upgrade-list">
+        <div class="pop-inner">
+            <div class="popup-top">
+                <h4>Free upgrade</h4>
+                <button type="button" class="layer-popup-close" data-layer="layer-car-upgrade-list">
+					<span class="icon pop-close">close</span>
+				</button>
+            </div>
+            <div class="popup-cont layer-iscroll">
+                <div class="iscroll-in">
+                    <div class="talk-section">
+						<span class="icon talk3"></span>
+						<span>Korea NO1. LOTTE rent-a-car!</span>
+					</div>
+                </div>
+                <div class="carup-choice">
+                    <ul class="choice-list list-type-col2">
+                        <li>
+                            <div class="chk-view-box">
+                                <input type="radio" id="upgrage-1" name="upgrage" checked="">
+                                <label for="upgrage-1">
+                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car2.jpg" alt=""></div>
+                                    <strong>Spark</strong>
+                                    <p>Gasoline</p>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk-view-box">
+                                <input type="radio" id="upgrage-2" name="upgrage">
+                                <label for="upgrage-2">
+                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                    <strong>ALL NEW K7 2.4</strong>
+                                    <p>Diesel</p>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk-view-box">
+                                <input type="radio" id="upgrage-3" name="upgrage">
+                                <label for="upgrage-3">
+                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                    <strong>ALL NEW K7 2.4</strong>
+                                    <p>LPG</p>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="chk-view-box">
+                                <input type="radio" id="upgrage-4" name="upgrage">
+                                <label for="upgrage-4">
+                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                    <strong>ALL NEW K7 2.4</strong>
+                                    <p>Hybrid</p>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup-cont-bot-btns">
+                    <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-car-upgrade">Cancle</button>
+                    <button type="button" class="btn btn-red layer-popup-close" data-layer="layer-car-upgrade">Confirm</button>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //같은 지점 무료 업그레이드 가능차량 레이어 -->
+</body>
+</html>
