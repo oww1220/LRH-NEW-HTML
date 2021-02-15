@@ -1929,6 +1929,91 @@ body.fixed {
 				}
 			}
 		}
+
+		//실시간예약메인 업그레이드 팝업
+		&.layer-car-upgrade {
+			.talk-section{
+				@include Regular;
+				@include Align-middle-left;
+				color:#2f2f2f;
+				line-height: 1.5;
+				font-size:18px;
+				padding-bottom: 30px;
+				border-bottom: 1px solid #e7e7e7;
+				.num {
+					@include Bold;
+					color: $txt-red;
+					font-size: 22px;
+					> em {
+						font-size: 18px;
+					}
+				}
+				strong {
+					font-size: 18px;
+					@include Bold;
+				}
+				.icon{
+					margin-right:15px;
+				}
+			}
+			.tab-nav {
+				margin-top: 60px;
+				> ul {
+					li {
+						button {
+							height: 60px;
+							font-size: 18px;
+						}
+					}
+				}
+			} 
+		}
+
+		//같은지점 무료업그레이드 팝업
+		&.layer-car-upgrade-list {
+			.carup-choice {
+				padding: 20px 0;
+				.choice-list {
+					.chk-view-box {
+						label {
+							@include Align-middle-column;
+							height: 190px;
+							.img {
+								width: 200px;
+								height: 110px;
+								overflow: hidden;
+								> img {
+									width: 100%;
+									height: 100%;
+									mix-blend-mode: multiply;
+								}
+							}
+							strong {
+								font-size: 18px;
+								color: #2f2f2f;
+								line-height: 1.5;
+								margin-top: 10px;
+							}
+							p {
+								font-size: 14px;
+								color: #54585a;
+							}
+						}
+						input:checked + label:after	{
+                            display:none;
+                        }
+						input:checked + label strong:after{
+                            @include Background($sprite:'ico-chk-on2', $position:center center);
+							content: '';
+							display: inline-block;
+							width: 13px;
+							height: 12px;
+							margin-left:10px;
+                        }
+					}
+				}
+			}
+		}
 	}
 
 	//슬라이드 형태

@@ -322,8 +322,8 @@ if($('.footerMenu-container .contTab').length){
 }
 
 //탭 공통
-if($('#wrap .tabControl').length){
-    MUI.event.taps('#wrap .tabControl', false, function(swap){
+if($('.tabControl').length){
+    MUI.event.taps('.tabControl', false, function(swap){
         swap();
     });
 }

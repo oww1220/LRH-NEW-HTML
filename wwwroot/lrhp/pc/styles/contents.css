@@ -2904,6 +2904,10 @@ html, body {
 	word-break: keep-all;
 }
 
+.tooltip-layer .tooltip.type2 {
+	width: 350px;
+}
+
 .tooltip-layer .tooltip .btn-tooltip-close {
 	position: absolute;
 	top: -13px;
@@ -15909,7 +15913,58 @@ html, body {
 }
 
 .short-main-wrap .tab-cont-section .short-branch {
+	position: relative;
 	width: 340px;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .nodata {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.7;
+	/* All modern browsers */
+	filter: alpha(opacity=70);
+	/* For IE5~IE9 */
+	z-index: 1;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .nodata p {
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	color: #fff;
+	font-size: 22px;
+	text-align: center;
+}
+
+.short-main-wrap .tab-cont-section .short-branch .nodata .talk4 {
+	margin-bottom: 20px;
 }
 
 .short-main-wrap .tab-cont-section .short-branch h2 {
@@ -16538,6 +16593,7 @@ html, body {
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 3px;
+	z-index: 50;
 }
 
 .short-main-wrap .tab-cont-section .short-car .short-car-list .short-car-list-cont > li .radioIconBox > label .txt-type .txt-red {
@@ -16773,6 +16829,7 @@ html, body {
 	width: 100%;
 	height: 80px;
 	background: #fff;
+	position: relative;
 }
 
 .short-main-wrap .tab-cont-result .short-result {
@@ -16911,6 +16968,40 @@ html, body {
 .short-main-wrap .tab-cont-result .short-result .result-time select:disabled {
 	background: url(/lrhp/pc/images/icons/ico-arrow-down2.png) no-repeat center right 10px #f5f5f5;
 	border-color: #d2d2d2;
+}
+
+.short-main-wrap .tab-cont-result .no-time {
+	position: absolute;
+	top: -120px;
+	right: 35px;
+	width: 397px;
+	height: 97px;
+	padding: 25px 30px;
+	background: url(/lrhp/pc/images/bg-notime.png) no-repeat center right #c01123;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+}
+
+.short-main-wrap .tab-cont-result .no-time p {
+	color: #fff;
+	font-family: "ManropeB", "NotoB", serif;
+	/*font-family: "SpoqaB", serif;*/
+	/*font-family: "SpoqaHanSansB", serif;*/
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 1.2;
+}
+
+.short-main-wrap .tab-cont-result .no-time:after {
+	display: inline-block;
+	content: "";
+	background: url(/lrhp/pc/images/bg-notime-spot.png) no-repeat center center;
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	top: 97px;
+	right: 320px;
 }
 
 .short-main-wrap .quick-banner {

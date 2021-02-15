@@ -2354,7 +2354,27 @@
 
         // 반납 지점
         .short-branch {
+            position: relative;
             width: 340px;
+            //20210215 추가
+            .nodata {
+                @include Align-middle-column;
+                @include Position($top: 0, $left: 0);
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 1);
+                @include  Opacity(0.7);
+                z-index: 1;
+                p {
+                    @include Bold;
+                    color: #fff;
+                    font-size: 22px;
+                    text-align: center;
+                }
+                .talk4 {
+                    margin-bottom: 20px;
+                }
+            }
             h2 {@include Hide_txt;}
             .tab-nav {
                 background: #54585a;
@@ -2707,6 +2727,7 @@
                                             display: inline-block;
                                             vertical-align: top;
                                             margin-top: 3px;
+                                            z-index: 50;
                                         }
                                     }
                                     .txt-red {
@@ -2858,6 +2879,7 @@
         width: 100%;
         height: 80px;
         background: #fff;
+        position: relative;
         .short-result {
             @include Align-between-top;
             height: 100%;
@@ -2926,6 +2948,28 @@
                     }
                 }
 
+            }
+        }
+        .no-time {
+            @include Position($top: -120px, $right: 35px);
+            width: 397px;
+            height: 97px;
+            padding: 25px 30px;
+            background: url(/lrhp/pc/images/bg-notime.png) no-repeat center right #c01123;
+            border-radius: 10px;
+            p {
+                color: #fff;
+                @include Bold;
+                font-size: 22px;
+                line-height: 1.2;
+            }
+            &:after {
+                display: inline-block;
+                content: "";
+                background: url(/lrhp/pc/images/bg-notime-spot.png) no-repeat center center;
+                width: 40px;
+                height: 20px;
+                @include Position($top: 97px, $right: 320px);
             }
         }
     }
