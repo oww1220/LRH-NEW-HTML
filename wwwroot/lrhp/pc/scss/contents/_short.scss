@@ -2479,7 +2479,7 @@
                             color:#2f2f2f;
                             height:43px;
                             width: 100%;
-                            padding:0 15px;
+                            padding:0 9px 0 15px;
                             text-align: left;
                             line-height:1;
                             font-size: 14px;
@@ -2678,7 +2678,7 @@
                             @include Align-box;
                             flex-flow: wrap;
                             border-radius: 0;
-                            padding:20px 10px;
+                            padding:20px 10px 10px;
                             height: 170px;
                             position: relative;
                             border: 1px solid #fff;
@@ -2698,11 +2698,16 @@
                                     width: calc(100% - 172px);
                                     padding-left: 15px;
                                     strong {
-                                        @include Ellipsis($w:100%, $lines:1);
+                                        @include Ellipsis($w:90%, $lines:1, $display:inline-block);
                                         @include Bold;
                                         font-size: 22px;
                                         color: #2f2f2f;
                                         line-height: 1.2;
+                                        & + button {
+                                            display: inline-block;
+                                            vertical-align: top;
+                                            margin-top: 3px;
+                                        }
                                     }
                                     .txt-red {
                                         @include Bold;
@@ -2712,6 +2717,10 @@
                                         line-height: 1;
                                         sub {
                                             font-size: 18px;
+                                        }
+                                        span {
+                                            font-size: 16px;
+                                            @include Regular;
                                         }
                                     }
                                     del {
@@ -2737,6 +2746,7 @@
                                 }
                                 //20210210 차량유종 추가
                                 .car-spec {
+                                    @include Align-between;
                                     width: 100%;
                                     .car-spec-list {
                                         @include Align-middle-left;
@@ -2744,6 +2754,7 @@
                                             font-size: 13px;
                                             color: #54585a;
                                             .speed {
+                                                display: inline-block;
                                                 padding: 2px 5px;
                                                 background: rgb(129,112,221);
                                                 background: linear-gradient(90deg, rgba(129,112,221,1) 0%, rgba(86,178,192,1) 100%);
@@ -2752,6 +2763,18 @@
                                                 @include Bold;
                                             }
                                         }
+                                        li + li:before {
+                                            display: inline-block;
+                                            content: "";
+                                            width: 1px;
+                                            height: 12px;
+                                            margin: 0 10px;
+                                            background: #d2d2d2;
+                                        }
+                                    }
+                                    .btn-link {
+                                        font-size: 13px;
+                                        @include Bold;
                                     }
                                 }
                             }
@@ -2770,6 +2793,7 @@
                                 }
                             }
                             > input:checked + label{
+                                @include Regular;
                                 .img{
                                     .radio-check{
                                         display:inline-flex;
