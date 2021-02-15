@@ -3947,10 +3947,20 @@
                                                     margin:0;
                                                     justify-content: flex-start;
                                                     height:auto;
+                                                    @include Ellipsis($lines:1);
+                                                    overflow: visible;
                                                     b{
                                                         font-size:1.4rem;
                                                         //@include Ellipsis($w:auto, $lines:2);
                                                         margin-right:.9rem;
+                                                    }
+                                                }
+                                                .btn-tooltip-box-group{
+                                                    display:inline-flex;
+                                                    position: relative;
+                                                    top:-.2rem;
+                                                    .tooltip-box-option{
+                                                        margin-top:.5rem;
                                                     }
                                                 }
                                                 em{
@@ -3983,6 +3993,32 @@
                                                         @include Bold;
                                                         color:#bbb;
                                                         font-size:1.2rem;
+                                                    }
+                                                    &.price-column{
+                                                        flex-flow: column;
+                                                        span{
+                                                            margin-top:0;
+                                                            font-size:1.4rem;
+                                                            padding-right:.9rem;
+                                                            @include Align-middle-left;
+                                                            em{
+                                                                //display:block;
+                                                                display:inline-block;
+                                                                margin:0 0 0 .6rem;
+                                                                color:#ed1c24;
+                                                                font-size:1rem;
+                                                                @include Regular;
+                                                            }
+                                                        }
+                                                        em{
+                                                            @include Bold;
+                                                            color:#bbb;
+                                                            font-size:1rem;
+                                                            margin:0 0 .6rem 0;
+                                                            small{
+                                                                font-size:1.2rem;
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
