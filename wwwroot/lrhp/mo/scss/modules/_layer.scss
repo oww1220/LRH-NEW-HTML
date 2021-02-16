@@ -583,6 +583,28 @@ body.fixed {
 			}
 		}
 
+		//단기 메인 슬라이드
+		&.layer-shortInfo{
+			.slide-top {
+				h4{
+					border-bottom:0 none;
+					display:block;
+					line-height:1.4;
+					em{
+						color:#ed1c24;
+					}
+				}
+			}
+			.slide-cont {
+				padding:0 1.7rem 4.3rem;
+				.shortInfo-txt{
+					@include Regular;
+					line-height:1.4;
+					color:#54585a;
+				}
+			}
+		}
+
 	}
 
 	//풀팝업 형태
@@ -4923,6 +4945,34 @@ body.fixed {
 		}
 		&.tooltip-box-option-top-02{
 			transform: translate(20%,-130%);
+		}
+	}
+	&.tooltip-box-shortInfo{
+		width: 90%;
+		margin: 0 1.7rem;
+		top: 0;
+		z-index: 10;
+		.layer-tooltip{
+			padding-top:0;
+			.layer-info{
+				@include Align-box-left;
+				padding:.9rem;
+				.tooltip-txt-list{
+					@include Align-box-left;
+					.guide{
+						padding-left:0;
+						text-indent: 0;
+						margin: .4rem 0 0 0;
+						li{
+							font-size: 1rem;
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+		.layer-tooltip:after{
+			display:none;
 		}
 	}
 }
