@@ -281,7 +281,7 @@ $(function(){
                     <a href="#"><span>내륙예약</span><i class="icon goQuick-menu09"></i></a>
                 </li>
                 <li>
-                    <a href="#"><span>신차장특가</span><i class="icon goQuick-menu08"></i></a>
+                    <a href="#"><span>신차 특가</span><i class="icon goQuick-menu08"></i></a>
                 </li>
                 <li>
                     <a href="#"><span>중고차특가</span><i class="icon goQuick-menu07"></i></a>
