@@ -5,18 +5,6 @@ $(function(){
 	<!--header 컴포넌트-->
 	<header class="header eng-header">
 
-		<!--해더상단-->
-		<div class="header-top">
-			<div class="inner">
-				<a href="#container" class="skip_nav">본문 바로가기</a>
-				<ul class="extra-menu">
-					<li><a href="#none">Register</a></li>
-					<li><a href="#none">My Reservation</a></li>
-				</ul>
-			</div>
-		</div>
-		<!--//해더상단-->
-
 		<!--해더네비-->
 		<nav class="header-nav header-nav-line eng-header-nav">
 			<div class="inner">

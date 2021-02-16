@@ -5,20 +5,6 @@ $(function(){
 	<!--header 컴포넌트-->
 	<header class="header">
 
-		<!--해더상단-->
-		<div class="header-top">
-			<div class="inner">
-				<a href="#container" class="skip_nav">본문 바로가기</a>
-				<ul class="extra-menu">
-					<li><a href="#none">로그아웃</a></li>
-					<li><a href="#none">예약확인</a></li>
-					<li><a href="#none">자료제출</a></li>
-					<li><a href="#none">실시간예약</a></li>
-				</ul>
-			</div>
-		</div>
-		<!--//해더상단-->
-
 		<!--해더네비-->
 		<!-- 개발참조사항 - 메인 gnb 적용에서만 header-nav-line 삭제 해 주세요 -->
 		<nav class="header-nav">
