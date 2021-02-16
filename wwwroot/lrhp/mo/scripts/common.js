@@ -1803,6 +1803,7 @@ if($('.etc-wrap .tab-Level').length){
         if ( !$tooltipCallBtn && !$tooltipArea ) {
             $('.tooltip-box').hide();
             $('.tooltip-box').removeClass('active');
+            $('.btn-tooltip-box').removeClass('active');
         }
     });
     

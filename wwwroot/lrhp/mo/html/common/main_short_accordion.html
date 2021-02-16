@@ -474,6 +474,25 @@
 		
 												<!-- 지점 선택 기본형 -->
 												<div class="shor-main-list-wrap">
+													<div class="tooltip-box tooltip-box-shortInfo tooltipCont-info-01">
+														<div class="layer-tooltip">
+															<div class="pop-inner">
+																<div class="tooltip-cont">
+																	<div class="layer-info">
+																		<div class="tooltip-txt-list">
+																			<ul class="guide">
+                                                                                <li><i class="icon listCircle02"></i>지점 영업시간 내에만 대여/반납이 가능합니다.</li>
+                                                                                <li><i class="icon listCircle02"></i>지점/회원할인은 24시간 이용 시 적용 가능합니다.</li>
+                                                                                <li><i class="icon listCircle02"></i>주중/주말에 따라 지점 영업시간이 다를 수 있습니다.</li>
+                                                                                <li><i class="icon listCircle02"></i>24시간 지점 안내 : 강남지점 / 서울역지점</li>
+                                                                                <li><i class="icon listCircle02"></i>예약에 어려움이 있으시간가요? (콜센터) 1588-1230</li>
+                                                                            </ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 													<div class="shor-main-list-lt">
 														<ul>
 															<li>
@@ -505,7 +524,8 @@
 													<div class="shor-main-list-rt">
 														<ul>
 															<li>
-																<button type="button" class="btn btn-link"><b>SP영업1지점</b></button>
+																<button type="button" class="btn btn-link btn-tooltip-box" data-sort="fade" data-target="tooltipCont-info-01" data-on="true" data-siblings="true"><b>SP영업1지점</b></button>
+																<!-- <button type="button" class="btn btn-map layer-infos-open" data-layer="type-national-branch"><span>지점안내</span></button> -->
 															</li>
 															<li>
 																<button type="button" class="btn btn-link active"><b>강남</b></button>
@@ -2842,6 +2862,181 @@
 		<!--//컨텐츠-->
 	</div>
 	<!--//layer-full 업그레이드 컴포넌트-->
+
+	<!--layer-slide 단기 사전체크인 컴포넌트-->
+	<div class="layer-wrap layer-slide layer-shortInfo" data-type="slide">
+		<!--상단-->
+		<div class="slide-top">
+			<button type="button" class="btn btn-pannel layer-slide-close" data-layer="layer-shortInfo"><i class="icon layerclose">닫기 버튼</i></button>
+			<h4>
+                아직 <em>사전체크인</em>을 <br>안하셨나요?
+				<!-- 경우의수 내용들 -->
+				<!-- 진행중일때
+					<em>진행중인 예약</em>이 <br>있습니다.
+				-->
+				<!-- 추가운전자일때
+					<em>추가 운전자 등록</em>이 <br>필요한가요?
+				-->
+			</h4>
+		</div>
+		<!--//상단-->
+		<!--컨텐츠-->
+		<div class="slide-inner">
+			<div class="slide-cont">
+                
+                <div class="shortInfo-col-cont">
+					<div class="shortInfo-txt">
+						사전체크인 고객님은 차량을 미리 배정하여<br>
+						지점방문 시 빠르게 대여받아 출발이 가능해요~
+
+						<!-- 경우의수 내용들 -->
+						<!-- 진행중일때
+							단기렌터카 서비스는 결제까지 완료해야<br>
+							예약이 최종완료됩니다.
+						-->
+						<!-- 추가운전자일때
+							단기렌터카 이용 중 동승자를 운전자로 추가하거나<br>
+							반납시간 / 지점의 변경을 온라인에서 할 수 있어요.
+						-->
+					</div>
+                </div>
+
+			</div>
+		</div>
+		<!--//컨텐츠-->
+		<div class="detail-layer-list-btn">
+			<ul class="list-type-col2">
+				<li>
+					<button type="button" class="btn btn-brown">다음에 할게요</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-red">사전체크인 바로가기</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--//layer-slide 단기 사전체크인 컴포넌트-->
+
+	<!-- 단기 사전체크인 띄우기 위한 script -->
+	<script>
+		$(window).load(function(){
+			MUI.layer.open('.layer-shortInfo', '.bg-dimmed', '.layer-wrap');
+			MUI.layer.openClick('.layer-shortInfo-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+				//console.log('open');
+				show();
+			});
+		});
+	</script>
+	<!-- //단기 사전체크인 띄우기 위한 script -->
+
+	<!--layer-full 전국지점안내 컴포넌트-->
+    <div class="layer-wrap layer-full layer-infos layer-national-branch type-national-branch" data-type="full">
+        <div class="full-top">
+            <h4>
+                전국지점안내
+			</h4>
+			<button type="button" class="btn btn-pannel layer-full-close" data-layer="type-national-branch">
+				<i class="icon prev">닫기 버튼</i>
+			</button>
+        </div>
+        <div class="full-inner">
+            <div class="full-cont">
+				<div class="cont-top">
+					<!-- 타이틀 -->
+					<div class="cont-tit">
+						<em><i class="icon call"></i>1588-1230</em>
+						<strong>
+							평일08:30~20:00<br>
+							단,사고처리 문의는 24시간 가능
+						</strong>
+					</div>
+					<!-- //타이틀 -->
+				</div>
+				<div class="cont-in">
+					<div class="cont-map">
+						<div class="point-tit">
+							<button><i class="icon like2"></i></button>
+							<strong>강남지점</strong>
+							<ul class="flagwrap">
+								<li><span class="flag notice">공지</span></li>
+								<li><span class="flag notice">장기</span></li>
+								<li><span class="flag discount">할인</span></li>
+							</ul>
+						</div>
+						<div class="cover">
+							<img src="/lrhp/mo/images/customer-branch-map1.png" alt="더미 이미지">
+						</div>
+						<button type="button" class="btn">예약하기</button>
+					</div>
+					<div class="cont-info">
+						<ul>
+							<li>
+								<i class="icon time2"></i>
+								<div>
+									<strong>영업시간</strong>
+									<p>평일 00:00~24:00 / 주말(휴일) 00:00~24:00</p>
+								</div>
+							</li>
+							<li>
+								<i class="icon time2"></i>
+								<div>
+									<strong>전화번호</strong>
+									<p>02-3443-8000</p>
+								</div>
+							</li>
+							<li>
+								<i class="icon address"></i>
+								<div>
+									<strong class="underline">빠른길찾기</strong>
+									<p>서울특별시 강남구 테헤란로 422</p>
+								</div>
+							</li>
+							<li>
+								<i class="icon time2"></i>
+								<div>
+									<strong>공지사항</strong>
+									<p>-</p>
+								</div>
+							</li>
+							<li>
+								<i class="icon time2"></i>
+								<div>
+									<strong>이벤트</strong>
+									<p>[서울전지점(김포공항,마곡,상봉제외)] <br/>
+										코로나극복 함께해요 최대 55% 할인 이벤트</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="swiper-container cont-slide">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div><img src="/lrhp/mo/images/customer-branch-slide01.png" alt="더미 이미지"></div>
+							</div>
+							<div class="swiper-slide">
+								<div><img src="/lrhp/mo/images/customer-branch-slide01.png" alt="더미 이미지"></div>
+							</div>
+							<div class="swiper-slide">
+								<div><img src="/lrhp/mo/images/customer-branch-slide01.png" alt="더미 이미지"></div>
+							</div>
+							<div class="swiper-slide">
+								<div><img src="/lrhp/mo/images/customer-branch-slide01.png" alt="더미 이미지"></div>
+							</div>
+							<div class="swiper-slide">
+								<div><img src="/lrhp/mo/images/customer-branch-slide01.png" alt="더미 이미지"></div>
+							</div>
+						</div>
+						<div class="swiper-pagination-wrap">
+							<div class="swiper-pagination cont-slide-pagination"></div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--layer-full 전국지점안내 컴포넌트-->
 
 	<script>
 		// 모바일 슬라이드 셀렉트 안내 : 
