@@ -4423,6 +4423,9 @@ body.fixed {
 						label {
 							.img{
 								padding:0 1.3rem 0;
+								img{
+									mix-blend-mode: multiply;
+								}
 							}
 							.txt{
 								@include Align-middle-column;
@@ -4950,22 +4953,37 @@ body.fixed {
 	&.tooltip-box-shortInfo{
 		width: 90%;
 		margin: 0 1.7rem;
-		top: 0;
+		top: .7rem;
 		z-index: 10;
 		.layer-tooltip{
 			padding-top:0;
+			.pop-inner{
+				border-color: #2f2f2f;
+			}
 			.layer-info{
-				@include Align-box-left;
-				padding:.9rem;
+				@include Align-left-column;
+				align-items: flex-start;
+				padding:1.3rem;
+				.tooltipClose{
+					@include Position( $top: 1.3rem, $right: 1.3rem);
+					width: 1rem;
+    				height: 1rem;
+				}
+				.tooltip-tit{
+					font-size:1.1rem;
+					@include Bold;
+					text-align: left;
+				}
 				.tooltip-txt-list{
 					@include Align-box-left;
 					.guide{
 						padding-left:0;
 						text-indent: 0;
-						margin: .4rem 0 0 0;
+						margin: .8rem 0 0 0;
 						li{
 							font-size: 1rem;
 							text-align: left;
+							@include Regular;
 						}
 					}
 				}

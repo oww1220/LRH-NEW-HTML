@@ -4913,6 +4913,17 @@ a.btn {
 	height: 2rem;
 }
 
+.icon.layerclose05 {
+	background-repeat: no-repeat;
+	background-image: url("/lrhp/mo/images/icons/ico-close05.png");
+	background-position: center center;
+	-webkit-background-size: 100% auto;
+	   -moz-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 1rem;
+	height: 1rem;
+}
+
 .icon.close04 {
 	background-repeat: no-repeat;
 	background-image: url("/lrhp/mo/images/icons/ico-close4.png");
@@ -17878,6 +17889,10 @@ body.fixed {
 	padding: 0 1.3rem 0;
 }
 
+.layer-full.layer-rental.type-upgradecar .radio-box ul label .img img {
+	mix-blend-mode: multiply;
+}
+
 .layer-full.layer-rental.type-upgradecar .radio-box ul label .txt {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -18807,12 +18822,16 @@ body.fixed {
 .tooltip-box.tooltip-box-shortInfo {
 	width: 90%;
 	margin: 0 1.7rem;
-	top: 0;
+	top: .7rem;
 	z-index: 10;
 }
 
 .tooltip-box.tooltip-box-shortInfo .layer-tooltip {
 	padding-top: 0;
+}
+
+.tooltip-box.tooltip-box-shortInfo .layer-tooltip .pop-inner {
+	border-color: #2f2f2f;
 }
 
 .tooltip-box.tooltip-box-shortInfo .layer-tooltip .layer-info {
@@ -18821,20 +18840,35 @@ body.fixed {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	-webkit-box-align: left;
-	-webkit-align-items: left;
-	   -moz-box-align: left;
-	    -ms-flex-align: left;
-	        align-items: left;
-	-webkit-box-pack: left;
-	-webkit-justify-content: left;
-	   -moz-box-pack: left;
-	    -ms-flex-pack: left;
-	        justify-content: left;
-	padding: .9rem;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	padding: 1.3rem;
+}
+
+.tooltip-box.tooltip-box-shortInfo .layer-tooltip .layer-info .tooltipClose {
+	position: absolute;
+	top: 1.3rem;
+	right: 1.3rem;
+	width: 1rem;
+	height: 1rem;
+}
+
+.tooltip-box.tooltip-box-shortInfo .layer-tooltip .layer-info .tooltip-tit {
+	font-size: 1.1rem;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaB", serif;
+	font-weight: normal;
+	text-align: left;
 }
 
 .tooltip-box.tooltip-box-shortInfo .layer-tooltip .layer-info .tooltip-txt-list {
@@ -18861,12 +18895,15 @@ body.fixed {
 .tooltip-box.tooltip-box-shortInfo .layer-tooltip .layer-info .tooltip-txt-list .guide {
 	padding-left: 0;
 	text-indent: 0;
-	margin: .4rem 0 0 0;
+	margin: .8rem 0 0 0;
 }
 
 .tooltip-box.tooltip-box-shortInfo .layer-tooltip .layer-info .tooltip-txt-list .guide li {
 	font-size: 1rem;
 	text-align: left;
+	/*font-family:"ManropeB", "NotoM", serif;*/
+	font-family: "SpoqaR", serif;
+	font-weight: normal;
 }
 
 .tooltip-box.tooltip-box-shortInfo .layer-tooltip:after {

@@ -3674,6 +3674,21 @@
                                 @include Align-box;
                                 ul{
                                     width:100%;
+                                    li{
+                                        @include Align-between;
+                                        .btn-map{
+                                            width: 1.6rem;
+                                            height: 1.6rem;
+                                            padding: 0;
+                                            span{
+                                                @include Vertical-inline;
+                                                @include Hide_txt;
+                                                @include Background($sprite:'ico-map-off', $size:85% auto, $position:center center);
+                                                width: 1.6rem;
+                                                height: 1.6rem;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             .btn-link{
