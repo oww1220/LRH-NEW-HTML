@@ -366,7 +366,7 @@
                                                                 <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>지점안내</span></button>
                                                             </li>
                                                             <li>
-                                                                <button type="button" class="btn btn-link"><b>공덕</b></button>
+                                                                <button type="button" class="btn btn-link layer-infos-open" data-layer="layer-notice"><b>공덕</b></button>
                                                                 <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>지점안내</span></button>
                                                             </li>
                                                             <li>
@@ -2887,78 +2887,99 @@
 						<span class="icon talk3"></span>
 						<span>대한민국 No.1 롯데렌터카와 함께 합니다.</span>
 					</div>
-                </div>
-                <div class="carup-choice">
-                    <ul class="choice-list list-type-col2">
-                        <li>
-                            <div class="chk-view-box">
-                                <input type="radio" id="upgrage-1" name="upgrage" checked="">
-                                <label for="upgrage-1">
-                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car2.jpg" alt=""></div>
-                                    <strong>더 뉴모닝</strong>
-                                    <p>가솔린</p>
-                                </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="chk-view-box">
-                                <input type="radio" id="upgrage-2" name="upgrage">
-                                <label for="upgrage-2">
-                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
-                                    <strong>ALL NEW K7 2.4</strong>
-                                    <p>디젤</p>
-                                </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="chk-view-box">
-                                <input type="radio" id="upgrage-3" name="upgrage">
-                                <label for="upgrage-3">
-                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
-                                    <strong>ALL NEW K7 2.4</strong>
-                                    <p>LPG</p>
-                                </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="chk-view-box">
-                                <input type="radio" id="upgrage-4" name="upgrage">
-                                <label for="upgrage-4">
-                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
-                                    <strong>ALL NEW K7 2.4</strong>
-                                    <p>하이브리드</p>
-                                </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="chk-view-box">
-                                <input type="radio" id="upgrage-3" name="upgrage">
-                                <label for="upgrage-3">
-                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
-                                    <strong>ALL NEW K7 2.4</strong>
-                                    <p>LPG</p>
-                                </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="chk-view-box">
-                                <input type="radio" id="upgrage-4" name="upgrage">
-                                <label for="upgrage-4">
-                                    <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
-                                    <strong>ALL NEW K7 2.4</strong>
-                                    <p>하이브리드</p>
-                                </label>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="popup-cont-bot-btns">
-                    <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-car-upgrade">취소</button>
-                    <button type="button" class="btn btn-red layer-popup-close" data-layer="layer-car-upgrade">해당 차량으로 예약</button>		
+
+                    <div class="carup-choice">
+                        <ul class="choice-list list-type-col2">
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-1" name="upgrage" checked="">
+                                    <label for="upgrage-1">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car2.jpg" alt=""></div>
+                                        <strong>더 뉴모닝</strong>
+                                        <p>가솔린</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-2" name="upgrage">
+                                    <label for="upgrage-2">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>디젤</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-3" name="upgrage">
+                                    <label for="upgrage-3">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>LPG</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-4" name="upgrage">
+                                    <label for="upgrage-4">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>하이브리드</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-3" name="upgrage">
+                                    <label for="upgrage-3">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>LPG</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-4" name="upgrage">
+                                    <label for="upgrage-4">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>하이브리드</p>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popup-cont-bot-btns">
+                        <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-car-upgrade">취소</button>
+                        <button type="button" class="btn btn-red layer-popup-close" data-layer="layer-car-upgrade">해당 차량으로 예약</button>		
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- //같은 지점 무료 업그레이드 가능차량 레이어 -->
+
+    <!-- 지점 공지사항 레이어 -->
+    <div class="layer-wrap layer-popup layer-infos layer-notice">
+        <div class="pop-inner">
+            <div class="popup-top">
+                <h4>상동망우점 공지사항</h4>
+                <button type="button" class="layer-popup-close" data-layer="layer-notice">
+					<span class="icon pop-close">닫기 버튼</span>
+				</button>
+            </div>
+            <div class="popup-cont layer-iscroll">
+                <div class="iscroll-in">
+                    <div class="notice-branch">
+                        <img src="/lrhp/pc/images/@temp-notice-branch.png" alt="지점공지사항">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //지점 공지사항 레이어 -->
 </body>
 </html>
