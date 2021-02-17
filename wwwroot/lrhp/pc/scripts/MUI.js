@@ -258,6 +258,81 @@ var MUI = MUI || {
         },
 	},
 	event: {
+		forceToggle: function(target, parent, callback){
+			var $this = $(this);
+			var $targetDiv = $(target);
+			var layer = $('.' + $targetDiv.data('target'));
+			var sort = $this.data('sort');
+			var onClass = $this.data('on');
+			var siblings = $this.data('siblings');
+			var $parent =$(parent);
+			//console.log(sort, onClass, siblings, $parent);
+
+			function logic(){
+
+				if(onClass){
+
+					if(parent === null ? $this.hasClass('active') : layer.is(':visible')){
+						$this.removeClass('active');
+						layer.removeClass('active');
+					}
+					else{
+						if(siblings){
+							$targetDiv.removeClass('active');
+							$parent.removeClass('active');
+						}
+						$this.addClass('active');
+						layer.addClass('active');
+					}
+				}
+
+				if(layer.is(':visible')){
+					if(sort == 'fade'){
+						layer.fadeOut();
+					}
+					else if (sort == 'normal'){
+						layer.hide();
+					}
+					else if (sort == 'none'){
+						return false;
+					}
+					else{
+						layer.slideUp();
+					}
+				}
+				else{
+					if(sort == 'fade'){
+						if(siblings){
+							$parent.fadeOut();
+						}
+						layer.fadeIn();
+					}
+					else if (sort == 'normal'){
+						if(siblings){
+							$parent.hide();
+						}
+						layer.show();
+					}
+					else if (sort == 'none'){
+						return false;
+					}
+					else{
+						if(siblings){
+							$parent.slideUp();
+						}
+						layer.slideDown();
+					}
+				}
+
+			}
+
+			if(callback) {
+				callback(logic, layer, target);
+			}
+			else{
+				logic();
+			}
+		},
 		TOUCH_CLICK: ('ontouchstart' in window) ? 'touchstart' : 'click',
 		toggle: function(target, parent, touch, callback){
 			var EventType = touch ? this.TOUCH_CLICK : 'click';
