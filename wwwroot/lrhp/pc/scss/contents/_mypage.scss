@@ -1716,7 +1716,6 @@
         }
        .certi-list{
             @include Align-top;
-           
             li{
                 margin:0 50px;
                 text-align:center;
@@ -1761,37 +1760,67 @@
 
     .car-selection-view{
         @include Align-middle;
-        padding:60px;
+        padding:10px;
         min-height:165px;
         box-sizing: border-box;
         border:2px dotted $border-grey;
         margin-top:30px;
-
+        position: relative;
         .capsule-style-list{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap:wrap;
-
+            @include Align-box;;
+            width: 100%;
             li{
+                
+                box-sizing: border-box;
+                width: 25%;
                 padding:10px;
                 //+ li{margin-left:20px;}
+                &:nth-of-type(1):after {
+                    display: inline-block;
+                    content: "";
+                    width: 1px;
+                    height: 80%;
+                    background: #e7e7e7;
+                    position: absolute;
+                    top: 20px;
+                    left: 25%;
+                }
+                &:nth-of-type(2):after {
+                    display: inline-block;
+                    content: "";
+                    width: 1px;
+                    height: 80%;
+                    background: #e7e7e7;
+                    position: absolute;
+                    top: 20px;
+                    left: 49.5%;
+                }
+                &:nth-of-type(3):after {
+                    display: inline-block;
+                    content: "";
+                    width: 1px;
+                    height: 80%;
+                    background: #e7e7e7;
+                    position: absolute;
+                    top: 20px;
+                    left: 74%;
+                }
             }
             
             .item{
                 position:relative;
                 .txt{		
-                    @include Align-middle;
+                    //@include Align-middle;
                     min-width:84px;
                     height:42px;
-                    padding:0 10px;
+                    //padding:0 10px;
                     color:#2f2f2f;
-                    border-radius: 20px;
+                    //border-radius: 20px;
                     box-sizing: border-box;
-                    border:1px solid $border-grey;
+                    //border:1px solid $border-grey;
                 }
                 .btn-del{
-                    @include Position($top:-6px, $right:-4px);
+                    @include Position($top:2px, $right:5px);
                 }
             }
         }
@@ -1810,6 +1839,9 @@
             color:#54585a;
             border:1px solid $border-grey;
             box-sizing: border-box;
+            span {
+                margin-top: 10px;
+            }
             
             p{margin-top:10px; min-height:20px;}
         }
@@ -1820,7 +1852,6 @@
             background-color:#fff9f9;
 
             .symbol {
-                margin-top: 10px;
                 &.chevrolet {
                     @include Background($sprite:'symbol-chevrolet', $position:center, $path:'logos', $size:contain);
                 }
@@ -1844,36 +1875,28 @@
         }   
     }
     .car-type-box{
-        padding-top:25px;
-
+        padding-top:60px;
+        box-sizing: border-box;
         .capsule-style-list{
-            width:calc(100% + 10px);
-            margin-left:-5px;
-
+            @include Align-box;
             li{
-                float: left;
-                margin:5px;
-                //+ li{margin-left:10px;}
+                box-sizing: border-box;
+                width: 20%;
             }
             
             .item{
-                position:relative;
-
+                padding: 0 10px 10px 0;
+                height: 55px;
+                box-sizing: border-box;
                 input{display:none;}	
                 label{		
-                    @include Align-middle;
                     min-width:84px;
-                    height:42px;
-                    padding:0 10px;
                     color:#8f9191;
-                    border-radius: 20px;
                     box-sizing: border-box;
-                    background-color: #f5f5f5;
                 }
                 input:checked + label{
                     @include Bold;
                     color:$txt-red;
-                    border:1px solid $txt-red;
                 }  
             }
         }
