@@ -1824,6 +1824,7 @@ body.fixed {
 
 		//메인 팝업
 		&.layer-bn{
+			//position: relative;
 			width:620px;
 			// height:760px;
 			.pop-inner{
@@ -1832,7 +1833,7 @@ body.fixed {
 			}
 			.pop-cont{
 				width:620px;
-				height:760px;
+				//height:760px;
 				padding:0;
 				.main-event-lists {
 					width:620px;
@@ -1926,6 +1927,25 @@ body.fixed {
 				.layer-today-close{
 					position: relative;
 					color:#8f9191;
+				}
+			}
+			.pop-bottom-new{
+				@include Position($top: -70px, $left: 0)
+				@include Align-between;
+				height:60px;
+				width: 100%;
+				//background-color: #2f2f2f;
+				//@include Position($bottom: 0, $right: 0, $left: 0);
+				z-index: 10;
+				button{
+					width: 50px;
+					height: 50px;
+					background: #fff;
+					border-radius: 100%;
+				}
+				.layer-today-close{
+					//position: relative;
+					//color:#8f9191;
 				}
 			}
 		}

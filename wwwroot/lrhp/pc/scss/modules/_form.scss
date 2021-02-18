@@ -407,6 +407,25 @@
 			@include Background($sprite:'ico-check-on', $position:center center);
 		}
 	}
+	&.type-circle02{
+		label{
+			min-height:33px;
+			color: #fff;
+			@include Bold;
+			&:after {
+				@include Position($top: 0, $left: 0);
+				@include Background($sprite:'ico-check-off2', $position:center center);
+				width: 33px;
+				height: 33px;
+				margin-top: 0;
+			}
+
+		}
+		input[type='checkbox']:checked + label:after{
+			@include Background($sprite:'ico-check-on2', $position:center center);
+		}
+		input:checked + label{@include Bold; color:#fff;}
+	}
 	&.type-square{
 		label{
 			padding-left:32px;
