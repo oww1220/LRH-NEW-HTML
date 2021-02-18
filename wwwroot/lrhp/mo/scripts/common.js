@@ -967,6 +967,15 @@ if($('.footerMenu-wrap .tab-normal').length){
         
     }
 
+    //프로모션 슬라이드 팝업
+    if($('.layer-branchInfo').length) {
+        MUI.layer.openClick('.layer-branchInfo-open', LAYER_DIM, LAYER_PARENT, false, function(show){
+            //console.log('open');
+            show();
+        });
+        
+    }
+
     //중고차 메인 롤링 01
     if($('.secondhand-wrap .life-event-lists').length) {
         var mainTopSlide = MUI.slide.init('.secondhand-wrap .life-event-lists','swiper', {
