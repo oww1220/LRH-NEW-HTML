@@ -442,6 +442,12 @@
 		input[type='checkbox']:checked + label:after{
 			@include Background($sprite:'ico-chk3-on', $position:center center);
 		}
+		input[type='checkbox']:disabled + label{
+			color:#ddd !important;
+		}
+		input[type='checkbox']:disabled + label:after{
+			@include Background($sprite:'ico-chk-grey', $position:center center);
+		}
 	}	
 	
 	&.type-chkOn-red{
