@@ -1343,11 +1343,17 @@
                                     @include Regular;
                                     color:#2f2f2f;
                                 }
+                                input[type='checkbox']:disabled + label{
+                                    color:#ddd;
+                                }
                                 input[type='checkbox'] + label:after{
                                     @include Background($sprite:'ico-chk-off03', $type:'png', $size:92% auto, $position:center center);
                                 }
                                 input[type='checkbox']:checked + label:after{
                                     @include Background($sprite:'ico-chk-on05', $type:'png', $size:92% auto, $position:center center);
+                                }
+                                input[type='checkbox']:disabled + label:after{
+                                    @include Background($sprite:'ico-chk-on07', $type:'png', $size:92% auto, $position:center center);
                                 }
                             }
                         }
