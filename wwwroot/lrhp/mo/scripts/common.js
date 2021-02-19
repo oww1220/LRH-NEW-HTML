@@ -1165,40 +1165,28 @@ if($('.footerMenu-wrap .tab-normal').length){
 
     //메인 인덱스 롤링
     if($('.main-wrap .main-event-lists').length) {
-        MUI.slide.init('.main-wrap .main-event-lists','swiper', {
-            loop: false,
-            //autoHeight: true,
-            pagination: {
-                el: '.main-event-pagination',
-            },
-            autoplay: {
-                delay: 3000,
-            },
-        });
+        if(MUI.slide.activeSlide) MUI.slide.activeSlide.destroy();
         var activeSlide = $('.swiper-slide');
         
         //슬라이드
         if(activeSlide.length > 1){
-        
-            var autoplayFlag = true;    
-            var activeSwiper = $('.main-wrap .main-event-lists');
 
             $('.main-event-pagination').show();   
-            MUI.slide.LayerSwiper = MUI.slide.init(activeSwiper,'swiper', {
-                loop: true,				
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false
-                },
+            MUI.slide.init('.main-wrap .main-event-lists','swiper', {
+                loop: true,
                 pagination: {
                     el: '.main-event-pagination',
                     clickable: true,
-                },                            
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
             });
         
         }else{
             $('.main-event-pagination').hide();
-        }   
+        }
     }
 /* -------------------------------------------------메인end*/
 
@@ -1687,16 +1675,29 @@ if($('.layer-branch-change .tab-normal').length){
 
 // 전국지점안내 슬리이더
 if($('.layer-national-branch .cont-slide').length) {
-    MUI.slide.init('.layer-national-branch .cont-slide','swiper', {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+    if(MUI.slide.activeSlide) MUI.slide.activeSlide.destroy();
+
+    var activeSlide = $('.swiper-slide');
+        
+    //슬라이드
+    if(activeSlide.length > 1){
+
+        $('.cont-slide-pagination').show();   
+        MUI.slide.init('.layer-national-branch .cont-slide','swiper', {
+            loop: true,
+            pagination: {
+                el: '.cont-slide-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    
+    }else{
+        $('.cont-slide-pagination').hide();
+    }
 }
 
 //해외지사안내 탭전환
