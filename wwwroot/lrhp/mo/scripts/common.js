@@ -10,6 +10,11 @@ $(function(){
         TOUCH_CLICK = ('ontouchstart' in window) ? 'touchstart' : 'click',
         LAYER_PARENT = '.layer-wrap',
         LAYER_DIM = '.bg-dimmed';
+        // LAYER_DIM1 = '.bg-dimmed1',
+        // LAYER_DIM2 = '.bg-dimmed2',
+        // LAYER_DIM3 = '.bg-dimmed3',
+        // LAYER_DIM4 = '.bg-dimmed4',
+        // LAYER_DIM5 = '.bg-dimmed5';
 
 /* 유틸start-------------------------------------------------*/
     //호스트환경 체크
