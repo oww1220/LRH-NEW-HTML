@@ -324,6 +324,10 @@
                             <!-- //캘린더 -->
                             <!-- 반납지점 -->
                             <div class="short-branch">
+                                <div class="nodata">
+                                    <p class="icon talk4"></p>
+                                    <p>Please select the time,<br>vehicle first.</p>
+                                </div>
                                 <h2>어디서</h2>
                                 <div class="tab-nav">
                                     <ul class="tab-col2">
@@ -349,7 +353,26 @@
                                         </ul>
                                         <div class="tab-cont tab-action">
                                             <!-- 지점 목록 -->
-                                            <div class="shor-main-list-wrap">                                  
+                                            <div class="shor-main-list-wrap">
+                                                <!-- 툴팁 -->	
+                                                <div class="tooltip-layer absolute-type tooltipCont tooltipCont01">
+                                                    <div class="tooltip type2">
+                                                        <button type="button" class="btn-tooltip-close tooltipClose">close</button>
+                                                        <div class="tooltip-inner">
+                                                            <h3 class="tooltip-tit">Gangnam</h3>
+                                                            <div class="tooltip-list">
+                                                                <ul class="lst dot">
+                                                                    <li>You can rent/return only within branch business hours.</li>
+                                                                    <li>Branch/member discounts are applicable for 24 hours.</li>
+                                                                    <li>Branch hours may vary depending on week/weekend.</li>
+                                                                    <li>24 Hours Point Guide: Gangnam Branch/Seoul Station Branch</li>
+                                                                    <li>Is it time to have difficulty making reservations? (Call Center) 1588-1230</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //툴팁 -->                               
                                                 <div class="shor-main-list-lt">
                                                     <ul>
                                                         <li>
@@ -382,40 +405,52 @@
                                                     <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
                                                         <ul>
                                                             <li>
-                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                                <button type="button" class="btn btn-link active tooltipOpenBtn" data-target="tooltipCont01" data-on="true" data-sort="fade" data-siblings="ture"><b>Gangnam</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Gwanak</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Guro Digital District</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Guro</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Gimpo Airport</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Nonhyun (Hak-dong Station)</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Dongdaemun Subway Station</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Magok</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Mokdong</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Seoul Train Station</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Songpa(Munjeong)</b></button>
+                                                                <button type="button" class="btn btn-map layer-sel-branch-open" data-layer="layer-sel-branch"><span>Branch</span></button>
                                                             </li>
                                                         </ul>
                                                     </div>                                       
@@ -659,6 +694,15 @@
                                                             <p class="txt-red">58,000 <sub>KRW</sub></p>
                                                             <del>77,000 KRW</del>
                                                         </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>11seat</li>
+                                                                <li><p class="speed">110km limted</p></li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
+                                                        </div>
                                                     </label>    
                                                 </div>
                                             </li>
@@ -672,9 +716,18 @@
                                                         </div>
                                                         
                                                         <div class="txt-type">
-                                                            <strong>THE NEW MORNING</strong>
+                                                            <strong>THE NEW MORNING</strong> 
                                                             <p class="txt-red">58,000 <sub>KRW</sub></p>
                                                             <del>77,000 KRW</del>
+                                                        </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>5seat</li>
+                                                                <li><p class="speed">110km limted</p></li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
                                                         </div>
                                                     </label>    
                                                 </div>
@@ -694,6 +747,14 @@
                                                             <p class="txt-red">58,000 <sub>KRW</sub></p>
                                                             <del>77,000 KRW</del>
                                                         </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>5seat</li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
+                                                        </div>
                                                     </label>    
                                                 </div>
                                             </li>
@@ -711,6 +772,14 @@
                                                             <p class="txt-red">58,000 <sub>KRW</sub></p>
                                                             <del>77,000 KRW</del>
                                                         </div>
+
+                                                        <div class="car-spec">
+                                                            <ul class="car-spec-list">
+                                                                <li>Diesel</li>
+                                                                <li>5seat</li>
+                                                            </ul>
+                                                            <button type="button" class="btn-link layer-infos-open" data-layer="layer-car-upgrade-list">Upgrade Car</button>
+                                                        </div>
                                                     </label>    
                                                 </div>
                                             </li>
@@ -724,6 +793,9 @@
                         <!-- //실시간 예약 -->
                         <!-- 결과값 -->
                         <div class="tab-cont-result">
+                            <div class="no-time">
+                                <p>reservation time<br>Please choose.</p>
+                            </div>
                             <ul class="short-result">
                                 <li>
                                     <div class="result-time">
@@ -795,7 +867,26 @@
                                         </ul>
                                         <div class="tab-cont tab-action">
                                             <!-- 지점 목록 -->
-                                            <div class="shor-main-list-wrap">                                  
+                                            <div class="shor-main-list-wrap">
+                                                <!-- 툴팁 -->	
+                                                <div class="tooltip-layer absolute-type tooltipCont tooltipCont01">
+                                                    <div class="tooltip type2">
+                                                        <button type="button" class="btn-tooltip-close tooltipClose">close</button>
+                                                        <div class="tooltip-inner">
+                                                            <h3 class="tooltip-tit">Gangnam</h3>
+                                                            <div class="tooltip-list">
+                                                                <ul class="lst dot">
+                                                                    <li>You can rent/return only within branch business hours.</li>
+                                                                    <li>Branch/member discounts are applicable for 24 hours.</li>
+                                                                    <li>Branch hours may vary depending on week/weekend.</li>
+                                                                    <li>24 Hours Point Guide: Gangnam Branch/Seoul Station Branch</li>
+                                                                    <li>Is it time to have difficulty making reservations? (Call Center) 1588-1230</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //툴팁 -->                           
                                                 <div class="shor-main-list-lt">
                                                     <ul>
                                                         <li>
@@ -828,7 +919,7 @@
                                                     <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
                                                         <ul>
                                                             <li>
-                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                                <button type="button" class="btn btn-link active tooltipOpenBtn" data-target="tooltipCont01" data-on="true" data-sort="fade" data-siblings="ture"><b>Gangnam</b></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
@@ -1780,7 +1871,26 @@
                                         </ul>
                                         <div class="tab-cont tab-action">
                                             <!-- 지점 목록 -->
-                                            <div class="shor-main-list-wrap">                                  
+                                            <div class="shor-main-list-wrap">
+                                                <!-- 툴팁 -->	
+                                                <div class="tooltip-layer absolute-type tooltipCont tooltipCont01">
+                                                    <div class="tooltip type2">
+                                                        <button type="button" class="btn-tooltip-close tooltipClose">close</button>
+                                                        <div class="tooltip-inner">
+                                                            <h3 class="tooltip-tit">Gangnam</h3>
+                                                            <div class="tooltip-list">
+                                                                <ul class="lst dot">
+                                                                    <li>You can rent/return only within branch business hours.</li>
+                                                                    <li>Branch/member discounts are applicable for 24 hours.</li>
+                                                                    <li>Branch hours may vary depending on week/weekend.</li>
+                                                                    <li>24 Hours Point Guide: Gangnam Branch/Seoul Station Branch</li>
+                                                                    <li>Is it time to have difficulty making reservations? (Call Center) 1588-1230</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //툴팁 -->                               
                                                 <div class="shor-main-list-lt">
                                                     <ul>
                                                         <li>
@@ -1813,7 +1923,7 @@
                                                     <div class="mCustomScrollbar mCS-autoHide"  data-mcs-theme="minimal-dark">
                                                         <ul>
                                                             <li>
-                                                                <button type="button" class="btn btn-link active"><b>Gangnam</b></button>
+                                                                <button type="button" class="btn btn-link active tooltipOpenBtn" data-target="tooltipCont01" data-on="true" data-sort="fade" data-siblings="ture"><b>Gangnam</b></button>
                                                             </li>
                                                             <li>
                                                                 <button type="button" class="btn btn-link"><b>Gongdeok</b></button>
@@ -2162,5 +2272,227 @@
 		</div>
 	</div>
 	<!-- //how to use 레이어 -->
+
+    <!-- 지점안내 레이어 -->
+	<div class="layer-wrap layer-popup layer-mypage layer-sel-branch">
+		<div class="pop-inner">
+			<div class="popup-top">
+				<h4>강남지점안내</h4>
+				<button type="button" class="layer-popup-close" data-layer="layer-sel-branch"><span class="icon pop-close">닫기 버튼</span></button>
+			</div>
+			<div class="popup-cont layer-iscroll">
+				<div class="iscroll-in">
+					
+					<div class="map">
+						<!-- 201210105 : position: absolute 마크업상 위치 잡으려고 넣은것 입니다. 개발시 빼주세요 -->
+						<div class="detail-map-marker" style="position: absolute;">
+							<div class="map-marker-box">
+								<i class="icon marker"></i>
+								<div class="map-marker-txt">강남지점</div>
+							</div>
+						</div>
+						<img src="/lrhp/pc/images/@temp-address-map01.png" alt="더미">
+					</div>
+					<dl class="infos">
+						<dt>영업시간</dt>
+						<dd>평일(월~목) 08:30 ~ 18:00 / 주말(금~일) 08:30 ~ 19:00</dd>
+						<dt>전화번호</dt>
+						<dd>02-3443-8000</dd>
+						<dt>주소</dt>
+						<dd>서울특별시 강남구 테헤란로 422</dd>
+						<dt>공지사항</dt>
+						<dd>※ 편도반납 장소는 기존 주차장과 동일(서울의료원 내)</dd>
+						<dt>이벤트</dt>
+						<dd>서울전지점(김포공항,마곡,상봉제외)]  코로나극복 함께해요 최대 55% 할인 이벤트</dd>
+					</dl>
+					<div class="swiper-container selBranchSwiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="/lrhp/pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="/lrhp/pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="slide-img-box">
+									<img src="/lrhp/pc/images/@temp-mypage-selBranch-img.jpg" alt="더미">
+								</div>
+							</li>
+						</ul>
+
+						<div class="selBranchSwiper-pagination"></div>
+						<!-- navigation buttons  -->
+						<div class="selBranchSwiper-button-prev">
+							<span class="icon swiper-prev"></span>
+						</div>
+						<div class="selBranchSwiper-button-next">
+							<span class="icon swiper-next"></span>
+						</div>
+						<!-- // navigation buttons  -->
+					</div>
+				</div>
+				<div class="popup-cont-bot-btns">
+					<button type="button" class="btn btn-white layer-popup-close" data-layer="layer-sel-branch">확인</button>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //지점안내 레이어 -->
+
+    <!-- 차량 무료 업그레이드 레이어 -->
+    <div class="layer-wrap layer-popup layer-infos layer-car-upgrade">
+        <div class="pop-inner">
+            <div class="popup-top">
+                <h4>Free upgrade</h4>
+                <button type="button" class="layer-popup-close" data-layer="layer-car-upgrade">
+					<span class="icon pop-close">close</span>
+				</button>
+            </div>
+            <div class="popup-cont layer-iscroll">
+                <div class="iscroll-in">
+                    <div class="talk-section">
+						<span class="icon talk3"></span>
+						<span>
+							Total numbers of rent <em class="num">5<em>Times</em></em>,<br>
+                            You can upgrade your car this time. <strong>Do you want to upgrade?</strong>
+						</span>
+					</div>
+                    <div class="popup-cont-bot-btns">
+                        <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-car-upgrade">Don't use</button>
+                        <button type="button" class="btn btn-red layer-popup-close" data-layer="layer-car-upgrade">use</button>		
+                    </div>
+                    <div class="tab-nav tabControl">
+                        <ul class="tab-col2">
+                            <li class="active">
+                                <button type="button">Free upgrade benefit</button>
+                            </li>
+                            <li>
+                                <button type="button">Free coupons</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont tabControl">
+                        <div class="tab-cont-inner">
+                            <ul class="lst dot">
+                                <li class="txt-color-red">Free vehicle upgrade is provided depends on member  grade.</li>
+                                <li><p>For 5th, 15th, 25th, 35th…(every +10th) rental</p>
+                                    <p>Compact → Intermediate</p>
+                                    <p>Intermediate → Full size</p>
+                                </li>
+                                <li>Full seze, imported, SUVs/RVs, Minivans cannot be upgraded</li>
+                                <li>Upgrade cannot be postponed (you car cannot be upgraded for you 6th rental even 
+                                    you did not upgrade for you 5th)
+                                    <p>※ Your upgraded reservation may not valid if you make additional reservation with 
+                                        earlier pickup date than your upgraded reservation.</p>
+                                </li>
+                                <li>Upgrade cannot be applied for walk-in. (Booking through homepage or customer 
+                                    center only, minimum 6 hour lead time is required)
+                                    <p>※ Upgrade can be applied if upgrade vehicle is availabe at your selected location.</p>
+                                    <p>※ If you want to use free coupon for upgrade reservation, your coupon should have 
+                                        same vehicle grade with the upgraded vehicle.</p>
+                                </li>
+                                <li>For additional information, please contact to your selected  location.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-cont-inner">
+                            <ul class="lst dot">
+                                <li class="txt-color-red">Free coupon (1day, 24hours) will be provided depends  on member grade</li>
+                                <li>Free coupon for compact vehicle will be provided after  first 5 rentals.</li>
+                                <li>Free coupon for intermediate vehicle will be provided after every 10th rental. 
+                                    (10th, 20th…)
+                                    <p>e.g.) A coupon for compact vehicle is provided after your 5th rental and the coupon 
+                                        can be used from your 6th rental.</p>
+                                </li>
+                                <li>Purchase of CDW is required.</li>
+                                <li>Valid date : 6th months from issued date.</li>
+                                <li>Coupon distribution: A free coupon will be provided through SMS
+                                    (for customers agreed to SMS service).
+                                    <p>※ Customers did not agree to SMS service can change their option at My Page</p>
+                                </li>
+                                <li>Distribution date: 1st day of every month (if your 5th rental
+                                    occured in Jan, the coupon will be sent on 1st Feb)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //차량 무료 업그레이드 레이어 -->
+
+    <!-- 같은 지점 무료 업그레이드 가능차량 레이어 -->
+    <div class="layer-wrap layer-popup layer-infos layer-car-upgrade-list">
+        <div class="pop-inner">
+            <div class="popup-top">
+                <h4>Free upgrade</h4>
+                <button type="button" class="layer-popup-close" data-layer="layer-car-upgrade-list">
+					<span class="icon pop-close">close</span>
+				</button>
+            </div>
+            <div class="popup-cont layer-iscroll">
+                <div class="iscroll-in">
+                    <div class="talk-section">
+						<span class="icon talk3"></span>
+						<span>Korea NO1. LOTTE rent-a-car!</span>
+					</div>
+
+                    <div class="carup-choice">
+                        <ul class="choice-list list-type-col2">
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-1" name="upgrage" checked="">
+                                    <label for="upgrage-1">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car2.jpg" alt=""></div>
+                                        <strong>Spark</strong>
+                                        <p>Gasoline</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-2" name="upgrage">
+                                    <label for="upgrage-2">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>Diesel</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-3" name="upgrage">
+                                    <label for="upgrage-3">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>LPG</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk-view-box">
+                                    <input type="radio" id="upgrage-4" name="upgrage">
+                                    <label for="upgrage-4">
+                                        <div class="img"><img src="/lrhp/pc/images/@temp-shortmain-car.png" alt=""></div>
+                                        <strong>ALL NEW K7 2.4</strong>
+                                        <p>Hybrid</p>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popup-cont-bot-btns">
+                        <button type="button" class="btn btn-white layer-popup-close" data-layer="layer-car-upgrade">Cancle</button>
+                        <button type="button" class="btn btn-red layer-popup-close" data-layer="layer-car-upgrade">Confirm</button>		
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //같은 지점 무료 업그레이드 가능차량 레이어 -->
 </body>
 </html>
