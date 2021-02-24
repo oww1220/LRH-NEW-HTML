@@ -28,12 +28,12 @@ gulp.task('uglify', function (done) {
   done();
   return (
     gulp
-      .src(['wwwroot/pc/resources-pc/scripts/**/*.js', BABEL_POLYFILL]) //src 폴더 아래의 모든 js 파일을
+      .src(['wwwroot/lrhp/pc/scripts/**/*.js', BABEL_POLYFILL]) //src 폴더 아래의 모든 js 파일을
       .pipe(plumber(plumberOption))
       .pipe(babel())
       //.pipe(concat('all.js'))
       //.pipe(uglify()) //minify 해서
-      .pipe(gulp.dest('wwwroot/pc/resources-pc/scripts/dist'))
+      .pipe(gulp.dest('wwwroot/lrhp/pc/scripts/dist'))
   ); //dist 폴더에 저장
 });
 
