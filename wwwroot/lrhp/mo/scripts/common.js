@@ -1211,6 +1211,14 @@ if($('.carLife-wrap .carLife-tabwang-swiper').length) {
         },
     });
 }
+
+//제주오토하우스 qna 열고 닫기
+if($('.carLife-wrap').length){
+    MUI.event.toggle('.carLife-wrap .auto-qna-toggle-btn', '.carLife-wrap .auto-qna-toggle-cont', false, function(logic, layer) {
+        //console.log('toggle');
+        logic();
+    });
+}
 /* -------------------------------------------------카라이프 end*/
 
 /* 단기 실시간예약 start-------------------------------------------------*/

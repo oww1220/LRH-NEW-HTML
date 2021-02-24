@@ -491,6 +491,11 @@
                 & > li:first-child{
                     margin-top:0;
                 }
+                &.guide-noicon{
+                    padding:0;
+                    text-indent: 0;
+                    margin:0;
+                }
             }
         }
         .detail-layer-submit{
@@ -698,6 +703,16 @@
                                             background-color: #ed1c24;
                                             display: inline-block;
                                             margin-right:.3rem;
+                                        }
+                                    }
+                                }
+                                .info-box{
+                                    margin-top:-1.6rem;
+                                    padding:0 0 1.6rem 1.9rem;
+                                    li{
+                                        padding-top:1.3rem;
+                                        b{
+                                            padding-bottom:.5rem;
                                         }
                                     }
                                 }
@@ -909,6 +924,122 @@
                                         margin-right:.4rem;
                                     }
                                 }
+                            }
+                        }
+                    }
+                    .table02{
+                        td{
+                            text-align: left;
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+                &.cont7{
+                    .auto-qna-toggle-btn {
+                        cursor: pointer;
+                        @include Align-middle-left;
+                        position: relative;
+                        padding:2.3rem 0;
+                        border-bottom: 1px solid #f1f1f1;
+                        @include Regular;
+                        .ico-q {
+                            @include Align-middle;
+                            width: 2.2rem;
+                            height: 2.2rem;
+                            border-radius: 100%;
+                            @include Bold;
+                            color: #fff;
+                            font-size: 1.2rem;
+                            background: #54585a;
+                            //margin-right: .9rem;
+                        }
+                        p {
+                            width: calc(100% - 2.2rem);
+                            box-sizing: border-box;
+                            @include Bold;
+                            color: #2f2f2f;
+                            padding:0 .9rem 0 .9rem !important;
+                        }
+                        strong {
+                            font-size: 1.4rem;
+                            @include Bold;
+                        }
+                        .btn-toggle{
+                            @include Position($top: 50%, $right: 0);
+                            transform: translateY(-50%);
+                        }
+                        &.active {
+                            @include Bold;
+                            .ico-q {
+                                background: #ff404b;
+                            }
+                            .btn-toggle:after {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    .auto-qna-toggle-cont{
+                        display:none;
+                        background-color: #f5f5f5;
+                        border-radius: .5rem;
+                        padding:1.3rem;
+                        margin:1.3rem;
+                        .table{
+                            background-color: #fff;
+                        }
+                        ol {
+                            li {
+                                @include Align-top-left;
+                                > span {
+                                    font-size:1.1rem;
+                                }
+                                div {
+                                    padding-left:.8rem;
+                                    p {
+                                        font-size:1.1rem;
+                                        strong {
+                                            @include Bold;
+                                            display: block;
+                                            line-height: 1.3;
+                                        }
+                                    }
+                                    span {
+                                        padding:1rem 0 0 1rem;
+                                        text-indent: -.8rem;
+                                        display: block;
+                                        &::before {
+                                            content:''; 
+                                            vertical-align: middle;
+                                            width:.2rem;
+                                            height:.2rem;
+                                            background-color: #ed1c24;
+                                            display: inline-block;
+                                            margin-right:.3rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .box{
+                            box-sizing: border-box;
+                            border: 1px solid #d2d2d2;
+                            background-color: #fff;
+                            @include Align-between;
+                            border-radius: .5rem;
+                            padding:1.3rem 0 1.3rem 1.3rem;
+                            margin-top:1.3rem;
+                            div{
+                                width:70%;
+                                font-size:1.1rem;
+                                p{
+                                    @include Regular;
+                                    margin-top:.5rem;
+                                    font-size:1rem;
+                                }
+                            }
+                            span{
+                                font-size:1.1rem;
+                                width:calc(100% - 70%);
                             }
                         }
                     }
