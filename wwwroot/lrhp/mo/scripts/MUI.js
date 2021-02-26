@@ -109,28 +109,45 @@ var MUI = MUI || {
 			}
 			if(sort === 'swiper') {
 				var swiper = null;
-				var limit = '';
-				
-				if(option && option.hasOwnProperty('limit')){
-					limit = option['limit'];
-				}
-				if(limit != ''){
-					var selector = option.childSelector ? option.childSelector : '.swiper-slide'; //자식셀렉터
-					if(limit > $(target).find(selector).length){ // 슬라이더 갯수 제한이 있을때 , 자식갯수 세기 - 제한에 걸림;
-						swiper = null;
-					}else{ //제한 ok
-						swiper = new Swiper(target, option);
-					}
-				}else{//제한없음;
+
+				if(this.checkValidate(target, option)){
 					swiper = new Swiper(target, option);
+				}else{ //제한 ok
+					swiper = null;
 				}
-				
 				this.swiperList[target] = {
 					'obj' : swiper,
 					'option' : option
 				};
 				return swiper;
 			}
+		},
+		checkValidate: function(target, option){
+			var flag = true;
+			var limit = '';
+			var minLimit = '';
+			if(option){
+				var selector = option.childSelector ? option.childSelector : '.swiper-slide'; //자식셀렉터
+				if(option && option.hasOwnProperty('limit')){
+					limit = option['limit'];
+					if(limit != ''){
+						if(limit < $(target).find(selector).length){ // 슬라이더 갯수 제한이 있을때 , 자식갯수 세기 - 제한에 걸림;
+							falg = false;
+						}
+					}
+				}
+				
+				
+				if(option && option.hasOwnProperty('minLimit')){	
+					minLimit = option['minLimit'];
+					if(minLimit != ''){
+						if(minLimit >= $(target).find(selector).length){ // 슬라이더 갯수 제한이 있을때 , 자식갯수 세기 - 제한에 걸림;
+							flag = false;
+						}
+					}
+				}
+			}
+			return flag;
 		},
 		slickList : {},
 		swiperList : {},

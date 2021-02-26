@@ -985,11 +985,20 @@ if($('.footerMenu-wrap .tab-normal').length){
     if($('.secondhand-wrap .life-event-lists').length) {
         var mainTopSlide = MUI.slide.init('.secondhand-wrap .life-event-lists','swiper', {
             loop: true,
+            minLimit: 1,
             //autoHeight: true,
             autoplay: {
                 delay: 3000,
             },
         });
+
+        // 슬라이드 스타트 버튼 있고 없고
+        var mainactiveSlide = $('.secondhand-wrap .life-event-lists .swiper-slide');
+        if(mainactiveSlide.length > 1){
+            $('.swiper-play-list-wrap').show();   
+        }else{
+            $('.swiper-play-list-wrap').hide();
+        }
         
         $(".swiper-button-pause").on('click', function(){
             mainTopSlide.autoplay.stop();
@@ -1001,6 +1010,37 @@ if($('.footerMenu-wrap .tab-normal').length){
             $(".swiper-button-pause").show();
             $(".swiper-button-play").hide();
         });
+
+        // 슬라이드 1개만 일때 움직이지 못하게 한다는 요청사항 들어오면 주석 제거 상단 내용 주석처리 = mui.js로 뺏음
+        // if(MUI.slide.activeSlide) MUI.slide.activeSlide.destroy();
+        // var activeSlide = $('.secondhand-wrap .life-event-lists .swiper-slide');
+        
+        // //슬라이드
+        // if(activeSlide.length > 1){
+
+        //     $('.swiper-play-list-wrap').show();   
+        //     var mainTopSlide = MUI.slide.init('.secondhand-wrap .life-event-lists','swiper', {
+        //         loop: true,
+        //         //autoHeight: true,
+        //         autoplay: {
+        //             delay: 3000,
+        //         },
+        //     });
+        
+        // }else{
+        //     $('.swiper-play-list-wrap').hide();
+        // }
+
+        // $(".swiper-button-pause").on('click', function(){
+        //     mainTopSlide.autoplay.stop();
+        //     $(".swiper-button-play").show();
+        //     $(".swiper-button-pause").hide();
+        // });
+        // $(".swiper-button-play").on('click',function(){
+        //     mainTopSlide.autoplay.start();
+        //     $(".swiper-button-pause").show();
+        //     $(".swiper-button-play").hide();
+        // });
     }
 
     //중고차 메인 롤링 02
