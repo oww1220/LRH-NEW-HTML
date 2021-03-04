@@ -228,6 +228,9 @@ if($('#wrap .tooltip-layer').length) {
         }if($tgPoint.hasClass('tooltipOpenBtn')){ //클래스 tooltipOpenBtn 버튼
             var $tooltipCallBtn = $tgPoint.hasClass('tooltipOpenBtn');
             //console.log('3');
+        }if($tgPoint.hasClass('tooltipOpenBtn-top')){ //클래스 tooltipOpenBtn-top 버튼
+            var $tooltipCallBtn = $tgPoint.hasClass('tooltipOpenBtn-top');
+            //console.log('4');
         }
 
         if (!$tooltipCallBtn && !$tooltipArea) {
@@ -2220,3 +2223,20 @@ $(function(){
 
 
 });
+
+var carToggleSet = function() {
+    MUI.event.toggle('#wrap .tooltipOpenBtn-top', '#wrap .tooltipCont-top', false, function(logic, layer) {
+        logic();
+
+        $('.tooltipClose').on('click', function(){
+            $(this).parents('.tooltipCont-top').fadeOut();            
+        });
+    });
+
+    $('.tooltipOpenBtn-top').focusout(function(){
+        var $layer = $('.' + $(this).data('target'));
+        $layer.hide();
+        $('.tooltipCont-top').removeClass('active');
+        $('.tooltipOpenBtn-top').removeClass('active');
+    });
+}
