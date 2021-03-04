@@ -188,6 +188,17 @@ if($('.toast-message-sale').length){
 if($('#wrap .tooltipToggle-top').length) {
     MUI.event.toggle('#wrap .tooltipOpenBtn-top', '#wrap .tooltipCont-top', false, function(logic, layer) {
         logic();
+
+        $('.tooltipClose').on('click', function(){
+            $(this).parents('.tooltipCont-top').fadeOut();            
+        });
+    });
+
+    $('.tooltipOpenBtn-top').focusout(function(){
+        var $layer = $('.' + $(this).data('target'));
+        $layer.hide();
+        $('.tooltipCont-top').removeClass('active');
+        $('.tooltipOpenBtn-top').removeClass('active');
     });
 }
 
