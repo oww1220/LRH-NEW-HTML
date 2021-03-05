@@ -1735,7 +1735,9 @@ if($('.layer-national-branch .cont-slide').length) {
     //슬라이드
     if(activeSlide.length > 1){
 
-        $('.cont-slide-pagination').show();   
+        $('.cont-slide-pagination').show();
+        $('.swiper-button-next').show();
+        $('.swiper-button-prev').show();
         MUI.slide.init('.layer-national-branch .cont-slide','swiper', {
             loop: true,
             pagination: {
@@ -1750,6 +1752,8 @@ if($('.layer-national-branch .cont-slide').length) {
     
     }else{
         $('.cont-slide-pagination').hide();
+        $('.swiper-button-next').hide();
+        $('.swiper-button-prev').hide();
     }
 }
 

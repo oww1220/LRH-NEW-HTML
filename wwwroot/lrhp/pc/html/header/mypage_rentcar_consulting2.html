@@ -144,7 +144,7 @@
 												</div>
 											</a>
 										</li>
-										<li class="swiper-slide">
+										<!-- <li class="swiper-slide">
 											<a href="#" class="detail">
 												<div class="txt-box">
 													<p class="tit">
@@ -185,7 +185,7 @@
 													<img src="/lrhp/pc/images/@temp-hotDeal-img01.png" alt="더미">
 												</div>
 											</a>
-										</li>
+										</li> -->
 									</ul>
 
 									<!-- navigation buttons  -->
@@ -225,23 +225,50 @@
 		$(function(){
 			//이달의 핫딜 찬스
 			if($('.hotDealswiper').length) {
-				MUI.slide.init('.hotDealswiper','swiper', {
-					loop: true,
-					navigation: {
-						nextEl: '.hotDealswiper-button-next',
-						prevEl: '.hotDealswiper-button-prev',
-					},
-					autoplay: {
-						delay: 3000,
-					},
-					pagination: {
-						el: '.hotDealswiper .pagination-list',
-						type: 'fraction',
-						//renderFraction: function(currentClass, totalClass) {
-						//    return '<strong class="' + currentClass + '"></strong>' + '/' + '<em class="' + totalClass + '"></em>';
-						//}          
-					},        
-				});
+				// MUI.slide.init('.hotDealswiper','swiper', {
+				// 	loop: true,
+				// 	navigation: {
+				// 		nextEl: '.hotDealswiper-button-next',
+				// 		prevEl: '.hotDealswiper-button-prev',
+				// 	},
+				// 	autoplay: {
+				// 		delay: 3000,
+				// 	},
+				// 	pagination: {
+				// 		el: '.hotDealswiper .pagination-list',
+				// 		type: 'fraction',
+				// 		//renderFraction: function(currentClass, totalClass) {
+				// 		//    return '<strong class="' + currentClass + '"></strong>' + '/' + '<em class="' + totalClass + '"></em>';
+				// 		//}          
+				// 	},        
+				// });
+
+				if(MUI.slide.activeSlide) MUI.slide.activeSlide.destroy();
+
+				var activeSlide = $('.hotDealswiper .swiper-slide');
+					
+				//슬라이드
+				if(activeSlide.length > 1){
+
+					$('.pagination-wrap').show();   
+					MUI.slide.init('.hotDealswiper','swiper', {
+						loop: true,
+						navigation: {
+							nextEl: '.hotDealswiper-button-next',
+							prevEl: '.hotDealswiper-button-prev',
+						},
+						autoplay: {
+							delay: 3000,
+						},
+						pagination: {
+							el: '.hotDealswiper .pagination-list',
+							type: 'fraction',
+						},        
+					});
+				
+				}else{
+					$('.pagination-wrap').hide();
+				}
 			}
 		});
 	</script>
