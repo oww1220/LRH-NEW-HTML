@@ -1728,28 +1728,54 @@ if($('.layer-branch-change .tab-normal').length){
 
 // 전국지점안내 슬리이더
 if($('.layer-national-branch .cont-slide').length) {
-    if(MUI.slide.activeSlide) MUI.slide.activeSlide.destroy();
+    // if(MUI.slide.activeSlide) MUI.slide.activeSlide.destroy();
 
-    var activeSlide = $('.swiper-slide');
+    // var activeSlide = $('.swiper-slide');
         
-    //슬라이드
-    if(activeSlide.length > 1){
+    // //슬라이드
+    // if(activeSlide.length > 1){
 
+    //     $('.cont-slide-pagination').show();
+    //     $('.swiper-button-next').show();
+    //     $('.swiper-button-prev').show();
+    //     MUI.slide.init('.layer-national-branch .cont-slide','swiper', {
+    //         loop: true,
+    //         pagination: {
+    //             el: '.cont-slide-pagination',
+    //             clickable: true,
+    //         },
+    //         navigation: {
+    //             nextEl: '.swiper-button-next',
+    //             prevEl: '.swiper-button-prev',
+    //         },
+    //     });
+    
+    // }else{
+    //     $('.cont-slide-pagination').hide();
+    //     $('.swiper-button-next').hide();
+    //     $('.swiper-button-prev').hide();
+    // }
+
+    MUI.slide.init('.layer-national-branch .cont-slide','swiper', {
+        loop: true,
+        minLimit: 1,
+        pagination: {
+            el: '.cont-slide-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    //슬라이드
+    var branchactiveSlide = $('.layer-national-branch .cont-slide .swiper-slide');
+    
+    if(branchactiveSlide.length > 1){
         $('.cont-slide-pagination').show();
         $('.swiper-button-next').show();
         $('.swiper-button-prev').show();
-        MUI.slide.init('.layer-national-branch .cont-slide','swiper', {
-            loop: true,
-            pagination: {
-                el: '.cont-slide-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    
     }else{
         $('.cont-slide-pagination').hide();
         $('.swiper-button-next').hide();
