@@ -1315,11 +1315,19 @@
                                     @include Regular;
                                     height:auto;
                                     color:#999;
-                                    margin-top:.5rem;
+                                    margin-top:.9rem;
                                     span {
                                         @include Vertical-inline;
-                                        //font-size: 1rem;
+                                        font-size: 1.36rem;
                                         margin-left: .4rem;
+                                        em{
+                                            @include Vertical-inline;
+                                        }
+                                        b{
+                                            @include Vertical-inline;
+                                            font-size: 1.36rem;
+                                            color:#999;
+                                        }
                                     }
                                     button{
                                         @include Inline-align-middle;
@@ -1333,7 +1341,7 @@
                                     &:after {
                                         width: 1.7rem;
                                         height: 1.7rem;
-                                        margin-top: -.85rem;
+                                        margin-top: -.65rem;
                                         left:.5rem;
                                         top:.9rem;
                                         right:auto;
@@ -1352,6 +1360,16 @@
                                 }
                                 input[type='checkbox']:disabled + label:after{
                                     @include Background($sprite:'ico-chk-on07', $type:'png', $size:92% auto, $position:center center);
+                                }
+                                input[type='checkbox']:checked + label{
+                                    b{
+                                        color:#2f2f2f;
+                                    }
+                                }
+                                input[type='checkbox']:disabled + label{
+                                    b{
+                                        color:#ddd;
+                                    }
                                 }
                             }
                         }
