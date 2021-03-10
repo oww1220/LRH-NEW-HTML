@@ -2315,6 +2315,7 @@ $txt-darkblack: #2f2f2f;
 }
 
 //플로팅
+// 210310 숨겨졌다가 나오는것 실현
 .floating-zone{
 	position:fixed;
 	left:0;
@@ -2323,6 +2324,8 @@ $txt-darkblack: #2f2f2f;
 	border-top:1px solid $border-grey;
 	background-color:#fafafa;
 	z-index:10;
+	transition: opacity .2s, transform .2s;
+    opacity: 1;
 
 	.floating-inner{
 		@include innerType2Width;
@@ -2363,4 +2366,7 @@ $txt-darkblack: #2f2f2f;
 			}
 		}
 	}
+}
+.floating-zone.close-topBt {
+	opacity: 0
 }

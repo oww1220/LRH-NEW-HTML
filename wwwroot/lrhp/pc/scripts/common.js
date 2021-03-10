@@ -1958,6 +1958,14 @@ if($('.mypage-container .indicator-toggle-cont').length) {
         });
     }
 
+    //신차장 플로팅 추가
+    if($('.floating-zone').length){
+        MUI.event.topScrollCh($('.floating-zone'));
+        $(window).on('scroll', function(){
+            MUI.event.topScrollCh($('.floating-zone'));
+        });
+    }
+
 /*브라우저 리사이즈*/
 if($(".layer-iscroll").length){
     $(window).on("resize",function(){

@@ -3333,6 +3333,13 @@ html, body {
 	border-top: 1px solid #e7e7e7;
 	background-color: #fafafa;
 	z-index: 10;
+	-webkit-transition: opacity .2s, -webkit-transform .2s;
+	transition: opacity .2s, -webkit-transform .2s;
+	-o-transition: opacity .2s, -o-transform .2s;
+	-moz-transition: opacity .2s, transform .2s, -moz-transform .2s;
+	transition: opacity .2s, transform .2s;
+	transition: opacity .2s, transform .2s, -webkit-transform .2s, -moz-transform .2s, -o-transform .2s;
+	opacity: 1;
 }
 
 .floating-zone .floating-inner {
@@ -3412,6 +3419,10 @@ html, body {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+}
+
+.floating-zone.close-topBt {
+	opacity: 0;
 }
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, strong, em, img, sub, sup, address, cite, pre, code, del, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
